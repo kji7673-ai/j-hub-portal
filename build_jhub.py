@@ -1,8 +1,13 @@
 import os
+import json
 
 def read_file(path):
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()
+
+# Load JSON Data
+with open('src/data/workspace.json', 'r', encoding='utf-8') as f:
+    ws_data = json.load(f)
 
 # Let's build the Swiss Grid Design CSS
 swiss_css = '''
@@ -114,34 +119,48 @@ h1, h2, h3 {
     box-shadow: none !important;
 }
 
-/* Workspace Grid */
-.workspace-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-.workspace-card {
+/* Workspace Accordion UI */
+.wa-container {
+    margin-bottom: 24px;
+    border: 1px solid var(--accent);
     background: var(--surface);
-    border: 1px solid var(--border);
+}
+.wa-header {
     padding: 24px;
+    background: #fafafc;
+    border-bottom: 1px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
 }
-
-/* Login Screen */
-#login-screen {
-    position: fixed; inset: 0; background: var(--bg-color);
-    display: flex; justify-content: center; align-items: center; z-index: 9999;
+.wa-header:hover {
+    background: #f0f0f5;
 }
-.login-card {
-    background: var(--surface); border: 2px solid var(--accent);
-    padding: 40px; width: 340px; text-align: left;
+.wa-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0;
 }
-.login-card input {
-    width: 100%; padding: 12px; margin-bottom: 16px;
-    border: 1px solid var(--border); font-size: 16px; box-sizing: border-box;
+.wa-icon {
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s;
 }
-.login-card button {
-    width: 100%; padding: 16px; background: var(--accent);
-    color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
+.wa-container.collapsed .wa-content {
+    display: none;
+}
+.wa-container.collapsed .wa-header {
+    border-bottom: none;
+}
+.wa-container.collapsed .wa-icon {
+    transform: rotate(180deg);
+}
+.wa-content {
+    padding: 32px;
 }
 
 /* Workspace Tables & Typography (Readable Design) */
@@ -206,8 +225,9 @@ h1, h2, h3 {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 24px;
+    gap: 32px;
+    margin-bottom: 32px;
+    align-items: start;
 }
 @media (max-width: 768px) {
     .grid-2 { grid-template-columns: 1fr; }
@@ -239,6 +259,8 @@ h1, h2, h3 {
     border-radius: 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    margin-bottom: 0 !important;
 }
 
 .card-header {
@@ -284,6 +306,7 @@ h1, h2, h3 {
 ul {
     list-style-type: square; /* Swiss modernism list style */
     padding-left: 20px;
+    margin: 0;
 }
 li {
     margin-bottom: 8px;
@@ -295,7 +318,6 @@ li {
     background: rgba(0,0,0,0.05);
     padding: 2px 4px;
 }
-
 
 /* Calendar & Day Block Styling */
 .day-block {
@@ -351,22 +373,23 @@ li {
     margin-bottom: 2px;
 }
 
-/* Strict Box Alignment & Spacing Overrides */
-.workspace-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px; /* Uniform larger gap between major blocks */
+/* Login Screen */
+#login-screen {
+    position: fixed; inset: 0; background: var(--bg-color);
+    display: flex; justify-content: center; align-items: center; z-index: 9999;
 }
-.card {
-    height: 100%; /* Force equal heights where possible */
-    margin-bottom: 0 !important; /* Controlled by grid gap */
+.login-card {
+    background: var(--surface); border: 2px solid var(--accent);
+    padding: 40px; width: 340px; text-align: left;
 }
-.grid-2 {
-    gap: 32px; /* Uniform gap matching workspace-grid */
-    margin-bottom: 32px;
-    align-items: start;
+.login-card input {
+    width: 100%; padding: 12px; margin-bottom: 16px;
+    border: 1px solid var(--border); font-size: 16px; box-sizing: border-box;
 }
-
+.login-card button {
+    width: 100%; padding: 16px; background: var(--accent);
+    color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
+}
 </style>
 '''
 
@@ -385,7 +408,7 @@ async function sha256(message) {
 </script>
 '''
 
-# New JS Logic for Modes
+# New JS Logic for Modes & Accordion
 app_logic = '''
 <script>
     // Authentication Logic
@@ -426,14 +449,134 @@ app_logic = '''
         document.getElementById('view-' + mode).classList.add('active');
     }
 
+    // Accordion Logic
+    function toggleAccordion(element) {
+        const container = element.closest('.wa-container');
+        container.classList.toggle('collapsed');
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
-        // Bind enter key
         document.getElementById("login-pass").addEventListener("keypress", e => {
             if(e.key === "Enter") attemptLogin();
         });
     });
 </script>
+'''
+
+# Generate HTML dynamically from JSON for each workspace section
+
+# 1. Dashboard HTML
+dashboard_html = '<div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;">'
+for item in ws_data['dashboard']['field_updates']:
+    dashboard_html += f'<li><span class="highlight">{item["name"]}</span> — {item["content"]}</li>'
+dashboard_html += '</ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div>'
+for i, item in enumerate(ws_data['dashboard']['policy_updates']):
+    chip_class = "red" if "핵심" in item["chip"] else ("blue" if "예고" in item["chip"] else "green")
+    dashboard_html += f'<div class="report-item"><div class="tag-row"><span class="chip {chip_class}">{item["chip"]}</span></div><h3 class="report-title">{item["title"]}</h3><p class="report-desc">{item["desc"]}</p></div>'
+    if i < len(ws_data['dashboard']['policy_updates']) - 1:
+        dashboard_html += '<div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div>'
+dashboard_html += '</div></div>'
+
+# 2. Projects HTML
+projects_html = '<div class="grid-2"><div><div class="card"><div class="card-header"><div class="card-title">본부별 주요 프로젝트</div></div>'
+depts = [
+    ("■ 디자인 본부", ws_data['projects']['design_dept']),
+    ("■ 도시개발 & 재생 본부", ws_data['projects']['urban_dev_dept']),
+    ("■ 도시계획 본부", ws_data['projects']['urban_plan_dept'])
+]
+for title, items in depts:
+    projects_html += f'<h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">{title}</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr>'
+    for item in items:
+        name_html = f'<span class="highlight">{item["name"]}</span>' if item["highlight"] else item["name"]
+        projects_html += f'<tr><td>{name_html}</td><td>{item["status"]}</td></tr>'
+    projects_html += '</table>'
+projects_html += '</div><div class="card"><div class="card-header"><div class="card-title">입찰/수주 전선 (전략기획)</div><span class="chip red">총력전</span></div><table class="card-table"><tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr>'
+for item in ws_data['projects']['strategy_bids']:
+    name_html = f'<span class="highlight">{item["name"]}</span>' if item["highlight"] else item["name"]
+    projects_html += f'<tr><td>{name_html}</td><td>{item["date"]}</td><td>{item["status"]}</td></tr>'
+projects_html += '</table></div></div><div><div class="card"><div class="card-header"><div class="card-title">인접지 개발 동향</div><span class="chip">완벽 복원</span></div>'
+for adj in ws_data['projects']['adjacent_areas']:
+    projects_html += f'<div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">{adj["region"]}</div><ul class="acc-body">'
+    for li in adj['items']:
+        projects_html += f'<li>{li}</li>'
+    projects_html += '</ul></div>'
+projects_html += '</div><div class="card"><div class="card-header"><div class="card-title">정보몽땅 자동 크롤링 (API)</div><span class="chip blue">실시간 연동</span></div><table class="card-table"><tr><th>구역</th><th>상태</th><th>변동 내역</th></tr>'
+for api in ws_data['projects']['api_crawling']:
+    status_html = '<span style="font-weight:700;">[ 등록 ]</span>' if api['status'] == '등록' else '<span style="color:var(--text-secondary);">[ 미지정 ]</span>'
+    projects_html += f'<tr><td><strong>{api["name"]}</strong></td><td>{status_html}</td><td>{api["desc"]}</td></tr>'
+projects_html += '</table></div></div></div>'
+
+# 3. Calendar HTML
+calendar_html = '<div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div>'
+for day in ws_data['calendar']:
+    calendar_html += f'<div class="day-block"><div class="day-header"><div class="day-date">{day["date"]}</div><div class="day-weekday">{day["weekday"]}</div></div>'
+    for ev in day['events']:
+        imp_class = " important" if ev["important"] else ""
+        time_html = f'<div class="event-time">{ev["time"]}</div>' if "time" in ev else ""
+        note_html = f'<div class="event-note">{ev["note"]}</div>' if ev["note"] else ""
+        calendar_html += f'<div class="event-card{imp_class}">{time_html}<div class="event-name">{ev["name"]}</div>{note_html}</div>'
+    calendar_html += '</div>'
+calendar_html += '</div>'
+
+# 4. Laws HTML
+laws_html = '<div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">신규 시행 법령</div></div><table class="card-table"><tr><th>시행일</th><th>법령</th><th>주요 내용</th></tr>'
+for lw in ws_data['laws']['new_laws']:
+    laws_html += f'<tr><td>{lw["date"]}</td><td>{lw["law"]}</td><td>{lw["desc"]}</td></tr>'
+laws_html += '</table></div><div class="card"><div class="card-header"><div class="card-title">지자체 고시/공고</div></div><ul>'
+for no in ws_data['laws']['local_notices']:
+    laws_html += f'<li>{no}</li>'
+laws_html += '</ul></div><div class="card" style="grid-column: 1 / -1;"><div class="card-header"><div class="card-title">서울시 10대 법령 개정 건의안 추적표</div></div><table class="card-table"><tr><th>건의 항목</th><th>현행</th><th>건의안</th><th>상태</th></tr>'
+for req in ws_data['laws']['seoul_10_requests']:
+    laws_html += f'<tr><td>{req["item"]}</td><td>{req["current"]}</td><td><strong style="color:var(--text-primary)">{req["request"]}</strong></td><td>{req["status"]}</td></tr>'
+laws_html += '</table></div></div>'
+
+
+# Build Accordion UI for Workspace
+workspace_content = f'''
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">1. 전사 일일 및 종합 동향</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">7월 3주차 주요 변동 사항 및 핵심 요약</p>
+        {dashboard_html}
+    </div>
+</div>
+
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">2. 전사 프로젝트 통합 뷰</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">본부별 현황, 입찰 전선, 인접지 및 정보몽땅</p>
+        {projects_html}
+    </div>
+</div>
+
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">3. 통합 핵심 일정표</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
+        {calendar_html}
+    </div>
+</div>
+
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">4. 법규 아카이브</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
+        {laws_html}
+    </div>
+</div>
 '''
 
 html_template = f'''<!DOCTYPE html>
@@ -475,22 +618,9 @@ html_template = f'''<!DOCTYPE html>
             {{page_reading}}
         </div>
         
-        <!-- MODE 2: WORKSPACE (Dashboard + Projects + Calendar + Laws) -->
+        <!-- MODE 2: WORKSPACE (Accordion based CMS layout) -->
         <div id="view-workspace" class="page-view">
-            <div class="workspace-grid">
-                <div class="workspace-card" style="grid-column: 1 / -1;">
-                    {{page_dashboard}}
-                </div>
-                <div class="workspace-card">
-                    {{page_projects}}
-                </div>
-                <div class="workspace-card">
-                    {{page_calendar}}
-                </div>
-                <div class="workspace-card" style="grid-column: 1 / -1;">
-                    {{page_laws}}
-                </div>
-            </div>
+            {{workspace_content}}
         </div>
     </div>
     
@@ -504,15 +634,11 @@ html_template = f'''<!DOCTYPE html>
 # Compile
 compiled_html = html_template.replace('{swiss_css}', swiss_css)
 compiled_html = compiled_html.replace('{page_reading}', read_file('src/pages/reading.html'))
-compiled_html = compiled_html.replace('{page_dashboard}', read_file('src/pages/dashboard.html'))
-compiled_html = compiled_html.replace('{page_projects}', read_file('src/pages/projects.html'))
-compiled_html = compiled_html.replace('{page_calendar}', read_file('src/pages/calendar.html'))
-compiled_html = compiled_html.replace('{page_laws}', read_file('src/pages/laws.html'))
+compiled_html = compiled_html.replace('{workspace_content}', workspace_content)
 compiled_html = compiled_html.replace('{sha_script}', sha_script)
 compiled_html = compiled_html.replace('{app_logic}', app_logic)
 
-# To ensure the articles.js script logic still works properly inside the new structure, we let it be.
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(compiled_html)
 
-print("Build successful! index.html updated.")
+print("Build successful! Data decoupled, JSON rendered, Accordion UI integrated into index.html.")

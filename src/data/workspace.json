@@ -1,0 +1,106 @@
+{
+  "dashboard": {
+    "field_updates": [
+      {"name": "장대B구역", "content": "7/10 사업시행인가 완료!"},
+      {"name": "장안1구역", "content": "7/11 설계자 선정 총회 (진양 적격심사 1위)"},
+      {"name": "대림1구역", "content": "임원 선출 문제 제기 → 재총회 준비 중 [내부정보]"},
+      {"name": "면목역 1차 모아주택", "content": "7/14 4·7구역 총회"},
+      {"name": "당산1구역", "content": "7/18 설계자 선정 총회 (진양 기호2번)"}
+    ],
+    "policy_updates": [
+      {"chip": "★★★ 핵심", "title": "서울시 '특별 공정촉진회의' 최초 개최 (07.10)", "desc": "행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대."},
+      {"chip": "입법예고 (~8/10)", "title": "주택법 시행령 개정", "desc": "도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화."},
+      {"chip": "기 보고", "title": "모아타운 종상향 + 도정법 개정", "desc": "3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용."}
+    ]
+  },
+  "projects": {
+    "design_dept": [
+      {"name": "장대B구역", "status": "사업시행인가 완료, 7/14 보행브릿지 회의", "highlight": true},
+      {"name": "면목역 모아주택", "status": "7/14 4·7구역 총회", "highlight": true},
+      {"name": "하계 현대우성", "status": "7/16 노원구청장 보고", "highlight": true},
+      {"name": "수택동 재개발", "status": "2차 보완도서 건축업무 지원", "highlight": false},
+      {"name": "마천5구역", "status": "시공사 현장설명회 완료", "highlight": false}
+    ],
+    "urban_dev_dept": [
+      {"name": "화성 남양 지역주택", "status": "10월 말 통합심의 준비 (쌍용건설)", "highlight": false},
+      {"name": "갈현1구역 재개발", "status": "철거도서 작성 중", "highlight": false},
+      {"name": "범일3구역", "status": "9차 사업시행변경인가 접수", "highlight": false}
+    ],
+    "urban_plan_dept": [
+      {"name": "장위13구역", "status": "수립범위 재접수 준비", "highlight": true},
+      {"name": "삼선동 1·2구역", "status": "7/16 MP 미팅(구청)", "highlight": true},
+      {"name": "석관초 관리계획", "status": "7/16 수립범위 사전자문(시청)", "highlight": true}
+    ],
+    "strategy_bids": [
+      {"name": "장안1구역", "date": "7/11 선정 총회", "status": "적격심사 1위", "highlight": true},
+      {"name": "당산1구역", "date": "7/18 선정 총회", "status": "기호 2번", "highlight": true},
+      {"name": "독산1구역", "date": "3분기 입찰", "status": "26년 4Q 예상", "highlight": false},
+      {"name": "부천 중동역세권", "date": "단독시행 검토", "status": "26년 4Q 예상", "highlight": false}
+    ],
+    "adjacent_areas": [
+      {"region": "① 은평구", "items": ["증산5구역 — 해체공사 착공, 가림막 설치 도로통제 시작", "불광8 조합설립(25층 321세대) / 구산역세권 구역지정"]},
+      {"region": "② 중랑구", "items": ["상봉7구역 — 사업시행계획 변경인가(7/2). 49층 841세대", "'신속추진지원팀' 신설 (7/1)"]},
+      {"region": "③ 강남구", "items": ["은마아파트 — 7/2 사업시행인가 획득!", "'재건축 신속화합(신화) 프로젝트' 1호 결재 (7/1)"]},
+      {"region": "④ 종로구 / ⑤ 성북구 / ⑥ 노원구 / ⑦ 인천", "items": ["종로2·3가 지구단위계획 변경안 수정가결", "신월곡제1구역 — 사업시행계획(변경)인가 고시", "상계주공7단지 — 안전진단 통과", "인천 제물포구 행정체제 개편 출범"]}
+    ],
+    "api_crawling": [
+      {"name": "대림1구역", "status": "등록", "desc": "창립총회 결과보고 등재"},
+      {"name": "장위13-2구역", "status": "등록", "desc": "주민설명회 자료 공개"},
+      {"name": "창신10구역", "status": "등록", "desc": "신속통합기획 구역 지정"},
+      {"name": "중계주공5단지", "status": "미지정", "desc": "구역지정 전 미등재"}
+    ]
+  },
+  "calendar": [
+    {
+      "date": "7/13",
+      "weekday": "월요일",
+      "events": [
+        {"name": "중계본동 재개발 현장 미팅", "note": "SH · 주대위 · 설계사 참석", "important": false},
+        {"name": "신정동 922 재개발 주민설명회", "note": "전략기획 본부 참석", "important": false}
+      ]
+    },
+    {
+      "date": "7/14",
+      "weekday": "화요일",
+      "events": [
+        {"time": "14:00", "name": "면목역 1차 모아주택 총회", "note": "4·7구역 (디자인2소)", "important": true},
+        {"name": "장대B구역 보행브릿지 회의", "note": "협력사 및 조합", "important": false},
+        {"name": "석관초 관리계획 과장보고", "note": "관할 구청", "important": false}
+      ]
+    },
+    {
+      "date": "7/16",
+      "weekday": "목요일",
+      "events": [
+        {"name": "하계 현대우성 구청장 보고", "note": "노원구청 (디자인3소)", "important": true},
+        {"name": "삼선동 1·2구역 MP 미팅", "note": "", "important": false}
+      ]
+    },
+    {
+      "date": "7/18",
+      "weekday": "토요일",
+      "events": [
+        {"name": "당산1구역 설계자 선정 총회", "note": "전략계획/기획팀 총력 대응 ★ 수주 핵심", "important": true}
+      ]
+    }
+  ],
+  "laws": {
+    "new_laws": [
+      {"date": "07.01", "law": "도정법 시행령", "desc": "총회 1회 통합, 공사비 검증 의무화"},
+      {"date": "07.01", "law": "주택법 시행령", "desc": "일부 개정 시행 (행정사항 정비)"},
+      {"date": "02.27", "law": "소규모주택정비법", "desc": "조합설립 요건 완화, 임대주택 가격 상향"}
+    ],
+    "local_notices": [
+      "[서울] 성북구 신월곡제1구역 — 7/2 사업시행계획(변경)인가 고시",
+      "[서울] 중랑구 상봉7구역 — 7/2 사업시행계획 변경인가 고시 (49층)",
+      "[서울] 종로구 종로2·3가 — 7/2 지구단위계획 변경안 수정가결"
+    ],
+    "seoul_10_requests": [
+      {"item": "조합설립 동의율", "current": "75%", "request": "70%", "status": "건의 중"},
+      {"item": "이주비 대출 LTV", "current": "40%", "request": "70%", "status": "건의 중"},
+      {"item": "인가 전 통지 기간", "current": "60일", "request": "30일", "status": "건의 중"},
+      {"item": "시공자 수의계약", "current": "2회 유찰", "request": "1회 유찰", "status": "건의 중"},
+      {"item": "용적률 1.2배 완화", "current": "공공만 적용", "request": "민간 확대 적용", "status": "건의 중"}
+    ]
+  }
+}
