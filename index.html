@@ -742,25 +742,7 @@
                 </p>
             </div>
 
-            <!-- Detail Pane (Replacing Modal) -->
-            <div id="article-detail-pane" style="background: #fff; border-radius: 16px; padding: 32px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #eaeaea; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center;">
-                <div id="detail-placeholder" style="color: #999; font-size: 16px;">
-                    <span style="font-size: 32px; display: block; margin-bottom: 12px;">👆</span>
-                    아래 도감에서 컬러 블록을 하나 선택해 보세요.
-                </div>
-                
-                <div id="detail-content" style="display: none; width: 100%; text-align: left;">
-                    <div id="detail-category" style="color: #0066cc; font-size: 13px; font-weight: 600; margin-bottom: 10px;"></div>
-                    <h2 id="detail-title" style="font-size: 22px; margin-bottom: 16px; line-height: 1.35; color: #1d1d1f; word-break: keep-all;"></h2>
-                    <p id="detail-excerpt" style="font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 20px; background: #f9f9f9; padding: 16px; border-radius: 12px;"></p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div id="detail-meta" style="font-size: 12px; color: #888;"></div>
-                        <button id="detail-link-btn" style="padding: 10px 20px; border-radius: 99px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 또 들어가기 (원본 보기)</button>
-                    </div>
-                </div>
-            </div>
-
-            <style>
+<style>
                 /* Dense 100-Mosaic Tile Grid */
                 .grid-mosaic {
                     display: grid;
@@ -821,6 +803,26 @@
                 <!-- JavaScript will populate 100 mosaic blocks here -->
             </div>
             
+            
+
+            <!-- Detail Pane (Replacing Modal) -->
+            <div id="article-detail-pane" style="background: #fff; border-radius: 16px; padding: 32px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #eaeaea; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center;">
+                <div id="detail-placeholder" style="color: #999; font-size: 16px;">
+                    <span style="font-size: 32px; display: block; margin-bottom: 12px;">👆</span>
+                    아래 도감에서 컬러 블록을 하나 선택해 보세요.
+                </div>
+                
+                <div id="detail-content" style="display: none; width: 100%; text-align: left;">
+                    <div id="detail-category" style="color: #0066cc; font-size: 13px; font-weight: 600; margin-bottom: 10px;"></div>
+                    <h2 id="detail-title" style="font-size: 22px; margin-bottom: 16px; line-height: 1.35; color: #1d1d1f; word-break: keep-all;"></h2>
+                    <p id="detail-excerpt" style="font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 20px; background: #f9f9f9; padding: 16px; border-radius: 12px;"></p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div id="detail-meta" style="font-size: 12px; color: #888;"></div>
+                        <button id="detail-link-btn" style="padding: 10px 20px; border-radius: 99px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 또 들어가기 (원본 보기)</button>
+                    </div>
+                </div>
+            </div>
+
             <script src="articles.js"></script>
             <script>
                 let currentArticleUrl = '';
