@@ -734,9 +734,13 @@
         <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
         <!-- ========================================== -->
         <div id="tab-reading" class="tab-content">
-            <div class="hero">
-                <h1>오늘의 읽을거리</h1>
-                <p>건축인을 위한 경제 지표, 사회 트렌드, 그리고 문화 예술 칼럼</p>
+            <div class="hero" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 40px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
+                <h1 style="font-size: 32px; margin-bottom: 16px; color: #1d1d1f; letter-spacing: -0.5px;">오늘의 읽을거리 100선 🎯</h1>
+                <p style="font-size: 17px; color: #555; line-height: 1.6; max-width: 600px; margin: 0 auto; word-break: keep-all;">
+                    건축, 예술, 경제, 미래 도시 등 다양한 인사이트를 모았습니다.<br>
+                    <strong>알록달록한 카드를 눌러 지식을 채워보세요!</strong><br>
+                    한 번 읽은 기사는 <span style="color: #999; font-weight: 600;">회색으로 변하여</span> 수집 도감이 채워지는 재미를 느낄 수 있습니다. 100개의 인사이트를 모두 모아보실까요?
+                </p>
             </div>
 
             <!-- Economic Stats -->
@@ -771,12 +775,21 @@
             <style>
                 .magazine-card {
                     cursor: pointer;
-                    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.5s ease;
                     position: relative;
                 }
                 .magazine-card:hover {
                     transform: translateY(-8px);
                     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+                }
+                .magazine-card.read {
+                    background-color: #f5f5f7 !important;
+                    border: 1px solid #e0e0e0 !important;
+                }
+                .magazine-card.read .mag-title,
+                .magazine-card.read .mag-excerpt,
+                .magazine-card.read .mag-category {
+                    color: #999999 !important;
                 }
                 .magazine-card::after {
                     content: "↗ 원문 보기";
@@ -788,133 +801,92 @@
                     opacity: 0;
                     transition: opacity 0.3s ease;
                 }
+                .magazine-card.read::after {
+                    content: "✓ 수집 완료 (다시 보기)";
+                    color: #999999;
+                }
                 .magazine-card:hover::after {
                     opacity: 1;
                 }
             </style>
-            <div class="grid-3" style="gap: 32px; row-gap: 56px;">
-                <!-- Card 1 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=초고층+하이엔드+딜레마', '_blank')">
-                    <div class="mag-category">건축 · 도시 패러다임</div>
-                    <div class="mag-title">초고층과 하이엔드, 그리고 공공성의 딜레마</div>
-                    <div class="mag-excerpt">최근 서울 주요 정비사업지에서 49층 이상의 초고층 스카이라인과 하이엔드 브랜드 유치 경쟁이 치열하다. 그러나 공사비 급등의 파고 속에서, 고급화 전략이 조합원 분담금 폭탄으로 돌아오며 시공사와의 해지 사태가 속출하고 있다. 이제 건축사들은 화려함 뒤에 숨겨진 '유지 가능한 공공성과 경제성'을 설득해야 하는 과제를 안게 되었다.</div>
-                    <div class="mag-meta"><span>SPACE 매거진 사설 요약</span><span>2026.07.12</span></div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=ZEB+제로에너지건축+의무화', '_blank')">
-                    <div class="mag-category">ESG · 친환경 트렌드</div>
-                    <div class="mag-title">ZEB(제로에너지건축) 의무화의 역설</div>
-                    <div class="mag-excerpt">내년부터 민간 아파트의 제로에너지건축물(ZEB) 최소 5등급 의무화가 전면 시행된다. 태양광 패널, 고효율 창호 등 친환경 기술의 도입은 필연적이나, 표준건축비 인상률이 실제 투입 비용을 따라가지 못해 사업성 악화의 주범으로 지목받고 있다. 설계 단계부터 에너지 효율을 극대화하면서도 디자인을 훼손하지 않는 창의적 외장재 통합 기술(BIPV)이 돌파구가 될 것이다.</div>
-                    <div class="mag-meta"><span>대한건축학회 칼럼 발췌</span><span>2026.07.10</span></div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=도시는+누구의+기억을+보존하는가', '_blank')">
-                    <div class="mag-category">문화 · 정치적 시각</div>
-                    <div class="mag-title">도시는 누구의 기억을 보존하는가?</div>
-                    <div class="mag-excerpt">오세훈 시장의 '그레이트 한강' 프로젝트와 서울 곳곳의 랜드마크 조성 사업은 도시의 정치적 성취를 보여주는 상징이다. 하지만 노후계획도시 재정비 과정에서, 수십 년간 쌓여온 골목길의 미시적 역사와 거주민의 서사가 블록 단위의 거대 아파트 단지로 치환되며 삭제되고 있다. 우리는 재개발 도면 위에서 과거를 완전히 지울 것인가, 아니면 그 흔적을 현대적으로 재해석하여 남길 것인가.</div>
-                    <div class="mag-meta"><span>경향신문 도시건축 칼럼</span><span>2026.07.14</span></div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=정비사업+공사비+안정화', '_blank')">
-                    <div class="mag-category">실무 경제 · 부동산</div>
-                    <div class="mag-title">2026 하반기 정비사업 공사비 안정화의 허상</div>
-                    <div class="mag-excerpt">시멘트, 철근 등 핵심 자재가의 상승세가 둔화되었다는 정부 발표에도 불구하고 현장의 체감 온도는 다르다. 숙련공 부족과 노조 파업으로 인한 인건비 상승이 자재가 하락분을 상쇄하고 있기 때문이다. 전문가들은 평당 900만 원 선의 공사비가 앞으로의 '뉴노멀'이 될 것이라 경고하며, 외관 특화를 줄이고 코어 평면에 집중하는 다이어트 설계의 필요성을 강조한다.</div>
-                    <div class="mag-meta"><span>한국경제 부동산 리포트</span><span>2026.07.13</span></div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=시니어+코하우징', '_blank')">
-                    <div class="mag-category">사회 · 인구학적 변화</div>
-                    <div class="mag-title">시니어 코하우징, 도심 속 새로운 주거 대안</div>
-                    <div class="mag-excerpt">초고령 사회 진입으로 '액티브 시니어'를 위한 도심형 실버타운 수요가 급증하고 있다. 과거 외곽에 위치하던 요양 시설과 달리, 최근에는 병원, 문화시설, 대중교통이 밀접한 도심 한복판의 고급 코하우징(Co-housing) 모델이 주목받는다. 조합원 연령대가 높은 재건축 단지에서는 단지 내 시니어 특화 동을 별도로 설계하는 파격적인 시도도 나타나고 있다.</div>
-                    <div class="mag-meta"><span>건축공간연구원(AURI) 동향</span><span>2026.07.08</span></div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=생성형+AI+단지설계', '_blank')">
-                    <div class="mag-category">테크 · 프롭테크</div>
-                    <div class="mag-title">생성형 AI가 바꾸는 단지 배치도 설계 프로세스</div>
-                    <div class="mag-excerpt">일조권, 조망권, 건폐율 등 수백 개의 제약 조건을 고려해야 하는 아파트 단지 배치 작업에 AI 엔진이 적극 도입되고 있다. 과거 설계팀이 일주일간 밤을 새워 만들던 3가지 대안을 이제 AI가 10분 만에 100가지 옵션으로 도출해 낸다. 단순 반복 업무가 사라진 건축사들은 이제 단지의 '콘셉트와 커뮤니티 스토리텔링'에 역량을 집중하고 있다.</div>
-                    <div class="mag-meta"><span>PropTech 매거진 기획기사</span><span>2026.07.11</span></div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=프리츠커상+빛의+철학', '_blank')">
-                    <div class="mag-category">예술 · 미학</div>
-                    <div class="mag-title">프리츠커상 수상자들의 공통된 '빛'의 철학</div>
-                    <div class="mag-excerpt">안도 다다오부터 페터 추어토르까지, 세계적인 거장들의 건축은 형태의 화려함보다 '빛과 그림자'를 다루는 방식에서 위대함을 드러낸다. 최근 한국의 대형 상업 시설과 고급 주거 단지에서도 자연 채광을 실내 깊숙이 끌어들이는 중정(Courtyard)과 천창 설계가 트렌드로 자리 잡았다. 빛은 그 어떤 비싼 대리석보다 공간을 고급스럽게 만드는 궁극의 마감재다.</div>
-                    <div class="mag-meta"><span>C3 Korea 예술칼럼</span><span>2026.07.05</span></div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=파리+15분+도시', '_blank')">
-                    <div class="mag-category">글로벌 도시 동향</div>
-                    <div class="mag-title">파리 '15분 도시' 프로젝트, 3년 후 중간 점검</div>
-                    <div class="mag-excerpt">안 이달고 파리 시장이 주도한 '15분 도시' 실험이 전 세계 도시 계획의 교과서가 되고 있다. 도보나 자전거로 15분 내에 직장, 학교, 상업, 의료 시설에 닿을 수 있게 하겠다는 이 계획은 차량 통행을 줄이고 보행자 중심으로 도로를 재편했다. 서울시 역시 모아타운과 보행 일상권 개념을 통해 한국형 15분 도시를 정비사업의 핵심 가치로 삼고 있다.</div>
-                    <div class="mag-meta"><span>Urban Review 해외특파원</span><span>2026.07.09</span></div>
-                </div>
-
-                <!-- Card 9 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=국민평형+84+종말', '_blank')">
-                    <div class="mag-category">사회 · 트렌드</div>
-                    <div class="mag-title">1인 가구 40% 시대, 국민평형 84㎡의 종말인가</div>
-                    <div class="mag-excerpt">오랜 기간 아파트 청약 시장의 절대 기준이었던 '전용 84㎡(구 34평)'의 입지가 흔들리고 있다. 1~2인 가구가 급증함에 따라 전용 59㎡ 틈새 평면이나 오히려 방을 하나 줄이고 거실을 극대화한 74㎡ 모델이 인기를 끈다. 하드웨어적 크기보다 워크스페이스, 취미 공간 등 가변성을 강조한 '알파룸' 특화 설계가 분양 흥행의 열쇠로 부상했다.</div>
-                    <div class="mag-meta"><span>매일경제 부동산 트렌드</span><span>2026.07.12</span></div>
-                </div>
-
-                <!-- Card 10 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=도심복합사업+유예', '_blank')">
-                    <div class="mag-category">정책 · 법률</div>
-                    <div class="mag-title">도심복합사업, 5년의 일몰 연장 끝에 살아남을까</div>
-                    <div class="mag-excerpt">공공 주도의 도심공공주택복합사업이 일몰 기한을 연장하며 기사회생했다. 그러나 토지주들의 강한 반발과 민간 재개발로의 전환 요구 등 험로가 예상된다. 정부는 용적률 상향과 통합 심의 등 강력한 인센티브를 약속했으나, 현장에서는 공공의 사업 추진 동력과 신뢰도에 대한 의구심이 여전하다. 하반기 선도지구들의 착공 여부가 전체 제도의 성패를 가를 것이다.</div>
-                    <div class="mag-meta"><span>국토교통부 입법분석</span><span>2026.07.07</span></div>
-                </div>
-
-                <!-- Card 11 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=뉴트럴톤+팝컬러', '_blank')">
-                    <div class="mag-category">디자인 · 라이프스타일</div>
-                    <div class="mag-title">무채색의 붕괴, 다시 돌아온 과감한 컬러의 시대</div>
-                    <div class="mag-excerpt">지난 10년간 한국 아파트 인테리어를 지배했던 화이트와 베이지 중심의 '미니멀리즘 뉴트럴 톤'이 물러가고 있다. 획일화된 무채색에 지친 입주자들은 버건디, 딥 그린, 테라코타 등 강렬하고 개성 있는 컬러를 과감하게 외관 옥탑부나 커뮤니티 인테리어에 요구하고 있다. 색채는 단지의 아이덴티티를 구축하는 가장 경제적이면서도 효과적인 무기다.</div>
-                    <div class="mag-meta"><span>디자인프레스 트렌드뷰</span><span>2026.07.03</span></div>
-                </div>
-
-                <!-- Card 12 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=아파트+단지+UAM+버티포트', '_blank')">
-                    <div class="mag-category">모빌리티 · 미래도시</div>
-                    <div class="mag-title">UAM 버티포트, 향후 고급 단지의 필수 인프라?</div>
-                    <div class="mag-excerpt">도심항공교통(UAM) 상용화가 가시화되면서, 강남과 여의도의 일부 초고층 재건축 단지들이 옥상에 '버티포트(이착륙장)' 설계를 반영하기 시작했다. 소음 및 진동 제어 기술, 항공법상 고도 제한 등 넘어야 할 산이 많지만, '하늘길과 바로 연결되는 아파트'라는 타이틀은 하이엔드 주거 시장의 새로운 프리미엄 척도로 작용할 잠재력을 품고 있다.</div>
-                    <div class="mag-meta"><span>미래도시교통연구원 리포트</span><span>2026.07.11</span></div>
-                </div>
-
-                <!-- Card 13 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=모듈러+건축+공기단축', '_blank')">
-                    <div class="mag-category">엔지니어링 · 기술</div>
-                    <div class="mag-title">모듈러 건축의 진화, 공기와 품질 두 마리 토끼</div>
-                    <div class="mag-excerpt">임시 숙소나 저층 빌라의 전유물로 여겨지던 모듈러(OSC) 건축이 중고층 아파트로 영역을 확장하고 있다. 공장에서 70% 이상을 제작해 현장 조립만 거치는 방식은 최근의 인건비 급등과 공사 지연 리스크를 헤지할 완벽한 대안으로 떠올랐다. 건설사들은 층간소음 저감 기술과 접합부 기밀성을 획기적으로 높인 3세대 모듈러 시스템을 속속 선보이고 있다.</div>
-                    <div class="mag-meta"><span>건설경제 프리미엄</span><span>2026.07.04</span></div>
-                </div>
-
-                <!-- Card 14 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=공공미술+흉물', '_blank')">
-                    <div class="mag-category">공공예술 · 미관</div>
-                    <div class="mag-title">흉물이 된 공공미술, 도시 미관을 해치는 원인</div>
-                    <div class="mag-excerpt">건축물 미술작품 제도는 예술가 육성과 환경 미화를 목표로 시행되었으나, 잦은 리베이트 논란과 단지 맥락에 맞지 않는 기성품 설치로 인해 '도심의 흉물'이라는 오명을 벗지 못하고 있다. 최근 기부채납을 통한 공공 기여로 미술 장식품을 대체하거나, 조경과 빛, 미디어 파사드를 결합한 형태의 융합형 공공미술로 패러다임이 급격하게 전환되는 추세다.</div>
-                    <div class="mag-meta"><span>월간 미술비평</span><span>2026.07.01</span></div>
-                </div>
-
-                <!-- Card 15 -->
-                <div class="magazine-card" onclick="window.open('https://www.google.com/search?q=천장고+심리학+창의성', '_blank')">
-                    <div class="mag-category">공간 심리학</div>
-                    <div class="mag-title">천장 높이가 창의성과 생산성에 미치는 영향</div>
-                    <div class="mag-excerpt">최근 하이엔드 아파트 설계에서 천장고 2.5m~2.6m 상향이 기본 옵션이 되었다. 뇌과학 및 공간 심리학 연구에 따르면 천장이 30cm 높아질 때마다 입주자의 창의적 사고율과 심리적 개방감이 유의미하게 상승한다. 한정된 용적률 속에서 층수를 포기하더라도 층고를 높이는 선택이 주는 주거 만족도는 단순한 면적 확장을 뛰어넘는 가치를 지닌다.</div>
-                    <div class="mag-meta"><span>심리건축학회 저널</span><span>2026.07.06</span></div>
-                </div>
+            
+            <div class="grid-3" id="magazine-grid" style="gap: 32px; row-gap: 56px;">
+                <!-- JavaScript will populate 100 articles here -->
             </div>
+            
+            <script src="articles.js"></script>
+            <script>
+                function renderArticles() {
+                    const grid = document.getElementById('magazine-grid');
+                    if (!grid || typeof articlesData === 'undefined') return;
+                    
+                    grid.innerHTML = '';
+                    
+                    let readList = [];
+                    try {
+                        const saved = localStorage.getItem('jhub_read_articles');
+                        if (saved) readList = JSON.parse(saved);
+                    } catch (e) {}
+                    
+                    articlesData.forEach((article, index) => {
+                        let bgColor = '#ffffff';
+                        const cat = article.category || '';
+                        
+                        if (cat.includes('예술') || cat.includes('문화') || cat.includes('디자인')) {
+                            bgColor = '#fffdf0'; 
+                        } else if (cat.includes('건축') || cat.includes('공학') || cat.includes('시티')) {
+                            bgColor = '#f0f8ff'; 
+                        } else if (cat.includes('경제') || cat.includes('부동산') || cat.includes('상업')) {
+                            bgColor = '#ffffff'; 
+                        } else {
+                            bgColor = '#e6f7ff'; 
+                        }
+                        
+                        const isRead = readList.includes(index);
+                        const cardClass = isRead ? "magazine-card read" : "magazine-card";
+                        
+                        const cardHtml = `
+                            <div class="${cardClass}" id="article-card-${index}" style="background-color: ${bgColor}; padding: 24px; border-radius: 18px; border: 1px solid rgba(0,0,0,0.05);" onclick="openArticle(${index}, '${encodeURIComponent(article.title).replace(/'/g, "\'")}')">
+                                <div class="mag-category" style="color: #0066cc; font-size: 14px; font-weight: 600; margin-bottom: 8px;">${article.category}</div>
+                                <div class="mag-title" style="font-size: 21px; font-weight: 600; line-height: 1.3; margin-bottom: 12px; color: #1d1d1f;">${article.title}</div>
+                                <div class="mag-excerpt" style="font-size: 14px; color: #333333; line-height: 1.5; margin-bottom: 16px;">${article.excerpt}</div>
+                                <div style="font-size: 12px; color: #7a7a7a;">${article.meta}</div>
+                            </div>
+                        `;
+                        grid.innerHTML += cardHtml;
+                    });
+                }
+                
+                function openArticle(index, encodedTitle) {
+                    let readList = [];
+                    try {
+                        const saved = localStorage.getItem('jhub_read_articles');
+                        if (saved) readList = JSON.parse(saved);
+                    } catch (e) {}
+                    
+                    if (!readList.includes(index)) {
+                        readList.push(index);
+                        localStorage.setItem('jhub_read_articles', JSON.stringify(readList));
+                        
+                        const card = document.getElementById('article-card-' + index);
+                        if (card) {
+                            card.className = "magazine-card read";
+                        }
+                    }
+                    
+                    window.open('https://www.google.com/search?q=' + encodedTitle, '_blank');
+                }
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(renderArticles, 100);
+                });
+                
+                const readingTabItem = document.querySelector('[data-target="tab-reading"]');
+                if (readingTabItem) {
+                    readingTabItem.addEventListener('click', renderArticles);
+                }
+            </script>
 
-        </div>
 
     </div>
 
