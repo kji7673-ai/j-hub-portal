@@ -391,6 +391,12 @@
             <h2 style="margin-bottom: 24px; font-weight: 600;">J-Hub Platform</h2>
             <input type="text" id="login-name" class="login-input" placeholder="이름 (예: 홍길동)" autocomplete="off">
             <input type="password" id="login-pass" class="login-input" placeholder="전화번호 뒷자리 (4자리)" inputmode="numeric" maxlength="4">
+            <div style="text-align: left; margin: 8px 0 16px 4px;">
+                <label style="font-size: 13px; color: var(--ink-muted-80); cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <input type="checkbox" id="login-remember" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+                    다음번 접속 시 로그인 유지
+                </label>
+            </div>
             <button onclick="attemptLogin()" class="login-btn">입장하기</button>
             <p id="login-error" style="color: #ff3b30; font-size: 13px; margin-top: 16px; display: none;">이름 또는 뒷자리가 일치하지 않습니다.</p>
         </div>
@@ -417,8 +423,8 @@
     <div class="sub-nav">
         <div class="title" id="page-title">일일보고</div>
         <div class="user-profile">
-            <span>진양 엔지니어링 임직원</span>
-            <div class="avatar">진</div>
+            <span id="user-profile-name">진양 엔지니어링 임직원</span>
+            <div class="avatar" id="user-profile-avatar">진</div>
         </div>
     </div>
 
@@ -994,8 +1000,17 @@
             "이종학": "0402", "송종철": "7417", "최병구": "7438", "김유관": "7081", "박현기": "7880"
         };
 
+        function updateUserProfile(name) {
+            if (name) {
+                document.getElementById("user-profile-name").textContent = name + " 님";
+                document.getElementById("user-profile-avatar").textContent = name.substring(0, 1);
+            }
+        }
+
         function checkAutoLogin() {
-            if (localStorage.getItem("jhub_logged_in") === "true") {
+            if (localStorage.getItem("jhub_logged_in") === "true" || sessionStorage.getItem("jhub_logged_in") === "true") {
+                const userName = localStorage.getItem("jhub_user_name") || sessionStorage.getItem("jhub_user_name");
+                updateUserProfile(userName);
                 document.getElementById("login-screen").style.display = "none";
                 document.getElementById("app-content").style.display = "block";
             }
@@ -1004,11 +1019,19 @@
         function attemptLogin() {
             const name = document.getElementById("login-name").value.trim();
             const pass = document.getElementById("login-pass").value.trim();
+            const remember = document.getElementById("login-remember").checked;
             const err = document.getElementById("login-error");
             
             if (allowedUsers[name] && allowedUsers[name] === pass) {
-                localStorage.setItem("jhub_logged_in", "true");
-                localStorage.setItem("jhub_user_name", name);
+                if (remember) {
+                    localStorage.setItem("jhub_logged_in", "true");
+                    localStorage.setItem("jhub_user_name", name);
+                } else {
+                    sessionStorage.setItem("jhub_logged_in", "true");
+                    sessionStorage.setItem("jhub_user_name", name);
+                }
+                
+                updateUserProfile(name);
                 document.getElementById("login-screen").style.opacity = "0";
                 setTimeout(() => {
                     document.getElementById("login-screen").style.display = "none";
@@ -1027,6 +1050,8 @@
         function logout() {
             localStorage.removeItem("jhub_logged_in");
             localStorage.removeItem("jhub_user_name");
+            sessionStorage.removeItem("jhub_logged_in");
+            sessionStorage.removeItem("jhub_user_name");
             location.reload();
         }
 
