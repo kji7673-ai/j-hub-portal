@@ -56,6 +56,16 @@
                     transform: scale(1.1);
                     z-index: 5;
                 }
+                
+                @keyframes bombExplode {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.5) rotate(15deg); }
+                    100% { transform: scale(1.2); }
+                }
+                @keyframes bounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                }
             </style>
 
             <div class="grid-mosaic" id="mosaic-grid">
@@ -91,6 +101,8 @@
             <script src="articles.js"></script>
             <script>
                 let currentArticleUrl = '';
+                // 이스터에그: 100개 중 1개 폭탄 위치 무작위 배정
+                window.bombIndex = Math.floor(Math.random() * 100);
                 
                 function renderMosaic() {
                     const grid = document.getElementById('mosaic-grid');
@@ -122,13 +134,36 @@
                         const isRead = readList.includes(index);
                         const cardClass = isRead ? "mosaic-block read" : "mosaic-block";
                         
+                        let clickAction = `openDetail(${index})`;
+                        if (index === window.bombIndex) {
+                            clickAction = `triggerEasterEgg(${index})`;
+                        }
+                        
                         const cardHtml = `
-                            <div class="${cardClass}" id="mosaic-card-${index}" style="background-color: ${bgColor};" onclick="openDetail(${index})" title="${article.category}: ${article.title}">
+                            <div class="${cardClass}" id="mosaic-card-${index}" style="background-color: ${bgColor};" onclick="${clickAction}" title="${article.category}: ${article.title}">
                                 <div class="mosaic-check">✓</div>
-                            
+                            </div>
                         `;
                         grid.innerHTML += cardHtml;
                     });
+                }
+                
+                function triggerEasterEgg(index) {
+                    const card = document.getElementById('mosaic-card-' + index);
+                    if (card) {
+                        card.style.background = 'url("data:image/svg+xml;utf8,<svg xmlns=\\\'http://www.w3.org/2000/svg\\\' viewBox=\\\'0 0 24 24\\\' fill=\\\'none\\\' stroke=\\\'red\\\' stroke-width=\\\'2\\\' stroke-linecap=\\\'round\\\' stroke-linejoin=\\\'round\\\'><path d=\\\'M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\\\' fill=\\\'red\\\'></path></svg>") center/50% no-repeat, #fff';
+                        card.style.animation = 'bombExplode 0.5s ease-out forwards';
+                    }
+                    
+                    const pane = document.getElementById('article-detail-pane');
+                    pane.innerHTML = `
+                        <div style="text-align: center; padding: 40px;">
+                            <div style="font-size: 80px; animation: bounce 1s infinite;">💣🎉❤️</div>
+                            <h2 style="font-size: 32px; color: #e30000; margin-top: 20px;">당신의 오늘을 축하합니다!</h2>
+                            <p style="font-size: 18px; color: #555; margin-top: 10px;">수많은 타일 중 특별한 행운을 발견하셨습니다.</p>
+                        </div>
+                    `;
+                    pane.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
                 
                 function openDetail(index) {

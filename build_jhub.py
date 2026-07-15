@@ -419,9 +419,11 @@ app_logic = '''
         const pass = document.getElementById("login-pass").value.trim();
         const err = document.getElementById("login-error");
         
-        if(allowedUsersHash[name]) {
+        const hashedName = await sha256(name);
+        
+        if(allowedUsersHash[hashedName]) {
             const hashedPass = await sha256(pass);
-            if (hashedPass === allowedUsersHash[name]) {
+            if (hashedPass === allowedUsersHash[hashedName]) {
                 localStorage.setItem("jhub_logged_in", "true");
                 localStorage.setItem("jhub_user_name", name);
                 document.getElementById("user-profile-name").textContent = name + " 님";
@@ -620,6 +622,22 @@ html_template = f'''<!DOCTYPE html>
         
         <!-- MODE 2: WORKSPACE (Accordion based CMS layout) -->
         <div id="view-workspace" class="page-view">
+            <div style="background: var(--surface); border: 1px solid var(--accent); padding: 16px 24px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #00cc66; box-shadow: 0 0 8px rgba(0,204,102,0.6); animation: pulse 2s infinite;"></div>
+                    <span style="font-size: 16px; font-weight: 700; letter-spacing: -0.5px;">최종 업데이트</span>
+                </div>
+                <div style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
+                    {{updated_at_text}}
+                </div>
+            </div>
+            <style>
+                @keyframes pulse {{
+                    0% {{ transform: scale(0.95); opacity: 0.8; }}
+                    50% {{ transform: scale(1.1); opacity: 1; }}
+                    100% {{ transform: scale(0.95); opacity: 0.8; }}
+                }}
+            </style>
             {{workspace_content}}
         </div>
     </div>
@@ -637,6 +655,7 @@ compiled_html = compiled_html.replace('{page_reading}', read_file('src/pages/rea
 compiled_html = compiled_html.replace('{workspace_content}', workspace_content)
 compiled_html = compiled_html.replace('{sha_script}', sha_script)
 compiled_html = compiled_html.replace('{app_logic}', app_logic)
+compiled_html = compiled_html.replace('{updated_at_text}', ws_data.get('updated_at', '2026.07.15 16:50 (실시간 동기화 완료)'))
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(compiled_html)
