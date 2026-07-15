@@ -2,738 +2,180 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jinyang Hub - Portal</title>
-    <style>
-        /* Apple Design System Constants */
-        :root {
-            --primary: #0066cc;
-            --primary-focus: #0071e3;
-            --primary-on-dark: #2997ff;
-            --ink: #1d1d1f;
-            --body: #1d1d1f;
-            --body-muted: #cccccc;
-            --ink-muted-80: #333333;
-            --ink-muted-48: #7a7a7a;
-            --divider-soft: #f0f0f0;
-            --hairline: #e0e0e0;
-            --canvas: #ffffff;
-            --canvas-parchment: #f5f5f7;
-            --surface-pearl: #fafafc;
-            --surface-tile-1: #272729;
-            --surface-black: #000000;
-            --surface-chip-translucent: rgba(210, 210, 215, 0.64);
-            
-            --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-            --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jinyang Hub | 진양 저널</title>
+    
+<style>
+/* 
+=====================================================
+Swiss Grid & Architecture Minimalism (J-Hub v2.0)
+=====================================================
+*/
+:root {
+    --bg-color: #f5f5f7;
+    --surface: #ffffff;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --accent: #000000;
+    --border: #e5e5ea;
+    --radius: 0px; /* Brutalism: No rounded corners */
+}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: var(--font-text);
-            color: var(--body);
-            background-color: var(--canvas-parchment);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-size: 15px;
-            line-height: 1.47;
-            letter-spacing: -0.374px;
-            overflow-y: scroll;
-        }
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.3px;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Typography Base */
-        h1, h2, h3, h4, h5 { font-family: var(--font-display); }
-        
-        /* Global Nav */
-        .global-nav {
-            background-color: var(--surface-black);
-            color: #ffffff;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            padding: 0 max(24px, calc((100% - 1200px) / 2));
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: -0.12px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .global-nav ul { list-style: none; display: flex; gap: 32px; width: 100%; align-items: center; }
-        .global-nav li { cursor: pointer; opacity: 0.6; transition: opacity 0.2s; padding: 14px 0; }
-        .global-nav li:hover { opacity: 1; }
-        .global-nav li.active { opacity: 1; font-weight: 600; border-bottom: 2px solid #fff; }
-        .global-nav .logo { font-weight: 600; opacity: 1; font-size: 14px; margin-right: 20px; border:none !important; }
+header {
+    background: var(--surface);
+    border-bottom: 2px solid var(--accent);
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* Sub Nav Frosted */
-        .sub-nav {
-            background-color: rgba(245, 245, 247, 0.8);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid var(--hairline);
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 max(24px, calc((100% - 1200px) / 2));
-            position: sticky;
-            top: 44px;
-            z-index: 900;
-        }
-        .sub-nav .title {
-            font-family: var(--font-display);
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: 0.231px;
-        }
-        .user-profile {
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--ink);
-            font-weight: 400;
-        }
-        .avatar {
-            width: 28px; height: 28px;
-            background-color: var(--surface-chip-translucent);
-            color: var(--ink);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 12px; font-weight: 600;
-        }
+.mode-switch {
+    display: flex;
+    gap: 10px;
+}
 
-        /* Main Container */
-        .container {
-            max-width: 1200px; 
-            margin: 0 auto;
-            padding: 40px 24px; 
-        }
+.mode-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
 
-        /* Tab Content */
-        .tab-content { display: none; animation: fadeIn 0.3s ease-out; }
-        .tab-content.active { display: block; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.mode-btn.active {
+    background: var(--accent);
+    color: #fff;
+}
 
-        /* Hero */
-        .hero { margin-bottom: 40px; text-align: left; }
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 1.07;
-            letter-spacing: -0.28px;
-            margin-bottom: 12px;
-            color: var(--ink);
-        }
-        .hero p {
-            font-family: var(--font-display);
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 1.14;
-            color: var(--ink-muted-80);
-        }
+/* Swiss Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
 
-        /* Dashboard Grid */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
-        .grid-columns { column-count: 2; column-gap: 24px; }
+/* App Container */
+#app-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-        /* Apple Store Utility Card */
-        .card {
-            background-color: var(--canvas);
-            border-radius: 18px;
-            padding: 24px;
-            border: 1px solid var(--hairline);
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 24px;
-            break-inside: avoid;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
-        
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            border-bottom: 1px solid var(--hairline);
-            padding-bottom: 12px;
-        }
-        .card-title {
-            font-family: var(--font-display);
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 1.14;
-            color: var(--ink);
-        }
-        
-        .btn-pill {
-            background-color: var(--primary);
-            color: #ffffff;
-            font-family: var(--font-text);
-            font-size: 13px;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            text-decoration: none;
-            display: inline-flex;
-            cursor: pointer;
-            border: none;
-        }
+/* Hide all pages by default */
+.page-view {
+    display: none;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+.page-view.active {
+    display: block;
+}
 
-        /* Table inside card */
-        .card-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-        .card-table th, .card-table td {
-            padding: 10px 8px;
-            border-bottom: 1px solid var(--divider-soft);
-            text-align: left;
-            vertical-align: top;
-        }
-        .card-table th {
-            color: var(--ink-muted-80);
-            font-weight: 600;
-        }
-        .card-table tr:last-child td { border-bottom: none; }
-        .highlight { color: var(--primary); font-weight: 600; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        /* Report Summary */
-        .report-item { display: flex; flex-direction: column; gap: 6px; }
-        .tag-row { display: flex; gap: 6px; align-items: center; }
-        .chip {
-            background-color: var(--canvas-parchment);
-            color: var(--ink);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 9999px;
-        }
-        .chip.blue { color: var(--primary); background-color: rgba(0, 102, 204, 0.08); }
-        .chip.red { color: #d93025; background-color: rgba(217, 48, 37, 0.08); }
-        .chip.green { color: #108043; background-color: rgba(16, 128, 67, 0.08); }
-        
-        .report-title {
-            font-family: var(--font-text);
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--ink);
-        }
-        .report-desc { font-size: 14px; color: var(--ink-muted-80); }
+/* Journal Mosaic overrides for Swiss aesthetic */
+.grid-mosaic {
+    gap: 4px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+.mosaic-block {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s !important;
+}
+.mosaic-block:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02) !important;
+    z-index: 10;
+    border: 1px solid #000;
+}
+.mosaic-block.active {
+    filter: grayscale(0%);
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+}
 
-        /* Schedule Block */
-        .day-block { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
-        .day-header {
-            display: flex; align-items: baseline; gap: 8px;
-            border-bottom: 1px solid var(--divider-soft); padding-bottom: 4px;
-        }
-        .day-date { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
-        .day-weekday { font-size: 13px; font-weight: 600; color: var(--ink-muted-80); }
-        
-        .event-card {
-            padding: 12px;
-            background: var(--canvas-parchment);
-            border-radius: 11px;
-            display: flex; flex-direction: column; gap: 2px;
-        }
-        .event-card.important { border-left: 3px solid #d93025; background: #fff5f5; }
-        .event-time { font-size: 13px; font-weight: 600; color: var(--primary); }
-        .event-name { font-size: 15px; font-weight: 600; color: var(--ink); }
-        .event-note { font-size: 13px; color: var(--ink-muted-80); }
+/* Workspace Grid */
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.workspace-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+}
 
-        /* Magazine Style for Today's Reading */
-        .magazine-card {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 24px;
-            border-radius: 18px;
-            background: var(--canvas);
-            border: 1px solid var(--hairline);
-            margin-bottom: 24px;
-        }
-        .mag-category {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .mag-title {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 1.1;
-            letter-spacing: -0.28px;
-        }
-        .mag-excerpt {
-            font-size: 15px;
-            color: var(--ink-muted-80);
-            line-height: 1.5;
-        }
-        .mag-meta {
-            font-size: 13px;
-            color: var(--ink-muted-48);
-            display: flex; justify-content: space-between;
-            border-top: 1px solid var(--divider-soft);
-            padding-top: 12px;
-            margin-top: 8px;
-        }
-        .stat-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-        }
-        .stat-item {
-            background: var(--canvas-parchment); padding: 16px; border-radius: 12px;
-        }
-        .stat-label { font-size: 13px; color: var(--ink-muted-80); margin-bottom: 4px; }
-        .stat-value { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--ink); }
-        .stat-change.up { color: #d93025; font-size: 13px; font-weight: 600; }
-        .stat-change.down { color: #108043; font-size: 13px; font-weight: 600; }
+/* Login Screen */
+#login-screen {
+    position: fixed; inset: 0; background: var(--bg-color);
+    display: flex; justify-content: center; align-items: center; z-index: 9999;
+}
+.login-card {
+    background: var(--surface); border: 2px solid var(--accent);
+    padding: 40px; width: 340px; text-align: left;
+}
+.login-card input {
+    width: 100%; padding: 12px; margin-bottom: 16px;
+    border: 1px solid var(--border); font-size: 16px; box-sizing: border-box;
+}
+.login-card button {
+    width: 100%; padding: 16px; background: var(--accent);
+    color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
+}
+</style>
 
-        /* Accordion for Adjacent Areas */
-        .accordion { margin-bottom: 8px; border: 1px solid var(--hairline); border-radius: 11px; overflow: hidden; }
-        .acc-header {
-            background: var(--canvas-parchment); padding: 12px 16px; font-weight: 600;
-            display: flex; justify-content: space-between; cursor: pointer; font-size: 15px;
-        }
-        .acc-body { padding: 16px; background: var(--canvas); display: none; font-size: 14px; line-height: 1.6;}
-        .acc-body ul { padding-left: 20px; }
-        .accordion.open .acc-body { display: block; }
-        
-        /* Mobile Responsive Design */
-        @media (max-width: 768px) {
-            .grid-2, .grid-3, .stat-grid {
-                grid-template-columns: 1fr !important;
-                gap: 16px !important;
-            }
-            .container {
-                padding: 24px 16px;
-            }
-            .hero h1 {
-                font-size: 28px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .global-nav {
-                padding: 0 16px;
-            }
-            .global-nav ul {
-                gap: 16px;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            .global-nav ul::-webkit-scrollbar {
-                display: none;
-            }
-            .global-nav li {
-                flex-shrink: 0;
-            }
-            .sub-nav {
-                padding: 0 16px;
-            }
-            .card {
-                padding: 20px 16px;
-            }
-            .card-title {
-                font-size: 20px;
-            }
-            .mag-title {
-                font-size: 24px;
-            }
-            .stat-value {
-                font-size: 24px;
-            }
-        }
-
-        /* Login Screen */
-        .login-overlay {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: var(--canvas-parchment);
-            display: flex; justify-content: center; align-items: center;
-            z-index: 9999;
-            transition: opacity 0.3s ease;
-        }
-        .login-card {
-            background-color: var(--canvas);
-            padding: 40px; border-radius: var(--radius-lg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            width: 100%; max-width: 340px; text-align: center;
-            transition: transform 0.1s ease;
-        }
-        .login-input {
-            width: 100%; padding: 14px 16px; margin-bottom: 12px;
-            border: 1px solid var(--hairline); border-radius: var(--radius-sm);
-            font-family: inherit; font-size: 16px; box-sizing: border-box;
-            outline: none; transition: border-color 0.2s;
-        }
-        .login-input:focus { border-color: var(--primary); }
-        .login-btn {
-            width: 100%; padding: 14px; margin-top: 8px;
-            background-color: var(--primary); color: #fff;
-            border: none; border-radius: var(--radius-pill);
-            font-size: 17px; font-weight: 600; cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Login Screen -->
-    <div id="login-screen" class="login-overlay">
+    <!-- Login -->
+    <div id="login-screen">
         <div class="login-card">
-            <h2 style="margin-bottom: 24px; font-weight: 600;">J-Hub Platform</h2>
-            <input type="text" id="login-name" class="login-input" placeholder="이름 (예: 홍길동)" autocomplete="off">
-            <input type="password" id="login-pass" class="login-input" placeholder="전화번호 뒷자리 (4자리)" inputmode="numeric" maxlength="4">
-            <div style="text-align: left; margin: 8px 0 16px 4px;">
-                <label style="font-size: 13px; color: var(--ink-muted-80); cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <input type="checkbox" id="login-remember" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
-                    다음번 접속 시 로그인 유지
-                </label>
-            </div>
-            <button onclick="attemptLogin()" class="login-btn">입장하기</button>
-            <p id="login-error" style="color: #ff3b30; font-size: 13px; margin-top: 16px; display: none;">이름 또는 뒷자리가 일치하지 않습니다.</p>
+            <h1>J-Hub</h1>
+            <p style="color:#666; margin-bottom: 24px;">진양 엔지니어링 건축사사무소</p>
+            <input type="text" id="login-name" placeholder="이름 (예: 홍길동)">
+            <input type="password" id="login-pass" placeholder="보안 암호">
+            <p id="login-error" style="color: red; font-size: 13px; display: none; margin-top: -10px; margin-bottom: 10px;">암호가 일치하지 않습니다.</p>
+            <button onclick="attemptLogin()">접속하기 (Access)</button>
         </div>
     </div>
 
-    <!-- Main App Content -->
-    <div id="app-content" style="display: none;">
-
-    <!-- Global Nav -->
-    <nav class="global-nav">
-        <ul style="display: flex; align-items: center; width: 100%;">
-            <li class="logo" style="flex-shrink: 0;">J-Hub Platform</li>
-            <li class="nav-item active" data-target="tab-dashboard">일일보고</li>
-            <li class="nav-item" data-target="tab-reading" style="color:#2997ff; font-weight: 600;">오늘의 읽을거리</li>
-            <li class="nav-item" data-target="tab-projects">프로젝트 현황</li>
-            <li class="nav-item" data-target="tab-calendar">통합 캘린더</li>
-            <li class="nav-item" data-target="tab-laws">법규 아카이브</li>
-            <li style="margin-left: auto; cursor: pointer;" onclick="logout()">
-                <span style="color: var(--body-muted); font-size: 13px; font-weight: 400;">로그아웃</span>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="sub-nav">
-        <div class="title" id="page-title">일일보고</div>
-        <div class="user-profile">
-            <span id="user-profile-name">진양 엔지니어링 임직원</span>
-            <div class="avatar" id="user-profile-avatar">진</div>
+    <header>
+        <div>
+            <h2 style="margin:0; font-size:24px; letter-spacing: -1.5px;">JINYANG <span style="font-weight:300;">HUB</span></h2>
+            <div id="user-profile-name" style="font-size:12px; color:var(--text-secondary); margin-top:4px;"></div>
         </div>
-    </div>
+        <div class="mode-switch">
+            <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
+            <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
+        </div>
+    </header>
 
-    <div class="container">
+    <div id="app-content">
+        <!-- MODE 1: JOURNAL (Reading) -->
+        <div id="view-journal" class="page-view active">
+            <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
+        <!-- ========================================== -->
         
-        <!-- ========================================== -->
-        <!-- TAB 1: 일일보고 (Dashboard) -->
-        <!-- ========================================== -->
-        <div id="tab-dashboard" class="tab-content active">
-            <div class="hero">
-                <h1>전사 일일 및 종합 동향</h1>
-                <p>7월 3주차 주요 변동 사항 및 핵심 요약</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">🔴 현장 핵심 변동</div>
-                        <span class="chip red">업데이트 완료</span>
-                    </div>
-                    <ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;">
-                        <li><span class="highlight">장대B구역</span> — 7/10 <strong>사업시행인가 완료!</strong></li>
-                        <li><span class="highlight">장안1구역</span> — 7/11 설계자 선정 총회 (진양 적격심사 1위)</li>
-                        <li><span class="highlight">대림1구역</span> — 임원 선출 문제 제기 → 재총회 준비 중 [내부정보]</li>
-                        <li><span class="highlight">면목역 1차 모아주택</span> — 7/14 4·7구역 총회</li>
-                        <li><span class="highlight">당산1구역</span> — 7/18 설계자 선정 총회 (진양 기호2번)</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">법규/정책 핵심 변동</div>
-                    </div>
-                    
-                    <div class="report-item">
-                        <div class="tag-row"><span class="chip red">★★★ 핵심</span></div>
-                        <h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3>
-                        <p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p>
-                    </div>
-                    <div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div>
-
-                    <div class="report-item">
-                        <div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div>
-                        <h3 class="report-title">주택법 시행령 개정</h3>
-                        <p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p>
-                    </div>
-                    <div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div>
-
-                    <div class="report-item">
-                        <div class="tag-row"><span class="chip green">기 보고</span></div>
-                        <h3 class="report-title">모아타운 종상향 + 도정법 개정</h3>
-                        <p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- TAB 2: 프로젝트 현황 (Projects) -->
-        <!-- ========================================== -->
-        <div id="tab-projects" class="tab-content">
-            <div class="hero">
-                <h1>전사 프로젝트 통합 뷰</h1>
-                <p>본부별 현황, 입찰 전선, 그리고 인접지 및 정보몽땅 연동 지표</p>
-            </div>
-
-            <div class="grid-2">
-                <!-- 좌측 컬럼 -->
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">본부별 주요 프로젝트</div>
-                        </div>
-                        <h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--primary);">■ 디자인 본부 (56개)</h3>
-                        <table class="card-table">
-                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
-                            <tr><td><span class="highlight">장대B구역</span></td><td>사업시행인가 완료, 7/14 보행브릿지 회의</td></tr>
-                            <tr><td><span class="highlight">면목역 모아주택</span></td><td>7/14 4·7구역 총회</td></tr>
-                            <tr><td><span class="highlight">하계 현대우성</span></td><td>7/16 노원구청장 보고</td></tr>
-                            <tr><td>수택동 재개발</td><td>2차 보완도서 건축업무 지원</td></tr>
-                            <tr><td>마천5구역</td><td>시공사 현장설명회 완료</td></tr>
-                        </table>
-
-                        <h3 style="font-size:16px; margin: 20px 0 5px 0; color:var(--primary);">■ 도시개발 & 재생 본부 (77개)</h3>
-                        <table class="card-table">
-                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
-                            <tr><td>화성 남양 지역주택</td><td>10월 말 통합심의 준비 (쌍용건설)</td></tr>
-                            <tr><td>갈현1구역 재개발</td><td>철거도서 작성 중</td></tr>
-                            <tr><td>범일3구역</td><td>9차 사업시행변경인가 접수</td></tr>
-                        </table>
-
-                        <h3 style="font-size:16px; margin: 20px 0 5px 0; color:var(--primary);">■ 도시계획 본부 (24개)</h3>
-                        <table class="card-table">
-                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
-                            <tr><td><span class="highlight">장위13구역</span></td><td>수립범위 재접수 준비</td></tr>
-                            <tr><td><span class="highlight">삼선동 1·2구역</span></td><td>7/16 MP 미팅(구청)</td></tr>
-                            <tr><td><span class="highlight">석관초 관리계획</span></td><td>7/16 수립범위 사전자문(시청)</td></tr>
-                        </table>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">입찰/수주 전선 (전략기획)</div>
-                            <span class="chip red">총력전</span>
-                        </div>
-                        <table class="card-table">
-                            <tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr>
-                            <tr><td><span class="highlight">장안1구역</span></td><td>7/11 선정 총회</td><td><strong>적격심사 1위</strong></td></tr>
-                            <tr><td><span class="highlight">당산1구역</span></td><td>7/18 선정 총회</td><td>기호 2번</td></tr>
-                            <tr><td>독산1구역</td><td>3분기 입찰</td><td>26년 4Q 예상</td></tr>
-                            <tr><td>부천 중동역세권</td><td>단독시행 검토</td><td>26년 4Q 예상</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- 우측 컬럼 -->
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">인접지 개발 동향 (7개 권역)</div>
-                            <span class="chip">완벽 복원</span>
-                        </div>
-                        <div class="accordion">
-                            <div class="acc-header">① 은평구 <span>+</span></div>
-                            <div class="acc-body">
-                                <ul>
-                                    <li>증산5구역 — 해체공사 착공, 가림막 설치 도로통제 시작</li>
-                                    <li>불광8 조합설립(25층 321세대) / 구산역세권 구역지정</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <div class="acc-header">② 중랑구 <span>+</span></div>
-                            <div class="acc-body">
-                                <ul>
-                                    <li><span class="highlight">상봉7구역</span> — 사업시행계획 변경인가(7/2). 49층 841세대</li>
-                                    <li>'신속추진지원팀' 신설 (7/1)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <div class="acc-header">③ 강남구 <span>+</span></div>
-                            <div class="acc-body">
-                                <ul>
-                                    <li><span class="highlight">은마아파트 — 7/2 사업시행인가 획득!</span></li>
-                                    <li>'재건축 신속화합(신화) 프로젝트' 1호 결재 (7/1)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion">
-                            <div class="acc-header">④ 종로구 / ⑤ 성북구 / ⑥ 노원구 / ⑦ 인천 <span>+</span></div>
-                            <div class="acc-body">
-                                <ul>
-                                    <li>종로2·3가 지구단위계획 변경안 수정가결</li>
-                                    <li>신월곡제1구역 — 사업시행계획(변경)인가 고시</li>
-                                    <li>상계주공7단지 — 안전진단 통과</li>
-                                    <li>인천 제물포구 행정체제 개편 출범</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">정보몽땅 자동 크롤링 (API)</div>
-                            <span class="chip blue">실시간 연동</span>
-                        </div>
-                        <table class="card-table">
-                            <tr><th>구역</th><th>상태</th><th>변동 내역</th></tr>
-                            <tr><td><strong>대림1구역</strong></td><td>✅ 등록</td><td>창립총회 결과보고 등재</td></tr>
-                            <tr><td><strong>장위13-2구역</strong></td><td>✅ 등록</td><td>주민설명회 자료 공개</td></tr>
-                            <tr><td><strong>창신10구역</strong></td><td>✅ 등록</td><td>신속통합기획 구역 지정</td></tr>
-                            <tr><td><strong>중계주공5단지</strong></td><td>❌ 미지정</td><td>구역지정 전 미등재</td></tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- TAB 3: 통합 캘린더 (Calendar) -->
-        <!-- ========================================== -->
-        <div id="tab-calendar" class="tab-content">
-            <div class="hero">
-                <h1>통합 핵심 일정표</h1>
-                <p>향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
-            </div>
-
-            <div class="card" style="max-width: 800px; margin: 0 auto;">
-                <div class="card-header">
-                    <div class="card-title">7월 3주차 주요 일정</div>
-                    <button class="btn-pill">캘린더 연동</button>
-                </div>
-
-                <div class="day-block">
-                    <div class="day-header">
-                        <div class="day-date">7/13</div>
-                        <div class="day-weekday">월요일</div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-name">중계본동 재개발 현장 미팅</div>
-                        <div class="event-note">SH · 주대위 · 설계사 참석</div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-name">신정동 922 재개발 주민설명회</div>
-                        <div class="event-note">전략기획 본부 참석</div>
-                    </div>
-                </div>
-
-                <div class="day-block">
-                    <div class="day-header">
-                        <div class="day-date">7/14</div>
-                        <div class="day-weekday">화요일</div>
-                    </div>
-                    <div class="event-card important">
-                        <div class="event-time">14:00</div>
-                        <div class="event-name">면목역 1차 모아주택 총회</div>
-                        <div class="event-note">4·7구역 (디자인2소)</div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-name">장대B구역 보행브릿지 회의</div>
-                        <div class="event-note">협력사 및 조합</div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-name">석관초 관리계획 과장보고</div>
-                        <div class="event-note">관할 구청</div>
-                    </div>
-                </div>
-
-                <div class="day-block">
-                    <div class="day-header">
-                        <div class="day-date">7/16</div>
-                        <div class="day-weekday">목요일</div>
-                    </div>
-                    <div class="event-card important">
-                        <div class="event-name">하계 현대우성 구청장 보고</div>
-                        <div class="event-note">노원구청 (디자인3소)</div>
-                    </div>
-                    <div class="event-card">
-                        <div class="event-name">삼선동 1·2구역 MP 미팅</div>
-                    </div>
-                </div>
-
-                <div class="day-block">
-                    <div class="day-header">
-                        <div class="day-date">7/18</div>
-                        <div class="day-weekday">토요일</div>
-                    </div>
-                    <div class="event-card important">
-                        <div class="event-name">당산1구역 설계자 선정 총회</div>
-                        <div class="event-note">전략계획/기획팀 총력 대응 ★ 수주 핵심</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- TAB 4: 법규 아카이브 (Laws) -->
-        <!-- ========================================== -->
-        <div id="tab-laws" class="tab-content">
-            <div class="hero">
-                <h1>법규 아카이브</h1>
-                <p>최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">신규 시행 법령</div>
-                    </div>
-                    <table class="card-table">
-                        <tr><th>시행일</th><th>법령</th><th>주요 내용</th></tr>
-                        <tr><td><span class="highlight">07.01</span></td><td>도정법 시행령</td><td>총회 1회 통합, 공사비 검증 의무화</td></tr>
-                        <tr><td><span class="highlight">07.01</span></td><td>주택법 시행령</td><td>일부 개정 시행 (행정사항 정비)</td></tr>
-                        <tr><td>02.27</td><td>소규모주택정비법</td><td>조합설립 요건 완화, 임대주택 가격 상향</td></tr>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">지자체 고시/공고</div>
-                    </div>
-                    <ul style="padding-left: 20px; font-size: 14px; color: var(--ink); line-height: 1.8;">
-                        <li><strong>[서울] 성북구 신월곡제1구역</strong> — 7/2 사업시행계획(변경)인가 고시</li>
-                        <li><strong>[서울] 중랑구 상봉7구역</strong> — 7/2 사업시행계획 변경인가 고시 (49층)</li>
-                        <li><strong>[서울] 종로구 종로2·3가</strong> — 7/2 지구단위계획 변경안 수정가결</li>
-                    </ul>
-                </div>
-
-                <div class="card" style="grid-column: 1 / -1;">
-                    <div class="card-header">
-                        <div class="card-title">서울시 10대 법령 개정 건의안 추적표</div>
-                    </div>
-                    <table class="card-table">
-                        <tr><th>건의 항목</th><th>현행</th><th>건의안</th><th>상태</th></tr>
-                        <tr><td>조합설립 동의율</td><td>75%</td><td><strong style="color:var(--primary)">70%</strong></td><td>건의 중</td></tr>
-                        <tr><td>이주비 대출 LTV</td><td>40%</td><td><strong style="color:var(--primary)">70%</strong></td><td>건의 중</td></tr>
-                        <tr><td>인가 전 통지 기간</td><td>60일</td><td><strong style="color:var(--primary)">30일</strong></td><td>건의 중</td></tr>
-                        <tr><td>시공자 수의계약</td><td>2회 유찰</td><td><strong style="color:var(--primary)">1회 유찰</strong></td><td>건의 중</td></tr>
-                        <tr><td>용적률 1.2배 완화</td><td>공공만 적용</td><td><strong style="color:var(--primary)">민간 확대 적용</strong></td><td>건의 중</td></tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
-        <!-- ========================================== -->
-        <div id="tab-reading" class="tab-content">
 <style>
                 /* Dense 100-Mosaic Tile Grid */
                 .grid-mosaic {
@@ -919,227 +361,217 @@
                     readingTabItem.addEventListener('click', renderMosaic);
                 }
             </script>
-        </div>
+        
 
 
     <!-- Javascript for Tab Switching and Accordion -->
-    <script>
-        // Tab Navigation
-        const navItems = document.querySelectorAll('.nav-item');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const pageTitle = document.getElementById('page-title');
 
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Remove active classes
-                navItems.forEach(nav => nav.classList.remove('active'));
-                tabContents.forEach(tab => tab.classList.remove('active'));
-                
-                // Add active class to clicked
-                item.classList.add('active');
-                const targetId = item.getAttribute('data-target');
-                document.getElementById(targetId).classList.add('active');
-                
-                // Update Title
-                pageTitle.textContent = item.textContent;
-            });
-        });
+        </div>
+        
+        <!-- MODE 2: WORKSPACE (Dashboard + Projects + Calendar + Laws) -->
+        <div id="view-workspace" class="page-view">
+            <div class="workspace-grid">
+                <div class="workspace-card" style="grid-column: 1 / -1;">
+                    
 
-        // Accordion for Adjacent Areas
-        const accordions = document.querySelectorAll('.accordion');
-        accordions.forEach(acc => {
-            const header = acc.querySelector('.acc-header');
-            header.addEventListener('click', () => {
-                acc.classList.toggle('open');
-                const span = header.querySelector('span');
-                span.textContent = acc.classList.contains('open') ? '-' : '+';
-            });
-        });
+                </div>
+                <div class="workspace-card">
+                    
 
-        const allowedUsers = {
-            // 마스터키
-            "김중일": "0000",
-            
-            // 임원진 (1단)
-            "박성배": "4913", "노병채": "0343", "김기운": "0343", "김동일": "9005", "이정선": "5024",
-            "김형태": "9549", "남수경": "8105", "이민희": "1119",
-            
-            // 전략기획본부 (1단)
-            "전성일": "6464", "정우석": "0869",
-            
-            // 관리 (1단)
-            "장명선": "0305", "최용인": "0413", "이미령": "9609", "박성춘": "2768", "김영순": "2241",
-            
-            // 도시계획본부 (1단)
-            "이우진": "0275", "정지영": "7692", "이두희": "7205", "오경택": "5493", "한수현": "5237",
-            "배채운": "8514", "김재봉": "7452", "김일육": "0332", "나일환": "5895", "이현애": "2417",
-            "이희정": "8245", "강호상": "1339", "성진우": "9621", "김범수": "5039", "오시은": "5395",
-            "김승민": "4869", "양은수": "5076",
-            
-            // 도시개발본부 (2단)
-            "오성진": "2602", "우의철": "8126", "박세라": "7766", "이민경": "7206", "공재호": "9735",
-            "권영빈": "5383", "최동혁": "1304", "강태윤": "4810", "김다현": "3179", "윤용준": "3334",
-            "김혜선": "8799", "남현우": "1061", "김명주": "2569", "강수연": "6280", "김도영": "6725",
-            "박도현": "2738", "김민구": "7733", "권재일": "7914", "김미현": "7523", "박내수": "7429",
-            "조병준": "3009", "홍영재": "1147", "유선호": "4678", "이민호": "2793", "전서희": "4346",
-            "이정민": "7065",
-            
-            // 디자인본부 (3단)
-            "이종복": "3824", "김미연": "9543", "이택기": "7457", "허민철": "8518", "성시현": "2159",
-            "안정하": "2035", "김예은": "0052", "계영주": "6458", "정경열": "1530", "이신실": "7557",
-            "정혜원": "1036", "정성재": "5829", "이준영": "5237", "이종민": "1952", "문설아": "2062",
-            "김민정": "7673", "박효준": "7540", "박용훈": "3742", "서주영": "2910", "김정훈": "7546",
-            "박찬기": "3591", "양해찬": "7213", "표정은": "5342", "이민규": "5342",
-            
-            // 도시재생본부 (4단)
-            "오명석": "3850", "양영배": "4137", "우성환": "8841", "장진호": "3364", "김해리": "8363",
-            "황준원": "4325", "백명재": "6556", "채동영": "5974", "사흐르잣": "1727", "이원희": "1266",
-            "서민지": "2656", "권동규": "6214", "박지원": "6867", "김호연": "2468", "정유정": "0614",
-            "남소현": "3190", "최민정": "1948",
-            
-            // 4소(CG팀), 전략계획본부, 프리랜서, QC (5단)
-            "임성준": "9041", "박은경": "7642", "황보석": "1795", "김경민": "1531", "한태은": "4239",
-            "김지영": "5881", "박주호": "4847", "김태현": "7037", "이서영": "2564", "이현서": "7236",
-            "이용구": "6153", "전철호": "9356", "김원석": "3671", "배동준": "6355", "김현희": "5396",
-            "이종학": "0402", "송종철": "7417", "최병구": "7438", "김유관": "7081", "박현기": "7880"
-        };
+                </div>
+                <div class="workspace-card">
+                    
 
-        function updateUserProfile(name) {
-            if (name) {
+                </div>
+                <div class="workspace-card" style="grid-column: 1 / -1;">
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<script>
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+</script>
+
+    
+<script>
+    // Authentication Logic
+    const allowedUsersHash = {
+    "김중일": "9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0",
+    "박성배": "0a0abd5382ade9afd7067605d9508ef17526b6cb7c7ee48b04549756d81b8aab",
+    "노병채": "611f02bd80facdf0ecf24d2bc73aec046ab719092cd18c0ba7c7368524d38db0",
+    "김기운": "611f02bd80facdf0ecf24d2bc73aec046ab719092cd18c0ba7c7368524d38db0",
+    "김동일": "af956f342c1c6459ed991798fd3342ed848f24f0e17386831b1ef7b4ef91af34",
+    "이정선": "5324c7411a7c61557a17354517b35ae5e31fd5515e44dd475ba12258d1c5f265",
+    "김형태": "024f281da9fe62e5914e47d82cd1ab07791d0fc565426e5f6f2405762307a561",
+    "남수경": "89d6aac5e0b914e3b82820f9691e02803786833387db7f0ad09000b83ee212ee",
+    "이민희": "b280279a0ef279d0b9f0bdc4162591dbbc6312abac67120527b20d65c7de5dbf",
+    "전성일": "7ee3819bf62f7e4563a2a9476df6e18a6cd17cceb30b92f00a24a6c8175e3740",
+    "정우석": "15945fafd4ec4cd8e690a6d24cfb05ec2ac904e5091bf65adc3e1df3c43ed290",
+    "장명선": "eaf493e8af54e4fb893988a51b83b390a725e24bbe1575a50625c811c08ecb6f",
+    "최용인": "fb1a382ee284b5583dd34f44245ab1444e083b4daec944fa533c19806ff3e90a",
+    "이미령": "f7cc0e8b019506df9430a4245962eb4e1c18cee9f7e58ab1e17a846c3e3d0c84",
+    "박성춘": "a3d951e968e6ca5ee3af64eab235842c06af694b9943eea7fc81eacd738e7224",
+    "김영순": "3b731d7620bf723f5df5cb3dc1ab0c3f452db716712cc14379a4dfd92d19182f",
+    "이우진": "d3a780f832d288bd44a79551a67966f66ffc0145658e162dfe3c8cc010923f58",
+    "정지영": "95935676a6f8cf1183b545413ebe3f7773b11fd806614a208f7149f3e712385e",
+    "이두희": "bf30ed96384de5c4c3e9ca7626bd81ec350074281b86c8c839041b783ff945c0",
+    "오경택": "e734ce8f057a2863077c0e6e2d2baab2d05a98d063f7d916077db89488bf9dd5",
+    "한수현": "23f08458907bbe924afada3c2a9b4d82e46b4190ffa0a45d8a35099109f24d4a",
+    "배채운": "6bf76be895daa81eecd02713d3fb73d1f5215d48720a139479234c293e88d26a",
+    "김재봉": "0325d6c1080c79e16fb6027538978fb227d912b89b16e40f23a831f9b80c0423",
+    "김일육": "105068fe92543bdd1ff1938e3abfec9c30a7200d8da65e9c764cd643581f9be2",
+    "나일환": "2ec950ea98c80e146cbd6454e2c24d3aeaa3a0d66b0154c73ad106d9e25e811a",
+    "이현애": "6b0f184f14930ed2aab00d963792fac1cf7c8439503cb58ac06dde647c456940",
+    "이희정": "5973ede00eaa6fc11f4a294b815dcaeec2f9cb20d203b30257d2976cf4b19cc6",
+    "강호상": "462b01670e50875a9df97c18e87cd367dbe7fbd6f32783be20883747e37d5af6",
+    "성진우": "88552e1c2d4d53c988676a44e3eb7ac41e3ee7cbadf45fb505b0443473d445f3",
+    "김범수": "5008a184a9ed025b6380c79a07a851600d0f6245c98c404795b53de8e31e3f44",
+    "오시은": "e3ff67a034be1f249caab8a72f61e8ad2a64e417b5ce6e0941416e56e591994d",
+    "김승민": "5b10564b32ea564df50f0c56353b0b4ed3821fb86fc4555a4aa2461e76d07473",
+    "양은수": "71181f5d23343d7db98f90aed3499d8c2a23131b3151cc66c4591918dfc09acc",
+    "오성진": "a24e43b7765e445a86b1904b1c24b094dbd50eaf218ddc9cd6c2b3cbcd72cea3",
+    "우의철": "7e245b947ebe781ac1bfeda5f29923699652dc48971898132821a302ddbb3d3c",
+    "박세라": "0d685d0e6c2a2d4513de2125b3acec7650aef3fa246f77d9ed2ca120e3db297d",
+    "이민경": "7ac9206afbb213cb8b284d5031b86dbd721606d5753907a42ba92648ead52a22",
+    "공재호": "e1fc72b4d465a7d03830afe06cb7f2a49f5be2cf26158a44dd9849882830f0bb",
+    "권영빈": "08b25a1fb4a58b22867bb84357d0368b782ebcf3dcf263261a3b7087807ea016",
+    "최동혁": "8ecb5bcd8cd84cc3ffc6f5dc3076d81c0a457a6bd4b305a33f318b623d701c2e",
+    "강태윤": "cfe35c9e498096d4463cfade00cdef305d2311d90db9949bf321f87447fc2f1a",
+    "김다현": "9d73bfb92adaebaa346e5c12db11ce0bf0dc5ae059677dcec5198d7302d32493",
+    "윤용준": "e0963ee5228d3ea114cc8af37585893a3be748efd68e67b5301d38329c7f65fc",
+    "김혜선": "da19ec9481cbcf30da9993db3570aa8442c6684464f26030eb2c045152b376bd",
+    "남현우": "5d9e09b09389f1e4c8268e5464bfce4c9ea6a516f9c84b2f49e313427421ef3d",
+    "김명주": "2d6c50388f532bd1bbe52e5a25fad2a7fd3955bb2855b0b72cd28765e78b62e9",
+    "강수연": "dafb86559ecc15b8996f52a2b848861d59136f6df27ebba67472ee74a36456c7",
+    "김도영": "e5a406855f76b37cf13c1da6b49bd00b0e2341c96eba17278303a2b7bb33346c",
+    "박도현": "44ab142b5171cd63db89e3186367c9a7a2a28e5daee21305214ff6626d9fb842",
+    "김민구": "544101748cc0e2e64e48892f8d27a7fc83245f1a18c6b25f437eb626dbc1345a",
+    "권재일": "d9f3e0597d973d5f0173fc1d5dba50595188c8650a263c926d6fb3b619667b78",
+    "김미현": "d8b4c70897b50e123d819f719db2cb5931da41e609abd572b815ddeafd6d2847",
+    "박내수": "fdbcf987fae167738b6002cf6ffe0581b553cc430e284ccdf82f733860b09772",
+    "조병준": "41214f55c1e8d6170239eb93d7cc105abbee1dc0fbe8f7a258962da285dfe9cd",
+    "홍영재": "7987e36c43f067b54276ccb5f72d4d495d4ec9d21dab110714eeb9148df9e3ec",
+    "유선호": "d845f041e1ad38ef69cba0abbabeb3558a976f50fb4d217e4099fe36fbf8f623",
+    "이민호": "93de0089bfe55e8e2af2cdc3cfad5280486b63c0bbc8bcf7e069bed9e084ac7a",
+    "전서희": "a306c73ff0f8e27bfdee1cd291159a49a8f21c31c4c832236d04b1cca8e48cfb",
+    "이정민": "13324c96f0cb855057d3eaceeeb8ddc7ac38e8502c8ca130652414fc156c9bed",
+    "이종복": "03340dc42c4919ce6019ae44c24f3997ccd529f7af6f7f516c015338f14631cd",
+    "김미연": "9c62fc31f992e53eb9d965e9dcbd08bc215030db233af0a638d2c2be796ab1b0",
+    "이택기": "cb03a2c5a7b9b56fb286424939260fb6fda92ba9ed26f01619d3cee8bdac771b",
+    "허민철": "514cfacbe557df83c85cb1f068e280efc5a0a24c9ba49ed0de547a2efcd85c56",
+    "성시현": "86748254b6bfcc91d1a9b18d2b99dc9fdebec608dd68b83c3186a94f36e5f4c3",
+    "안정하": "c7c1b4da9b9f745dff12aca04605cb7fb33baf4ba84c5b473b16ef1ed16f9c25",
+    "김예은": "a62aef6bb252cddd3bba35aa52968f35ba596d0e5cda16b5989b195a5c4df4a5",
+    "계영주": "44021a167f13d094844b227e9d97d834de20cf0473c99a9eddc5c702a1f66697",
+    "정경열": "8ff9538e65e6781d654b811f88161d12455935ffb8f470815063b6ab6cb7fdff",
+    "이신실": "d7bf08e6602a741a0d3ca2e65907bb5f32def1b31a11e0c87b0a7d44545fcb10",
+    "정혜원": "56cc29cee9e859a5314952b8184da882e2482d7bc17234b4ca333bfffe5f74f3",
+    "정성재": "997b0081a9cb967261b9554336e8edda0019827a98334da2cd3841bfb09c1bca",
+    "이준영": "23f08458907bbe924afada3c2a9b4d82e46b4190ffa0a45d8a35099109f24d4a",
+    "이종민": "6ed701cfedb16ebd91b2d185383115c6f9ce12f2f9c744d7d605be0002109362",
+    "문설아": "8efb3a60255de6db1c77dcdaec905d1045a88e70dddd53d524fc4cb7d1a609d7",
+    "김민정": "909033570f5545191e17d1c5ec80f6e822c0ed7f5af9838ee96c0b1781273317",
+    "박효준": "1f498bac4b23bacc32684c7a2f3abeca22d55509ecfa6853e1d428c0443218c2",
+    "박용훈": "f72b71f2cf7221d17e8e7dcb23ba1aebadee8813fb843860fa6894b9c658269c",
+    "서주영": "d5aa5e4ae9fc046931742f900b38d9c7be0c904a30b68f542479aff13237e6a0",
+    "김정훈": "03c3ee4bc24a67660cf377bb85ef4ee4c4723f1d2d99b4caf7886b005d4d9954",
+    "박찬기": "572878043beff72a7ae455785619593dac4a462771c18335de2a49a010efbc47",
+    "양해찬": "2181cc570872136d026dfc526621b9ec092bfb2effe888fba88a6c52f8965430",
+    "표정은": "f6e2d4fb073bdf38cd18c5437c5cc814130a9d9529a949f14c492d3231b6ec6a",
+    "이민규": "f6e2d4fb073bdf38cd18c5437c5cc814130a9d9529a949f14c492d3231b6ec6a",
+    "오명석": "756a6524cdb2d4eaad13228bd69d6266ffbb77c78e7f3cfde29e2667f38d3a2d",
+    "양영배": "8d2efba45f136abdd6d9548ca3be7df0542bb39e5c0aadba883e191d1c54712b",
+    "우성환": "48e6d088c751a0bd26be61e1279c16d39b810de6b18c91ac178b4bab87f0ffd4",
+    "장진호": "a740a8741ca6c59b0e0f1d2e5037677b8fbd7b0c34ee4f7791be025d904170cc",
+    "김해리": "c2c358e9dd15de84331652b848b7ad410ef3f0f8a06a312065349f6c58991966",
+    "황준원": "7ca26aafbfe189a20d2fed657ddcca8aa31581ee6838b90289c4faa4dd23fef8",
+    "백명재": "78a69c6fdc7b95f502f14d3c826b21528318ef248796d5a41478096973dd1ad6",
+    "채동영": "374c0fd6e94e0cec99de6089e5a6409dc4816b0f9427363c44b8985f60481f35",
+    "사흐르잣": "434f4d14c1eb231306b51aaa160c021b63670ac6ca67fb8e403f4500983dd1e4",
+    "이원희": "f7d7736a8f77a494064203eda8d618bb0cfbe19668065fa083825ecdc1eda540",
+    "서민지": "cf3b763a62724306dca2a00ed53a7c0a19074286e40b8f0b96544ccbab4aaae2",
+    "권동규": "b954bc4acaad1bfa43689f654027227c6cd416e797fbf7ddbd2a38864d857a5e",
+    "박지원": "ea4bdbc1419b6c7aa4919f1276fcb3eb6fd9a316e52e177fa519b1cbe9fbb3de",
+    "김호연": "a1fb4e703a9ef1fa4936801721ff285a97ac85330856674412e054892afe6972",
+    "정유정": "d1913a47aec9a99a549e8d075b5118abcabd8e8599d6fbbdb67785a5c31d9b03",
+    "남소현": "5119e090c80757fec3c9f1dca46e3481688fed2fea905db0af7994857abb92a6",
+    "최민정": "03b0bd366e8184f8d871c3a7c7cc26c73c25b54ff54c64b28b10b898242cdc8a",
+    "임성준": "2ec1d83738358cd8610d8d7a699891f1e5d7dd9bdf6f82ae70d048bc13f7f11f",
+    "박은경": "2c2ae095d55ddbc0487f97a5e8db5ecd4b2f1538cd67e774b461d85c4b96a216",
+    "황보석": "cf1881df6f1696c2e59b47fde80838e66a1dfad4f0e993fd686186333456b55d",
+    "김경민": "f1294f35f19846cd012506eadcc13ecda95eb7ddc6c661bc1b9402c4b00eb703",
+    "한태은": "f0e6a61a0b0037aa12879a3ba580a7b84ef77cd5a8a39f1832589d6390b7fa66",
+    "김지영": "461b2e3622293c303571880413edf2e26b35f5d191b30a32e7eea20da00613d2",
+    "박주호": "29d9c129c3e755f6bd3f321ea47f6dd67bc9023b6bca2a8018a80be2adb6c957",
+    "김태현": "4baabeaad579e9201bfd7bc4dd8ba8392ce01ef09e8067c740adc882fdcba548",
+    "이서영": "d0c9e369bee256f4b0182a503babb685ee7b00419c985fb423a47bfb0eb89f56",
+    "이현서": "de8736cc048486e16dcd174d8f5f0bc3e19aa4f0b0c26a19572b4cfafa5b31ca",
+    "이용구": "16d5164c6ff6bf7201a90e9ec406fe9d122c9894cda28854a05e68ff1f2e804c",
+    "전철호": "6bfc25cc7df52b4fabc33e36962aed9620b8f61ad7bbab543996d0575e12c832",
+    "김원석": "ac2151d8aa26b5784551edad3b8ffdaf126a08a8f4ae57db2fc94e01b5443860",
+    "배동준": "714bc174ac5066ca0a4a710f503d76ce0254e2c8d1e313abf90171be0ff5975e",
+    "김현희": "88367dd16bfd18ba5595a82d9076f8405807ea4df66c0d282de850391349986a",
+    "이종학": "2612d391c1eb9a05beb967f1f2adaf215a544bd5e2d88d2a13c531e56af493a6",
+    "송종철": "7d4a25031f5a15141275e08712537464836bbe2cc81512cadfa828d619cbba4a",
+    "최병구": "a498b30af4f790314c211c4e6a9a4d8c37015ec9102a6496406cd49b85d37502",
+    "김유관": "de7d5e6247fb643608b4f5ef96726ec0c478e1499bcf1f650fa4cf118063dad0",
+    "박현기": "179cf283f9f50c9bbf5b86380349d36adf78f5f47d09f939e7a1bf190e8641f4"
+};
+
+    
+    async function attemptLogin() {
+        const name = document.getElementById("login-name").value.trim();
+        const pass = document.getElementById("login-pass").value.trim();
+        const err = document.getElementById("login-error");
+        
+        if(allowedUsersHash[name]) {
+            const hashedPass = await sha256(pass);
+            if (hashedPass === allowedUsersHash[name]) {
+                localStorage.setItem("jhub_logged_in", "true");
+                localStorage.setItem("jhub_user_name", name);
                 document.getElementById("user-profile-name").textContent = name + " 님";
-                document.getElementById("user-profile-avatar").textContent = name.substring(0, 1);
-            }
-        }
-
-        function checkAutoLogin() {
-            if (localStorage.getItem("jhub_logged_in") === "true" || sessionStorage.getItem("jhub_logged_in") === "true") {
-                const userName = localStorage.getItem("jhub_user_name") || sessionStorage.getItem("jhub_user_name");
-                updateUserProfile(userName);
                 document.getElementById("login-screen").style.display = "none";
-                document.getElementById("app-content").style.display = "block";
+                return;
             }
         }
+        err.style.display = "block";
+    }
 
-        function attemptLogin() {
-            const name = document.getElementById("login-name").value.trim();
-            const pass = document.getElementById("login-pass").value.trim();
-            const remember = document.getElementById("login-remember").checked;
-            const err = document.getElementById("login-error");
-            
-            if (allowedUsers[name] && allowedUsers[name] === pass) {
-                if (remember) {
-                    localStorage.setItem("jhub_logged_in", "true");
-                    localStorage.setItem("jhub_user_name", name);
-                } else {
-                    sessionStorage.setItem("jhub_logged_in", "true");
-                    sessionStorage.setItem("jhub_user_name", name);
-                }
-                
-                updateUserProfile(name);
-                document.getElementById("login-screen").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("login-screen").style.display = "none";
-                    document.getElementById("app-content").style.display = "block";
-                }, 300);
-            } else {
-                err.style.display = "block";
-                const card = document.querySelector(".login-card");
-                card.style.transform = "translateX(-10px)";
-                setTimeout(() => card.style.transform = "translateX(10px)", 50);
-                setTimeout(() => card.style.transform = "translateX(-10px)", 100);
-                setTimeout(() => card.style.transform = "translateX(0)", 150);
-            }
+    function checkLogin() {
+        if (localStorage.getItem("jhub_logged_in") === "true") {
+            const userName = localStorage.getItem("jhub_user_name");
+            document.getElementById("user-profile-name").textContent = userName + " 님";
+            document.getElementById("login-screen").style.display = "none";
         }
+    }
 
-        function logout() {
-            localStorage.removeItem("jhub_logged_in");
-            localStorage.removeItem("jhub_user_name");
-            sessionStorage.removeItem("jhub_logged_in");
-            sessionStorage.removeItem("jhub_user_name");
-            location.reload();
-        }
+    // Mode Switch Logic
+    function switchMode(mode) {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+        
+        document.getElementById('btn-' + mode).classList.add('active');
+        document.getElementById('view-' + mode).classList.add('active');
+    }
 
-        // Add Enter key support
-        document.getElementById("login-pass").addEventListener("keypress", function(e) {
-            if (e.key === "Enter") attemptLogin();
+    document.addEventListener('DOMContentLoaded', () => {
+        checkLogin();
+        // Bind enter key
+        document.getElementById("login-pass").addEventListener("keypress", e => {
+            if(e.key === "Enter") attemptLogin();
         });
+    });
+</script>
 
-        // Initialize Login check
-        checkAutoLogin();
-    </script>
 
-    <!-- Global Swipe Navigation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = ['tab-dashboard', 'tab-reading', 'tab-projects', 'tab-calendar', 'tab-laws'];
-            const navItems = document.querySelectorAll('.nav-item');
-            const tabContents = document.querySelectorAll('.tab-content');
-            const pageTitle = document.getElementById('page-title');
-            
-            let touchstartX = 0;
-            let touchendX = 0;
-            let touchstartY = 0;
-            let touchendY = 0;
-            
-            function handleGesture() {
-                const swipeDistanceX = touchendX - touchstartX;
-                const swipeDistanceY = Math.abs(touchendY - touchstartY);
-                
-                // Only trigger if horizontal swipe is significantly larger than vertical scroll
-                if (Math.abs(swipeDistanceX) > 50 && Math.abs(swipeDistanceX) > swipeDistanceY * 1.5) {
-                    
-                    // Find current active tab index
-                    let currentIndex = -1;
-                    for (let i = 0; i < tabContents.length; i++) {
-                        if (tabContents[i].classList.contains('active')) {
-                            // Find matching ID in our logical order array
-                            currentIndex = tabs.indexOf(tabContents[i].id);
-                            break;
-                        }
-                    }
-                    
-                    if (currentIndex !== -1) {
-                        let nextIndex = currentIndex;
-                        if (swipeDistanceX < 0) {
-                            // Swiped left, go to next tab
-                            nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
-                        } else {
-                            // Swiped right, go to prev tab
-                            nextIndex = Math.max(currentIndex - 1, 0);
-                        }
-                        
-                        if (nextIndex !== currentIndex) {
-                            // Trigger click on corresponding nav item to re-use existing logic
-                            const targetId = tabs[nextIndex];
-                            const targetNavItem = document.querySelector(`[data-target="${targetId}"]`);
-                            if (targetNavItem) {
-                                targetNavItem.click();
-                            }
-                        }
-                    }
-                }
-            }
-            
-            // Listen on the entire app content area
-            const appContent = document.getElementById('app-content');
-            if (appContent) {
-                appContent.addEventListener('touchstart', e => {
-                    // Don't interfere if touching the modal
-                    if (e.target.closest('.modal-box')) return;
-                    touchstartX = e.changedTouches[0].screenX;
-                    touchstartY = e.changedTouches[0].screenY;
-                }, {passive: true});
-                
-                appContent.addEventListener('touchend', e => {
-                    if (e.target.closest('.modal-box')) return;
-                    touchendX = e.changedTouches[0].screenX;
-                    touchendY = e.changedTouches[0].screenY;
-                    handleGesture();
-                }, {passive: true});
-            }
-        });
-    </script>
-</div> <!-- End of app-content -->
 </body>
 </html>
-<!-- auto sync test -->
