@@ -1035,6 +1035,78 @@
         // Initialize Login check
         checkAutoLogin();
     </script>
+
+    <!-- Global Swipe Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = ['tab-dashboard', 'tab-reading', 'tab-projects', 'tab-calendar', 'tab-laws'];
+            const navItems = document.querySelectorAll('.nav-item');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pageTitle = document.getElementById('page-title');
+            
+            let touchstartX = 0;
+            let touchendX = 0;
+            let touchstartY = 0;
+            let touchendY = 0;
+            
+            function handleGesture() {
+                const swipeDistanceX = touchendX - touchstartX;
+                const swipeDistanceY = Math.abs(touchendY - touchstartY);
+                
+                // Only trigger if horizontal swipe is significantly larger than vertical scroll
+                if (Math.abs(swipeDistanceX) > 50 && Math.abs(swipeDistanceX) > swipeDistanceY * 1.5) {
+                    
+                    // Find current active tab index
+                    let currentIndex = -1;
+                    for (let i = 0; i < tabContents.length; i++) {
+                        if (tabContents[i].classList.contains('active')) {
+                            // Find matching ID in our logical order array
+                            currentIndex = tabs.indexOf(tabContents[i].id);
+                            break;
+                        }
+                    }
+                    
+                    if (currentIndex !== -1) {
+                        let nextIndex = currentIndex;
+                        if (swipeDistanceX < 0) {
+                            // Swiped left, go to next tab
+                            nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
+                        } else {
+                            // Swiped right, go to prev tab
+                            nextIndex = Math.max(currentIndex - 1, 0);
+                        }
+                        
+                        if (nextIndex !== currentIndex) {
+                            // Trigger click on corresponding nav item to re-use existing logic
+                            const targetId = tabs[nextIndex];
+                            const targetNavItem = document.querySelector(`[data-target="${targetId}"]`);
+                            if (targetNavItem) {
+                                targetNavItem.click();
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Listen on the entire app content area
+            const appContent = document.getElementById('app-content');
+            if (appContent) {
+                appContent.addEventListener('touchstart', e => {
+                    // Don't interfere if touching the modal
+                    if (e.target.closest('.modal-box')) return;
+                    touchstartX = e.changedTouches[0].screenX;
+                    touchstartY = e.changedTouches[0].screenY;
+                }, {passive: true});
+                
+                appContent.addEventListener('touchend', e => {
+                    if (e.target.closest('.modal-box')) return;
+                    touchendX = e.changedTouches[0].screenX;
+                    touchendY = e.changedTouches[0].screenY;
+                    handleGesture();
+                }, {passive: true});
+            }
+        });
+    </script>
 </div> <!-- End of app-content -->
 </body>
 </html>
