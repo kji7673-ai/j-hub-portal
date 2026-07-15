@@ -257,7 +257,11 @@ h1, h2, h3 {
     letter-spacing: -0.5px;
 }
 
+.tag-row {
+    margin-bottom: 8px; /* Fixes overlap with report-title */
+}
 .chip {
+    display: inline-block;
     font-size: 11px;
     font-weight: 700;
     padding: 4px 8px;
@@ -267,14 +271,14 @@ h1, h2, h3 {
     color: var(--accent);
 }
 .chip.red {
-    border-color: #e30000;
-    color: #e30000;
-    background: rgba(227, 0, 0, 0.05);
+    border-color: var(--text-primary);
+    color: var(--surface);
+    background: var(--text-primary); /* Swiss Grid high contrast instead of raw red */
 }
-.chip.blue {
-    border-color: #0066cc;
-    color: #0066cc;
-    background: rgba(0, 102, 204, 0.05);
+.chip.blue, .chip.green {
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+    background: transparent;
 }
 
 ul {
