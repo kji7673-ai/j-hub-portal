@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinyang Hub - Portal</title>
+    <style>
+        /* Apple Design System Constants */
+        :root {
+            --primary: #0066cc;
+            --primary-focus: #0071e3;
+            --primary-on-dark: #2997ff;
+            --ink: #1d1d1f;
+            --body: #1d1d1f;
+            --body-muted: #cccccc;
+            --ink-muted-80: #333333;
+            --ink-muted-48: #7a7a7a;
+            --divider-soft: #f0f0f0;
+            --hairline: #e0e0e0;
+            --canvas: #ffffff;
+            --canvas-parchment: #f5f5f7;
+            --surface-pearl: #fafafc;
+            --surface-tile-1: #272729;
+            --surface-black: #000000;
+            --surface-chip-translucent: rgba(210, 210, 215, 0.64);
+            
+            --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+            --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-text);
+            color: var(--body);
+            background-color: var(--canvas-parchment);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 15px;
+            line-height: 1.47;
+            letter-spacing: -0.374px;
+            overflow-y: scroll;
+        }
+
+        /* Typography Base */
+        h1, h2, h3, h4, h5 { font-family: var(--font-display); }
+        
+        /* Global Nav */
+        .global-nav {
+            background-color: var(--surface-black);
+            color: #ffffff;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0 max(24px, calc((100% - 1200px) / 2));
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .global-nav ul { list-style: none; display: flex; gap: 32px; width: 100%; align-items: center; }
+        .global-nav li { cursor: pointer; opacity: 0.6; transition: opacity 0.2s; padding: 14px 0; }
+        .global-nav li:hover { opacity: 1; }
+        .global-nav li.active { opacity: 1; font-weight: 600; border-bottom: 2px solid #fff; }
+        .global-nav .logo { font-weight: 600; opacity: 1; font-size: 14px; margin-right: 20px; border:none !important; }
+
+        /* Sub Nav Frosted */
+        .sub-nav {
+            background-color: rgba(245, 245, 247, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--hairline);
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 max(24px, calc((100% - 1200px) / 2));
+            position: sticky;
+            top: 44px;
+            z-index: 900;
+        }
+        .sub-nav .title {
+            font-family: var(--font-display);
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: 0.231px;
+        }
+        .user-profile {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--ink);
+            font-weight: 400;
+        }
+        .avatar {
+            width: 28px; height: 28px;
+            background-color: var(--surface-chip-translucent);
+            color: var(--ink);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 600;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 40px 24px; 
+        }
+
+        /* Tab Content */
+        .tab-content { display: none; animation: fadeIn 0.3s ease-out; }
+        .tab-content.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero */
+        .hero { margin-bottom: 40px; text-align: left; }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.07;
+            letter-spacing: -0.28px;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+        .hero p {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.14;
+            color: var(--ink-muted-80);
+        }
+
+        /* Dashboard Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+        .grid-columns { column-count: 2; column-gap: 24px; }
+
+        /* Apple Store Utility Card */
+        .card {
+            background-color: var(--canvas);
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid var(--hairline);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+            break-inside: avoid;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--hairline);
+            padding-bottom: 12px;
+        }
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.14;
+            color: var(--ink);
+        }
+        
+        .btn-pill {
+            background-color: var(--primary);
+            color: #ffffff;
+            font-family: var(--font-text);
+            font-size: 13px;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-flex;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Table inside card */
+        .card-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .card-table th, .card-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--divider-soft);
+            text-align: left;
+            vertical-align: top;
+        }
+        .card-table th {
+            color: var(--ink-muted-80);
+            font-weight: 600;
+        }
+        .card-table tr:last-child td { border-bottom: none; }
+        .highlight { color: var(--primary); font-weight: 600; }
+
+        /* Report Summary */
+        .report-item { display: flex; flex-direction: column; gap: 6px; }
+        .tag-row { display: flex; gap: 6px; align-items: center; }
+        .chip {
+            background-color: var(--canvas-parchment);
+            color: var(--ink);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 9999px;
+        }
+        .chip.blue { color: var(--primary); background-color: rgba(0, 102, 204, 0.08); }
+        .chip.red { color: #d93025; background-color: rgba(217, 48, 37, 0.08); }
+        .chip.green { color: #108043; background-color: rgba(16, 128, 67, 0.08); }
+        
+        .report-title {
+            font-family: var(--font-text);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        .report-desc { font-size: 14px; color: var(--ink-muted-80); }
+
+        /* Schedule Block */
+        .day-block { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+        .day-header {
+            display: flex; align-items: baseline; gap: 8px;
+            border-bottom: 1px solid var(--divider-soft); padding-bottom: 4px;
+        }
+        .day-date { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
+        .day-weekday { font-size: 13px; font-weight: 600; color: var(--ink-muted-80); }
+        
+        .event-card {
+            padding: 12px;
+            background: var(--canvas-parchment);
+            border-radius: 11px;
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .event-card.important { border-left: 3px solid #d93025; background: #fff5f5; }
+        .event-time { font-size: 13px; font-weight: 600; color: var(--primary); }
+        .event-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+        .event-note { font-size: 13px; color: var(--ink-muted-80); }
+
+        /* Magazine Style for Today's Reading */
+        .magazine-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px;
+            border-radius: 18px;
+            background: var(--canvas);
+            border: 1px solid var(--hairline);
+            margin-bottom: 24px;
+        }
+        .mag-category {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .mag-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.28px;
+        }
+        .mag-excerpt {
+            font-size: 15px;
+            color: var(--ink-muted-80);
+            line-height: 1.5;
+        }
+        .mag-meta {
+            font-size: 13px;
+            color: var(--ink-muted-48);
+            display: flex; justify-content: space-between;
+            border-top: 1px solid var(--divider-soft);
+            padding-top: 12px;
+            margin-top: 8px;
+        }
+        .stat-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .stat-item {
+            background: var(--canvas-parchment); padding: 16px; border-radius: 12px;
+        }
+        .stat-label { font-size: 13px; color: var(--ink-muted-80); margin-bottom: 4px; }
+        .stat-value { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--ink); }
+        .stat-change.up { color: #d93025; font-size: 13px; font-weight: 600; }
+        .stat-change.down { color: #108043; font-size: 13px; font-weight: 600; }
+
+        /* Accordion for Adjacent Areas */
+        .accordion { margin-bottom: 8px; border: 1px solid var(--hairline); border-radius: 11px; overflow: hidden; }
+        .acc-header {
+            background: var(--canvas-parchment); padding: 12px 16px; font-weight: 600;
+            display: flex; justify-content: space-between; cursor: pointer; font-size: 15px;
+        }
+        .acc-body { padding: 16px; background: var(--canvas); display: none; font-size: 14px; line-height: 1.6;}
+        .acc-body ul { padding-left: 20px; }
+        .accordion.open .acc-body { display: block; }
+        
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .stat-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            .container {
+                padding: 24px 16px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .global-nav {
+                padding: 0 16px;
+            }
+            .global-nav ul {
+                gap: 16px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .global-nav ul::-webkit-scrollbar {
+                display: none;
+            }
+            .global-nav li {
+                flex-shrink: 0;
+            }
+            .sub-nav {
+                padding: 0 16px;
+            }
+            .card {
+                padding: 20px 16px;
+            }
+            .card-title {
+                font-size: 20px;
+            }
+            .mag-title {
+                font-size: 24px;
+            }
+            .stat-value {
+                font-size: 24px;
+            }
+        }
+
+        /* Login Screen */
+        .login-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--canvas-parchment);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999;
+            transition: opacity 0.3s ease;
+        }
+        .login-card {
+            background-color: var(--canvas);
+            padding: 40px; border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            width: 100%; max-width: 340px; text-align: center;
+            transition: transform 0.1s ease;
+        }
+        .login-input {
+            width: 100%; padding: 14px 16px; margin-bottom: 12px;
+            border: 1px solid var(--hairline); border-radius: var(--radius-sm);
+            font-family: inherit; font-size: 16px; box-sizing: border-box;
+            outline: none; transition: border-color 0.2s;
+        }
+        .login-input:focus { border-color: var(--primary); }
+        .login-btn {
+            width: 100%; padding: 14px; margin-top: 8px;
+            background-color: var(--primary); color: #fff;
+            border: none; border-radius: var(--radius-pill);
+            font-size: 17px; font-weight: 600; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-overlay">
+        <div class="login-card">
+            <h2 style="margin-bottom: 24px; font-weight: 600;">J-Hub Platform</h2>
+            <input type="text" id="login-name" class="login-input" placeholder="이름 (예: 홍길동)" autocomplete="off">
+            <input type="password" id="login-pass" class="login-input" placeholder="전화번호 뒷자리 (4자리)" inputmode="numeric" maxlength="4">
+            <div style="text-align: left; margin: 8px 0 16px 4px;">
+                <label style="font-size: 13px; color: var(--ink-muted-80); cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <input type="checkbox" id="login-remember" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+                    다음번 접속 시 로그인 유지
+                </label>
+            </div>
+            <button onclick="attemptLogin()" class="login-btn">입장하기</button>
+            <p id="login-error" style="color: #ff3b30; font-size: 13px; margin-top: 16px; display: none;">이름 또는 뒷자리가 일치하지 않습니다.</p>
+        </div>
+    </div>
+
+    <!-- Main App Content -->
+    <div id="app-content" style="display: none;">
+
+    <!-- Global Nav -->
+    <nav class="global-nav">
+        <ul style="display: flex; align-items: center; width: 100%;">
+            <li class="logo" style="flex-shrink: 0;">J-Hub Platform</li>
+            <li class="nav-item active" data-target="tab-dashboard">일일보고</li>
+            <li class="nav-item" data-target="tab-reading" style="color:#2997ff; font-weight: 600;">오늘의 읽을거리</li>
+            <li class="nav-item" data-target="tab-projects">프로젝트 현황</li>
+            <li class="nav-item" data-target="tab-calendar">통합 캘린더</li>
+            <li class="nav-item" data-target="tab-laws">법규 아카이브</li>
+            <li style="margin-left: auto; cursor: pointer;" onclick="logout()">
+                <span style="color: var(--body-muted); font-size: 13px; font-weight: 400;">로그아웃</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sub-nav">
+        <div class="title" id="page-title">일일보고</div>
+        <div class="user-profile">
+            <span id="user-profile-name">진양 엔지니어링 임직원</span>
+            <div class="avatar" id="user-profile-avatar">진</div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!-- ========================================== -->
+        <!-- TAB 1: 일일보고 (Dashboard) -->
+        <!-- ========================================== -->
+        <div id="tab-dashboard" class="tab-content active">
+            <div class="hero">
+                <h1>전사 일일 및 종합 동향</h1>
+                <p>7월 3주차 주요 변동 사항 및 핵심 요약</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🔴 현장 핵심 변동</div>
+                        <span class="chip red">업데이트 완료</span>
+                    </div>
+                    <ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;">
+                        <li><span class="highlight">장대B구역</span> — 7/10 <strong>사업시행인가 완료!</strong></li>
+                        <li><span class="highlight">장안1구역</span> — 7/11 설계자 선정 총회 (진양 적격심사 1위)</li>
+                        <li><span class="highlight">대림1구역</span> — 임원 선출 문제 제기 → 재총회 준비 중 [내부정보]</li>
+                        <li><span class="highlight">면목역 1차 모아주택</span> — 7/14 4·7구역 총회</li>
+                        <li><span class="highlight">당산1구역</span> — 7/18 설계자 선정 총회 (진양 기호2번)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">법규/정책 핵심 변동</div>
+                    </div>
+                    
+                    <div class="report-item">
+                        <div class="tag-row"><span class="chip red">★★★ 핵심</span></div>
+                        <h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3>
+                        <p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p>
+                    </div>
+                    <div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div>
+
+                    <div class="report-item">
+                        <div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div>
+                        <h3 class="report-title">주택법 시행령 개정</h3>
+                        <p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p>
+                    </div>
+                    <div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div>
+
+                    <div class="report-item">
+                        <div class="tag-row"><span class="chip green">기 보고</span></div>
+                        <h3 class="report-title">모아타운 종상향 + 도정법 개정</h3>
+                        <p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: 프로젝트 현황 (Projects) -->
+        <!-- ========================================== -->
+        <div id="tab-projects" class="tab-content">
+            <div class="hero">
+                <h1>전사 프로젝트 통합 뷰</h1>
+                <p>본부별 현황, 입찰 전선, 그리고 인접지 및 정보몽땅 연동 지표</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- 좌측 컬럼 -->
+                <div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">본부별 주요 프로젝트</div>
+                        </div>
+                        <h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--primary);">■ 디자인 본부 (56개)</h3>
+                        <table class="card-table">
+                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
+                            <tr><td><span class="highlight">장대B구역</span></td><td>사업시행인가 완료, 7/14 보행브릿지 회의</td></tr>
+                            <tr><td><span class="highlight">면목역 모아주택</span></td><td>7/14 4·7구역 총회</td></tr>
+                            <tr><td><span class="highlight">하계 현대우성</span></td><td>7/16 노원구청장 보고</td></tr>
+                            <tr><td>수택동 재개발</td><td>2차 보완도서 건축업무 지원</td></tr>
+                            <tr><td>마천5구역</td><td>시공사 현장설명회 완료</td></tr>
+                        </table>
+
+                        <h3 style="font-size:16px; margin: 20px 0 5px 0; color:var(--primary);">■ 도시개발 & 재생 본부 (77개)</h3>
+                        <table class="card-table">
+                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
+                            <tr><td>화성 남양 지역주택</td><td>10월 말 통합심의 준비 (쌍용건설)</td></tr>
+                            <tr><td>갈현1구역 재개발</td><td>철거도서 작성 중</td></tr>
+                            <tr><td>범일3구역</td><td>9차 사업시행변경인가 접수</td></tr>
+                        </table>
+
+                        <h3 style="font-size:16px; margin: 20px 0 5px 0; color:var(--primary);">■ 도시계획 본부 (24개)</h3>
+                        <table class="card-table">
+                            <tr><th>프로젝트</th><th>진행 현황</th></tr>
+                            <tr><td><span class="highlight">장위13구역</span></td><td>수립범위 재접수 준비</td></tr>
+                            <tr><td><span class="highlight">삼선동 1·2구역</span></td><td>7/16 MP 미팅(구청)</td></tr>
+                            <tr><td><span class="highlight">석관초 관리계획</span></td><td>7/16 수립범위 사전자문(시청)</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">입찰/수주 전선 (전략기획)</div>
+                            <span class="chip red">총력전</span>
+                        </div>
+                        <table class="card-table">
+                            <tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr>
+                            <tr><td><span class="highlight">장안1구역</span></td><td>7/11 선정 총회</td><td><strong>적격심사 1위</strong></td></tr>
+                            <tr><td><span class="highlight">당산1구역</span></td><td>7/18 선정 총회</td><td>기호 2번</td></tr>
+                            <tr><td>독산1구역</td><td>3분기 입찰</td><td>26년 4Q 예상</td></tr>
+                            <tr><td>부천 중동역세권</td><td>단독시행 검토</td><td>26년 4Q 예상</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 우측 컬럼 -->
+                <div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">인접지 개발 동향 (7개 권역)</div>
+                            <span class="chip">완벽 복원</span>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc-header">① 은평구 <span>+</span></div>
+                            <div class="acc-body">
+                                <ul>
+                                    <li>증산5구역 — 해체공사 착공, 가림막 설치 도로통제 시작</li>
+                                    <li>불광8 조합설립(25층 321세대) / 구산역세권 구역지정</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc-header">② 중랑구 <span>+</span></div>
+                            <div class="acc-body">
+                                <ul>
+                                    <li><span class="highlight">상봉7구역</span> — 사업시행계획 변경인가(7/2). 49층 841세대</li>
+                                    <li>'신속추진지원팀' 신설 (7/1)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc-header">③ 강남구 <span>+</span></div>
+                            <div class="acc-body">
+                                <ul>
+                                    <li><span class="highlight">은마아파트 — 7/2 사업시행인가 획득!</span></li>
+                                    <li>'재건축 신속화합(신화) 프로젝트' 1호 결재 (7/1)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="acc-header">④ 종로구 / ⑤ 성북구 / ⑥ 노원구 / ⑦ 인천 <span>+</span></div>
+                            <div class="acc-body">
+                                <ul>
+                                    <li>종로2·3가 지구단위계획 변경안 수정가결</li>
+                                    <li>신월곡제1구역 — 사업시행계획(변경)인가 고시</li>
+                                    <li>상계주공7단지 — 안전진단 통과</li>
+                                    <li>인천 제물포구 행정체제 개편 출범</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">정보몽땅 자동 크롤링 (API)</div>
+                            <span class="chip blue">실시간 연동</span>
+                        </div>
+                        <table class="card-table">
+                            <tr><th>구역</th><th>상태</th><th>변동 내역</th></tr>
+                            <tr><td><strong>대림1구역</strong></td><td>✅ 등록</td><td>창립총회 결과보고 등재</td></tr>
+                            <tr><td><strong>장위13-2구역</strong></td><td>✅ 등록</td><td>주민설명회 자료 공개</td></tr>
+                            <tr><td><strong>창신10구역</strong></td><td>✅ 등록</td><td>신속통합기획 구역 지정</td></tr>
+                            <tr><td><strong>중계주공5단지</strong></td><td>❌ 미지정</td><td>구역지정 전 미등재</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: 통합 캘린더 (Calendar) -->
+        <!-- ========================================== -->
+        <div id="tab-calendar" class="tab-content">
+            <div class="hero">
+                <h1>통합 핵심 일정표</h1>
+                <p>향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
+            </div>
+
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-header">
+                    <div class="card-title">7월 3주차 주요 일정</div>
+                    <button class="btn-pill">캘린더 연동</button>
+                </div>
+
+                <div class="day-block">
+                    <div class="day-header">
+                        <div class="day-date">7/13</div>
+                        <div class="day-weekday">월요일</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">중계본동 재개발 현장 미팅</div>
+                        <div class="event-note">SH · 주대위 · 설계사 참석</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">신정동 922 재개발 주민설명회</div>
+                        <div class="event-note">전략기획 본부 참석</div>
+                    </div>
+                </div>
+
+                <div class="day-block">
+                    <div class="day-header">
+                        <div class="day-date">7/14</div>
+                        <div class="day-weekday">화요일</div>
+                    </div>
+                    <div class="event-card important">
+                        <div class="event-time">14:00</div>
+                        <div class="event-name">면목역 1차 모아주택 총회</div>
+                        <div class="event-note">4·7구역 (디자인2소)</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">장대B구역 보행브릿지 회의</div>
+                        <div class="event-note">협력사 및 조합</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">석관초 관리계획 과장보고</div>
+                        <div class="event-note">관할 구청</div>
+                    </div>
+                </div>
+
+                <div class="day-block">
+                    <div class="day-header">
+                        <div class="day-date">7/16</div>
+                        <div class="day-weekday">목요일</div>
+                    </div>
+                    <div class="event-card important">
+                        <div class="event-name">하계 현대우성 구청장 보고</div>
+                        <div class="event-note">노원구청 (디자인3소)</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-name">삼선동 1·2구역 MP 미팅</div>
+                    </div>
+                </div>
+
+                <div class="day-block">
+                    <div class="day-header">
+                        <div class="day-date">7/18</div>
+                        <div class="day-weekday">토요일</div>
+                    </div>
+                    <div class="event-card important">
+                        <div class="event-name">당산1구역 설계자 선정 총회</div>
+                        <div class="event-note">전략계획/기획팀 총력 대응 ★ 수주 핵심</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: 법규 아카이브 (Laws) -->
+        <!-- ========================================== -->
+        <div id="tab-laws" class="tab-content">
+            <div class="hero">
+                <h1>법규 아카이브</h1>
+                <p>최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">신규 시행 법령</div>
+                    </div>
+                    <table class="card-table">
+                        <tr><th>시행일</th><th>법령</th><th>주요 내용</th></tr>
+                        <tr><td><span class="highlight">07.01</span></td><td>도정법 시행령</td><td>총회 1회 통합, 공사비 검증 의무화</td></tr>
+                        <tr><td><span class="highlight">07.01</span></td><td>주택법 시행령</td><td>일부 개정 시행 (행정사항 정비)</td></tr>
+                        <tr><td>02.27</td><td>소규모주택정비법</td><td>조합설립 요건 완화, 임대주택 가격 상향</td></tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">지자체 고시/공고</div>
+                    </div>
+                    <ul style="padding-left: 20px; font-size: 14px; color: var(--ink); line-height: 1.8;">
+                        <li><strong>[서울] 성북구 신월곡제1구역</strong> — 7/2 사업시행계획(변경)인가 고시</li>
+                        <li><strong>[서울] 중랑구 상봉7구역</strong> — 7/2 사업시행계획 변경인가 고시 (49층)</li>
+                        <li><strong>[서울] 종로구 종로2·3가</strong> — 7/2 지구단위계획 변경안 수정가결</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="grid-column: 1 / -1;">
+                    <div class="card-header">
+                        <div class="card-title">서울시 10대 법령 개정 건의안 추적표</div>
+                    </div>
+                    <table class="card-table">
+                        <tr><th>건의 항목</th><th>현행</th><th>건의안</th><th>상태</th></tr>
+                        <tr><td>조합설립 동의율</td><td>75%</td><td><strong style="color:var(--primary)">70%</strong></td><td>건의 중</td></tr>
+                        <tr><td>이주비 대출 LTV</td><td>40%</td><td><strong style="color:var(--primary)">70%</strong></td><td>건의 중</td></tr>
+                        <tr><td>인가 전 통지 기간</td><td>60일</td><td><strong style="color:var(--primary)">30일</strong></td><td>건의 중</td></tr>
+                        <tr><td>시공자 수의계약</td><td>2회 유찰</td><td><strong style="color:var(--primary)">1회 유찰</strong></td><td>건의 중</td></tr>
+                        <tr><td>용적률 1.2배 완화</td><td>공공만 적용</td><td><strong style="color:var(--primary)">민간 확대 적용</strong></td><td>건의 중</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
+        <!-- ========================================== -->
+        <div id="tab-reading" class="tab-content">
+<style>
+                /* Dense 100-Mosaic Tile Grid */
+                .grid-mosaic {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+                    gap: 8px;
+                    padding: 24px;
+                    background: #fdfdfd;
+                    border-radius: 20px;
+                    border: 1px solid #f0f0f0;
+                }
+                
+                .mosaic-block {
+                    cursor: pointer;
+                    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    position: relative;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .mosaic-block:hover {
+                    transform: scale(1.15);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+                    z-index: 10;
+                }
+                
+                .mosaic-block.read {
+                    background-color: #e5e5e5 !important;
+                    box-shadow: none !important;
+                    transform: scale(0.95);
+                }
+                
+                .mosaic-check {
+                    font-size: 16px;
+                    color: #fff;
+                    opacity: 0;
+                    font-weight: bold;
+                    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+                }
+                
+                .mosaic-block.read .mosaic-check {
+                    opacity: 1;
+                    color: #888;
+                    text-shadow: none;
+                }
+                
+                .mosaic-block.active {
+                    box-shadow: 0 0 0 3px #0066cc;
+                    transform: scale(1.1);
+                    z-index: 5;
+                }
+            </style>
+
+            <div class="grid-mosaic" id="mosaic-grid">
+                <!-- JavaScript will populate 100 mosaic blocks here -->
+            </div>
+
+            <div class="hero" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); padding: 32px; border-radius: 20px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05);">
+                <h1 style="font-size: 28px; margin-bottom: 12px; color: #1d1d1f; letter-spacing: -0.5px;">오늘의 읽을거리 100선 🎯</h1>
+                <p style="font-size: 16px; color: #555; line-height: 1.5; max-width: 600px; margin: 0 auto; word-break: keep-all;">
+                    아래의 100개 모자이크 블록을 눌러 숨겨진 지식을 해제해 보세요!<br>
+                    블록을 누르면 요약 내용이 나타나며 도감에 체크표시가 새겨집니다.
+                </p>
+            </div>
+
+            <!-- Detail Pane (Replacing Modal) -->
+            <div id="article-detail-pane" style="background: #fff; border-radius: 16px; padding: 32px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #eaeaea; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center;">
+                <div id="detail-placeholder" style="color: #999; font-size: 16px;">
+                    <span style="font-size: 32px; display: block; margin-bottom: 12px;">👆</span>
+                    아래 도감에서 컬러 블록을 하나 선택해 보세요.
+                </div>
+                
+                <div id="detail-content" style="display: none; width: 100%; text-align: left;">
+                    <div id="detail-category" style="color: #0066cc; font-size: 13px; font-weight: 600; margin-bottom: 10px;"></div>
+                    <h2 id="detail-title" style="font-size: 22px; margin-bottom: 16px; line-height: 1.35; color: #1d1d1f; word-break: keep-all;"></h2>
+                    <p id="detail-excerpt" style="font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 20px; background: #f9f9f9; padding: 16px; border-radius: 12px;"></p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div id="detail-meta" style="font-size: 12px; color: #888;"></div>
+                        <button id="detail-link-btn" style="padding: 10px 20px; border-radius: 99px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 원문 보기</button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="articles.js"></script>
+            <script>
+                let currentArticleUrl = '';
+                
+                function renderMosaic() {
+                    const grid = document.getElementById('mosaic-grid');
+                    if (!grid || typeof articlesData === 'undefined') return;
+                    
+                    grid.innerHTML = '';
+                    
+                    let readList = [];
+                    try {
+                        const saved = localStorage.getItem('jhub_read_articles');
+                        if (saved) readList = JSON.parse(saved);
+                    } catch (e) {}
+                    
+                    articlesData.forEach((article, index) => {
+                        let bgColor = '#ffffff';
+                        const cat = article.category || '';
+                        
+                        // Vibrant colors for the mosaic
+                        if (cat.includes('예술') || cat.includes('문화') || cat.includes('디자인')) {
+                            bgColor = '#FFD166'; // Yellow
+                        } else if (cat.includes('건축') || cat.includes('공학') || cat.includes('시티')) {
+                            bgColor = '#118AB2'; // Blue
+                        } else if (cat.includes('경제') || cat.includes('부동산') || cat.includes('상업')) {
+                            bgColor = '#06D6A0'; // Green
+                        } else {
+                            bgColor = '#EF476F'; // Pink/Red
+                        }
+                        
+                        const isRead = readList.includes(index);
+                        const cardClass = isRead ? "mosaic-block read" : "mosaic-block";
+                        
+                        const cardHtml = `
+                            <div class="${cardClass}" id="mosaic-card-${index}" style="background-color: ${bgColor};" onclick="openDetail(${index})" title="${article.category}: ${article.title}">
+                                <div class="mosaic-check">✓</div>
+                            </div>
+                        `;
+                        grid.innerHTML += cardHtml;
+                    });
+                }
+                
+                function openDetail(index) {
+                    const article = articlesData[index];
+                    if (!article) return;
+                    
+                    // Remove active state from all blocks
+                    document.querySelectorAll('.mosaic-block').forEach(b => b.classList.remove('active'));
+                    
+                    // Save read state & set active
+                    const card = document.getElementById('mosaic-card-' + index);
+                    if (card) {
+                        card.classList.add('active');
+                        card.classList.add('read');
+                    }
+                    
+                    let readList = [];
+                    try {
+                        const saved = localStorage.getItem('jhub_read_articles');
+                        if (saved) readList = JSON.parse(saved);
+                    } catch (e) {}
+                    
+                    if (!readList.includes(index)) {
+                        readList.push(index);
+                        localStorage.setItem('jhub_read_articles', JSON.stringify(readList));
+                    }
+                    
+                    // Populate Detail Pane
+                    document.getElementById('detail-placeholder').style.display = 'none';
+                    document.getElementById('detail-content').style.display = 'block';
+                    
+                    document.getElementById('detail-category').innerText = article.category;
+                    document.getElementById('detail-title').innerText = article.title;
+                    document.getElementById('detail-excerpt').innerHTML = article.excerpt;
+                    document.getElementById('detail-meta').innerText = article.meta;
+                    
+                    currentArticleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(article.title);
+                    
+                    // Smooth scroll up to the detail pane if needed
+                    document.getElementById('article-detail-pane').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                document.getElementById('detail-link-btn').addEventListener('click', () => {
+                    if (currentArticleUrl) {
+                        window.open(currentArticleUrl, '_blank');
+                    }
+                });
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(renderMosaic, 100);
+                });
+                
+                const readingTabItem = document.querySelector('[data-target="tab-reading"]');
+                if (readingTabItem) {
+                    readingTabItem.addEventListener('click', renderMosaic);
+                }
+            </script>
+        </div>
+
+
+    <!-- Javascript for Tab Switching and Accordion -->
+    <script>
+        // Tab Navigation
+        const navItems = document.querySelectorAll('.nav-item');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const pageTitle = document.getElementById('page-title');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active classes
+                navItems.forEach(nav => nav.classList.remove('active'));
+                tabContents.forEach(tab => tab.classList.remove('active'));
+                
+                // Add active class to clicked
+                item.classList.add('active');
+                const targetId = item.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+                
+                // Update Title
+                pageTitle.textContent = item.textContent;
+            });
+        });
+
+        // Accordion for Adjacent Areas
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(acc => {
+            const header = acc.querySelector('.acc-header');
+            header.addEventListener('click', () => {
+                acc.classList.toggle('open');
+                const span = header.querySelector('span');
+                span.textContent = acc.classList.contains('open') ? '-' : '+';
+            });
+        });
+
+        const allowedUsers = {
+            // 마스터키
+            "김중일": "0000",
+            
+            // 임원진 (1단)
+            "박성배": "4913", "노병채": "0343", "김기운": "0343", "김동일": "9005", "이정선": "5024",
+            "김형태": "9549", "남수경": "8105", "이민희": "1119",
+            
+            // 전략기획본부 (1단)
+            "전성일": "6464", "정우석": "0869",
+            
+            // 관리 (1단)
+            "장명선": "0305", "최용인": "0413", "이미령": "9609", "박성춘": "2768", "김영순": "2241",
+            
+            // 도시계획본부 (1단)
+            "이우진": "0275", "정지영": "7692", "이두희": "7205", "오경택": "5493", "한수현": "5237",
+            "배채운": "8514", "김재봉": "7452", "김일육": "0332", "나일환": "5895", "이현애": "2417",
+            "이희정": "8245", "강호상": "1339", "성진우": "9621", "김범수": "5039", "오시은": "5395",
+            "김승민": "4869", "양은수": "5076",
+            
+            // 도시개발본부 (2단)
+            "오성진": "2602", "우의철": "8126", "박세라": "7766", "이민경": "7206", "공재호": "9735",
+            "권영빈": "5383", "최동혁": "1304", "강태윤": "4810", "김다현": "3179", "윤용준": "3334",
+            "김혜선": "8799", "남현우": "1061", "김명주": "2569", "강수연": "6280", "김도영": "6725",
+            "박도현": "2738", "김민구": "7733", "권재일": "7914", "김미현": "7523", "박내수": "7429",
+            "조병준": "3009", "홍영재": "1147", "유선호": "4678", "이민호": "2793", "전서희": "4346",
+            "이정민": "7065",
+            
+            // 디자인본부 (3단)
+            "이종복": "3824", "김미연": "9543", "이택기": "7457", "허민철": "8518", "성시현": "2159",
+            "안정하": "2035", "김예은": "0052", "계영주": "6458", "정경열": "1530", "이신실": "7557",
+            "정혜원": "1036", "정성재": "5829", "이준영": "5237", "이종민": "1952", "문설아": "2062",
+            "김민정": "7673", "박효준": "7540", "박용훈": "3742", "서주영": "2910", "김정훈": "7546",
+            "박찬기": "3591", "양해찬": "7213", "표정은": "5342", "이민규": "5342",
+            
+            // 도시재생본부 (4단)
+            "오명석": "3850", "양영배": "4137", "우성환": "8841", "장진호": "3364", "김해리": "8363",
+            "황준원": "4325", "백명재": "6556", "채동영": "5974", "사흐르잣": "1727", "이원희": "1266",
+            "서민지": "2656", "권동규": "6214", "박지원": "6867", "김호연": "2468", "정유정": "0614",
+            "남소현": "3190", "최민정": "1948",
+            
+            // 4소(CG팀), 전략계획본부, 프리랜서, QC (5단)
+            "임성준": "9041", "박은경": "7642", "황보석": "1795", "김경민": "1531", "한태은": "4239",
+            "김지영": "5881", "박주호": "4847", "김태현": "7037", "이서영": "2564", "이현서": "7236",
+            "이용구": "6153", "전철호": "9356", "김원석": "3671", "배동준": "6355", "김현희": "5396",
+            "이종학": "0402", "송종철": "7417", "최병구": "7438", "김유관": "7081", "박현기": "7880"
+        };
+
+        function updateUserProfile(name) {
+            if (name) {
+                document.getElementById("user-profile-name").textContent = name + " 님";
+                document.getElementById("user-profile-avatar").textContent = name.substring(0, 1);
+            }
+        }
+
+        function checkAutoLogin() {
+            if (localStorage.getItem("jhub_logged_in") === "true" || sessionStorage.getItem("jhub_logged_in") === "true") {
+                const userName = localStorage.getItem("jhub_user_name") || sessionStorage.getItem("jhub_user_name");
+                updateUserProfile(userName);
+                document.getElementById("login-screen").style.display = "none";
+                document.getElementById("app-content").style.display = "block";
+            }
+        }
+
+        function attemptLogin() {
+            const name = document.getElementById("login-name").value.trim();
+            const pass = document.getElementById("login-pass").value.trim();
+            const remember = document.getElementById("login-remember").checked;
+            const err = document.getElementById("login-error");
+            
+            if (allowedUsers[name] && allowedUsers[name] === pass) {
+                if (remember) {
+                    localStorage.setItem("jhub_logged_in", "true");
+                    localStorage.setItem("jhub_user_name", name);
+                } else {
+                    sessionStorage.setItem("jhub_logged_in", "true");
+                    sessionStorage.setItem("jhub_user_name", name);
+                }
+                
+                updateUserProfile(name);
+                document.getElementById("login-screen").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("login-screen").style.display = "none";
+                    document.getElementById("app-content").style.display = "block";
+                }, 300);
+            } else {
+                err.style.display = "block";
+                const card = document.querySelector(".login-card");
+                card.style.transform = "translateX(-10px)";
+                setTimeout(() => card.style.transform = "translateX(10px)", 50);
+                setTimeout(() => card.style.transform = "translateX(-10px)", 100);
+                setTimeout(() => card.style.transform = "translateX(0)", 150);
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("jhub_logged_in");
+            localStorage.removeItem("jhub_user_name");
+            sessionStorage.removeItem("jhub_logged_in");
+            sessionStorage.removeItem("jhub_user_name");
+            location.reload();
+        }
+
+        // Add Enter key support
+        document.getElementById("login-pass").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") attemptLogin();
+        });
+
+        // Initialize Login check
+        checkAutoLogin();
+    </script>
+
+    <!-- Global Swipe Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = ['tab-dashboard', 'tab-reading', 'tab-projects', 'tab-calendar', 'tab-laws'];
+            const navItems = document.querySelectorAll('.nav-item');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pageTitle = document.getElementById('page-title');
+            
+            let touchstartX = 0;
+            let touchendX = 0;
+            let touchstartY = 0;
+            let touchendY = 0;
+            
+            function handleGesture() {
+                const swipeDistanceX = touchendX - touchstartX;
+                const swipeDistanceY = Math.abs(touchendY - touchstartY);
+                
+                // Only trigger if horizontal swipe is significantly larger than vertical scroll
+                if (Math.abs(swipeDistanceX) > 50 && Math.abs(swipeDistanceX) > swipeDistanceY * 1.5) {
+                    
+                    // Find current active tab index
+                    let currentIndex = -1;
+                    for (let i = 0; i < tabContents.length; i++) {
+                        if (tabContents[i].classList.contains('active')) {
+                            // Find matching ID in our logical order array
+                            currentIndex = tabs.indexOf(tabContents[i].id);
+                            break;
+                        }
+                    }
+                    
+                    if (currentIndex !== -1) {
+                        let nextIndex = currentIndex;
+                        if (swipeDistanceX < 0) {
+                            // Swiped left, go to next tab
+                            nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
+                        } else {
+                            // Swiped right, go to prev tab
+                            nextIndex = Math.max(currentIndex - 1, 0);
+                        }
+                        
+                        if (nextIndex !== currentIndex) {
+                            // Trigger click on corresponding nav item to re-use existing logic
+                            const targetId = tabs[nextIndex];
+                            const targetNavItem = document.querySelector(`[data-target="${targetId}"]`);
+                            if (targetNavItem) {
+                                targetNavItem.click();
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Listen on the entire app content area
+            const appContent = document.getElementById('app-content');
+            if (appContent) {
+                appContent.addEventListener('touchstart', e => {
+                    // Don't interfere if touching the modal
+                    if (e.target.closest('.modal-box')) return;
+                    touchstartX = e.changedTouches[0].screenX;
+                    touchstartY = e.changedTouches[0].screenY;
+                }, {passive: true});
+                
+                appContent.addEventListener('touchend', e => {
+                    if (e.target.closest('.modal-box')) return;
+                    touchendX = e.changedTouches[0].screenX;
+                    touchendY = e.changedTouches[0].screenY;
+                    handleGesture();
+                }, {passive: true});
+            }
+        });
+    </script>
+</div> <!-- End of app-content -->
+</body>
+</html>
+<!-- auto sync test -->
