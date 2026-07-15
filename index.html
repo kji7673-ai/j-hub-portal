@@ -410,10 +410,10 @@
         <ul style="display: flex; align-items: center; width: 100%;">
             <li class="logo" style="flex-shrink: 0;">J-Hub Platform</li>
             <li class="nav-item active" data-target="tab-dashboard">일일보고</li>
+            <li class="nav-item" data-target="tab-reading" style="color:#2997ff; font-weight: 600;">오늘의 읽을거리</li>
             <li class="nav-item" data-target="tab-projects">프로젝트 현황</li>
             <li class="nav-item" data-target="tab-calendar">통합 캘린더</li>
             <li class="nav-item" data-target="tab-laws">법규 아카이브</li>
-            <li class="nav-item" data-target="tab-reading" style="color:#2997ff; font-weight: 600;">오늘의 읽을거리</li>
             <li style="margin-left: auto; cursor: pointer;" onclick="logout()">
                 <span style="color: var(--body-muted); font-size: 13px; font-weight: 400;">로그아웃</span>
             </li>
@@ -841,6 +841,43 @@
             });
             
             renderPagination();
+        }
+        
+        // Initialize
+        if (typeof articlesData !== 'undefined') {
+            totalPages = Math.ceil(articlesData.length / itemsPerPage);
+            renderArticles(currentPage);
+            renderPagination(totalPages, currentPage);
+
+            // Add swipe gestures for mobile
+            const readTab = document.getElementById('tab-reading');
+            if (readTab) {
+                let startX = 0;
+                let endX = 0;
+                readTab.addEventListener('touchstart', e => {
+                    startX = e.changedTouches[0].screenX;
+                }, {passive: true});
+                readTab.addEventListener('touchend', e => {
+                    endX = e.changedTouches[0].screenX;
+                    const threshold = 50;
+                    if (endX < startX - threshold) {
+                        // swipe left -> next page
+                        if (currentPage < Math.ceil(articlesData.length / itemsPerPage)) {
+                            currentPage++;
+                            renderArticles();
+                            document.getElementById('magazine-container').scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                    if (endX > startX + threshold) {
+                        // swipe right -> prev page
+                        if (currentPage > 1) {
+                            currentPage--;
+                            renderArticles();
+                            document.getElementById('magazine-container').scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                }, {passive: true});
+            }
         }
         
         function renderPagination() {
