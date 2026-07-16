@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0;
+            background-color: #f4f5f7; 
+            color: #111111; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+            line-height: 1.6;
+        }
+        
+        .global-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: #1a1a1a; color: white;
+            display: flex; align-items: center; padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        #mobile-menu-btn {
+            background: none; border: none; color: white; font-size: 20px;
+            margin-right: 15px; cursor: pointer; display: none;
+        }
+        
+        .sidebar {
+            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd;
+            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            padding: 20px 0;
+        }
+        
+        .sidebar.open { left: 0; }
+        
+        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; }
+        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        
+        .main-container {
+            padding-top: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .viewer-page {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .viewer-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px; background: #f0f0f0; color: #333;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+        }
+        
+        .viewer-content img { max-width: 100%; height: auto; }
+        .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
+        .viewer-content th { background: #f5f5f5; }
+        
+        @media (max-width: 768px) {
+            #mobile-menu-btn { display: block; }
+            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav">
+        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div class="sidebar-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
+        <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="sidebar-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
+        <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
+        <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="sidebar-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div class="sidebar-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="sidebar-item active"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="sidebar-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="viewer-page">
+            <div class="viewer-header">
+                <a href="page_10.html" class="btn">◀ 이전</a>
+
+                <div style="text-align:center;">
+                    <span style="font-size:12px;color:#666;display:block;">제7장. 실무 밀착형 튜토리얼 (SOP)</span>
+                    <strong>문서 12 / 18</strong>
+                </div>
+                <a href="page_12.html" class="btn">다음 ▶</a>
+
+            </div>
+            
+            <div class="viewer-content">
+                <h3>실전 튜토리얼 (SOP) — 야근을 1시간 줄이는 사업성 검토 워크플로우</h3>
+<p>이 챕터에서는 직접 AI를 조작하며 사업성 검토를 완성합니다. <strong>화면을 보면서 아래 순서대로 따라하십시오.</strong></p>
+
+<div class="alert alert-info">
+    <strong>📝 실습 미션</strong><br>
+    가상 대상지: 서울시 마포구 공덕동 370번지 일대 (가칭: 공덕A구역)<br>
+    목표: 지번만 아는 상태에서 30분 만에 <strong>[소규모 재건축 사업성 검토서]</strong> 초안 완성
+</div>
+
+<h4 style="color:var(--blueprint-blue);">STEP 1. AI 접속 및 역할 설정 (소요: 1분)</h4>
+<p>AI 채팅창을 열고, <strong>아래 문장을 그대로 복사</strong>하여 첫 번째로 입력합니다.</p>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+너는 서울시 소규모 재건축 사업을 전문으로 하는 20년 경력 건축사야.
+오늘 내가 진행할 사업성 검토 작업을 처음부터 끝까지 도와줘.
+확실하지 않은 수치는 반드시 "확인 필요"라고 표시해줘.
+모든 법규 수치에는 근거 조문(조 번호)을 병기해줘.
+준비됐으면 "준비완료"라고만 답해줘.
+</pre>
+<p style="font-size:12px;color:#718096;">✅ AI가 "준비완료"라고 답하면 STEP 2로 이동합니다.</p>
+
+<h4 style="color:var(--blueprint-blue);">STEP 2. 대상지 기본 정보 입력 (소요: 3분)</h4>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+다음 대상지 정보를 기반으로 사업성 검토를 시작해줘.
+
+[대상지 정보]
+- 위치: 서울시 마포구 공덕동 370번지 일대
+- 용도지역: 제2종일반주거지역
+- 대지면적: 2,850 m² (가정)
+- 현황: 4~5층 노후 다세대 주택 밀집 지역, 사업 유형은 소규모 재건축 검토
+
+[요청사항]
+1. 이 용도지역에서 소규모 재건축이 가능한지 요건을 먼저 확인해줘.
+2. 법적 건폐율·용적률 상한을 알려줘. (근거 조문 포함)
+3. 가능하다면 최대 연면적과 예상 세대수 범위를 산출해줘.
+</pre>
+
+<div class="alert alert-secondary" style="margin-top:16px;">
+    <strong>📊 예상 AI 답변 형식 (이런 형태가 나와야 정상입니다)</strong>
+    <table style="font-size:12px;width:100%;border-collapse:collapse;margin-top:8px;">
+        <tr style="background:#e2e8f0;"><th style="padding:5px;border:1px solid #cbd5e0;">항목</th><th style="padding:5px;border:1px solid #cbd5e0;">수치</th><th style="padding:5px;border:1px solid #cbd5e0;">근거</th></tr>
+        <tr><td style="padding:5px;border:1px solid #cbd5e0;">용적률 상한</td><td style="padding:5px;border:1px solid #cbd5e0;">200%</td><td style="padding:5px;border:1px solid #cbd5e0;">서울시 도시계획조례 제55조</td></tr>
+        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;">건폐율 상한</td><td style="padding:5px;border:1px solid #cbd5e0;">60%</td><td style="padding:5px;border:1px solid #cbd5e0;">국토계획법 시행령 제84조</td></tr>
+        <tr><td style="padding:5px;border:1px solid #cbd5e0;">최대 연면적</td><td style="padding:5px;border:1px solid #cbd5e0;">5,700 m²</td><td style="padding:5px;border:1px solid #cbd5e0;">대지면적 2,850 × 용적률 200%</td></tr>
+        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;">예상 세대수</td><td style="padding:5px;border:1px solid #cbd5e0;">40~55세대</td><td style="padding:5px;border:1px solid #cbd5e0;">84㎡ 기준 환산 (주차 감안)</td></tr>
+    </table>
+    <p style="font-size:11px;color:#e53e3e;margin-top:6px;">⚠️ 위 수치는 예시입니다. AI 답변의 수치는 반드시 law.go.kr에서 원문 확인 후 사용하십시오.</p>
+</div>
+
+<h4 style="color:var(--blueprint-blue);">STEP 3. 사업성 초안 작성 요청 (소요: 5분)</h4>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+위 분석을 바탕으로 사업성 검토서 초안을 아래 형식으로 작성해줘.
+
+[작성 형식]
+1. 사업 개요 (위치, 면적, 사업 유형, 추진 근거)
+2. 법규 검토 요약표 (건폐율/용적률/층수/인동거리)
+3. 건축 개요 (연면적, 세대수, 주차 대수 산출)
+4. 사업 추진 시 주요 리스크 3가지
+5. 추가로 현장 조사가 필요한 항목 목록
+
+각 항목마다 "확인 필요" 표시를 반드시 포함해줘.
+</pre>
+
+<h4 style="color:var(--blueprint-blue);">STEP 4. 게이트키퍼 검증 (소요: 10분 — 가장 중요)</h4>
+<div class="alert alert-danger">
+    <strong>AI가 초안을 내놓은 후, 반드시 아래 항목을 직접 확인하십시오.</strong>
+    <ul style="margin-top:8px;">
+        <li>☐ 용적률·건폐율 수치 → <a href="https://www.law.go.kr" target="_blank">law.go.kr</a> 원문 대조</li>
+        <li>☐ 세대수 산출 시 주차 대수 기준 적용 여부 (서울시 주차장 조례)</li>
+        <li>☐ 소규모 재건축 요건 (기존 세대수, 동수, 노후도) 실제 현황과 일치 여부</li>
+        <li>☐ AI가 "확인 필요"로 표시한 항목 전수 처리</li>
+    </ul>
+</div>
+<p>이 4단계를 완료하면 클라이언트에게 보여줄 수 있는 <strong>사업성 검토 초안</strong>이 완성됩니다. 총 소요 시간: <strong>약 20~30분</strong> (기존 반나절 → 획기적 단축)</p>
+            </div>
+            
+            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+                발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Extremely safe fallback just in case body is hidden
+    document.body.style.display = 'block';
+    document.body.style.opacity = '1';
+    </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 3. AI를 다루는 16가지 핵심 사고방식 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0;
+            background-color: #f4f5f7; 
+            color: #111111; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+            line-height: 1.6;
+        }
+        
+        .global-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: #1a1a1a; color: white;
+            display: flex; align-items: center; padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        #mobile-menu-btn {
+            background: none; border: none; color: white; font-size: 20px;
+            margin-right: 15px; cursor: pointer; display: none;
+        }
+        
+        .sidebar {
+            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd;
+            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            padding: 20px 0;
+        }
+        
+        .sidebar.open { left: 0; }
+        
+        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; }
+        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        
+        .main-container {
+            padding-top: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .viewer-page {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .viewer-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px; background: #f0f0f0; color: #333;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+        }
+        
+        .viewer-content img { max-width: 100%; height: auto; }
+        .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
+        .viewer-content th { background: #f5f5f5; }
+        
+        @media (max-width: 768px) {
+            #mobile-menu-btn { display: block; }
+            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav">
+        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div class="sidebar-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
+        <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="sidebar-item active"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
+        <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
+        <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="sidebar-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div class="sidebar-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="sidebar-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="sidebar-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="viewer-page">
+            <div class="viewer-header">
+                <a href="page_2.html" class="btn">◀ 이전</a>
+
+                <div style="text-align:center;">
+                    <span style="font-size:12px;color:#666;display:block;">제2장. AI 및 시스템 기본 이해</span>
+                    <strong>문서 4 / 18</strong>
+                </div>
+                <a href="page_4.html" class="btn">다음 ▶</a>
+
+            </div>
+            
+            <div class="viewer-content">
+                <h3>AI의 사고방식과 소통의 문법 (16가지 핵심 키워드)</h3>
+<p>AI와 일하는 것은 단순히 컴퓨터를 다루는 것이 아니라, <strong>'지식은 방대하지만 우리 회사의 맥락은 모르는 외국인 신입사원'</strong>과 소통하는 것과 같습니다. 다음 16가지 용어를 통해 AI의 생각 패턴을 완벽히 이해해 보십시오.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-secondary">
+            <h4>1. 프롬프트 (Prompt)</h4>
+            <p><strong>"천재적이지만 기억 상실증에 걸린 신입사원 다루기"</strong><br>
+            AI는 백지상태입니다. 프롬프트는 단순한 질문이 아니라, <strong>[역할 부여 ➔ 배경 설명 ➔ 명확한 지시]</strong>가 담긴 '완벽한 업무 지시서'여야 합니다.</p>
+        </div>
+        <div class="alert alert-info">
+            <h4>2. 시스템 프롬프트 (System Prompt)</h4>
+            <p><strong>"AI의 뇌에 심는 영구적인 최면"</strong><br>
+            대화가 시작되기 전, <em>"너는 20년 차 서울시 도시계획 전문 건축사야"</em>라고 영구적인 정체성을 부여하여 엉뚱한 대답을 원천 차단하는 장치입니다.</p>
+        </div>
+        <div class="alert alert-secondary">
+            <h4>3. 컨텍스트 (Context / 맥락)</h4>
+            <p><strong>"AI의 시야(단기 기억) 통제하기"</strong><br>
+            AI는 대화가 길어지면 앞서 말한 조건(예: 2종 일반주거)을 까먹습니다. 중요한 법적 제약사항은 대화 중간중간 지속적으로 상기시켜 주어야 합니다.</p>
+        </div>
+        <div class="alert alert-info">
+            <h4>4. 토큰 (Token)</h4>
+            <p><strong>"AI의 체력 게이지이자 밥그릇"</strong><br>
+            AI는 글자를 '토큰' 단위로 읽습니다. 한 번에 읽을 수 있는 토큰(체력)에 한계가 있으므로, 500페이지짜리 법령집을 통째로 던져주면 과부하가 걸립니다. 핵심만 발췌해서 줘야 합니다.</p>
+        </div>
+        <div class="alert alert-secondary">
+            <h4>5. 에이전트 (Agent)</h4>
+            <p><strong>"손발이 달린 AI에게 미션 부여하기"</strong><br>
+            단순 챗봇이 입으로만 답한다면, 에이전트는 인터넷을 찾고 계산기를 두드리는 '손발'이 있습니다. <em>"지적도를 검색해서 면적을 알아내"</em>처럼 행동을 지시해야 합니다.</p>
+        </div>
+        <div class="alert alert-info">
+            <h4>6. API (Application Programming Interface)</h4>
+            <p><strong>"AI가 팩트(Fact)를 가져오는 직통 전화선"</strong><br>
+            AI의 기억에 의존하지 않고, 국토부나 지자체 서버에 실시간으로 전화를 걸어 "이 땅의 진짜 면적이 얼마야?"라고 물어보고 최신 팩트를 가져오는 통로입니다.</p>
+        </div>
+        <div class="alert alert-secondary">
+            <h4>7. 마크다운 (Markdown / MD)</h4>
+            <p><strong>"AI가 보고서를 그리는 마법의 펜"</strong><br>
+            AI는 마우스로 엑셀을 그릴 수 없습니다. 하지만 <em>"마크다운 표 형식으로 작성해"</em>라고 지시하면, 결과물이 우리 플랫폼 안에서 완벽하고 깔끔한 표로 자동 렌더링됩니다.</p>
+        </div>
+        <div class="alert alert-info">
+            <h4>8. JSON</h4>
+            <p><strong>"AI와 시스템이 주고받는 디지털 서류철"</strong><br>
+            사람이 읽기엔 복잡해 보이지만, AI가 건축 개요(용적률, 건폐율)를 정확한 숫자로 우리 플랫폼에 전달할 때 절대 에러가 나지 않게 규격화된 양식입니다.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <h4>9. 할루시네이션 (Hallucination / 환각)</h4>
+            <p><strong>"모른다고 말하기 부끄러워하는 AI의 거짓말"</strong><br>
+            법규를 모를 때 유령 조례를 지어내는 본능입니다. 반드시 <em>"모르면 모른다고 대답해"</em>라는 방어막을 치고 교차 검증해야 합니다.</p>
+        </div>
+        <div class="alert alert-success">
+            <h4>10. RAG (검색 증강 생성)</h4>
+            <p><strong>"AI에게 전공 서적(법령집) 쥐여주기"</strong><br>
+            할루시네이션을 막기 위해, 대답하기 전에 반드시 우리가 업로드한 '최신 건축법규 PDF'를 먼저 뒤져보고 그 안에서만 대답하게 강제하는 기술입니다.</p>
+        </div>
+        <div class="alert alert-success">
+            <h4>11. 퓨샷 러닝 (Few-shot Learning)</h4>
+            <p><strong>"개떡같이 말해도 찰떡같이 알아듣게 하는 예시의 힘"</strong><br>
+            구구절절 설명하는 것보다, <em>"이런 양식으로 써줘"</em>라며 잘 쓴 보고서 예시(모범 답안)를 하나 던져주면 결과물의 품질이 100배 상승합니다.</p>
+        </div>
+        <div class="alert alert-success">
+            <h4>12. 사고의 사슬 (Chain of Thought / CoT)</h4>
+            <p><strong>"AI에게 수학 문제 풀이 과정 강제하기"</strong><br>
+            단순히 용적률 결과값만 묻지 말고, <em>"분자와 분모에 들어간 숫자와 계산 수식을 Step-by-Step으로 적어봐"</em>라고 지시하면 논리적 오류가 급격히 줄어듭니다.</p>
+        </div>
+        <div class="alert alert-warning">
+            <h4>13. 온도 (Temperature / 파라미터)</h4>
+            <p><strong>"AI의 창의성 조절 다이얼"</strong><br>
+            디자인 아이디어가 필요할 땐 온도를 높여 창의적으로 놔두고, 법규 검토나 숫자 계산을 할 땐 온도를 '0'으로 맞춰 엄격하고 딱딱한 로봇처럼 만들어야 합니다.</p>
+        </div>
+        <div class="alert alert-warning">
+            <h4>14. 벡터 DB (Vector Database)</h4>
+            <p><strong>"의미로 찾는 마법의 도서관"</strong><br>
+            단순 단어 검색이 아니라 '의미'를 이해합니다. "주차장 규제"라고 치면, 문서에 그 단어가 없어도 의미가 비슷한 "주차대수 완화 조례"를 스스로 찾아옵니다.</p>
+        </div>
+        <div class="alert alert-danger">
+            <h4>15. 편향과 오버피팅 (Bias & Overfitting)</h4>
+            <p><strong>"특정 지자체 룰에 갇힌 AI"</strong><br>
+            서울시 프로젝트만 계속 시키면, 나중에 부산 프로젝트를 맡겼을 때 무의식적으로 서울시 조례를 적용하려는 경향입니다. 지역 조건을 매번 명확히 리셋해야 합니다.</p>
+        </div>
+
+        <div class="alert alert-primary" style="border: 2px solid var(--blueprint-blue); background-color: #f0f7ff;">
+            <h4 style="color: var(--blueprint-blue);">16. 게이트키퍼 (Gatekeeper) ★</h4>
+            <p><strong>"AI 결과물의 진위와 가치를 판별하는 최종 수문장"</strong><br>
+            아무리 플랫폼이 고도화되어도 책임은 인간의 몫입니다. AI가 뱉어낸 그럴싸한 오답을 걸러내고, 회사 집단 지성에 올라갈 로직이 오염되지 않도록 <strong>최종 승인과 교차 검증을 수행하는 우리 건축사들의 가장 중요하고 새로운 정체성</strong>입니다.</p>
+        </div>
+    </div>
+</div>
+            </div>
+            
+            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+                발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Extremely safe fallback just in case body is hidden
+    document.body.style.display = 'block';
+    document.body.style.opacity = '1';
+    </script>
+</body>
+</html>

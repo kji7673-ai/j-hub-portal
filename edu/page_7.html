@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 7. 전사 보안 규정 및 데이터 해시화 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0;
+            background-color: #f4f5f7; 
+            color: #111111; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+            line-height: 1.6;
+        }
+        
+        .global-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: #1a1a1a; color: white;
+            display: flex; align-items: center; padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        #mobile-menu-btn {
+            background: none; border: none; color: white; font-size: 20px;
+            margin-right: 15px; cursor: pointer; display: none;
+        }
+        
+        .sidebar {
+            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd;
+            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            padding: 20px 0;
+        }
+        
+        .sidebar.open { left: 0; }
+        
+        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; }
+        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        
+        .main-container {
+            padding-top: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .viewer-page {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .viewer-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px; background: #f0f0f0; color: #333;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+        }
+        
+        .viewer-content img { max-width: 100%; height: auto; }
+        .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
+        .viewer-content th { background: #f5f5f5; }
+        
+        @media (max-width: 768px) {
+            #mobile-menu-btn { display: block; }
+            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav">
+        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div class="sidebar-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
+        <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="sidebar-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
+        <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
+        <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="sidebar-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div class="sidebar-item active"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="sidebar-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="sidebar-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="viewer-page">
+            <div class="viewer-header">
+                <a href="page_6.html" class="btn">◀ 이전</a>
+
+                <div style="text-align:center;">
+                    <span style="font-size:12px;color:#666;display:block;">제4장. 보안 및 품질 관리</span>
+                    <strong>문서 8 / 18</strong>
+                </div>
+                <a href="page_8.html" class="btn">다음 ▶</a>
+
+            </div>
+            
+            <div class="viewer-content">
+                <h3>데이터 보안 및 프라이버시 보호</h3>
+<p>설계 사무소의 생명은 고객의 기밀 정보 및 프로젝트 관련 데이터의 보안입니다. AI 플랫폼 사용 시 다음 규정을 반드시 준수해야 합니다.</p>
+
+<h4>1. 절대 입력 금지 정보</h4>
+<ul>
+  <li>건축주 및 토지 소유자의 실명, 주민등록번호, 개인 연락처</li>
+  <li>협력 업체의 정확한 단가 및 상세 계약 조건</li>
+  <li>회사의 민감한 재무 정보 및 핵심 영업 비밀</li>
+</ul>
+
+<h4>2. 데이터 해시화 (비식별 조치) 규칙</h4>
+<p>AI 모델에 프로젝트 데이터를 전송하기 전, 반드시 비식별 조치(가명 처리)를 해야 합니다.</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>원본 정보</th>
+      <th>해시화 규칙 (입력 형식)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"한남 3구역 재개발 사업"</td>
+      <td><strong>[A구역]</strong> 정비사업</td>
+    </tr>
+    <tr>
+      <td>"홍길동 조합장 (010-1234-5678)"</td>
+      <td><strong>[조합장_A]</strong> (연락처 생략)</td>
+    </tr>
+    <tr>
+      <td>"서울시 용산구 한남동 123-45 번지"</td>
+      <td><strong>[대상지_X]</strong> (구체적인 지번은 가급적 생략하고 구/동 단위까지만 입력, 필요시 가상의 지번 사용)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>3. 대화방(Session) 관리</h4>
+<p>프로젝트별로 별도의 대화방(채팅 세션)을 분리하여 사용하십시오. 서로 다른 프로젝트의 정보가 하나의 대화망에서 섞이는 것(Context Leak)을 방지해야 합니다. 작업이 완료된 세션은 주기적으로 정리(Kill)합니다.</p>
+            </div>
+            
+            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+                발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Extremely safe fallback just in case body is hidden
+    document.body.style.display = 'block';
+    document.body.style.opacity = '1';
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0;
+            background-color: #f4f5f7; 
+            color: #111111; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+            line-height: 1.6;
+        }
+        
+        .global-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: #1a1a1a; color: white;
+            display: flex; align-items: center; padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        #mobile-menu-btn {
+            background: none; border: none; color: white; font-size: 20px;
+            margin-right: 15px; cursor: pointer; display: none;
+        }
+        
+        .sidebar {
+            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd;
+            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            padding: 20px 0;
+        }
+        
+        .sidebar.open { left: 0; }
+        
+        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; }
+        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        
+        .main-container {
+            padding-top: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .viewer-page {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .viewer-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px; background: #f0f0f0; color: #333;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+        }
+        
+        .viewer-content img { max-width: 100%; height: auto; }
+        .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
+        .viewer-content th { background: #f5f5f5; }
+        
+        @media (max-width: 768px) {
+            #mobile-menu-btn { display: block; }
+            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav">
+        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div class="sidebar-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
+        <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="sidebar-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
+        <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
+        <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="sidebar-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div class="sidebar-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="sidebar-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="sidebar-item active"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="viewer-page">
+            <div class="viewer-header">
+                <a href="page_16.html" class="btn">◀ 이전</a>
+
+                <div style="text-align:center;">
+                    <span style="font-size:12px;color:#666;display:block;">제4장. 시스템 연동 및 자동화 실무</span>
+                    <strong>문서 18 / 18</strong>
+                </div>
+                <span class="btn" style="visibility:hidden">다음 ▶</span>
+
+            </div>
+            
+            <div class="viewer-content">
+                <div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">네이버 밴드 ↔ 진양저널 연동 정석 가이드</h2>
+
+        <p class="body-text">이 문서는 네이버 밴드에 기록된 <strong>'주간 회의록 및 일정표'</strong>를 진양저널 시스템으로 안전하고 정확하게 수집(Pull)하는 <strong>최적의 실무 파이프라인과 규칙(SOP)</strong>을 안내합니다.</p>
+
+        <h3 class="display-md" style="margin-top: 40px;">1. 왜 이 방식이 '정석'인가? (CEO 인사이트 반영)</h3>
+        <p class="body-text">초기에는 "현장 사진만 밴드에 올리면 AI가 알아서 회의록을 써주는" 완전 자동화를 고려했으나, 이는 <strong>AI의 환각(거짓 정보 생성) 리스크</strong>와 <strong>보안 유출 위험</strong>이 컸습니다. 따라서 <strong>'밴드에 먼저 명확한 텍스트를 작성하고, 이를 수집하는 방식'</strong>으로 선회했습니다.</p>
+
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
+            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
+                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">환각(Hallucination) 제로화</div>
+                <p class="caption">사진의 불완전한 맥락을 AI가 상상해서 채우지 않도록, 직원이 직접 작성한 '확정된 텍스트'만 가져오므로 오류가 0%에 수렴합니다.</p>
+            </div>
+            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
+                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">단일 진실 공급원 (SSOT)</div>
+                <p class="caption">소통의 중심인 '네이버 밴드'가 기준 데이터가 되고, 진양저널은 이를 영구 보관(Archive)하는 역할로 명확히 분리됩니다.</p>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top: 50px;">2. 실무 적용을 위한 밴드 작성 규칙 (SOP)</h3>
+        <p class="body-text">프로그램을 복잡하게 만드는 대신, <strong>직원들이 밴드에 글을 올리는 가벼운 약속</strong>을 통해 자동화를 완성합니다.</p>
+
+        <div style="background: var(--surface-tile-1); color: var(--on-dark); padding: 24px; border-radius: var(--rounded-lg); margin: 20px 0;">
+            <p class="body-strong" style="margin-bottom: 12px; color: var(--primary-on-dark);">📌 밴드 주간보고 작성 템플릿</p>
+            <pre style="background: transparent; color: var(--on-dark); font-family: 'SF Pro Text', monospace; font-size: 14px; margin: 0; line-height: 1.6;">#진양저널_주간보고
+
+[일정표]
+- 7/20(월): A구역 건축심의 준비
+- 7/22(수): B구역 조합 회의
+
+[회의록]
+- 지하주차장 모듈 8.4m 적용 확정
+- 데크 레벨 산정 재검토 필요
+(여기에 필요한 현장 사진 첨부)</pre>
+        </div>
+
+        <h3 class="display-md" style="margin-top: 40px;">3. 진양저널 API 수집 파이프라인 (Python 로직)</h3>
+        <p class="body-text">위 규칙을 바탕으로 진양저널 서버는 <strong>매주 월요일</strong>에 다음과 같은 로직을 수행합니다.</p>
+
+        <ul style="margin: 0; padding-left: 20px; font-family: 'SF Pro Text', sans-serif; line-height: 1.6;">
+            <li><strong>STEP 1. 필터링 호출:</strong> 밴드 API를 통해 글을 읽어올 때, 본문에 <code>#진양저널_주간보고</code> 태그가 있는 게시글만 수집합니다. (노이즈 완벽 제거)</li>
+            <li><strong>STEP 2. 파싱(Parsing):</strong> 가져온 글 본문에서 <code>[일정표]</code>와 <code>[회의록]</code> 키워드를 기준으로 텍스트를 분리합니다.</li>
+            <li><strong>STEP 3. 외부 AI 통과 X:</strong> 텍스트가 이미 사람이 정제한 완벽한 상태이므로, 구글이나 OpenAI 서버에 데이터를 보낼 필요 없이 즉시 J 저널 마크다운으로 변환합니다. (보안성 최고 등급)</li>
+            <li><strong>STEP 4. 자동 저장:</strong> 진양저널의 특정 폴더(예: 주간회의록)에 새 마크다운 파일로 영구 저장합니다.</li>
+        </ul>
+
+    </div>
+</div>
+            </div>
+            
+            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+                발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Extremely safe fallback just in case body is hidden
+    document.body.style.display = 'block';
+    document.body.style.opacity = '1';
+    </script>
+</body>
+</html>

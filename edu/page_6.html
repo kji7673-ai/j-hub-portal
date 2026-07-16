@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; padding: 0;
+            background-color: #f4f5f7; 
+            color: #111111; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+            line-height: 1.6;
+        }
+        
+        .global-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: #1a1a1a; color: white;
+            display: flex; align-items: center; padding: 0 20px;
+            z-index: 100;
+        }
+        
+        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        
+        #mobile-menu-btn {
+            background: none; border: none; color: white; font-size: 20px;
+            margin-right: 15px; cursor: pointer; display: none;
+        }
+        
+        .sidebar {
+            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd;
+            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            padding: 20px 0;
+        }
+        
+        .sidebar.open { left: 0; }
+        
+        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; }
+        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        
+        .main-container {
+            padding-top: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .viewer-page {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .viewer-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px; background: #f0f0f0; color: #333;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+        }
+        
+        .viewer-content img { max-width: 100%; height: auto; }
+        .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
+        .viewer-content th { background: #f5f5f5; }
+        
+        @media (max-width: 768px) {
+            #mobile-menu-btn { display: block; }
+            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav">
+        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div class="sidebar-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
+        <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="sidebar-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
+        <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
+        <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="sidebar-item active"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div class="sidebar-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="sidebar-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="sidebar-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="viewer-page">
+            <div class="viewer-header">
+                <a href="page_5.html" class="btn">◀ 이전</a>
+
+                <div style="text-align:center;">
+                    <span style="font-size:12px;color:#666;display:block;">제3장. 행동 지침 및 사내 문화</span>
+                    <strong>문서 7 / 18</strong>
+                </div>
+                <a href="page_7.html" class="btn">다음 ▶</a>
+
+            </div>
+            
+            <div class="viewer-content">
+                <h3>서구형 AI의 한계를 넘는 '진양 고유의 배치 솔루션'</h3>
+<p>오토데스크 포마(Forma) 같은 글로벌 AI는 대지를 찰흙으로 보고 예쁘게 깎습니다. 하지만 지하주차장 모듈, 4-Bay 코어, 한국형 인동거리가 생명인 K-아파트에 이 서양식 알고리즘을 그대로 적용하면 <strong>시공 불가+공사비 폭발의 기형 도면</strong>이 나옵니다.</p>
+<p>진양의 배치 알고리즘은 다릅니다. <strong>"데크가 먼저, 그리드가 다음, 주동이 마지막으로 올라탄다."</strong></p>
+
+<div class="alert alert-danger" style="margin-top:20px;">
+    <h5>🚨 8.4m 단순 바둑판 그리드의 함정</h5>
+    <p>지하 주차장 기둥 간격이 X축(주차 3칸 폭 ≈ 8.1~8.4m)과 Y축(주차+차로+주차 리듬)이 다른데, 이를 정사각 바둑판으로 단순화하면 <strong>기둥이 차로 한가운데에 박히고, 외곽부에 차로를 먼저 두면 주차 면적이 낭비</strong>됩니다. 대지 외곽부에는 주차 칸이 먼저 와야 최대 효율입니다.</p>
+</div>
+
+<h4 style="margin-top:25px; color:var(--blueprint-blue);">진양 배치 알고리즘 7단계</h4>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#2b6cb0;color:white;padding:2px 8px;border-radius:4px;">STEP 0</span> 사업 목표 확정 — 모든 계산의 출발점</h5>
+    <p>이 숫자들이 없으면 이후 모든 단계가 허구입니다. AI에게 가장 먼저 입력해야 할 3가지:</p>
+    <ul>
+        <li><strong>목표 세대수</strong> (예: 300세대)</li>
+        <li><strong>세대 Mix</strong> (예: 59㎡×100 + 84㎡×150 + 114㎡×50)</li>
+        <li><strong>용적률 상한 + 최고 층수</strong> (예: 250%, 30층 이하)</li>
+    </ul>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#744210;color:white;padding:2px 8px;border-radius:4px;">STEP 1</span> 데크 우선 설정 — 지하층 판정 자동 검증 포함</h5>
+    <p>AI가 수치지형도를 읽어 고저차를 산출하고, 데크 단 수와 레벨을 제안합니다. 단, 인간이 최종 승인하기 전에 아래 법정 루틴이 자동 실행됩니다.</p>
+    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:10px;border-radius:4px;font-size:13px;">
+        <strong>⚖️ 지하층 자동 판정 공식 (건축법 시행령 제119조 제1항 제9호)</strong><br>
+        평균지반면 = Σ(각 구간 지반고 × 구간 길이) ÷ 전체 둘레 길이<br>
+        <em>※ 4m 간격 측점 기준</em><br><br>
+        <strong>판정 조건: (평균지반면 − 1층 바닥 FL) ≥ 해당 층 높이 × 1/2 → 🔴 지하층 경고</strong><br>
+        경고 발생 시, AI가 "지상층 확보 최소 데크 레벨(역산값)"을 자동 제안합니다.
+    </div>
+    <p style="margin-top:10px;"><strong>진양 표준 지하층 층고 스택:</strong></p>
+    <table style="font-size:13px;width:100%;border-collapse:collapse;">
+        <tr style="background:#e2e8f0;"><th style="padding:5px;border:1px solid #cbd5e0;">층</th><th style="padding:5px;border:1px solid #cbd5e0;">구성</th><th style="padding:5px;border:1px solid #cbd5e0;">합계</th></tr>
+        <tr><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B1</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">토층 1.2 + 보 0.9 + 설비 0.4 + 탑차 유효고 2.7</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>5.2m</strong></td></tr>
+        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B2</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">슬라브+보 0.6 + 설비 0.4 + 차량통행고 2.3</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>3.3m</strong></td></tr>
+        <tr><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B3 (최하)</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">천장고 2.3 + 무근 0.1 + 설비 0.4 + 슬라브+보 0.6</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>3.4m</strong></td></tr>
+        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;" colspan="2"><strong>지하 3개층 총 굴착 깊이</strong></td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>≈ 11.9m + 기초</strong></td></tr>
+    </table>
+    <p style="font-size:12px;color:#718096;margin-top:6px;">⚠️ B2 코어 주변은 설비 0.4m → 0.6m 상향 적용. B1 탑차 유효고는 진입로·상하차 Zone에만 국소 적용.</p>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#276749;color:white;padding:2px 8px;border-radius:4px;">STEP 2</span> 향(方向) 우선 결정 — 그리드의 방위각을 지배</h5>
+    <p>주동 배치보다 앞서, 거실 전면이 바라볼 주방향을 인간이 먼저 결정합니다. 이 방위각이 확정되어야 그리드의 X/Y축 방향이 정해집니다.</p>
+    <ul>
+        <li>남향 판상형 → 그리드 동서 방향 전개</li>
+        <li>탑상형 → 4방향 동등 검토, 조망 우선</li>
+        <li>혼합형 → 앵커 동(랜드마크)의 방위각 기준으로 설정</li>
+    </ul>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#c53030;color:white;padding:2px 8px;border-radius:4px;">STEP 3</span> 통합 마스킹 — 비울 곳과 금지 구역을 한 번에</h5>
+    <p>마우스로 대지 위를 색칠합니다. 두 가지 성격을 통합하여 한 번에 처리합니다.</p>
+    <ul>
+        <li>🔴 <strong>No-Build Zone:</strong> 법적 이격거리, 암반, 위험 구역</li>
+        <li>🔵 <strong>Urban Void:</strong> 통경축, 공공보행통로, 중앙 광장</li>
+    </ul>
+    <p style="font-size:12px;color:#718096;">※ 이 마스킹이 끝나야 비로소 그리드를 깔 수 있습니다.</p>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#553c9a;color:white;padding:2px 8px;border-radius:4px;">STEP 4</span> 주차 리듬 그리드 생성 — 지하의 뼈대가 지상을 지배</h5>
+    <p>STEP 2(방위각)와 STEP 3(마스킹)을 반영한 상태에서 그리드를 생성합니다.</p>
+    <ul>
+        <li><strong>외곽부 우선:</strong> 대지 경계 안쪽 → [주차 칸] 먼저 배치 (경계부 주차 = 최대 면적 효율)</li>
+        <li><strong>내부 리듬:</strong> [차로 6.0~6.5m] − [주차 칸] − [주차 칸] − [차로] 교차 반복</li>
+        <li><strong>그리드 스냅 포인트:</strong> 주동이 올라탈 수 있는 구조적 기둥 교차점 자동 확정</li>
+    </ul>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#276749;color:white;padding:2px 8px;border-radius:4px;">STEP 5</span> 파라메트릭 블록 선택 + 동 수 산출</h5>
+    <p>인간이 주동 타입을 선택합니다. 단, 완전 고정 블록이 아니라 <strong>파라메트릭 블록</strong>(뼈대는 고정, 층수와 길이는 유연)을 사용합니다.</p>
+    <table style="font-size:13px;width:100%;border-collapse:collapse;">
+        <tr style="background:#e2e8f0;"><th style="padding:5px;border:1px solid #cbd5e0;">구분</th><th style="padding:5px;border:1px solid #cbd5e0;">고정값 (건드리지 말 것)</th><th style="padding:5px;border:1px solid #cbd5e0;">변수값 (AI가 조정)</th></tr>
+        <tr><td style="padding:5px;border:1px solid #cbd5e0;">뼈대</td><td style="padding:5px;border:1px solid #cbd5e0;">코어 타입, 베이 수, 베이 간격, 세대 평면</td><td style="padding:5px;border:1px solid #cbd5e0;">층수, 동 길이(±1베이), 방위각(±15°)</td></tr>
+    </table>
+    <p style="margin-top:8px;">필요 동 수 = 목표 세대수 ÷ 타입별 세대/동 (AI 자동 산출)</p>
+    <p>앵커(닻) 고정: 핵심 1~2개 동만 인간이 위치와 타입 확정</p>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#744210;color:white;padding:2px 8px;border-radius:4px;">STEP 6</span> AI 물리 엔진 솔버 — 잔여 동 자동 배치</h5>
+    <p>인간이 앵커를 박으면 AI가 나머지 동을 대지에 투척합니다. 살아있는 물리 엔진처럼 작동합니다.</p>
+    <ul>
+        <li>🔴 No-Build Zone + Urban Void → <strong>반발력 (도망)</strong></li>
+        <li>↔ 인동거리 침해 → <strong>척력 (튕겨냄)</strong></li>
+        <li>☀️ 남향 → <strong>인력 (회전 보정)</strong></li>
+        <li>📐 최종 착지 → <strong>STEP 4 그리드 교차점에 스냅</strong></li>
+    </ul>
+</div>
+
+<div class="alert alert-secondary">
+    <h5><span style="background:#c53030;color:white;padding:2px 8px;border-radius:4px;">STEP 7</span> 게이트키퍼 검증 + 2차 데크 조정</h5>
+    <p>인간 건축사(게이트키퍼)가 최종 확인합니다.</p>
+    <ul>
+        <li>✅ 인동거리 충족 여부</li>
+        <li>✅ 동지일 기준 일조시간 확인</li>
+        <li>✅ 지하층 판정 재확인 (주동 확정 후 평균지반면 재계산)</li>
+        <li>✅ 용적률 최종 체크</li>
+        <li>✅ 2차 데크 레벨 미세 조정 (주동 위치 반영)</li>
+    </ul>
+</div>
+            </div>
+            
+            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+                발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Extremely safe fallback just in case body is hidden
+    document.body.style.display = 'block';
+    document.body.style.opacity = '1';
+    </script>
+</body>
+</html>
