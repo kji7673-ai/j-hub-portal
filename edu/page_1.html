@@ -16,30 +16,63 @@
         
         .global-nav {
             position: fixed; top: 0; left: 0; width: 100%; height: 60px;
-            background-color: #1a1a1a; color: white;
+            background-color: #111111; color: white;
             display: flex; align-items: center; padding: 0 20px;
-            z-index: 100;
+            z-index: 1000;
         }
         
-        .global-nav a { color: white; text-decoration: none; font-weight: bold; }
+        .global-nav a { color: white; text-decoration: none; }
+        .nav-brand { font-weight: bold; font-size: 16px; margin-right: 30px; }
         
         #mobile-menu-btn {
-            background: none; border: none; color: white; font-size: 20px;
-            margin-right: 15px; cursor: pointer; display: none;
+            background: none; border: none; color: white; font-size: 16px; font-weight: bold;
+            margin-right: 15px; cursor: pointer; display: flex; align-items: center; gap: 5px;
         }
         
+        .top-menu {
+            display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;
+        }
+        
+        .top-menu > li {
+            position: relative; padding: 20px 0; color: #ccc; font-size: 14px; cursor: pointer;
+        }
+        
+        .top-menu > li:hover { color: white; }
+        
+        .dropdown-menu {
+            display: none; position: absolute; top: 60px; left: 0;
+            background-color: white; border: 1px solid #ddd; border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); list-style: none; padding: 10px 0;
+            min-width: 250px; z-index: 1100;
+        }
+        
+        .top-menu > li:hover .dropdown-menu { display: block; }
+        
+        .dropdown-menu li a {
+            display: block; padding: 10px 20px; color: #333; font-size: 14px;
+        }
+        .dropdown-menu li a:hover { background-color: #f0f5ff; color: #0055ff; }
+        
         .sidebar {
-            position: fixed; top: 60px; left: -300px; width: 280px; height: calc(100vh - 60px);
-            background: white; border-right: 1px solid #ddd;
-            overflow-y: auto; transition: left 0.3s; z-index: 90;
+            position: fixed; top: 60px; left: -320px; width: 300px; height: calc(100vh - 60px);
+            background: white; border-right: 1px solid #ddd; box-shadow: 5px 0 15px rgba(0,0,0,0.05);
+            overflow-y: auto; transition: left 0.3s; z-index: 900;
             padding: 20px 0;
         }
         
         .sidebar.open { left: 0; }
         
-        .sidebar-item { padding: 12px 20px; border-bottom: 1px solid #eee; }
-        .sidebar-item a { color: #333; text-decoration: none; display: block; }
-        .sidebar-item.active { background: #e6f0ff; border-left: 4px solid #0055ff; }
+        .sidebar-overlay {
+            position: fixed; top: 60px; left: 0; width: 100vw; height: calc(100vh - 60px);
+            background: rgba(0,0,0,0.5); z-index: 800; display: none;
+        }
+        .sidebar-overlay.open { display: block; }
+        
+        .sidebar-item { padding: 12px 24px; border-bottom: 1px solid #f0f0f0; }
+        .sidebar-item a { color: #333; text-decoration: none; display: block; font-weight: bold; font-size: 14px; }
+        .sidebar-item:hover { background: #f9f9f9; }
+        .sidebar-item.active { background: #f0f5ff; border-left: 4px solid #0055ff; }
+        .sidebar-item.active a { color: #0055ff; }
         
         .main-container {
             padding-top: 60px;
@@ -49,66 +82,140 @@
         
         .viewer-page {
             background: white;
-            margin: 20px;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin: 40px 20px;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #eaeaea;
         }
         
         .viewer-header {
             display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 2px solid #000; padding-bottom: 15px; margin-bottom: 30px;
+            border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 40px;
         }
         
         .btn {
-            padding: 8px 16px; background: #f0f0f0; color: #333;
-            text-decoration: none; border-radius: 5px; font-size: 14px;
+            padding: 10px 20px; background: #f5f5f5; color: #333;
+            text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: bold;
+            border: 1px solid #ddd;
         }
+        .btn:hover { background: #eaeaea; }
         
-        .viewer-content img { max-width: 100%; height: auto; }
+        /* Markdown Content Styling */
+        .viewer-content { font-size: 16px; color: #222; line-height: 1.8; }
+        .viewer-content h1 { font-size: 2.2rem; color: #000; margin-top: 40px; margin-bottom: 20px; }
+        .viewer-content h2 { font-size: 1.8rem; color: #000; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .viewer-content h3 { font-size: 1.4rem; color: #0055ff; margin-top: 30px; margin-bottom: 15px; }
+        .viewer-content p { margin-bottom: 20px; }
+        .viewer-content ul, .viewer-content ol { margin-bottom: 20px; padding-left: 25px; }
+        .viewer-content li { margin-bottom: 8px; }
+        .viewer-content img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee; margin: 20px 0; }
+        .viewer-content blockquote { border-left: 4px solid #0055ff; background: #f0f5ff; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .viewer-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 10px; }
-        .viewer-content th { background: #f5f5f5; }
+        .viewer-content th, .viewer-content td { border: 1px solid #ddd; padding: 12px 15px; }
+        .viewer-content th { background: #f5f5f5; font-weight: bold; }
+        .viewer-content pre { background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto; border: 1px solid #eee; }
+        .viewer-content code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        .viewer-content pre code { background: transparent; padding: 0; }
         
         @media (max-width: 768px) {
-            #mobile-menu-btn { display: block; }
-            .viewer-page { margin: 0; padding: 20px; border-radius: 0; }
+            .top-menu { display: none; }
+            .viewer-page { margin: 0; padding: 30px 20px; border-radius: 0; border: none; box-shadow: none; }
         }
     </style>
 </head>
 <body>
     <div class="global-nav">
-        <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
-        <a href="index.html">(주)진양엔지니어링 AI 교육 플랫폼</a>
+        <button id="mobile-menu-btn" onclick="toggleSidebar()">☰ 목차</button>
+        <a href="index.html" class="nav-brand">(주)진양엔지니어링 AI 교육 플랫폼</a>
+        
+        <ul class="top-menu">
+            <li>📖 시작하기 전에
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">전체 목차 및 학습 로드맵</a></li>
+                </ul>
+            </li>
+            <li>제1장. 도입 및 총론
+                <ul class="dropdown-menu">
+                    <li><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></li>
+                    <li><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></li>
+                </ul>
+            </li>
+            <li>제2장. AI 및 시스템 기본 이해
+                <ul class="dropdown-menu">
+                    <li><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></li>
+                    <li><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></li>
+                    <li><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></li>
+                </ul>
+            </li>
+            <li>제3장. 행동 지침 및 사내 문화
+                <ul class="dropdown-menu">
+                    <li><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></li>
+                    <li><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></li>
+                </ul>
+            </li>
+            <li>제4장. 보안 및 품질 관리
+                <ul class="dropdown-menu">
+                    <li><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></li>
+                    <li><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></li>
+                </ul>
+            </li>
+            <li>제5장. 실무 시스템 활용
+                <ul class="dropdown-menu">
+                    <li><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></li>
+                </ul>
+            </li>
+            <li>제6장. 사내 소통 및 문화
+                <ul class="dropdown-menu">
+                    <li><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></li>
+                </ul>
+            </li>
+            <li>제7장. 실무 밀착형 튜토리얼 (SOP)
+                <ul class="dropdown-menu">
+                    <li><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></li>
+                    <li><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></li>
+                    <li><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></li>
+                    <li><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></li>
+                    <li><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></li>
+                </ul>
+            </li>
+            <li>제4장. 시스템 연동 및 자동화 실무
+                <ul class="dropdown-menu">
+                    <li><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></li>
+                </ul>
+            </li>
+
+        </ul>
     </div>
 
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
     <div class="sidebar" id="sidebar">
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">📖 시작하기 전에</div>
         <div class="sidebar-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제1장. 도입 및 총론</div>
         <div class="sidebar-item active"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
         <div class="sidebar-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제2장. AI 및 시스템 기본 이해</div>
         <div class="sidebar-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
         <div class="sidebar-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
         <div class="sidebar-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제3장. 행동 지침 및 사내 문화</div>
         <div class="sidebar-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
         <div class="sidebar-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제4장. 보안 및 품질 관리</div>
         <div class="sidebar-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
         <div class="sidebar-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제5장. 실무 시스템 활용</div>
         <div class="sidebar-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제6장. 사내 소통 및 문화</div>
         <div class="sidebar-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
         <div class="sidebar-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
         <div class="sidebar-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
         <div class="sidebar-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
         <div class="sidebar-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
         <div class="sidebar-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
-        <div style="padding:10px 20px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div style="padding:15px 24px 5px;font-size:12px;color:#888;font-weight:bold;">제4장. 시스템 연동 및 자동화 실무</div>
         <div class="sidebar-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
 
     </div>
@@ -116,13 +223,13 @@
     <div class="main-container">
         <div class="viewer-page">
             <div class="viewer-header">
-                <a href="index.html" class="btn">◀ 이전</a>
+                <a href="index.html" class="btn">◀ 이전 글</a>
 
                 <div style="text-align:center;">
-                    <span style="font-size:12px;color:#666;display:block;">제1장. 도입 및 총론</span>
+                    <span style="font-size:12px;color:#666;display:block;margin-bottom:4px;">제1장. 도입 및 총론</span>
                     <strong>문서 2 / 18</strong>
                 </div>
-                <a href="page_2.html" class="btn">다음 ▶</a>
+                <a href="page_2.html" class="btn">다음 글 ▶</a>
 
             </div>
             
@@ -157,16 +264,17 @@
 <p style="text-align: right; font-weight: bold;">대표이사 김중일 드림</p>
             </div>
             
-            <div style="margin-top:50px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:20px;">
+            <div style="margin-top:60px;text-align:center;color:#666;font-size:13px;border-top:1px solid #eee;padding-top:30px;">
                 발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
             </div>
         </div>
     </div>
     
     <script>
-    // Extremely safe fallback just in case body is hidden
-    document.body.style.display = 'block';
-    document.body.style.opacity = '1';
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+        document.getElementById('sidebar-overlay').classList.toggle('open');
+    }
     </script>
 </body>
 </html>
