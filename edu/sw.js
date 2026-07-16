@@ -1,10 +1,11 @@
 
-const CACHE_NAME = 'jhub-pwa-v1';
+const CACHE_NAME = 'jhub-pwa-v2';
 const urlsToCache = [
   './index.html',
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './search_index.js'
 ];
 
 self.addEventListener('install', event => {

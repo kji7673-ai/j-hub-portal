@@ -41,7 +41,7 @@
         background-color: var(--surface-black); color: #f5f5f7;
         display: flex; align-items: center; justify-content: center;
         z-index: 1000; font-size: 12px; letter-spacing: -0.12px;
-        padding-top: env(safe-area-inset-top); /* Notch support */
+        padding-top: env(safe-area-inset-top);
     }
     
     .sub-nav {
@@ -54,12 +54,14 @@
     }
     .sub-nav-brand { font-size: 21px; font-weight: 600; color: var(--ink); letter-spacing: -0.2px; text-decoration: none; }
     
-    .menu-button {
+    .nav-actions { display: flex; align-items: center; gap: 4px; }
+    
+    .action-btn {
         background: none; border: none; color: var(--ink); font-size: 14px; font-weight: 600; cursor: pointer;
         padding: 8px 12px; display: flex; align-items: center; gap: 6px;
         border-radius: 6px; transition: background 0.2s;
     }
-    .menu-button:hover { background: rgba(0,0,0,0.05); }
+    .action-btn:hover { background: rgba(0,0,0,0.05); }
     
     /* DESKTOP SIDEBAR */
     .desktop-sidebar {
@@ -103,7 +105,10 @@
         min-height: 80vh;
     }
     
-    .category-label { font-size: 14px; font-weight: 600; color: var(--ink-muted); margin-bottom: 15px; display: block; }
+    /* WAYFINDING: BREADCRUMB */
+    .breadcrumb { font-size: 13px; font-weight: 500; color: var(--ink-muted); margin-bottom: 12px; }
+    .breadcrumb span { color: var(--primary); }
+    
     .page-title { font-size: 40px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 50px; }
     
     /* MARKDOWN STYLES */
@@ -126,6 +131,44 @@
     .pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--hairline); }
     .btn-page { display: inline-block; padding: 11px 22px; background: var(--canvas-parchment); color: var(--ink); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
     .btn-page:hover { background: #e8e8ed; }
+    
+    /* WAYFINDING: TOP BUTTON */
+    .btn-top {
+        position: fixed; bottom: -60px; right: 30px; width: 48px; height: 48px;
+        background: var(--surface-black); color: white; border: none; border-radius: 50%;
+        font-size: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.2s; z-index: 1000;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .btn-top.show { bottom: 30px; }
+    .btn-top:active { transform: scale(0.9); }
+    
+    /* SEARCH OVERLAY */
+    .search-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+        background: rgba(245, 245, 247, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        z-index: 3000; display: none; flex-direction: column; align-items: center; padding-top: 100px;
+    }
+    .search-overlay.active { display: flex; }
+    .search-container { width: 90%; max-width: 600px; position: relative; }
+    .search-input {
+        width: 100%; padding: 16px 24px; font-size: 18px; border: 1px solid var(--hairline); border-radius: 16px;
+        background: var(--canvas); box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        color: var(--ink); outline: none; font-family: inherit;
+    }
+    .search-close { position: absolute; top: -50px; right: 0; background: none; border: none; font-size: 30px; color: var(--ink-muted); cursor: pointer; }
+    .search-results {
+        margin-top: 20px; width: 100%; max-height: 60vh; overflow-y: auto;
+    }
+    .search-result-item {
+        background: var(--canvas); padding: 16px 20px; border-radius: 12px; margin-bottom: 10px;
+        text-decoration: none; display: block; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border: 1px solid var(--hairline);
+    }
+    .search-result-item:hover { background: #f9f9fb; }
+    .search-result-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+    .search-result-cat { font-size: 12px; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
+    .search-result-snippet { font-size: 13px; color: var(--ink-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .highlight { background: #ffeeba; color: #000; padding: 0 2px; border-radius: 2px; }
     
     /* MOBILE MENU OVERLAY */
     .mobile-menu-overlay {
@@ -162,8 +205,14 @@
         body { background-color: var(--canvas); padding-top: calc(96px + env(safe-area-inset-top)); }
         .pagination { flex-direction: column; gap: 20px; margin-top: 50px; }
         .btn-page { width: 100%; text-align: center; }
+        .search-container { padding-top: 20px; }
+        .btn-top { right: 20px; bottom: -60px; width: 40px; height: 40px; font-size: 18px; }
+        .btn-top.show { bottom: 20px; }
     }
     </style>
+    
+    <!-- Load Search Index -->
+    <script src="search_index.js"></script>
 </head>
 <body>
     <div class="global-nav">
@@ -172,10 +221,16 @@
     
     <div class="sub-nav">
         <a href="index.html" class="sub-nav-brand">J-Hub Portal</a>
-        <button class="menu-button" onclick="toggleMenu()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            목차
-        </button>
+        <div class="nav-actions">
+            <button class="action-btn" onclick="openSearch()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span class="desktop-only" style="display:none;">검색</span>
+            </button>
+            <button class="action-btn" onclick="toggleMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <span class="desktop-only" style="display:none;">목차</span>
+            </button>
+        </div>
     </div>
 
     <!-- Desktop Sidebar -->
@@ -243,11 +298,20 @@
         <div class="mobile-toc-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
 
     </div>
+    
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" onclick="closeSearch()">×</button>
+            <input type="text" class="search-input" id="searchInput" placeholder="검색어를 입력하세요 (예: 프롬프트, 도정법)..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
 
     <div class="main-content-wrapper" id="mainWrapper">
         <div class="main-content">
             <div class="viewer-card">
-                <span class="category-label">제2장. AI 및 시스템 기본 이해</span>
+                <div class="breadcrumb">홈 > 제2장. AI 및 시스템 기본 이해 > <span>현재 문서</span></div>
                 <h1 class="page-title">문서 3. AI를 다루는 16가지 핵심 사고방식</h1>
 
                 <div class="md-content">
@@ -357,6 +421,11 @@
         </div>
     </div>
     
+    <!-- Top Button -->
+    <button class="btn-top" id="topBtn" onclick="scrollToTop()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+    
     <!-- PWA Install Toast -->
     <div class="pwa-toast" id="pwaToast">
         <div class="pwa-toast-icon">📲</div>
@@ -368,6 +437,7 @@
     </div>
     
     <script>
+        // Menu Logic
         function toggleMenu() {
             if (window.innerWidth <= 900) {
                 document.getElementById('mobileMenu').classList.add('active');
@@ -381,13 +451,95 @@
             document.getElementById('mobileMenu').classList.remove('active');
             document.body.style.overflow = '';
         }
+        
+        // PWA Toast
         function closePwaToast() {
             document.getElementById('pwaToast').classList.remove('show');
             localStorage.setItem('pwaToastDismissed', 'true');
         }
         
-        // PWA Detection
+        // Wayfinding: Top Button
+        const topBtn = document.getElementById('topBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) topBtn.classList.add('show');
+            else topBtn.classList.remove('show');
+        });
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        // Search Logic
+        const searchOverlay = document.getElementById('searchOverlay');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        function openSearch() {
+            searchOverlay.classList.add('active');
+            setTimeout(() => searchInput.focus(), 100);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSearch() {
+            searchOverlay.classList.remove('active');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            if (query.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+            
+            const results = searchIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.content.toLowerCase().includes(query)
+            );
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div style="padding: 20px; text-align: center; color: #7a7a7a;">검색 결과가 없습니다.</div>';
+                return;
+            }
+            
+            let html = '';
+            results.slice(0, 15).forEach(item => {
+                let snippet = item.content;
+                const matchIdx = snippet.toLowerCase().indexOf(query);
+                if (matchIdx > -1) {
+                    const start = Math.max(0, matchIdx - 30);
+                    const end = Math.min(snippet.length, matchIdx + query.length + 40);
+                    snippet = (start > 0 ? '...' : '') + 
+                              snippet.substring(start, matchIdx) + 
+                              '<span class="highlight">' + snippet.substring(matchIdx, matchIdx + query.length) + '</span>' + 
+                              snippet.substring(matchIdx + query.length, end) + 
+                              (end < snippet.length ? '...' : '');
+                } else {
+                    snippet = snippet.substring(0, 80) + '...';
+                }
+                
+                let titleHtml = item.title;
+                const titleIdx = titleHtml.toLowerCase().indexOf(query);
+                if (titleIdx > -1) {
+                    titleHtml = titleHtml.substring(0, titleIdx) + 
+                                '<span class="highlight">' + titleHtml.substring(titleIdx, titleIdx + query.length) + '</span>' + 
+                                titleHtml.substring(titleIdx + query.length);
+                }
+                
+                html += `
+                    <a href="${item.url}" class="search-result-item">
+                        <div class="search-result-cat">${item.category}</div>
+                        <div class="search-result-title">${titleHtml}</div>
+                        <div class="search-result-snippet">${snippet}</div>
+                    </a>
+                `;
+            });
+            searchResults.innerHTML = html;
+        });
+        
         document.addEventListener('DOMContentLoaded', () => {
+            // PWA Detection
             const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
             const isDismissed = localStorage.getItem('pwaToastDismissed');
             
@@ -400,9 +552,16 @@
                     document.getElementById('pwaToast').classList.add('show');
                 }, 2000);
             }
+            
+            // Search Escape Key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                    closeSearch();
+                }
+            });
         });
         
-        // Service Worker Registration for full PWA support on Android
+        // Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw.js').catch((err) => {
