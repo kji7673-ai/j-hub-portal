@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#f5f5f7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <link rel="manifest" href="./manifest.json">
     <title>Jinyang Hub | 진양 저널</title>
     
 <style>
@@ -384,10 +389,109 @@ li {
     width: 100%; padding: 16px; background: var(--accent);
     color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
 }
+
+/* Mobile Bottom Navigation & Pull-to-Refresh */
+@media (max-width: 768px) {
+    header .mode-switch {
+        display: none !important;
+    }
+    header > div:last-child {
+        display: none !important;
+    }
+    header {
+        padding: 12px 16px !important;
+        justify-content: center !important;
+    }
+    body {
+        padding-bottom: 70px !important; /* Space for bottom nav */
+    }
+    .bottom-nav {
+        display: flex !important;
+    }
+}
+.bottom-nav {
+    display: none; /* hidden on desktop */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 9999;
+    justify-content: space-around;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: 500;
+    color: #7a7a7a;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+.bottom-nav-item.active {
+    color: #0066cc;
+}
+.bottom-nav-item i {
+    font-size: 20px;
+    font-style: normal;
+}
+#ptr-indicator {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: top 0.3s;
+    z-index: 9999;
+    display: none;
+}
+.ptr-box {
+    display: inline-block;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 12px;
+    font-weight: 600;
+    color: #0066cc;
+}
 </style>
 
 </head>
 <body>
+
+    <!-- Pull to refresh indicator -->
+    <div id="ptr-indicator">
+        <div class="ptr-box" id="ptr-text">⬇️ 당겨서 새로고침</div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" id="mobile-bottom-nav">
+        <button class="bottom-nav-item active" id="bot-btn-journal" onclick="switchMode('journal')">
+            <i>📚</i><span>Journal</span>
+        </button>
+        <button class="bottom-nav-item" id="bot-btn-workspace" onclick="switchMode('workspace')">
+            <i>💼</i><span>Workspace</span>
+        </button>
+        <button class="bottom-nav-item" id="bot-btn-weekly" onclick="switchMode('weekly')">
+            <i>🔒</i><span style="color:#e30000;">Weekly</span>
+        </button>
+        <button class="bottom-nav-item" id="bot-btn-master" onclick="switchMode('master')" style="display:none;">
+            <i>👑</i><span style="color:#800080;">제안함</span>
+        </button>
+        <button class="bottom-nav-item" onclick="attemptLogout()">
+            <i>🚪</i><span>로그아웃</span>
+        </button>
+    </nav>
 
     <!-- Login -->
     <div id="login-screen">
@@ -417,15 +521,84 @@ li {
             <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
             <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
             <button id="btn-weekly" class="mode-btn" style="color:#e30000; font-weight:700;" onclick="switchMode('weekly')">Weekly Report (보안)</button>
+            <button id="btn-master" class="mode-btn" style="color:#800080; font-weight:700; display:none;" onclick="switchMode('master')">제안함 (Master)</button>
         </div>
         <div>
-            <button onclick="document.getElementById('login-screen').style.display='flex'; localStorage.removeItem('jhub_logged_in'); document.getElementById('user-profile-badge').innerHTML='';" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
+            <button onclick="attemptLogout()" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
         </div>
     </header>
 
     <div id="app-content">
         <!-- MODE 1: JOURNAL (Reading) -->
         <div id="view-journal" class="page-view active">
+            
+            <!-- Today's Analects Widget -->
+            <div id="analects-widget" style="background: #fafafc; border: 1px solid #e0e0e0; border-radius: 11px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; font-size: 14px; color: #1d1d1f; text-transform: uppercase; font-weight: 600; letter-spacing: -0.224px;">오늘의 논어 (論語)</h3>
+                    <span style="color:#7a7a7a; font-weight:400; font-size:12px; letter-spacing: -0.12px;" id="analects-date"></span>
+                </div>
+                
+                <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #f0f0f0;">
+                    <h1 id="analects-hanja" style="margin: 0 0 12px 0; font-family: 'SF Pro Display', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: 2px; color: #1d1d1f;"></h1>
+                    <p id="analects-korean" style="margin: 0; font-size: 17px; color: #333333; font-weight: 400; letter-spacing: -0.374px;"></p>
+                </div>
+
+                <div style="background: #ffffff; border-radius: 8px; padding: 16px; border: 1px solid #f0f0f0;">
+                    <h4 style="margin: 0 0 12px 0; font-size: 14px; color: #1d1d1f; font-weight: 600;">📝 한자 풀이</h4>
+                    <div id="analects-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; text-align: center;">
+                    </div>
+                </div>
+
+                <div style="background: #f5f5f7; border-radius: 8px; padding: 16px; margin-top: 8px;">
+                    <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #1d1d1f; font-weight: 600;">💡 J-Hub 실무 적용</h4>
+                    <p id="analects-application" style="margin: 0; font-size: 14px; color: #333333; line-height: 1.5;"></p>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('analects-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
+                
+                // Fetch today's analects
+                fetch('/api/analects/today')
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data && data.hanja) {
+                            document.getElementById('analects-hanja').innerText = data.hanja;
+                            document.getElementById('analects-korean').innerText = data.korean;
+                            document.getElementById('analects-application').innerText = data.application;
+                            
+                            const grid = document.getElementById('analects-grid');
+                            grid.innerHTML = '';
+                            data.characters.forEach(c => {
+                                const div = document.createElement('div');
+                                div.innerHTML = `<span style="font-size: 20px; font-weight: 600; color: ${c.color};">${c.char}</span><br><span style="font-size: 12px; color: #7a7a7a;">${c.reading}</span>`;
+                                grid.appendChild(div);
+                            });
+                            
+                            document.getElementById('analects-widget').style.display = 'flex';
+                        }
+                    })
+                    .catch(err => console.error("Failed to load analects:", err));
+            </script>
+
+            <!-- Daily Byte Widget -->
+            <div style="background: #ffffff; border: 1px solid var(--accent); padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #0066cc;"></div>
+                <h3 style="margin: 0 0 12px 0; font-size: 14px; color: #0066cc; text-transform: uppercase; font-weight: 800;">Daily Byte <span style="color:var(--text-secondary); font-weight:400; font-size:12px; margin-left:8px;" id="daily-byte-date"></span></h3>
+                <h2 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;">[업계 동향] 문현1구역 재개발, 환경영향평가 심의 대응 추가 용역업체 선정 추진</h2>
+                <p style="margin: 0 0 16px 0; font-size: 15px; color: var(--text-primary); line-height: 1.5;">부산 문현1구역 재개발 정비사업조합이 건축물 환경영향평가 심의의견을 반영하기 위한 추가 용역 업체 선정에 나섰습니다. 최근 정비사업 내 환경 및 교육영향평가 등 심의 기준이 한층 엄격해짐에 따라, 설계 및 엔지니어링 단계에서의 선제적인 기술 대응이 중요해지고 있습니다. 우리 J-Hub 임직원 여러분도 관련 심의 트렌드 변화를 면밀히 모니터링하여 설계 및 엔지니어링 프로젝트 수행 시 적극 반영해 주시기 바랍니다.</p>
+                <div style="display: flex; gap: 8px;">
+                    <span class="chip blue">#문현1구역</span>
+                    <span class="chip blue">#환경영향평가</span>
+                    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5tZmstNmRhNHVsNVhtZ05HV1ZxaF9YSXJ3cmp4UnBGWWpZcldNQk9NNXVxV1hlV3ZVSExkcko4bmc3aW1RZDloTV9zWEJVY1YzUFFhcVh6N2IxQk1yTU8zTkJMWDlLaXc0TWJ1RVVPU0pEdzg?oc=5" target="_blank" style="text-decoration:none;"><span class="chip red" style="cursor:pointer;">기사 원문 출처 확인하기 →</span></a>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('daily-byte-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
+            </script>
+
             <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
         <!-- ========================================== -->
         
@@ -763,8 +936,8 @@ li {
         <div class="wa-icon">▼</div>
     </div>
     <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">7월 3주차 주요 변동 사항 및 핵심 요약</p>
-        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;"><li><span class="highlight">장대B구역</span> — 7/10 사업시행인가 완료!</li><li><span class="highlight">장안1구역</span> — 7/11 설계자 선정 총회 (진양 적격심사 1위)</li><li><span class="highlight">대림1구역</span> — 임원 선출 문제 제기 → 재총회 준비 중 [내부정보]</li><li><span class="highlight">면목역 1차 모아주택</span> — 7/14 4·7구역 총회</li><li><span class="highlight">당산1구역</span> — 7/18 설계자 선정 총회 (진양 기호2번)</li></ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div><div class="report-item"><div class="tag-row"><span class="chip red">★★★ 핵심</span></div><h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3><p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div><h3 class="report-title">주택법 시행령 개정</h3><p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip green">기 보고</span></div><h3 class="report-title">모아타운 종상향 + 도정법 개정</h3><p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p></div></div></div>
+        <p style="color:var(--text-secondary); margin-top:0;">7월 4주차 주요 변동 사항 및 핵심 요약</p>
+        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;"><li><span class="highlight">장대B구역</span> — 이달 말 지하안전영향평가 접수 예정</li><li><span class="highlight">하계 현대우성</span> — 7/16 구청장 보고 및 7/21 전문가 자문회의 개최</li><li><span class="highlight">인천 송월</span> — 7/10 통합심의 관련 협의 완료 (일정 조율 중)</li><li><span class="highlight">면목역 모아주택</span> — 4,6구역 7/16 시행인가도서 접수 계획</li><li><span class="highlight">대림1구역</span> — 7/25 주민총회 개최 예정</li></ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div><div class="report-item"><div class="tag-row"><span class="chip red">★★★ 핵심</span></div><h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3><p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div><h3 class="report-title">주택법 시행령 개정</h3><p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip green">기 보고</span></div><h3 class="report-title">모아타운 종상향 + 도정법 개정</h3><p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p></div></div></div>
     </div>
 </div>
 
@@ -786,7 +959,7 @@ li {
     </div>
     <div class="wa-content">
         <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
-        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/13</div><div class="day-weekday">월요일</div></div><div class="event-card"><div class="event-name">중계본동 재개발 현장 미팅</div><div class="event-note">SH · 주대위 · 설계사 참석</div></div><div class="event-card"><div class="event-name">신정동 922 재개발 주민설명회</div><div class="event-note">전략기획 본부 참석</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/14</div><div class="day-weekday">화요일</div></div><div class="event-card important"><div class="event-time">14:00</div><div class="event-name">면목역 1차 모아주택 총회</div><div class="event-note">4·7구역 (디자인2소)</div></div><div class="event-card"><div class="event-name">장대B구역 보행브릿지 회의</div><div class="event-note">협력사 및 조합</div></div><div class="event-card"><div class="event-name">석관초 관리계획 과장보고</div><div class="event-note">관할 구청</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday">목요일</div></div><div class="event-card important"><div class="event-name">하계 현대우성 구청장 보고</div><div class="event-note">노원구청 (디자인3소)</div></div><div class="event-card"><div class="event-name">삼선동 1·2구역 MP 미팅</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday">토요일</div></div><div class="event-card important"><div class="event-name">당산1구역 설계자 선정 총회</div><div class="event-note">전략계획/기획팀 총력 대응 ★ 수주 핵심</div></div></div></div>
+        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 4주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday">월요일</div></div><div class="event-card"><div class="event-name">인천금송 재개발사업</div><div class="event-note">구의회청취 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday">화요일</div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의 개최</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/23</div><div class="day-weekday">목요일</div></div><div class="event-card"><div class="event-name">고덕동470 소규모 재건축</div><div class="event-note">통합심의 개최 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday">금요일</div></div><div class="event-card"><div class="event-name">범일3구역 재개발</div><div class="event-note">9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday">토요일</div></div><div class="event-card important"><div class="event-name">대림1구역 재개발</div><div class="event-note">주민총회 개최 예정</div></div></div></div>
     </div>
 </div>
 
@@ -807,20 +980,87 @@ li {
         <div id="view-weekly" class="page-view">
             <!-- Weekly Report Content (Admin View) -->
             <div id="weekly-admin-view" style="display: block;">
-                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <h2 style="margin: 0; font-size: 16px; font-weight: 600;">
+                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 6px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="margin: 0; font-size: 13px; font-weight: 600;">
                         [승인 대기] 통합 주간 보고서 초안
                     </h2>
-                    <span style="font-size: 12px; font-weight: 400; color: #555; background: #e5e5ea; padding: 3px 8px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
+                    <span style="font-size: 11px; font-weight: 400; color: #555; background: #e5e5ea; padding: 2px 6px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
                 </div>
 
                 <!-- Generated Draft Preview -->
-                <div class="card" style="border: 2px dashed #ccc; padding: 10px; background: #fff;">
-                    <h2 style="text-align: center; border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 20px; font-size: 20px;">2026년 7월 4주차 주간 보고서 (초안)</h2>
-                    <div style="width: 100%; height: 1200px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
+                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
                     </div>
                 </div>
+
+                <!-- 비공개 1:1 다이렉트 피드백 (Direct Drop-box) -->
+                <div class="card" style="background: #fafafc; border: 1px solid var(--accent); margin-top: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">💡 실무 아이디어 & 제안 직통함 (Direct Drop-box)</div>
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
+                            주간회의록을 읽고 떠오른 아이디어나 크로스 체크 사항을 남겨주세요. 
+                            본 의견은 게시판에 공개되지 않으며 <strong>대표이사님께 1:1로 직접 전달</strong>됩니다.
+                        </p>
+                        <input type="text" id="fb-project" placeholder="관련 안건명 또는 프로젝트명" style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
+                        <textarea id="fb-content" placeholder="자유롭게 의견을 남겨주세요..." style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; min-height: 100px; box-sizing: border-box; font-family: inherit;"></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-size: 13px; color: #333; cursor: pointer;">
+                                <input type="checkbox" id="fb-anonymous"> 익명으로 전달하기
+                            </label>
+                            <button onclick="submitFeedback()" style="background: #0066cc; color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: bold; cursor: pointer;">의견 보내기</button>
+                        </div>
+                        <div id="fb-status" style="margin-top: 12px; font-size: 14px; font-weight: bold; display: none;"></div>
+                    </div>
+                </div>
+
+                <script>
+                async function submitFeedback() {
+                    const project = document.getElementById('fb-project').value.trim();
+                    const content = document.getElementById('fb-content').value.trim();
+                    const isAnonymous = document.getElementById('fb-anonymous').checked;
+                    const statusEl = document.getElementById('fb-status');
+
+                    if (!content) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '피드백 내용을 입력해주세요.';
+                        statusEl.style.display = 'block';
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch('/api/feedback', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                project_name: project,
+                                content: content,
+                                is_anonymous: isAnonymous
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.success) {
+                            document.getElementById('fb-project').value = '';
+                            document.getElementById('fb-content').value = '';
+                            document.getElementById('fb-anonymous').checked = false;
+                            statusEl.style.color = '#00cc66';
+                            statusEl.innerText = '✅ 대표이사님께 안전하게 직접 전달되었습니다!';
+                            statusEl.style.display = 'block';
+                            setTimeout(() => { statusEl.style.display = 'none'; }, 5000);
+                        } else {
+                            statusEl.style.color = 'red';
+                            statusEl.innerText = '오류: ' + data.message;
+                            statusEl.style.display = 'block';
+                        }
+                    } catch (e) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '서버 통신 오류가 발생했습니다.';
+                        statusEl.style.display = 'block';
+                    }
+                }
+                </script>
 
                 <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center;">
                     <button onclick="publishWeeklyReport()" style="background: #0066cc; color: white; border: none; padding: 16px 48px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);">최종 승인 및 발행 (Publish)</button>
@@ -854,196 +1094,172 @@ li {
                 }
             </script>
         </div>
+        
+        <!-- MODE 4: MASTER VIEW (제안함) -->
+        <div id="view-master" class="page-view">
+            <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #800080; padding: 12px 16px; margin-bottom: 16px;">
+                <h2 style="margin: 0; font-size: 16px; font-weight: 600;">📥 접수된 실무 아이디어 및 제안 (Master Only)</h2>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #555;">직원들이 보낸 피드백이 실시간으로 여기에 누적됩니다.</p>
+                <button onclick="loadFeedbacks()" style="margin-top:12px; background:#800080; color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold;">새로고침 (Reload)</button>
+            </div>
+            <div id="master-feedbacks-container">
+                <!-- Feedbacks will be rendered here -->
+            </div>
+        </div>
     </div>
     
-    
-<script>
-!function(t,n){"object"==typeof exports?module.exports=exports=n():"function"==typeof define&&define.amd?define([],n):t.CryptoJS=n()}(this,function(){return function(f){var i;if("undefined"!=typeof window&&window.crypto&&(i=window.crypto),"undefined"!=typeof self&&self.crypto&&(i=self.crypto),!(i=!(i=!(i="undefined"!=typeof globalThis&&globalThis.crypto?globalThis.crypto:i)&&"undefined"!=typeof window&&window.msCrypto?window.msCrypto:i)&&"undefined"!=typeof global&&global.crypto?global.crypto:i)&&"function"==typeof require)try{i=require("crypto")}catch(t){}var e=Object.create||function(t){return n.prototype=t,t=new n,n.prototype=null,t};function n(){}var t={},r=t.lib={},o=r.Base={extend:function(t){var n=e(this);return t&&n.mixIn(t),n.hasOwnProperty("init")&&this.init!==n.init||(n.init=function(){n.$super.init.apply(this,arguments)}),(n.init.prototype=n).$super=this,n},create:function(){var t=this.extend();return t.init.apply(t,arguments),t},init:function(){},mixIn:function(t){for(var n in t)t.hasOwnProperty(n)&&(this[n]=t[n]);t.hasOwnProperty("toString")&&(this.toString=t.toString)},clone:function(){return this.init.prototype.extend(this)}},u=r.WordArray=o.extend({init:function(t,n){t=this.words=t||[],this.sigBytes=null!=n?n:4*t.length},toString:function(t){return(t||a).stringify(this)},concat:function(t){var n=this.words,e=t.words,i=this.sigBytes,r=t.sigBytes;if(this.clamp(),i%4)for(var o=0;o<r;o++){var s=e[o>>>2]>>>24-o%4*8&255;n[i+o>>>2]|=s<<24-(i+o)%4*8}else for(var a=0;a<r;a+=4)n[i+a>>>2]=e[a>>>2];return this.sigBytes+=r,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=f.ceil(n/4)},clone:function(){var t=o.clone.call(this);return t.words=this.words.slice(0),t},random:function(t){for(var n=[],e=0;e<t;e+=4)n.push(function(){if(i){if("function"==typeof i.getRandomValues)try{return i.getRandomValues(new Uint32Array(1))[0]}catch(t){}if("function"==typeof i.randomBytes)try{return i.randomBytes(4).readInt32LE()}catch(t){}}throw new Error("Native crypto module could not be used to get secure random number.")}());return new u.init(n,t)}}),s=t.enc={},a=s.Hex={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push((o>>>4).toString(16)),i.push((15&o).toString(16))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i+=2)e[i>>>3]|=parseInt(t.substr(i,2),16)<<24-i%8*4;return new u.init(e,n/2)}},c=s.Latin1={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push(String.fromCharCode(o))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i++)e[i>>>2]|=(255&t.charCodeAt(i))<<24-i%4*8;return new u.init(e,n)}},p=s.Utf8={stringify:function(t){try{return decodeURIComponent(escape(c.stringify(t)))}catch(t){throw new Error("Malformed UTF-8 data")}},parse:function(t){return c.parse(unescape(encodeURIComponent(t)))}},d=r.BufferedBlockAlgorithm=o.extend({reset:function(){this._data=new u.init,this._nDataBytes=0},_append:function(t){"string"==typeof t&&(t=p.parse(t)),this._data.concat(t),this._nDataBytes+=t.sigBytes},_process:function(t){var n,e=this._data,i=e.words,r=e.sigBytes,o=this.blockSize,s=r/(4*o),a=(s=t?f.ceil(s):f.max((0|s)-this._minBufferSize,0))*o,r=f.min(4*a,r);if(a){for(var c=0;c<a;c+=o)this._doProcessBlock(i,c);n=i.splice(0,a),e.sigBytes-=r}return new u.init(n,r)},clone:function(){var t=o.clone.call(this);return t._data=this._data.clone(),t},_minBufferSize:0}),h=(r.Hasher=d.extend({cfg:o.extend(),init:function(t){this.cfg=this.cfg.extend(t),this.reset()},reset:function(){d.reset.call(this),this._doReset()},update:function(t){return this._append(t),this._process(),this},finalize:function(t){return t&&this._append(t),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new h.HMAC.init(e,n).finalize(t)}}}),t.algo={});return t}(Math)});
-!function(e,t){"object"==typeof exports?module.exports=exports=t(require("./core")):"function"==typeof define&&define.amd?define(["./core"],t):t(e.CryptoJS)}(this,function(s){return function(n){var e=s,t=e.lib,r=t.WordArray,o=t.Hasher,t=e.algo,i=[],_=[];!function(){function e(e){return 4294967296*(e-(0|e))|0}for(var t=2,r=0;r<64;)!function(e){for(var t=n.sqrt(e),r=2;r<=t;r++)if(!(e%r))return;return 1}(t)||(r<8&&(i[r]=e(n.pow(t,.5))),_[r]=e(n.pow(t,1/3)),r++),t++}();var p=[],t=t.SHA256=o.extend({_doReset:function(){this._hash=new r.init(i.slice(0))},_doProcessBlock:function(e,t){for(var r=this._hash.words,o=r[0],n=r[1],i=r[2],s=r[3],a=r[4],c=r[5],h=r[6],f=r[7],u=0;u<64;u++){u<16?p[u]=0|e[t+u]:(l=p[u-15],d=p[u-2],p[u]=((l<<25|l>>>7)^(l<<14|l>>>18)^l>>>3)+p[u-7]+((d<<15|d>>>17)^(d<<13|d>>>19)^d>>>10)+p[u-16]);var l=o&n^o&i^n&i,d=f+((a<<26|a>>>6)^(a<<21|a>>>11)^(a<<7|a>>>25))+(a&c^~a&h)+_[u]+p[u],f=h,h=c,c=a,a=s+d|0,s=i,i=n,n=o,o=d+(((o<<30|o>>>2)^(o<<19|o>>>13)^(o<<10|o>>>22))+l)|0}r[0]=r[0]+o|0,r[1]=r[1]+n|0,r[2]=r[2]+i|0,r[3]=r[3]+s|0,r[4]=r[4]+a|0,r[5]=r[5]+c|0,r[6]=r[6]+h|0,r[7]=r[7]+f|0},_doFinalize:function(){var e=this._data,t=e.words,r=8*this._nDataBytes,o=8*e.sigBytes;return t[o>>>5]|=128<<24-o%32,t[14+(64+o>>>9<<4)]=n.floor(r/4294967296),t[15+(64+o>>>9<<4)]=r,e.sigBytes=4*t.length,this._process(),this._hash},clone:function(){var e=o.clone.call(this);return e._hash=this._hash.clone(),e}});e.SHA256=o._createHelper(t),e.HmacSHA256=o._createHmacHelper(t)}(Math),s.SHA256});
-</script>
-<script>
-async function sha256(message) {
-    if (typeof CryptoJS !== 'undefined') {
-        return CryptoJS.SHA256(message).toString();
-    }
-    const msgBuffer = new TextEncoder().encode(message);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-</script>
-
-    
-<script>
-    // Authentication Logic
-    const allowedUsersHash = {
-    "156f2206251171b17054c694e8750f862bbfa2aefbc2d3524261337a15f24770": "9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0",
-    "a0f19d0a0a734a3d10498dbe76d5b851fc0a6ce399e1e956012f3361f1757256": "0a0abd5382ade9afd7067605d9508ef17526b6cb7c7ee48b04549756d81b8aab",
-    "9c363eef2c9b2d3fcb2c952820a021596dfa8484eb7fdbe719ffcf44f5aecf07": "611f02bd80facdf0ecf24d2bc73aec046ab719092cd18c0ba7c7368524d38db0",
-    "5b91ec1281c3d823dc92928198bee2b35822c2ef6111113198e7d9158df59537": "611f02bd80facdf0ecf24d2bc73aec046ab719092cd18c0ba7c7368524d38db0",
-    "481ddb216a499985c8de6781e305767dee6451d46b14640d90d2695a3fbea40e": "af956f342c1c6459ed991798fd3342ed848f24f0e17386831b1ef7b4ef91af34",
-    "3e3eb7bd1b3630f9f57153f8bf9aa0e8c054e45a37011a89b3280224285ded1a": "5324c7411a7c61557a17354517b35ae5e31fd5515e44dd475ba12258d1c5f265",
-    "d64246030c81dfc5a1a375f8de057b27e6220ee0c2d7a771e232c60b8a662d24": "024f281da9fe62e5914e47d82cd1ab07791d0fc565426e5f6f2405762307a561",
-    "39fe8d87fca5d4fd441ddb087b9f798ee08968149fc74d79296814564699cfd1": "89d6aac5e0b914e3b82820f9691e02803786833387db7f0ad09000b83ee212ee",
-    "13c7484d9bbcb8f0bf5c13638960465785fb49b0363aa40215fdc7b3205ab824": "b280279a0ef279d0b9f0bdc4162591dbbc6312abac67120527b20d65c7de5dbf",
-    "cae279cf253b7d6afb71cef284908a43e0910e72f858e2cceff54308c6766df3": "7ee3819bf62f7e4563a2a9476df6e18a6cd17cceb30b92f00a24a6c8175e3740",
-    "18199079baddf7331dfce23af9c90173aefeb51541a60e94ec49f9b7119bb3cb": "15945fafd4ec4cd8e690a6d24cfb05ec2ac904e5091bf65adc3e1df3c43ed290",
-    "2f64b26042d87ed7df390e843fe862795a941e1f1adfc2d6a30a08c04a966f6f": "eaf493e8af54e4fb893988a51b83b390a725e24bbe1575a50625c811c08ecb6f",
-    "5b6b0247ef514ab935d1a5dd293db9fa95123f7e90684b8e59c445eaf95fe401": "fb1a382ee284b5583dd34f44245ab1444e083b4daec944fa533c19806ff3e90a",
-    "69f235dd3d93598686d7b6b079f5a09e35ad288bdf5205d3ef37d5267737ba2e": "f7cc0e8b019506df9430a4245962eb4e1c18cee9f7e58ab1e17a846c3e3d0c84",
-    "e36c0aa506f1a6ed21f588431929899ccd4aca7f3b22ca9998e9880fddcd35c5": "a3d951e968e6ca5ee3af64eab235842c06af694b9943eea7fc81eacd738e7224",
-    "9435629d95fbaaec4bb35a0bbb4c9bdc86d244e81825cd2f18df2a449e50a603": "3b731d7620bf723f5df5cb3dc1ab0c3f452db716712cc14379a4dfd92d19182f",
-    "9bc92a3d4f8fc5f63a737b88d46f03bd3b50f5910fa24f7ab5ea24534f5cb170": "d3a780f832d288bd44a79551a67966f66ffc0145658e162dfe3c8cc010923f58",
-    "ab507176d5074c8835453512e1fd3a6a3bd67e79d2d89ddd4c167d2d0965877e": "95935676a6f8cf1183b545413ebe3f7773b11fd806614a208f7149f3e712385e",
-    "e4a3fad84871316094a70b72e080e44a93da17307b7c1726c66d39056a17d443": "bf30ed96384de5c4c3e9ca7626bd81ec350074281b86c8c839041b783ff945c0",
-    "599abf0bf9c381e30cdab6ce54b2980cc5d3cd594a89e19020f7a7429a628ef8": "e734ce8f057a2863077c0e6e2d2baab2d05a98d063f7d916077db89488bf9dd5",
-    "402d8d4920b6c4ad455c759d1ec688ed5f6939af4a9beb62156471e78f97b812": "23f08458907bbe924afada3c2a9b4d82e46b4190ffa0a45d8a35099109f24d4a",
-    "c5cd4e7f600b45aac97117b9374a149243183cf6c5f4ee1875b8b14949805bd2": "6bf76be895daa81eecd02713d3fb73d1f5215d48720a139479234c293e88d26a",
-    "fa84ec52147f43662b1396085c17a7395076e5c92561376efc4457414d98fbba": "0325d6c1080c79e16fb6027538978fb227d912b89b16e40f23a831f9b80c0423",
-    "22ac33e911541eb0bf66787059a10c7f3614656d219139a49aea79ff983354f5": "105068fe92543bdd1ff1938e3abfec9c30a7200d8da65e9c764cd643581f9be2",
-    "ab5a5ca66a85745defcd6782ceccd80ccf2ee1ee5b1af49f7b2bd5ff3d39eb4a": "2ec950ea98c80e146cbd6454e2c24d3aeaa3a0d66b0154c73ad106d9e25e811a",
-    "19c4a3691f2fb5a1e0738598d4db03af5b7b87a65e3913014c5dfa9ca70332e1": "6b0f184f14930ed2aab00d963792fac1cf7c8439503cb58ac06dde647c456940",
-    "62be0185bee2f51b5ea0a40f7f41ec71fa930b46503549c9b821334781131c2a": "5973ede00eaa6fc11f4a294b815dcaeec2f9cb20d203b30257d2976cf4b19cc6",
-    "5d5095aafa6fdff3d0fbe7b0c4b2a8bfa7d87240654053b72fc978d6e58a3e2a": "462b01670e50875a9df97c18e87cd367dbe7fbd6f32783be20883747e37d5af6",
-    "b6591b7172d78a438a8f0a6897908ed9184d1b18d1e472766090a7d81753052b": "88552e1c2d4d53c988676a44e3eb7ac41e3ee7cbadf45fb505b0443473d445f3",
-    "e87851e18e96aa2c0e41f6095d82f70e7b74ddd597998e88dbd7c84771a1a084": "5008a184a9ed025b6380c79a07a851600d0f6245c98c404795b53de8e31e3f44",
-    "a30cbf29dac5f5f703efd7b6ec889697b6cddb08dd3e6ba0c80a18c4f437036f": "e3ff67a034be1f249caab8a72f61e8ad2a64e417b5ce6e0941416e56e591994d",
-    "27a60914e08f9cb55ae0b20a23fa1a397e9bbaf48eaddf1b4af1039b36b560c4": "5b10564b32ea564df50f0c56353b0b4ed3821fb86fc4555a4aa2461e76d07473",
-    "4305bc1a3a6852e96b64c55b228af06891c7727e2ad5e9fe86f442c2e3a3b68d": "71181f5d23343d7db98f90aed3499d8c2a23131b3151cc66c4591918dfc09acc",
-    "106faa490f84eb792981e0599b0c345f6e88bf5e672b577268c9124caf68064e": "a24e43b7765e445a86b1904b1c24b094dbd50eaf218ddc9cd6c2b3cbcd72cea3",
-    "7ce2ed0026483fdbaa7c6ef3f86c7fcd380a22600e447313ec82363a74338644": "7e245b947ebe781ac1bfeda5f29923699652dc48971898132821a302ddbb3d3c",
-    "d7ebd69d2596ca7ad35ce8faa01ec5f7d35030ad2e9c78ee3ed131922b86718d": "0d685d0e6c2a2d4513de2125b3acec7650aef3fa246f77d9ed2ca120e3db297d",
-    "5fb4f2c520e29ad0ef7709cf40f2e29bddded8f6980b5125156d306748d5020c": "7ac9206afbb213cb8b284d5031b86dbd721606d5753907a42ba92648ead52a22",
-    "dd9df9575c187d647fe0b07c628e7a7d2cf9e104e719efd2515e287d21396255": "e1fc72b4d465a7d03830afe06cb7f2a49f5be2cf26158a44dd9849882830f0bb",
-    "1100cef66135ff3853b2cd9a4cbee8d3b166bccfd76fc07eb56e70b972917ddb": "08b25a1fb4a58b22867bb84357d0368b782ebcf3dcf263261a3b7087807ea016",
-    "b61b608c352b760cda7ce773ae01d04a2464960d90204c90dbaba603502ae086": "8ecb5bcd8cd84cc3ffc6f5dc3076d81c0a457a6bd4b305a33f318b623d701c2e",
-    "d1bd6159ee9945a2f163e496b349673786d17c41dc3fcc9029db4591421fa2e0": "cfe35c9e498096d4463cfade00cdef305d2311d90db9949bf321f87447fc2f1a",
-    "96fc9f50acd6a453f4cc71358c9f198cbe4b20acd3b2ede74e2d42d668ff2f86": "9d73bfb92adaebaa346e5c12db11ce0bf0dc5ae059677dcec5198d7302d32493",
-    "b2b5c2cb178f40047207d550923b902412147b74d5e1778cba5f86e5b6e1954e": "e0963ee5228d3ea114cc8af37585893a3be748efd68e67b5301d38329c7f65fc",
-    "ca64700327eeaa8bc732510af86c1cbd9ede4e43f07e7f49ea8756e4a05f74fe": "da19ec9481cbcf30da9993db3570aa8442c6684464f26030eb2c045152b376bd",
-    "06c991252e3b17866c169816c6497744569c957f674a4221d6880c2aad1326c8": "5d9e09b09389f1e4c8268e5464bfce4c9ea6a516f9c84b2f49e313427421ef3d",
-    "32c8f64578b87770e4781fd19d6cb9ff79df1d75bf31a570f0c40fdd3a9d1c1d": "2d6c50388f532bd1bbe52e5a25fad2a7fd3955bb2855b0b72cd28765e78b62e9",
-    "ad5894be8cfbcd60c9b8cdb216067783d70ea6cedefbc768a2abc0507fb5444e": "dafb86559ecc15b8996f52a2b848861d59136f6df27ebba67472ee74a36456c7",
-    "ea7c6db315d9d27ddc41cd75c1676668d60d16c8f45916119ae1d34682a33a0d": "e5a406855f76b37cf13c1da6b49bd00b0e2341c96eba17278303a2b7bb33346c",
-    "d85c531b590cf26d5e8ed2907cf3e06f675524a8c8b73946622f77caf854b440": "44ab142b5171cd63db89e3186367c9a7a2a28e5daee21305214ff6626d9fb842",
-    "b6b5b62f6beb41c7b5ef5a51a0c8b2555508d043f6987885166e2ebdd401e822": "544101748cc0e2e64e48892f8d27a7fc83245f1a18c6b25f437eb626dbc1345a",
-    "a412a39ed23b9824087fc127e41aa4f9862282aacfccaec42646546a93abca5c": "d9f3e0597d973d5f0173fc1d5dba50595188c8650a263c926d6fb3b619667b78",
-    "4e7d0b03623999d923775928a1d60be9cc6753ac8c31e65e60a704fcaa853305": "d8b4c70897b50e123d819f719db2cb5931da41e609abd572b815ddeafd6d2847",
-    "0d2e51357b1ef45b99736b3c250f4bd13056a4733eb7637bdc6def80e9227b10": "fdbcf987fae167738b6002cf6ffe0581b553cc430e284ccdf82f733860b09772",
-    "5ca26c62e1332365f7cc59823e833a02f1303fd3da58c50181dce097724f9295": "41214f55c1e8d6170239eb93d7cc105abbee1dc0fbe8f7a258962da285dfe9cd",
-    "d3a76db0c36dbca64482b71bdc9f025d4329a72626c887093f431f2ff7b026b1": "7987e36c43f067b54276ccb5f72d4d495d4ec9d21dab110714eeb9148df9e3ec",
-    "79f7b70e00be156e764dae932eba4cf47840fbc1a03b927d89c1ad6df6bb9857": "d845f041e1ad38ef69cba0abbabeb3558a976f50fb4d217e4099fe36fbf8f623",
-    "7f5c84579e535dc473255cfb9a369b67e95abc9d8ad9bf95813305294d6c393a": "93de0089bfe55e8e2af2cdc3cfad5280486b63c0bbc8bcf7e069bed9e084ac7a",
-    "56f91d75c4faac9f90a434731aec2af0e5dfcfe193745bbe796e7a4a4bd20c59": "a306c73ff0f8e27bfdee1cd291159a49a8f21c31c4c832236d04b1cca8e48cfb",
-    "4ee8093dd2ed62b8489d8f03ea04933781ad3db5d860de7a4853410b12425e0e": "13324c96f0cb855057d3eaceeeb8ddc7ac38e8502c8ca130652414fc156c9bed",
-    "ee267b4fd78057460b943c98d9be17a21b48fb98002cfa4146b9d6a7f12e3e29": "03340dc42c4919ce6019ae44c24f3997ccd529f7af6f7f516c015338f14631cd",
-    "735372c77d6d0777846e38c0a224b6ab620244dd6c344a55c586b1cd85c4af42": "9c62fc31f992e53eb9d965e9dcbd08bc215030db233af0a638d2c2be796ab1b0",
-    "e81f1f7cce54a3a3b13c3d265995e65f693ab346712c9aad539b6d59f330ff68": "cb03a2c5a7b9b56fb286424939260fb6fda92ba9ed26f01619d3cee8bdac771b",
-    "ecdbd18df46fe93b7105b01f810c749eef059be4bf00113e4a2a0957a9c479ad": "514cfacbe557df83c85cb1f068e280efc5a0a24c9ba49ed0de547a2efcd85c56",
-    "dc241d460a13021ed66233ea215408579fa68fd113637e6b13b156655450629b": "86748254b6bfcc91d1a9b18d2b99dc9fdebec608dd68b83c3186a94f36e5f4c3",
-    "7752e2c91b4573d336f683b7ce4185c1397845f19d5b298bad0fb696e466b6d4": "c7c1b4da9b9f745dff12aca04605cb7fb33baf4ba84c5b473b16ef1ed16f9c25",
-    "1f30b778bdf54621cce9482bdf4fcccc8eed6468ddca3a5582b60b441ff43b4f": "a62aef6bb252cddd3bba35aa52968f35ba596d0e5cda16b5989b195a5c4df4a5",
-    "5486230318bfaa9cb56ea6023dc6226112f4017c4e5e9e0cf4cd963bc269a463": "44021a167f13d094844b227e9d97d834de20cf0473c99a9eddc5c702a1f66697",
-    "bd30e33135466ebce9ca5032985edae98544ce68946b1885df4dd23046ae2b63": "8ff9538e65e6781d654b811f88161d12455935ffb8f470815063b6ab6cb7fdff",
-    "6628b2e7a6a0197d76eb745087abb5bc45206f11ac72a5c67e4dd85d3508969c": "d7bf08e6602a741a0d3ca2e65907bb5f32def1b31a11e0c87b0a7d44545fcb10",
-    "ee118959fde49647dc70271ebb0da17abd5401a708fc81a1df1c966ee4cfc981": "56cc29cee9e859a5314952b8184da882e2482d7bc17234b4ca333bfffe5f74f3",
-    "9d4560f6f65aa5f6ef044e55338a2f2d3506598910092c4dbb366e391418e643": "997b0081a9cb967261b9554336e8edda0019827a98334da2cd3841bfb09c1bca",
-    "1efd16e74ec7d800658b8d1b3d1b48b022c7c182eb62c6e9a9e3eb52c462c6b3": "23f08458907bbe924afada3c2a9b4d82e46b4190ffa0a45d8a35099109f24d4a",
-    "d291c8b32c41057fe82a163ece7afdc0f4f5942fddd267d2335a81eec15a66da": "6ed701cfedb16ebd91b2d185383115c6f9ce12f2f9c744d7d605be0002109362",
-    "f6b93ba667569fb8eb972a72ba167cfe8e5b95aced82275230b2ec0bb4b14df8": "8efb3a60255de6db1c77dcdaec905d1045a88e70dddd53d524fc4cb7d1a609d7",
-    "6234cd04c10e63ac273fe605827c6e79846a53bfc2baeca991b18f3761db024f": "909033570f5545191e17d1c5ec80f6e822c0ed7f5af9838ee96c0b1781273317",
-    "c5c33aad70b000e20ee5f8e908488ec373c30c587f4257d7fc7ad2754d85a72d": "1f498bac4b23bacc32684c7a2f3abeca22d55509ecfa6853e1d428c0443218c2",
-    "04daa54c8b239dd2faec115346ab3e406f9052c0a42a1238ab58a336bb5fbbab": "f72b71f2cf7221d17e8e7dcb23ba1aebadee8813fb843860fa6894b9c658269c",
-    "76724cdcc40834408c982e0556194dba735745f7b0eded79b07a536ea29bb91b": "d5aa5e4ae9fc046931742f900b38d9c7be0c904a30b68f542479aff13237e6a0",
-    "8c5138c6377ff04416270f499fe78e16ec966e66900b4f028f6941079343829a": "03c3ee4bc24a67660cf377bb85ef4ee4c4723f1d2d99b4caf7886b005d4d9954",
-    "c80bf41727f41fd80e0c30eaceec835d38758f4e41e8ac3656e4bf3c35447498": "572878043beff72a7ae455785619593dac4a462771c18335de2a49a010efbc47",
-    "531260d1367969a7913524ac46f75cba63cb840780dc656e9a3c580f15dab1ba": "2181cc570872136d026dfc526621b9ec092bfb2effe888fba88a6c52f8965430",
-    "5cba0888bbcf631426b639b21ca1eb726ebc598eb2feb13474eceb2f97c8bd62": "f6e2d4fb073bdf38cd18c5437c5cc814130a9d9529a949f14c492d3231b6ec6a",
-    "249d1785c6866cd9b73ef1ea5ee4195c11a3c3ba92494343760e763fff122d40": "f6e2d4fb073bdf38cd18c5437c5cc814130a9d9529a949f14c492d3231b6ec6a",
-    "3a49b513ddebeb5f1b7208ef037d9df2abaee48b9574d91204f38cd2fb8704e2": "756a6524cdb2d4eaad13228bd69d6266ffbb77c78e7f3cfde29e2667f38d3a2d",
-    "b076c46b5d9b4e2bf0b59bb92f39a319ba61e5b3475aa77ce508e64aa9541575": "8d2efba45f136abdd6d9548ca3be7df0542bb39e5c0aadba883e191d1c54712b",
-    "0ff30f5d3e9bec2f1e598ef550aa756653e881064a14934bbb2deb7c09b83441": "48e6d088c751a0bd26be61e1279c16d39b810de6b18c91ac178b4bab87f0ffd4",
-    "7dddae73a80907bb2f4560eaf72ceedd065f2f615256ab537eeacbd790f7a05f": "a740a8741ca6c59b0e0f1d2e5037677b8fbd7b0c34ee4f7791be025d904170cc",
-    "a18c624c73f837f01ce189f40090ff0c064dc68dfa726ecc4aca6665d46331a4": "c2c358e9dd15de84331652b848b7ad410ef3f0f8a06a312065349f6c58991966",
-    "fd601c231a25cf899477f88d7585406119fd138ed64e9da1913e0cda70f9dd3a": "7ca26aafbfe189a20d2fed657ddcca8aa31581ee6838b90289c4faa4dd23fef8",
-    "083ce048149966cfe211dfc88ad50cf83bd6309a22e7817f1aac0a972634a8a7": "78a69c6fdc7b95f502f14d3c826b21528318ef248796d5a41478096973dd1ad6",
-    "abd36d9edb9f3e787308a3f263d1e301360b80ae2b2e0eaf341f4e3685fa70f7": "374c0fd6e94e0cec99de6089e5a6409dc4816b0f9427363c44b8985f60481f35",
-    "7ac407e04698b5541411ac9ce3dbdf1e7de112e3a090894ae1469d31a058ccd1": "434f4d14c1eb231306b51aaa160c021b63670ac6ca67fb8e403f4500983dd1e4",
-    "4ada0ba5227f8c1e9737d025dfeb36c81c8dfbea4898c6e784434f048f5d513c": "f7d7736a8f77a494064203eda8d618bb0cfbe19668065fa083825ecdc1eda540",
-    "2941cc17f83c2dafdaac06447a40dc4842f6f6c84637eb45345562bb686fdbc3": "cf3b763a62724306dca2a00ed53a7c0a19074286e40b8f0b96544ccbab4aaae2",
-    "bf40392d2dc7da13d7a14c2408cf0738585e574968630ada8d2a53bb892148c0": "b954bc4acaad1bfa43689f654027227c6cd416e797fbf7ddbd2a38864d857a5e",
-    "196ba51dc6297cea4a791253a6accfb23ff333db0320fb4fde1fb7e2f628fe75": "ea4bdbc1419b6c7aa4919f1276fcb3eb6fd9a316e52e177fa519b1cbe9fbb3de",
-    "07947665e58f2c5f608cb2d61041957c9900a2bca66b76ea2b3e535102b531cb": "a1fb4e703a9ef1fa4936801721ff285a97ac85330856674412e054892afe6972",
-    "0447a608b0327060df1e4547cb35ddfb657c25cddd0e30e45b16b01861b79bc4": "d1913a47aec9a99a549e8d075b5118abcabd8e8599d6fbbdb67785a5c31d9b03",
-    "f02361a6f605b192d7de8c1eeef059434c77f135b5381f301530f8b0580b3a3e": "5119e090c80757fec3c9f1dca46e3481688fed2fea905db0af7994857abb92a6",
-    "06c86870ce966a9f790dea92f6867803625c990e30a5cf3cc5389382e5b29824": "03b0bd366e8184f8d871c3a7c7cc26c73c25b54ff54c64b28b10b898242cdc8a",
-    "c1a8c38de902dd1df2981ad2283da6c5c30f688b08cd3a6ee469c5bd9dedcb01": "2ec1d83738358cd8610d8d7a699891f1e5d7dd9bdf6f82ae70d048bc13f7f11f",
-    "db9f88c413c428ffc06bbbfd0fad941bb22e61cbc91df66c1ba5dbd042e93ae3": "2c2ae095d55ddbc0487f97a5e8db5ecd4b2f1538cd67e774b461d85c4b96a216",
-    "bb4f332ffa027fa030c3cdf98e7470a288140afdaa0e83d83b062db008c86812": "cf1881df6f1696c2e59b47fde80838e66a1dfad4f0e993fd686186333456b55d",
-    "886f574366984d340a2215ab5ae1983fe4c6bf0f0e2af656a4725414c114edec": "f1294f35f19846cd012506eadcc13ecda95eb7ddc6c661bc1b9402c4b00eb703",
-    "c029836f84a430f0379582ebc21c608a7e88ffff08bfcf2c314fb7c9934a3be8": "f0e6a61a0b0037aa12879a3ba580a7b84ef77cd5a8a39f1832589d6390b7fa66",
-    "ea6e683cd089bc5c027c159b5d338ec6f946e67b7cfba82a15080e066291712b": "461b2e3622293c303571880413edf2e26b35f5d191b30a32e7eea20da00613d2",
-    "dc761a887aa6cb6a65e45abb1e6e8c44c10be54cfa7a2786b7e6d4fa1ff50a31": "29d9c129c3e755f6bd3f321ea47f6dd67bc9023b6bca2a8018a80be2adb6c957",
-    "3b8dec7dbb7b718dd727903ef521e6b519cddb12868b3212aba7f5c940c0bbf5": "4baabeaad579e9201bfd7bc4dd8ba8392ce01ef09e8067c740adc882fdcba548",
-    "8f2ccb383557c7d98945e0f0824f78940b22f1bdb21af0a055303d5be31c8474": "d0c9e369bee256f4b0182a503babb685ee7b00419c985fb423a47bfb0eb89f56",
-    "e23397ee20dbe830cdf81b83a23633551b5cdc433c225e7e8ea7163a052c67f1": "de8736cc048486e16dcd174d8f5f0bc3e19aa4f0b0c26a19572b4cfafa5b31ca",
-    "b05193a2568cce567074c3c8e78fa4e822c627ac42f85d6ccda430bf3a30dc00": "16d5164c6ff6bf7201a90e9ec406fe9d122c9894cda28854a05e68ff1f2e804c",
-    "305bf59e098d3d08c90af0436ee6e21705662419e9d5152a4b11e80275cf051d": "6bfc25cc7df52b4fabc33e36962aed9620b8f61ad7bbab543996d0575e12c832",
-    "b2a391ae19bb65ef90bfb6a78fcaece1c2a8099e7814373bc19ce95ec54bc62f": "ac2151d8aa26b5784551edad3b8ffdaf126a08a8f4ae57db2fc94e01b5443860",
-    "64a5b67b01286e3052bae5698468ee5d95a5025952ad3fd424fd6d6c46f71e40": "714bc174ac5066ca0a4a710f503d76ce0254e2c8d1e313abf90171be0ff5975e",
-    "13318b0c637272965f6b891dbefca6a5c3b913711818c112ce9c3768cd34f9a5": "88367dd16bfd18ba5595a82d9076f8405807ea4df66c0d282de850391349986a",
-    "165cc6f8db72aeee16f9336b0f3abd6c6cbb3f29d22bc03906f45e87f6e8fd19": "2612d391c1eb9a05beb967f1f2adaf215a544bd5e2d88d2a13c531e56af493a6",
-    "412f9b3f64294c6337d7be6680037813efaa066e02ba1704a0be0ccd5194fc36": "7d4a25031f5a15141275e08712537464836bbe2cc81512cadfa828d619cbba4a",
-    "5f3cccee7b06941609fb55be6396dbd9a3d9c94e5346e91a6ad8ba1c04834b80": "a498b30af4f790314c211c4e6a9a4d8c37015ec9102a6496406cd49b85d37502",
-    "be4b08c15fb586cae8972bb1f28da0c08054abbafbb91c67ffaa04027dce7d44": "de7d5e6247fb643608b4f5ef96726ec0c478e1499bcf1f650fa4cf118063dad0",
-    "5b1d1063bf62836cedfed54c6af4c3ecb6af92d99b6012c8bf280d93e129b4fc": "179cf283f9f50c9bbf5b86380349d36adf78f5f47d09f939e7a1bf190e8641f4",
-    "0cec8e0c1dbec4a4cad36144b3ba9a9a8bb8892f64c4ffe3c3357cbf83db2e59": "9c27727c109abd005defbcac1ab6f1a69a3f858144024969816b65c00f89ed18",
-    "2822ac4015f1156b5be7e2b34e223c4c8e336504cc610fea04a9c52f369fd5b2": "c15195e527aab50976ac9ac7596cc6521f141e8499f65be42f0a7df3445d12ab"
-};
-
-    
     async function attemptLogin() {
-        const name = document.getElementById("login-name").value.trim().normalize("NFC");
-        const pass = document.getElementById("login-pass").value.trim().normalize("NFC");
+        const name = document.getElementById("login-name").value;
+        const pass = document.getElementById("login-pass").value;
         const err = document.getElementById("login-error");
         
-        const hashedName = await sha256(name);
-        
-        if(allowedUsersHash[hashedName]) {
-            const hashedPass = await sha256(pass);
-            if (hashedPass === allowedUsersHash[hashedName]) {
-                localStorage.setItem("jhub_logged_in", "true");
-                localStorage.setItem("jhub_user_name", name);
-                document.getElementById("user-profile-name").textContent = name + " 님";
-                if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: name, password: pass })
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok && data.success) {
+                document.getElementById("user-profile-name").textContent = data.user_name + " 님";
+                if(data.is_master) {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+                    document.getElementById('btn-master').style.display = 'inline-block';
+                    loadFeedbacks();
+                } else {
+                    document.getElementById('btn-master').style.display = 'none';
                 }
                 document.getElementById("login-screen").style.display = "none";
-                return;
+                err.style.display = "none";
+            } else {
+                err.style.display = "block";
             }
+        } catch (error) {
+            console.error("Login error:", error);
+            err.textContent = "서버 접속 오류입니다.";
+            err.style.display = "block";
         }
-        err.style.display = "block";
     }
 
-    // Check login status on load
-    window.addEventListener('DOMContentLoaded', () => {
-        if(localStorage.getItem('jhub_logged_in') === 'true') {
-            document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('user-profile-name').textContent = localStorage.getItem('jhub_user_name') + ' 님';
-            if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
-                document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+    async function attemptLogout() {
+        await fetch('/api/logout', { method: 'POST' });
+        document.getElementById('login-screen').style.display='flex'; 
+        document.getElementById('user-profile-badge').innerHTML='';
+        document.getElementById('login-pass').value = '';
+    }
+
+    async function checkLogin() {
+        try {
+            const response = await fetch('/api/check_session');
+            const data = await response.json();
+            if (response.ok && data.success) {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('user-profile-name').textContent = data.user_name + ' 님';
+                if(data.is_master) {
+                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+                    document.getElementById('btn-master').style.display = 'inline-block';
+                    loadFeedbacks();
+                } else {
+                    document.getElementById('btn-master').style.display = 'none';
+                }
+            } else {
+                document.getElementById('login-screen').style.display = 'flex';
             }
+        } catch (error) {
+            // Assume not logged in if fetch fails (e.g. running from file://)
         }
-    });
+    }
+
+
+    async function loadFeedbacks() {
+        try {
+            const response = await fetch('/api/feedbacks');
+            const data = await response.json();
+            const container = document.getElementById('master-feedbacks-container');
+            if(!container) return;
+            
+            container.innerHTML = '';
+            
+            if (response.ok && Array.isArray(data)) {
+                if (data.length === 0) {
+                    container.innerHTML = '<p style="color:#777; padding: 12px;">아직 접수된 제안이 없습니다.</p>';
+                    return;
+                }
+                
+                // 역순 정렬 (최신이 위로)
+                data.reverse().forEach(fb => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.style.marginBottom = '12px';
+                    card.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 8px;">
+                            <div>
+                                <span class="chip blue">${fb.project_name || '일반 제안'}</span>
+                                <span style="font-size: 12px; color: #888; margin-left: 8px;">${fb.timestamp}</span>
+                            </div>
+                            <span style="font-weight: 600; font-size: 13px; color: #800080;">작성자: ${fb.author}</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">${fb.content}</p>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+        } catch (e) {
+            console.error('Failed to load feedbacks:', e);
+        }
+    }
 
     // Mode Switch Logic
     function switchMode(mode) {
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
         
         document.getElementById('btn-' + mode).classList.add('active');
+        if(document.getElementById('bot-btn-' + mode)) {
+            document.getElementById('bot-btn-' + mode).classList.add('active');
+        }
         document.getElementById('view-' + mode).classList.add('active');
     }
+
+    // Pull to refresh logic
+    let touchStartY = 0;
+    const ptrIndicator = document.getElementById('ptr-indicator');
+    const ptrText = document.getElementById('ptr-text');
+
+    document.addEventListener('touchstart', e => {
+        if(window.scrollY === 0) {
+            touchStartY = e.touches[0].clientY;
+        }
+    }, {passive: true});
+
+    document.addEventListener('touchmove', e => {
+        if(window.scrollY === 0 && touchStartY > 0) {
+            let pullDist = e.touches[0].clientY - touchStartY;
+            if(pullDist > 40) {
+                ptrIndicator.style.display = 'block';
+                ptrIndicator.style.top = Math.min(pullDist - 40, 20) + 'px';
+                ptrText.innerText = pullDist > 100 ? '🔄 놓아서 업데이트' : '⬇️ 당겨서 새로고침';
+            }
+        }
+    }, {passive: true});
+
+    document.addEventListener('touchend', e => {
+        if(window.scrollY === 0 && touchStartY > 0) {
+            let pullDist = e.changedTouches[0].clientY - touchStartY;
+            if(pullDist > 100) {
+                ptrIndicator.style.top = '20px';
+                ptrText.innerText = '⏳ 업데이트 중...';
+                setTimeout(() => location.reload(true), 500);
+            } else {
+                ptrIndicator.style.top = '-50px';
+                setTimeout(() => ptrIndicator.style.display = 'none', 300);
+            }
+        }
+        touchStartY = 0;
+    });
 
     // Accordion Logic
     function toggleAccordion(element) {
@@ -1059,6 +1275,21 @@ async function sha256(message) {
     });
 </script>
 
-
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('SW registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('SW registration failed:', error);
+                    });
+            });
+        } else if (window.location.protocol === 'file:') {
+            console.warn('Service Worker cannot be registered on file:// protocol. PWA features require a web server (e.g., python -m http.server).');
+        }
+    </script>
 </body>
 </html>

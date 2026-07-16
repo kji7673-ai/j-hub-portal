@@ -1,0 +1,1557 @@
+[
+    {
+        "hanja": "溫 故 而 知 新, 可 以 爲 師 矣",
+        "korean": "\"옛것을 익히고 새것을 안다면, 능히 남의 스승이 될 만하다.\"",
+        "characters": [
+            {
+                "char": "溫",
+                "reading": "익힐 온",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "故",
+                "reading": "옛 고",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "新",
+                "reading": "새 신",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "可",
+                "reading": "옳을 가",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "以",
+                "reading": "써 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "爲",
+                "reading": "될 위",
+                "color": "#0066cc"
+            },
+            {
+                "char": "師",
+                "reading": "스승 사",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "矣",
+                "reading": "어조사 의",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "과거의 인허가 사례와 구법(舊法)을 철저히 분석하고 이해할 때, 비로소 새로운 프로젝트의 난관을 풀어내는 전문가로 성장할 수 있습니다."
+    },
+    {
+        "hanja": "三 人 行, 必 有 我 師 焉",
+        "korean": "\"세 사람이 길을 가면 반드시 나의 스승이 있다.\"",
+        "characters": [
+            {
+                "char": "三",
+                "reading": "석 삼",
+                "color": "#0066cc"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "行",
+                "reading": "다닐 행",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "必",
+                "reading": "반드시 필",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "有",
+                "reading": "있을 유",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "我",
+                "reading": "나 아",
+                "color": "#0066cc"
+            },
+            {
+                "char": "師",
+                "reading": "스승 사",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "焉",
+                "reading": "어조사 언",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "부서 간의 협업이나 동료와의 작은 대화 속에서도 반드시 배울 점이 있습니다. 타인의 장점은 취하고 단점은 타산지석으로 삼는 자세가 명작을 만듭니다."
+    },
+    {
+        "hanja": "學 而 時 習 之, 不 亦 說 乎",
+        "korean": "\"배우고 때때로 익히면 또한 기쁘지 아니한가.\"",
+        "characters": [
+            {
+                "char": "學",
+                "reading": "배울 학",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "時",
+                "reading": "때 시",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "習",
+                "reading": "익힐 습",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "亦",
+                "reading": "또한 역",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "說",
+                "reading": "기쁠 열",
+                "color": "#0066cc"
+            },
+            {
+                "char": "乎",
+                "reading": "어조사 호",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "건축 법규와 신공법은 끊임없이 변화합니다. 새로운 지식을 수동적으로 받아들이지 않고, 스스로 익혀 내 것으로 체화하는 과정 자체에서 즐거움을 찾아보세요."
+    },
+    {
+        "hanja": "知 之 者 不 如 好 之 者, 好 之 者 不 如 樂 之 者",
+        "korean": "\"아는 자는 좋아하는 자만 못하고, 좋아하는 자는 즐기는 자만 못하다.\"",
+        "characters": [
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "如",
+                "reading": "같을 여",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "好",
+                "reading": "좋을 호",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "好",
+                "reading": "좋을 호",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "如",
+                "reading": "같을 여",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "樂",
+                "reading": "즐길 락",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "설계를 단순히 '의무적인 지식'으로 처리하는 것을 넘어, 도면을 그리고 공간을 창조하는 과정 자체를 진심으로 '즐길 때' 비로소 모두를 감동시키는 최고의 건축물이 탄생합니다."
+    },
+    {
+        "hanja": "和 而 不 同",
+        "korean": "\"군자는 조화롭게 어울리되 줏대 없이 휩쓸리지 아니한다.\"",
+        "characters": [
+            {
+                "char": "和",
+                "reading": "화할 화",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "同",
+                "reading": "한가지 동",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "발주처, 시공사, 유관 부서 등 다양한 주체와의 협의 과정에서 원활하고 조화롭게 소통하되, 건축가로서의 뚜렷한 철학과 안전/법규에 대한 원칙만큼은 결코 타협하지 않아야 합니다."
+    },
+    {
+        "hanja": "巧 言 令 色, 鮮 矣 仁",
+        "korean": "\"말을 교묘하게 하고 얼굴빛을 꾸미는 사람 중에는 어진 이가 드물다.\"",
+        "characters": [
+            {
+                "char": "巧",
+                "reading": "공교로울 교",
+                "color": "#0066cc"
+            },
+            {
+                "char": "言",
+                "reading": "말씀 언",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "令",
+                "reading": "하여금 령",
+                "color": "#0066cc"
+            },
+            {
+                "char": "色",
+                "reading": "빛 색",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "鮮",
+                "reading": "드물 선",
+                "color": "#0066cc"
+            },
+            {
+                "char": "矣",
+                "reading": "어조사 의",
+                "color": "#0066cc"
+            },
+            {
+                "char": "仁",
+                "reading": "어질 인",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "화려한 언변이나 겉보기 좋은 프레젠테이션(Renderings)보다 중요한 것은, 건축물의 내실(구조적 안전, 법규 준수, 거주자의 편의)을 진정성 있게 고민하는 태도입니다."
+    },
+    {
+        "hanja": "見 賢 思 齊 焉, 見 不 賢 而 內 自 省 也",
+        "korean": "\"어진 이를 보면 그와 같아지기를 생각하고, 어질지 않은 이를 보면 속으로 스스로를 반성한다.\"",
+        "characters": [
+            {
+                "char": "見",
+                "reading": "볼 견",
+                "color": "#0066cc"
+            },
+            {
+                "char": "賢",
+                "reading": "어질 현",
+                "color": "#0066cc"
+            },
+            {
+                "char": "思",
+                "reading": "생각할 사",
+                "color": "#0066cc"
+            },
+            {
+                "char": "齊",
+                "reading": "가지런할 제",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "焉",
+                "reading": "어조사 언",
+                "color": "#0066cc"
+            },
+            {
+                "char": "見",
+                "reading": "볼 견",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "賢",
+                "reading": "어질 현",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "內",
+                "reading": "안 내",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "自",
+                "reading": "스스로 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "省",
+                "reading": "살필 성",
+                "color": "#0066cc"
+            },
+            {
+                "char": "也",
+                "reading": "어조사 야",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "훌륭한 선배의 설계 도서를 보면 그 노하우를 배우려 노력하고, 타인의 실수나 하자를 목격하면 혹여 내 프로젝트에도 같은 결함이 없는지 철저히 점검해야 합니다."
+    },
+    {
+        "hanja": "不 患 人 之 不 己 知, 患 不 知 人 也",
+        "korean": "\"남이 나를 알아주지 않음을 근심하지 말고, 내가 남을 알지 못함을 근심하라.\"",
+        "characters": [
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "患",
+                "reading": "근심 환",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "己",
+                "reading": "몸 기",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "患",
+                "reading": "근심 환",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#0066cc"
+            },
+            {
+                "char": "也",
+                "reading": "어조사 야",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "건축주나 상사가 내 노력을 당장 알아주지 않는다고 조급해할 필요 없습니다. 오히려 내가 발주처의 진정한 니즈나 법규의 핵심을 제대로 파악하지 못하고 있는 것은 아닌지 점검하는 것이 우선입니다."
+    },
+    {
+        "hanja": "己 所 不 欲, 勿 施 於 人",
+        "korean": "\"자기가 하고 싶지 않은 일을 남에게 시키지 말라.\"",
+        "characters": [
+            {
+                "char": "己",
+                "reading": "몸 기",
+                "color": "#0066cc"
+            },
+            {
+                "char": "所",
+                "reading": "바 소",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "欲",
+                "reading": "하고자 할 욕",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "勿",
+                "reading": "말 물",
+                "color": "#0066cc"
+            },
+            {
+                "char": "施",
+                "reading": "베풀 시",
+                "color": "#0066cc"
+            },
+            {
+                "char": "於",
+                "reading": "어조사 어",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "본인이 검토하기 번거롭고 귀찮은 작업이나 도면 수정을 협력사나 후배에게 무책임하게 떠넘겨서는 안 됩니다. 책임감 있는 협력 관계가 프로젝트의 품질을 좌우합니다."
+    },
+    {
+        "hanja": "過 而 不 改, 是 謂 過 矣",
+        "korean": "\"잘못을 하고도 고치지 않는 것, 이것을 일컬어 진짜 잘못이라 한다.\"",
+        "characters": [
+            {
+                "char": "過",
+                "reading": "지날 과",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "改",
+                "reading": "고칠 개",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "是",
+                "reading": "이 시",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "謂",
+                "reading": "이를 위",
+                "color": "#0066cc"
+            },
+            {
+                "char": "過",
+                "reading": "지날 과",
+                "color": "#0066cc"
+            },
+            {
+                "char": "矣",
+                "reading": "어조사 의",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "설계 변경이나 인허가 과정에서 발생한 실수는 누구나 할 수 있습니다. 하지만 원인을 철저히 분석하고 동일한 실수가 반복되지 않도록 프로세스를 개선하지 않는다면 그것이 진짜 실패입니다."
+    },
+    {
+        "hanja": "君 子 欲 訥 於 言 而 敏 於 行",
+        "korean": "\"군자는 말은 어눌하게 하되, 행동은 민첩하게 하고자 한다.\"",
+        "characters": [
+            {
+                "char": "君",
+                "reading": "임금 군",
+                "color": "#0066cc"
+            },
+            {
+                "char": "子",
+                "reading": "아들 자",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "欲",
+                "reading": "하고자 할 욕",
+                "color": "#0066cc"
+            },
+            {
+                "char": "訥",
+                "reading": "말 더듬을 눌",
+                "color": "#0066cc"
+            },
+            {
+                "char": "於",
+                "reading": "어조사 어",
+                "color": "#0066cc"
+            },
+            {
+                "char": "言",
+                "reading": "말씀 언",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "敏",
+                "reading": "민첩할 민",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "於",
+                "reading": "어조사 어",
+                "color": "#0066cc"
+            },
+            {
+                "char": "行",
+                "reading": "다닐 행",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "말이나 서류로만 진행 상황을 포장하기보다, 현장을 직접 확인하고 도면을 수정하는 실제적인 '행동'을 통해 문제를 신속하게 해결하는 실무자가 되어야 합니다."
+    },
+    {
+        "hanja": "德 不 孤, 必 有 鄰",
+        "korean": "\"덕은 외롭지 않으니, 반드시 이웃이 있다.\"",
+        "characters": [
+            {
+                "char": "德",
+                "reading": "덕 덕",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "孤",
+                "reading": "외로울 고",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "必",
+                "reading": "반드시 필",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "有",
+                "reading": "있을 유",
+                "color": "#0066cc"
+            },
+            {
+                "char": "鄰",
+                "reading": "이웃 린",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "정직한 설계와 성실한 현장 관리, 그리고 건축주를 향한 진정성 있는 태도는 결국 긍정적인 평판으로 이어져, 또 다른 좋은 프로젝트와 신뢰할 수 있는 파트너를 끌어들입니다."
+    },
+    {
+        "hanja": "敏 而 好 學, 不 恥 下 問",
+        "korean": "\"민첩하게 배우기를 좋아하고, 아랫사람에게 묻는 것을 부끄러워하지 않는다.\"",
+        "characters": [
+            {
+                "char": "敏",
+                "reading": "민첩할 민",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "好",
+                "reading": "좋을 호",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "學",
+                "reading": "배울 학",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "恥",
+                "reading": "부끄러워할 치",
+                "color": "#0066cc"
+            },
+            {
+                "char": "下",
+                "reading": "아래 하",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "問",
+                "reading": "물을 문",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "경력이 쌓였다 하더라도 새로운 소프트웨어(BIM, AI)나 최신 트렌드에 대해 후배나 주니어 직원들에게 묻고 배우는 것을 주저하지 않는 유연함이 필요합니다."
+    },
+    {
+        "hanja": "學 而 不 思 則 罔, 思 而 不 學 則 殆",
+        "korean": "\"배우기만 하고 생각하지 않으면 망상에 빠지고, 생각만 하고 배우지 않으면 위태롭다.\"",
+        "characters": [
+            {
+                "char": "學",
+                "reading": "배울 학",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "思",
+                "reading": "생각할 사",
+                "color": "#0066cc"
+            },
+            {
+                "char": "則",
+                "reading": "곧 즉",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "罔",
+                "reading": "그물 망",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "思",
+                "reading": "생각할 사",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "學",
+                "reading": "배울 학",
+                "color": "#0066cc"
+            },
+            {
+                "char": "則",
+                "reading": "곧 즉",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "殆",
+                "reading": "위태할 태",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "법규를 외우기만 하고 실제 현장에 어떻게 적용될지 고민(설계적 사유)하지 않으면 공허해지고, 반대로 법적 근거(학습) 없이 직관과 디자인만 고집하면 인허가상 큰 리스크를 초래합니다."
+    },
+    {
+        "hanja": "朝 聞 道, 夕 死 可 矣",
+        "korean": "\"아침에 도를 들으면 저녁에 죽어도 좋다.\"",
+        "characters": [
+            {
+                "char": "朝",
+                "reading": "아침 조",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "聞",
+                "reading": "들을 문",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "道",
+                "reading": "길 도",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "夕",
+                "reading": "저녁 석",
+                "color": "#0066cc"
+            },
+            {
+                "char": "死",
+                "reading": "죽을 사",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "可",
+                "reading": "옳을 가",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "矣",
+                "reading": "어조사 의",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "건축가로서 오랜 시간 풀리지 않던 설계의 난제나 복잡한 법적 해석의 실마리를 마침내 깨달았을 때의 짜릿한 성취감과 열정을 잃지 말아야 합니다."
+    },
+    {
+        "hanja": "歲 寒, 然 後 知 松 柏 之 後 凋 也",
+        "korean": "\"날씨가 추워진 뒤에야 소나무와 잣나무가 늦게 시듦을 안다.\"",
+        "characters": [
+            {
+                "char": "歲",
+                "reading": "해 세",
+                "color": "#0066cc"
+            },
+            {
+                "char": "寒",
+                "reading": "찰 한",
+                "color": "#0066cc"
+            },
+            {
+                "char": "然",
+                "reading": "그럴 연",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "後",
+                "reading": "뒤 후",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "松",
+                "reading": "소나무 송",
+                "color": "#0066cc"
+            },
+            {
+                "char": "柏",
+                "reading": "잣나무 백",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "後",
+                "reading": "뒤 후",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "凋",
+                "reading": "시들 조",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "也",
+                "reading": "어조사 야",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "경기가 좋고 프로젝트가 넘쳐날 때보다, 건설 경기가 얼어붙고 난도 높은 규제가 닥쳤을 때 비로소 진정한 실력과 탄탄한 기본기를 갖춘 건축사 사무소의 진가가 드러납니다."
+    },
+    {
+        "hanja": "欲 速 則 不 達",
+        "korean": "\"빨리 하고자 하면 도달하지 못한다.\"",
+        "characters": [
+            {
+                "char": "欲",
+                "reading": "하고자 할 욕",
+                "color": "#0066cc"
+            },
+            {
+                "char": "速",
+                "reading": "빠를 속",
+                "color": "#0066cc"
+            },
+            {
+                "char": "則",
+                "reading": "곧 즉",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "達",
+                "reading": "통달할 달",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "마감 일정에 쫓겨 충분한 법규 검토나 간섭 체크 없이 섣불리 도면을 제출하면, 필연적으로 더 큰 재작업과 인허가 지연이라는 부메랑을 맞게 됩니다."
+    },
+    {
+        "hanja": "君 子 和 而 不 同, 小 人 同 而 不 和",
+        "korean": "\"군자는 화합하되 부화뇌동하지 않고, 소인은 부화뇌동하되 화합하지 못한다.\"",
+        "characters": [
+            {
+                "char": "君",
+                "reading": "임금 군",
+                "color": "#0066cc"
+            },
+            {
+                "char": "子",
+                "reading": "아들 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "和",
+                "reading": "화할 화",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "同",
+                "reading": "한가지 동",
+                "color": "#0066cc"
+            },
+            {
+                "char": "小",
+                "reading": "작을 소",
+                "color": "#0066cc"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "同",
+                "reading": "한가지 동",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "和",
+                "reading": "화할 화",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "건강한 팀은 치열하게 토론(不同)하고 결과에 승복하여 협력(和)하지만, 무능한 팀은 회의에서는 의견 없이 동조(同)하고 뒤에서는 불평하며 분열(不和)합니다."
+    },
+    {
+        "hanja": "君 子 泰 而 不 驕, 小 人 驕 而 不 泰",
+        "korean": "\"군자는 태연하되 교만하지 않고, 소인은 교만하되 태연하지 못한다.\"",
+        "characters": [
+            {
+                "char": "君",
+                "reading": "임금 군",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "子",
+                "reading": "아들 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "泰",
+                "reading": "클 태",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "驕",
+                "reading": "교만할 교",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "小",
+                "reading": "작을 소",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "驕",
+                "reading": "교만할 교",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "泰",
+                "reading": "클 태",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "실력 있는 전문가는 어떠한 돌발 변수나 클라이언트의 무리한 요구 앞에서도 여유(泰)를 잃지 않고 합리적인 대안을 제시하며, 결코 자신의 지식으로 타인을 윽박지르지 않습니다."
+    },
+    {
+        "hanja": "居 敬 而 行 簡",
+        "korean": "\"마음가짐은 경건하게 하되, 일 처리는 간략하게 한다.\"",
+        "characters": [
+            {
+                "char": "居",
+                "reading": "살 거",
+                "color": "#0066cc"
+            },
+            {
+                "char": "敬",
+                "reading": "공경 경",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "行",
+                "reading": "다닐 행",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "簡",
+                "reading": "간략할 간",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "설계에 임하는 태도는 신중하고 무겁게 가져야 하지만, 도면의 표현이나 보고서의 작성은 누구나 이해하기 쉽고 명확하며 간결(Simple & Clear)해야 합니다."
+    },
+    {
+        "hanja": "仁 者 安 仁, 知 者 利 仁",
+        "korean": "\"어진 자는 어짊을 편안히 여기고, 지혜로운 자는 어짊을 이롭게 여긴다.\"",
+        "characters": [
+            {
+                "char": "仁",
+                "reading": "어질 인",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "安",
+                "reading": "편안할 안",
+                "color": "#0066cc"
+            },
+            {
+                "char": "仁",
+                "reading": "어질 인",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "者",
+                "reading": "사람 자",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "利",
+                "reading": "이로울 리",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "仁",
+                "reading": "어질 인",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "건축이 사회에 미치는 선한 영향력을 깊이 이해하는 자는 공공의 이익을 당연한 것으로 여기며, 지혜로운 설계자는 친환경/공공기여를 통해 프로젝트의 가치(용적률 인센티브 등)를 높입니다."
+    },
+    {
+        "hanja": "禮 之 用, 和 爲 貴",
+        "korean": "\"예의 쓰임은 조화로움을 귀하게 여긴다.\"",
+        "characters": [
+            {
+                "char": "禮",
+                "reading": "예도 예",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "用",
+                "reading": "쓸 용",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "和",
+                "reading": "화할 화",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "爲",
+                "reading": "할 위",
+                "color": "#0066cc"
+            },
+            {
+                "char": "貴",
+                "reading": "귀할 귀",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "건축에서 규칙(법적 제약, 모듈, 예산)은 딱딱하고 제약적인 것 같지만, 그 룰(禮)을 정확히 이해하고 변주할 때 비로소 가장 조화롭고 아름다운(和) 공간이 탄생합니다."
+    },
+    {
+        "hanja": "君 子 周 而 不 比, 小 人 比 而 不 周",
+        "korean": "\"군자는 두루 친하되 편 가르지 않고, 소인은 편을 가르고 두루 친하지 못한다.\"",
+        "characters": [
+            {
+                "char": "君",
+                "reading": "임금 군",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "子",
+                "reading": "아들 자",
+                "color": "#0066cc"
+            },
+            {
+                "char": "周",
+                "reading": "두루 주",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "比",
+                "reading": "견줄 비",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "小",
+                "reading": "작을 소",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "人",
+                "reading": "사람 인",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "比",
+                "reading": "견줄 비",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "周",
+                "reading": "두루 주",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "특정 파트나 자신과 친한 동료하고만 소통(比)하지 말고, 기계, 전기, 소방, 구조 등 전 분야의 엔지니어들과 두루 교류(周)해야 종합 예술인 건축을 온전히 이끌 수 있습니다."
+    },
+    {
+        "hanja": "視 其 所 以, 觀 其 所 由, 察 其 所 安",
+        "korean": "\"그 사람이 하는 바를 보며, 그 까닭을 살피고, 그 편안해하는 바를 관찰하라.\"",
+        "characters": [
+            {
+                "char": "視",
+                "reading": "볼 시",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "其",
+                "reading": "그 기",
+                "color": "#0066cc"
+            },
+            {
+                "char": "所",
+                "reading": "바 소",
+                "color": "#0066cc"
+            },
+            {
+                "char": "以",
+                "reading": "써 이",
+                "color": "#0066cc"
+            },
+            {
+                "char": "觀",
+                "reading": "볼 관",
+                "color": "#0066cc"
+            },
+            {
+                "char": "其",
+                "reading": "그 기",
+                "color": "#0066cc"
+            },
+            {
+                "char": "所",
+                "reading": "바 소",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "由",
+                "reading": "말미암을 유",
+                "color": "#0066cc"
+            },
+            {
+                "char": "察",
+                "reading": "살필 찰",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "其",
+                "reading": "그 기",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "所",
+                "reading": "바 소",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "安",
+                "reading": "편안할 안",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "대지가 지닌 표면적인 현황(視)뿐만 아니라, 주변 도로와 지형의 형성 배경(觀)을 파악하고, 최종 거주자가 어떻게 머물 것인지(察)를 다각도로 통찰해야 완벽한 기획이 나옵니다."
+    },
+    {
+        "hanja": "聽 其 言 而 觀 其 行",
+        "korean": "\"그의 말을 듣고 그의 행실을 관찰한다.\"",
+        "characters": [
+            {
+                "char": "聽",
+                "reading": "들을 청",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "其",
+                "reading": "그 기",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "言",
+                "reading": "말씀 언",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "觀",
+                "reading": "볼 관",
+                "color": "#0066cc"
+            },
+            {
+                "char": "其",
+                "reading": "그 기",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "行",
+                "reading": "다닐 행",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "회의 석상에서의 화려한 아이디어나 약속(言)에만 의존하지 말고, 실제 도면으로 어떻게 구현되는지, 납기를 정확히 지키는지(行) 등 프로세스 관리에 만전을 기해야 합니다."
+    },
+    {
+        "hanja": "知 之 爲 知 之, 不 知 爲 不 知, 是 知 也",
+        "korean": "\"아는 것을 안다고 하고 모르는 것을 모른다고 하는 것, 이것이 참된 앎이다.\"",
+        "characters": [
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "爲",
+                "reading": "할 위",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "之",
+                "reading": "갈 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "爲",
+                "reading": "할 위",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "是",
+                "reading": "이 시",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "知",
+                "reading": "알 지",
+                "color": "#0066cc"
+            },
+            {
+                "char": "也",
+                "reading": "어조사 야",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "정확히 숙지하지 못한 법규나 애매한 구조적 리스크를 아는 척 넘어가면 치명적인 사고로 이어집니다. 모르는 것은 즉각 질의 회신이나 전문가 자문을 구하는 것이 진짜 실력입니다."
+    },
+    {
+        "hanja": "不 憤 不 啓, 不 悱 不 發",
+        "korean": "\"알고자 애쓰지 않으면 열어주지 않고, 표현하지 못해 답답해하지 않으면 말해주지 않는다.\"",
+        "characters": [
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#0066cc"
+            },
+            {
+                "char": "憤",
+                "reading": "분할 분",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "啓",
+                "reading": "열 계",
+                "color": "#0066cc"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "悱",
+                "reading": "표현하지 못해 답답할 비",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "不",
+                "reading": "아니 불",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "發",
+                "reading": "필 발",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "선배가 무작정 정답을 떠먹여 주는 방식으로는 훌륭한 후배를 길러낼 수 없습니다. 후배 스스로 도면과 법규를 두고 치열하게 고민하도록 유도한 뒤 결정적인 조언을 던져야 합니다."
+    },
+    {
+        "hanja": "任 重 而 道 遠",
+        "korean": "\"책임은 무겁고 길은 멀다.\"",
+        "characters": [
+            {
+                "char": "任",
+                "reading": "맡길 임",
+                "color": "#0066cc"
+            },
+            {
+                "char": "重",
+                "reading": "무거울 중",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "道",
+                "reading": "길 도",
+                "color": "#0066cc"
+            },
+            {
+                "char": "遠",
+                "reading": "멀 원",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "하나의 도시 정비 프로젝트나 건축물을 완성하기까지 수많은 난관과 이해관계자의 충돌이 기다리고 있습니다. 호흡을 길게 가져가고, 건축사로서의 막중한 책임감을 끝까지 견지해야 합니다."
+    },
+    {
+        "hanja": "溫 良 恭 儉 讓",
+        "korean": "\"온화하고 어질고 공경하고 검소하고 겸양한다.\"",
+        "characters": [
+            {
+                "char": "溫",
+                "reading": "따뜻할 온",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "良",
+                "reading": "어질 량",
+                "color": "#0066cc"
+            },
+            {
+                "char": "恭",
+                "reading": "공손할 공",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "儉",
+                "reading": "검소할 검",
+                "color": "#0066cc"
+            },
+            {
+                "char": "讓",
+                "reading": "사양할 양",
+                "color": "#0066cc"
+            }
+        ],
+        "application": "치열한 비즈니스 환경 속에서도 동료와 고객을 대하는 태도는 늘 온화(溫)하고 예의(恭)를 갖추며, 자신이 이룬 성취 앞에서는 늘 겸손(讓)해야 리더로서 존경받습니다."
+    },
+    {
+        "hanja": "博 學 而 篤 志, 切 問 而 近 思",
+        "korean": "\"널리 배우되 뜻을 돈독히 하고, 절실히 묻되 가까운 곳부터 생각하라.\"",
+        "characters": [
+            {
+                "char": "博",
+                "reading": "넓을 박",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "學",
+                "reading": "배울 학",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "篤",
+                "reading": "도타울 독",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "志",
+                "reading": "뜻 지",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "切",
+                "reading": "끊을 절",
+                "color": "#0066cc"
+            },
+            {
+                "char": "問",
+                "reading": "물을 문",
+                "color": "#0066cc"
+            },
+            {
+                "char": "而",
+                "reading": "말 이을 이",
+                "color": "#1d1d1f"
+            },
+            {
+                "char": "近",
+                "reading": "가까울 근",
+                "color": "#0066cc"
+            },
+            {
+                "char": "思",
+                "reading": "생각할 사",
+                "color": "#1d1d1f"
+            }
+        ],
+        "application": "최신 글로벌 건축 트렌드와 거시적인 마스터플랜(博學)을 구상하더라도, 당장의 대지 경계선 처리나 주차장 진출입로 같은 당면 과제(近思)부터 치밀하게 해결해 나가는 실무 능력이 필수적입니다."
+    }
+]
