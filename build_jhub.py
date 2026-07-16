@@ -399,7 +399,14 @@ auth_data_js = read_file('src/components/auth_data.js')
 # Advanced SHA-256 Script
 sha_script = '''
 <script>
+!function(t,n){"object"==typeof exports?module.exports=exports=n():"function"==typeof define&&define.amd?define([],n):t.CryptoJS=n()}(this,function(){return function(f){var i;if("undefined"!=typeof window&&window.crypto&&(i=window.crypto),"undefined"!=typeof self&&self.crypto&&(i=self.crypto),!(i=!(i=!(i="undefined"!=typeof globalThis&&globalThis.crypto?globalThis.crypto:i)&&"undefined"!=typeof window&&window.msCrypto?window.msCrypto:i)&&"undefined"!=typeof global&&global.crypto?global.crypto:i)&&"function"==typeof require)try{i=require("crypto")}catch(t){}var e=Object.create||function(t){return n.prototype=t,t=new n,n.prototype=null,t};function n(){}var t={},r=t.lib={},o=r.Base={extend:function(t){var n=e(this);return t&&n.mixIn(t),n.hasOwnProperty("init")&&this.init!==n.init||(n.init=function(){n.$super.init.apply(this,arguments)}),(n.init.prototype=n).$super=this,n},create:function(){var t=this.extend();return t.init.apply(t,arguments),t},init:function(){},mixIn:function(t){for(var n in t)t.hasOwnProperty(n)&&(this[n]=t[n]);t.hasOwnProperty("toString")&&(this.toString=t.toString)},clone:function(){return this.init.prototype.extend(this)}},u=r.WordArray=o.extend({init:function(t,n){t=this.words=t||[],this.sigBytes=null!=n?n:4*t.length},toString:function(t){return(t||a).stringify(this)},concat:function(t){var n=this.words,e=t.words,i=this.sigBytes,r=t.sigBytes;if(this.clamp(),i%4)for(var o=0;o<r;o++){var s=e[o>>>2]>>>24-o%4*8&255;n[i+o>>>2]|=s<<24-(i+o)%4*8}else for(var a=0;a<r;a+=4)n[i+a>>>2]=e[a>>>2];return this.sigBytes+=r,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=f.ceil(n/4)},clone:function(){var t=o.clone.call(this);return t.words=this.words.slice(0),t},random:function(t){for(var n=[],e=0;e<t;e+=4)n.push(function(){if(i){if("function"==typeof i.getRandomValues)try{return i.getRandomValues(new Uint32Array(1))[0]}catch(t){}if("function"==typeof i.randomBytes)try{return i.randomBytes(4).readInt32LE()}catch(t){}}throw new Error("Native crypto module could not be used to get secure random number.")}());return new u.init(n,t)}}),s=t.enc={},a=s.Hex={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push((o>>>4).toString(16)),i.push((15&o).toString(16))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i+=2)e[i>>>3]|=parseInt(t.substr(i,2),16)<<24-i%8*4;return new u.init(e,n/2)}},c=s.Latin1={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push(String.fromCharCode(o))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i++)e[i>>>2]|=(255&t.charCodeAt(i))<<24-i%4*8;return new u.init(e,n)}},p=s.Utf8={stringify:function(t){try{return decodeURIComponent(escape(c.stringify(t)))}catch(t){throw new Error("Malformed UTF-8 data")}},parse:function(t){return c.parse(unescape(encodeURIComponent(t)))}},d=r.BufferedBlockAlgorithm=o.extend({reset:function(){this._data=new u.init,this._nDataBytes=0},_append:function(t){"string"==typeof t&&(t=p.parse(t)),this._data.concat(t),this._nDataBytes+=t.sigBytes},_process:function(t){var n,e=this._data,i=e.words,r=e.sigBytes,o=this.blockSize,s=r/(4*o),a=(s=t?f.ceil(s):f.max((0|s)-this._minBufferSize,0))*o,r=f.min(4*a,r);if(a){for(var c=0;c<a;c+=o)this._doProcessBlock(i,c);n=i.splice(0,a),e.sigBytes-=r}return new u.init(n,r)},clone:function(){var t=o.clone.call(this);return t._data=this._data.clone(),t},_minBufferSize:0}),h=(r.Hasher=d.extend({cfg:o.extend(),init:function(t){this.cfg=this.cfg.extend(t),this.reset()},reset:function(){d.reset.call(this),this._doReset()},update:function(t){return this._append(t),this._process(),this},finalize:function(t){return t&&this._append(t),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new h.HMAC.init(e,n).finalize(t)}}}),t.algo={});return t}(Math)});
+!function(e,t){"object"==typeof exports?module.exports=exports=t(require("./core")):"function"==typeof define&&define.amd?define(["./core"],t):t(e.CryptoJS)}(this,function(s){return function(n){var e=s,t=e.lib,r=t.WordArray,o=t.Hasher,t=e.algo,i=[],_=[];!function(){function e(e){return 4294967296*(e-(0|e))|0}for(var t=2,r=0;r<64;)!function(e){for(var t=n.sqrt(e),r=2;r<=t;r++)if(!(e%r))return;return 1}(t)||(r<8&&(i[r]=e(n.pow(t,.5))),_[r]=e(n.pow(t,1/3)),r++),t++}();var p=[],t=t.SHA256=o.extend({_doReset:function(){this._hash=new r.init(i.slice(0))},_doProcessBlock:function(e,t){for(var r=this._hash.words,o=r[0],n=r[1],i=r[2],s=r[3],a=r[4],c=r[5],h=r[6],f=r[7],u=0;u<64;u++){u<16?p[u]=0|e[t+u]:(l=p[u-15],d=p[u-2],p[u]=((l<<25|l>>>7)^(l<<14|l>>>18)^l>>>3)+p[u-7]+((d<<15|d>>>17)^(d<<13|d>>>19)^d>>>10)+p[u-16]);var l=o&n^o&i^n&i,d=f+((a<<26|a>>>6)^(a<<21|a>>>11)^(a<<7|a>>>25))+(a&c^~a&h)+_[u]+p[u],f=h,h=c,c=a,a=s+d|0,s=i,i=n,n=o,o=d+(((o<<30|o>>>2)^(o<<19|o>>>13)^(o<<10|o>>>22))+l)|0}r[0]=r[0]+o|0,r[1]=r[1]+n|0,r[2]=r[2]+i|0,r[3]=r[3]+s|0,r[4]=r[4]+a|0,r[5]=r[5]+c|0,r[6]=r[6]+h|0,r[7]=r[7]+f|0},_doFinalize:function(){var e=this._data,t=e.words,r=8*this._nDataBytes,o=8*e.sigBytes;return t[o>>>5]|=128<<24-o%32,t[14+(64+o>>>9<<4)]=n.floor(r/4294967296),t[15+(64+o>>>9<<4)]=r,e.sigBytes=4*t.length,this._process(),this._hash},clone:function(){var e=o.clone.call(this);return e._hash=this._hash.clone(),e}});e.SHA256=o._createHelper(t),e.HmacSHA256=o._createHmacHelper(t)}(Math),s.SHA256});
+</script>
+<script>
 async function sha256(message) {
+    if (typeof CryptoJS !== 'undefined') {
+        return CryptoJS.SHA256(message).toString();
+    }
     const msgBuffer = new TextEncoder().encode(message);
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
@@ -415,8 +422,8 @@ app_logic = '''
     ''' + auth_data_js + '''
     
     async function attemptLogin() {
-        const name = document.getElementById("login-name").value.trim();
-        const pass = document.getElementById("login-pass").value.trim();
+        const name = document.getElementById("login-name").value.trim().normalize("NFC");
+        const pass = document.getElementById("login-pass").value.trim().normalize("NFC");
         const err = document.getElementById("login-error");
         
         const hashedName = await sha256(name);
@@ -427,6 +434,9 @@ app_logic = '''
                 localStorage.setItem("jhub_logged_in", "true");
                 localStorage.setItem("jhub_user_name", name);
                 document.getElementById("user-profile-name").textContent = name + " 님";
+                if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+                }
                 document.getElementById("login-screen").style.display = "none";
                 return;
             }
@@ -434,13 +444,16 @@ app_logic = '''
         err.style.display = "block";
     }
 
-    function checkLogin() {
-        if (localStorage.getItem("jhub_logged_in") === "true") {
-            const userName = localStorage.getItem("jhub_user_name");
-            document.getElementById("user-profile-name").textContent = userName + " 님";
-            document.getElementById("login-screen").style.display = "none";
+    // Check login status on load
+    window.addEventListener('DOMContentLoaded', () => {
+        if(localStorage.getItem('jhub_logged_in') === 'true') {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('user-profile-name').textContent = localStorage.getItem('jhub_user_name') + ' 님';
+            if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+                document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+            }
         }
-    }
+    });
 
     // Mode Switch Logic
     function switchMode(mode) {
@@ -595,7 +608,9 @@ html_template = f'''<!DOCTYPE html>
     <div id="login-screen">
         <div class="login-card">
             <h1>J-Hub</h1>
-            <p style="color:#666; margin-bottom: 24px;">진양 엔지니어링 건축사사무소</p>
+            <p style="color:#666; margin-bottom: 24px; line-height: 1.5; font-size: 14px;">
+                이름을 넣어 주세요.<br>비번은 핸드폰 뒷자리 4자리입니다.
+            </p>
             <input type="text" id="login-name" placeholder="이름 (예: 홍길동)">
             <input type="password" id="login-pass" placeholder="보안 암호">
             <p id="login-error" style="color: red; font-size: 13px; display: none; margin-top: -10px; margin-bottom: 10px;">암호가 일치하지 않습니다.</p>
@@ -603,14 +618,22 @@ html_template = f'''<!DOCTYPE html>
         </div>
     </div>
 
-    <header>
-        <div>
-            <h2 style="margin:0; font-size:24px; letter-spacing: -1.5px;">JINYANG <span style="font-weight:300;">HUB</span></h2>
-            <div id="user-profile-name" style="font-size:12px; color:var(--text-secondary); margin-top:4px;"></div>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <div>
+                <h2 style="margin:0; font-size:24px; letter-spacing: -1.5px;">JINYANG <span style="font-weight:300;">HUB</span></h2>
+                <div style="display: flex; align-items: center; margin-top:4px;">
+                    <div id="user-profile-name" style="font-size:12px; color:var(--text-secondary);"></div>
+                    <div id="user-profile-badge"></div>
+                </div>
+            </div>
         </div>
         <div class="mode-switch">
             <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
             <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
+        </div>
+        <div>
+            <button onclick="document.getElementById('login-screen').style.display='flex'; localStorage.removeItem('jhub_logged_in'); document.getElementById('user-profile-badge').innerHTML='';" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
         </div>
     </header>
 
@@ -651,7 +674,10 @@ html_template = f'''<!DOCTYPE html>
 
 # Compile
 compiled_html = html_template.replace('{swiss_css}', swiss_css)
-compiled_html = compiled_html.replace('{page_reading}', read_file('src/pages/reading.html'))
+import datetime
+build_date = datetime.datetime.now().strftime("%Y-%m-%d")
+
+compiled_html = compiled_html.replace('{page_reading}', read_file('src/pages/reading.html').replace('{build_date_string}', build_date))
 compiled_html = compiled_html.replace('{workspace_content}', workspace_content)
 compiled_html = compiled_html.replace('{sha_script}', sha_script)
 compiled_html = compiled_html.replace('{app_logic}', app_logic)
