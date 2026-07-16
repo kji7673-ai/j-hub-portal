@@ -46,15 +46,21 @@
     
     .menu-button {
         background: none; border: none; color: var(--ink); font-size: 14px; font-weight: 600; cursor: pointer;
-        display: none; padding: 8px;
+        padding: 8px 12px; display: flex; align-items: center; gap: 6px;
+        border-radius: 6px; transition: background 0.2s;
     }
+    .menu-button:hover { background: rgba(0,0,0,0.05); }
     
+    /* DESKTOP SIDEBAR */
     .desktop-sidebar {
         position: fixed; top: 96px; left: 0; width: 280px; height: calc(100vh - 96px);
         background: var(--canvas-parchment);
         overflow-y: auto; padding: 40px 20px;
         border-right: 1px solid var(--hairline);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 800;
     }
+    .desktop-sidebar.collapsed { transform: translateX(-100%); }
     
     .toc-category {
         font-size: 12px; font-weight: 600; color: var(--ink-muted); margin-bottom: 10px; margin-top: 30px;
@@ -69,8 +75,15 @@
     .toc-item a:hover { background: rgba(0,0,0,0.05); }
     .toc-item.active a { background: var(--primary); color: white; font-weight: 600; }
     
+    /* MAIN CONTENT */
+    .main-content-wrapper {
+        padding-left: 280px;
+        transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .main-content-wrapper.collapsed { padding-left: 0; }
+    
     .main-content {
-        margin-left: 280px; padding: 40px; max-width: 1000px;
+        padding: 40px; max-width: 1000px; margin: 0 auto;
     }
     
     .viewer-card {
@@ -80,14 +93,10 @@
         min-height: 80vh;
     }
     
-    .category-label {
-        font-size: 14px; font-weight: 600; color: var(--ink-muted); margin-bottom: 15px; display: block;
-    }
+    .category-label { font-size: 14px; font-weight: 600; color: var(--ink-muted); margin-bottom: 15px; display: block; }
+    .page-title { font-size: 40px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 50px; }
     
-    .page-title {
-        font-size: 40px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 50px;
-    }
-    
+    /* MARKDOWN STYLES */
     .md-content { font-size: 17px; }
     .md-content h1 { font-size: 34px; letter-spacing: -0.6px; margin: 60px 0 20px; }
     .md-content h2 { font-size: 28px; letter-spacing: -0.5px; margin: 50px 0 20px; }
@@ -103,35 +112,29 @@
     .md-content pre code { background: transparent; padding: 0; }
     .md-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; color: var(--ink-muted); font-size: 21px; font-weight: 300; margin: 40px 0; }
     
-    .pagination {
-        display: flex; justify-content: space-between; align-items: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--hairline);
-    }
-    .btn-page {
-        display: inline-block; padding: 11px 22px; background: var(--canvas-parchment); color: var(--ink);
-        border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600;
-        transition: background 0.2s;
-    }
+    /* PAGINATION */
+    .pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--hairline); }
+    .btn-page { display: inline-block; padding: 11px 22px; background: var(--canvas-parchment); color: var(--ink); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
     .btn-page:hover { background: #e8e8ed; }
     
+    /* MOBILE MENU OVERLAY */
     .mobile-menu-overlay {
         position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--canvas);
         z-index: 2000; padding: 60px 30px; overflow-y: auto;
         display: none;
     }
     .mobile-menu-overlay.active { display: block; }
-    .close-btn {
-        position: absolute; top: 20px; right: 20px; background: none; border: none;
-        font-size: 30px; color: var(--ink); cursor: pointer; padding: 10px;
-    }
+    .close-btn { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 30px; color: var(--ink); cursor: pointer; padding: 10px; }
     
     .mobile-toc-item { margin-bottom: 15px; }
     .mobile-toc-item a { font-size: 24px; font-weight: 600; color: var(--ink); text-decoration: none; }
     .mobile-toc-item.active a { color: var(--primary); }
     
+    /* RESPONSIVE */
     @media (max-width: 900px) {
         .desktop-sidebar { display: none; }
-        .main-content { margin-left: 0; padding: 20px 0; }
-        .menu-button { display: block; }
+        .main-content-wrapper { padding-left: 0; }
+        .main-content { padding: 20px 0; }
         .viewer-card { padding: 20px; border-radius: 0; border: none; box-shadow: none; background: transparent; min-height: auto; }
         .page-title { font-size: 32px; margin-bottom: 30px; }
         body { background-color: var(--canvas); }
@@ -147,11 +150,14 @@
     
     <div class="sub-nav">
         <a href="index.html" class="sub-nav-brand">J-Hub Portal</a>
-        <button class="menu-button" onclick="openMenu()">☰ 목차</button>
+        <button class="menu-button" onclick="toggleMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            목차
+        </button>
     </div>
 
     <!-- Desktop Sidebar -->
-    <div class="desktop-sidebar">
+    <div class="desktop-sidebar" id="desktopSidebar">
         <div class="toc-category">📖 시작하기 전에</div>
         <div class="toc-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
         <div class="toc-category">제1장. 도입 및 총론</div>
@@ -184,7 +190,7 @@
 
     <!-- Mobile Overlay Menu -->
     <div class="mobile-menu-overlay" id="mobileMenu">
-        <button class="close-btn" onclick="closeMenu()">×</button>
+        <button class="close-btn" onclick="closeMobileMenu()">×</button>
         <div style="margin-bottom: 40px; font-size: 14px; color: #7a7a7a; font-weight: 600;">J-Hub Portal 목차</div>
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📖 시작하기 전에</div>
         <div class="mobile-toc-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
@@ -216,13 +222,14 @@
 
     </div>
 
-    <div class="main-content">
-        <div class="viewer-card">
-            <span class="category-label">제1장. 도입 및 총론</span>
-            <h1 class="page-title">문서 1. 여는 글: AI와 마주한 건축의 미래</h1>
+    <div class="main-content-wrapper" id="mainWrapper">
+        <div class="main-content">
+            <div class="viewer-card">
+                <span class="category-label">제1장. 도입 및 총론</span>
+                <h1 class="page-title">문서 1. 여는 글: AI와 마주한 건축의 미래</h1>
 
-            <div class="md-content">
-                <h3>건축의 미래를 준비하며: 인간의 온기와 AI의 만남</h3>
+                <div class="md-content">
+                    <h3>건축의 미래를 준비하며: 인간의 온기와 AI의 만남</h3>
 <p>요즘 저는 진양엔지니어링의 미래를 두고 깊은 고민을 하고 있습니다. 한 가지 분명한 사실은, 지금까지 우리가 해왔던 전통적인 건축 설계 방식에 거대한 패러다임의 변화가 다가오고 있다는 점입니다.</p>
 <p>앞으로는 도면과 산출물을 빚어내는 과정 자체가 고도화된 AI 플랫폼 위에서 진행될 것입니다. 하지만, 아무리 뛰어난 기술과 알고리즘이 도입되더라도 <strong>그 차가운 플랫폼 속에 '인간의 따뜻한 온기'와 '건축적 철학'을 불어넣는 것은 영원히 우리 건축사들의 몫입니다.</strong></p>
 
@@ -250,22 +257,34 @@
 <p>이 거대한 혁신은 단순한 도구의 변화가 아니라, 데이터를 다루는 새로운 생태계로 전환하려는 여러분의 깨어있는 의지 없이는 불가능합니다. 제가 겪은 치열한 고민의 과정과 해답을 담은 이 프로그램이, 진양의 새로운 미래를 여는 든든한 나침반이 되기를 바랍니다.</p>
 <p><br></p>
 <p style="text-align: right; font-weight: bold;">대표이사 김중일 드림</p>
-            </div>
-            
-            <div class="pagination">
-                <a href="index.html" class="btn-page">◀ 이전: 전체 목차 및 학습 로드맵</a>
-                <a href="page_2.html" class="btn-page">다음: 문서 2. 설계 생애주기 통합: 진양 AI 7대 비전 ▶</a>
+                </div>
+                
+                <div class="pagination">
+                    <a href="index.html" class="btn-page">◀ 이전: 전체 목차 및 학습 로드맵</a>
+                    <a href="page_2.html" class="btn-page">다음: 문서 2. 설계 생애주기 통합: 진양 AI 7대 비전 ▶</a>
 
+                </div>
+                
+                <div style="margin-top:60px;text-align:center;color:#7a7a7a;font-size:13px;">
+                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.18
+                </div>
             </div>
         </div>
     </div>
     
     <script>
-        function openMenu() {
-            document.getElementById('mobileMenu').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        function toggleMenu() {
+            if (window.innerWidth <= 900) {
+                // Mobile
+                document.getElementById('mobileMenu').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Desktop
+                document.getElementById('desktopSidebar').classList.toggle('collapsed');
+                document.getElementById('mainWrapper').classList.toggle('collapsed');
+            }
         }
-        function closeMenu() {
+        function closeMobileMenu() {
             document.getElementById('mobileMenu').classList.remove('active');
             document.body.style.overflow = '';
         }
