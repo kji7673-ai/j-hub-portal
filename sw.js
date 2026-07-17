@@ -1,6 +1,5 @@
-const CACHE_NAME = 'j-hub-cache-v3';
+const CACHE_NAME = 'j-hub-cache-v4';
 const urlsToCache = [
-  './index.html',
   './manifest.json'
 ];
 
