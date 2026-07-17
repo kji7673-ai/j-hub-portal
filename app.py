@@ -168,5 +168,5 @@ def get_feedbacks():
 # But this satisfies the basic requirement of server-side login.
 
 if __name__ == '__main__':
-    # 사내망 어디서든 접속 가능하도록 host='0.0.0.0' 설정
-    app.run(host='0.0.0.0', port=15000, debug=True)
+    port = int(os.environ.get('PORT', 15000))
+    app.run(host='0.0.0.0', port=port)
