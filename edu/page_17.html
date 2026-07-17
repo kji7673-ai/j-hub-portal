@@ -8,7 +8,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="J-Hub">
-    <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="manifest" href="manifest.json">
     
@@ -18,10 +17,24 @@
         --primary: #0066cc;
         --ink: #1d1d1f;
         --ink-muted: #7a7a7a;
+        --ink-muted-80: #333333;
         --canvas: #ffffff;
         --canvas-parchment: #f5f5f7;
         --surface-black: #000000;
+        --surface-pearl: #fafafc;
         --hairline: #e0e0e0;
+    }
+    
+    [data-theme="dark"] {
+        --primary: #2997ff;
+        --ink: #ffffff;
+        --ink-muted: #a1a1a6;
+        --ink-muted-80: #cccccc;
+        --canvas: #000000;
+        --canvas-parchment: #1c1c1e;
+        --surface-black: #1d1d1f;
+        --surface-pearl: #2c2c2e;
+        --hairline: #38383a;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -34,6 +47,16 @@
         line-height: 1.47;
         letter-spacing: -0.3px;
         padding-top: 96px; 
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    /* PROGRESS BAR */
+    .progress-container {
+        position: fixed; top: calc(44px + env(safe-area-inset-top)); left: 0; width: 100%; height: 3px;
+        background: transparent; z-index: 1001;
+    }
+    .progress-bar {
+        height: 100%; background: var(--primary); width: 0%; transition: width 0.1s;
     }
     
     .global-nav {
@@ -46,7 +69,7 @@
     
     .sub-nav {
         position: fixed; top: calc(44px + env(safe-area-inset-top)); left: 0; width: 100%; height: 52px;
-        background-color: rgba(245, 245, 247, 0.8);
+        background-color: var(--canvas-parchment); opacity: 0.9;
         backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--hairline);
         display: flex; align-items: center; justify-content: space-between;
@@ -61,7 +84,7 @@
         padding: 8px 12px; display: flex; align-items: center; gap: 6px;
         border-radius: 6px; transition: background 0.2s;
     }
-    .action-btn:hover { background: rgba(0,0,0,0.05); }
+    .action-btn:hover { background: var(--hairline); }
     
     /* DESKTOP SIDEBAR */
     .desktop-sidebar {
@@ -84,7 +107,7 @@
         color: var(--ink); text-decoration: none; font-size: 14px;
         display: block; padding: 6px 12px; border-radius: 6px;
     }
-    .toc-item a:hover { background: rgba(0,0,0,0.05); }
+    .toc-item a:hover { background: var(--hairline); }
     .toc-item.active a { background: var(--primary); color: white; font-weight: 600; }
     
     /* MAIN CONTENT */
@@ -95,15 +118,41 @@
     .main-content-wrapper.collapsed { padding-left: 0; }
     
     .main-content {
-        padding: 40px; max-width: 1000px; margin: 0 auto;
+        padding: 40px; max-width: 1000px; margin: 0 auto; position: relative;
     }
     
     .viewer-card {
         background: var(--canvas); border-radius: 18px;
         padding: 80px 60px;
         box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-        min-height: 80vh;
+        min-height: 80vh; position: relative;
     }
+    
+    /* DASHBOARD CARD UI */
+    .dashboard-grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 40px;
+    }
+    .dash-card {
+        background: var(--canvas); border-radius: 18px; padding: 30px;
+        border: 1px solid var(--hairline); text-decoration: none; color: var(--ink);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s;
+        display: flex; flex-direction: column;
+    }
+    .dash-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+    .dash-card h3 { font-size: 21px; margin-bottom: 12px; color: var(--ink); }
+    .dash-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.5; flex-grow: 1; }
+    .dash-card .meta { margin-top: 20px; font-size: 12px; color: var(--primary); font-weight: 600; }
+    
+    /* ARTICLE IN-PAGE TOC */
+    .article-toc {
+        position: absolute; top: 80px; right: -260px; width: 240px;
+        background: var(--canvas-parchment); border-radius: 12px; padding: 20px;
+        font-size: 13px; border: 1px solid var(--hairline);
+        max-height: calc(100vh - 140px); overflow-y: auto;
+    }
+    .article-toc strong { display: block; margin-bottom: 12px; color: var(--ink); font-size: 14px; }
+    .article-toc a { color: var(--ink-muted); text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.4; }
+    .article-toc a:hover { color: var(--primary); }
     
     /* WAYFINDING: BREADCRUMB */
     .breadcrumb { font-size: 13px; font-weight: 500; color: var(--ink-muted); margin-bottom: 12px; }
@@ -113,29 +162,31 @@
     
     /* MARKDOWN STYLES */
     .md-content { font-size: 17px; }
-    .md-content h1 { font-size: 34px; letter-spacing: -0.6px; margin: 60px 0 20px; }
-    .md-content h2 { font-size: 28px; letter-spacing: -0.5px; margin: 50px 0 20px; }
-    .md-content h3 { font-size: 21px; margin: 40px 0 15px; }
+    .md-content h1 { font-size: 34px; letter-spacing: -0.6px; margin: 60px 0 20px; color: var(--ink); }
+    .md-content h2 { font-size: 28px; letter-spacing: -0.5px; margin: 50px 0 20px; color: var(--ink); scroll-margin-top: 120px; }
+    .md-content h3 { font-size: 21px; margin: 40px 0 15px; color: var(--ink); scroll-margin-top: 120px; }
     .md-content p { margin-bottom: 24px; color: var(--ink); }
     .md-content img { max-width: 100%; border-radius: 11px; margin: 30px 0; border: 1px solid var(--hairline); }
-    .md-content table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 14px; }
-    .md-content th { background: var(--canvas-parchment); padding: 12px; text-align: left; border-bottom: 1px solid var(--hairline); }
+    .md-content table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 14px; color: var(--ink); }
+    .md-content th { background: var(--surface-pearl); padding: 12px; text-align: left; border-bottom: 1px solid var(--hairline); }
     .md-content td { padding: 12px; border-bottom: 1px solid var(--hairline); }
     .md-content a { color: var(--primary); text-decoration: none; }
-    .md-content pre { background: var(--canvas-parchment); padding: 20px; border-radius: 11px; overflow-x: auto; margin: 30px 0; font-size: 14px; }
-    .md-content code { background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-    .md-content pre code { background: transparent; padding: 0; }
+    .md-content pre { background: var(--surface-pearl); padding: 20px; border-radius: 11px; overflow-x: auto; margin: 30px 0; font-size: 14px; border: 1px solid var(--hairline); }
+    .md-content code { background: var(--surface-pearl); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: var(--ink); }
+    .md-content pre code { background: transparent; padding: 0; border: none; }
     .md-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; color: var(--ink-muted); font-size: 21px; font-weight: 300; margin: 40px 0; }
+    .md-content .alert { padding: 20px; border-radius: 12px; margin-bottom: 24px; border-left: 4px solid var(--hairline); background: var(--surface-pearl); }
+    .md-content .alert-info { border-left-color: var(--primary); background: rgba(0, 102, 204, 0.05); }
     
     /* PAGINATION */
     .pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--hairline); }
-    .btn-page { display: inline-block; padding: 11px 22px; background: var(--canvas-parchment); color: var(--ink); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
-    .btn-page:hover { background: #e8e8ed; }
+    .btn-page { display: inline-block; padding: 11px 22px; background: var(--surface-pearl); color: var(--ink); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; border: 1px solid var(--hairline); }
+    .btn-page:hover { background: var(--hairline); }
     
     /* WAYFINDING: TOP BUTTON */
     .btn-top {
         position: fixed; bottom: -60px; right: 30px; width: 48px; height: 48px;
-        background: var(--surface-black); color: white; border: none; border-radius: 50%;
+        background: var(--surface-black); color: var(--canvas); border: none; border-radius: 50%;
         font-size: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.2s; z-index: 1000;
         display: flex; align-items: center; justify-content: center;
@@ -149,6 +200,7 @@
         background: rgba(245, 245, 247, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
         z-index: 3000; display: none; flex-direction: column; align-items: center; padding-top: 100px;
     }
+    [data-theme="dark"] .search-overlay { background: rgba(28, 28, 30, 0.95); }
     .search-overlay.active { display: flex; }
     .search-container { width: 90%; max-width: 600px; position: relative; }
     .search-input {
@@ -164,7 +216,7 @@
         background: var(--canvas); padding: 16px 20px; border-radius: 12px; margin-bottom: 10px;
         text-decoration: none; display: block; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border: 1px solid var(--hairline);
     }
-    .search-result-item:hover { background: #f9f9fb; }
+    .search-result-item:hover { background: var(--surface-pearl); }
     .search-result-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
     .search-result-cat { font-size: 12px; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
     .search-result-snippet { font-size: 13px; color: var(--ink-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -186,7 +238,7 @@
     /* PWA INSTALL TOAST */
     .pwa-toast {
         position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%);
-        background: var(--surface-black); color: white; padding: 16px 24px; border-radius: 12px;
+        background: var(--surface-black); color: var(--canvas); padding: 16px 24px; border-radius: 12px;
         font-size: 14px; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         z-index: 3000; transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         display: flex; align-items: center; gap: 12px; width: 90%; max-width: 400px;
@@ -196,6 +248,9 @@
     .pwa-toast-close { margin-left: auto; background: none; border: none; color: #aaa; font-size: 20px; cursor: pointer; }
     
     /* RESPONSIVE */
+    @media (max-width: 1400px) {
+        .article-toc { display: none; }
+    }
     @media (max-width: 900px) {
         .desktop-sidebar { display: none; }
         .main-content-wrapper { padding-left: 0; }
@@ -211,13 +266,36 @@
         .search-container { padding-top: 20px; }
         .btn-top { right: 20px; bottom: -60px; width: 40px; height: 40px; font-size: 18px; }
         .btn-top.show { bottom: 20px; }
+        .dashboard-grid { grid-template-columns: 1fr; }
     }
     </style>
-    
-    <!-- Load Search Index -->
     <script src="search_index.js"></script>
+    <script>
+        // Dark Mode Logic
+        function initTheme() {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        }
+        initTheme();
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            if (current === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
 </head>
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    
     <div class="global-nav">
         (주)진양엔지니어링 건축사사무소
     </div>
@@ -225,6 +303,9 @@
     <div class="sub-nav">
         <a href="index.html" class="sub-nav-brand">J-Hub Portal</a>
         <div class="nav-actions">
+            <button class="action-btn" onclick="toggleTheme()" title="다크모드 토글">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
             <button class="action-btn" onclick="openSearch()">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <span class="desktop-only" style="display:none;">검색</span>
@@ -239,7 +320,7 @@
     <!-- Desktop Sidebar -->
     <div class="desktop-sidebar" id="desktopSidebar">
         <div class="toc-category">📖 시작하기 전에</div>
-        <div class="toc-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
+        <div class="toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵</a></div>
         <div class="toc-category">제1장. 도입 및 총론</div>
         <div class="toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
         <div class="toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
@@ -272,34 +353,34 @@
     <!-- Mobile Overlay Menu -->
     <div class="mobile-menu-overlay" id="mobileMenu">
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
-        <div style="margin-bottom: 40px; font-size: 14px; color: #7a7a7a; font-weight: 600;">J-Hub Portal 목차</div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📖 시작하기 전에</div>
-        <div class="mobile-toc-item"><a href="index.html">전체 목차 및 학습 로드맵</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제1장. 도입 및 총론</div>
+        <div style="margin-bottom: 40px; font-size: 14px; color: var(--ink-muted); font-weight: 600;">J-Hub Portal 목차</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">📖 시작하기 전에</div>
+        <div class="mobile-toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵</a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제1장. 도입 및 총론</div>
         <div class="mobile-toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></div>
         <div class="mobile-toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제2장. AI 및 시스템 기본 이해</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제2장. AI 및 시스템 기본 이해</div>
         <div class="mobile-toc-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></div>
         <div class="mobile-toc-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
         <div class="mobile-toc-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제3장. 행동 지침 및 사내 문화</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제3장. 행동 지침 및 사내 문화</div>
         <div class="mobile-toc-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
         <div class="mobile-toc-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제4장. 보안 및 품질 관리</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제4장. 보안 및 품질 관리</div>
         <div class="mobile-toc-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
         <div class="mobile-toc-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제5장. 실무 시스템 활용</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제5장. 실무 시스템 활용</div>
         <div class="mobile-toc-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제6장. 사내 소통 및 문화</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제6장. 사내 소통 및 문화</div>
         <div class="mobile-toc-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
         <div class="mobile-toc-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
         <div class="mobile-toc-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
         <div class="mobile-toc-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
         <div class="mobile-toc-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
         <div class="mobile-toc-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
         <div class="mobile-toc-item"><a href="page_18.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제4장. 시스템 연동 및 자동화 실무</div>
         <div class="mobile-toc-item active"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
 
     </div>
@@ -316,36 +397,38 @@
     <div class="main-content-wrapper" id="mainWrapper">
         <div class="main-content">
             <div class="viewer-card">
+<div class="article-toc">
+<strong>본문 목차</strong>
+<a href="#네이버-밴드-진양저널-연동-정석-가이드">네이버 밴드 ↔ 진양저널 연동 정석 가이드</a>
+<a href="#1-왜-이-방식이-정석-인가-CEO-인사이트-반영-">&nbsp;&nbsp;· 1. 왜 이 방식이 '정석'인가? (CEO 인사이트 반영)</a>
+<a href="#2-실무-적용을-위한-밴드-작성-규칙-SOP-">&nbsp;&nbsp;· 2. 실무 적용을 위한 밴드 작성 규칙 (SOP)</a>
+<a href="#3-진양저널-API-수집-파이프라인-Python-로직-">&nbsp;&nbsp;· 3. 진양저널 API 수집 파이프라인 (Python 로직)</a>
+</div>
                 <div class="breadcrumb">홈 > 제4장. 시스템 연동 및 자동화 실무 > <span>현재 문서</span></div>
                 <h1 class="page-title">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</h1>
 
                 <div class="md-content">
                     <div class="page tile-light">
-    <div class="content-wrap">
-        <h2 class="display-lg hairline-bottom">네이버 밴드 ↔ 진양저널 연동 정석 가이드</h2>
-
-        <p class="body-text">이 문서는 네이버 밴드에 기록된 <strong>'주간 회의록 및 일정표'</strong>를 진양저널 시스템으로 안전하고 정확하게 수집(Pull)하는 <strong>최적의 실무 파이프라인과 규칙(SOP)</strong>을 안내합니다.</p>
-
-        <h3 class="display-md" style="margin-top: 40px;">1. 왜 이 방식이 '정석'인가? (CEO 인사이트 반영)</h3>
-        <p class="body-text">초기에는 "현장 사진만 밴드에 올리면 AI가 알아서 회의록을 써주는" 완전 자동화를 고려했으나, 이는 <strong>AI의 환각(거짓 정보 생성) 리스크</strong>와 <strong>보안 유출 위험</strong>이 컸습니다. 따라서 <strong>'밴드에 먼저 명확한 텍스트를 작성하고, 이를 수집하는 방식'</strong>으로 선회했습니다.</p>
-
-        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
-            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
-                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">환각(Hallucination) 제로화</div>
-                <p class="caption">사진의 불완전한 맥락을 AI가 상상해서 채우지 않도록, 직원이 직접 작성한 '확정된 텍스트'만 가져오므로 오류가 0%에 수렴합니다.</p>
-            </div>
-            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
-                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">단일 진실 공급원 (SSOT)</div>
-                <p class="caption">소통의 중심인 '네이버 밴드'가 기준 데이터가 되고, 진양저널은 이를 영구 보관(Archive)하는 역할로 명확히 분리됩니다.</p>
-            </div>
-        </div>
-
-        <h3 class="display-md" style="margin-top: 50px;">2. 실무 적용을 위한 밴드 작성 규칙 (SOP)</h3>
-        <p class="body-text">프로그램을 복잡하게 만드는 대신, <strong>직원들이 밴드에 글을 올리는 가벼운 약속</strong>을 통해 자동화를 완성합니다.</p>
-
-        <div style="background: var(--surface-tile-1); color: var(--on-dark); padding: 24px; border-radius: var(--rounded-lg); margin: 20px 0;">
-            <p class="body-strong" style="margin-bottom: 12px; color: var(--primary-on-dark);">📌 밴드 주간보고 작성 템플릿</p>
-            <pre style="background: transparent; color: var(--on-dark); font-family: 'SF Pro Text', monospace; font-size: 14px; margin: 0; line-height: 1.6;">#진양저널_주간보고
+<div class="content-wrap">
+<h2 class="display-lg hairline-bottom" id="네이버-밴드-진양저널-연동-정석-가이드">네이버 밴드 ↔ 진양저널 연동 정석 가이드</h2>
+<p class="body-text">이 문서는 네이버 밴드에 기록된 <strong>'주간 회의록 및 일정표'</strong>를 진양저널 시스템으로 안전하고 정확하게 수집(Pull)하는 <strong>최적의 실무 파이프라인과 규칙(SOP)</strong>을 안내합니다.</p>
+<h3 class="display-md" id="1-왜-이-방식이-정석-인가-CEO-인사이트-반영-" style="margin-top: 40px;">1. 왜 이 방식이 '정석'인가? (CEO 인사이트 반영)</h3>
+<p class="body-text">초기에는 "현장 사진만 밴드에 올리면 AI가 알아서 회의록을 써주는" 완전 자동화를 고려했으나, 이는 <strong>AI의 환각(거짓 정보 생성) 리스크</strong>와 <strong>보안 유출 위험</strong>이 컸습니다. 따라서 <strong>'밴드에 먼저 명확한 텍스트를 작성하고, 이를 수집하는 방식'</strong>으로 선회했습니다.</p>
+<div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
+<div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
+<div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">환각(Hallucination) 제로화</div>
+<p class="caption">사진의 불완전한 맥락을 AI가 상상해서 채우지 않도록, 직원이 직접 작성한 '확정된 텍스트'만 가져오므로 오류가 0%에 수렴합니다.</p>
+</div>
+<div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
+<div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">단일 진실 공급원 (SSOT)</div>
+<p class="caption">소통의 중심인 '네이버 밴드'가 기준 데이터가 되고, 진양저널은 이를 영구 보관(Archive)하는 역할로 명확히 분리됩니다.</p>
+</div>
+</div>
+<h3 class="display-md" id="2-실무-적용을-위한-밴드-작성-규칙-SOP-" style="margin-top: 50px;">2. 실무 적용을 위한 밴드 작성 규칙 (SOP)</h3>
+<p class="body-text">프로그램을 복잡하게 만드는 대신, <strong>직원들이 밴드에 글을 올리는 가벼운 약속</strong>을 통해 자동화를 완성합니다.</p>
+<div style="background: var(--surface-tile-1); color: var(--on-dark); padding: 24px; border-radius: var(--rounded-lg); margin: 20px 0;">
+<p class="body-strong" style="margin-bottom: 12px; color: var(--primary-on-dark);">📌 밴드 주간보고 작성 템플릿</p>
+<pre style="background: transparent; color: var(--on-dark); font-family: 'SF Pro Text', monospace; font-size: 14px; margin: 0; line-height: 1.6;">#진양저널_주간보고
 
 [일정표]
 - 7/20(월): A구역 건축심의 준비
@@ -355,19 +438,16 @@
 - 지하주차장 모듈 8.4m 적용 확정
 - 데크 레벨 산정 재검토 필요
 (여기에 필요한 현장 사진 첨부)</pre>
-        </div>
-
-        <h3 class="display-md" style="margin-top: 40px;">3. 진양저널 API 수집 파이프라인 (Python 로직)</h3>
-        <p class="body-text">위 규칙을 바탕으로 진양저널 서버는 <strong>매주 월요일</strong>에 다음과 같은 로직을 수행합니다.</p>
-
-        <ul style="margin: 0; padding-left: 20px; font-family: 'SF Pro Text', sans-serif; line-height: 1.6;">
-            <li><strong>STEP 1. 필터링 호출:</strong> 밴드 API를 통해 글을 읽어올 때, 본문에 <code>#진양저널_주간보고</code> 태그가 있는 게시글만 수집합니다. (노이즈 완벽 제거)</li>
-            <li><strong>STEP 2. 파싱(Parsing):</strong> 가져온 글 본문에서 <code>[일정표]</code>와 <code>[회의록]</code> 키워드를 기준으로 텍스트를 분리합니다.</li>
-            <li><strong>STEP 3. 외부 AI 통과 X:</strong> 텍스트가 이미 사람이 정제한 완벽한 상태이므로, 구글이나 OpenAI 서버에 데이터를 보낼 필요 없이 즉시 J 저널 마크다운으로 변환합니다. (보안성 최고 등급)</li>
-            <li><strong>STEP 4. 자동 저장:</strong> 진양저널의 특정 폴더(예: 주간회의록)에 새 마크다운 파일로 영구 저장합니다.</li>
-        </ul>
-
-    </div>
+</div>
+<h3 class="display-md" id="3-진양저널-API-수집-파이프라인-Python-로직-" style="margin-top: 40px;">3. 진양저널 API 수집 파이프라인 (Python 로직)</h3>
+<p class="body-text">위 규칙을 바탕으로 진양저널 서버는 <strong>매주 월요일</strong>에 다음과 같은 로직을 수행합니다.</p>
+<ul style="margin: 0; padding-left: 20px; font-family: 'SF Pro Text', sans-serif; line-height: 1.6;">
+<li><strong>STEP 1. 필터링 호출:</strong> 밴드 API를 통해 글을 읽어올 때, 본문에 <code>#진양저널_주간보고</code> 태그가 있는 게시글만 수집합니다. (노이즈 완벽 제거)</li>
+<li><strong>STEP 2. 파싱(Parsing):</strong> 가져온 글 본문에서 <code>[일정표]</code>와 <code>[회의록]</code> 키워드를 기준으로 텍스트를 분리합니다.</li>
+<li><strong>STEP 3. 외부 AI 통과 X:</strong> 텍스트가 이미 사람이 정제한 완벽한 상태이므로, 구글이나 OpenAI 서버에 데이터를 보낼 필요 없이 즉시 J 저널 마크다운으로 변환합니다. (보안성 최고 등급)</li>
+<li><strong>STEP 4. 자동 저장:</strong> 진양저널의 특정 폴더(예: 주간회의록)에 새 마크다운 파일로 영구 저장합니다.</li>
+</ul>
+</div>
 </div>
                 </div>
                 
@@ -392,7 +472,7 @@
                     </div>
                 </div>
 
-                <div style="margin-top:60px;text-align:center;color:#7a7a7a;font-size:13px;">
+                <div style="margin-top:60px;text-align:center;color:var(--ink-muted);font-size:13px;">
                     발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.19
                 </div>
             </div>
@@ -436,11 +516,18 @@
             localStorage.setItem('pwaToastDismissed', 'true');
         }
         
-        // Wayfinding: Top Button
+        // Wayfinding: Top Button & Progress Bar
         const topBtn = document.getElementById('topBtn');
         window.addEventListener('scroll', () => {
+            // Top Button
             if (window.scrollY > 300) topBtn.classList.add('show');
             else topBtn.classList.remove('show');
+            
+            // Progress Bar
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
         });
         function scrollToTop() {
             window.scrollTo({top: 0, behavior: 'smooth'});
@@ -477,7 +564,7 @@
             );
             
             if (results.length === 0) {
-                searchResults.innerHTML = '<div style="padding: 20px; text-align: center; color: #7a7a7a;">검색 결과가 없습니다.</div>';
+                searchResults.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--ink-muted);">검색 결과가 없습니다.</div>';
                 return;
             }
             
@@ -538,15 +625,6 @@
                 }
             });
         });
-        
-        // Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').catch((err) => {
-                    console.log('SW registration failed: ', err);
-                });
-            });
-        }
     </script>
 </body>
 </html>
