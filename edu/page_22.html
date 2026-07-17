@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="manifest" href="manifest.json">
     
-    <title>문서 15. 핵심 용어 해설집 (배치·지하·법규 편) - 진양엔지니어링 AI 교육 플랫폼</title>
+    <title>문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판 - 진양엔지니어링 AI 교육 플랫폼</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -292,6 +292,8 @@
             }
         }
     </script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
 </head>
 <body>
     <div class="progress-container">
@@ -339,27 +341,28 @@
         <div class="toc-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
         <div class="toc-item"><a href="page_5.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
         <div class="toc-item"><a href="page_6.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지</a></div>
+        <div class="toc-item"><a href="page_7.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         <div class="toc-category">제3장. 데이터 인프라 및 보안</div>
-        <div class="toc-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
-        <div class="toc-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
-        <div class="toc-item"><a href="page_9.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
-        <div class="toc-item"><a href="page_10.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="toc-item"><a href="page_8.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="toc-item"><a href="page_9.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="toc-item"><a href="page_10.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+        <div class="toc-item"><a href="page_11.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         <div class="toc-category">제4장. 사내 문화 및 행동 지침</div>
-        <div class="toc-item"><a href="page_11.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
-        <div class="toc-item"><a href="page_12.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
-        <div class="toc-item"><a href="page_13.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></div>
+        <div class="toc-item"><a href="page_12.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="toc-item"><a href="page_13.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div class="toc-item"><a href="page_14.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></div>
         <div class="toc-category">제5장. 실무 시스템 활용</div>
-        <div class="toc-item"><a href="page_14.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
-        <div class="toc-item"><a href="page_15.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="toc-item"><a href="page_15.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div class="toc-item"><a href="page_16.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         <div class="toc-category">제6장. 사내 소통과 진양저널</div>
-        <div class="toc-item"><a href="page_16.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div class="toc-item"><a href="page_17.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
         <div class="toc-category">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
-        <div class="toc-item"><a href="page_17.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="toc-item"><a href="page_18.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
-        <div class="toc-item"><a href="page_19.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
-        <div class="toc-item"><a href="page_20.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
-        <div class="toc-item"><a href="page_21.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
-        <div class="toc-item active"><a href="page_22.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div class="toc-item"><a href="page_18.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_19.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="toc-item"><a href="page_20.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="toc-item"><a href="page_21.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="toc-item active"><a href="page_22.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="toc-item"><a href="page_23.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
 
     </div>
 
@@ -377,27 +380,28 @@
         <div class="mobile-toc-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></div>
         <div class="mobile-toc-item"><a href="page_5.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></div>
         <div class="mobile-toc-item"><a href="page_6.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지</a></div>
+        <div class="mobile-toc-item"><a href="page_7.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제3장. 데이터 인프라 및 보안</div>
-        <div class="mobile-toc-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
-        <div class="mobile-toc-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
-        <div class="mobile-toc-item"><a href="page_9.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
-        <div class="mobile-toc-item"><a href="page_10.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></div>
+        <div class="mobile-toc-item"><a href="page_9.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="mobile-toc-item"><a href="page_10.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제4장. 사내 문화 및 행동 지침</div>
-        <div class="mobile-toc-item"><a href="page_11.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
-        <div class="mobile-toc-item"><a href="page_12.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
-        <div class="mobile-toc-item"><a href="page_13.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></div>
+        <div class="mobile-toc-item"><a href="page_13.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></div>
+        <div class="mobile-toc-item"><a href="page_14.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제5장. 실무 시스템 활용</div>
-        <div class="mobile-toc-item"><a href="page_14.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
-        <div class="mobile-toc-item"><a href="page_15.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="mobile-toc-item"><a href="page_15.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_16.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제6장. 사내 소통과 진양저널</div>
-        <div class="mobile-toc-item"><a href="page_16.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
+        <div class="mobile-toc-item"><a href="page_17.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
-        <div class="mobile-toc-item"><a href="page_17.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="mobile-toc-item"><a href="page_18.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
-        <div class="mobile-toc-item"><a href="page_19.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
-        <div class="mobile-toc-item"><a href="page_20.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
-        <div class="mobile-toc-item"><a href="page_21.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
-        <div class="mobile-toc-item active"><a href="page_22.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
+        <div class="mobile-toc-item"><a href="page_18.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_19.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></div>
+        <div class="mobile-toc-item"><a href="page_20.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></div>
+        <div class="mobile-toc-item active"><a href="page_22.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></div>
+        <div class="mobile-toc-item"><a href="page_23.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></div>
 
     </div>
     
@@ -415,49 +419,111 @@
             <div class="viewer-card">
 <div class="article-toc">
 <strong>본문 목차</strong>
-<a href="#모르는-용어가-나왔을-때-찾아보는-빠른-사전">&nbsp;&nbsp;· 모르는 용어가 나왔을 때 찾아보는 빠른 사전</a>
+<a href="#AI-자동-배치-실전-운용-매뉴얼">&nbsp;&nbsp;· AI 자동 배치 실전 운용 매뉴얼</a>
 </div>
                 <div class="breadcrumb"><a href="index.html">홈</a> > 제7장. 실무 밀착형 튜토리얼 (SOP) > <span>현재 문서</span></div>
-                <h1 class="page-title">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</h1>
+                <h1 class="page-title">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</h1>
 
                 <div class="md-content">
-                    <h3 id="모르는-용어가-나왔을-때-찾아보는-빠른-사전">모르는 용어가 나왔을 때 찾아보는 빠른 사전</h3>
-<p>문서 6·14의 배치 알고리즘과 법규 내용에서 자주 등장하는 전문 용어들을 쉽게 풀어 설명합니다.</p>
-<div class="row" style="margin-top:20px;">
-<div class="col-md-6">
-<h5 style="color:var(--blueprint-blue);">🏗️ 배치·구조 용어</h5>
-<table style="font-size:13px;width:100%;border-collapse:collapse;">
-<tr style="background:#e2e8f0;"><th style="padding:6px;border:1px solid #cbd5e0;">용어</th><th style="padding:6px;border:1px solid #cbd5e0;">쉬운 설명</th></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">데크(Deck)</td><td style="padding:6px;border:1px solid #cbd5e0;">지하 주차장 위를 덮는 인공 지반. 아파트 단지 외부 바닥이 되는 구조물.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">인동거리</td><td style="padding:6px;border:1px solid #cbd5e0;">두 건물 사이의 최소 이격 거리. 일조권 확보를 위한 법정 기준. 보통 건물 높이의 0.8~1배.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">코어(Core)</td><td style="padding:6px;border:1px solid #cbd5e0;">계단, 엘리베이터, 설비 샤프트가 수직으로 모인 아파트의 '척추'. 한 번 위치가 정해지면 바꾸기 매우 어렵다.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">4-Bay</td><td style="padding:6px;border:1px solid #cbd5e0;">아파트 평면에서 거실+방이 4개의 칸(Bay)으로 나란히 배치된 구조. 한국 아파트 표준 평면.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">파라메트릭 블록</td><td style="padding:6px;border:1px solid #cbd5e0;">뼈대(코어·베이 수)는 고정이지만 층수·길이는 조건에 따라 유연하게 변하는 건물 단위.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">탑상형 / 판상형</td><td style="padding:6px;border:1px solid #cbd5e0;">탑상형: 정사각형에 가깝고 높게 올라가는 타워 아파트. 판상형: 동서로 길게 늘어선 판 모양 아파트.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">통경축</td><td style="padding:6px;border:1px solid #cbd5e0;">건물 사이로 산·강·공원 등 주변 경관이 보이도록 의도적으로 비워두는 시각적 통로.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">복셀(Voxel)</td><td style="padding:6px;border:1px solid #cbd5e0;">3D 공간의 최소 단위 큐브. 아파트 설계에서는 단위 세대(59㎡, 84㎡)를 뜻하는 '픽셀'.</td></tr>
-</table>
+                    <h3 id="AI-자동-배치-실전-운용-매뉴얼">AI 자동 배치 실전 운용 매뉴얼</h3>
+<p>이 챕터는 앞서 배운 7단계 알고리즘을 <strong>실제로 AI에게 입력할 수 있는 수치, 프롬프트 문장, 체크리스트</strong>로 변환한 실전 SOP입니다. 각 단계에서 무엇을 계산하고, AI에게 어떻게 말해야 하는지를 정확히 담았습니다.</p>
+<h4 style="margin-top:25px; color:var(--blueprint-blue);">📋 STEP 0: 사업 목표 입력 시트</h4>
+<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
+<p><strong>실제로 AI에게 입력해야 할 데이터 형식:</strong></p>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+[사업 기본 정보]
+- 대지면적: _____ m²
+- 용도지역: _____
+- 용적률 상한: _____ %
+- 건폐율 상한: _____ %
+- 최고 층수 제한: _____ 층
+
+[목표 사업 규모]
+- 목표 총 세대수: _____ 세대
+- 세대 Mix:
+  · 59㎡형: _____ 세대
+  · 84㎡형: _____ 세대
+  · 114㎡형: _____ 세대
+- 비주거(상가) 포함 여부: Y / N
+</pre>
+<div class="alert alert-warning" style="margin-top:10px;margin-bottom:0;">
+<strong>⚠️ 이 데이터 없이 다음 단계로 진행하지 마십시오.</strong> 목표 세대수 없이 동 수를 산출하는 것은 목적지 없이 내비게이션을 켜는 것과 같습니다.
 </div>
-<div class="col-md-6">
-<h5 style="color:var(--blueprint-blue);">⚖️ 법규·면적 용어</h5>
-<table style="font-size:13px;width:100%;border-collapse:collapse;">
-<tr style="background:#e2e8f0;"><th style="padding:6px;border:1px solid #cbd5e0;">용어</th><th style="padding:6px;border:1px solid #cbd5e0;">쉬운 설명</th></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">용적률(FAR)</td><td style="padding:6px;border:1px solid #cbd5e0;">대지면적 대비 지상 연면적의 비율. 250%면 1,000㎡ 땅에 2,500㎡까지 지을 수 있음.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">건폐율</td><td style="padding:6px;border:1px solid #cbd5e0;">대지면적 대비 건물 바닥 면적(1층 발자국)의 비율. 60%면 1,000㎡ 땅의 최대 600㎡에 건물을 앉힐 수 있음.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">평균지반면</td><td style="padding:6px;border:1px solid #cbd5e0;">건물 주변 땅의 평균 높이. 4m 간격으로 측정하여 가중평균으로 산출. 지하층 판정의 기준점.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">지하층 판정</td><td style="padding:6px;border:1px solid #cbd5e0;">층 바닥이 평균지반면보다 층 높이의 절반 이상 아래에 있으면 '지하층'. 지하층은 용적률에서 제외됨.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">일조권 사선</td><td style="padding:6px;border:1px solid #cbd5e0;">주변 건물에 햇빛이 들어오도록 건물 높이를 제한하는 법정 선. 이 선 밖으로 건물이 나오면 안 됨.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">도정법</td><td style="padding:6px;border:1px solid #cbd5e0;">'도시 및 주거환경 정비법'. 재개발·재건축 사업의 근거가 되는 핵심 법률.</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">빈집특례법</td><td style="padding:6px;border:1px solid #cbd5e0;">'빈집 및 소규모 주택 정비에 관한 특례법'. 가로주택정비·소규모 재건축·모아타운의 근거 법률.</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;font-weight:bold;">게이트키퍼</td><td style="padding:6px;border:1px solid #cbd5e0;">AI가 내놓은 결과물을 최종 검증하고 오류를 잡아내는 인간 건축사의 역할. AI를 쓰더라도 절대 포기할 수 없는 책임.</td></tr>
-</table>
 </div>
+<h4 style="color:var(--blueprint-blue);">🏗️ STEP 1: 데크 설정 계산 시트 + AI 프롬프트</h4>
+<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
+<p><strong>[계산해야 할 값]</strong></p>
+<table style="font-size:13px;width:100%;border-collapse:collapse;margin-bottom:12px;">
+<tr style="background:#e2e8f0;"><th style="padding:6px;border:1px solid #cbd5e0;">계산 항목</th><th style="padding:6px;border:1px solid #cbd5e0;">공식</th><th style="padding:6px;border:1px solid #cbd5e0;">내 사이트 입력값</th></tr>
+<tr><td style="padding:6px;border:1px solid #cbd5e0;">대지 고저차</td><td style="padding:6px;border:1px solid #cbd5e0;">최고점 EL − 최저점 EL</td><td style="padding:6px;border:1px solid #cbd5e0;">______ m</td></tr>
+<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;">권장 데크 단 수</td><td style="padding:6px;border:1px solid #cbd5e0;">고저차 ÷ 5.2m (반올림)</td><td style="padding:6px;border:1px solid #cbd5e0;">______ 단</td></tr>
+<tr><td style="padding:6px;border:1px solid #cbd5e0;">지하 굴착 깊이</td><td style="padding:6px;border:1px solid #cbd5e0;">5.2 + 3.3×(B층수−2) + 3.4 + 기초</td><td style="padding:6px;border:1px solid #cbd5e0;">______ m</td></tr>
+<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;">평균지반면</td><td style="padding:6px;border:1px solid #cbd5e0;">Σ(지반고×구간길이) ÷ 전체둘레</td><td style="padding:6px;border:1px solid #cbd5e0;">EL ______ m</td></tr>
+<tr><td style="padding:6px;border:1px solid #cbd5e0;">지하층 판정</td><td style="padding:6px;border:1px solid #cbd5e0;">(평균지반면−1층FL) ≥ 층고×0.5?</td><td style="padding:6px;border:1px solid #cbd5e0;">지상 / 지하</td></tr>
+</table>
+<p><strong>[복사해서 쓰는 AI 프롬프트]</strong></p>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+너는 20년 경력의 한국 건축사로서 아파트 지하 주차장 구조를 완벽히 이해하고 있어.
+다음 조건으로 데크 레벨과 지하층 판정을 수행해줘.
+
+[대지 조건]
+- 대지 둘레: _____ m
+- 4m 간격 측점별 지반고(EL): [_____, _____, _____, ...]
+- 목표 1층 바닥 레벨(FL): EL _____ m
+- 계획 층고: B1=5.2m, B2=3.3m, B3=3.4m
+
+[수행 작업]
+1. 가중평균 공식으로 평균지반면(EL)을 계산해줘. 계산 과정을 단계별로 보여줘.
+2. 1층 바닥이 지하층에 해당하는지 판정해줘.
+3. 지하층으로 판정될 경우, 지상층으로 확보할 수 있는 최소 1층 FL(역산값)을 알려줘.
+4. 모른다면 모른다고 말해줘. 절대 추정하지 말 것.
+</pre>
+</div>
+<h4 style="color:var(--blueprint-blue);">🧱 STEP 5: 파라메트릭 블록 선택 + 동 수 산출 AI 프롬프트</h4>
+<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
+<p><strong>[복사해서 쓰는 AI 프롬프트]</strong></p>
+<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
+너는 한국 아파트 배치 설계 전문 건축사야.
+다음 조건으로 필요한 주동 수와 타입 조합을 산출해줘.
+
+[사업 조건]
+- 목표 세대수: _____ 세대
+- 세대 Mix: 59㎡×_____ + 84㎡×_____ + 114㎡×_____
+- 최고 층수: _____ 층 이하
+- 가용 대지면적(마스킹 제외 후): _____ m²
+
+[블록 라이브러리] ← 우리 회사 검증 블록만 사용할 것
+- A타입: 4베이 판상형, 84㎡×4세대/층, 기준 15~25층
+- B타입: 2코어 탑상형, 혼합 6세대/층, 기준 20~30층
+- C타입: 소형 판상형, 59㎡×4세대/층, 기준 10~15층
+
+[수행 작업]
+1. 가능한 블록 타입 조합(A/B/C 혼합)과 그에 따른 동 수를 3가지 시나리오로 제안해줘.
+2. 각 시나리오별 예상 용적률을 계산해줘 (대지면적 기준).
+3. 조합이 불가능한 이유가 있다면 명확히 설명해줘.
+4. 계산 과정을 모두 보여줘 (Chain of Thought).
+</pre>
+</div>
+<h4 style="color:var(--blueprint-blue);">✅ 최종 게이트키퍼 체크리스트 (STEP 7)</h4>
+<div style="background:#f0fff4;border:1px solid #9ae6b4;border-radius:8px;padding:16px;margin-bottom:16px;">
+<p>AI가 배치를 완성하면, 인간 건축사가 아래 항목을 100% 직접 검증해야 합니다.</p>
+<table style="font-size:13px;width:100%;border-collapse:collapse;">
+<tr style="background:#c6f6d5;"><th style="padding:6px;border:1px solid #9ae6b4;">검증 항목</th><th style="padding:6px;border:1px solid #9ae6b4;">기준</th><th style="padding:6px;border:1px solid #9ae6b4;">결과</th></tr>
+<tr><td style="padding:6px;border:1px solid #9ae6b4;">인동거리</td><td style="padding:6px;border:1px solid #9ae6b4;">건물 높이의 0.8배 이상</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">일조시간</td><td style="padding:6px;border:1px solid #9ae6b4;">동지일 연속 2시간 or 통산 4시간</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr><td style="padding:6px;border:1px solid #9ae6b4;">지하층 재판정</td><td style="padding:6px;border:1px solid #9ae6b4;">주동 확정 후 평균지반면 재계산</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">용적률 최종</td><td style="padding:6px;border:1px solid #9ae6b4;">상한 이하 충족</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr><td style="padding:6px;border:1px solid #9ae6b4;">건폐율</td><td style="padding:6px;border:1px solid #9ae6b4;">상한 이하 충족</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">주차 모듈 스냅</td><td style="padding:6px;border:1px solid #9ae6b4;">모든 주동이 그리드 교차점에 정착</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+<tr><td style="padding:6px;border:1px solid #9ae6b4;">2차 데크 조정</td><td style="padding:6px;border:1px solid #9ae6b4;">주동 위치 반영 데크 미세 조정</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
+</table>
+<p style="margin-top:10px;font-size:12px;color:#718096;">⚠️ 하나라도 ❌가 나오면 해당 STEP으로 돌아가 AI와 재협의합니다. AI 결과물에 도장을 찍는 것은 언제나 인간 건축사입니다.</p>
 </div>
                 </div>
                 
                 <div class="pagination">
-                    <a href="page_21.html" class="btn-page">◀ 이전: 문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a>
-                    <div></div>
+                    <a href="page_21.html" class="btn-page">◀ 이전: 문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a>
+                    <a href="page_23.html" class="btn-page">다음: 문서 15. 핵심 용어 해설집 (배치·지하·법규 편) ▶</a>
 
                 </div>
                 
@@ -477,7 +543,7 @@
                 </div>
 
                 <div style="margin-top:60px;text-align:center;color:var(--ink-muted);font-size:13px;">
-                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.23
+                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.24
                 </div>
             </div>
         </div>
