@@ -503,6 +503,10 @@ li {
             </p>
             <input type="text" id="login-name" placeholder="이름 (예: 홍길동)">
             <input type="password" id="login-pass" placeholder="보안 암호">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; margin-bottom: 16px; cursor: pointer;">
+                <input type="checkbox" id="login-remember" checked style="width: 16px; height: 16px;">
+                자동 로그인 (기기 저장)
+            </label>
             <p id="login-error" style="color: red; font-size: 13px; display: none; margin-top: -10px; margin-bottom: 10px;">암호가 일치하지 않습니다.</p>
             <button onclick="attemptLogin()">접속하기 (Access)</button>
         </div>
@@ -921,7 +925,7 @@ li {
                     <span style="font-size: 16px; font-weight: 700; letter-spacing: -0.5px;">최종 업데이트</span>
                 </div>
                 <div style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
-                    2026.07.15 16:50 (실시간 동기화 완료)
+                    2026.07.17 09:40 (실시간 동기화 완료)
                 </div>
             </div>
             <style>
