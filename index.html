@@ -476,20 +476,21 @@ li {
 
     <!-- Bottom Navigation -->
     <nav class="bottom-nav" id="mobile-bottom-nav">
-        <button class="bottom-nav-item active" id="bot-btn-journal" onclick="switchMode('journal')">
-            <i>📚</i><span>Journal</span>
-        </button>
-        <button class="bottom-nav-item" id="bot-btn-workspace" onclick="switchMode('workspace')">
-            <i>💼</i><span>Workspace</span>
+        <button class="bottom-nav-item active" id="bot-btn-jjournal" onclick="switchMode('jjournal')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>J-Journal</span>
         </button>
         <button class="bottom-nav-item" id="bot-btn-weekly" onclick="switchMode('weekly')">
-            <i>🔒</i><span style="color:#e30000;">Weekly</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 18h6"></path><path d="M9 10h6"></path></svg>
+            <span>Weekly</span>
         </button>
         <button class="bottom-nav-item" id="bot-btn-master" onclick="switchMode('master')" style="display:none;">
-            <i>👑</i><span style="color:#800080;">제안함</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+            <span>제안함</span>
         </button>
         <button class="bottom-nav-item" onclick="attemptLogout()">
-            <i>🚪</i><span>로그아웃</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>로그아웃</span>
         </button>
     </nav>
 
@@ -559,23 +560,24 @@ li {
             <script>
                 document.getElementById('analects-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
                 
-                // Fetch today's analects
-                fetch('/api/analects/today')
-                    .then(response => response.json())
+                // Fetch today's analects from static JSON
+                fetch('./analects.json')
+                    .then(res => res.json())
                     .then(data => {
-                        if(data && data.hanja) {
-                            document.getElementById('analects-hanja').innerText = data.hanja;
-                            document.getElementById('analects-korean').innerText = data.korean;
-                            document.getElementById('analects-application').innerText = data.application;
+                        if(data && data.length > 0) {
+                            const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+                            const analect = data[dayOfYear % data.length];
+                            document.getElementById('analects-hanja').innerText = analect.hanja;
+                            document.getElementById('analects-korean').innerText = analect.korean;
+                            document.getElementById('analects-application').innerText = analect.application;
                             
                             const grid = document.getElementById('analects-grid');
                             grid.innerHTML = '';
-                            data.characters.forEach(c => {
-                                const div = document.createElement('div');
-                                div.innerHTML = `<span style="font-size: 20px; font-weight: 600; color: ${c.color};">${c.char}</span><br><span style="font-size: 12px; color: #7a7a7a;">${c.reading}</span>`;
-                                grid.appendChild(div);
+                            analect.characters.forEach(c => {
+                                const el = document.createElement('div');
+                                el.innerHTML = `<div style="font-family:'SF Pro Display', sans-serif; font-size:24px; font-weight:600; color:${c.color}; margin-bottom:4px;">${c.char}</div><div style="font-size:10px; color:#7a7a7a;">${c.reading}</div>`;
+                                grid.appendChild(el);
                             });
-                            
                             document.getElementById('analects-widget').style.display = 'flex';
                         }
                     })
