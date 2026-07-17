@@ -1108,67 +1108,111 @@ li {
         </div>
     </div>
     
-    async function attemptLogin() {
-        const name = document.getElementById("login-name").value;
-        const pass = document.getElementById("login-pass").value;
+    const allowedUsers = {
+        // 마스터키
+        "김중일": "0000",
+        
+        // 임원진 (1단)
+        "박성배": "4913", "노병채": "0343", "김기운": "0343", "김동일": "9005", "이정선": "5024",
+        "김형태": "9549", "남수경": "8105", "이민희": "1119",
+        
+        // 전략기획본부 (1단)
+        "전성일": "6464", "정우석": "0869",
+        
+        // 관리 (1단)
+        "장명선": "0305", "최용인": "0413", "이미령": "9609", "박성춘": "2768", "김영순": "2241",
+        
+        // 도시계획본부 (1단)
+        "이우진": "0275", "정지영": "7692", "이두희": "7205", "오경택": "5493", "한수현": "5237",
+        "배채운": "8514", "김재봉": "7452", "김일육": "0332", "나일환": "5895", "이현애": "2417",
+        "이희정": "8245", "강호상": "1339", "성진우": "9621", "김범수": "5039", "오시은": "5395",
+        "김승민": "4869", "양은수": "5076",
+        
+        // 도시개발본부 (2단)
+        "오성진": "2602", "우의철": "8126", "박세라": "7766", "이민경": "7206", "공재호": "9735",
+        "권영빈": "5383", "최동혁": "1304", "강태윤": "4810", "김다현": "3179", "윤용준": "3334",
+        "김혜선": "8799", "남현우": "1061", "김명주": "2569", "강수연": "6280", "김도영": "6725",
+        "박도현": "2738", "김민구": "7733", "권재일": "7914", "김미현": "7523", "박내수": "7429",
+        "조병준": "3009", "홍영재": "1147", "유선호": "4678", "이민호": "2793", "전서희": "4346",
+        "이정민": "7065",
+        
+        // 디자인본부 (3단)
+        "이종복": "3824", "김미연": "9543", "이택기": "7457", "허민철": "8518", "성시현": "2159",
+        "안정하": "2035", "김예은": "0052", "계영주": "6458", "정경열": "1530", "이신실": "7557",
+        "정혜원": "1036", "정성재": "5829", "이준영": "5237", "이종민": "1952", "문설아": "2062",
+        "김민정": "7673", "박효준": "7540", "박용훈": "3742", "서주영": "2910", "김정훈": "7546",
+        "박찬기": "3591", "양해찬": "7213", "표정은": "5342", "이민규": "5342",
+        
+        // 도시재생본부 (4단)
+        "오명석": "3850", "양영배": "4137", "우성환": "8841", "장진호": "3364", "김해리": "8363",
+        "황준원": "4325", "백명재": "6556", "채동영": "5974", "사흐르잣": "1727", "이원희": "1266",
+        "서민지": "2656", "권동규": "6214", "박지원": "6867", "김호연": "2468", "정유정": "0614",
+        "남소현": "3190", "최민정": "1948",
+        
+        // 4소(CG팀), 전략계획본부, 프리랜서, QC (5단)
+        "임성준": "9041", "박은경": "7642", "황보석": "1795", "김경민": "1531", "한태은": "4239",
+        "김지영": "5881", "박주호": "4847", "김태현": "7037", "이서영": "2564", "이현서": "7236",
+        "이용구": "6153", "전철호": "9356", "김원석": "3671", "배동준": "6355", "김현희": "5396",
+        "이종학": "0402", "송종철": "7417", "최병구": "7438", "김유관": "7081", "박현기": "7880"
+    };
+
+    function processLoginSuccess(name) {
+        document.getElementById("user-profile-name").textContent = name + " 님";
+        if(name === "김중일") {
+            document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+            document.getElementById('btn-master').style.display = 'inline-block';
+            document.getElementById('bot-btn-master').style.display = 'flex';
+        } else {
+            document.getElementById('btn-master').style.display = 'none';
+            document.getElementById('bot-btn-master').style.display = 'none';
+        }
+        document.getElementById("login-screen").style.display = "none";
+    }
+
+    function attemptLogin() {
+        const name = document.getElementById("login-name").value.trim();
+        const pass = document.getElementById("login-pass").value.trim();
+        const remember = document.getElementById("login-remember") ? document.getElementById("login-remember").checked : false;
         const err = document.getElementById("login-error");
         
-        try {
-            const response = await fetch('/api/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: name, password: pass })
-            });
-            
-            const data = await response.json();
-            
-            if (response.ok && data.success) {
-                document.getElementById("user-profile-name").textContent = data.user_name + " 님";
-                if(data.is_master) {
-                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
-                    document.getElementById('btn-master').style.display = 'inline-block';
-                    loadFeedbacks();
-                } else {
-                    document.getElementById('btn-master').style.display = 'none';
-                }
-                document.getElementById("login-screen").style.display = "none";
-                err.style.display = "none";
+        if (allowedUsers[name] && allowedUsers[name] === pass) {
+            if (remember) {
+                localStorage.setItem("jhub_logged_in", "true");
+                localStorage.setItem("jhub_user_name", name);
             } else {
-                err.style.display = "block";
+                sessionStorage.setItem("jhub_logged_in", "true");
+                sessionStorage.setItem("jhub_user_name", name);
             }
-        } catch (error) {
-            console.error("Login error:", error);
-            err.textContent = "서버 접속 오류입니다.";
+            processLoginSuccess(name);
+            err.style.display = "none";
+        } else {
             err.style.display = "block";
+            err.textContent = "접속 정보가 일치하지 않습니다.";
+            const card = document.querySelector(".login-card");
+            card.style.transform = "translateX(-10px)";
+            setTimeout(() => card.style.transform = "translateX(10px)", 50);
+            setTimeout(() => card.style.transform = "translateX(-10px)", 100);
+            setTimeout(() => card.style.transform = "translateX(0)", 150);
         }
     }
 
-    async function attemptLogout() {
-        await fetch('/api/logout', { method: 'POST' });
+    function attemptLogout() {
+        localStorage.removeItem("jhub_logged_in");
+        localStorage.removeItem("jhub_user_name");
+        sessionStorage.removeItem("jhub_logged_in");
+        sessionStorage.removeItem("jhub_user_name");
+        
         document.getElementById('login-screen').style.display='flex'; 
         document.getElementById('user-profile-badge').innerHTML='';
         document.getElementById('login-pass').value = '';
     }
 
-    async function checkLogin() {
-        try {
-            const response = await fetch('/api/check_session');
-            const data = await response.json();
-            if (response.ok && data.success) {
-                document.getElementById('login-screen').style.display = 'none';
-                document.getElementById('user-profile-name').textContent = data.user_name + ' 님';
-                if(data.is_master) {
-                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
-                    document.getElementById('btn-master').style.display = 'inline-block';
-                    loadFeedbacks();
-                } else {
-                    document.getElementById('btn-master').style.display = 'none';
-                }
-            } else {
-                document.getElementById('login-screen').style.display = 'flex';
-            }
-        } catch (error) {
-            // Assume not logged in if fetch fails (e.g. running from file://)
+    function checkLogin() {
+        if (localStorage.getItem("jhub_logged_in") === "true" || sessionStorage.getItem("jhub_logged_in") === "true") {
+            const userName = localStorage.getItem("jhub_user_name") || sessionStorage.getItem("jhub_user_name");
+            processLoginSuccess(userName);
+        } else {
+            document.getElementById('login-screen').style.display = 'flex';
         }
     }
 
