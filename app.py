@@ -3,11 +3,14 @@ import hashlib
 import unicodedata
 import json
 import datetime
-from flask import Flask, request, jsonify, session, send_from_directory, abort
+import requests
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 # 임시 비밀키 (실제 운영 시 랜덤 문자열 사용 필요)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "jinyang-hub-super-secret-key-2026")
+
+SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
 
 ALLOWED_USERS_HASH = {
     "083ce048149966cfe211dfc88ad50cf83bd6309a22e7817f1aac0a972634a8a7": "78a69c6fdc7b95f502f14d3c826b21528318ef248796d5a41478096973dd1ad6",
@@ -59,30 +62,96 @@ def login():
     data = request.get_json()
     if not data or 'name' not in data or 'password' not in data:
         return jsonify({"success": False, "message": "Invalid request"}), 400
-
-    name = data['name']
-    password = data['password']
-
+    
+    name = data['name'].strip()
+    password = data['password'].strip()
+    
     name_hash = get_hash(name)
-    pass_hash = get_hash(password)
+    password_hash = get_hash(password)
+    
+    # 1. Supabase 데이터베이스 검증
+    headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+    try:
+        response = requests.get(f"{SUPABASE_URL}/rest/v1/user_credentials?username_hash=eq.{name_hash}", headers=headers)
+        if response.status_code == 200:
+            db_data = response.json()
+            if db_data and len(db_data) > 0:
+                # DB에 등록된 유저라면 DB 비밀번호로 검증
+                if db_data[0]['password_hash'] == password_hash:
+                    session['logged_in'] = True
+                    session['user_name'] = name
+                    is_master = (name == '김중일')
+                    session['is_master'] = is_master
+                    return jsonify({"success": True, "name": name, "isMaster": is_master})
+                else:
+                    return jsonify({"success": False, "message": "비밀번호가 일치하지 않습니다."}), 401
+    except Exception as e:
+        print(f"Supabase error: {e}")
 
-    if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == pass_hash:
+    # 2. Supabase에 없다면 기존 하드코딩 명단(ALLOWED_USERS_HASH)으로 검증 (초기 로그인용)
+    if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == password_hash:
         session['logged_in'] = True
         session['user_name'] = name
+        is_master = (name == '김중일')
+        session['is_master'] = is_master
+        return jsonify({"success": True, "name": name, "isMaster": is_master})
         
-        # Admin / Knowledge master logic (matches frontend logic)
-        # Assuming we just set it if it matches one of the hashes that previously had it. 
-        # Actually frontend checked if localstorage had it. We can just set it true for now for the CEO.
-        if name == "김중일":
-            session['is_master'] = True
-            
-        return jsonify({
-            "success": True, 
-            "user_name": name, 
-            "is_master": session.get('is_master', False)
-        })
+    return jsonify({"success": False, "message": "이름 또는 비밀번호가 일치하지 않습니다."}), 401
 
-    return jsonify({"success": False, "message": "Invalid credentials"}), 401
+@app.route('/api/change_password', methods=['POST'])
+def change_password():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "로그인이 필요합니다."}), 401
+
+    data = request.get_json()
+    current_password = data.get('current_password', '').strip()
+    new_password = data.get('new_password', '').strip()
+    
+    if not current_password or not new_password:
+        return jsonify({"success": False, "message": "비밀번호를 입력해주세요."}), 400
+
+    name = session.get('user_name')
+    name_hash = get_hash(name)
+    current_password_hash = get_hash(current_password)
+    new_password_hash = get_hash(new_password)
+
+    # 기존 비밀번호 일치 여부 확인 (Supabase -> 하드코딩 순)
+    is_valid = False
+    headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+    try:
+        response = requests.get(f"{SUPABASE_URL}/rest/v1/user_credentials?username_hash=eq.{name_hash}", headers=headers)
+        if response.status_code == 200 and response.json():
+            if response.json()[0]['password_hash'] == current_password_hash:
+                is_valid = True
+        else:
+            if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == current_password_hash:
+                is_valid = True
+    except:
+        pass
+
+    if not is_valid:
+        return jsonify({"success": False, "message": "현재 비밀번호가 일치하지 않습니다."}), 401
+
+    # 새 비밀번호를 Supabase에 Upsert (저장/업데이트)
+    payload = {
+        "username_hash": name_hash,
+        "password_hash": new_password_hash
+    }
+    upsert_headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates"
+    }
+    
+    try:
+        upsert_res = requests.post(f"{SUPABASE_URL}/rest/v1/user_credentials", json=payload, headers=upsert_headers)
+        if upsert_res.status_code in [200, 201]:
+            return jsonify({"success": True, "message": "비밀번호가 성공적으로 변경되었습니다."})
+        else:
+            return jsonify({"success": False, "message": "DB 저장 실패"}), 500
+    except Exception as e:
+        return jsonify({"success": False, "message": f"서버 오류: {e}"}), 500
 
 @app.route('/api/logout', methods=['POST'])
 def logout():
