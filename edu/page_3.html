@@ -84,7 +84,7 @@
         padding: 8px 12px; display: flex; align-items: center; gap: 6px;
         border-radius: 6px; transition: background 0.2s;
     }
-    .action-btn:hover { background: var(--hairline); }
+    .action-btn:hover { background: var(--hairline); color: var(--primary); }
     
     /* DESKTOP SIDEBAR */
     .desktop-sidebar {
@@ -156,6 +156,8 @@
     
     /* WAYFINDING: BREADCRUMB */
     .breadcrumb { font-size: 13px; font-weight: 500; color: var(--ink-muted); margin-bottom: 12px; }
+    .breadcrumb a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--primary); text-decoration: underline; }
     .breadcrumb span { color: var(--primary); }
     
     .page-title { font-size: 40px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 50px; }
@@ -303,15 +305,23 @@
     <div class="sub-nav">
         <a href="index.html" class="sub-nav-brand">J-Hub Portal</a>
         <div class="nav-actions">
+            <a href="index.html" class="action-btn" title="대시보드(홈)로 가기">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                </svg>
+            </a>
             <button class="action-btn" onclick="toggleTheme()" title="다크모드 토글">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
             <button class="action-btn" onclick="openSearch()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <span class="desktop-only" style="display:none;">검색</span>
             </button>
             <button class="action-btn" onclick="toggleMenu()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <span class="desktop-only" style="display:none;">목차</span>
             </button>
         </div>
@@ -401,7 +411,7 @@
 <strong>본문 목차</strong>
 <a href="#AI의-사고방식과-소통의-문법-16가지-핵심-키워드-">&nbsp;&nbsp;· AI의 사고방식과 소통의 문법 (16가지 핵심 키워드)</a>
 </div>
-                <div class="breadcrumb">홈 > 제2장. AI 및 시스템 기본 이해 > <span>현재 문서</span></div>
+                <div class="breadcrumb"><a href="index.html">홈</a> > 제2장. AI 및 시스템 기본 이해 > <span>현재 문서</span></div>
                 <h1 class="page-title">문서 3. AI를 다루는 16가지 핵심 사고방식</h1>
 
                 <div class="md-content">
@@ -525,7 +535,7 @@
     
     <!-- Top Button -->
     <button class="btn-top" id="topBtn" onclick="scrollToTop()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
     
     <!-- PWA Install Toast -->
