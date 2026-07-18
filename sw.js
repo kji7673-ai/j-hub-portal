@@ -1,4 +1,4 @@
-const CACHE_NAME = 'j-hub-cache-v4';
+const CACHE_NAME = 'j-hub-cache-v6';
 const urlsToCache = [
   './manifest.json'
 ];

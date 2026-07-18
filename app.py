@@ -4,10 +4,11 @@ import unicodedata
 import json
 import datetime
 import requests
+from flask import Flask, jsonify, request, send_from_directory, session
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 # 임시 비밀키 (실제 운영 시 랜덤 문자열 사용 필요)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", "jinyang-hub-super-secret-key-2026")
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", os.urandom(32).hex())
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")

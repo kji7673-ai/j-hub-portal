@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#f5f5f7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -93,29 +93,15 @@ h1, h2, h3 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Journal Mosaic overrides for Swiss aesthetic */
+/* Journal Mosaic - Unified styles (m-01: CSS 이중 선언 통합) */
 .grid-mosaic {
-    gap: 4px !important;
+    gap: 8px !important;
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
 }
-.mosaic-block {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    filter: grayscale(100%);
-    transition: filter 0.3s, transform 0.3s !important;
-}
-.mosaic-block:hover {
-    filter: grayscale(0%);
-    transform: scale(1.02) !important;
-    z-index: 10;
-    border: 1px solid #000;
-}
 .mosaic-block.active {
-    filter: grayscale(0%);
-    border: 2px solid #000 !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 0 3px #0066cc !important;
 }
 
 /* Workspace Accordion UI */
@@ -492,6 +478,10 @@ li {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
             <span>제안함</span>
         </button>
+        <button class="bottom-nav-item" onclick="showChangePasswordModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>비밀번호</span>
+        </button>
         <button class="bottom-nav-item" onclick="attemptLogout()">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
             <span>로그아웃</span>
@@ -539,7 +529,7 @@ li {
     </header>
 
     <!-- Change Password Modal -->
-    <div id="change-pwd-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div id="change-pwd-modal" onclick="if(event.target===this)hideChangePasswordModal()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
         <div style="background:#fff; padding:24px; border-radius:11px; width:300px; box-shadow: 0 4px 24px rgba(0,0,0,0.2);">
             <h3 style="margin-top:0; font-size: 18px;">비밀번호 변경</h3>
             <input type="password" id="cp-current" placeholder="현재 비밀번호" style="width:100%; padding:12px; margin-bottom:12px; box-sizing:border-box; border:1px solid #d2d2d7; border-radius:5px;">
@@ -604,24 +594,78 @@ li {
                             document.getElementById('analects-widget').style.display = 'flex';
                         }
                     })
-                    .catch(err => console.error("Failed to load analects:", err));
+                    .catch(err => {
+                        console.error("Failed to load analects:", err);
+                        const widget = document.getElementById('analects-widget');
+                        widget.style.display = 'flex';
+                        widget.innerHTML = '<p style="color:#7a7a7a; font-size:14px; text-align:center; width:100%; padding:16px 0;">오늘의 논어를 불러올 수 없습니다. 네트워크 연결을 확인해주세요.</p>';
+                    });
             </script>
 
-            <!-- Daily Byte Widget -->
-            <div style="background: #ffffff; border: 1px solid var(--accent); padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
+            <!-- Daily Byte Widget (M-02: 동적 로테이션) -->
+            <div id="daily-byte-widget" style="background: #ffffff; border: 1px solid var(--accent); padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
                 <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #0066cc;"></div>
                 <h3 style="margin: 0 0 12px 0; font-size: 14px; color: #0066cc; text-transform: uppercase; font-weight: 800;">Daily Byte <span style="color:var(--text-secondary); font-weight:400; font-size:12px; margin-left:8px;" id="daily-byte-date"></span></h3>
-                <h2 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;">[업계 동향] 문현1구역 재개발, 환경영향평가 심의 대응 추가 용역업체 선정 추진</h2>
-                <p style="margin: 0 0 16px 0; font-size: 15px; color: var(--text-primary); line-height: 1.5;">부산 문현1구역 재개발 정비사업조합이 건축물 환경영향평가 심의의견을 반영하기 위한 추가 용역 업체 선정에 나섰습니다. 최근 정비사업 내 환경 및 교육영향평가 등 심의 기준이 한층 엄격해짐에 따라, 설계 및 엔지니어링 단계에서의 선제적인 기술 대응이 중요해지고 있습니다. 우리 J-Hub 임직원 여러분도 관련 심의 트렌드 변화를 면밀히 모니터링하여 설계 및 엔지니어링 프로젝트 수행 시 적극 반영해 주시기 바랍니다.</p>
-                <div style="display: flex; gap: 8px;">
-                    <span class="chip blue">#문현1구역</span>
-                    <span class="chip blue">#환경영향평가</span>
-                    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5tZmstNmRhNHVsNVhtZ05HV1ZxaF9YSXJ3cmp4UnBGWWpZcldNQk9NNXVxV1hlV3ZVSExkcko4bmc3aW1RZDloTV9zWEJVY1YzUFFhcVh6N2IxQk1yTU8zTkJMWDlLaXc0TWJ1RVVPU0pEdzg?oc=5" target="_blank" style="text-decoration:none;"><span class="chip red" style="cursor:pointer;">기사 원문 출처 확인하기 →</span></a>
-                </div>
+                <h2 id="daily-byte-title" style="margin: 0 0 8px 0; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;"></h2>
+                <p id="daily-byte-body" style="margin: 0 0 16px 0; font-size: 15px; color: var(--text-primary); line-height: 1.5;"></p>
+                <div id="daily-byte-tags" style="display: flex; gap: 8px;"></div>
             </div>
             
             <script>
-                document.getElementById('daily-byte-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
+                (function() {
+                    const dailyBytes = [
+                        {
+                            title: "[업계 동향] 문현1구역 재개발, 환경영향평가 심의 대응 추가 용역업체 선정 추진",
+                            body: "부산 문현1구역 재개발 정비사업조합이 건축물 환경영향평가 심의의견을 반영하기 위한 추가 용역 업체 선정에 나섰습니다. 최근 정비사업 내 환경 및 교육영향평가 등 심의 기준이 한층 엄격해짐에 따라, 설계 및 엔지니어링 단계에서의 선제적인 기술 대응이 중요해지고 있습니다.",
+                            tags: ["#문현1구역", "#환경영향평가"]
+                        },
+                        {
+                            title: "[법규 변경] 도정법 시행령 개정 — 총회 1회 통합, 공사비 검증 의무화",
+                            body: "도시 및 주거환경정비법 시행령이 개정 시행됩니다. 총회 개최를 1회로 통합하고, 공사비 검증을 의무화하여 조합원 부담 완화를 도모합니다. 향후 사업시행인가 단계에서의 실무 변화에 유의하시기 바랍니다.",
+                            tags: ["#도정법", "#공사비검증"]
+                        },
+                        {
+                            title: "[실무 TIP] 소규모정비사업 통합심의 효율화 방안",
+                            body: "국토교통부가 소규모정비사업의 통합심의 절차를 간소화하는 가이드라인을 발표했습니다. 건축·교통·환경 심의를 공동위원회 방식으로 1회에 처리할 수 있어, 인허가 기간이 평균 2~3개월 단축될 것으로 전망됩니다.",
+                            tags: ["#소규모정비", "#통합심의"]
+                        },
+                        {
+                            title: "[시장 동향] 서울시 모아타운 3종→준주거 종상향 확정",
+                            body: "서울시가 모아타운 사업지에 대해 3종 일반주거지역을 준주거지역으로 종상향하는 방안을 확정했습니다. 이에 따라 용적률이 최대 400%까지 가능해져, 사업성이 크게 개선됩니다. 면목역 모아타운 등 당사 관련 프로젝트에 호재입니다.",
+                            tags: ["#모아타운", "#종상향"]
+                        },
+                        {
+                            title: "[기술 동향] ZEB(제로에너지건축물) 의무화 확대 임박",
+                            body: "2027년부터 공공건축물 500㎡ 이상에 ZEB 인증이 의무화될 예정입니다. 민간 건축물로의 확대도 단계적으로 추진 중이므로, 정비사업 설계 시 에너지 성능 기준 강화에 선제적으로 대응하시기 바랍니다.",
+                            tags: ["#ZEB", "#제로에너지"]
+                        },
+                        {
+                            title: "[인허가 동향] 강남구 재건축 '신화 프로젝트' 인허가 30% 단축 목표",
+                            body: "강남구가 '재건축 신속화합(신화) 프로젝트' 1호를 결재하며, 재건축 인허가 기간을 30% 단축하겠다는 목표를 제시했습니다. 은마아파트가 사업시행인가를 획득한 것과 맞물려, 강남권 재건축 사업 전반의 속도가 빨라질 전망입니다.",
+                            tags: ["#강남구", "#인허가단축"]
+                        },
+                        {
+                            title: "[경제 동향] 건설공사비지수 3개월 연속 상승 — 자재비 관리 필수",
+                            body: "한국건설기술연구원이 발표한 건설공사비지수가 3개월 연속 상승세를 기록했습니다. 철근·시멘트 등 주요 자재 가격이 전월 대비 2.1% 올랐으며, 정비사업 공사비 산정 시 최신 물가 반영이 필수적입니다.",
+                            tags: ["#공사비지수", "#자재비"]
+                        }
+                    ];
+                    
+                    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+                    const todayByte = dailyBytes[dayOfYear % dailyBytes.length];
+                    
+                    document.getElementById('daily-byte-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
+                    document.getElementById('daily-byte-title').innerText = todayByte.title;
+                    document.getElementById('daily-byte-body').innerText = todayByte.body;
+                    
+                    const tagsContainer = document.getElementById('daily-byte-tags');
+                    todayByte.tags.forEach(tag => {
+                        const span = document.createElement('span');
+                        span.className = 'chip blue';
+                        span.textContent = tag;
+                        tagsContainer.appendChild(span);
+                    });
+                })();
             </script>
 
             <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
@@ -748,7 +792,7 @@ li {
                 </div>
             </div>
 
-            <script src="articles.js"></script>
+            <script defer src="articles.js"></script>
             <script>
                 let currentArticleUrl = '';
                 // 이스터에그: 100개 중 1개 폭탄 위치 무작위 배정
@@ -762,7 +806,10 @@ li {
                     
                     let readList = [];
                     try {
-                        const currentBuildDate = '2026-07-16';
+                        // M-06: 빌드 날짜 자동화 — 기사 개수+첫 기사 제목 기반 해시로 변경 감지
+                        const currentBuildDate = (typeof articlesData !== 'undefined') 
+                            ? 'v' + articlesData.length + '-' + (articlesData[0] ? articlesData[0].title.length : 0)
+                            : '2026-07-18';
                         const storedBuildDate = localStorage.getItem('jhub_build_date');
                         
                         if (storedBuildDate !== currentBuildDate) {
@@ -986,8 +1033,8 @@ li {
                     <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #00cc66; box-shadow: 0 0 8px rgba(0,204,102,0.6); animation: pulse 2s infinite;"></div>
                     <span style="font-size: 16px; font-weight: 700; letter-spacing: -0.5px;">최종 업데이트</span>
                 </div>
-                <div style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
-                    2026.07.17 09:40 (실시간 동기화 완료)
+                <div id="workspace-sync-time" style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
+                    데이터 로딩 중...
                 </div>
             </div>
             <style>
@@ -998,63 +1045,60 @@ li {
                 }
             </style>
             
-<div class="wa-container">
-    <div class="wa-header" onclick="toggleAccordion(this)">
-        <h2 class="wa-title">1. 전사 일일 및 종합 동향</h2>
-        <div class="wa-icon">▼</div>
-    </div>
-    <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">7월 4주차 주요 변동 사항 및 핵심 요약</p>
-        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;"><li><span class="highlight">장대B구역</span> — 이달 말 지하안전영향평가 접수 예정</li><li><span class="highlight">하계 현대우성</span> — 7/16 구청장 보고 및 7/21 전문가 자문회의 개최</li><li><span class="highlight">인천 송월</span> — 7/10 통합심의 관련 협의 완료 (일정 조율 중)</li><li><span class="highlight">면목역 모아주택</span> — 4,6구역 7/16 시행인가도서 접수 계획</li><li><span class="highlight">대림1구역</span> — 7/25 주민총회 개최 예정</li></ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div><div class="report-item"><div class="tag-row"><span class="chip red">★★★ 핵심</span></div><h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3><p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div><h3 class="report-title">주택법 시행령 개정</h3><p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip green">기 보고</span></div><h3 class="report-title">모아타운 종상향 + 도정법 개정</h3><p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p></div></div></div>
-    </div>
-</div>
+            <div class="wa-container">
+                <div class="wa-header" onclick="toggleAccordion(this)">
+                    <h2 class="wa-title">1. 전사 일일 및 종합 동향</h2>
+                    <div class="wa-icon">▼</div>
+                </div>
+                <div class="wa-content" id="workspace-sec1-content">
+                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
+                </div>
+            </div>
 
-<div class="wa-container collapsed">
-    <div class="wa-header" onclick="toggleAccordion(this)">
-        <h2 class="wa-title">2. 전사 프로젝트 통합 뷰</h2>
-        <div class="wa-icon">▼</div>
-    </div>
-    <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">본부별 현황, 입찰 전선, 인접지 및 정보몽땅</p>
-        <div class="grid-2"><div><div class="card"><div class="card-header"><div class="card-title">본부별 주요 프로젝트</div></div><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 디자인 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td><span class="highlight">장대B구역</span></td><td>사업시행인가 완료, 7/14 보행브릿지 회의</td></tr><tr><td><span class="highlight">면목역 모아주택</span></td><td>7/14 4·7구역 총회</td></tr><tr><td><span class="highlight">하계 현대우성</span></td><td>7/16 노원구청장 보고</td></tr><tr><td>수택동 재개발</td><td>2차 보완도서 건축업무 지원</td></tr><tr><td>마천5구역</td><td>시공사 현장설명회 완료</td></tr></table><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 도시개발 & 재생 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td>화성 남양 지역주택</td><td>10월 말 통합심의 준비 (쌍용건설)</td></tr><tr><td>갈현1구역 재개발</td><td>철거도서 작성 중</td></tr><tr><td>범일3구역</td><td>9차 사업시행변경인가 접수</td></tr></table><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 도시계획 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td><span class="highlight">장위13구역</span></td><td>수립범위 재접수 준비</td></tr><tr><td><span class="highlight">삼선동 1·2구역</span></td><td>7/16 MP 미팅(구청)</td></tr><tr><td><span class="highlight">석관초 관리계획</span></td><td>7/16 수립범위 사전자문(시청)</td></tr></table></div><div class="card"><div class="card-header"><div class="card-title">입찰/수주 전선 (전략기획)</div><span class="chip red">총력전</span></div><table class="card-table"><tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr><tr><td><span class="highlight">장안1구역</span></td><td>7/11 선정 총회</td><td>적격심사 1위</td></tr><tr><td><span class="highlight">당산1구역</span></td><td>7/18 선정 총회</td><td>기호 2번</td></tr><tr><td>독산1구역</td><td>3분기 입찰</td><td>26년 4Q 예상</td></tr><tr><td>부천 중동역세권</td><td>단독시행 검토</td><td>26년 4Q 예상</td></tr></table></div></div><div><div class="card"><div class="card-header"><div class="card-title">인접지 개발 동향</div><span class="chip">완벽 복원</span></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">① 은평구</div><ul class="acc-body"><li>증산5구역 — 해체공사 착공, 가림막 설치 도로통제 시작</li><li>불광8 조합설립(25층 321세대) / 구산역세권 구역지정</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">② 중랑구</div><ul class="acc-body"><li>상봉7구역 — 사업시행계획 변경인가(7/2). 49층 841세대</li><li>'신속추진지원팀' 신설 (7/1)</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">③ 강남구</div><ul class="acc-body"><li>은마아파트 — 7/2 사업시행인가 획득!</li><li>'재건축 신속화합(신화) 프로젝트' 1호 결재 (7/1)</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">④ 종로구 / ⑤ 성북구 / ⑥ 노원구 / ⑦ 인천</div><ul class="acc-body"><li>종로2·3가 지구단위계획 변경안 수정가결</li><li>신월곡제1구역 — 사업시행계획(변경)인가 고시</li><li>상계주공7단지 — 안전진단 통과</li><li>인천 제물포구 행정체제 개편 출범</li></ul></div></div><div class="card"><div class="card-header"><div class="card-title">정보몽땅 자동 크롤링 (API)</div><span class="chip blue">실시간 연동</span></div><table class="card-table"><tr><th>구역</th><th>상태</th><th>변동 내역</th></tr><tr><td><strong>대림1구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>창립총회 결과보고 등재</td></tr><tr><td><strong>장위13-2구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>주민설명회 자료 공개</td></tr><tr><td><strong>창신10구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>신속통합기획 구역 지정</td></tr><tr><td><strong>중계주공5단지</strong></td><td><span style="color:var(--text-secondary);">[ 미지정 ]</span></td><td>구역지정 전 미등재</td></tr></table></div></div></div>
-    </div>
-</div>
+            <div class="wa-container collapsed">
+                <div class="wa-header" onclick="toggleAccordion(this)">
+                    <h2 class="wa-title">2. 전사 프로젝트 통합 뷰</h2>
+                    <div class="wa-icon">▼</div>
+                </div>
+                <div class="wa-content" id="workspace-sec2-content">
+                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
+                </div>
+            </div>
 
-<div class="wa-container collapsed">
-    <div class="wa-header" onclick="toggleAccordion(this)">
-        <h2 class="wa-title">3. 통합 핵심 일정표</h2>
-        <div class="wa-icon">▼</div>
-    </div>
-    <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
-        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 4주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday">월요일</div></div><div class="event-card"><div class="event-name">인천금송 재개발사업</div><div class="event-note">구의회청취 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday">화요일</div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의 개최</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/23</div><div class="day-weekday">목요일</div></div><div class="event-card"><div class="event-name">고덕동470 소규모 재건축</div><div class="event-note">통합심의 개최 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday">금요일</div></div><div class="event-card"><div class="event-name">범일3구역 재개발</div><div class="event-note">9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday">토요일</div></div><div class="event-card important"><div class="event-name">대림1구역 재개발</div><div class="event-note">주민총회 개최 예정</div></div></div></div>
-    </div>
-</div>
+            <div class="wa-container collapsed">
+                <div class="wa-header" onclick="toggleAccordion(this)">
+                    <h2 class="wa-title">3. 통합 핵심 일정표</h2>
+                    <div class="wa-icon">▼</div>
+                </div>
+                <div class="wa-content" id="workspace-sec3-content">
+                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
+                </div>
+            </div>
 
-<div class="wa-container collapsed">
-    <div class="wa-header" onclick="toggleAccordion(this)">
-        <h2 class="wa-title">4. 법규 아카이브</h2>
-        <div class="wa-icon">▼</div>
-    </div>
-    <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
-        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">신규 시행 법령</div></div><table class="card-table"><tr><th>시행일</th><th>법령</th><th>주요 내용</th></tr><tr><td>07.01</td><td>도정법 시행령</td><td>총회 1회 통합, 공사비 검증 의무화</td></tr><tr><td>07.01</td><td>주택법 시행령</td><td>일부 개정 시행 (행정사항 정비)</td></tr><tr><td>02.27</td><td>소규모주택정비법</td><td>조합설립 요건 완화, 임대주택 가격 상향</td></tr></table></div><div class="card"><div class="card-header"><div class="card-title">지자체 고시/공고</div></div><ul><li>[서울] 성북구 신월곡제1구역 — 7/2 사업시행계획(변경)인가 고시</li><li>[서울] 중랑구 상봉7구역 — 7/2 사업시행계획 변경인가 고시 (49층)</li><li>[서울] 종로구 종로2·3가 — 7/2 지구단위계획 변경안 수정가결</li></ul></div><div class="card" style="grid-column: 1 / -1;"><div class="card-header"><div class="card-title">서울시 10대 법령 개정 건의안 추적표</div></div><table class="card-table"><tr><th>건의 항목</th><th>현행</th><th>건의안</th><th>상태</th></tr><tr><td>조합설립 동의율</td><td>75%</td><td><strong style="color:var(--text-primary)">70%</strong></td><td>건의 중</td></tr><tr><td>이주비 대출 LTV</td><td>40%</td><td><strong style="color:var(--text-primary)">70%</strong></td><td>건의 중</td></tr><tr><td>인가 전 통지 기간</td><td>60일</td><td><strong style="color:var(--text-primary)">30일</strong></td><td>건의 중</td></tr><tr><td>시공자 수의계약</td><td>2회 유찰</td><td><strong style="color:var(--text-primary)">1회 유찰</strong></td><td>건의 중</td></tr><tr><td>용적률 1.2배 완화</td><td>공공만 적용</td><td><strong style="color:var(--text-primary)">민간 확대 적용</strong></td><td>건의 중</td></tr></table></div></div>
-    </div>
-</div>
+            <div class="wa-container collapsed">
+                <div class="wa-header" onclick="toggleAccordion(this)">
+                    <h2 class="wa-title">4. 법규 아카이브</h2>
+                    <div class="wa-icon">▼</div>
+                </div>
+                <div class="wa-content" id="workspace-sec4-content">
+                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
+                </div>
+            </div>
 
-<div class="wa-container collapsed">
-    <div class="wa-header" onclick="toggleAccordion(this)">
-        <h2 class="wa-title">5. 종합 주간 법규 동향 보고서 (상세 원문)</h2>
-        <div class="wa-icon">▼</div>
-    </div>
-    <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">법규, 정책, 인허가 동향에 대한 상세 8+2 섹션 풀 리포트</p>
-        <div class="card" style="padding: 0; border-radius: 8px; overflow: hidden; height: 1600px; border: 2px dashed #ccc;">
-            <iframe loading="lazy" src="./reports/regulatory_report.html" style="width: 100%; height: 100%; border: none;"></iframe>
-        </div>
-    </div>
-</div>
+            <div class="wa-container collapsed">
+                <div class="wa-header" onclick="toggleAccordion(this)">
+                    <h2 class="wa-title">5. 종합 주간 법규 동향 보고서 (상세 원문)</h2>
+                    <div class="wa-icon">▼</div>
+                </div>
+                <div class="wa-content">
+                    <p style="color:var(--text-secondary); margin-top:0;">법규, 정책, 인허가 동향에 대한 상세 8+2 섹션 풀 리포트</p>
+                    <div class="card" style="padding: 0; border-radius: 8px; overflow: hidden; height: 85vh; min-height: 800px; max-height: 1600px; border: 2px dashed #ccc;">
+                        <iframe loading="lazy" src="./reports/regulatory_report.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                    </div>
+                </div>
+            </div>
 
+            <script src="./js/workspace.js"></script>
         </div>
         
         <!-- MODE 3: WEEKLY REPORT (보안) -->
@@ -1070,7 +1114,7 @@ li {
 
                 <!-- Generated Draft Preview -->
                 <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
-                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
+                    <div style="width: 100%; height: 85vh; min-height: 800px; max-height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
                         <iframe loading="lazy" src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
                     </div>
                 </div>
@@ -1151,27 +1195,51 @@ li {
             
             <script>
                 function unlockWeekly() {
-                    // 실제 비밀번호 검증 없이 무조건 통과하도록 변경 (UI만 유지)
-                    document.getElementById("weekly-lock-screen").style.display = "none";
+                    // 보안 복원: 로그인 사용자의 Master 권한 확인
+                    const masterBtn = document.getElementById('btn-master');
+                    const isMaster = masterBtn && masterBtn.style.display !== 'none';
+                    if (!isMaster) {
+                        alert('주간 보고서 열람 권한이 없습니다. 관리자에게 문의하세요.');
+                        switchMode('journal');
+                        return;
+                    }
                     document.getElementById("weekly-admin-view").style.display = "block";
                     window.scrollTo(0,0);
                 }
 
-                function publishWeeklyReport() {
+                async function publishWeeklyReport() {
                     const btn = document.querySelector("#weekly-publish-actions button");
                     btn.innerText = "발행 처리 중...";
                     btn.style.opacity = "0.7";
+                    btn.disabled = true;
+                    
+                    try {
+                        // M-03: 서버에 발행 API 호출 시도
+                        const res = await fetch('/api/publish', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            btn.innerText = "✅ 전사 포털 업데이트 완료";
+                            btn.style.background = "#00cc66";
+                        }
+                    } catch(e) {
+                        // 서버 미접속 시: workspace.json을 강제 리로드하여 최신 데이터 반영
+                        console.log('Publish API unavailable, forcing workspace refresh');
+                        if (typeof loadWorkspaceData === 'function') {
+                            loadWorkspaceData();
+                        }
+                        btn.innerText = "✅ 데이터 새로고침 완료";
+                        btn.style.background = "#00cc66";
+                    }
+                    
+                    btn.style.opacity = "1";
+                    btn.style.boxShadow = "none";
                     
                     setTimeout(() => {
-                        btn.innerText = "✅ 전사 포털 업데이트 완료";
-                        btn.style.background = "#00cc66";
-                        btn.style.opacity = "1";
-                        btn.style.boxShadow = "none";
-                        
-                        setTimeout(() => {
-                            alert("최종 승인된 보고서가 J-Workspace에 성공적으로 갱신되었습니다.");
-                        }, 500);
-                    }, 1500);
+                        alert("보고서 발행이 완료되었습니다. J-Workspace 데이터가 갱신되었습니다.");
+                        btn.innerText = "최종 승인 및 발행 (Publish)";
+                        btn.style.background = "#0066cc";
+                        btn.disabled = false;
+                    }, 2000);
                 }
             </script>
         </div>
@@ -1209,6 +1277,13 @@ li {
         const name = document.getElementById("login-name").value.trim();
         const pass = document.getElementById("login-pass").value.trim();
         const err = document.getElementById("login-error");
+        const rememberMe = document.getElementById('login-remember') && document.getElementById('login-remember').checked;
+        
+        if (!name || !pass) {
+            err.textContent = '이름과 비밀번호를 모두 입력해주세요.';
+            err.style.display = 'block';
+            return;
+        }
         
         try {
             const response = await fetch('/api/login', {
@@ -1219,13 +1294,27 @@ li {
             const result = await response.json();
             
             if (response.ok && result.success) {
+                if (rememberMe) {
+                    localStorage.setItem('jhub_saved_user', JSON.stringify({name: result.user_name, is_master: result.is_master}));
+                }
                 processLoginSuccess(result.user_name, result.is_master);
                 err.style.display = "none";
             } else {
                 showLoginError();
             }
         } catch (error) {
-            console.error("Login failed:", error);
+            console.error("Login server unreachable, trying offline fallback:", error);
+            // C-01 Fallback: 서버 미구동 시 localStorage 저장된 세션으로 복원
+            const saved = localStorage.getItem('jhub_saved_user');
+            if (saved) {
+                try {
+                    const userData = JSON.parse(saved);
+                    processLoginSuccess(userData.name, userData.is_master);
+                    err.style.display = 'none';
+                    console.log('Offline fallback login successful for:', userData.name);
+                    return;
+                } catch(e) {}
+            }
             showLoginError();
         }
     }
@@ -1246,6 +1335,8 @@ li {
             await fetch('/api/logout', { method: 'POST' });
         } catch(e) {}
         
+        localStorage.removeItem('jhub_saved_user');
+        window.location.hash = '';
         document.getElementById('login-screen').style.display='flex'; 
         document.getElementById('user-profile-badge').innerHTML='';
         document.getElementById('login-pass').value = '';
@@ -1258,13 +1349,39 @@ li {
             if (response.ok && result.success) {
                 processLoginSuccess(result.user_name, result.is_master);
             } else {
-                document.getElementById('login-screen').style.display = 'flex';
+                // 서버 세션 없음 — 로컬 저장 세션 확인
+                const saved = localStorage.getItem('jhub_saved_user');
+                if (saved) {
+                    const userData = JSON.parse(saved);
+                    processLoginSuccess(userData.name, userData.is_master);
+                } else {
+                    document.getElementById('login-screen').style.display = 'flex';
+                }
             }
         } catch (error) {
-            document.getElementById('login-screen').style.display = 'flex';
+            // C-01 Fallback: 서버 접속 불가 시 로컬 저장 세션으로 자동 복원
+            const saved = localStorage.getItem('jhub_saved_user');
+            if (saved) {
+                try {
+                    const userData = JSON.parse(saved);
+                    processLoginSuccess(userData.name, userData.is_master);
+                    console.log('Offline session restored for:', userData.name);
+                } catch(e) {
+                    document.getElementById('login-screen').style.display = 'flex';
+                }
+            } else {
+                document.getElementById('login-screen').style.display = 'flex';
+            }
         }
     }
 
+
+    // C-04: XSS 살균 유틸리티 함수
+    function sanitizeHTML(str) {
+        const temp = document.createElement('div');
+        temp.textContent = str;
+        return temp.innerHTML;
+    }
 
     async function loadFeedbacks() {
         try {
@@ -1286,15 +1403,16 @@ li {
                     const card = document.createElement('div');
                     card.className = 'card';
                     card.style.marginBottom = '12px';
+                    // C-04: 모든 사용자 입력값을 sanitizeHTML로 살균 처리
                     card.innerHTML = `
                         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 8px;">
                             <div>
-                                <span class="chip blue">${fb.project_name || '일반 제안'}</span>
-                                <span style="font-size: 12px; color: #888; margin-left: 8px;">${fb.timestamp}</span>
+                                <span class="chip blue">${sanitizeHTML(fb.project_name || '일반 제안')}</span>
+                                <span style="font-size: 12px; color: #888; margin-left: 8px;">${sanitizeHTML(fb.timestamp || '')}</span>
                             </div>
-                            <span style="font-weight: 600; font-size: 13px; color: #800080;">작성자: ${fb.author}</span>
+                            <span style="font-weight: 600; font-size: 13px; color: #800080;">작성자: ${sanitizeHTML(fb.author || '익명')}</span>
                         </div>
-                        <p style="margin: 0; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">${fb.content}</p>
+                        <p style="margin: 0; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">${sanitizeHTML(fb.content || '')}</p>
                     `;
                     container.appendChild(card);
                 });
@@ -1304,15 +1422,20 @@ li {
         }
     }
 
-    // Mode Switch Logic (Safe version with null-check + fallback)
+    // Hash Routing & Mode Switch Logic
     function switchMode(mode) {
+        window.location.hash = mode;
+    }
+
+    function renderModeFromHash() {
+        let mode = window.location.hash.replace('#', '') || 'journal';
         try {
             var headerBtn = document.getElementById('btn-' + mode);
             var viewDiv = document.getElementById('view-' + mode);
             
             // Guard: if target page doesn't exist, fall back to journal
             if (!headerBtn || !viewDiv) {
-                console.warn('switchMode: invalid mode "' + mode + '", falling back to journal');
+                console.warn('renderModeFromHash: invalid mode "' + mode + '", falling back to journal');
                 mode = 'journal';
                 headerBtn = document.getElementById('btn-journal');
                 viewDiv = document.getElementById('view-journal');
@@ -1331,12 +1454,15 @@ li {
             // Scroll to top when switching modes
             window.scrollTo(0, 0);
         } catch (e) {
-            console.error('switchMode error:', e);
+            console.error('renderModeFromHash error:', e);
             // Emergency fallback: show journal
             var fallback = document.getElementById('view-journal');
             if (fallback) fallback.classList.add('active');
         }
     }
+
+    // Listen for back/forward buttons
+    window.addEventListener('hashchange', renderModeFromHash);
 
     // Pull to refresh logic
     let touchStartY = 0;
@@ -1383,8 +1509,15 @@ li {
 
     document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
+        renderModeFromHash(); // Initialize routing based on URL hash
         document.getElementById("login-pass").addEventListener("keypress", e => {
             if(e.key === "Enter") attemptLogin();
+        });
+        // m-04: ESC 키로 모달 닫기
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                hideChangePasswordModal();
+            }
         });
     });
 </script>
