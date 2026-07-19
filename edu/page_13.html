@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="manifest" href="manifest.json">
     
-    <title>문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <title>문서 12. 아찔한 실패 사례와 방어 프롬프트 - 진양엔지니어링 AI 교육 플랫폼</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -143,6 +143,23 @@
     .dash-card h3 { font-size: 21px; margin-bottom: 12px; color: var(--ink); }
     .dash-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.5; flex-grow: 1; }
     .dash-card .meta { margin-top: 20px; font-size: 12px; color: var(--primary); font-weight: 600; }
+    
+    /* Track Hub Cards */
+    .track-section { margin-bottom: 48px; }
+    .track-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline); }
+    .track-icon { font-size: 28px; }
+    .track-title { font-size: 24px; font-weight: 700; color: var(--ink); letter-spacing: -0.5px; }
+    .track-desc { font-size: 14px; color: var(--ink-muted); margin-top: 4px; }
+    .track-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; margin-left: 8px; }
+    .track-badge-a { background: #e8f5e9; color: #2e7d32; }
+    .track-badge-b { background: #e3f2fd; color: #1565c0; }
+    .track-badge-c { background: #fce4ec; color: #c62828; }
+    .track-badge-d { background: #f3e5f5; color: #6a1b9a; }
+    .track-badge-common { background: var(--surface-pearl); color: var(--ink-muted); }
+    .level-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+    .level-1 { background: #e8f5e9; color: #2e7d32; }
+    .level-2 { background: #fff3e0; color: #e65100; }
+    .level-3 { background: #fce4ec; color: #c62828; }
     
 
     @media print {
@@ -368,43 +385,39 @@
 
     <!-- Desktop Sidebar -->
     <div class="desktop-sidebar" id="desktopSidebar">
-        <div class="toc-category">📖 시작하기 전에</div>
+        <div class="toc-category">📚 공통 모듈</div>
         <div class="toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제1장. 도입 및 총론</div>
-        <div class="toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_3.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제2장. AI 및 시스템 기본 이해</div>
-        <div class="toc-item"><a href="page_4.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_5.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_6.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_7.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_8.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제3장. 데이터 인프라 및 보안</div>
-        <div class="toc-item"><a href="page_9.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_10.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_11.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_12.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제4장. 사내 문화 및 행동 지침</div>
-        <div class="toc-item active"><a href="page_13.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_14.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_15.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제5장. 실무 시스템 활용</div>
+        <div class="toc-item"><a href="page_1.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_2.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
+        <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
+        <div class="toc-item"><a href="page_3.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_4.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_5.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_6.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_7.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_8.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_9.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div class="toc-category">🔧 AI 실무 활용 (설계자/실무자)</div>
+        <div class="toc-item"><a href="page_10.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_11.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_12.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="toc-item active"><a href="page_13.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_14.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_15.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
         <div class="toc-item"><a href="page_16.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_17.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제6장. 사내 소통과 진양저널</div>
-        <div class="toc-item"><a href="page_18.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
-        <div class="toc-category">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
-        <div class="toc-item"><a href="page_19.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="toc-item"><a href="page_20.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_21.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_22.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_23.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_24.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_25.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_26.html">SOP 05: J-Hub(진양저널) 사내 포털 개발 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_17.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_18.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
+        <div class="toc-item"><a href="page_19.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
+        <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
+        <div class="toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_25.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_26.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
         <div class="toc-item"><a href="page_27.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_28.html">SOP 07: J-Hub (진양저널) 사내 포털 구축 교육 매뉴얼<span class="badge-new">N</span></a></div>
 
     </div>
 
@@ -412,43 +425,39 @@
     <div class="mobile-menu-overlay" id="mobileMenu">
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
         <div style="margin-bottom: 40px; font-size: 14px; color: var(--ink-muted); font-weight: 600;">J-Hub Portal 목차</div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">📖 시작하기 전에</div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">📚 공통 모듈</div>
         <div class="mobile-toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제1장. 도입 및 총론</div>
-        <div class="mobile-toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_3.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제2장. AI 및 시스템 기본 이해</div>
-        <div class="mobile-toc-item"><a href="page_4.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_5.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_6.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_7.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_8.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제3장. 데이터 인프라 및 보안</div>
-        <div class="mobile-toc-item"><a href="page_9.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_10.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_11.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_12.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제4장. 사내 문화 및 행동 지침</div>
-        <div class="mobile-toc-item active"><a href="page_13.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_14.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_15.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제5장. 실무 시스템 활용</div>
+        <div class="mobile-toc-item"><a href="page_1.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_2.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
+        <div class="mobile-toc-item"><a href="page_3.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_4.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_5.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_6.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_7.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_9.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🔧 AI 실무 활용 (설계자/실무자)</div>
+        <div class="mobile-toc-item"><a href="page_10.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item active"><a href="page_13.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_14.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_15.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
         <div class="mobile-toc-item"><a href="page_16.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_17.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제6장. 사내 소통과 진양저널</div>
-        <div class="mobile-toc-item"><a href="page_18.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
-        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
-        <div class="mobile-toc-item"><a href="page_19.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="mobile-toc-item"><a href="page_20.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_21.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_22.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_23.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_24.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_25.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_26.html">SOP 05: J-Hub(진양저널) 사내 포털 개발 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_17.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_18.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
+        <div class="mobile-toc-item"><a href="page_19.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
+        <div class="mobile-toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_25.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_26.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
         <div class="mobile-toc-item"><a href="page_27.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_28.html">SOP 07: J-Hub (진양저널) 사내 포털 구축 교육 매뉴얼<span class="badge-new">N</span></a></div>
 
     </div>
     
@@ -466,50 +475,49 @@
             <div class="viewer-card">
 <div class="article-toc">
 <strong>본문 목차</strong>
-<a href="#플랫폼-구축은-끝이-아니라-시작입니다">&nbsp;&nbsp;· 플랫폼 구축은 끝이 아니라 시작입니다</a>
+<a href="#AI의-함정-건축-실무-실패-사례-Troubleshooting-">&nbsp;&nbsp;· AI의 함정: 건축 실무 실패 사례 (Troubleshooting)</a>
 </div>
-                <div class="breadcrumb"><a href="index.html">홈</a> > 제4장. 사내 문화 및 행동 지침 > <span>현재 문서</span></div>
-                <h1 class="page-title">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</h1>
+                <div class="breadcrumb"><a href="index.html">홈</a> > 🔧 AI 실무 활용 (설계자/실무자) > <span>현재 문서</span></div>
+                <h1 class="page-title">문서 12. 아찔한 실패 사례와 방어 프롬프트</h1>
 
                 <div class="md-content">
-                    <h3 id="플랫폼-구축은-끝이-아니라-시작입니다">플랫폼 구축은 끝이 아니라 시작입니다</h3>
-<p>지금까지 우리는 AI 시대에 살아남기 위한 거대한 비전과 생각의 뼈대(플랫폼)를 세웠습니다. 훌륭한 베이스캠프를 구축했다는 자부심을 가져도 좋습니다. 하지만 진정한 혁신은 매뉴얼을 예쁘게 만드는 데서 오지 않습니다. 내일 아침 출근해서 우리의 습관이 단 1도 바뀌지 않는다면, 이 모든 시스템은 완벽한 휴지조각에 불과합니다.</p>
-<p>앞으로 이 거대한 변화를 실무에 안착시키는 과정에서, 우리는 필연적으로 <strong>4가지의 거대한 착시와 절벽</strong>을 마주하게 될 것입니다. 이를 미리 인지하고 경계해야만 진정한 혁신을 이룰 수 있습니다.</p>
-<div class="row" style="margin-top: 30px;">
-<div class="col-md-6 mb-4">
-<div class="alert alert-danger" style="height: 100%;">
-<h4 style="color: #9b2c2c;">🚨 우리가 경계해야 할 4가지 절벽</h4>
-<ol style="margin-bottom: 0; padding-left: 20px;">
-<li style="margin-bottom: 15px;"><strong>매뉴얼과 혁신을 혼동하는 착시 (The Platform Trap):</strong> 훌륭한 매뉴얼을 읽었다고 일이 빨라지는 것이 아닙니다. 머리로는 이해하면서 손으로는 여전히 옛날 방식대로 엑셀을 열고 캐드 선을 긋고 있다면, 우리의 진척도는 '0'입니다.</li>
-<li style="margin-bottom: 15px;"><strong>지식의 관성과 조용한 사보타주:</strong> "이거 현장 실무랑은 잘 안 맞는데요?", "AI가 내놓은 결과는 못 믿겠습니다." 기존에 경험이 많을수록 새로운 시스템을 의심하고 회피하려 할 것입니다. 하지만 과거의 경험에 갇혀 새로운 툴을 거부하는 순간, 도태는 시작됩니다.</li>
-<li style="margin-bottom: 15px;"><strong>속도 격차의 함정:</strong> 앞서 나가는 사람의 속도만 빠르다고 조화가 이루어지지 않습니다. 2D CAD에서 BIM 생태계로, 다시 AI 생태계로 넘어가는 패러다임의 변화를 모든 구성원이 함께 밟아 나가야 합니다.</li>
-<li><strong>새로운 관료주의 (Red Tape):</strong> 생각의 체계화가 "무조건 이 순서대로만 해야 결재가 난다"는 융통성 없는 족쇄가 되어서는 안 됩니다. 시스템은 유연한 무기여야지 둔탁한 방패가 아닙니다.</li>
-</ol>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="alert alert-success" style="height: 100%;">
-<h4 style="color: #276749;">💡 돌파를 위한 우리의 행동 지침</h4>
-<p>문서를 덮고 이제 손에 피를 묻히며 실전에 돌입할 때입니다.</p>
-<ul style="margin-bottom: 0; padding-left: 20px;">
-<li style="margin-bottom: 15px;"><strong>'작은 성공(Quick Win)'부터 강제하라:</strong> 모든 것을 한 번에 바꾸려 하지 마십시오. 내일 당장 "주차장 법규 검토"나 "면적 산출표 작성" 같은 <strong>가장 작고 귀찮은 단위 업무 하나</strong>를 이 AI 플랫폼으로 완벽하게 끝내보는 경험을 하십시오.</li>
-<li style="margin-bottom: 15px;"><strong>스스로 '에반젤리스트(전도사)'가 되어라:</strong> 대표의 지시가 아니라, 동료가 "이거 해봤더니 야근이 줄더라"라고 말할 때 진짜 사내 문화가 바뀝니다. 새로운 시스템을 선제적으로 도입하여 압도적인 효율을 증명해 내는 선구자가 되십시오.</li>
-<li><strong>의심하되, 시도하라:</strong> AI의 결과물을 맹신하지 말고 '게이트키퍼'로서 교차 검증해야 합니다. 하지만 검증의 핑계로 도입 자체를 거부하는 우를 범해서는 안 됩니다.</li>
-</ul>
-</div>
-</div>
-</div>
-<h4 style="margin-top: 30px; color: var(--blueprint-blue);">진짜 싸움은 내일 아침부터입니다</h4>
-<p>우리는 아무도 가지 않은 눈 덮인 산에 가장 훌륭하고 튼튼한 베이스캠프를 지었습니다. 하지만 진짜 싸움은 베이스캠프를 짓는 것이 아니라, 무거운 짐을 짊어지고 산 정상까지 한 걸음씩 내디뎌야 하는 내일 아침부터 시작됩니다. 두려움을 버리고 이 거대한 변화의 물결에 즐겁게 올라타시길 바랍니다.</p>
+                    <h3 id="AI의-함정-건축-실무-실패-사례-Troubleshooting-">AI의 함정: 건축 실무 실패 사례 (Troubleshooting)</h3>
+<p>AI는 만능이 아닙니다. 이 챕터에서는 진양엔지니어링에서 AI를 도입하는 과정에서 실제로 겪었던 <strong>'아찔한 실패 사례'</strong>와 이를 어떻게 극복했는지 방어법을 공유합니다.</p>
+<table class="table">
+<thead>
+<tr>
+<th>사건명 (Failure Case)</th>
+<th>원인 분석</th>
+<th>극복 및 방어 방법 (Defense)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. 유령 조례 사건 (환각)</strong><br/>AI가 서울시 조례라며 '용적률 300% 완화 특별법 제4조'를 근거로 제시했으나, 존재하지 않는 가상의 조례였던 사건.</td>
+<td>AI의 전형적인 '할루시네이션(환각)'. 학습 데이터 부족을 그럴듯한 거짓말로 메우려는 습성.</td>
+<td><strong>[원문 주입법]</strong> AI에게 법규를 물어볼 때는 반드시 우리가 확보한 <strong>최신 조례 원문 PDF나 텍스트를 먼저 업로드</strong>한 뒤, <em>"반드시 첨부된 문서 안에서만 근거를 찾고, 문서에 없으면 모른다고 대답해"</em>라는 프롬프트를 씁니다.</td>
+</tr>
+<tr>
+<td><strong>2. 구법(舊法) 적용 참사</strong><br/>1달 전 개정된 모아타운 층수 완화 기준을 무시하고, 2년 전 과거 기준으로 층수를 낮춰서 계산하여 사업성이 나쁘다고 보고서를 쓴 사건.</td>
+<td>대부분의 LLM 모델(GPT, Gemini)은 학습된 시점이 과거(수개월 전)에 머물러 있어 최신 실시간 고시를 반영하지 못함.</td>
+<td><strong>[웹 검색 강제법]</strong> 프롬프트 마지막에 <em>"답변을 작성하기 전, 반드시 2026년 기준 국가법령정보센터 최신 개정안을 웹으로 검색하여 확인한 뒤 답해"</em>라고 지시하여 최신 데이터를 강제합니다.</td>
+</tr>
+<tr>
+<td><strong>3. 면적 산출식 실종 사건</strong><br/>건폐율 산출 결과값이 '59.8%'로 맞게 나왔지만, 조합에서 '계산식을 보여달라'고 했을 때 AI가 산출 과정을 설명하지 못해 신뢰도를 잃을 뻔한 사건.</td>
+<td>수식과 논리 전개 과정을 건너뛰고 결론만 도출하도록 단순하게 지시했기 때문.</td>
+<td><strong>[Chain of Thought 지시법]</strong> <em>"최종 결과만 내놓지 말고, 분자와 분모에 들어간 구체적인 숫자와 산출 수식을 Step-by-Step으로 모두 작성해"</em>라고 계산 과정을 시각화하도록 강제합니다.</td>
+</tr>
+</tbody>
+</table>
                 </div>
                 
                 <div class="pagination">
-                    <a href="page_12.html" class="btn-page">◀ 이전: 일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a>
-                    <a href="page_14.html" class="btn-page">다음: 문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드 ▶</a>
+                    <a href="page_12.html" class="btn-page">◀ 이전: 문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a>
+                    <a href="page_14.html" class="btn-page">다음: 문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿 ▶</a>
 
                 </div>
                 
-                                <div style="margin-top: 50px;"><h3 style="font-size:18px; margin-bottom:20px; color:var(--ink);">관련 문서</h3><div style="display:flex; flex-direction:column; gap:12px;"><a href="page_14.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_15.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a></div></div>
+                                <div style="margin-top: 50px;"><h3 style="font-size:18px; margin-bottom:20px; color:var(--ink);">관련 문서</h3><div style="display:flex; flex-direction:column; gap:12px;"><a href="page_10.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3. AI를 다루는 16가지 핵심 사고방식</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_11.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_12.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a></div></div>
                 <div style="margin-top:50px; padding:24px; background:var(--surface-pearl); border-radius:12px; font-size:14px; line-height:1.6; word-break:keep-all;">
                     <div style="font-weight:600; font-size:16px; margin-bottom:12px; color:var(--primary);">📲 스마트폰 홈 화면에 앱으로 추가하기</div>
                     <div style="color:var(--ink-muted-80); margin-bottom:16px;">매번 브라우저로 검색해서 들어올 필요 없이, 스마트폰 바탕화면에 앱처럼 설치해두고 터치 한 번에 접속하세요. 로그인 없이 즉시 매뉴얼을 열어볼 수 있습니다.</div>
@@ -534,7 +542,7 @@
                 </div>
 
                 <div style="margin-top:60px;text-align:center;color:var(--ink-muted);font-size:13px;">
-                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.29
+                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.28
                 </div>
             </div>
         </div>
@@ -549,7 +557,7 @@
         <div style="font-weight:600; font-size:16px; margin-bottom:16px;">본문 목차</div>
         <div class="">
 <strong>본문 목차</strong>
-<a href="#플랫폼-구축은-끝이-아니라-시작입니다">&nbsp;&nbsp;· 플랫폼 구축은 끝이 아니라 시작입니다</a>
+<a href="#AI의-함정-건축-실무-실패-사례-Troubleshooting-">&nbsp;&nbsp;· AI의 함정: 건축 실무 실패 사례 (Troubleshooting)</a>
 </div>
 
     </div>
