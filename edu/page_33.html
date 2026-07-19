@@ -345,6 +345,41 @@
     
     .badge-done { position: absolute; top: 16px; right: 16px; background: #2e7d32; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.9; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 
+
+    /* LEAD MAGNET GATE */
+    .gated-content { max-height: 800px; overflow: hidden; position: relative; }
+    .gated-content::after {
+        content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--canvas-parchment) 100%);
+        pointer-events: none; z-index: 10;
+    }
+    [data-theme="dark"] .gated-content::after {
+        background: linear-gradient(to bottom, rgba(28,28,30,0) 0%, var(--canvas-parchment) 100%);
+    }
+    .lead-magnet-overlay {
+        position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
+        display: flex; align-items: flex-end; justify-content: center; padding-bottom: 60px; z-index: 20;
+    }
+    .lead-magnet-box {
+        background: var(--surface-pearl); border: 1px solid var(--hairline); border-radius: 20px;
+        padding: 40px; width: 90%; max-width: 500px; text-align: center;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .lead-magnet-box h3 { font-size: 21px; color: var(--ink); margin-bottom: 12px; font-weight: 700; letter-spacing: -0.5px; }
+    .lead-magnet-box p { font-size: 15px; color: var(--ink-muted); margin-bottom: 24px; line-height: 1.5; }
+    .lm-input {
+        width: 100%; padding: 14px 20px; margin-bottom: 12px; border: 1px solid var(--hairline);
+        border-radius: 12px; background: var(--canvas); color: var(--ink); font-size: 15px; outline: none;
+    }
+    .lm-btn {
+        width: 100%; padding: 16px; margin-top: 8px; background: var(--primary); color: white;
+        border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s;
+    }
+    .lm-btn:hover { background: #0055aa; }
+    .gated-content.unlocked { max-height: none; overflow: visible; }
+    .gated-content.unlocked::after { display: none; }
+    .gated-content.unlocked .lead-magnet-overlay { display: none; }
+
     /* RESPONSIVE */
 
     .md-content pre { position: relative; }
@@ -562,7 +597,7 @@
                 <div style="display:flex; align-items:center; gap:12px; margin-bottom: 8px;"><span class="level-tag level-2">🔧 Lv.2 실무</span><span style="font-size:14px; color:var(--ink-muted); font-weight:600;">⏱️ 예상 읽기 시간: 5분</span></div>
                 <h1 class="page-title" style="margin-top: 0;">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</h1>
 
-                <div class="md-content">
+                <div class="md-content gated-content" id="mdContentWrapper">
                     <div style="padding: 24px; background: var(--canvas-parchment); border-left: 4px solid var(--primary); margin-bottom: 32px; border-radius: 0 12px 12px 0;">
 <h2 id="-교육-개요-도입-배경-" style="margin-top: 0; color: var(--ink); font-size: 20px;">💡 교육 개요 (도입 배경)</h2>
 <p style="font-size: 15px; color: var(--ink-muted-80); margin-bottom: 0;">
@@ -644,6 +679,16 @@
 <li><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></li><li><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></li>
 </ul>
 </div>
+                    
+                    <div class="lead-magnet-overlay" id="lmOverlay">
+                        <div class="lead-magnet-box">
+                            <h3>🔒 핵심 노하우 열람하기</h3>
+                            <p>전체 프롬프트와 실무 적용 가이드를 보시려면<br>간단한 정보를 입력해주세요.</p>
+                            <input type="email" id="lmEmail" class="lm-input" placeholder="이메일 주소 (필수)">
+                            <input type="text" id="lmCompany" class="lm-input" placeholder="소속 회사 (필수)">
+                            <button class="lm-btn" onclick="unlockContent()">무료로 전체 읽기</button>
+                        </div>
+                    </div>
                 </div>
                 
                 
@@ -749,6 +794,35 @@
 
     
     <script>
+        // Lead Magnet Unlock Logic
+        function initLeadMagnet() {
+            if (localStorage.getItem('jhub_unlocked') === 'true') {
+                const wrapper = document.getElementById('mdContentWrapper');
+                if (wrapper) wrapper.classList.add('unlocked');
+            }
+        }
+        function unlockContent() {
+            const email = document.getElementById('lmEmail').value.trim();
+            const company = document.getElementById('lmCompany').value.trim();
+            
+            if (!email || !company) {
+                alert('이메일과 소속 회사를 모두 입력해주세요.');
+                return;
+            }
+            if (!email.includes('@')) {
+                alert('유효한 이메일 주소를 입력해주세요.');
+                return;
+            }
+            
+            // Webhook payload placeholder (Supabase / Google Forms)
+            console.log('[Lead Capture] ' + email + ' / ' + company);
+            
+            localStorage.setItem('jhub_unlocked', 'true');
+            const wrapper = document.getElementById('mdContentWrapper');
+            if (wrapper) wrapper.classList.add('unlocked');
+        }
+        document.addEventListener('DOMContentLoaded', initLeadMagnet);
+
         // Menu Logic
         function toggleMenu() {
             if (window.innerWidth <= 900) {

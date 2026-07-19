@@ -345,6 +345,41 @@
     
     .badge-done { position: absolute; top: 16px; right: 16px; background: #2e7d32; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.9; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 
+
+    /* LEAD MAGNET GATE */
+    .gated-content { max-height: 800px; overflow: hidden; position: relative; }
+    .gated-content::after {
+        content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--canvas-parchment) 100%);
+        pointer-events: none; z-index: 10;
+    }
+    [data-theme="dark"] .gated-content::after {
+        background: linear-gradient(to bottom, rgba(28,28,30,0) 0%, var(--canvas-parchment) 100%);
+    }
+    .lead-magnet-overlay {
+        position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
+        display: flex; align-items: flex-end; justify-content: center; padding-bottom: 60px; z-index: 20;
+    }
+    .lead-magnet-box {
+        background: var(--surface-pearl); border: 1px solid var(--hairline); border-radius: 20px;
+        padding: 40px; width: 90%; max-width: 500px; text-align: center;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .lead-magnet-box h3 { font-size: 21px; color: var(--ink); margin-bottom: 12px; font-weight: 700; letter-spacing: -0.5px; }
+    .lead-magnet-box p { font-size: 15px; color: var(--ink-muted); margin-bottom: 24px; line-height: 1.5; }
+    .lm-input {
+        width: 100%; padding: 14px 20px; margin-bottom: 12px; border: 1px solid var(--hairline);
+        border-radius: 12px; background: var(--canvas); color: var(--ink); font-size: 15px; outline: none;
+    }
+    .lm-btn {
+        width: 100%; padding: 16px; margin-top: 8px; background: var(--primary); color: white;
+        border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s;
+    }
+    .lm-btn:hover { background: #0055aa; }
+    .gated-content.unlocked { max-height: none; overflow: visible; }
+    .gated-content.unlocked::after { display: none; }
+    .gated-content.unlocked .lead-magnet-overlay { display: none; }
+
     /* RESPONSIVE */
 
     .md-content pre { position: relative; }
@@ -558,7 +593,7 @@
                 <div style="display:flex; align-items:center; gap:12px; margin-bottom: 8px;"><span class="level-tag level-1">🌱 Lv.1 입문</span><span style="font-size:14px; color:var(--ink-muted); font-weight:600;">⏱️ 예상 읽기 시간: 3분</span></div>
                 <h1 class="page-title" style="margin-top: 0;">문서 1. 여는 글: AI와 마주한 건축의 미래</h1>
 
-                <div class="md-content">
+                <div class="md-content gated-content" id="mdContentWrapper">
                     <h3 id="건축의-미래를-준비하며-인간의-온기와-AI의-만남">건축의 미래를 준비하며: 인간의 온기와 AI의 만남</h3>
 <p>요즘 저는 진양엔지니어링의 미래를 두고 깊은 고민을 하고 있습니다. 한 가지 분명한 사실은, 지금까지 우리가 해왔던 전통적인 건축 설계 방식에 거대한 패러다임의 변화가 다가오고 있다는 점입니다.</p>
 <p>앞으로는 도면과 산출물을 빚어내는 과정 자체가 고도화된 AI 플랫폼 위에서 진행될 것입니다. 하지만, 아무리 뛰어난 기술과 알고리즘이 도입되더라도 <strong>그 차가운 플랫폼 속에 '인간의 따뜻한 온기'와 '건축적 철학'을 불어넣는 것은 영원히 우리 건축사들의 몫입니다.</strong></p>
@@ -590,6 +625,16 @@
 <li><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></li><li><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></li>
 </ul>
 </div>
+                    
+                    <div class="lead-magnet-overlay" id="lmOverlay">
+                        <div class="lead-magnet-box">
+                            <h3>🔒 핵심 노하우 열람하기</h3>
+                            <p>전체 프롬프트와 실무 적용 가이드를 보시려면<br>간단한 정보를 입력해주세요.</p>
+                            <input type="email" id="lmEmail" class="lm-input" placeholder="이메일 주소 (필수)">
+                            <input type="text" id="lmCompany" class="lm-input" placeholder="소속 회사 (필수)">
+                            <button class="lm-btn" onclick="unlockContent()">무료로 전체 읽기</button>
+                        </div>
+                    </div>
                 </div>
                 
                 
@@ -691,6 +736,35 @@
 
     
     <script>
+        // Lead Magnet Unlock Logic
+        function initLeadMagnet() {
+            if (localStorage.getItem('jhub_unlocked') === 'true') {
+                const wrapper = document.getElementById('mdContentWrapper');
+                if (wrapper) wrapper.classList.add('unlocked');
+            }
+        }
+        function unlockContent() {
+            const email = document.getElementById('lmEmail').value.trim();
+            const company = document.getElementById('lmCompany').value.trim();
+            
+            if (!email || !company) {
+                alert('이메일과 소속 회사를 모두 입력해주세요.');
+                return;
+            }
+            if (!email.includes('@')) {
+                alert('유효한 이메일 주소를 입력해주세요.');
+                return;
+            }
+            
+            // Webhook payload placeholder (Supabase / Google Forms)
+            console.log('[Lead Capture] ' + email + ' / ' + company);
+            
+            localStorage.setItem('jhub_unlocked', 'true');
+            const wrapper = document.getElementById('mdContentWrapper');
+            if (wrapper) wrapper.classList.add('unlocked');
+        }
+        document.addEventListener('DOMContentLoaded', initLeadMagnet);
+
         // Menu Logic
         function toggleMenu() {
             if (window.innerWidth <= 900) {
