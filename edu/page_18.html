@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="manifest" href="manifest.json">
     
-    <title>문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판 - 진양엔지니어링 AI 교육 플랫폼</title>
+    <title>일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유 - 진양엔지니어링 AI 교육 플랫폼</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -212,6 +212,36 @@
     .md-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; color: var(--ink-muted); font-size: 21px; font-weight: 300; margin: 40px 0; }
     .md-content .alert { padding: 20px; border-radius: 12px; margin-bottom: 24px; border-left: 4px solid var(--hairline); background: var(--surface-pearl); }
     .md-content .alert-info { border-left-color: var(--primary); background: rgba(0, 102, 204, 0.05); }
+    
+    /* ══ AI 활용 가이드북 전용 컴포넌트 ══ */
+    .md-content .episode { background: var(--canvas); border: 1px solid var(--hairline); border-radius: 16px; padding: 24px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .md-content .ep-header { display: flex; align-items: center; margin-bottom: 14px; }
+    .md-content .ep-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-right: 12px; flex-shrink: 0; }
+    .md-content .ep-fail .ep-icon { background: #fff0f0; }
+    .md-content .ep-solve .ep-icon { background: #f0fff4; }
+    .md-content .ep-learn .ep-icon { background: rgba(0, 102, 204, 0.08); }
+    .md-content .ep-title { font-size: 17px; font-weight: 600; color: var(--ink); }
+    .md-content .ep-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 20px; margin-left: 8px; }
+    .md-content .ep-fail .ep-tag { background: #ffe0e0; color: #cc0000; }
+    .md-content .ep-solve .ep-tag { background: #d4edda; color: #006600; }
+    .md-content .ep-learn .ep-tag { background: rgba(0, 102, 204, 0.12); color: var(--primary); }
+    .md-content .dialog { margin: 16px 0; }
+    .md-content .dialog .user { background: var(--primary); color: white; border-radius: 16px 16px 4px 16px; padding: 14px 18px; margin-bottom: 10px; font-size: 15px; line-height: 1.6; }
+    .md-content .dialog .user::before { content: '👤 대표이사 → AI'; display: block; font-size: 11px; font-weight: 600; opacity: 0.8; margin-bottom: 4px; }
+    .md-content .dialog .ai { background: var(--surface-pearl); color: var(--ink); border-radius: 16px 16px 16px 4px; padding: 14px 18px; font-size: 15px; line-height: 1.6; }
+    .md-content .dialog .ai::before { content: '🤖 AI 응답'; display: block; font-size: 11px; font-weight: 600; color: var(--ink-muted); margin-bottom: 4px; }
+    .md-content .prompt-box { background: var(--surface-black); color: #e0e0e0; border-radius: 12px; padding: 18px 22px; margin: 18px 0; font-size: 15px; line-height: 1.7; white-space: pre-wrap; font-family: 'SF Mono', 'Menlo', monospace; }
+    .md-content .lesson { background: linear-gradient(135deg, var(--surface-pearl), var(--canvas-parchment)); border-radius: 12px; padding: 18px 22px; margin: 16px 0; }
+    .md-content .lesson::before { content: '💡 이 경험에서 배운 것'; display: block; font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .md-content .summary { background: rgba(0, 102, 204, 0.05); border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .md-content .summary h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+    .md-content .checklist { list-style: none; padding: 0; }
+    .md-content .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px solid rgba(0,102,204,0.1); font-size: 15px; }
+    .md-content .checklist li::before { content: '☐'; position: absolute; left: 6px; font-size: 16px; color: var(--primary); }
+    .md-content .warning { background: #fff3f0; border-left: 4px solid #ff4444; border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 18px 0; }
+    .md-content .warning::before { content: '⚠️ 주의'; display: block; font-size: 13px; font-weight: 700; color: #ff4444; margin-bottom: 4px; }
+    .md-content .chapter { max-width: 100%; }
+    .md-content .page-break { /* no-op in web view */ }
     
     /* PAGINATION */
     .pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--hairline); }
@@ -420,39 +450,42 @@
     <div class="desktop-sidebar" id="desktopSidebar">
         <div class="toc-category">📚 공통 모듈</div>
         <div class="toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_1.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_2.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
         <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
-        <div class="toc-item"><a href="page_3.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_4.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_5.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_6.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_7.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_8.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_9.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_21.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_23.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
         <div class="toc-category">🔧 AI 실무 활용 (설계자/실무자)</div>
-        <div class="toc-item"><a href="page_10.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_11.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_12.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_13.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_14.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_15.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_16.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_17.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
-        <div class="toc-item active"><a href="page_18.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
         <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
-        <div class="toc-item"><a href="page_19.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item active"><a href="page_18.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
         <div class="toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)<span class="badge-new">N</span></a></div>
         <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        <div class="toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_25.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_26.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
-        <div class="toc-item"><a href="page_27.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_20.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_24.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_26.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_31.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-category">💡 AI 활용 가이드북</div>
+        <div class="toc-item"><a href="page_27.html">💡 AI 활용 가이드북 — Ch.1 실패의 기록 — AI가 미쳤을 때 생긴 일들<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_28.html">💡 AI 활용 가이드북 — Ch.2 극복의 방법 — 비개발자의 무기들<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_29.html">💡 AI 활용 가이드북 — Ch.3 완성의 이야기 — 이것들이 만들어졌다<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_30.html">💡 AI 활용 가이드북 — Ch.4 지금 바로 따라하기<span class="badge-new">N</span></a></div>
 
     </div>
 
@@ -462,39 +495,42 @@
         <div style="margin-bottom: 40px; font-size: 14px; color: var(--ink-muted); font-weight: 600;">J-Hub Portal 목차</div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">📚 공통 모듈</div>
         <div class="mobile-toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_1.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_2.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)<span class="badge-new">N</span></a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
-        <div class="mobile-toc-item"><a href="page_3.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_4.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_5.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_6.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_7.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_8.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_9.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">플랫폼 진화의 연대기: 수작업에서 AI 통합 플랫폼까지<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_23.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례<span class="badge-new">N</span></a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🔧 AI 실무 활용 (설계자/실무자)</div>
-        <div class="mobile-toc-item"><a href="page_10.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_11.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_12.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_13.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_14.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_15.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_16.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_17.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item active"><a href="page_18.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기<span class="badge-new">N</span></a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
-        <div class="mobile-toc-item"><a href="page_19.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item active"><a href="page_18.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
         <div class="mobile-toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)<span class="badge-new">N</span></a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        <div class="mobile-toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
-        <div class="mobile-toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_25.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_26.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
-        <div class="mobile-toc-item"><a href="page_27.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_20.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_24.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_26.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_31.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">💡 AI 활용 가이드북</div>
+        <div class="mobile-toc-item"><a href="page_27.html">💡 AI 활용 가이드북 — Ch.1 실패의 기록 — AI가 미쳤을 때 생긴 일들<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_28.html">💡 AI 활용 가이드북 — Ch.2 극복의 방법 — 비개발자의 무기들<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_29.html">💡 AI 활용 가이드북 — Ch.3 완성의 이야기 — 이것들이 만들어졌다<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_30.html">💡 AI 활용 가이드북 — Ch.4 지금 바로 따라하기<span class="badge-new">N</span></a></div>
 
     </div>
     
@@ -512,180 +548,58 @@
             <div class="viewer-card">
 <div class="article-toc">
 <strong>본문 목차</strong>
-<a href="#AI-자동-배치-실전-운용-매뉴얼">&nbsp;&nbsp;· AI 자동 배치 실전 운용 매뉴얼</a>
+<a href="#데이터-생태계의-기반-서버-Server-란-무엇인가-">&nbsp;&nbsp;· 데이터 생태계의 기반: 서버(Server)란 무엇인가?</a>
 </div>
-                <div class="breadcrumb"><a href="index.html">홈</a> > 🔧 AI 실무 활용 (설계자/실무자) > <span>현재 문서</span></div>
-                <h1 class="page-title">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</h1>
+                <div class="breadcrumb"><a href="index.html">홈</a> > 🛡️ 보안 및 데이터 거버넌스 > <span>현재 문서</span></div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom: 8px;"><span class="level-tag level-1">🌱 Lv.1 입문</span><span style="font-size:14px; color:var(--ink-muted); font-weight:600;">⏱️ 예상 읽기 시간: 3분</span></div>
+                <h1 class="page-title" style="margin-top: 0;">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</h1>
 
                 <div class="md-content">
-                    <h3 id="AI-자동-배치-실전-운용-매뉴얼">AI 자동 배치 실전 운용 매뉴얼</h3>
-<p>이 챕터는 앞서 배운 7단계 알고리즘을 <strong>실제로 AI에게 입력할 수 있는 수치, 프롬프트 문장, 체크리스트</strong>로 변환한 실전 SOP입니다. 각 단계에서 무엇을 계산하고, AI에게 어떻게 말해야 하는지를 정확히 담았습니다.</p>
-<h4 style="margin-top:25px; color:var(--blueprint-blue);">📋 STEP 0: 사업 목표 입력 시트</h4>
-<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
-<p><strong>실제로 AI에게 입력해야 할 데이터 형식:</strong></p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
-[사업 기본 정보]
-- 대지면적: _____ m²
-- 용도지역: _____
-- 용적률 상한: _____ %
-- 건폐율 상한: _____ %
-- 최고 층수 제한: _____ 층
-
-[목표 사업 규모]
-- 목표 총 세대수: _____ 세대
-- 세대 Mix:
-  · 59㎡형: _____ 세대
-  · 84㎡형: _____ 세대
-  · 114㎡형: _____ 세대
-- 비주거(상가) 포함 여부: Y / N
-</pre>
-<div class="alert alert-warning" style="margin-top:10px;margin-bottom:0;">
-<strong>⚠️ 이 데이터 없이 다음 단계로 진행하지 마십시오.</strong> 목표 세대수 없이 동 수를 산출하는 것은 목적지 없이 내비게이션을 켜는 것과 같습니다.
+                    <h3 id="데이터-생태계의-기반-서버-Server-란-무엇인가-">데이터 생태계의 기반: 서버(Server)란 무엇인가?</h3>
+<p>서버란 데이터를 저장하고 네트워크를 통해 사용자에게 서비스를 제공하는 고성능 컴퓨터입니다. 우리가 스마트폰으로 진양저널을 확인하거나 정비사업 통합검토를 실행할 때, 그 요청을 받아들여 결괏값을 보내주는 두뇌 역할을 합니다.</p>
+<h4>1. 일반 서버 (On-Premise)</h4>
+<p><strong>개념:</strong> 회사 내부 전산실이나 사무실 한편에 물리적인 컴퓨터 장비(하드웨어)를 직접 사서 두고 관리하는 방식입니다.</p>
+<div class="alert alert-secondary">
+<ul>
+<li><strong>장점:</strong> 장비를 직접 통제하므로 보안 환경을 완전히 물리적으로 독립시킬 수 있습니다.</li>
+<li><strong>단점:</strong> 초기 구축 비용이 엄청나게 비싸며, 정전이나 화재 시 서비스가 완전히 중단됩니다. 외부(모바일)에서 접속하기 위해서는 복잡한 VPN 설정 등이 필요합니다.</li>
+</ul>
 </div>
+<h4>2. 클라우드 서버 (Cloud Computing)</h4>
+<p><strong>개념:</strong> 아마존(AWS), 마이크로소프트(Azure), 구글(GCP) 같은 글로벌 IT 기업이 전 세계에 지어놓은 거대한 데이터 센터의 자원을 인터넷을 통해 필요한 만큼 빌려 쓰는 방식입니다.</p>
+<div class="alert alert-info">
+<ul>
+<li><strong>장점:</strong> 초기 비용이 0원에 가깝고(사용한 만큼만 지불), 인터넷만 연결되면 전 세계 어디서든 모바일로 접속이 가능합니다. 트래픽이 몰려도 버튼 하나로 성능을 무한대로 늘릴 수 있습니다.</li>
+<li><strong>단점:</strong> 데이터를 외부에 보관하므로 강력한 인증 및 권한 관리가 필수적입니다.</li>
+</ul>
 </div>
-<h4 style="color:var(--blueprint-blue);">🏗️ STEP 1: 데크 설정 계산 시트 + AI 프롬프트</h4>
-<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
-<p><strong>[계산해야 할 값]</strong></p>
-<table style="font-size:13px;width:100%;border-collapse:collapse;margin-bottom:12px;">
-<tr style="background:#e2e8f0;"><th style="padding:6px;border:1px solid #cbd5e0;">계산 항목</th><th style="padding:6px;border:1px solid #cbd5e0;">공식</th><th style="padding:6px;border:1px solid #cbd5e0;">내 사이트 입력값</th></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;">대지 고저차</td><td style="padding:6px;border:1px solid #cbd5e0;">최고점 EL − 최저점 EL</td><td style="padding:6px;border:1px solid #cbd5e0;">______ m</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;">권장 데크 단 수</td><td style="padding:6px;border:1px solid #cbd5e0;">고저차 ÷ 5.2m (반올림)</td><td style="padding:6px;border:1px solid #cbd5e0;">______ 단</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;">지하 굴착 깊이</td><td style="padding:6px;border:1px solid #cbd5e0;">5.2 + 3.3×(B층수−2) + 3.4 + 기초</td><td style="padding:6px;border:1px solid #cbd5e0;">______ m</td></tr>
-<tr style="background:#f7fafc;"><td style="padding:6px;border:1px solid #cbd5e0;">평균지반면</td><td style="padding:6px;border:1px solid #cbd5e0;">Σ(지반고×구간길이) ÷ 전체둘레</td><td style="padding:6px;border:1px solid #cbd5e0;">EL ______ m</td></tr>
-<tr><td style="padding:6px;border:1px solid #cbd5e0;">지하층 판정</td><td style="padding:6px;border:1px solid #cbd5e0;">(평균지반면−1층FL) ≥ 층고×0.5?</td><td style="padding:6px;border:1px solid #cbd5e0;">지상 / 지하</td></tr>
-</table>
-<p><strong>[복사해서 쓰는 AI 프롬프트]</strong></p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
-너는 20년 경력의 한국 건축사로서 아파트 지하 주차장 구조를 완벽히 이해하고 있어.
-다음 조건으로 데크 레벨과 지하층 판정을 수행해줘.
-
-[대지 조건]
-- 대지 둘레: _____ m
-- 4m 간격 측점별 지반고(EL): [_____, _____, _____, ...]
-- 목표 1층 바닥 레벨(FL): EL _____ m
-- 계획 층고: B1=5.2m, B2=3.3m, B3=3.4m
-
-[수행 작업]
-1. 가중평균 공식으로 평균지반면(EL)을 계산해줘. 계산 과정을 단계별로 보여줘.
-2. 1층 바닥이 지하층에 해당하는지 판정해줘.
-3. 지하층으로 판정될 경우, 지상층으로 확보할 수 있는 최소 1층 FL(역산값)을 알려줘.
-4. 모른다면 모른다고 말해줘. 절대 추정하지 말 것.
-</pre>
+<h4>💡 진양저널이 클라우드를 선택한 진짜 이유</h4>
+<p>진양엔지니어링의 소통 허브인 <strong>'진양저널'은 왜 사내 PC가 아닌 GitHub Pages와 같은 글로벌 클라우드에 배포되었을까요?</strong></p>
+<ol>
+<li><strong>시공간의 제약 파괴 (Mobile First):</strong> 현장 조사 중이거나 출퇴근 중에도 스마트폰으로 회사의 공지사항과 메뉴얼을 즉시 열람해야 하기 때문입니다. 사내망(On-Premise)에 가두면 외부 접속이 차단되어 '소통의 단절'이 발생합니다.</li>
+<li><strong>무중단 서비스 (High Availability):</strong> 사내 정전이나 사무실 인터넷 장애가 발생하더라도, 클라우드에 배포된 진양저널은 24시간 365일 결코 멈추지 않습니다.</li>
+<li><strong>유연한 트래픽 대응:</strong> 향후 진양저널의 규모가 커지고 복잡해지더라도 즉각적으로 서버 자원을 증설할 수 있는 유연성을 확보하기 위함입니다.</li>
+</ol>
+<div class="alert alert-secondary" style="margin-top:24px;">
+<h4>☁️ 실제 도입 효과 및 보안성</h4>
+<p>클라우드 서버 도입 후 진양엔지니어링이 체감한 가장 큰 변화는 '어디서든 접근 가능하다'는 편리함 이면에 숨겨진 강력한 보안 통제권입니다. 일반 서버에서는 물리적 탈취 위험과 랜섬웨어 감염 시 복구가 불가능한 치명적 단점이 존재했습니다.</p>
+<ul>
+<li><strong>자동 백업 및 복원:</strong> 매일 자정 스냅샷 기반 백업을 통해 데이터 유실 리스크 99% 감소.</li>
+<li><strong>엔드포인트 보안:</strong> IAM 기반 접근 제어를 통해 인가되지 않은 외부 접속 차단.</li>
+<li><strong>비용 효율성:</strong> 온프레미스 서버 유지보수 대비 TCO(총 소유 비용) 30% 절감.</li>
+</ul>
+<p>💡 <strong>교훈:</strong> 클라우드는 단순히 데이터를 외부에 저장하는 것이 아닙니다. 최고 수준의 보안 인프라를 임대하는 것과 같습니다.</p>
 </div>
-<h4 style="color:var(--blueprint-blue);">🧱 STEP 5: 파라메트릭 블록 선택 + 동 수 산출 AI 프롬프트</h4>
-<div style="background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:16px;">
-<p><strong>[복사해서 쓰는 AI 프롬프트]</strong></p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:12px;border-radius:6px;font-size:13px;overflow-x:auto;">
-너는 한국 아파트 배치 설계 전문 건축사야.
-다음 조건으로 필요한 주동 수와 타입 조합을 산출해줘.
-
-[사업 조건]
-- 목표 세대수: _____ 세대
-- 세대 Mix: 59㎡×_____ + 84㎡×_____ + 114㎡×_____
-- 최고 층수: _____ 층 이하
-- 가용 대지면적(마스킹 제외 후): _____ m²
-
-[블록 라이브러리] ← 우리 회사 검증 블록만 사용할 것
-- A타입: 4베이 판상형, 84㎡×4세대/층, 기준 15~25층
-- B타입: 2코어 탑상형, 혼합 6세대/층, 기준 20~30층
-- C타입: 소형 판상형, 59㎡×4세대/층, 기준 10~15층
-
-[수행 작업]
-1. 가능한 블록 타입 조합(A/B/C 혼합)과 그에 따른 동 수를 3가지 시나리오로 제안해줘.
-2. 각 시나리오별 예상 용적률을 계산해줘 (대지면적 기준).
-3. 조합이 불가능한 이유가 있다면 명확히 설명해줘.
-4. 계산 과정을 모두 보여줘 (Chain of Thought).
-</pre>
-</div>
-<h4 style="color:var(--blueprint-blue);">✅ 최종 게이트키퍼 체크리스트 (STEP 7)</h4>
-<div style="background:#f0fff4;border:1px solid #9ae6b4;border-radius:8px;padding:16px;margin-bottom:16px;">
-<p>AI가 배치를 완성하면, 인간 건축사가 아래 항목을 100% 직접 검증해야 합니다.</p>
-<table style="font-size:13px;width:100%;border-collapse:collapse;">
-<tr style="background:#c6f6d5;"><th style="padding:6px;border:1px solid #9ae6b4;">검증 항목</th><th style="padding:6px;border:1px solid #9ae6b4;">기준</th><th style="padding:6px;border:1px solid #9ae6b4;">결과</th></tr>
-<tr><td style="padding:6px;border:1px solid #9ae6b4;">인동거리</td><td style="padding:6px;border:1px solid #9ae6b4;">건물 높이의 0.8배 이상</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">일조시간</td><td style="padding:6px;border:1px solid #9ae6b4;">동지일 연속 2시간 or 통산 4시간</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr><td style="padding:6px;border:1px solid #9ae6b4;">지하층 재판정</td><td style="padding:6px;border:1px solid #9ae6b4;">주동 확정 후 평균지반면 재계산</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">용적률 최종</td><td style="padding:6px;border:1px solid #9ae6b4;">상한 이하 충족</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr><td style="padding:6px;border:1px solid #9ae6b4;">건폐율</td><td style="padding:6px;border:1px solid #9ae6b4;">상한 이하 충족</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr style="background:#f0fff4;"><td style="padding:6px;border:1px solid #9ae6b4;">주차 모듈 스냅</td><td style="padding:6px;border:1px solid #9ae6b4;">모든 주동이 그리드 교차점에 정착</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-<tr><td style="padding:6px;border:1px solid #9ae6b4;">2차 데크 조정</td><td style="padding:6px;border:1px solid #9ae6b4;">주동 위치 반영 데크 미세 조정</td><td style="padding:6px;border:1px solid #9ae6b4;">✅ / ❌</td></tr>
-</table>
-<p style="margin-top:10px;font-size:12px;color:#718096;">⚠️ 하나라도 ❌가 나오면 해당 STEP으로 돌아가 AI와 재협의합니다. AI 결과물에 도장을 찍는 것은 언제나 인간 건축사입니다.</p>
+<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
+<!-- NEXT_READ_SECTION -->
+<h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
+<ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
+<li><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></li><li><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></li>
+</ul>
 </div>
                 </div>
                 
                 
-                <div class="quiz-container" id="quizContainer">
-                    <div class="quiz-header">📝 학습 이해도 퀴즈</div>
-            
-                    <div class="quiz-item" id="quiz_0" data-answer="2">
-                        <div class="quiz-q">Q1. 효과적인 프롬프트를 작성하기 위해 '맥락(Context)'을 제공할 때 주의할 점은?</div>
-                        <div class="quiz-options"><div class="quiz-opt" onclick="selectQuizOpt(0, 0)" id="opt_0_0"><div style="width:20px;height:20px;border-radius:50%;border:2px solid var(--hairline);display:flex;align-items:center;justify-content:center;margin-right:8px;" class="radio-btn"></div>최대한 짧고 간결하게 작성하여 AI가 혼동하지 않게 한다.</div><div class="quiz-opt" onclick="selectQuizOpt(0, 1)" id="opt_0_1"><div style="width:20px;height:20px;border-radius:50%;border:2px solid var(--hairline);display:flex;align-items:center;justify-content:center;margin-right:8px;" class="radio-btn"></div>AI가 스스로 상황을 추론하도록 정보를 최소화한다.</div><div class="quiz-opt" onclick="selectQuizOpt(0, 2)" id="opt_0_2"><div style="width:20px;height:20px;border-radius:50%;border:2px solid var(--hairline);display:flex;align-items:center;justify-content:center;margin-right:8px;" class="radio-btn"></div>역할(Role), 대상(Audience), 그리고 목적(Goal)을 명확히 명시하여 방향을 지정한다.</div><div class="quiz-opt" onclick="selectQuizOpt(0, 3)" id="opt_0_3"><div style="width:20px;height:20px;border-radius:50%;border:2px solid var(--hairline);display:flex;align-items:center;justify-content:center;margin-right:8px;" class="radio-btn"></div>답변의 톤앤매너는 AI가 알아서 결정하도록 둔다.</div></div>
-                        <div class="quiz-exp" id="exp_0"><strong>💡 해설:</strong> 명확한 역할과 목적, 대상 청중을 명시하는 것은 AI가 기대에 부합하는 출력물을 내놓게 하는 핵심입니다.</div>
-                    </div>
-                
-                    <button class="quiz-submit" onclick="submitQuiz(1, 18)" id="quizSubmitBtn">제출 및 채점하기</button>
-                </div>
-                <script>
-                    let quizSelections = {};
-                    function selectQuizOpt(q_idx, o_idx) {
-                        const container = document.getElementById('quiz_' + q_idx);
-                        container.querySelectorAll('.quiz-opt').forEach(el => {
-                            el.classList.remove('selected');
-                            el.querySelector('.radio-btn').style.background = 'transparent';
-                            el.querySelector('.radio-btn').style.borderColor = 'var(--hairline)';
-                        });
-                        const selected = document.getElementById(`opt_${q_idx}_${o_idx}`);
-                        selected.classList.add('selected');
-                        selected.querySelector('.radio-btn').style.background = 'var(--primary)';
-                        selected.querySelector('.radio-btn').style.borderColor = 'var(--primary)';
-                        quizSelections[q_idx] = o_idx;
-                    }
-                    function submitQuiz(total, docId) {
-                        if(Object.keys(quizSelections).length < total) {
-                            alert('모든 문항에 답해주세요.'); return;
-                        }
-                        let correctCount = 0;
-                        for(let q=0; q<total; q++) {
-                            const ans = parseInt(document.getElementById('quiz_' + q).getAttribute('data-answer'));
-                            const sel = quizSelections[q];
-                            const selEl = document.getElementById(`opt_${q}_${sel}`);
-                            const ansEl = document.getElementById(`opt_${q}_${ans}`);
-                            
-                            if(sel === ans) {
-                                correctCount++;
-                                selEl.classList.add('correct');
-                                selEl.querySelector('.radio-btn').innerHTML = '✓';
-                                selEl.querySelector('.radio-btn').style.color = 'white';
-                                selEl.querySelector('.radio-btn').style.borderColor = 'transparent';
-                            } else {
-                                selEl.classList.add('wrong');
-                                ansEl.classList.add('correct');
-                                selEl.querySelector('.radio-btn').innerHTML = '✕';
-                                selEl.querySelector('.radio-btn').style.color = 'white';
-                                selEl.querySelector('.radio-btn').style.borderColor = 'transparent';
-                            }
-                            document.getElementById('exp_' + q).style.display = 'block';
-                            document.getElementById('quiz_' + q).style.pointerEvents = 'none';
-                        }
-                        const score = Math.round((correctCount / total) * 100);
-                        document.getElementById('quizSubmitBtn').innerText = `채점 완료: ${score}점`;
-                        document.getElementById('quizSubmitBtn').disabled = true;
-                        
-                        // 서버 DB에 퀴즈 점수 저장
-                        fetch('/api/edu/quiz', {
-                            method: 'POST',
-                            headers: {'Content-Type': 'application/json'},
-                            body: JSON.stringify({doc_id: docId, score: score})
-                        }).catch(e => {
-                            // Fallback: 서버 실패 시 localStorage에 임시 저장
-                            let q = JSON.parse(localStorage.getItem('jhub_quizzes') || '{}');
-                            q[docId] = score;
-                            localStorage.setItem('jhub_quizzes', JSON.stringify(q));
-                        });
-                    }
-                </script>
-            
             <button id="markReadBtn" class="read-btn" onclick="markAsRead(18)">✓ 이 문서 완독하기</button>
             <script>
                 async function initReadState() {
@@ -739,12 +653,12 @@
             </script>
         
                 <div class="pagination">
-                    <a href="page_17.html" class="btn-page">◀ 이전: 문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a>
-                    <a href="page_19.html" class="btn-page">다음: 문서 7. 전사 보안 규정 및 데이터 해시화 ▶</a>
+                    <a href="page_17.html" class="btn-page">◀ 이전: 네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a>
+                    <a href="page_19.html" class="btn-page">다음: 레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다 ▶</a>
 
                 </div>
                 
-                                <div style="margin-top: 50px;"><h3 style="font-size:18px; margin-bottom:20px; color:var(--ink);">관련 문서</h3><div style="display:flex; flex-direction:column; gap:12px;"><a href="page_10.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3. AI를 다루는 16가지 핵심 사고방식</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_11.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_12.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a></div></div>
+                                <div style="margin-top: 50px;"><h3 style="font-size:18px; margin-bottom:20px; color:var(--ink);">관련 문서</h3><div style="display:flex; flex-direction:column; gap:12px;"><a href="page_7.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 7. 전사 보안 규정 및 데이터 해시화</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_17.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_22.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a></div></div>
 
 
                 <!-- 익명 피드백 버튼 (개별 문서) -->
@@ -756,7 +670,7 @@
                 </div>
 
                 <div style="margin-top:60px;text-align:center;color:var(--ink-muted);font-size:13px;">
-                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.30
+                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.32
                 </div>
             </div>
         </div>
@@ -771,7 +685,7 @@
         <div style="font-weight:600; font-size:16px; margin-bottom:16px;">본문 목차</div>
         <div class="">
 <strong>본문 목차</strong>
-<a href="#AI-자동-배치-실전-운용-매뉴얼">&nbsp;&nbsp;· AI 자동 배치 실전 운용 매뉴얼</a>
+<a href="#데이터-생태계의-기반-서버-Server-란-무엇인가-">&nbsp;&nbsp;· 데이터 생태계의 기반: 서버(Server)란 무엇인가?</a>
 </div>
 
     </div>
@@ -851,7 +765,7 @@
         document.addEventListener('DOMContentLoaded', initFavorite);
 
         // Progress & Quiz Analytics Logic (서버 DB 기반)
-        const totalDocs = 30;
+        const totalDocs = 32;
         async function initAnalytics() {
             try {
                 const res = await fetch('/api/edu/analytics');
