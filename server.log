@@ -6,8 +6,5 @@
  * Running on http://127.0.0.1:15000
  * Running on http://192.168.219.104:15000
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [19/Jul/2026 15:29:19] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [19/Jul/2026 15:29:19] "GET /workspace HTTP/1.1" 200 -
-127.0.0.1 - - [19/Jul/2026 15:29:19] "GET /weekly HTTP/1.1" 200 -
-127.0.0.1 - - [19/Jul/2026 15:29:19] "GET /master HTTP/1.1" 200 -
-127.0.0.1 - - [19/Jul/2026 15:30:03] "GET /api/search?q=재개발 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 15:35:43] "GET /workspace HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 15:35:43] "GET /articles.js HTTP/1.1" 200 -

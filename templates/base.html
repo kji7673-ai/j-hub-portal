@@ -340,11 +340,14 @@
     }
     function escapeHTML(s) { if(!s) return ''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
 
-    // ── Dynamic Week Label ──
+    // ── Dynamic Week Label (달력 기반, 일요일 시작) ──
     (function() {
         const now = new Date();
         const month = now.getMonth() + 1;
-        const week = Math.ceil(now.getDate() / 7);
+        const day = now.getDate();
+        const firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
+        const firstDayOffset = (firstDay.getDay()) % 7; // Sunday=0
+        const week = Math.floor((day + firstDayOffset - 1) / 7) + 1;
         const label = month + '월 ' + week + '주차';
         document.querySelectorAll('.dynamic-week-label').forEach(el => { el.textContent = label; });
     })();

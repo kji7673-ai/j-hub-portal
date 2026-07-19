@@ -160,7 +160,10 @@ def _load_workspace_data():
         ws = json.load(f)
 
     today = datetime.datetime.now()
-    week_num = math.ceil(today.day / 7)
+    # 달력 기반 주차 계산 (일요일 시작, 사용자 기준)
+    first_day = datetime.date(today.year, today.month, 1)
+    first_day_offset = (first_day.weekday() + 1) % 7  # 일요일=0
+    week_num = (today.day + first_day_offset - 1) // 7 + 1
     week_str = f"{today.month}월 {week_num}주차"
 
     # Dashboard HTML
