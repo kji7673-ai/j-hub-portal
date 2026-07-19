@@ -376,7 +376,7 @@
         border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s;
     }
     .lm-btn:hover { background: #0055aa; }
-    .gated-content.unlocked { max-height: none; overflow: visible; }
+    .gated-content.unlocked { max-height: none !important; overflow: visible; }
     .gated-content.unlocked::after { display: none; }
     .gated-content.unlocked .lead-magnet-overlay { display: none; }
 
@@ -849,6 +849,7 @@ cadastral_url += f"&amp;bbox=126.97,37.55,126.98,37.56,EPSG:4326"
             
             if (localStorage.getItem('jhub_unlocked') === 'true') {
                 wrapper.classList.add('unlocked');
+                wrapper.style.maxHeight = 'none';
                 return;
             }
             
