@@ -903,6 +903,188 @@ li {
                     </div>
                 </div>
 
+                <!-- ============================================ -->
+                <!-- 📷 본부별 주간 계획서 이미지 업로드 -->
+                <!-- ============================================ -->
+                <div class="card" style="background: #fff; border: 1px solid var(--accent); margin-top: 16px; margin-bottom: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">📷 본부별 주간 계획서 / 회의록 이미지 업로드</div>
+                        <span class="chip blue" id="upload-week-label"></span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
+                            각 본부 주간 계획서, 회의록 등을 이미지로 업로드하세요. <strong>다중 선택</strong> 가능합니다.<br>
+                            <span style="color: #7a7a7a; font-size: 12px;">허용 형식: JPG, PNG, GIF, WEBP, PDF | 최대 10MB/건 | 로그인된 이름으로 업로더가 자동 기록됩니다.</span>
+                        </p>
+
+                        <!-- 드래그 앤 드롭 영역 -->
+                        <div id="upload-drop-zone" style="
+                            border: 2px dashed #d2d2d7; 
+                            border-radius: 8px; 
+                            padding: 40px 20px; 
+                            text-align: center; 
+                            cursor: pointer;
+                            transition: all 0.2s;
+                            background: #fafafc;
+                            margin-bottom: 16px;
+                        " onclick="document.getElementById('upload-input').click()">
+                            <div style="font-size: 40px; margin-bottom: 8px;">📁</div>
+                            <div style="font-size: 15px; font-weight: 600; color: #1d1d1f;">클릭하여 파일 선택 또는 여기에 드래그</div>
+                            <div style="font-size: 12px; color: #7a7a7a; margin-top: 4px;">Ctrl / Cmd 키로 다중 선택 가능</div>
+                        </div>
+                        <input type="file" id="upload-input" multiple accept="image/*,.pdf" style="display: none;">
+
+                        <!-- 선택된 파일 미리보기 -->
+                        <div id="upload-preview" style="display: none; margin-bottom: 16px;">
+                            <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">선택된 파일:</div>
+                            <div id="upload-preview-list" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+                        </div>
+
+                        <!-- 업로드 버튼 + 상태 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div id="upload-status" style="font-size: 13px; color: #555;"></div>
+                            <button id="upload-btn" onclick="doUpload()" style="
+                                background: #0066cc; color: white; border: none; 
+                                padding: 10px 24px; border-radius: 6px; 
+                                font-weight: bold; cursor: pointer; 
+                                display: none;
+                            ">📤 업로드 하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📸 업로드된 이미지 갤러리 -->
+                <div class="card" style="background: #fff; border: 1px solid var(--accent); margin-bottom: 16px;">
+                    <div class="card-header" style="cursor: pointer;" onclick="loadUploadedImages()">
+                        <div class="card-title">📸 업로드된 이미지 열람</div>
+                        <button class="chip" onclick="event.stopPropagation(); loadUploadedImages()">새로고침</button>
+                    </div>
+                    <div id="gallery-container" style="padding: 16px;">
+                        <p style="color: #999; text-align: center; padding: 20px;">로딩 중...</p>
+                    </div>
+                </div>
+
+                <script>
+                // --- 업로드 기능 ---
+                const uploadInput = document.getElementById('upload-input');
+                const dropZone = document.getElementById('upload-drop-zone');
+                const previewDiv = document.getElementById('upload-preview');
+                const previewList = document.getElementById('upload-preview-list');
+                const uploadBtn = document.getElementById('upload-btn');
+                const uploadStatus = document.getElementById('upload-status');
+
+                // 주차 라벨
+                const now = new Date();
+                const onejan = new Date(now.getFullYear(),0,1);
+                const weekNum = Math.ceil((((now - onejan) / 86400000) + onejan.getDay()+1)/7);
+                const weekLabel = document.getElementById('upload-week-label');
+                if (weekLabel) weekLabel.textContent = now.getFullYear() + '-W' + String(weekNum).padStart(2,'0');
+
+                // 드래그 앤 드롭
+                dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.style.borderColor = '#0066cc'; dropZone.style.background = '#e8f0fe'; });
+                dropZone.addEventListener('dragleave', e => { e.preventDefault(); dropZone.style.borderColor = '#d2d2d7'; dropZone.style.background = '#fafafc'; });
+                dropZone.addEventListener('drop', e => {
+                    e.preventDefault();
+                    dropZone.style.borderColor = '#d2d2d7'; dropZone.style.background = '#fafafc';
+                    uploadInput.files = e.dataTransfer.files;
+                    showPreview(e.dataTransfer.files);
+                });
+
+                uploadInput.addEventListener('change', () => showPreview(uploadInput.files));
+
+                function showPreview(files) {
+                    if (!files || files.length === 0) { previewDiv.style.display = 'none'; uploadBtn.style.display = 'none'; return; }
+                    previewList.innerHTML = '';
+                    let totalSize = 0;
+                    for (let f of files) {
+                        totalSize += f.size;
+                        const item = document.createElement('div');
+                        item.style.cssText = 'background:#f5f5f7; border:1px solid #e0e0e0; padding:6px 10px; border-radius:4px; font-size:12px; display:flex; align-items:center; gap:6px;';
+                        const isImg = f.type.startsWith('image/');
+                        item.innerHTML = (isImg ? '🖼️' : '📄') + ' <span>' + f.name + '</span> <span style="color:#999;">(' + (f.size/1024).toFixed(0) + 'KB)</span>';
+                        previewList.appendChild(item);
+                    }
+                    previewDiv.style.display = 'block';
+                    uploadBtn.style.display = 'inline-block';
+                    uploadStatus.textContent = files.length + '건 선택됨 (총 ' + (totalSize/1024/1024).toFixed(1) + 'MB)';
+                }
+
+                async function doUpload() {
+                    const files = uploadInput.files;
+                    if (!files || files.length === 0) return;
+
+                    uploadBtn.disabled = true;
+                    uploadBtn.textContent = '업로드 중...';
+                    uploadBtn.style.opacity = '0.6';
+
+                    const formData = new FormData();
+                    for (let f of files) { formData.append('files', f); }
+
+                    try {
+                        const resp = await fetch('/api/upload', { method: 'POST', body: formData });
+                        const data = await resp.json();
+                        if (data.success) {
+                            uploadStatus.innerHTML = '<span style="color:#00cc66; font-weight:bold;">✅ ' + data.message + '</span>';
+                            uploadInput.value = '';
+                            previewDiv.style.display = 'none';
+                            uploadBtn.style.display = 'none';
+                            loadUploadedImages();
+                        } else {
+                            uploadStatus.innerHTML = '<span style="color:red;">❌ ' + data.message + '</span>';
+                        }
+                    } catch(e) {
+                        uploadStatus.innerHTML = '<span style="color:red;">❌ 서버 통신 오류</span>';
+                    }
+                    uploadBtn.disabled = false;
+                    uploadBtn.textContent = '📤 업로드 하기';
+                    uploadBtn.style.opacity = '1';
+                }
+
+                // --- 갤러리 로드 ---
+                async function loadUploadedImages() {
+                    const container = document.getElementById('gallery-container');
+                    try {
+                        const resp = await fetch('/api/uploads');
+                        const data = await resp.json();
+                        if (!data || data.length === 0) {
+                            container.innerHTML = '<p style="color:#999; text-align:center; padding:20px;">아직 업로드된 파일이 없습니다.</p>';
+                            return;
+                        }
+                        let html = '<table style="width:100%; border-collapse:collapse; font-size:14px;">';
+                        html += '<tr style="border-bottom:2px solid #000;"><th style="text-align:left; padding:8px;">파일명</th><th style="text-align:left; padding:8px;">업로더</th><th style="text-align:left; padding:8px;">업로드 일시</th><th style="text-align:left; padding:8px;">주차</th><th style="padding:8px;">미리보기</th></tr>';
+                        data.forEach(item => {
+                            const isImage = /\.(jpg|jpeg|png|gif|webp|bmp)$/i.test(item.filename);
+                            const previewBtn = isImage 
+                                ? '<button onclick="previewImage(\\'' + '/api/uploads/' + item.week + '/' + item.filename + '\\')" style="background:#0066cc;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px;">보기</button>'
+                                : '<span style="color:#999; font-size:12px;">PDF</span>';
+                            html += '<tr style="border-bottom:1px solid #e0e0e0;">';
+                            html += '<td style="padding:8px; font-size:13px;">' + (item.original_name || item.filename) + '</td>';
+                            html += '<td style="padding:8px;"><strong>' + item.uploader + '</strong></td>';
+                            html += '<td style="padding:8px; color:#7a7a7a;">' + item.timestamp + '</td>';
+                            html += '<td style="padding:8px;"><span class="chip">' + item.week + '</span></td>';
+                            html += '<td style="padding:8px; text-align:center;">' + previewBtn + '</td>';
+                            html += '</tr>';
+                        });
+                        html += '</table>';
+                        container.innerHTML = html;
+                    } catch(e) {
+                        container.innerHTML = '<p style="color:red;">데이터 로드 실패</p>';
+                    }
+                }
+
+                function previewImage(src) {
+                    const overlay = document.createElement('div');
+                    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:99999;display:flex;justify-content:center;align-items:center;cursor:pointer;';
+                    overlay.onclick = () => overlay.remove();
+                    overlay.innerHTML = '<img src="' + src + '" style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.5);">' 
+                        + '<div style="position:fixed;top:20px;right:20px;color:#fff;font-size:32px;cursor:pointer;" onclick="this.parentElement.remove()">✕</div>';
+                    document.body.appendChild(overlay);
+                }
+
+                // 페이지 진입 시 자동 로드
+                setTimeout(loadUploadedImages, 500);
+                </script>
+
                 <!-- 비공개 1:1 다이렉트 피드백 (Direct Drop-box) -->
                 <div class="card" style="background: #fafafc; border: 1px solid var(--accent); margin-top: 16px;">
                     <div class="card-header">

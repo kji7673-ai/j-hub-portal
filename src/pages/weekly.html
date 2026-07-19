@@ -264,35 +264,173 @@
                 }
                 </script>
 
-                <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center;">
-                    <button onclick="publishWeeklyReport()" style="background: #0066cc; color: white; border: none; padding: 16px 48px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);">최종 승인 및 발행 (Publish)</button>
-                    <p style="font-size: 13px; color: #888; margin-top: 12px;">승인 후 J-Workspace의 종합 동향 탭에 최신 데이터로 영구 갱신됩니다.</p>
+                <!-- ============================================ -->
+                <!-- 📋 제출 현황 대시보드 -->
+                <!-- ============================================ -->
+                <div class="card" style="background: #fff; border: 1px solid var(--accent); margin-top: 24px; margin-bottom: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">📋 본부별 제출 현황</div>
+                        <button class="chip" onclick="loadSubmissionStatus()" style="cursor:pointer;">새로고침</button>
+                    </div>
+                    <div id="submission-dashboard" style="padding: 16px;">
+                        <p style="color:#999; text-align:center;">로딩 중...</p>
+                    </div>
+                </div>
+
+                <script>
+                async function loadSubmissionStatus() {
+                    const container = document.getElementById('submission-dashboard');
+                    try {
+                        const resp = await fetch('/api/uploads');
+                        const data = await resp.json();
+                        
+                        const depts = ['디자인본부', '도시개발본부', '도시계획본부', '전략기획본부', 'CM감리본부', '경영관리본부'];
+                        const now = new Date();
+                        const onejan = new Date(now.getFullYear(),0,1);
+                        const wn = Math.ceil((((now - onejan) / 86400000) + onejan.getDay()+1)/7);
+                        const currentWeek = now.getFullYear() + '-W' + String(wn).padStart(2,'0');
+                        
+                        // 현재 주차 업로드 필터
+                        const thisWeek = Array.isArray(data) ? data.filter(d => d.week === currentWeek) : [];
+                        
+                        // 업로더별 그룹
+                        const byUploader = {};
+                        thisWeek.forEach(item => {
+                            if (!byUploader[item.uploader]) byUploader[item.uploader] = [];
+                            byUploader[item.uploader].push(item);
+                        });
+                        
+                        let html = '<table style="width:100%; border-collapse:collapse; font-size:14px;">';
+                        html += '<tr style="border-bottom:2px solid #000;"><th style="text-align:left;padding:10px;">업로더</th><th style="text-align:center;padding:10px;">파일 수</th><th style="text-align:left;padding:10px;">최근 업로드</th><th style="text-align:center;padding:10px;">상태</th></tr>';
+                        
+                        const uploaders = Object.keys(byUploader);
+                        if (uploaders.length === 0) {
+                            html += '<tr><td colspan="4" style="padding:20px; text-align:center; color:#999;">이번 주차 (' + currentWeek + ') 아직 업로드된 파일이 없습니다.</td></tr>';
+                        } else {
+                            uploaders.forEach(name => {
+                                const files = byUploader[name];
+                                const latest = files.sort((a,b) => b.timestamp.localeCompare(a.timestamp))[0];
+                                html += '<tr style="border-bottom:1px solid #e0e0e0;">';
+                                html += '<td style="padding:10px;"><strong>' + name + '</strong></td>';
+                                html += '<td style="padding:10px; text-align:center;">' + files.length + '건</td>';
+                                html += '<td style="padding:10px; color:#7a7a7a;">' + latest.timestamp + '</td>';
+                                html += '<td style="padding:10px; text-align:center;"><span style="color:#00cc66; font-weight:bold;">✅ 제출</span></td>';
+                                html += '</tr>';
+                            });
+                        }
+                        html += '</table>';
+                        container.innerHTML = html;
+                    } catch(e) {
+                        container.innerHTML = '<p style="color:red;">로드 실패</p>';
+                    }
+                }
+                setTimeout(loadSubmissionStatus, 800);
+                </script>
+
+                <!-- ============================================ -->
+                <!-- 🚀 최종 승인 및 발행 (실제 파이프라인 연결) -->
+                <!-- ============================================ -->
+                <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center; border: 2px solid var(--accent); padding: 32px; background: #fafafc;">
+                    <h3 style="margin: 0 0 8px 0; font-size: 16px; text-transform: uppercase; letter-spacing: -0.5px;">최종 승인 및 발행</h3>
+                    <p style="font-size: 13px; color: #888; margin: 0 0 20px 0;">
+                        승인 버튼을 누르면 법규 크롤링 → 기사 수집 → 보고서 파싱 → 포털 재빌드가 순차 실행됩니다.<br>
+                        <strong>대표이사 전용</strong> — 약 30초~1분 소요
+                    </p>
+                    <button id="publish-btn" onclick="publishWeeklyReport()" style="
+                        background: #0066cc; color: white; border: none; 
+                        padding: 16px 48px; font-size: 18px; font-weight: bold; 
+                        cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+                        transition: all 0.3s;
+                    ">🚀 최종 승인 및 발행 (Publish)</button>
+                    
+                    <!-- 실행 로그 표시 영역 -->
+                    <div id="publish-log-area" style="display: none; margin-top: 20px; text-align: left;">
+                        <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">⚙️ 파이프라인 실행 로그:</div>
+                        <pre id="publish-log" style="
+                            background: #1d1d1f; color: #00cc66; 
+                            padding: 16px; font-size: 12px; 
+                            max-height: 300px; overflow-y: auto;
+                            font-family: 'SF Mono', 'Menlo', monospace;
+                            white-space: pre-wrap; word-break: break-all;
+                        "></pre>
+                    </div>
                 </div>
             </div>
             
             <script>
                 function unlockWeekly() {
-                    // 실제 비밀번호 검증 없이 무조건 통과하도록 변경 (UI만 유지)
                     document.getElementById("weekly-lock-screen").style.display = "none";
                     document.getElementById("weekly-admin-view").style.display = "block";
                     window.scrollTo(0,0);
                 }
 
-                function publishWeeklyReport() {
-                    const btn = document.querySelector("#weekly-publish-actions button");
-                    btn.innerText = "발행 처리 중...";
-                    btn.style.opacity = "0.7";
+                async function publishWeeklyReport() {
+                    const btn = document.getElementById('publish-btn');
+                    const logArea = document.getElementById('publish-log-area');
+                    const logPre = document.getElementById('publish-log');
                     
-                    setTimeout(() => {
-                        btn.innerText = "✅ 전사 포털 업데이트 완료";
-                        btn.style.background = "#00cc66";
-                        btn.style.opacity = "1";
-                        btn.style.boxShadow = "none";
+                    btn.disabled = true;
+                    btn.textContent = '⏳ 파이프라인 실행 중...';
+                    btn.style.opacity = '0.6';
+                    btn.style.cursor = 'not-allowed';
+                    logArea.style.display = 'block';
+                    logPre.textContent = '파이프라인 시작 대기 중...\n';
+
+                    try {
+                        const resp = await fetch('/api/publish', { method: 'POST' });
+                        const data = await resp.json();
                         
-                        setTimeout(() => {
-                            alert("최종 승인된 보고서가 J-Workspace에 성공적으로 갱신되었습니다.");
-                        }, 500);
-                    }, 1500);
+                        if (!data.success) {
+                            logPre.textContent = '❌ ' + data.message;
+                            btn.disabled = false;
+                            btn.textContent = '🚀 최종 승인 및 발행 (Publish)';
+                            btn.style.opacity = '1';
+                            btn.style.cursor = 'pointer';
+                            return;
+                        }
+
+                        // 폴링으로 진행 상황 실시간 표시
+                        const pollInterval = setInterval(async () => {
+                            try {
+                                const sr = await fetch('/api/publish/status');
+                                const sd = await sr.json();
+                                logPre.textContent = sd.log || '실행 중...';
+                                logPre.scrollTop = logPre.scrollHeight;
+                                
+                                if (!sd.running) {
+                                    clearInterval(pollInterval);
+                                    if (sd.result === 'success') {
+                                        btn.textContent = '✅ 포털 업데이트 완료!';
+                                        btn.style.background = '#00cc66';
+                                        btn.style.boxShadow = 'none';
+                                        setTimeout(() => {
+                                            if (confirm('포털이 성공적으로 갱신되었습니다. 페이지를 새로고침하시겠습니까?')) {
+                                                location.reload();
+                                            }
+                                        }, 1000);
+                                    } else {
+                                        btn.textContent = '⚠️ 일부 실패 — 로그 확인';
+                                        btn.style.background = '#e30000';
+                                    }
+                                    setTimeout(() => {
+                                        btn.disabled = false;
+                                        btn.textContent = '🚀 최종 승인 및 발행 (Publish)';
+                                        btn.style.background = '#0066cc';
+                                        btn.style.opacity = '1';
+                                        btn.style.cursor = 'pointer';
+                                        btn.style.boxShadow = '0 4px 12px rgba(0,102,204,0.3)';
+                                    }, 10000);
+                                }
+                            } catch(e) { /* ignore polling errors */ }
+                        }, 2000);
+
+                    } catch(e) {
+                        logPre.textContent = '🚨 서버 통신 오류: ' + e.message;
+                        btn.disabled = false;
+                        btn.textContent = '🚀 최종 승인 및 발행 (Publish)';
+                        btn.style.opacity = '1';
+                        btn.style.cursor = 'pointer';
+                    }
                 }
             </script>
         </div>

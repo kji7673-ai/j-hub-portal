@@ -553,6 +553,71 @@ def delete_upload():
     return jsonify({"success": False, "message": "파일을 찾을 수 없습니다."}), 404
 
 
+# ======================================================
+# 최종 승인 → 파이프라인 실행 API
+# ======================================================
+
+import subprocess
+import threading
+
+_publish_status = {"running": False, "log": "", "result": None, "timestamp": None}
+
+def _run_pipeline():
+    global _publish_status
+    _publish_status["running"] = True
+    _publish_status["log"] = "파이프라인 시작...\n"
+    _publish_status["result"] = None
+    _publish_status["timestamp"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'run_daily_sync.sh')
+    try:
+        proc = subprocess.Popen(
+            ['bash', script_path],
+            cwd=os.path.dirname(__file__),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True
+        )
+        for line in proc.stdout:
+            _publish_status["log"] += line
+        proc.wait()
+        _publish_status["result"] = "success" if proc.returncode == 0 else "error"
+        _publish_status["log"] += f"\n{'✅ 완료' if proc.returncode == 0 else '❌ 실패'} (exit: {proc.returncode})\n"
+    except Exception as e:
+        _publish_status["result"] = "error"
+        _publish_status["log"] += f"\n🚨 예외 발생: {e}\n"
+    finally:
+        _publish_status["running"] = False
+
+@app.route('/api/publish', methods=['POST'])
+def publish_weekly():
+    if not session.get('logged_in') or not session.get('is_master'):
+        return jsonify({"success": False, "message": "대표이사 권한이 필요합니다."}), 401
+
+    if _publish_status["running"]:
+        return jsonify({"success": False, "message": "이미 파이프라인이 실행 중입니다."}), 409
+
+    thread = threading.Thread(target=_run_pipeline, daemon=True)
+    thread.start()
+
+    return jsonify({
+        "success": True,
+        "message": "파이프라인 실행을 시작했습니다. 약 30초~1분 소요됩니다."
+    })
+
+@app.route('/api/publish/status', methods=['GET'])
+def publish_status():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+
+    return jsonify({
+        "running": _publish_status["running"],
+        "result": _publish_status["result"],
+        "log": _publish_status["log"][-2000:],  # 마지막 2000자만
+        "timestamp": _publish_status["timestamp"]
+    })
+
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 15000))
     app.run(host='0.0.0.0', port=port)
