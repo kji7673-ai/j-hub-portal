@@ -347,7 +347,7 @@
 
 
     /* LEAD MAGNET GATE */
-    .gated-content { max-height: 800px; overflow: hidden; position: relative; }
+    .gated-content { overflow: hidden; position: relative; transition: max-height 0.5s ease; }
     .gated-content::after {
         content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
         background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--canvas-parchment) 100%);
@@ -469,6 +469,9 @@
             </a>
             <button class="action-btn" onclick="toggleTheme()" title="다크모드 토글">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="action-btn" onclick="masterLogin()" title="직원 인증">
+                <span style="font-size:16px;">🔐</span>
             </button>
             <button class="action-btn" onclick="openSearch()">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
