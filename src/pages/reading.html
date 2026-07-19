@@ -1,356 +1,437 @@
-<!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
+<!-- TAB 5: 오늘의 읽을거리 (Jinyang Journal) -->
         <!-- ========================================== -->
         
 <style>
-                /* Today's Analects Widget */
-                #analects-widget {
-                    background: #fafafc; border: 1px solid #e0e0e0; border-radius: 11px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; display: none;
-                }
-            </style>
-            
-            <div id="analects-widget">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h3 style="margin: 0; font-size: 14px; color: #1d1d1f; text-transform: uppercase; font-weight: 600; letter-spacing: -0.224px;">오늘의 논어 (論語)</h3>
-                    <span style="color:#7a7a7a; font-weight:400; font-size:12px; letter-spacing: -0.12px;" id="analects-date"></span>
-                </div>
-                
-                <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #f0f0f0;">
-                    <h1 id="analects-hanja" style="margin: 0 0 12px 0; font-family: 'SF Pro Display', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: 2px; color: #1d1d1f;"></h1>
-                    <p id="analects-ko" style="margin: 0; font-size: 17px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.374px;"></p>
-                </div>
-                
-                <div>
-                    <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #7a7a7a; text-transform: uppercase; letter-spacing: 0.5px;">실무 적용</h4>
-                    <p id="analects-meaning" style="margin: 0; font-size: 14px; color: #333; line-height: 1.5;"></p>
-                </div>
-            </div>
-            
-            <script>
-                fetch('data/analects.json')
-                    .then(res => res.json())
-                    .then(data => {
-                        const today = new Date();
-                        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-                        const item = data[dayOfYear % data.length];
-                        
-                        document.getElementById('analects-date').textContent = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
-                        document.getElementById('analects-hanja').textContent = item.hanja;
-                        document.getElementById('analects-ko').textContent = item.korean;
-                        
-                        let charMeaning = item.characters.map(c => `<span style="color:${c.color}">${c.char}(${c.reading})</span>`).join(' ');
-                        let fullMeaning = `<div style="font-weight:600; margin-bottom:12px; font-size:15px;">[한자 풀이] ${charMeaning}</div><div>[실무 적용] ${item.application}</div>`;
-                        document.getElementById('analects-meaning').innerHTML = fullMeaning;
-                        
-                        document.getElementById('analects-widget').style.display = 'flex';
-                    })
-                    .catch(err => {
-                        console.error("Failed to load analects:", err);
-                    });
-            </script>
-            
-            <style>
-                /* Dense 100-Mosaic Tile Grid */
-                .grid-mosaic {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
-                    gap: 8px;
-                    padding: 24px;
-                    background: #fdfdfd;
-                    border-radius: 20px;
-                    border: 1px solid #f0f0f0;
-                }
-                
-                .mosaic-block {
-                    cursor: pointer;
-                    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-                    position: relative;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 6px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .mosaic-block:hover {
-                    transform: scale(1.15);
-                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-                    z-index: 10;
-                }
-                
-                .mosaic-block.read {
-                    background-color: #e5e5e5 !important;
-                    box-shadow: none !important;
-                    transform: scale(0.95);
-                }
-                
-                .mosaic-check {
-                    font-size: 16px;
-                    color: #fff;
-                    opacity: 0;
-                    font-weight: bold;
-                    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-                }
-                
-                .mosaic-block.read .mosaic-check {
-                    opacity: 1;
-                    color: #888;
-                    text-shadow: none;
-                }
-                
-                .mosaic-block.active {
-                    box-shadow: 0 0 0 3px #0066cc;
-                    transform: scale(1.1);
-                    z-index: 5;
-                }
-                
-                @keyframes coffeeFloat {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-5px); }
-                }
-                @keyframes badgeGlow {
-                    0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
-                    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
-                    100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
-                }
-                @keyframes bounce {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-20px); }
-                }
-            </style>
+    /* Today's Analects Widget */
+    #analects-widget {
+        background: #fafafc; border: 1px solid #e0e0e0; border-radius: 11px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; display: none;
+    }
 
-            <div class="grid-mosaic" id="mosaic-grid">
-                <!-- JavaScript will populate 100 mosaic blocks here -->
-            </div>
+    /* ─── Apple-aesthetic Mosaic Grid ─── */
+    .grid-mosaic {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 6px;
+        padding: 20px;
+        background: #fafafc;
+        border-radius: 18px;
+        border: 1px solid #e0e0e0;
+    }
 
-            <div class="hero" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); padding: 32px; border-radius: 20px; text-align: center; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); position: relative;">
-                <h1 style="font-size: 28px; margin-bottom: 12px; color: #1d1d1f; letter-spacing: -0.5px;">오늘의 읽을거리 100선 🎯</h1>
-                <p style="font-size: 16px; color: #555; line-height: 1.5; max-width: 600px; margin: 0 auto; word-break: keep-all;">
-                    아래의 100개 모자이크 블록을 눌러 숨겨진 지식을 해제해 보세요!<br>
-                    블록을 누르면 요약 내용이 나타나며 도감에 체크표시가 새겨집니다.
-                </p>
-                <button onclick="resetMosaicProgress()" style="position: absolute; right: 24px; bottom: 24px; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 6px 12px; font-size: 13px; color: #666; cursor: pointer; display: flex; align-items: center; gap: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-                    체크 초기화
-                </button>
-            </div>
-            <!-- Detail Pane (Replacing Modal) -->
-            <div id="article-detail-pane" style="background: #fff; border-radius: 16px; padding: 32px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #eaeaea; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center;">
-                <div id="detail-placeholder" style="color: #999; font-size: 16px;">
-                    <span style="font-size: 32px; display: block; margin-bottom: 12px;">👆</span>
-                    아래 도감에서 컬러 블록을 하나 선택해 보세요.
-                </div>
-                
-                <div id="detail-content" style="display: none; width: 100%; text-align: left;">
-                    <div id="detail-category" style="color: #0066cc; font-size: 13px; font-weight: 600; margin-bottom: 10px;"></div>
-                    <h2 id="detail-title" style="font-size: 22px; margin-bottom: 16px; line-height: 1.35; color: #1d1d1f; word-break: keep-all;"></h2>
-                    <p id="detail-excerpt" style="font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 20px; background: #f9f9f9; padding: 16px; border-radius: 12px;"></p>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div id="detail-meta" style="font-size: 12px; color: #888;"></div>
-                        <button id="detail-link-btn" style="padding: 10px 20px; border-radius: 99px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 원문 보기</button>
-                    </div>
-                </div>
-                
-                <div id="easter-egg-content" style="display: none; text-align: center; padding: 60px;">
-                    <div style="font-size: 80px; animation: coffeeFloat 3s ease-in-out infinite;">☕🌿</div>
-                    <h2 style="font-size: 28px; color: #8B5A2B; margin-top: 24px; font-weight: 600;">잠시 쉬어가세요</h2>
-                    <p style="font-size: 16px; color: #666; margin-top: 12px; line-height: 1.6;">
-                        치열한 업무 속에서 작은 행운을 발견하셨습니다.<br>
-                        따뜻한 커피 한 잔과 함께 재충전하는 시간을 가져보세요.
-                    </p>
-                </div>
-                
-                <div id="complete-content" style="display: none; text-align: center; padding: 40px;">
-                    <div style="font-size: 80px; animation: bounce 2s infinite;">🏅✨</div>
-                    <h2 style="font-size: 32px; color: #1d1d1f; margin-top: 20px; letter-spacing: -0.5px;">지식 마스터 배지 획득!</h2>
-                    <p style="font-size: 16px; color: #555; margin-top: 10px; line-height: 1.5;">
-                        100개의 저널을 모두 완독하셨습니다.<br>사내 포털 프로필에 <b>'지식 마스터(디지털 훈장)'</b>가 부여되었습니다.
-                    </p>
-                </div>
-            </div>
+    /* 10개씩 그룹 구분선 */
+    .mosaic-group-divider {
+        grid-column: 1 / -1;
+        height: 1px;
+        background: #e0e0e0;
+        margin: 4px 0;
+    }
 
-            <script src="articles.js"></script>
-            <script>
-                let currentArticleUrl = '';
-                // 이스터에그: 100개 중 1개 폭탄 위치 무작위 배정
-                window.bombIndex = Math.floor(Math.random() * 100);
-                
-                function renderMosaic() {
-                    const grid = document.getElementById('mosaic-grid');
-                    if (!grid || typeof articlesData === 'undefined') return;
-                    
-                    grid.innerHTML = '';
-                    
-                    let readList = [];
-                    try {
-                        const currentBuildDate = '{build_date_string}';
-                        const storedBuildDate = localStorage.getItem('jhub_build_date');
-                        
-                        if (storedBuildDate !== currentBuildDate) {
-                            // Date changed (new articles built), clear everything
-                            localStorage.removeItem('jhub_read_articles');
-                            localStorage.setItem('jhub_build_date', currentBuildDate);
-                            // Do not clear the knowledge master badge! It is permanent.
-                        } else {
-                            const saved = localStorage.getItem('jhub_read_articles');
-                            if (saved) readList = JSON.parse(saved);
-                        }
-                    } catch (e) {}
-                    
-                    articlesData.forEach((article, index) => {
-                        let bgColor = '#ffffff';
-                        const cat = article.category || '';
-                        
-                        // Vibrant colors for the mosaic
-                        if (cat.includes('예술') || cat.includes('문화') || cat.includes('디자인')) {
-                            bgColor = '#FFD166'; // Yellow
-                        } else if (cat.includes('건축') || cat.includes('공학') || cat.includes('시티')) {
-                            bgColor = '#118AB2'; // Blue
-                        } else if (cat.includes('경제') || cat.includes('부동산') || cat.includes('상업')) {
-                            bgColor = '#06D6A0'; // Green
-                        } else {
-                            bgColor = '#EF476F'; // Pink/Red
-                        }
-                        
-                        const isRead = readList.includes(index);
-                        const cardClass = isRead ? "mosaic-block read" : "mosaic-block";
-                        
-                        let clickAction = `openDetail(${index})`;
-                        if (index === window.bombIndex) {
-                            clickAction = `triggerEasterEgg(${index})`;
-                        }
-                        
-                        const cardHtml = `
-                            <div class="${cardClass}" id="mosaic-card-${index}" style="background-color: ${bgColor};" onclick="${clickAction}" title="${article.category}: ${article.title}">
-                                <div class="mosaic-check">✓</div>
-                            </div>
-                        `;
-                        grid.innerHTML += cardHtml;
-                    });
-                }
-                
-                function resetMosaicProgress() {
-                    if(confirm("모든 읽기 진행 상황을 초기화하시겠습니까? (획득한 뱃지는 유지됩니다)")) {
-                        localStorage.removeItem('jhub_read_articles');
-                        document.getElementById('detail-content').style.display = 'none';
-                        document.getElementById('easter-egg-content').style.display = 'none';
-                        document.getElementById('complete-content').style.display = 'none';
-                        document.getElementById('detail-placeholder').style.display = 'block';
-                        renderMosaic();
-                    }
-                }
-                
-                function triggerEasterEgg(index) {
-                    const card = document.getElementById('mosaic-card-' + index);
-                    if (card) {
-                        card.style.background = 'url("data:image/svg+xml;utf8,<svg xmlns=\\\'http://www.w3.org/2000/svg\\\' viewBox=\\\'0 0 24 24\\\' fill=\\\'none\\\' stroke=\\\'%238B5A2B\\\' stroke-width=\\\'2\\\' stroke-linecap=\\\'round\\\' stroke-linejoin=\\\'round\\\'><path d=\\\'M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\\\'/><line x1=\\\'6\\\' y1=\\\'1\\\' x2=\\\'6\\\' y2=\\\'4\\\'/><line x1=\\\'10\\\' y1=\\\'1\\\' x2=\\\'10\\\' y2=\\\'4\\\'/><line x1=\\\'14\\\' y1=\\\'1\\\' x2=\\\'14\\\' y2=\\\'4\\\'/></svg>") center/50% no-repeat, #fff';
-                        card.style.animation = 'coffeeFloat 2s ease-in-out forwards';
-                        card.classList.add('read');
-                        card.classList.add('active');
-                    }
-                    
-                    document.getElementById('detail-placeholder').style.display = 'none';
-                    document.getElementById('detail-content').style.display = 'none';
-                    document.getElementById('complete-content').style.display = 'none';
-                    document.getElementById('easter-egg-content').style.display = 'block';
-                    
-                    document.getElementById('article-detail-pane').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    let readList = [];
-                    try {
-                        const saved = localStorage.getItem('jhub_read_articles');
-                        if (saved) readList = JSON.parse(saved);
-                    } catch (e) {}
-                    if (!readList.includes(index)) {
-                        readList.push(index);
-                        localStorage.setItem('jhub_read_articles', JSON.stringify(readList));
-                    }
-                    checkAllRead(readList);
-                }
-                
-                function checkAllRead(readList) {
-                    if (readList.length >= articlesData.length) {
-                        // Check if badge already granted to prevent annoying re-popups
-                        const alreadyGranted = localStorage.getItem('jhub_badge_knowledge_master');
-                        
-                        if (!alreadyGranted) {
-                            // Show the complete message briefly on top of the content using alert
-                            alert("🎉 축하합니다! 지식 마스터 배지 획득! 100개의 저널을 모두 완독하셨습니다.");
-                            
-                            // Grant badge
-                            localStorage.setItem('jhub_badge_knowledge_master', 'true');
-                            
-                            // Show badge in header immediately
-                            const badgeContainer = document.getElementById('user-profile-badge');
-                            if(badgeContainer) {
-                                badgeContainer.innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
-                            }
-                        }
-                    }
-                }
-                
-                function openDetail(index) {
-                    const article = articlesData[index];
-                    if (!article) return;
-                    
-                    // Remove active state from all blocks
-                    document.querySelectorAll('.mosaic-block').forEach(b => b.classList.remove('active'));
-                    
-                    // Save read state & set active
-                    const card = document.getElementById('mosaic-card-' + index);
-                    if (card) {
-                        card.classList.add('active');
-                        card.classList.add('read');
-                    }
-                    
-                    let readList = [];
-                    try {
-                        const saved = localStorage.getItem('jhub_read_articles');
-                        if (saved) readList = JSON.parse(saved);
-                    } catch (e) {}
-                    
-                    if (!readList.includes(index)) {
-                        readList.push(index);
-                        localStorage.setItem('jhub_read_articles', JSON.stringify(readList));
-                    }
-                    
-                    // Populate Detail Pane
-                    document.getElementById('detail-placeholder').style.display = 'none';
-                    const easterEggContent = document.getElementById('easter-egg-content');
-                    if(easterEggContent) easterEggContent.style.display = 'none';
-                    const completeContent = document.getElementById('complete-content');
-                    if(completeContent) completeContent.style.display = 'none';
-                    document.getElementById('detail-content').style.display = 'block';
-                    
-                    document.getElementById('detail-category').innerText = article.category;
-                    document.getElementById('detail-title').innerText = article.title;
-                    document.getElementById('detail-excerpt').innerHTML = article.excerpt;
-                    document.getElementById('detail-meta').innerText = article.meta;
-                    
-                    currentArticleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(article.title);
-                    
-                    // Smooth scroll up to the detail pane if needed
-                    document.getElementById('article-detail-pane').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    checkAllRead(readList);
-                }
-                
-                document.getElementById('detail-link-btn').addEventListener('click', () => {
-                    if (currentArticleUrl) {
-                        window.open(currentArticleUrl, '_blank');
-                    }
-                });
-                
-                document.addEventListener('DOMContentLoaded', () => {
-                    setTimeout(renderMosaic, 100);
-                });
-                
-                const readingTabItem = document.querySelector('[data-target="tab-reading"]');
-                if (readingTabItem) {
-                    readingTabItem.addEventListener('click', renderMosaic);
-                }
-            </script>
+    .mosaic-block {
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        position: relative;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.9);
+        letter-spacing: -0.2px;
+    }
+
+    .mosaic-block:hover {
+        transform: scale(1.12);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+    }
+
+    .mosaic-block.read {
+        background-color: #f0f0f0 !important;
+        color: #999 !important;
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+
+    .mosaic-check {
+        font-size: 14px;
+        opacity: 0;
+        color: #fff;
+    }
+
+    .mosaic-block.read .mosaic-check {
+        opacity: 1;
+        color: #0066cc;
+    }
+
+    .mosaic-block.active {
+        box-shadow: 0 0 0 2px #0066cc;
+        transform: scale(1.08);
+        z-index: 5;
+    }
+
+    /* ─── 뱃지 바 ─── */
+    .badge-bar {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding: 16px 20px;
+        background: #fafafc;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+    .badge-bar .badge-slot {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        border: 1.5px solid #e0e0e0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    .badge-bar .badge-slot.earned {
+        background: linear-gradient(135deg, #0066cc, #0071e3);
+        border-color: #0066cc;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(0,102,204,0.3);
+    }
+    .badge-bar .badge-label {
+        font-size: 13px;
+        color: #7a7a7a;
+        margin-left: 8px;
+        font-weight: 500;
+    }
+    .badge-bar .badge-count {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1d1d1f;
+        margin-left: auto;
+    }
+
+    @keyframes coffeeFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    @keyframes badgeEarn {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+        100% { transform: scale(1); }
+    }
+</style>
+
+<!-- 논어 위젯 -->
+<div id="analects-widget">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin: 0; font-size: 14px; color: #1d1d1f; text-transform: uppercase; font-weight: 600; letter-spacing: -0.224px;">오늘의 논어 (論語)</h3>
+        <span style="color:#7a7a7a; font-weight:400; font-size:12px; letter-spacing: -0.12px;" id="analects-date"></span>
+    </div>
+    
+    <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #f0f0f0;">
+        <h1 id="analects-hanja" style="margin: 0 0 12px 0; font-family: 'SF Pro Display', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: 2px; color: #1d1d1f;"></h1>
+        <p id="analects-ko" style="margin: 0; font-size: 17px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.374px;"></p>
+    </div>
+    
+    <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #7a7a7a; text-transform: uppercase; letter-spacing: 0.5px;">실무 적용</h4>
+        <p id="analects-meaning" style="margin: 0; font-size: 14px; color: #333; line-height: 1.5;"></p>
+    </div>
+</div>
+
+<script>
+    fetch('data/analects.json')
+        .then(res => res.json())
+        .then(data => {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+            const item = data[dayOfYear % data.length];
+            
+            document.getElementById('analects-date').textContent = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+            document.getElementById('analects-hanja').textContent = item.hanja;
+            document.getElementById('analects-ko').textContent = item.korean;
+            
+            // XSS-safe: escapeHTML for all user-facing content
+            function escJ(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+            let charMeaning = item.characters.map(c => `<span style="color:${escJ(c.color)}">${escJ(c.char)}(${escJ(c.reading)})</span>`).join(' ');
+            let fullMeaning = `<div style="font-weight:600; margin-bottom:12px; font-size:15px;">[한자 풀이] ${charMeaning}</div><div>[실무 적용] ${escJ(item.application)}</div>`;
+            document.getElementById('analects-meaning').innerHTML = fullMeaning;
+            
+            document.getElementById('analects-widget').style.display = 'flex';
+        })
+        .catch(err => {
+            console.error("Failed to load analects:", err);
+        });
+</script>
+
+<!-- 뱃지 진행 바 -->
+<div class="badge-bar" id="badge-bar">
+    <span class="badge-label">📖 오늘의 독서 뱃지</span>
+    <div style="display:flex; gap:4px; margin-left:12px;" id="badge-slots"></div>
+    <span class="badge-count" id="badge-progress">0 / 100</span>
+</div>
+
+<!-- 히어로 섹션 -->
+<div class="hero" style="background: #fafafc; padding: 28px; border-radius: 18px; text-align: center; margin-bottom: 20px; border: 1px solid #e0e0e0; position: relative;">
+    <h1 style="font-size: 24px; margin-bottom: 10px; color: #1d1d1f; letter-spacing: -0.5px; font-weight: 600;">오늘의 읽을거리 100선</h1>
+    <p style="font-size: 15px; color: #7a7a7a; line-height: 1.5; max-width: 600px; margin: 0 auto; word-break: keep-all;">
+        10개를 읽을 때마다 뱃지 1개가 부여됩니다. 오늘 하루 최대 10개의 뱃지를 획득해 보세요!
+    </p>
+    <button onclick="resetMosaicProgress()" style="position: absolute; right: 20px; bottom: 20px; background: #fff; border: 1px solid #e0e0e0; border-radius: 999px; padding: 6px 14px; font-size: 12px; color: #7a7a7a; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s;">
+        ↻ 초기화
+    </button>
+</div>
+
+<!-- 상세 패널 -->
+<div id="article-detail-pane" style="background: #fff; border-radius: 18px; padding: 32px; margin-bottom: 20px; border: 1px solid #e0e0e0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 180px; text-align: center;">
+    <div id="detail-placeholder" style="color: #999; font-size: 15px;">
+        <span style="font-size: 28px; display: block; margin-bottom: 10px;">👆</span>
+        아래 모자이크에서 블록을 하나 선택해 보세요.
+    </div>
+    
+    <div id="detail-content" style="display: none; width: 100%; text-align: left;">
+        <div id="detail-category" style="color: #0066cc; font-size: 12px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase;"></div>
+        <h2 id="detail-title" style="font-size: 20px; margin-bottom: 14px; line-height: 1.35; color: #1d1d1f; word-break: keep-all; font-weight: 600;"></h2>
+        <p id="detail-excerpt" style="font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 18px; background: #fafafc; padding: 16px; border-radius: 11px; border: 1px solid #f0f0f0;"></p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div id="detail-meta" style="font-size: 12px; color: #7a7a7a;"></div>
+            <button id="detail-link-btn" style="padding: 8px 18px; border-radius: 999px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 원문 보기</button>
+        </div>
+    </div>
+    
+    <div id="easter-egg-content" style="display: none; text-align: center; padding: 40px;">
+        <div style="font-size: 64px; animation: coffeeFloat 3s ease-in-out infinite;">☕</div>
+        <h2 style="font-size: 22px; color: #1d1d1f; margin-top: 20px; font-weight: 600;">잠시 쉬어가세요</h2>
+        <p style="font-size: 14px; color: #7a7a7a; margin-top: 8px; line-height: 1.6;">
+            치열한 업무 속에서 작은 행운을 발견하셨습니다.<br>
+            따뜻한 커피 한 잔과 함께 재충전하세요.
+        </p>
+    </div>
+</div>
+
+<!-- 모자이크 그리드 -->
+<div class="grid-mosaic" id="mosaic-grid">
+    <!-- JavaScript will populate -->
+</div>
+
+<script src="articles.js"></script>
+<script>
+    // ═══════════════════════════════════════════════
+    // XSS-safe 이스케이프 함수
+    // ═══════════════════════════════════════════════
+    function escapeHTML(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    // ═══════════════════════════════════════════════
+    // 날짜 기반 고정 시드 (이스터에그 위치 고정)
+    // ═══════════════════════════════════════════════
+    function todaySeed() {
+        const d = new Date();
+        return d.getFullYear() * 10000 + (d.getMonth()+1) * 100 + d.getDate();
+    }
+    function seededRandom(seed) {
+        let x = Math.sin(seed) * 10000;
+        return x - Math.floor(x);
+    }
+    window.bombIndex = Math.floor(seededRandom(todaySeed()) * 100);
+
+    // ═══════════════════════════════════════════════
+    // 오늘 날짜 키 (일간 리셋 기준)
+    // ═══════════════════════════════════════════════
+    function todayKey() {
+        const d = new Date();
+        return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    function getReadList() {
+        try {
+            const storedDate = localStorage.getItem('jhub_read_date');
+            if (storedDate !== todayKey()) {
+                // 날짜가 바뀌면 읽기 진행도만 초기화 (뱃지는 유지)
+                localStorage.removeItem('jhub_read_articles');
+                localStorage.setItem('jhub_read_date', todayKey());
+                return [];
+            }
+            const saved = localStorage.getItem('jhub_read_articles');
+            return saved ? JSON.parse(saved) : [];
+        } catch(e) { return []; }
+    }
+
+    function saveReadList(list) {
+        localStorage.setItem('jhub_read_articles', JSON.stringify(list));
+        localStorage.setItem('jhub_read_date', todayKey());
+    }
+
+    // ═══════════════════════════════════════════════
+    // Apple-aesthetic 색상 팔레트 (무채색 기반 + 미세 틴트)
+    // ═══════════════════════════════════════════════
+    function getCategoryColor(cat) {
+        if (!cat) return '#b0b0b0';
+        if (cat.includes('예술') || cat.includes('문화') || cat.includes('디자인'))
+            return '#8e8e93';   // SF Gray
+        if (cat.includes('건축') || cat.includes('공학') || cat.includes('시티'))
+            return '#636366';   // Dark Gray
+        if (cat.includes('경제') || cat.includes('부동산') || cat.includes('상업'))
+            return '#48484a';   // Charcoal
+        return '#aeaeb2';       // Light Gray
+    }
+
+    // ═══════════════════════════════════════════════
+    // 뱃지 바 렌더링 (10개 슬롯)
+    // ═══════════════════════════════════════════════
+    function renderBadgeBar(readCount) {
+        const slotsDiv = document.getElementById('badge-slots');
+        const progressDiv = document.getElementById('badge-progress');
+        if (!slotsDiv) return;
+
+        const badgesEarned = Math.floor(readCount / 10);
+        let html = '';
+        for (let i = 0; i < 10; i++) {
+            if (i < badgesEarned) {
+                html += `<div class="badge-slot earned" title="${(i+1)*10}개 완독 뱃지">★</div>`;
+            } else {
+                html += `<div class="badge-slot" title="${(i+1)*10}개 읽으면 획득">${i+1}</div>`;
+            }
+        }
+        slotsDiv.innerHTML = html;
+        progressDiv.textContent = `${readCount} / 100`;
+
+        // 새 뱃지 획득 시 애니메이션
+        if (badgesEarned > 0) {
+            const lastBadge = slotsDiv.children[badgesEarned - 1];
+            if (lastBadge) lastBadge.style.animation = 'badgeEarn 0.5s ease';
+        }
+    }
+
+    // ═══════════════════════════════════════════════
+    // 모자이크 렌더링
+    // ═══════════════════════════════════════════════
+    let currentArticleUrl = '';
+
+    function renderMosaic() {
+        const grid = document.getElementById('mosaic-grid');
+        if (!grid || typeof articlesData === 'undefined') return;
+
+        grid.innerHTML = '';
+        const readList = getReadList();
+
+        articlesData.forEach((article, index) => {
+            // 10개 그룹 구분선
+            if (index > 0 && index % 10 === 0) {
+                grid.innerHTML += '<div class="mosaic-group-divider"></div>';
+            }
+
+            const bgColor = getCategoryColor(article.category || '');
+            const isRead = readList.includes(index);
+            const cardClass = isRead ? "mosaic-block read" : "mosaic-block";
+            
+            let clickAction = `openDetail(${index})`;
+            if (index === window.bombIndex) {
+                clickAction = `triggerEasterEgg(${index})`;
+            }
+
+            const num = index + 1;
+            grid.innerHTML += `
+                <div class="${cardClass}" id="mosaic-card-${index}" style="background-color: ${bgColor};" onclick="${clickAction}" title="${escapeHTML(article.category)}: ${escapeHTML(article.title)}">
+                    <div class="mosaic-check">${isRead ? '✓' : num}</div>
+                </div>
+            `;
+        });
+
+        renderBadgeBar(readList.length);
+    }
+
+    function resetMosaicProgress() {
+        if(confirm("오늘의 읽기 진행 상황을 초기화하시겠습니까?")) {
+            localStorage.removeItem('jhub_read_articles');
+            document.getElementById('detail-content').style.display = 'none';
+            document.getElementById('easter-egg-content').style.display = 'none';
+            document.getElementById('detail-placeholder').style.display = 'block';
+            renderMosaic();
+        }
+    }
+
+    function triggerEasterEgg(index) {
+        markAsRead(index);
         
+        document.getElementById('detail-placeholder').style.display = 'none';
+        document.getElementById('detail-content').style.display = 'none';
+        document.getElementById('easter-egg-content').style.display = 'block';
+        
+        document.getElementById('article-detail-pane').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function markAsRead(index) {
+        const card = document.getElementById('mosaic-card-' + index);
+        if (card) {
+            card.classList.add('read');
+            card.classList.add('active');
+        }
+
+        let readList = getReadList();
+        if (!readList.includes(index)) {
+            readList.push(index);
+            saveReadList(readList);
+        }
+
+        const oldBadges = Math.floor((readList.length - 1) / 10);
+        const newBadges = Math.floor(readList.length / 10);
+        
+        // 새 뱃지 획득 시 알림
+        if (newBadges > oldBadges && readList.length % 10 === 0) {
+            setTimeout(() => {
+                alert(`🏅 축하합니다! ${newBadges}번째 독서 뱃지를 획득하셨습니다! (${readList.length}/100)`);
+            }, 300);
+        }
+
+        renderBadgeBar(readList.length);
+        renderMosaic();
+    }
+
+    function openDetail(index) {
+        const article = articlesData[index];
+        if (!article) return;
+
+        document.querySelectorAll('.mosaic-block').forEach(b => b.classList.remove('active'));
+        markAsRead(index);
+
+        // XSS-safe: textContent 사용
+        document.getElementById('detail-placeholder').style.display = 'none';
+        const easterEgg = document.getElementById('easter-egg-content');
+        if(easterEgg) easterEgg.style.display = 'none';
+        document.getElementById('detail-content').style.display = 'block';
+
+        document.getElementById('detail-category').textContent = article.category || '';
+        document.getElementById('detail-title').textContent = article.title || '';
+        // XSS FIX: innerHTML → textContent (외부 기사 원문 보안 처리)
+        document.getElementById('detail-excerpt').textContent = article.excerpt || '';
+        document.getElementById('detail-meta').textContent = article.meta || '';
+
+        currentArticleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(article.title);
+        
+        document.getElementById('article-detail-pane').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    document.getElementById('detail-link-btn').addEventListener('click', () => {
+        if (currentArticleUrl) {
+            window.open(currentArticleUrl, '_blank');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(renderMosaic, 100);
+    });
+
+    const readingTabItem = document.querySelector('[data-target="tab-reading"]');
+    if (readingTabItem) {
+        readingTabItem.addEventListener('click', renderMosaic);
+    }
+</script>
 
 
     <!-- Javascript for Tab Switching and Accordion -->
