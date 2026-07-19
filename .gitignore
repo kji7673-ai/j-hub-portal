@@ -1,2 +1,11 @@
 flask.log
 .DS_Store
+__pycache__/
+*.pyc
+_dev_tools/
+data/sync.log
+feedback_db.json
+.env
+*.egg-info/
+venv/
+node_modules/

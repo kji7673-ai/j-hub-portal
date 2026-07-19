@@ -2,12 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#f5f5f7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" href="./icon-192.png">
-    <link rel="manifest" href="./manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jinyang Hub | 진양 저널</title>
     
 <style>
@@ -93,15 +88,29 @@ h1, h2, h3 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Journal Mosaic - Unified styles (m-01: CSS 이중 선언 통합) */
+/* Journal Mosaic overrides for Swiss aesthetic */
 .grid-mosaic {
-    gap: 8px !important;
+    gap: 4px !important;
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
 }
+.mosaic-block {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s !important;
+}
+.mosaic-block:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02) !important;
+    z-index: 10;
+    border: 1px solid #000;
+}
 .mosaic-block.active {
-    box-shadow: 0 0 0 3px #0066cc !important;
+    filter: grayscale(0%);
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
 }
 
 /* Workspace Accordion UI */
@@ -375,118 +384,10 @@ li {
     width: 100%; padding: 16px; background: var(--accent);
     color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
 }
-
-/* Mobile Bottom Navigation & Pull-to-Refresh */
-@media (max-width: 768px) {
-    header .mode-switch {
-        display: none !important;
-    }
-    header > div:last-child {
-        display: none !important;
-    }
-    header {
-        padding: 12px 16px !important;
-        justify-content: center !important;
-    }
-    body {
-        padding-bottom: 70px !important; /* Space for bottom nav */
-    }
-    .bottom-nav {
-        display: flex !important;
-    }
-}
-.bottom-nav {
-    display: none; /* hidden on desktop */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    border-top: 1px solid #e0e0e0;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-    z-index: 9999;
-    justify-content: space-around;
-    padding-bottom: env(safe-area-inset-bottom);
-}
-.bottom-nav-item {
-    flex: 1;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 11px;
-    font-weight: 500;
-    color: #7a7a7a;
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-}
-.bottom-nav-item.active {
-    color: #0066cc;
-}
-.bottom-nav-item i {
-    font-size: 20px;
-    font-style: normal;
-}
-#ptr-indicator {
-    position: fixed;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    transition: top 0.3s;
-    z-index: 9999;
-    display: none;
-}
-.ptr-box {
-    display: inline-block;
-    background: #ffffff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    font-size: 12px;
-    font-weight: 600;
-    color: #0066cc;
-}
 </style>
 
 </head>
 <body>
-
-    <!-- Pull to refresh indicator -->
-    <div id="ptr-indicator">
-        <div class="ptr-box" id="ptr-text">⬇️ 당겨서 새로고침</div>
-    </div>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav" id="mobile-bottom-nav">
-        <button class="bottom-nav-item active" id="bot-btn-journal" onclick="switchMode('journal')">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            <span>J-Journal</span>
-        </button>
-        <button class="bottom-nav-item" id="bot-btn-workspace" onclick="switchMode('workspace')">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-            <span>J-Workspace</span>
-        </button>
-        <button class="bottom-nav-item" id="bot-btn-weekly" onclick="switchMode('weekly')">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 18h6"></path><path d="M9 10h6"></path></svg>
-            <span>Weekly</span>
-        </button>
-        <button class="bottom-nav-item" id="bot-btn-master" onclick="switchMode('master')" style="display:none;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
-            <span>제안함</span>
-        </button>
-        <button class="bottom-nav-item" onclick="showChangePasswordModal()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            <span>비밀번호</span>
-        </button>
-        <button class="bottom-nav-item" onclick="attemptLogout()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-            <span>로그아웃</span>
-        </button>
-    </nav>
 
     <!-- Login -->
     <div id="login-screen">
@@ -497,10 +398,6 @@ li {
             </p>
             <input type="text" id="login-name" placeholder="이름 (예: 홍길동)">
             <input type="password" id="login-pass" placeholder="보안 암호">
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; margin-bottom: 16px; cursor: pointer;">
-                <input type="checkbox" id="login-remember" checked style="width: 16px; height: 16px;">
-                자동 로그인 (기기 저장)
-            </label>
             <p id="login-error" style="color: red; font-size: 13px; display: none; margin-top: -10px; margin-bottom: 10px;">암호가 일치하지 않습니다.</p>
             <button onclick="attemptLogin()">접속하기 (Access)</button>
         </div>
@@ -519,155 +416,15 @@ li {
         <div class="mode-switch">
             <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
             <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
-            <button id="btn-weekly" class="mode-btn" style="color:#e30000; font-weight:700;" onclick="switchMode('weekly')">Weekly Report (보안)</button>
-            <button id="btn-master" class="mode-btn" style="color:#800080; font-weight:700; display:none;" onclick="switchMode('master')">제안함 (Master)</button>
         </div>
-        <div style="display: flex; gap: 8px;">
-            <button onclick="showChangePasswordModal()" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">비밀번호 변경</button>
-            <button onclick="attemptLogout()" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
+        <div>
+            <button onclick="document.getElementById('login-screen').style.display='flex'; localStorage.removeItem('jhub_logged_in'); document.getElementById('user-profile-badge').innerHTML='';" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
         </div>
     </header>
-
-    <!-- Change Password Modal -->
-    <div id="change-pwd-modal" onclick="if(event.target===this)hideChangePasswordModal()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
-        <div style="background:#fff; padding:24px; border-radius:11px; width:300px; box-shadow: 0 4px 24px rgba(0,0,0,0.2);">
-            <h3 style="margin-top:0; font-size: 18px;">비밀번호 변경</h3>
-            <input type="password" id="cp-current" placeholder="현재 비밀번호" style="width:100%; padding:12px; margin-bottom:12px; box-sizing:border-box; border:1px solid #d2d2d7; border-radius:5px;">
-            <input type="password" id="cp-new" placeholder="새 비밀번호" style="width:100%; padding:12px; margin-bottom:12px; box-sizing:border-box; border:1px solid #d2d2d7; border-radius:5px;">
-            <p id="cp-error" style="color:red; font-size:12px; margin-top:0; display:none;"></p>
-            <div style="display:flex; justify-content:flex-end; gap:8px;">
-                <button onclick="hideChangePasswordModal()" style="background:#f0f0f0; border:none; padding:8px 16px; border-radius:5px; cursor:pointer;">취소</button>
-                <button onclick="submitChangePassword()" style="background:#0066cc; color:#fff; border:none; padding:8px 16px; border-radius:5px; cursor:pointer;">변경하기</button>
-            </div>
-        </div>
-    </div>
 
     <div id="app-content">
         <!-- MODE 1: JOURNAL (Reading) -->
         <div id="view-journal" class="page-view active">
-            
-            <!-- Today's Analects Widget -->
-            <div id="analects-widget" style="background: #fafafc; border: 1px solid #e0e0e0; border-radius: 11px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; display: none;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h3 style="margin: 0; font-size: 14px; color: #1d1d1f; text-transform: uppercase; font-weight: 600; letter-spacing: -0.224px;">오늘의 논어 (論語)</h3>
-                    <span style="color:#7a7a7a; font-weight:400; font-size:12px; letter-spacing: -0.12px;" id="analects-date"></span>
-                </div>
-                
-                <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #f0f0f0;">
-                    <h1 id="analects-hanja" style="margin: 0 0 12px 0; font-family: 'SF Pro Display', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: 2px; color: #1d1d1f;"></h1>
-                    <p id="analects-korean" style="margin: 0; font-size: 17px; color: #333333; font-weight: 400; letter-spacing: -0.374px;"></p>
-                </div>
-
-                <div style="background: #ffffff; border-radius: 8px; padding: 16px; border: 1px solid #f0f0f0;">
-                    <h4 style="margin: 0 0 12px 0; font-size: 14px; color: #1d1d1f; font-weight: 600;">📝 한자 풀이</h4>
-                    <div id="analects-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; text-align: center;">
-                    </div>
-                </div>
-
-                <div style="background: #f5f5f7; border-radius: 8px; padding: 16px; margin-top: 8px;">
-                    <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #1d1d1f; font-weight: 600;">💡 J-Hub 실무 적용</h4>
-                    <p id="analects-application" style="margin: 0; font-size: 14px; color: #333333; line-height: 1.5;"></p>
-                </div>
-            </div>
-            
-            <script>
-                document.getElementById('analects-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
-                
-                // Fetch today's analects from static JSON
-                fetch('./analects.json')
-                    .then(res => res.json())
-                    .then(data => {
-                        if(data && data.length > 0) {
-                            const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-                            const analect = data[dayOfYear % data.length];
-                            document.getElementById('analects-hanja').innerText = analect.hanja;
-                            document.getElementById('analects-korean').innerText = analect.korean;
-                            document.getElementById('analects-application').innerText = analect.application;
-                            
-                            const grid = document.getElementById('analects-grid');
-                            grid.innerHTML = '';
-                            analect.characters.forEach(c => {
-                                const el = document.createElement('div');
-                                el.innerHTML = `<div style="font-family:'SF Pro Display', sans-serif; font-size:24px; font-weight:600; color:${c.color}; margin-bottom:4px;">${c.char}</div><div style="font-size:10px; color:#7a7a7a;">${c.reading}</div>`;
-                                grid.appendChild(el);
-                            });
-                            document.getElementById('analects-widget').style.display = 'flex';
-                        }
-                    })
-                    .catch(err => {
-                        console.error("Failed to load analects:", err);
-                        const widget = document.getElementById('analects-widget');
-                        widget.style.display = 'flex';
-                        widget.innerHTML = '<p style="color:#7a7a7a; font-size:14px; text-align:center; width:100%; padding:16px 0;">오늘의 논어를 불러올 수 없습니다. 네트워크 연결을 확인해주세요.</p>';
-                    });
-            </script>
-
-            <!-- Daily Byte Widget (M-02: 동적 로테이션) -->
-            <div id="daily-byte-widget" style="background: #ffffff; border: 1px solid var(--accent); padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #0066cc;"></div>
-                <h3 style="margin: 0 0 12px 0; font-size: 14px; color: #0066cc; text-transform: uppercase; font-weight: 800;">Daily Byte <span style="color:var(--text-secondary); font-weight:400; font-size:12px; margin-left:8px;" id="daily-byte-date"></span></h3>
-                <h2 id="daily-byte-title" style="margin: 0 0 8px 0; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;"></h2>
-                <p id="daily-byte-body" style="margin: 0 0 16px 0; font-size: 15px; color: var(--text-primary); line-height: 1.5;"></p>
-                <div id="daily-byte-tags" style="display: flex; gap: 8px;"></div>
-            </div>
-            
-            <script>
-                (function() {
-                    const dailyBytes = [
-                        {
-                            title: "[업계 동향] 문현1구역 재개발, 환경영향평가 심의 대응 추가 용역업체 선정 추진",
-                            body: "부산 문현1구역 재개발 정비사업조합이 건축물 환경영향평가 심의의견을 반영하기 위한 추가 용역 업체 선정에 나섰습니다. 최근 정비사업 내 환경 및 교육영향평가 등 심의 기준이 한층 엄격해짐에 따라, 설계 및 엔지니어링 단계에서의 선제적인 기술 대응이 중요해지고 있습니다.",
-                            tags: ["#문현1구역", "#환경영향평가"]
-                        },
-                        {
-                            title: "[법규 변경] 도정법 시행령 개정 — 총회 1회 통합, 공사비 검증 의무화",
-                            body: "도시 및 주거환경정비법 시행령이 개정 시행됩니다. 총회 개최를 1회로 통합하고, 공사비 검증을 의무화하여 조합원 부담 완화를 도모합니다. 향후 사업시행인가 단계에서의 실무 변화에 유의하시기 바랍니다.",
-                            tags: ["#도정법", "#공사비검증"]
-                        },
-                        {
-                            title: "[실무 TIP] 소규모정비사업 통합심의 효율화 방안",
-                            body: "국토교통부가 소규모정비사업의 통합심의 절차를 간소화하는 가이드라인을 발표했습니다. 건축·교통·환경 심의를 공동위원회 방식으로 1회에 처리할 수 있어, 인허가 기간이 평균 2~3개월 단축될 것으로 전망됩니다.",
-                            tags: ["#소규모정비", "#통합심의"]
-                        },
-                        {
-                            title: "[시장 동향] 서울시 모아타운 3종→준주거 종상향 확정",
-                            body: "서울시가 모아타운 사업지에 대해 3종 일반주거지역을 준주거지역으로 종상향하는 방안을 확정했습니다. 이에 따라 용적률이 최대 400%까지 가능해져, 사업성이 크게 개선됩니다. 면목역 모아타운 등 당사 관련 프로젝트에 호재입니다.",
-                            tags: ["#모아타운", "#종상향"]
-                        },
-                        {
-                            title: "[기술 동향] ZEB(제로에너지건축물) 의무화 확대 임박",
-                            body: "2027년부터 공공건축물 500㎡ 이상에 ZEB 인증이 의무화될 예정입니다. 민간 건축물로의 확대도 단계적으로 추진 중이므로, 정비사업 설계 시 에너지 성능 기준 강화에 선제적으로 대응하시기 바랍니다.",
-                            tags: ["#ZEB", "#제로에너지"]
-                        },
-                        {
-                            title: "[인허가 동향] 강남구 재건축 '신화 프로젝트' 인허가 30% 단축 목표",
-                            body: "강남구가 '재건축 신속화합(신화) 프로젝트' 1호를 결재하며, 재건축 인허가 기간을 30% 단축하겠다는 목표를 제시했습니다. 은마아파트가 사업시행인가를 획득한 것과 맞물려, 강남권 재건축 사업 전반의 속도가 빨라질 전망입니다.",
-                            tags: ["#강남구", "#인허가단축"]
-                        },
-                        {
-                            title: "[경제 동향] 건설공사비지수 3개월 연속 상승 — 자재비 관리 필수",
-                            body: "한국건설기술연구원이 발표한 건설공사비지수가 3개월 연속 상승세를 기록했습니다. 철근·시멘트 등 주요 자재 가격이 전월 대비 2.1% 올랐으며, 정비사업 공사비 산정 시 최신 물가 반영이 필수적입니다.",
-                            tags: ["#공사비지수", "#자재비"]
-                        }
-                    ];
-                    
-                    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
-                    const todayByte = dailyBytes[dayOfYear % dailyBytes.length];
-                    
-                    document.getElementById('daily-byte-date').innerText = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
-                    document.getElementById('daily-byte-title').innerText = todayByte.title;
-                    document.getElementById('daily-byte-body').innerText = todayByte.body;
-                    
-                    const tagsContainer = document.getElementById('daily-byte-tags');
-                    todayByte.tags.forEach(tag => {
-                        const span = document.createElement('span');
-                        span.className = 'chip blue';
-                        span.textContent = tag;
-                        tagsContainer.appendChild(span);
-                    });
-                })();
-            </script>
-
             <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
         <!-- ========================================== -->
         
@@ -792,7 +549,7 @@ li {
                 </div>
             </div>
 
-            <script defer src="articles.js"></script>
+            <script src="articles.js"></script>
             <script>
                 let currentArticleUrl = '';
                 // 이스터에그: 100개 중 1개 폭탄 위치 무작위 배정
@@ -806,10 +563,7 @@ li {
                     
                     let readList = [];
                     try {
-                        // M-06: 빌드 날짜 자동화 — 기사 개수+첫 기사 제목 기반 해시로 변경 감지
-                        const currentBuildDate = (typeof articlesData !== 'undefined') 
-                            ? 'v' + articlesData.length + '-' + (articlesData[0] ? articlesData[0].title.length : 0)
-                            : '2026-07-18';
+                        const currentBuildDate = '2026-07-19';
                         const storedBuildDate = localStorage.getItem('jhub_build_date');
                         
                         if (storedBuildDate !== currentBuildDate) {
@@ -967,49 +721,6 @@ li {
                     }
                 });
                 
-
-
-                // Change Password Functions
-                function showChangePasswordModal() {
-                    document.getElementById('change-pwd-modal').style.display = 'flex';
-                    document.getElementById('cp-current').value = '';
-                    document.getElementById('cp-new').value = '';
-                    document.getElementById('cp-error').style.display = 'none';
-                }
-                function hideChangePasswordModal() {
-                    document.getElementById('change-pwd-modal').style.display = 'none';
-                }
-                async function submitChangePassword() {
-                    const currentPwd = document.getElementById('cp-current').value.trim();
-                    const newPwd = document.getElementById('cp-new').value.trim();
-                    const errorEl = document.getElementById('cp-error');
-                    
-                    if (!currentPwd || !newPwd) {
-                        errorEl.innerText = "비밀번호를 모두 입력해주세요.";
-                        errorEl.style.display = 'block';
-                        return;
-                    }
-                    
-                    try {
-                        const res = await fetch('/api/change_password', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ current_password: currentPwd, new_password: newPwd })
-                        });
-                        const data = await res.json();
-                        if (data.success) {
-                            alert('비밀번호가 성공적으로 변경되었습니다. 다음에 로그인하실 때 새 비밀번호를 사용해주세요.');
-                            hideChangePasswordModal();
-                        } else {
-                            errorEl.innerText = data.message || "오류가 발생했습니다.";
-                            errorEl.style.display = 'block';
-                        }
-                    } catch (err) {
-                        errorEl.innerText = "서버 접속 중 오류가 발생했습니다.";
-                        errorEl.style.display = 'block';
-                    }
-                }
-
                 document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(renderMosaic, 100);
                 });
@@ -1033,8 +744,8 @@ li {
                     <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #00cc66; box-shadow: 0 0 8px rgba(0,204,102,0.6); animation: pulse 2s infinite;"></div>
                     <span style="font-size: 16px; font-weight: 700; letter-spacing: -0.5px;">최종 업데이트</span>
                 </div>
-                <div id="workspace-sync-time" style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
-                    데이터 로딩 중...
+                <div style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">
+                    2026.07.15 16:50 (실시간 동기화 완료)
                 </div>
             </div>
             <style>
@@ -1045,461 +756,142 @@ li {
                 }
             </style>
             
-            <div class="wa-container">
-                <div class="wa-header" onclick="toggleAccordion(this)">
-                    <h2 class="wa-title">1. 전사 일일 및 종합 동향</h2>
-                    <div class="wa-icon">▼</div>
-                </div>
-                <div class="wa-content" id="workspace-sec1-content">
-                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
-                </div>
-            </div>
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">1. 전사 일일 및 종합 동향</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">7월 3주차 주요 변동 사항 및 핵심 요약</p>
+        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left: 20px; font-size: 15px; color: var(--ink); line-height: 1.8;"><li><span class="highlight">장대B구역</span> — 7/10 사업시행인가 완료!</li><li><span class="highlight">장안1구역</span> — 7/11 설계자 선정 총회 (진양 적격심사 1위)</li><li><span class="highlight">대림1구역</span> — 임원 선출 문제 제기 → 재총회 준비 중 [내부정보]</li><li><span class="highlight">면목역 1차 모아주택</span> — 7/14 4·7구역 총회</li><li><span class="highlight">당산1구역</span> — 7/18 설계자 선정 총회 (진양 기호2번)</li></ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div><div class="report-item"><div class="tag-row"><span class="chip red">★★★ 핵심</span></div><h3 class="report-title">서울시 '특별 공정촉진회의' 최초 개최 (07.10)</h3><p class="report-desc">행정2부시장 주재, 25개 자치구 인허가 지연 해소. 대림1구역 등 병목 완화 기대.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip blue">입법예고 (~8/10)</span></div><h3 class="report-title">주택법 시행령 개정</h3><p class="report-desc">도시형생활주택 층수 5→6층 완화. 통합심의 공동위 효율화.</p></div><div style="height: 1px; background: var(--divider-soft); margin: 8px 0;"></div><div class="report-item"><div class="tag-row"><span class="chip green">기 보고</span></div><h3 class="report-title">모아타운 종상향 + 도정법 개정</h3><p class="report-desc">3종→준주거 종상향, 2종 13층 제한 폐지, 총회 1회 통합 허용.</p></div></div></div>
+    </div>
+</div>
 
-            <div class="wa-container collapsed">
-                <div class="wa-header" onclick="toggleAccordion(this)">
-                    <h2 class="wa-title">2. 전사 프로젝트 통합 뷰</h2>
-                    <div class="wa-icon">▼</div>
-                </div>
-                <div class="wa-content" id="workspace-sec2-content">
-                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
-                </div>
-            </div>
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">2. 전사 프로젝트 통합 뷰</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">본부별 현황, 입찰 전선, 인접지 및 정보몽땅</p>
+        <div class="grid-2"><div><div class="card"><div class="card-header"><div class="card-title">본부별 주요 프로젝트</div></div><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 디자인 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td><span class="highlight">장대B구역</span></td><td>사업시행인가 완료, 7/14 보행브릿지 회의</td></tr><tr><td><span class="highlight">면목역 모아주택</span></td><td>7/14 4·7구역 총회</td></tr><tr><td><span class="highlight">하계 현대우성</span></td><td>7/16 노원구청장 보고</td></tr><tr><td>수택동 재개발</td><td>2차 보완도서 건축업무 지원</td></tr><tr><td>마천5구역</td><td>시공사 현장설명회 완료</td></tr></table><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 도시개발 & 재생 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td>화성 남양 지역주택</td><td>10월 말 통합심의 준비 (쌍용건설)</td></tr><tr><td>갈현1구역 재개발</td><td>철거도서 작성 중</td></tr><tr><td>범일3구역</td><td>9차 사업시행변경인가 접수</td></tr></table><h3 style="font-size:16px; margin: 10px 0 5px 0; color:var(--accent);">■ 도시계획 본부</h3><table class="card-table"><tr><th>프로젝트</th><th>진행 현황</th></tr><tr><td><span class="highlight">장위13구역</span></td><td>수립범위 재접수 준비</td></tr><tr><td><span class="highlight">삼선동 1·2구역</span></td><td>7/16 MP 미팅(구청)</td></tr><tr><td><span class="highlight">석관초 관리계획</span></td><td>7/16 수립범위 사전자문(시청)</td></tr></table></div><div class="card"><div class="card-header"><div class="card-title">입찰/수주 전선 (전략기획)</div><span class="chip red">총력전</span></div><table class="card-table"><tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr><tr><td><span class="highlight">장안1구역</span></td><td>7/11 선정 총회</td><td>적격심사 1위</td></tr><tr><td><span class="highlight">당산1구역</span></td><td>7/18 선정 총회</td><td>기호 2번</td></tr><tr><td>독산1구역</td><td>3분기 입찰</td><td>26년 4Q 예상</td></tr><tr><td>부천 중동역세권</td><td>단독시행 검토</td><td>26년 4Q 예상</td></tr></table></div></div><div><div class="card"><div class="card-header"><div class="card-title">인접지 개발 동향</div><span class="chip">완벽 복원</span></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">① 은평구</div><ul class="acc-body"><li>증산5구역 — 해체공사 착공, 가림막 설치 도로통제 시작</li><li>불광8 조합설립(25층 321세대) / 구산역세권 구역지정</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">② 중랑구</div><ul class="acc-body"><li>상봉7구역 — 사업시행계획 변경인가(7/2). 49층 841세대</li><li>'신속추진지원팀' 신설 (7/1)</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">③ 강남구</div><ul class="acc-body"><li>은마아파트 — 7/2 사업시행인가 획득!</li><li>'재건축 신속화합(신화) 프로젝트' 1호 결재 (7/1)</li></ul></div><div class="accordion" style="margin-bottom:12px;"><div class="acc-header" style="font-weight:700; margin-bottom:4px;">④ 종로구 / ⑤ 성북구 / ⑥ 노원구 / ⑦ 인천</div><ul class="acc-body"><li>종로2·3가 지구단위계획 변경안 수정가결</li><li>신월곡제1구역 — 사업시행계획(변경)인가 고시</li><li>상계주공7단지 — 안전진단 통과</li><li>인천 제물포구 행정체제 개편 출범</li></ul></div></div><div class="card"><div class="card-header"><div class="card-title">정보몽땅 자동 크롤링 (API)</div><span class="chip blue">실시간 연동</span></div><table class="card-table"><tr><th>구역</th><th>상태</th><th>변동 내역</th></tr><tr><td><strong>대림1구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>창립총회 결과보고 등재</td></tr><tr><td><strong>장위13-2구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>주민설명회 자료 공개</td></tr><tr><td><strong>창신10구역</strong></td><td><span style="font-weight:700;">[ 등록 ]</span></td><td>신속통합기획 구역 지정</td></tr><tr><td><strong>중계주공5단지</strong></td><td><span style="color:var(--text-secondary);">[ 미지정 ]</span></td><td>구역지정 전 미등재</td></tr></table></div></div></div>
+    </div>
+</div>
 
-            <div class="wa-container collapsed">
-                <div class="wa-header" onclick="toggleAccordion(this)">
-                    <h2 class="wa-title">3. 통합 핵심 일정표</h2>
-                    <div class="wa-icon">▼</div>
-                </div>
-                <div class="wa-content" id="workspace-sec3-content">
-                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
-                </div>
-            </div>
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">3. 통합 핵심 일정표</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
+        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/13</div><div class="day-weekday">월요일</div></div><div class="event-card"><div class="event-name">중계본동 재개발 현장 미팅</div><div class="event-note">SH · 주대위 · 설계사 참석</div></div><div class="event-card"><div class="event-name">신정동 922 재개발 주민설명회</div><div class="event-note">전략기획 본부 참석</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/14</div><div class="day-weekday">화요일</div></div><div class="event-card important"><div class="event-time">14:00</div><div class="event-name">면목역 1차 모아주택 총회</div><div class="event-note">4·7구역 (디자인2소)</div></div><div class="event-card"><div class="event-name">장대B구역 보행브릿지 회의</div><div class="event-note">협력사 및 조합</div></div><div class="event-card"><div class="event-name">석관초 관리계획 과장보고</div><div class="event-note">관할 구청</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday">목요일</div></div><div class="event-card important"><div class="event-name">하계 현대우성 구청장 보고</div><div class="event-note">노원구청 (디자인3소)</div></div><div class="event-card"><div class="event-name">삼선동 1·2구역 MP 미팅</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday">토요일</div></div><div class="event-card important"><div class="event-name">당산1구역 설계자 선정 총회</div><div class="event-note">전략계획/기획팀 총력 대응 ★ 수주 핵심</div></div></div></div>
+    </div>
+</div>
 
-            <div class="wa-container collapsed">
-                <div class="wa-header" onclick="toggleAccordion(this)">
-                    <h2 class="wa-title">4. 법규 아카이브</h2>
-                    <div class="wa-icon">▼</div>
-                </div>
-                <div class="wa-content" id="workspace-sec4-content">
-                    <p style="text-align: center; color: var(--text-secondary); padding: 20px;">데이터를 불러오는 중입니다...</p>
-                </div>
-            </div>
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">4. 법규 아카이브</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
+        <div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">신규 시행 법령</div></div><table class="card-table"><tr><th>시행일</th><th>법령</th><th>주요 내용</th></tr><tr><td>07.01</td><td>도정법 시행령</td><td>총회 1회 통합, 공사비 검증 의무화</td></tr><tr><td>07.01</td><td>주택법 시행령</td><td>일부 개정 시행 (행정사항 정비)</td></tr><tr><td>02.27</td><td>소규모주택정비법</td><td>조합설립 요건 완화, 임대주택 가격 상향</td></tr></table></div><div class="card"><div class="card-header"><div class="card-title">지자체 고시/공고</div></div><ul><li>[서울] 성북구 신월곡제1구역 — 7/2 사업시행계획(변경)인가 고시</li><li>[서울] 중랑구 상봉7구역 — 7/2 사업시행계획 변경인가 고시 (49층)</li><li>[서울] 종로구 종로2·3가 — 7/2 지구단위계획 변경안 수정가결</li></ul></div><div class="card" style="grid-column: 1 / -1;"><div class="card-header"><div class="card-title">서울시 10대 법령 개정 건의안 추적표</div></div><table class="card-table"><tr><th>건의 항목</th><th>현행</th><th>건의안</th><th>상태</th></tr><tr><td>조합설립 동의율</td><td>75%</td><td><strong style="color:var(--text-primary)">70%</strong></td><td>건의 중</td></tr><tr><td>이주비 대출 LTV</td><td>40%</td><td><strong style="color:var(--text-primary)">70%</strong></td><td>건의 중</td></tr><tr><td>인가 전 통지 기간</td><td>60일</td><td><strong style="color:var(--text-primary)">30일</strong></td><td>건의 중</td></tr><tr><td>시공자 수의계약</td><td>2회 유찰</td><td><strong style="color:var(--text-primary)">1회 유찰</strong></td><td>건의 중</td></tr><tr><td>용적률 1.2배 완화</td><td>공공만 적용</td><td><strong style="color:var(--text-primary)">민간 확대 적용</strong></td><td>건의 중</td></tr></table></div></div>
+    </div>
+</div>
 
-            <div class="wa-container collapsed">
-                <div class="wa-header" onclick="toggleAccordion(this)">
-                    <h2 class="wa-title">5. 종합 주간 법규 동향 보고서 (상세 원문)</h2>
-                    <div class="wa-icon">▼</div>
-                </div>
-                <div class="wa-content">
-                    <p style="color:var(--text-secondary); margin-top:0;">법규, 정책, 인허가 동향에 대한 상세 8+2 섹션 풀 리포트</p>
-                    <div class="card" style="padding: 0; border-radius: 8px; overflow: hidden; height: 85vh; min-height: 800px; max-height: 1600px; border: 2px dashed #ccc;">
-                        <iframe loading="lazy" src="./reports/regulatory_report.html" style="width: 100%; height: 100%; border: none;"></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <script src="./js/workspace.js"></script>
-        </div>
-        
-        <!-- MODE 3: WEEKLY REPORT (보안) -->
-        <div id="view-weekly" class="page-view">
-            <!-- Weekly Report Content (Admin View) -->
-            <div id="weekly-admin-view" style="display: block;">
-                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 6px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
-                    <h2 style="margin: 0; font-size: 13px; font-weight: 600;">
-                        [승인 대기] 통합 주간 보고서 초안
-                    </h2>
-                    <span style="font-size: 11px; font-weight: 400; color: #555; background: #e5e5ea; padding: 2px 6px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
-                </div>
-
-                <!-- Generated Draft Preview -->
-                <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
-                    <div style="width: 100%; height: 85vh; min-height: 800px; max-height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <iframe loading="lazy" src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
-                    </div>
-                </div>
-
-                <!-- 비공개 1:1 다이렉트 피드백 (Direct Drop-box) -->
-                <div class="card" style="background: #fafafc; border: 1px solid var(--accent); margin-top: 16px;">
-                    <div class="card-header">
-                        <div class="card-title">💡 실무 아이디어 & 제안 직통함 (Direct Drop-box)</div>
-                    </div>
-                    <div style="padding: 16px;">
-                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
-                            주간회의록을 읽고 떠오른 아이디어나 크로스 체크 사항을 남겨주세요. 
-                            본 의견은 게시판에 공개되지 않으며 <strong>대표이사님께 1:1로 직접 전달</strong>됩니다.
-                        </p>
-                        <input type="text" id="fb-project" placeholder="관련 안건명 또는 프로젝트명" style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
-                        <textarea id="fb-content" placeholder="자유롭게 의견을 남겨주세요..." style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; min-height: 100px; box-sizing: border-box; font-family: inherit;"></textarea>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <label style="font-size: 13px; color: #333; cursor: pointer;">
-                                <input type="checkbox" id="fb-anonymous"> 익명으로 전달하기
-                            </label>
-                            <button onclick="submitFeedback()" style="background: #0066cc; color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: bold; cursor: pointer;">의견 보내기</button>
-                        </div>
-                        <div id="fb-status" style="margin-top: 12px; font-size: 14px; font-weight: bold; display: none;"></div>
-                    </div>
-                </div>
-
-                <script>
-                async function submitFeedback() {
-                    const project = document.getElementById('fb-project').value.trim();
-                    const content = document.getElementById('fb-content').value.trim();
-                    const isAnonymous = document.getElementById('fb-anonymous').checked;
-                    const statusEl = document.getElementById('fb-status');
-
-                    if (!content) {
-                        statusEl.style.color = 'red';
-                        statusEl.innerText = '피드백 내용을 입력해주세요.';
-                        statusEl.style.display = 'block';
-                        return;
-                    }
-
-                    try {
-                        const response = await fetch('/api/feedback', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                project_name: project,
-                                content: content,
-                                is_anonymous: isAnonymous
-                            })
-                        });
-                        const data = await response.json();
-                        if (data.success) {
-                            document.getElementById('fb-project').value = '';
-                            document.getElementById('fb-content').value = '';
-                            document.getElementById('fb-anonymous').checked = false;
-                            statusEl.style.color = '#00cc66';
-                            statusEl.innerText = '✅ 대표이사님께 안전하게 직접 전달되었습니다!';
-                            statusEl.style.display = 'block';
-                            setTimeout(() => { statusEl.style.display = 'none'; }, 5000);
-                        } else {
-                            statusEl.style.color = 'red';
-                            statusEl.innerText = '오류: ' + data.message;
-                            statusEl.style.display = 'block';
-                        }
-                    } catch (e) {
-                        statusEl.style.color = 'red';
-                        statusEl.innerText = '서버 통신 오류가 발생했습니다.';
-                        statusEl.style.display = 'block';
-                    }
-                }
-                </script>
-
-                <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center;">
-                    <button onclick="publishWeeklyReport()" style="background: #0066cc; color: white; border: none; padding: 16px 48px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);">최종 승인 및 발행 (Publish)</button>
-                    <p style="font-size: 13px; color: #888; margin-top: 12px;">승인 후 J-Workspace의 종합 동향 탭에 최신 데이터로 영구 갱신됩니다.</p>
-                </div>
-            </div>
-            
-            <script>
-                function unlockWeekly() {
-                    // 보안 복원: 로그인 사용자의 Master 권한 확인
-                    const masterBtn = document.getElementById('btn-master');
-                    const isMaster = masterBtn && masterBtn.style.display !== 'none';
-                    if (!isMaster) {
-                        alert('주간 보고서 열람 권한이 없습니다. 관리자에게 문의하세요.');
-                        switchMode('journal');
-                        return;
-                    }
-                    document.getElementById("weekly-admin-view").style.display = "block";
-                    window.scrollTo(0,0);
-                }
-
-                async function publishWeeklyReport() {
-                    const btn = document.querySelector("#weekly-publish-actions button");
-                    btn.innerText = "발행 처리 중...";
-                    btn.style.opacity = "0.7";
-                    btn.disabled = true;
-                    
-                    try {
-                        // M-03: 서버에 발행 API 호출 시도
-                        const res = await fetch('/api/publish', { method: 'POST' });
-                        const data = await res.json();
-                        if (data.success) {
-                            btn.innerText = "✅ 전사 포털 업데이트 완료";
-                            btn.style.background = "#00cc66";
-                        }
-                    } catch(e) {
-                        // 서버 미접속 시: workspace.json을 강제 리로드하여 최신 데이터 반영
-                        console.log('Publish API unavailable, forcing workspace refresh');
-                        if (typeof loadWorkspaceData === 'function') {
-                            loadWorkspaceData();
-                        }
-                        btn.innerText = "✅ 데이터 새로고침 완료";
-                        btn.style.background = "#00cc66";
-                    }
-                    
-                    btn.style.opacity = "1";
-                    btn.style.boxShadow = "none";
-                    
-                    setTimeout(() => {
-                        alert("보고서 발행이 완료되었습니다. J-Workspace 데이터가 갱신되었습니다.");
-                        btn.innerText = "최종 승인 및 발행 (Publish)";
-                        btn.style.background = "#0066cc";
-                        btn.disabled = false;
-                    }, 2000);
-                }
-            </script>
-        </div>
-        
-        <!-- MODE 4: MASTER VIEW (제안함) -->
-        <div id="view-master" class="page-view">
-            <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #800080; padding: 12px 16px; margin-bottom: 16px;">
-                <h2 style="margin: 0; font-size: 16px; font-weight: 600;">📥 접수된 실무 아이디어 및 제안 (Master Only)</h2>
-                <p style="margin: 4px 0 0 0; font-size: 13px; color: #555;">직원들이 보낸 피드백이 실시간으로 여기에 누적됩니다.</p>
-                <button onclick="loadFeedbacks()" style="margin-top:12px; background:#800080; color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold;">새로고침 (Reload)</button>
-            </div>
-            <div id="master-feedbacks-container">
-                <!-- Feedbacks will be rendered here -->
-            </div>
         </div>
     </div>
     
-    <script>
-    // allowedUsers dictionary has been removed for security reasons.
-
-    function processLoginSuccess(name, isMaster) {
-        document.getElementById("user-profile-name").textContent = name + " 님";
-        if(isMaster || name === "김중일") {
-            document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
-            document.getElementById('btn-master').style.display = 'inline-block';
-            document.getElementById('bot-btn-master').style.display = 'flex';
-        } else {
-            document.getElementById('btn-master').style.display = 'none';
-            document.getElementById('bot-btn-master').style.display = 'none';
-        }
-        document.getElementById("login-screen").style.display = "none";
+    
+<script>
+!function(t,n){"object"==typeof exports?module.exports=exports=n():"function"==typeof define&&define.amd?define([],n):t.CryptoJS=n()}(this,function(){return function(f){var i;if("undefined"!=typeof window&&window.crypto&&(i=window.crypto),"undefined"!=typeof self&&self.crypto&&(i=self.crypto),!(i=!(i=!(i="undefined"!=typeof globalThis&&globalThis.crypto?globalThis.crypto:i)&&"undefined"!=typeof window&&window.msCrypto?window.msCrypto:i)&&"undefined"!=typeof global&&global.crypto?global.crypto:i)&&"function"==typeof require)try{i=require("crypto")}catch(t){}var e=Object.create||function(t){return n.prototype=t,t=new n,n.prototype=null,t};function n(){}var t={},r=t.lib={},o=r.Base={extend:function(t){var n=e(this);return t&&n.mixIn(t),n.hasOwnProperty("init")&&this.init!==n.init||(n.init=function(){n.$super.init.apply(this,arguments)}),(n.init.prototype=n).$super=this,n},create:function(){var t=this.extend();return t.init.apply(t,arguments),t},init:function(){},mixIn:function(t){for(var n in t)t.hasOwnProperty(n)&&(this[n]=t[n]);t.hasOwnProperty("toString")&&(this.toString=t.toString)},clone:function(){return this.init.prototype.extend(this)}},u=r.WordArray=o.extend({init:function(t,n){t=this.words=t||[],this.sigBytes=null!=n?n:4*t.length},toString:function(t){return(t||a).stringify(this)},concat:function(t){var n=this.words,e=t.words,i=this.sigBytes,r=t.sigBytes;if(this.clamp(),i%4)for(var o=0;o<r;o++){var s=e[o>>>2]>>>24-o%4*8&255;n[i+o>>>2]|=s<<24-(i+o)%4*8}else for(var a=0;a<r;a+=4)n[i+a>>>2]=e[a>>>2];return this.sigBytes+=r,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=f.ceil(n/4)},clone:function(){var t=o.clone.call(this);return t.words=this.words.slice(0),t},random:function(t){for(var n=[],e=0;e<t;e+=4)n.push(function(){if(i){if("function"==typeof i.getRandomValues)try{return i.getRandomValues(new Uint32Array(1))[0]}catch(t){}if("function"==typeof i.randomBytes)try{return i.randomBytes(4).readInt32LE()}catch(t){}}throw new Error("Native crypto module could not be used to get secure random number.")}());return new u.init(n,t)}}),s=t.enc={},a=s.Hex={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push((o>>>4).toString(16)),i.push((15&o).toString(16))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i+=2)e[i>>>3]|=parseInt(t.substr(i,2),16)<<24-i%8*4;return new u.init(e,n/2)}},c=s.Latin1={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push(String.fromCharCode(o))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i++)e[i>>>2]|=(255&t.charCodeAt(i))<<24-i%4*8;return new u.init(e,n)}},p=s.Utf8={stringify:function(t){try{return decodeURIComponent(escape(c.stringify(t)))}catch(t){throw new Error("Malformed UTF-8 data")}},parse:function(t){return c.parse(unescape(encodeURIComponent(t)))}},d=r.BufferedBlockAlgorithm=o.extend({reset:function(){this._data=new u.init,this._nDataBytes=0},_append:function(t){"string"==typeof t&&(t=p.parse(t)),this._data.concat(t),this._nDataBytes+=t.sigBytes},_process:function(t){var n,e=this._data,i=e.words,r=e.sigBytes,o=this.blockSize,s=r/(4*o),a=(s=t?f.ceil(s):f.max((0|s)-this._minBufferSize,0))*o,r=f.min(4*a,r);if(a){for(var c=0;c<a;c+=o)this._doProcessBlock(i,c);n=i.splice(0,a),e.sigBytes-=r}return new u.init(n,r)},clone:function(){var t=o.clone.call(this);return t._data=this._data.clone(),t},_minBufferSize:0}),h=(r.Hasher=d.extend({cfg:o.extend(),init:function(t){this.cfg=this.cfg.extend(t),this.reset()},reset:function(){d.reset.call(this),this._doReset()},update:function(t){return this._append(t),this._process(),this},finalize:function(t){return t&&this._append(t),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new h.HMAC.init(e,n).finalize(t)}}}),t.algo={});return t}(Math)});
+!function(e,t){"object"==typeof exports?module.exports=exports=t(require("./core")):"function"==typeof define&&define.amd?define(["./core"],t):t(e.CryptoJS)}(this,function(s){return function(n){var e=s,t=e.lib,r=t.WordArray,o=t.Hasher,t=e.algo,i=[],_=[];!function(){function e(e){return 4294967296*(e-(0|e))|0}for(var t=2,r=0;r<64;)!function(e){for(var t=n.sqrt(e),r=2;r<=t;r++)if(!(e%r))return;return 1}(t)||(r<8&&(i[r]=e(n.pow(t,.5))),_[r]=e(n.pow(t,1/3)),r++),t++}();var p=[],t=t.SHA256=o.extend({_doReset:function(){this._hash=new r.init(i.slice(0))},_doProcessBlock:function(e,t){for(var r=this._hash.words,o=r[0],n=r[1],i=r[2],s=r[3],a=r[4],c=r[5],h=r[6],f=r[7],u=0;u<64;u++){u<16?p[u]=0|e[t+u]:(l=p[u-15],d=p[u-2],p[u]=((l<<25|l>>>7)^(l<<14|l>>>18)^l>>>3)+p[u-7]+((d<<15|d>>>17)^(d<<13|d>>>19)^d>>>10)+p[u-16]);var l=o&n^o&i^n&i,d=f+((a<<26|a>>>6)^(a<<21|a>>>11)^(a<<7|a>>>25))+(a&c^~a&h)+_[u]+p[u],f=h,h=c,c=a,a=s+d|0,s=i,i=n,n=o,o=d+(((o<<30|o>>>2)^(o<<19|o>>>13)^(o<<10|o>>>22))+l)|0}r[0]=r[0]+o|0,r[1]=r[1]+n|0,r[2]=r[2]+i|0,r[3]=r[3]+s|0,r[4]=r[4]+a|0,r[5]=r[5]+c|0,r[6]=r[6]+h|0,r[7]=r[7]+f|0},_doFinalize:function(){var e=this._data,t=e.words,r=8*this._nDataBytes,o=8*e.sigBytes;return t[o>>>5]|=128<<24-o%32,t[14+(64+o>>>9<<4)]=n.floor(r/4294967296),t[15+(64+o>>>9<<4)]=r,e.sigBytes=4*t.length,this._process(),this._hash},clone:function(){var e=o.clone.call(this);return e._hash=this._hash.clone(),e}});e.SHA256=o._createHelper(t),e.HmacSHA256=o._createHmacHelper(t)}(Math),s.SHA256});
+</script>
+<script>
+async function sha256(message) {
+    if (typeof CryptoJS !== 'undefined') {
+        return CryptoJS.SHA256(message).toString();
     }
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+</script>
 
+    
+<script>
+    // SEC-02 FIX: 서버 측 인증으로 전환 — 클라이언트에 해시 데이터 없음
     async function attemptLogin() {
         const name = document.getElementById("login-name").value.trim();
         const pass = document.getElementById("login-pass").value.trim();
         const err = document.getElementById("login-error");
-        const rememberMe = document.getElementById('login-remember') && document.getElementById('login-remember').checked;
+        const btn = document.querySelector('.login-card button');
         
-        if (!name || !pass) {
-            err.textContent = '이름과 비밀번호를 모두 입력해주세요.';
-            err.style.display = 'block';
-            return;
-        }
+        if (!name || !pass) { err.textContent = '이름과 비밀번호를 입력해주세요.'; err.style.display = 'block'; return; }
+        btn.disabled = true; btn.textContent = '로그인 중...';
         
         try {
-            const response = await fetch('/api/login', {
+            const resp = await fetch('/api/login', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: name, password: pass })
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name: name, password: pass})
             });
-            const result = await response.json();
+            const data = await resp.json();
             
-            if (response.ok && result.success) {
-                if (rememberMe) {
-                    localStorage.setItem('jhub_saved_user', JSON.stringify({name: result.user_name, is_master: result.is_master}));
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.name);
+                document.getElementById('user-profile-name').textContent = data.name + ' 님';
+                if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
-                processLoginSuccess(result.user_name, result.is_master);
-                err.style.display = "none";
+                document.getElementById('login-screen').style.display = 'none';
             } else {
-                showLoginError();
+                err.textContent = data.message || '이름 또는 비밀번호가 일치하지 않습니다.';
+                err.style.display = 'block';
             }
-        } catch (error) {
-            console.error("Login server unreachable, trying offline fallback:", error);
-            // C-01 Fallback: 서버 미구동 시 localStorage 저장된 세션으로 복원
-            const saved = localStorage.getItem('jhub_saved_user');
-            if (saved) {
-                try {
-                    const userData = JSON.parse(saved);
-                    processLoginSuccess(userData.name, userData.is_master);
-                    err.style.display = 'none';
-                    console.log('Offline fallback login successful for:', userData.name);
-                    return;
-                } catch(e) {}
-            }
-            showLoginError();
+        } catch(e) {
+            // 서버 미연결(로컬 파일 모드) 시 기존 방식 fallback
+            console.warn('서버 연결 불가, 로컬 모드로 전환:', e);
+            err.textContent = '서버에 연결할 수 없습니다. 관리자에게 문의하세요.';
+            err.style.display = 'block';
         }
-    }
-    
-    function showLoginError() {
-        const err = document.getElementById("login-error");
-        err.style.display = "block";
-        err.textContent = "접속 정보가 일치하지 않습니다.";
-        const card = document.querySelector(".login-card");
-        card.style.transform = "translateX(-10px)";
-        setTimeout(() => card.style.transform = "translateX(10px)", 50);
-        setTimeout(() => card.style.transform = "translateX(-10px)", 100);
-        setTimeout(() => card.style.transform = "translateX(0)", 150);
+        btn.disabled = false; btn.textContent = '로그인';
     }
 
-    async function attemptLogout() {
+    // Check login status on load (서버 세션 확인)
+    window.addEventListener('DOMContentLoaded', async () => {
         try {
-            await fetch('/api/logout', { method: 'POST' });
-        } catch(e) {}
+            const resp = await fetch('/api/check_session');
+            const data = await resp.json();
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.user_name);
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('user-profile-name').textContent = data.user_name + ' 님';
+                if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+                }
+                return;
+            }
+        } catch(e) { /* 로컬 파일 모드 */ }
         
-        localStorage.removeItem('jhub_saved_user');
-        window.location.hash = '';
-        document.getElementById('login-screen').style.display='flex'; 
-        document.getElementById('user-profile-badge').innerHTML='';
-        document.getElementById('login-pass').value = '';
-    }
-
-    async function checkLogin() {
-        try {
-            const response = await fetch('/api/check_session');
-            const result = await response.json();
-            if (response.ok && result.success) {
-                processLoginSuccess(result.user_name, result.is_master);
-            } else {
-                // 서버 세션 없음 — 로컬 저장 세션 확인
-                const saved = localStorage.getItem('jhub_saved_user');
-                if (saved) {
-                    const userData = JSON.parse(saved);
-                    processLoginSuccess(userData.name, userData.is_master);
-                } else {
-                    document.getElementById('login-screen').style.display = 'flex';
-                }
-            }
-        } catch (error) {
-            // C-01 Fallback: 서버 접속 불가 시 로컬 저장 세션으로 자동 복원
-            const saved = localStorage.getItem('jhub_saved_user');
-            if (saved) {
-                try {
-                    const userData = JSON.parse(saved);
-                    processLoginSuccess(userData.name, userData.is_master);
-                    console.log('Offline session restored for:', userData.name);
-                } catch(e) {
-                    document.getElementById('login-screen').style.display = 'flex';
-                }
-            } else {
-                document.getElementById('login-screen').style.display = 'flex';
-            }
+        if(localStorage.getItem('jhub_logged_in') === 'true') {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('user-profile-name').textContent = (localStorage.getItem('jhub_user_name') || '') + ' 님';
         }
-    }
-
-
-    // C-04: XSS 살균 유틸리티 함수
-    function sanitizeHTML(str) {
-        const temp = document.createElement('div');
-        temp.textContent = str;
-        return temp.innerHTML;
-    }
-
-    async function loadFeedbacks() {
-        try {
-            const response = await fetch('/api/feedbacks');
-            const data = await response.json();
-            const container = document.getElementById('master-feedbacks-container');
-            if(!container) return;
-            
-            container.innerHTML = '';
-            
-            if (response.ok && Array.isArray(data)) {
-                if (data.length === 0) {
-                    container.innerHTML = '<p style="color:#777; padding: 12px;">아직 접수된 제안이 없습니다.</p>';
-                    return;
-                }
-                
-                // 역순 정렬 (최신이 위로)
-                data.reverse().forEach(fb => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.style.marginBottom = '12px';
-                    // C-04: 모든 사용자 입력값을 sanitizeHTML로 살균 처리
-                    card.innerHTML = `
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 8px;">
-                            <div>
-                                <span class="chip blue">${sanitizeHTML(fb.project_name || '일반 제안')}</span>
-                                <span style="font-size: 12px; color: #888; margin-left: 8px;">${sanitizeHTML(fb.timestamp || '')}</span>
-                            </div>
-                            <span style="font-weight: 600; font-size: 13px; color: #800080;">작성자: ${sanitizeHTML(fb.author || '익명')}</span>
-                        </div>
-                        <p style="margin: 0; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">${sanitizeHTML(fb.content || '')}</p>
-                    `;
-                    container.appendChild(card);
-                });
-            }
-        } catch (e) {
-            console.error('Failed to load feedbacks:', e);
-        }
-    }
-
-    // Hash Routing & Mode Switch Logic
-    function switchMode(mode) {
-        window.location.hash = mode;
-    }
-
-    function renderModeFromHash() {
-        let mode = window.location.hash.replace('#', '') || 'journal';
-        try {
-            var headerBtn = document.getElementById('btn-' + mode);
-            var viewDiv = document.getElementById('view-' + mode);
-            
-            // Guard: if target page doesn't exist, fall back to journal
-            if (!headerBtn || !viewDiv) {
-                console.warn('renderModeFromHash: invalid mode "' + mode + '", falling back to journal');
-                mode = 'journal';
-                headerBtn = document.getElementById('btn-journal');
-                viewDiv = document.getElementById('view-journal');
-            }
-            
-            // Only clear states AFTER confirming target exists
-            document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            
-            if (headerBtn) headerBtn.classList.add('active');
-            var botBtn = document.getElementById('bot-btn-' + mode);
-            if (botBtn) botBtn.classList.add('active');
-            if (viewDiv) viewDiv.classList.add('active');
-            
-            // Scroll to top when switching modes
-            window.scrollTo(0, 0);
-        } catch (e) {
-            console.error('renderModeFromHash error:', e);
-            // Emergency fallback: show journal
-            var fallback = document.getElementById('view-journal');
-            if (fallback) fallback.classList.add('active');
-        }
-    }
-
-    // Listen for back/forward buttons
-    window.addEventListener('hashchange', renderModeFromHash);
-
-    // Pull to refresh logic
-    let touchStartY = 0;
-    const ptrIndicator = document.getElementById('ptr-indicator');
-    const ptrText = document.getElementById('ptr-text');
-
-    document.addEventListener('touchstart', e => {
-        if(window.scrollY === 0) {
-            touchStartY = e.touches[0].clientY;
-        }
-    }, {passive: true});
-
-    document.addEventListener('touchmove', e => {
-        if(window.scrollY === 0 && touchStartY > 0) {
-            let pullDist = e.touches[0].clientY - touchStartY;
-            if(pullDist > 40) {
-                ptrIndicator.style.display = 'block';
-                ptrIndicator.style.top = Math.min(pullDist - 40, 20) + 'px';
-                ptrText.innerText = pullDist > 100 ? '🔄 놓아서 업데이트' : '⬇️ 당겨서 새로고침';
-            }
-        }
-    }, {passive: true});
-
-    document.addEventListener('touchend', e => {
-        if(window.scrollY === 0 && touchStartY > 0) {
-            let pullDist = e.changedTouches[0].clientY - touchStartY;
-            if(pullDist > 100) {
-                ptrIndicator.style.top = '20px';
-                ptrText.innerText = '⏳ 업데이트 중...';
-                setTimeout(() => location.reload(true), 500);
-            } else {
-                ptrIndicator.style.top = '-50px';
-                setTimeout(() => ptrIndicator.style.display = 'none', 300);
-            }
-        }
-        touchStartY = 0;
     });
+
+    // Mode Switch Logic
+    function switchMode(mode) {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+        
+        document.getElementById('btn-' + mode).classList.add('active');
+        document.getElementById('view-' + mode).classList.add('active');
+    }
 
     // Accordion Logic
     function toggleAccordion(element) {
@@ -1509,34 +901,12 @@ li {
 
     document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
-        renderModeFromHash(); // Initialize routing based on URL hash
         document.getElementById("login-pass").addEventListener("keypress", e => {
             if(e.key === "Enter") attemptLogin();
-        });
-        // m-04: ESC 키로 모달 닫기
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') {
-                hideChangePasswordModal();
-            }
         });
     });
 </script>
 
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('SW registered:', registration);
-                    })
-                    .catch(error => {
-                        console.log('SW registration failed:', error);
-                    });
-            });
-        } else if (window.location.protocol === 'file:') {
-            console.warn('Service Worker cannot be registered on file:// protocol. PWA features require a web server (e.g., python -m http.server).');
-        }
-    </script>
+
 </body>
 </html>

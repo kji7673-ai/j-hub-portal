@@ -29,9 +29,28 @@ def generate_dummy_api_data():
     ]
 
 def fetch_real_data(api_key):
-    """fetch_seoul_notices.py를 실행하여 JSON 파싱 (현재는 미구현)"""
+    """fetch_seoul_notices.py를 실행하여 JSON 파싱"""
     print(f"API Key {api_key}를 사용하여 fetch_seoul_notices.py를 실행합니다...")
-    return generate_dummy_api_data()
+    try:
+        import fetch_seoul_notices
+        xml_content = fetch_seoul_notices.fetch_from_api(api_key, 1, 100)
+        notices = fetch_seoul_notices.parse_xml(xml_content)
+        filtered = fetch_seoul_notices.filter_notices(notices, days=7)
+        
+        api_data = []
+        for n in filtered[:5]:
+            api_data.append({
+                "name": n['organ'][:10],
+                "status": "신규공고",
+                "desc": n['title'][:50] + ("..." if len(n['title']) > 50 else ""),
+                "active": True
+            })
+        if not api_data:
+            return generate_dummy_api_data()
+        return api_data
+    except Exception as e:
+        print(f"Error fetching API data: {e}")
+        return generate_dummy_api_data()
 
 def main():
     api_key = sys.argv[1] if len(sys.argv) > 1 else None

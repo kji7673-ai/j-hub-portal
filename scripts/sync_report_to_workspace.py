@@ -61,7 +61,11 @@ def extract_data_from_report(report_path):
         ]
         
     except ImportError:
-        print("⚠️ BeautifulSoup4(bs4)가 설치되지 않아 테스트 데이터로 Fallback합니다.")
+        print("\n" + "="*50)
+        print("🚨 [CRITICAL ERROR] BeautifulSoup4(bs4) 라이브러리가 설치되어 있지 않습니다!")
+        print("💡 해결 방법: 터미널에서 'pip install beautifulsoup4'를 실행하세요.")
+        print("⚠️ 현재는 테스트(더미) 데이터로 강제 진행합니다.")
+        print("="*50 + "\n")
         return {
             "siteUpdates": [
                 { "name": "장위15구역", "desc": "정비사업통합보고서 생성 완료 (신규)" },

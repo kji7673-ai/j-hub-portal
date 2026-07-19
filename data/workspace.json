@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.07.17 21:50 (보고서 연동 완료)",
+  "lastUpdated": "2026.07.19 08:22 (보고서 연동 완료)",
   "section1": {
     "siteUpdates": [
       {
@@ -204,24 +204,17 @@
   },
   "section3": [
     {
-      "date": "다음 주",
-      "weekday": "예정",
-      "event": "주요 회의",
-      "note": "보고서 자동 추출 일정",
+      "date": "7/21",
+      "weekday": "화요일",
+      "event": "장위15구역 재개발",
+      "note": "재정비촉진계획 변경(안) 공람공고",
       "important": true
     },
     {
-      "date": "7/20",
-      "weekday": "월요일",
-      "event": "인천금송 재개발사업",
-      "note": "구의회청취 예정",
-      "important": false
-    },
-    {
-      "date": "7/21",
-      "weekday": "화요일",
-      "event": "하계 현대 우성 재건축",
-      "note": "1차 전문가 자문회의 개최",
+      "date": "7/22",
+      "weekday": "수요일",
+      "event": "상계주공5단지",
+      "note": "건축심의 접수 완료",
       "important": true
     },
     {
@@ -234,9 +227,16 @@
     {
       "date": "7/24",
       "weekday": "금요일",
-      "event": "범일3구역 재개발",
-      "note": "9차 사업시행변경인가 접수 예정",
-      "important": false
+      "event": "하계 현대 우성 재건축",
+      "note": "노원구청장 면담",
+      "important": true
+    },
+    {
+      "date": "7/25",
+      "weekday": "토요일",
+      "event": "당산1구역 재개발",
+      "note": "시공사 선정 총회",
+      "important": true
     }
   ],
   "section4": {

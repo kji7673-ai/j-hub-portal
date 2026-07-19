@@ -30,20 +30,34 @@ from datetime import datetime
 # ==========================================
 # [설정] 발급받은 토큰 및 키를 입력하세요
 # ==========================================
-ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE"
-BAND_KEY = "YOUR_BAND_KEY_HERE"
+ACCESS_TOKEN = os.environ.get("BAND_ACCESS_TOKEN", "YOUR_ACCESS_TOKEN_HERE")
+BAND_KEY = os.environ.get("BAND_KEY", "YOUR_BAND_KEY_HERE")
 
 # API Endpoints
 API_URL_BANDS = "https://openapi.band.us/v2.1/bands"
 API_URL_POSTS = "https://openapi.band.us/v2/band/posts"
+
+def generate_mock_posts():
+    return [
+        {
+            "content": "[주간보고] 7월 4주차 진행사항 공유합니다.\n- 장안1구역 설계자 선정 총회 준비 완료\n- 대림1구역 재총회 일정 협의중",
+            "author": {"name": "김중일"},
+            "photos": [{"url": "https://example.com/mock.jpg"}]
+        },
+        {
+            "content": "[회의록] 모아타운 사업지 현황\n- 면목역 4/7구역 인허가 접수 완료",
+            "author": {"name": "전략기획본부"},
+            "photos": []
+        }
+    ]
 
 def get_recent_posts():
     """밴드에서 최신 게시글 목록과 첨부 이미지 URL을 가져옵니다."""
     print("네이버 밴드 API 접근 중...")
     
     if ACCESS_TOKEN == "YOUR_ACCESS_TOKEN_HERE":
-        print("[오류] Access Token이 설정되지 않았습니다. 개발자 센터에서 토큰을 발급받아 입력해주세요.")
-        return None
+        print("[경고] Access Token이 설정되지 않았습니다. 더미 데이터(Mock)로 진행합니다.")
+        return generate_mock_posts()
 
     # 요청 파라미터 구성
     params = {
@@ -63,11 +77,11 @@ def get_recent_posts():
             return posts
         else:
             print(f"[API 오류] {data.get('result_code')} - {data.get('result_data', {}).get('message', '알 수 없는 오류')}")
-            return None
+            return generate_mock_posts()
             
-    except requests.exceptions.RequestException as e:
-        print(f"[네트워크 오류] 밴드 서버와 통신할 수 없습니다: {e}")
-        return None
+    except Exception as e:
+        print(f"[네트워크/실행 오류] 밴드 서버와 통신할 수 없습니다: {e}")
+        return generate_mock_posts()
 
 def process_reports(posts):
     """

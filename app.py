@@ -13,6 +13,10 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY", os.urandom(32).hex())
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
 
+# SEC-03 FIX: Supabase 환경변수 미설정 시 경고 출력
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("⚠️ [WARNING] SUPABASE_URL 또는 SUPABASE_KEY가 설정되지 않았습니다. 하드코딩 명단으로만 인증합니다.")
+
 ALLOWED_USERS_HASH = {
     "156f2206251171b17054c694e8750f862bbfa2aefbc2d3524261337a15f24770": "9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0",
     "a0f19d0a0a734a3d10498dbe76d5b851fc0a6ce399e1e956012f3361f1757256": "0a0abd5382ade9afd7067605d9508ef17526b6cb7c7ee48b04549756d81b8aab",
@@ -215,8 +219,8 @@ def change_password():
         else:
             if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == current_password_hash:
                 is_valid = True
-    except:
-        pass
+    except Exception as e:
+        print(f"Supabase password check error: {e}")
 
     if not is_valid:
         return jsonify({"success": False, "message": "현재 비밀번호가 일치하지 않습니다."}), 401

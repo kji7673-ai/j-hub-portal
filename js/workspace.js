@@ -1,9 +1,11 @@
 // 날짜 유틸: 현재 주차 레이블 생성 (M-01 동적화)
 function getCurrentWeekLabel() {
     const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const firstDay = startOfMonth.getDay(); 
+    const offset = (firstDay + 6) % 7; // Monday as first day of week
+    const weekNum = Math.ceil((now.getDate() + offset) / 7);
     const month = now.getMonth() + 1;
-    const day = now.getDate();
-    const weekNum = Math.ceil(day / 7);
     return `${month}월 ${weekNum}주차`;
 }
 

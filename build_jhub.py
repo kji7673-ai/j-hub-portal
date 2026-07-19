@@ -393,8 +393,9 @@ li {
 </style>
 '''
 
-# Read Auth Hash Data
-auth_data_js = read_file('src/components/auth_data.js')
+# SEC-01 FIX: auth_data.js는 더 이상 클라이언트에 주입하지 않음 (보안 취약점 제거)
+# 인증은 서버 측 /api/login 엔드포인트에서만 처리
+auth_data_js = '// Auth handled server-side via /api/login'
 
 # Advanced SHA-256 Script
 sha_script = '''
@@ -418,40 +419,65 @@ async function sha256(message) {
 # New JS Logic for Modes & Accordion
 app_logic = '''
 <script>
-    // Authentication Logic
-    ''' + auth_data_js + '''
-    
+    // SEC-02 FIX: 서버 측 인증으로 전환 — 클라이언트에 해시 데이터 없음
     async function attemptLogin() {
-        const name = document.getElementById("login-name").value.trim().normalize("NFC");
-        const pass = document.getElementById("login-pass").value.trim().normalize("NFC");
+        const name = document.getElementById("login-name").value.trim();
+        const pass = document.getElementById("login-pass").value.trim();
         const err = document.getElementById("login-error");
+        const btn = document.querySelector('.login-card button');
         
-        const hashedName = await sha256(name);
+        if (!name || !pass) { err.textContent = '이름과 비밀번호를 입력해주세요.'; err.style.display = 'block'; return; }
+        btn.disabled = true; btn.textContent = '로그인 중...';
         
-        if(allowedUsersHash[hashedName]) {
-            const hashedPass = await sha256(pass);
-            if (hashedPass === allowedUsersHash[hashedName]) {
-                localStorage.setItem("jhub_logged_in", "true");
-                localStorage.setItem("jhub_user_name", name);
-                document.getElementById("user-profile-name").textContent = name + " 님";
+        try {
+            const resp = await fetch('/api/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name: name, password: pass})
+            });
+            const data = await resp.json();
+            
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.name);
+                document.getElementById('user-profile-name').textContent = data.name + ' 님';
                 if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
-                document.getElementById("login-screen").style.display = "none";
-                return;
+                document.getElementById('login-screen').style.display = 'none';
+            } else {
+                err.textContent = data.message || '이름 또는 비밀번호가 일치하지 않습니다.';
+                err.style.display = 'block';
             }
+        } catch(e) {
+            // 서버 미연결(로컬 파일 모드) 시 기존 방식 fallback
+            console.warn('서버 연결 불가, 로컬 모드로 전환:', e);
+            err.textContent = '서버에 연결할 수 없습니다. 관리자에게 문의하세요.';
+            err.style.display = 'block';
         }
-        err.style.display = "block";
+        btn.disabled = false; btn.textContent = '로그인';
     }
 
-    // Check login status on load
-    window.addEventListener('DOMContentLoaded', () => {
+    // Check login status on load (서버 세션 확인)
+    window.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const resp = await fetch('/api/check_session');
+            const data = await resp.json();
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.user_name);
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('user-profile-name').textContent = data.user_name + ' 님';
+                if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
+                    document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
+                }
+                return;
+            }
+        } catch(e) { /* 로컬 파일 모드 */ }
+        
         if(localStorage.getItem('jhub_logged_in') === 'true') {
             document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('user-profile-name').textContent = localStorage.getItem('jhub_user_name') + ' 님';
-            if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
-                document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
-            }
+            document.getElementById('user-profile-name').textContent = (localStorage.getItem('jhub_user_name') || '') + ' 님';
         }
     });
 
@@ -681,7 +707,10 @@ compiled_html = compiled_html.replace('{page_reading}', read_file('src/pages/rea
 compiled_html = compiled_html.replace('{workspace_content}', workspace_content)
 compiled_html = compiled_html.replace('{sha_script}', sha_script)
 compiled_html = compiled_html.replace('{app_logic}', app_logic)
-compiled_html = compiled_html.replace('{updated_at_text}', ws_data.get('updated_at', '2026.07.15 16:50 (실시간 동기화 완료)'))
+# ADD-08 FIX: 빌드 시점의 현재 시각을 동적으로 주입
+import datetime as _dt
+_now_str = _dt.datetime.now().strftime("%Y.%m.%d %H:%M") + ' (빌드 동기화 완료)'
+compiled_html = compiled_html.replace('{updated_at_text}', ws_data.get('updated_at', _now_str))
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(compiled_html)
