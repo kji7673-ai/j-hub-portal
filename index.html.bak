@@ -1329,7 +1329,7 @@ li {
 
         <!-- MODE 4: MASTER (독립 파일에서 로드 — 빌드 수정에 영향받지 않음) -->
         <div id="view-master" class="page-view">
-            <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #800080; padding: 12px 16px; margin-bottom: 16px;">
+             <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #800080; padding: 12px 16px; margin-bottom: 16px;">
                 <h2 style="margin: 0; font-size: 16px; font-weight: 600;">📥 접수된 실무 아이디어 및 제안 (Master Only)</h2>
                 <p style="margin: 4px 0 0 0; font-size: 13px; color: #555;">직원들이 보낸 피드백이 실시간으로 여기에 누적됩니다.</p>
                 <button onclick="loadFeedbacks()" style="margin-top:12px; background:#800080; color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold;">새로고침 (Reload)</button>
@@ -1339,6 +1339,14 @@ li {
             </div>
 
 <script>
+// BUG-04 FIX: XSS 방지 이스케이프 함수
+function escapeHTML(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 async function loadFeedbacks() {
     try {
         const resp = await fetch('/api/feedbacks');
@@ -1351,17 +1359,20 @@ async function loadFeedbacks() {
         container.innerHTML = data.reverse().map(fb => `
             <div style="background:#fff; border:1px solid #e5e5ea; padding:16px; margin-bottom:12px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <strong style="font-size:14px;">${fb.author}</strong>
-                    <span style="font-size:12px; color:#999;">${fb.timestamp}</span>
+                    <strong style="font-size:14px;">${escapeHTML(fb.author)}</strong>
+                    <span style="font-size:12px; color:#999;">${escapeHTML(fb.timestamp)}</span>
                 </div>
-                ${fb.project_name ? '<div style="font-size:12px; color:#0066cc; margin-bottom:4px;">📌 ' + fb.project_name + '</div>' : ''}
-                <p style="margin:0; font-size:14px; line-height:1.6;">${fb.content}</p>
+                ${fb.project_name ? '<div style="font-size:12px; color:#0066cc; margin-bottom:4px;">📌 ' + escapeHTML(fb.project_name) + '</div>' : ''}
+                <p style="margin:0; font-size:14px; line-height:1.6;">${escapeHTML(fb.content)}</p>
             </div>
         `).join('');
     } catch(e) {
         document.getElementById('master-feedbacks-container').innerHTML = '<p style="color:red;">피드백 로드 실패</p>';
     }
 }
+
+// BUG-05 FIX: 탭 진입 시 자동 로드
+setTimeout(loadFeedbacks, 500);
 </script>
 
         </div>
@@ -1408,6 +1419,11 @@ async function sha256(message) {
                 if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
+                // BUG-02 FIX: Master 버튼 표시
+                if (data.isMaster) {
+                    const masterBtn = document.getElementById('btn-master');
+                    if (masterBtn) masterBtn.style.display = 'inline-block';
+                }
                 document.getElementById('login-screen').style.display = 'none';
             } else {
                 err.textContent = data.message || '이름 또는 비밀번호가 일치하지 않습니다.';
@@ -1435,6 +1451,11 @@ async function sha256(message) {
                 if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
+                // BUG-02 FIX: 세션 복원 시 Master 버튼 표시
+                if (data.is_master) {
+                    const masterBtn = document.getElementById('btn-master');
+                    if (masterBtn) masterBtn.style.display = 'inline-block';
+                }
                 return;
             }
         } catch(e) { /* 로컬 파일 모드 */ }
@@ -1461,8 +1482,11 @@ async function sha256(message) {
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        checkLogin();
+        // BUG-01 FIX: checkLogin() 제거 (미정의 함수였음)
         document.getElementById("login-pass").addEventListener("keypress", e => {
+            if(e.key === "Enter") attemptLogin();
+        });
+        document.getElementById("login-name").addEventListener("keypress", e => {
             if(e.key === "Enter") attemptLogin();
         });
     });

@@ -73,7 +73,9 @@ ws_data = ensure_schema(ws_data, REQUIRED_SCHEMA)
 # ═══════════════════════════════════════════════════════════
 
 today_dt = datetime.datetime.now()
-week_num = (today_dt.day - 1) // 7 + 1
+# 월요일 기준 주차 계산 (ISO 표준: 1일~7일=1주, 8일~14일=2주, ...)
+import math
+week_num = math.ceil(today_dt.day / 7)
 current_week_str = f"{today_dt.month}월 {week_num}주차"
 
 # --- 2-1. Dashboard ---
@@ -121,7 +123,7 @@ for api in ws_data['projects']['api_crawling']:
 projects_html += '</table></div></div></div>'
 
 # --- 2-3. Calendar ---
-calendar_html = f'<div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">{current_week_str} 주요 일정</div><button class="chip">캘린더 연동</button></div>'
+calendar_html = f'<div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title"><span class="dynamic-week-label">{current_week_str}</span> 주요 일정</div><button class="chip">캘린더 연동</button></div>'
 for day in ws_data['calendar']:
     calendar_html += f'<div class="day-block"><div class="day-header"><div class="day-date">{day["date"]}</div><div class="day-weekday">{day["weekday"]}</div></div>'
     for ev in day['events']:
@@ -156,7 +158,7 @@ workspace_content = f'''
         <div class="wa-icon">▼</div>
     </div>
     <div class="wa-content">
-        <p style="color:var(--text-secondary); margin-top:0;">{current_week_str} 주요 변동 사항 및 핵심 요약</p>
+        <p style="color:var(--text-secondary); margin-top:0;"><span class="dynamic-week-label">{current_week_str}</span> 주요 변동 사항 및 핵심 요약</p>
         {dashboard_html}
     </div>
 </div>
@@ -353,6 +355,19 @@ html_output = f'''<!DOCTYPE html>
     </script>
     <script>
 {app_js}
+    </script>
+
+    <!-- 동적 주차 라벨 자동 업데이트 (접속 시점 기준) -->
+    <script>
+    (function() {{
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const week = Math.ceil(now.getDate() / 7);
+        const label = month + '월 ' + week + '주차';
+        document.querySelectorAll('.dynamic-week-label').forEach(el => {{
+            el.textContent = label;
+        }});
+    }})();
     </script>
 
 </body>
