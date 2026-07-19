@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}J-Hub{% endblock %} — JINYANG HUB</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon-192.png">
+    <style>
+    /* ═══════════ DESIGN SYSTEM ═══════════ */
+    :root {
+        --bg-color: #f5f5f7;
+        --surface: #ffffff;
+        --text-primary: #1d1d1f;
+        --text-secondary: #86868b;
+        --accent: #000000;
+        --border: #e5e5ea;
+        --radius: 0px;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: -0.3px;
+        margin: 0; padding: 0;
+    }
+
+    /* ═══════════ HEADER / NAV ═══════════ */
+    header {
+        background: var(--surface);
+        border-bottom: 2px solid var(--accent);
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky; top: 0; z-index: 100;
+    }
+    .nav-links { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .nav-link {
+        padding: 10px 20px; font-size: 15px; font-weight: 600;
+        background: transparent; border: 1px solid var(--accent);
+        color: var(--text-primary); cursor: pointer; text-decoration: none;
+        transition: all 0.2s; display: inline-block;
+    }
+    .nav-link:hover { background: #f0f0f5; }
+    .nav-link.active { background: var(--accent); color: #fff; }
+    .nav-link.red { color: #e30000; font-weight: 700; }
+    .nav-link.red.active { background: #e30000; color: #fff; border-color: #e30000; }
+    .nav-link.purple { color: #800080; font-weight: 700; }
+    .nav-link.purple.active { background: #800080; color: #fff; border-color: #800080; }
+
+    /* ═══════════ SEARCH ═══════════ */
+    .search-container {
+        position: relative; margin-left: 12px;
+    }
+    .search-toggle {
+        background: transparent; border: 1px solid var(--border);
+        padding: 8px 12px; cursor: pointer; font-size: 16px;
+        border-radius: 0; transition: all 0.2s;
+    }
+    .search-toggle:hover { border-color: var(--accent); }
+    .search-dropdown {
+        display: none; position: absolute; top: 100%; right: 0;
+        width: 360px; background: var(--surface);
+        border: 2px solid var(--accent); z-index: 200;
+        margin-top: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .search-dropdown.open { display: block; }
+    .search-dropdown input {
+        width: 100%; padding: 14px 16px; border: none;
+        border-bottom: 1px solid var(--border); font-size: 15px;
+        box-sizing: border-box; outline: none;
+    }
+    .search-results { max-height: 400px; overflow-y: auto; }
+    .search-result-item {
+        padding: 12px 16px; border-bottom: 1px solid #f0f0f0;
+        cursor: pointer; transition: background 0.15s;
+    }
+    .search-result-item:hover { background: #fafafc; }
+    .search-result-type {
+        font-size: 10px; font-weight: 700; text-transform: uppercase;
+        color: var(--text-secondary); margin-bottom: 2px;
+    }
+    .search-result-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .search-result-snippet { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+    .search-no-result { padding: 24px 16px; text-align: center; color: var(--text-secondary); font-size: 14px; }
+
+    /* ═══════════ MAIN CONTENT ═══════════ */
+    #app-content { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -1px; margin-bottom: 16px; }
+
+    /* ═══════════ CARDS ═══════════ */
+    .grid-2 {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+        margin-bottom: 32px; align-items: start;
+    }
+    @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+        background: var(--surface); border: 1px solid var(--accent);
+        padding: 24px; box-shadow: none; border-radius: 0;
+        display: flex; flex-direction: column; height: 100%; margin-bottom: 0 !important;
+    }
+    .card-header {
+        display: flex; justify-content: space-between; align-items: center;
+        border-bottom: 2px solid var(--accent); padding-bottom: 12px; margin-bottom: 16px;
+    }
+    .card-title { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px; }
+    .tag-row { margin-bottom: 8px; }
+    .chip {
+        display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 8px;
+        text-transform: uppercase; border: 1px solid var(--accent); background: transparent; color: var(--accent);
+    }
+    .chip.red { border-color: var(--text-primary); color: var(--surface); background: var(--text-primary); }
+    .chip.blue, .chip.green { border-color: var(--text-secondary); color: var(--text-secondary); background: transparent; }
+
+    /* ═══════════ TABLES ═══════════ */
+    .card-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+    .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .card-table th { text-align: left; font-weight: 600; color: var(--text-secondary); padding: 12px; border-bottom: 1px solid #e0e0e0; }
+    .card-table td { padding: 12px; border-bottom: 1px solid #e0e0e0; color: var(--text-primary); }
+    .card-table tr:nth-child(even) td { background-color: #fafafc; }
+    .card-table tr:hover td { background-color: #f0f0f5; transition: background-color 0.2s; }
+    .highlight { font-weight: 700; background: rgba(0,0,0,0.05); padding: 2px 4px; }
+    .highlight-red { color: #e30000; font-weight: 600; }
+    .highlight-blue { color: #0066cc; font-weight: 600; }
+    ul { list-style-type: square; padding-left: 20px; margin: 0; }
+    li { margin-bottom: 8px; font-size: 14px; color: var(--text-primary); }
+
+    /* ═══════════ WORKSPACE ACCORDION ═══════════ */
+    .wa-container { margin-bottom: 24px; border: 1px solid var(--accent); background: var(--surface); }
+    .wa-header {
+        padding: 24px; background: #fafafc; border-bottom: 1px solid var(--accent);
+        display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none;
+    }
+    .wa-header:hover { background: #f0f0f5; }
+    .wa-title { font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: -1px; margin: 0; }
+    .wa-icon { font-size: 24px; font-weight: 300; transition: transform 0.3s; }
+    .wa-container.collapsed .wa-content { display: none; }
+    .wa-container.collapsed .wa-header { border-bottom: none; }
+    .wa-container.collapsed .wa-icon { transform: rotate(180deg); }
+    .wa-content { padding: 32px; }
+
+    /* ═══════════ CALENDAR ═══════════ */
+    .day-block { border-bottom: 1px solid var(--accent); padding: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+    .day-block:last-child { border-bottom: none; }
+    .day-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+    .day-date { font-size: 24px; font-weight: 700; letter-spacing: -1px; }
+    .day-weekday { font-size: 14px; color: var(--text-secondary); text-transform: uppercase; }
+    .event-card { background: #fafafc; border: 1px solid #e5e5ea; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; }
+    .event-card.important { border-left: 4px solid var(--accent); background: var(--surface); }
+    .event-name { font-weight: 700; font-size: 15px; }
+    .event-note { font-size: 13px; color: var(--text-secondary); }
+    .event-time { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+
+    /* ═══════════ LOGIN ═══════════ */
+    #login-screen { position: fixed; inset: 0; background: var(--bg-color); display: flex; justify-content: center; align-items: center; z-index: 9999; }
+    .login-card { background: var(--surface); border: 2px solid var(--accent); padding: 40px; width: 340px; text-align: left; }
+    .login-card input { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid var(--border); font-size: 16px; box-sizing: border-box; }
+    .login-card button { width: 100%; padding: 16px; background: var(--accent); color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer; }
+
+    /* ═══════════ HERO ═══════════ */
+    .hero { background: transparent; border-bottom: 4px solid var(--accent); padding: 0 0 16px 0; margin-bottom: 32px; }
+    .hero h1 { font-size: 32px; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: -1px; }
+    .hero p { font-size: 16px; color: var(--text-secondary); margin: 0; }
+
+    /* ═══════════ ANIMATIONS ═══════════ */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.8; } }
+
+    #app-content { animation: fadeIn 0.4s ease-out forwards; }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen">
+        <div class="login-card">
+            <h1>J-Hub</h1>
+            <p style="color:#666; margin-bottom: 24px; line-height: 1.5; font-size: 14px;">
+                이름을 넣어 주세요.<br>비번은 핸드폰 뒷자리 4자리입니다.
+            </p>
+            <input type="text" id="login-name" placeholder="이름 (예: 홍길동)">
+            <input type="password" id="login-pass" placeholder="보안 암호">
+            <p id="login-error" style="color: red; font-size: 13px; display: none; margin-top: -10px; margin-bottom: 10px;">암호가 일치하지 않습니다.</p>
+            <button onclick="attemptLogin()">접속하기 (Access)</button>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div style="display: flex; align-items: center;">
+            <div>
+                <h2 style="margin:0; font-size:24px; letter-spacing: -1.5px;">JINYANG <span style="font-weight:300;">HUB</span></h2>
+                <div style="display: flex; align-items: center; margin-top:4px;">
+                    <div id="user-profile-name" style="font-size:12px; color:var(--text-secondary);"></div>
+                    <div id="user-profile-badge"></div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link {% if active_tab == 'journal' %}active{% endif %}">Jinyang Journal</a>
+            <a href="/workspace" class="nav-link {% if active_tab == 'workspace' %}active{% endif %}">J-Workspace</a>
+            <a href="/weekly" class="nav-link red {% if active_tab == 'weekly' %}active{% endif %}">Weekly Report</a>
+            <a href="/master" id="btn-master" class="nav-link purple {% if active_tab == 'master' %}active{% endif %}" style="display:none;">제안함 (Master)</a>
+            <a href="/edu/index.html" target="_blank" style="display:inline-block; padding:8px 14px; font-size:13px; color:#0066cc; text-decoration:none; font-weight:600; border:1px solid #0066cc;">📚 교육자료</a>
+            <!-- SEARCH -->
+            <div class="search-container">
+                <button class="search-toggle" onclick="toggleSearch()" title="검색">🔍</button>
+                <div class="search-dropdown" id="search-dropdown">
+                    <input type="text" id="search-input" placeholder="프로젝트, 구역명, 키워드 검색..." oninput="doSearch(this.value)" autocomplete="off">
+                    <div class="search-results" id="search-results">
+                        <div class="search-no-result">검색어를 입력하세요.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button onclick="doLogout()" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div id="app-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- ═══════════ SCRIPTS ═══════════ -->
+    <script src="/src/js/crypto.min.js"></script>
+    <script>
+    // ── Login ──
+    async function attemptLogin() {
+        const name = document.getElementById("login-name").value.trim();
+        const pass = document.getElementById("login-pass").value.trim();
+        const err = document.getElementById("login-error");
+        const btn = document.querySelector('.login-card button');
+        if (!name || !pass) { err.textContent = '이름과 비밀번호를 입력해주세요.'; err.style.display = 'block'; return; }
+        btn.disabled = true; btn.textContent = '로그인 중...';
+        try {
+            const resp = await fetch('/api/login', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name, password: pass}) });
+            const data = await resp.json();
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.name);
+                document.getElementById('user-profile-name').textContent = data.name + ' 님';
+                if (data.isMaster) { document.getElementById('btn-master').style.display = 'inline-block'; }
+                document.getElementById('login-screen').style.display = 'none';
+            } else {
+                err.textContent = data.message || '이름 또는 비밀번호가 일치하지 않습니다.';
+                err.style.display = 'block';
+            }
+        } catch(e) {
+            err.textContent = '서버에 연결할 수 없습니다.';
+            err.style.display = 'block';
+        }
+        btn.disabled = false; btn.textContent = '로그인';
+    }
+
+    async function doLogout() {
+        try { await fetch('/api/logout', {method:'POST'}); } catch(e) {}
+        localStorage.removeItem('jhub_logged_in');
+        localStorage.removeItem('jhub_user_name');
+        document.getElementById('login-screen').style.display = 'flex';
+        document.getElementById('user-profile-badge').innerHTML = '';
+    }
+
+    // ── Session Check ──
+    window.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const resp = await fetch('/api/check_session');
+            const data = await resp.json();
+            if (data.success) {
+                localStorage.setItem('jhub_logged_in', 'true');
+                localStorage.setItem('jhub_user_name', data.user_name);
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('user-profile-name').textContent = data.user_name + ' 님';
+                if (data.is_master) { document.getElementById('btn-master').style.display = 'inline-block'; }
+                return;
+            }
+        } catch(e) {}
+        if(localStorage.getItem('jhub_logged_in') === 'true') {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('user-profile-name').textContent = (localStorage.getItem('jhub_user_name') || '') + ' 님';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("login-pass").addEventListener("keypress", e => { if(e.key === "Enter") attemptLogin(); });
+        document.getElementById("login-name").addEventListener("keypress", e => { if(e.key === "Enter") attemptLogin(); });
+    });
+
+    // ── Accordion ──
+    function toggleAccordion(element) {
+        element.closest('.wa-container').classList.toggle('collapsed');
+    }
+
+    // ── Search ──
+    let searchTimer = null;
+    function toggleSearch() {
+        const dd = document.getElementById('search-dropdown');
+        dd.classList.toggle('open');
+        if (dd.classList.contains('open')) {
+            document.getElementById('search-input').focus();
+        }
+    }
+    // 클릭 외부 시 닫기
+    document.addEventListener('click', e => {
+        const sc = document.querySelector('.search-container');
+        if (sc && !sc.contains(e.target)) {
+            document.getElementById('search-dropdown').classList.remove('open');
+        }
+    });
+    function doSearch(query) {
+        clearTimeout(searchTimer);
+        if (!query || query.length < 2) {
+            document.getElementById('search-results').innerHTML = '<div class="search-no-result">2글자 이상 입력하세요.</div>';
+            return;
+        }
+        searchTimer = setTimeout(async () => {
+            try {
+                const resp = await fetch('/api/search?q=' + encodeURIComponent(query));
+                const data = await resp.json();
+                const container = document.getElementById('search-results');
+                if (!data.results || data.results.length === 0) {
+                    container.innerHTML = '<div class="search-no-result">검색 결과가 없습니다.</div>';
+                    return;
+                }
+                container.innerHTML = data.results.map(r => `
+                    <a href="${r.url}" class="search-result-item" style="display:block; text-decoration:none; color:inherit;">
+                        <div class="search-result-type">${escapeHTML(r.type)}</div>
+                        <div class="search-result-title">${escapeHTML(r.title)}</div>
+                        <div class="search-result-snippet">${escapeHTML(r.snippet)}</div>
+                    </a>
+                `).join('');
+            } catch(e) {
+                document.getElementById('search-results').innerHTML = '<div class="search-no-result">검색 중 오류가 발생했습니다.</div>';
+            }
+        }, 300);
+    }
+    function escapeHTML(s) { if(!s) return ''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+    // ── Dynamic Week Label ──
+    (function() {
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const week = Math.ceil(now.getDate() / 7);
+        const label = month + '월 ' + week + '주차';
+        document.querySelectorAll('.dynamic-week-label').forEach(el => { el.textContent = label; });
+    })();
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

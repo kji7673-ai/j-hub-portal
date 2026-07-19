@@ -2,11 +2,13 @@ import os
 import hashlib
 import unicodedata
 import json
+import glob
+import math
 import datetime
 import requests
-from flask import Flask, jsonify, request, send_from_directory, session
+from flask import Flask, jsonify, request, send_from_directory, session, render_template, abort
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='.', static_url_path='', template_folder='templates')
 # BUG-03 FIX: 고정 시크릿 키 (서버 재시작 시 세션 유지)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "jh-2026-s3cr3t-k3y-f1x3d-d0-n0t-ch4ng3")
 
@@ -146,9 +148,236 @@ def get_hash(text):
     normalized_text = unicodedata.normalize('NFC', text.strip())
     return hashlib.sha256(normalized_text.encode('utf-8')).hexdigest()
 
+# ═══════════════════════════════════════════════════════════
+# WORKSPACE DATA RENDERER (JSON → HTML) — 빌드 스크립트 없이 서버에서 직접 렌더링
+# ═══════════════════════════════════════════════════════════
+def _load_workspace_data():
+    """workspace.json을 읽어 각 섹션의 HTML을 렌더링하여 반환"""
+    ws_path = os.path.join(os.path.dirname(__file__), 'src', 'data', 'workspace.json')
+    if not os.path.exists(ws_path):
+        return {}
+    with open(ws_path, 'r', encoding='utf-8') as f:
+        ws = json.load(f)
+
+    today = datetime.datetime.now()
+    week_num = math.ceil(today.day / 7)
+    week_str = f"{today.month}월 {week_num}주차"
+
+    # Dashboard HTML
+    dh = '<div class="grid-2"><div class="card"><div class="card-header"><div class="card-title">현장 핵심 변동</div><span class="chip red">업데이트 완료</span></div><ul style="padding-left:20px; font-size:15px; line-height:1.8;">'
+    for item in ws.get('dashboard', {}).get('field_updates', []):
+        dh += f'<li><span class="highlight">{item["name"]}</span> \u2014 {item["content"]}</li>'
+    dh += '</ul></div><div class="card"><div class="card-header"><div class="card-title">법규/정책 핵심 변동</div></div>'
+    for i, item in enumerate(ws.get('dashboard', {}).get('policy_updates', [])):
+        chip_class = 'red' if '핵심' in item.get('chip','') else ('blue' if '예고' in item.get('chip','') else 'green')
+        dh += f'<div class="report-item"><div class="tag-row"><span class="chip {chip_class}">{item["chip"]}</span></div><h3 style="font-size:17px; font-weight:600; margin:4px 0;">{item["title"]}</h3><p style="font-size:14px; color:var(--text-secondary); margin:0;">{item["desc"]}</p></div>'
+        if i < len(ws.get('dashboard', {}).get('policy_updates', [])) - 1:
+            dh += '<div style="height:1px; background:var(--border); margin:8px 0;"></div>'
+    dh += '</div></div>'
+
+    # Projects HTML
+    ph = '<div class="grid-2"><div><div class="card"><div class="card-header"><div class="card-title">본부별 주요 프로젝트</div></div>'
+    depts = [
+        ('\u25a0 디자인 본부', ws.get('projects', {}).get('design_dept', [])),
+        ('\u25a0 도시개발 & 재생 본부', ws.get('projects', {}).get('urban_dev_dept', [])),
+        ('\u25a0 도시계획 본부', ws.get('projects', {}).get('urban_plan_dept', []))
+    ]
+    for title, items in depts:
+        changed = [it for it in items if it.get('highlight', False)]
+        if not changed:
+            continue
+        ph += f'<h3 style="font-size:16px; margin:16px 0 8px; border-bottom:1px solid var(--border); padding-bottom:4px;">{title}</h3>'
+        ph += '<table class="card-table"><tr><th>프로젝트</th><th>현황</th></tr>'
+        for it in changed:
+            ph += f'<tr><td><span class="highlight">{it["name"]}</span></td><td>{it["status"]}</td></tr>'
+        ph += '</table>'
+    ph += '</div></div>'
+
+    # Bidding table
+    ph += '<div><div class="card"><div class="card-header"><div class="card-title">입찰/수주 전선 (전략기획)</div><span class="chip red">총력전</span></div>'
+    ph += '<table class="card-table"><tr><th>프로젝트</th><th>일정</th><th>당사 지위</th></tr>'
+    for it in ws.get('projects', {}).get('bidding', []):
+        hl = ' class="highlight"' if it.get('highlight') else ''
+        ph += f'<tr><td><span{hl}>{it["name"]}</span></td><td>{it.get("schedule","")}</td><td>{it.get("status","")}</td></tr>'
+    ph += '</table></div></div></div>'
+
+    # Adjacent + Crawling
+    adj_html = ''
+    for sect in ws.get('adjacent', []):
+        adj_html += f'<div style="margin-bottom:12px;"><div style="font-weight:700; margin-bottom:4px;">{sect["title"]}</div><ul>'
+        for item in sect.get('items', []):
+            adj_html += f'<li>{item}</li>'
+        adj_html += '</ul></div>'
+
+    crawl_html = '<table class="card-table"><tr><th>구역</th><th>상태</th><th>변동 내역</th></tr>'
+    for it in ws.get('crawling', []):
+        crawl_html += f'<tr><td><strong>{it["name"]}</strong></td><td>{it.get("status","")}</td><td>{it.get("change","")}</td></tr>'
+    crawl_html += '</table>'
+
+    ph += f'<div><div class="card"><div class="card-header"><div class="card-title">인접지 개발 동향</div><span class="chip">완벽 복원</span></div>{adj_html}</div>'
+    ph += f'<div class="card"><div class="card-header"><div class="card-title">정보몽땅 자동 크롤링 (API)</div><span class="chip blue">실시간 연동</span></div>{crawl_html}</div></div>'
+
+    # Calendar HTML
+    ch = f'<div class="card" style="max-width:800px; margin:0 auto;"><div class="card-header"><div class="card-title"><span class="dynamic-week-label">{week_str}</span> 주요 일정</div><button class="chip">캘린더 연동</button></div>'
+    for day in ws.get('calendar', []):
+        ch += f'<div class="day-block"><div class="day-header"><div class="day-date">{day["date"]}</div><div class="day-weekday">{day.get("weekday","")}</div></div>'
+        for ev in day.get('events', []):
+            imp = ' important' if ev.get('important') else ''
+            ch += f'<div class="event-card{imp}">'
+            if ev.get('time'):
+                ch += f'<div class="event-time">{ev["time"]}</div>'
+            ch += f'<div class="event-name">{ev["name"]}</div>'
+            if ev.get('note'):
+                ch += f'<div class="event-note">{ev["note"]}</div>'
+            ch += '</div>'
+        ch += '</div>'
+    ch += '</div>'
+
+    # Laws HTML
+    lh = ''
+    laws_path = os.path.join(os.path.dirname(__file__), 'src', 'pages', 'laws.html')
+    if os.path.exists(laws_path):
+        with open(laws_path, 'r', encoding='utf-8') as f:
+            lh = f.read()
+
+    # Weekly report file
+    report_files = glob.glob(os.path.join(os.path.dirname(__file__), 'reports', '*주간*보고*.html'))
+    if not report_files:
+        report_files = [f for f in glob.glob(os.path.join(os.path.dirname(__file__), 'reports', '*.html')) if 'regulatory' not in f]
+    weekly_report_file = os.path.basename(max(report_files, key=os.path.getmtime)) if report_files else None
+
+    has_reg = os.path.exists(os.path.join(os.path.dirname(__file__), 'reports', 'regulatory_report.html'))
+
+    return {
+        'week_str': week_str,
+        'updated_at': ws.get('updated_at', today.strftime('%Y.%m.%d %H:%M')),
+        'dashboard_html': dh,
+        'projects_html': ph,
+        'calendar_html': ch,
+        'laws_html': lh,
+        'weekly_report_file': weekly_report_file,
+        'has_regulatory_report': has_reg,
+        'raw': ws  # 검색용 원본
+    }
+
+
+# ═══════════════════════════════════════════════════════════
+# PAGE ROUTES (각 탭이 독립 페이지)
+# ═══════════════════════════════════════════════════════════
+
 @app.route('/')
-def serve_index():
-    return send_from_directory('.', 'index.html')
+def serve_journal():
+    return render_template('journal.html', active_tab='journal')
+
+@app.route('/workspace')
+def serve_workspace():
+    ws = _load_workspace_data()
+    return render_template('workspace.html', active_tab='workspace', **ws)
+
+@app.route('/weekly')
+def serve_weekly():
+    return render_template('weekly.html', active_tab='weekly')
+
+@app.route('/master')
+def serve_master():
+    return render_template('master.html', active_tab='master')
+
+# 기존 index.html 요청 호환성 유지
+@app.route('/index.html')
+def serve_index_compat():
+    return serve_journal()
+
+
+# ═══════════════════════════════════════════════════════════
+# SEARCH API
+# ═══════════════════════════════════════════════════════════
+
+@app.route('/api/search')
+def search_api():
+    q = request.args.get('q', '').strip()
+    if not q or len(q) < 2:
+        return jsonify({'results': []})
+
+    results = []
+    q_lower = q.lower()
+
+    # 1) workspace.json 검색
+    ws = _load_workspace_data()
+    raw = ws.get('raw', {})
+
+    # 프로젝트 검색
+    for dept_key in ['design_dept', 'urban_dev_dept', 'urban_plan_dept', 'bidding']:
+        for proj in raw.get('projects', {}).get(dept_key, []):
+            name = proj.get('name', '')
+            status = proj.get('status', '') or proj.get('schedule', '')
+            if q_lower in name.lower() or q_lower in status.lower():
+                results.append({
+                    'type': '프로젝트',
+                    'title': name,
+                    'snippet': status[:80],
+                    'url': '/workspace'
+                })
+
+    # 대시보드 검색
+    for item in raw.get('dashboard', {}).get('field_updates', []):
+        if q_lower in item.get('name','').lower() or q_lower in item.get('content','').lower():
+            results.append({
+                'type': '현장 동향',
+                'title': item['name'],
+                'snippet': item['content'][:80],
+                'url': '/workspace'
+            })
+
+    for item in raw.get('dashboard', {}).get('policy_updates', []):
+        if q_lower in item.get('title','').lower() or q_lower in item.get('desc','').lower():
+            results.append({
+                'type': '법규/정책',
+                'title': item['title'],
+                'snippet': item['desc'][:80],
+                'url': '/workspace'
+            })
+
+    # 일정 검색
+    for day in raw.get('calendar', []):
+        for ev in day.get('events', []):
+            if q_lower in ev.get('name','').lower() or q_lower in ev.get('note','').lower():
+                results.append({
+                    'type': '일정',
+                    'title': ev['name'],
+                    'snippet': f"{day['date']} {ev.get('note','')[:60]}",
+                    'url': '/workspace'
+                })
+
+    # 2) 기사 검색
+    articles_path = os.path.join(os.path.dirname(__file__), 'data', 'daily_articles.json')
+    if os.path.exists(articles_path):
+        try:
+            with open(articles_path, 'r', encoding='utf-8') as f:
+                articles = json.load(f)
+            for art in articles:
+                title = art.get('title', '')
+                excerpt = art.get('excerpt', '')
+                if q_lower in title.lower() or q_lower in excerpt.lower():
+                    results.append({
+                        'type': '기사',
+                        'title': title,
+                        'snippet': excerpt[:80],
+                        'url': '/'
+                    })
+        except Exception:
+            pass
+
+    # 중복 제거 및 제한
+    seen = set()
+    unique = []
+    for r in results:
+        key = r['title']
+        if key not in seen:
+            seen.add(key)
+            unique.append(r)
+    results = unique[:20]  # 최대 20개
+
+    return jsonify({'results': results})
 
 @app.route('/api/login', methods=['POST'])
 def login():

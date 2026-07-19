@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% block title %}Jinyang Journal{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Journal Mosaic (Apple-aesthetic grayscale) */
+    .grid-mosaic {
+        display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px;
+        padding: 0; background: transparent; border: none;
+    }
+    .mosaic-group-divider { grid-column: 1 / -1; height: 1px; background: #e0e0e0; margin: 4px 0; }
+    .mosaic-block {
+        cursor: pointer; transition: filter 0.3s, transform 0.3s;
+        aspect-ratio: 1/1; border-radius: 0; box-shadow: none;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.9);
+        filter: grayscale(100%);
+    }
+    .mosaic-block:hover { filter: grayscale(0%); transform: scale(1.02); z-index: 10; border: 1px solid #000; }
+    .mosaic-block.read { background-color: #f0f0f0 !important; color: #999 !important; transform: scale(0.95); filter: none; }
+    .mosaic-check { font-size: 14px; opacity: 0; color: #fff; }
+    .mosaic-block.read .mosaic-check { opacity: 1; color: #0066cc; }
+    .mosaic-block.active { filter: grayscale(0%); border: 2px solid #000; box-shadow: none; }
+
+    /* Badge Bar */
+    .badge-bar {
+        display: flex; gap: 6px; align-items: center; padding: 16px 20px;
+        background: var(--surface); border: 1px solid var(--accent); margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .badge-slot {
+        width: 36px; height: 36px; border-radius: 50%; background: #f0f0f0;
+        border: 1.5px solid #e0e0e0; display: flex; align-items: center;
+        justify-content: center; font-size: 16px; transition: all 0.3s;
+    }
+    .badge-slot.earned { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .badge-label { font-size: 13px; color: var(--text-secondary); margin-left: 8px; font-weight: 500; }
+    .badge-count { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-left: auto; }
+
+    /* Analects */
+    #analects-widget {
+        background: var(--surface); border: 1px solid var(--accent); padding: 24px;
+        margin-bottom: 24px; display: none; flex-direction: column; gap: 16px;
+    }
+    @keyframes coffeeFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes badgeEarn { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- 논어 위젯 -->
+<div id="analects-widget">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin:0; font-size:14px; text-transform:uppercase; font-weight:600; letter-spacing:-0.224px;">오늘의 논어 (論語)</h3>
+        <span style="color:var(--text-secondary); font-size:12px;" id="analects-date"></span>
+    </div>
+    <div style="text-align:center; padding:24px 0; border-bottom:1px solid #f0f0f0;">
+        <h1 id="analects-hanja" style="margin:0 0 12px; font-size:34px; font-weight:600; letter-spacing:2px;"></h1>
+        <p id="analects-ko" style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.374px;"></p>
+    </div>
+    <div>
+        <h4 style="margin:0 0 8px; font-size:12px; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.5px;">실무 적용</h4>
+        <p id="analects-meaning" style="margin:0; font-size:14px; color:#333; line-height:1.5;"></p>
+    </div>
+</div>
+
+<!-- 뱃지 바 -->
+<div class="badge-bar">
+    <span class="badge-label">📖 오늘의 독서 뱃지</span>
+    <div style="display:flex; gap:4px; margin-left:12px;" id="badge-slots"></div>
+    <span class="badge-count" id="badge-progress">0 / 100</span>
+</div>
+
+<!-- 히어로 -->
+<div class="hero" style="position:relative;">
+    <h1>오늘의 읽을거리 100선</h1>
+    <p>10개를 읽을 때마다 뱃지 1개가 부여됩니다. 오늘 하루 최대 10개의 뱃지를 획득해 보세요!</p>
+    <button onclick="resetMosaicProgress()" style="position:absolute; right:0; bottom:20px; background:transparent; border:1px solid var(--accent); padding:6px 14px; font-size:12px; cursor:pointer;">↻ 초기화</button>
+</div>
+
+<!-- 상세 패널 -->
+<div id="article-detail-pane" style="background:var(--surface); border:1px solid var(--accent); padding:32px; margin-bottom:24px; min-height:180px; text-align:center;">
+    <div id="detail-placeholder" style="color:var(--text-secondary); font-size:15px;">
+        <span style="font-size:28px; display:block; margin-bottom:10px;">👆</span>
+        아래 모자이크에서 블록을 하나 선택해 보세요.
+    </div>
+    <div id="detail-content" style="display:none; width:100%; text-align:left;">
+        <div id="detail-category" style="color:#0066cc; font-size:12px; font-weight:600; margin-bottom:8px; text-transform:uppercase;"></div>
+        <h2 id="detail-title" style="font-size:20px; margin-bottom:14px; line-height:1.35; font-weight:600;"></h2>
+        <p id="detail-excerpt" style="font-size:14px; color:#333; line-height:1.6; margin-bottom:18px; background:#fafafc; padding:16px; border:1px solid #f0f0f0;"></p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div id="detail-meta" style="font-size:12px; color:var(--text-secondary);"></div>
+            <button id="detail-link-btn" style="padding:8px 18px; border:none; background:var(--accent); color:#fff; font-size:14px; font-weight:600; cursor:pointer;">↗ 원문 보기</button>
+        </div>
+    </div>
+    <div id="easter-egg-content" style="display:none; text-align:center; padding:40px;">
+        <div style="font-size:64px; animation:coffeeFloat 3s ease-in-out infinite;">☕</div>
+        <h2 style="font-size:22px; margin-top:20px; font-weight:600;">잠시 쉬어가세요</h2>
+        <p style="font-size:14px; color:var(--text-secondary); margin-top:8px; line-height:1.6;">치열한 업무 속에서 작은 행운을 발견하셨습니다.</p>
+    </div>
+</div>
+
+<!-- 모자이크 그리드 -->
+<div class="grid-mosaic" id="mosaic-grid"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/articles.js"></script>
+<script>
+function escJ(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+// Analects
+fetch('/data/analects.json').then(r=>r.json()).then(data=>{
+    const t=new Date(),dy=Math.floor((t-new Date(t.getFullYear(),0,0))/864e5),it=data[dy%data.length];
+    document.getElementById('analects-date').textContent=`${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')}`;
+    document.getElementById('analects-hanja').textContent=it.hanja;
+    document.getElementById('analects-ko').textContent=it.korean;
+    let cm=it.characters.map(c=>`<span style="color:${escJ(c.color)}">${escJ(c.char)}(${escJ(c.reading)})</span>`).join(' ');
+    document.getElementById('analects-meaning').innerHTML=`<div style="font-weight:600;margin-bottom:12px;font-size:15px;">[한자 풀이] ${cm}</div><div>[실무 적용] ${escJ(it.application)}</div>`;
+    document.getElementById('analects-widget').style.display='flex';
+}).catch(()=>{});
+
+// Date seed for easter egg
+function todaySeed(){const d=new Date();return d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();}
+function seededRandom(s){let x=Math.sin(s)*10000;return x-Math.floor(x);}
+window.bombIndex=Math.floor(seededRandom(todaySeed())*100);
+
+function todayKey(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function getReadList(){try{if(localStorage.getItem('jhub_read_date')!==todayKey()){localStorage.removeItem('jhub_read_articles');localStorage.setItem('jhub_read_date',todayKey());return[];}const s=localStorage.getItem('jhub_read_articles');return s?JSON.parse(s):[];}catch(e){return[];}}
+function saveReadList(l){localStorage.setItem('jhub_read_articles',JSON.stringify(l));localStorage.setItem('jhub_read_date',todayKey());}
+
+function getCategoryColor(c){if(!c)return'#b0b0b0';if(c.includes('예술')||c.includes('문화')||c.includes('디자인'))return'#8e8e93';if(c.includes('건축')||c.includes('공학')||c.includes('시티'))return'#636366';if(c.includes('경제')||c.includes('부동산')||c.includes('상업'))return'#48484a';return'#aeaeb2';}
+
+function renderBadgeBar(n){
+    const s=document.getElementById('badge-slots'),p=document.getElementById('badge-progress');
+    if(!s)return;
+    const b=Math.floor(n/10);let h='';
+    for(let i=0;i<10;i++)h+=i<b?`<div class="badge-slot earned" title="${(i+1)*10}개 완독">★</div>`:`<div class="badge-slot" title="${(i+1)*10}개 읽으면 획득">${i+1}</div>`;
+    s.innerHTML=h;p.textContent=`${n} / 100`;
+}
+
+let currentArticleUrl='';
+function renderMosaic(){
+    const g=document.getElementById('mosaic-grid');if(!g||typeof articlesData==='undefined')return;
+    g.innerHTML='';const rl=getReadList();
+    articlesData.forEach((a,i)=>{
+        if(i>0&&i%10===0)g.innerHTML+='<div class="mosaic-group-divider"></div>';
+        const bg=getCategoryColor(a.category||''),ir=rl.includes(i),cc=ir?"mosaic-block read":"mosaic-block";
+        let ca=i===window.bombIndex?`triggerEasterEgg(${i})`:`openDetail(${i})`;
+        g.innerHTML+=`<div class="${cc}" id="mosaic-card-${i}" style="background-color:${bg};" onclick="${ca}" title="${escJ(a.category)}: ${escJ(a.title)}"><div class="mosaic-check">${ir?'✓':i+1}</div></div>`;
+    });
+    renderBadgeBar(rl.length);
+}
+
+function resetMosaicProgress(){if(confirm("오늘의 읽기 진행 상황을 초기화하시겠습니까?")){localStorage.removeItem('jhub_read_articles');document.getElementById('detail-content').style.display='none';document.getElementById('easter-egg-content').style.display='none';document.getElementById('detail-placeholder').style.display='block';renderMosaic();}}
+
+function markAsRead(i){
+    const c=document.getElementById('mosaic-card-'+i);if(c){c.classList.add('read');c.classList.add('active');}
+    let rl=getReadList();if(!rl.includes(i)){rl.push(i);saveReadList(rl);}
+    const ob=Math.floor((rl.length-1)/10),nb=Math.floor(rl.length/10);
+    if(nb>ob&&rl.length%10===0)setTimeout(()=>alert(`🏅 축하합니다! ${nb}번째 독서 뱃지를 획득하셨습니다! (${rl.length}/100)`),300);
+    renderBadgeBar(rl.length);renderMosaic();
+}
+
+function triggerEasterEgg(i){markAsRead(i);document.getElementById('detail-placeholder').style.display='none';document.getElementById('detail-content').style.display='none';document.getElementById('easter-egg-content').style.display='block';document.getElementById('article-detail-pane').scrollIntoView({behavior:'smooth',block:'center'});}
+
+function openDetail(i){
+    const a=articlesData[i];if(!a)return;
+    document.querySelectorAll('.mosaic-block').forEach(b=>b.classList.remove('active'));
+    markAsRead(i);
+    document.getElementById('detail-placeholder').style.display='none';
+    const ee=document.getElementById('easter-egg-content');if(ee)ee.style.display='none';
+    document.getElementById('detail-content').style.display='block';
+    document.getElementById('detail-category').textContent=a.category||'';
+    document.getElementById('detail-title').textContent=a.title||'';
+    document.getElementById('detail-excerpt').textContent=a.excerpt||'';
+    document.getElementById('detail-meta').textContent=a.meta||'';
+    currentArticleUrl='https://www.google.com/search?q='+encodeURIComponent(a.title);
+    document.getElementById('article-detail-pane').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+document.getElementById('detail-link-btn').addEventListener('click',()=>{if(currentArticleUrl)window.open(currentArticleUrl,'_blank');});
+document.addEventListener('DOMContentLoaded',()=>setTimeout(renderMosaic,100));
+</script>
+{% endblock %}

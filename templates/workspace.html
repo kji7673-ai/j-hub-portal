@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}J-Workspace{% endblock %}
+
+{% block content %}
+<!-- 업데이트 상태 바 -->
+<div style="background:var(--surface); border:1px solid var(--accent); padding:16px 24px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:10px; height:10px; border-radius:50%; background-color:#00cc66; box-shadow:0 0 8px rgba(0,204,102,0.6); animation:pulse 2s infinite;"></div>
+        <span style="font-size:16px; font-weight:700; letter-spacing:-0.5px;">최종 업데이트</span>
+    </div>
+    <div style="font-size:15px; color:var(--text-secondary); font-weight:500;">{{ updated_at }}</div>
+</div>
+
+<!-- 1. 진양 일일 및 종합 동향 -->
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">1. 진양 일일 및 종합 동향</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;"><span class="dynamic-week-label">{{ week_str }}</span> 주요 변동 사항 및 핵심 요약</p>
+        {{ dashboard_html | safe }}
+    </div>
+</div>
+
+<!-- 2. 진양 프로젝트 통합 뷰 -->
+<div class="wa-container collapsed">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">2. 진양 프로젝트 통합 뷰</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">본부별 현황, 입찰 전선, 인접지 및 정보몽땅</p>
+        {{ projects_html | safe }}
+    </div>
+</div>
+
+<!-- 3. 통합 핵심 일정표 -->
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">3. 통합 핵심 일정표</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
+        {{ calendar_html | safe }}
+    </div>
+</div>
+
+<!-- 4. 법규 아카이브 -->
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">4. 법규 아카이브</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">최근 30일 이내 신규 시행 법령 및 10대 건의안 추적</p>
+        {{ laws_html | safe }}
+    </div>
+</div>
+
+<!-- 5. 주간 회의록 원본 -->
+{% if weekly_report_file %}
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">5. 주간 회의록 원본</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">{{ weekly_report_file }}</p>
+        <div class="card" style="padding:0; overflow:hidden; height:1600px; border:2px dashed #ccc;">
+            <iframe src="/reports/{{ weekly_report_file }}" style="width:100%; height:100%; border:none;" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 6. 법규 동향 보고서 -->
+{% if has_regulatory_report %}
+<div class="wa-container">
+    <div class="wa-header" onclick="toggleAccordion(this)">
+        <h2 class="wa-title">6. 법규 동향 보고서 (풀 리포트)</h2>
+        <div class="wa-icon">▼</div>
+    </div>
+    <div class="wa-content">
+        <p style="color:var(--text-secondary); margin-top:0;">법규, 정책, 인허가 동향에 대한 상세 8+2 섹션 풀 리포트</p>
+        <div class="card" style="padding:0; overflow:hidden; height:1600px; border:2px dashed #ccc;">
+            <iframe src="/reports/regulatory_report.html" style="width:100%; height:100%; border:none;" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
