@@ -131,7 +131,7 @@
     .dashboard-grid {
         display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 40px;
     }
-    .dash-card {
+    .dash-card { position: relative;
         background: var(--canvas); border-radius: 18px; padding: 30px;
         border: 1px solid var(--hairline); text-decoration: none; color: var(--ink);
         box-shadow: 0 4px 24px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s;
@@ -281,6 +281,39 @@
     .pwa-toast-icon { font-size: 24px; }
     .pwa-toast-close { margin-left: auto; background: none; border: none; color: #aaa; font-size: 20px; cursor: pointer; }
     
+    
+    /* PROGRESS & QUIZ UI */
+    .progress-widget { background: var(--surface-pearl); border-radius: 12px; padding: 24px; margin-bottom: 40px; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .progress-info { flex: 1; min-width: 200px; }
+    .progress-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+    .progress-track { width: 100%; height: 8px; background: var(--hairline); border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+    .progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.5s ease; }
+    .progress-stats { font-size: 13px; color: var(--ink-muted); display: flex; justify-content: space-between; }
+    
+    .quiz-widget { background: var(--surface-pearl); border-radius: 12px; padding: 24px; min-width: 150px; text-align: center; border: 1px solid var(--hairline); }
+    .quiz-score { font-size: 32px; font-weight: 700; color: var(--primary); letter-spacing: -1px; }
+    .quiz-label { font-size: 13px; color: var(--ink-muted); margin-top: 4px; font-weight: 600; }
+    
+    .read-btn { display: block; width: 100%; max-width: 300px; margin: 60px auto 20px; padding: 16px; background: var(--canvas); color: var(--primary); border: 2px solid var(--primary); border-radius: 999px; text-align: center; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .read-btn:hover { background: rgba(0, 102, 204, 0.05); }
+    .read-btn.completed { background: var(--primary); color: white; cursor: default; pointer-events: none; border-color: transparent; }
+    
+    .quiz-container { background: var(--surface-pearl); border-radius: 16px; padding: 30px; margin-top: 60px; border: 1px solid var(--hairline); }
+    .quiz-header { font-size: 21px; font-weight: 700; margin-bottom: 24px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+    .quiz-item { margin-bottom: 30px; }
+    .quiz-q { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+    .quiz-opt { padding: 14px 20px; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 10px; cursor: pointer; font-size: 14px; transition: all 0.2s; display: flex; align-items: center; gap: 12px; }
+    .quiz-opt:hover { border-color: var(--primary); }
+    .quiz-opt.selected { border-color: var(--primary); background: rgba(0, 102, 204, 0.05); font-weight: 600; }
+    .quiz-opt.correct { border-color: #2e7d32; background: #e8f5e9; color: #1b5e20; }
+    .quiz-opt.wrong { border-color: #c62828; background: #fce4ec; color: #b71c1c; }
+    .quiz-submit { padding: 14px 24px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 15px; margin-top: 20px; transition: opacity 0.2s; }
+    .quiz-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+    .quiz-exp { margin-top: 16px; padding: 16px; background: #e3f2fd; border-radius: 8px; font-size: 14px; color: #0d47a1; display: none; line-height: 1.5; }
+    
+    .badge-done { position: absolute; top: 16px; right: 16px; background: #2e7d32; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.9; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
     /* RESPONSIVE */
 
     .md-content pre { position: relative; }
@@ -407,6 +440,8 @@
         <div class="toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         <div class="toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
         <div class="toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
         <div class="toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         <div class="toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
@@ -447,6 +482,8 @@
         <div class="mobile-toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         <div class="mobile-toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></div>
         <div class="mobile-toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="mobile-toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="mobile-toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
         <div class="mobile-toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         <div class="mobile-toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
@@ -472,6 +509,21 @@
                 <p style="color: var(--ink-muted); font-size: 16px; margin-bottom: 8px;">진양엔지니어링의 AI 활용 가이드 및 실무 통합 매뉴얼입니다.</p>
                 <p style="color: var(--ink-muted); font-size: 14px;">나의 역할에 맞는 <strong style="color:var(--primary);">학습 트랙</strong>을 선택하여 시작하세요. 총 <strong>{total_pages}편</strong>의 교육 문서가 준비되어 있습니다.</p>
 {recent_html}
+                
+                <div class="progress-widget" id="progressWidget">
+                    <div class="progress-info">
+                        <div class="progress-title">나의 학습 진도율</div>
+                        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+                        <div class="progress-stats">
+                            <span id="progressText">계산 중...</span>
+                            <span>총 {total_pages}개 과정</span>
+                        </div>
+                    </div>
+                    <div class="quiz-widget">
+                        <div class="quiz-score" id="quizScoreText">-</div>
+                        <div class="quiz-label">평균 퀴즈 점수</div>
+                    </div>
+                </div>
                 <div id="favoritesSection" style="display:none; margin-top:40px; margin-bottom:40px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
                         <span style="font-size:18px;">⭐</span>
@@ -491,7 +543,7 @@
                         </div>
                         <div class="dashboard-grid">
 
-                            <a href="page_0.html" class="dash-card">
+                            <a href="page_0.html" class="dash-card" id="card_0">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -500,7 +552,7 @@
                                 <p style="margin-top:10px;">전체 매뉴얼의 구조와 학습 경로를 안내하는 로드맵</p>
                             </a>
 
-                            <a href="page_1.html" class="dash-card">
+                            <a href="page_1.html" class="dash-card" id="card_1">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -509,7 +561,7 @@
                                 <p style="margin-top:10px;">진양 저널의 사내 소통 체계와 게이미피케이션 운영 전략</p>
                             </a>
 
-                            <a href="page_2.html" class="dash-card">
+                            <a href="page_2.html" class="dash-card" id="card_2">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -531,7 +583,7 @@
                         </div>
                         <div class="dashboard-grid">
 
-                            <a href="page_3.html" class="dash-card">
+                            <a href="page_3.html" class="dash-card" id="card_3">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -540,7 +592,7 @@
                                 <p style="margin-top:10px;">AI 시대에 건축사의 역할과 진양엔지니어링의 비전 제시</p>
                             </a>
 
-                            <a href="page_4.html" class="dash-card">
+                            <a href="page_4.html" class="dash-card" id="card_4">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -549,7 +601,7 @@
                                 <p style="margin-top:10px;">기획·설계·검증을 관통하는 7대 AI 통합 비전 소개</p>
                             </a>
 
-                            <a href="page_5.html" class="dash-card">
+                            <a href="page_5.html" class="dash-card" id="card_5">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -558,7 +610,7 @@
                                 <p style="margin-top:10px;">수작업 엑셀에서 AI 자동화 플랫폼까지의 진화 과정 연대기</p>
                             </a>
 
-                            <a href="page_6.html" class="dash-card">
+                            <a href="page_6.html" class="dash-card" id="card_6">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -567,7 +619,7 @@
                                 <p style="margin-top:10px;">AI를 인간 사고의 확장(아키-시냅스)으로 볼 것인가, 시스템(플랫폼)으로 볼 것인가에 대한 레드팀 토론 실...</p>
                             </a>
 
-                            <a href="page_7.html" class="dash-card">
+                            <a href="page_7.html" class="dash-card" id="card_7">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -576,7 +628,7 @@
                                 <p style="margin-top:10px;">개인 플랫폼과 전사 표준 플랫폼의 균형점 모색</p>
                             </a>
 
-                            <a href="page_8.html" class="dash-card">
+                            <a href="page_8.html" class="dash-card" id="card_8">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -585,7 +637,7 @@
                                 <p style="margin-top:10px;">매뉴얼 학습 후 실무 적용 시 만나게 될 4가지 난관과 극복 전략</p>
                             </a>
 
-                            <a href="page_9.html" class="dash-card">
+                            <a href="page_9.html" class="dash-card" id="card_9">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -607,7 +659,7 @@
                         </div>
                         <div class="dashboard-grid">
 
-                            <a href="page_10.html" class="dash-card">
+                            <a href="page_10.html" class="dash-card" id="card_10">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -616,7 +668,7 @@
                                 <p style="margin-top:10px;">AI와 효과적으로 협업하기 위한 16가지 사고방식 정리</p>
                             </a>
 
-                            <a href="page_11.html" class="dash-card">
+                            <a href="page_11.html" class="dash-card" id="card_11">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -625,7 +677,7 @@
                                 <p style="margin-top:10px;">AI 대화를 처음 시작하는 직원을 위한 5분 실습 가이드</p>
                             </a>
 
-                            <a href="page_12.html" class="dash-card">
+                            <a href="page_12.html" class="dash-card" id="card_12">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -634,7 +686,7 @@
                                 <p style="margin-top:10px;">AI 환각(Hallucination) 현상의 원인 분석과 4단계 교차 검증 프로세스</p>
                             </a>
 
-                            <a href="page_13.html" class="dash-card">
+                            <a href="page_13.html" class="dash-card" id="card_13">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -643,7 +695,7 @@
                                 <p style="margin-top:10px;">실무에서 발생한 AI 실패 사례와 이를 방어하는 프롬프트 전략</p>
                             </a>
 
-                            <a href="page_14.html" class="dash-card">
+                            <a href="page_14.html" class="dash-card" id="card_14">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -652,7 +704,7 @@
                                 <p style="margin-top:10px;">현장에서 바로 복사해서 쓸 수 있는 검증된 프롬프트 템플릿 모음</p>
                             </a>
 
-                            <a href="page_15.html" class="dash-card">
+                            <a href="page_15.html" class="dash-card" id="card_15">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -661,7 +713,7 @@
                                 <p style="margin-top:10px;">K-제너러티브 배치 알고리즘 V2의 데크 우선주의와 리듬 그리드 원리</p>
                             </a>
 
-                            <a href="page_16.html" class="dash-card">
+                            <a href="page_16.html" class="dash-card" id="card_16">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -670,7 +722,7 @@
                                 <p style="margin-top:10px;">통합 사업성 검토 플랫폼의 핵심 기능과 활용 방법</p>
                             </a>
 
-                            <a href="page_17.html" class="dash-card">
+                            <a href="page_17.html" class="dash-card" id="card_17">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -679,7 +731,7 @@
                                 <p style="margin-top:10px;">가상 대상지를 활용한 사업성 검토 전 과정 따라하기 튜토리얼</p>
                             </a>
 
-                            <a href="page_18.html" class="dash-card">
+                            <a href="page_18.html" class="dash-card" id="card_18">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -695,13 +747,13 @@
                         <div class="track-header">
                             <span class="track-icon">🛡️</span>
                             <div>
-                                <div class="track-title">🛡️ 보안 및 데이터 거버넌스 <span class="track-badge track-badge-c">4편</span></div>
+                                <div class="track-title">🛡️ 보안 및 데이터 거버넌스 <span class="track-badge track-badge-c">6편</span></div>
                                 <div class="track-desc">전사 보안 규정, 데이터 해시화, 클라우드 인프라, API 연동 보안</div>
                             </div>
                         </div>
                         <div class="dashboard-grid">
 
-                            <a href="page_19.html" class="dash-card">
+                            <a href="page_19.html" class="dash-card" id="card_19">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -710,7 +762,7 @@
                                 <p style="margin-top:10px;">AES-256 암호화 및 데이터 해시화(블라인드) 보안 규정</p>
                             </a>
 
-                            <a href="page_20.html" class="dash-card">
+                            <a href="page_20.html" class="dash-card" id="card_20">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-1">Lv.1 입문</span>
                                     <span class="badge-new">N</span>
@@ -719,7 +771,7 @@
                                 <p style="margin-top:10px;">온프레미스 서버와 클라우드의 차이, 진양저널의 클라우드 선택 이유</p>
                             </a>
 
-                            <a href="page_21.html" class="dash-card">
+                            <a href="page_21.html" class="dash-card" id="card_21">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -728,13 +780,31 @@
                                 <p style="margin-top:10px;">AI의 환각(오류)을 원천 차단하기 위해, 네이버 밴드에 정제된 데이터(텍스트/일정표)를 먼저 기록하고 이를...</p>
                             </a>
 
-                            <a href="page_22.html" class="dash-card">
+                            <a href="page_22.html" class="dash-card" id="card_22">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
                                 </div>
                                 <h3 style="font-size:17px; line-height:1.3;">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</h3>
                                 <p style="margin-top:10px;">최신 RAG(검색 증강 생성) 기술 도입 및 클라우드 백엔드 인프라, 그리고 철저한 가명화 보안 파이프라인에...</p>
+                            </a>
+
+                            <a href="page_28.html" class="dash-card" id="card_28">
+                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+                                    <span class="level-tag level-2">Lv.2 중급</span>
+                                    <span class="badge-new">N</span>
+                                </div>
+                                <h3 style="font-size:17px; line-height:1.3;">레드팀 데일리 인사이트 (2026-07-19)</h3>
+                                <p style="margin-top:10px;">2026-07-19 레드팀 의견 1건 + 보완사항 3건 — 자동 생성 교육자료</p>
+                            </a>
+
+                            <a href="page_29.html" class="dash-card" id="card_29">
+                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+                                    <span class="level-tag level-2">Lv.2 중급</span>
+                                    <span class="badge-new">N</span>
+                                </div>
+                                <h3 style="font-size:17px; line-height:1.3;">레드팀 데일리 인사이트 (2026-07-18)</h3>
+                                <p style="margin-top:10px;">2026-07-18 레드팀 의견 8건 + 보완사항 7건 (소급 수집)</p>
                             </a>
 
                         </div>
@@ -750,7 +820,7 @@
                         </div>
                         <div class="dashboard-grid">
 
-                            <a href="page_23.html" class="dash-card">
+                            <a href="page_23.html" class="dash-card" id="card_23">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     
@@ -759,7 +829,7 @@
                                 <p style="margin-top:10px;">레드팀 v9 감사 피드백을 반영한 모바일 UX/UI 고도화 SOP</p>
                             </a>
 
-                            <a href="page_24.html" class="dash-card">
+                            <a href="page_24.html" class="dash-card" id="card_24">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-2">Lv.2 중급</span>
                                     <span class="badge-new">N</span>
@@ -768,7 +838,7 @@
                                 <p style="margin-top:10px;">J-Hub(진양저널) 사내 포털의 기획부터 구축, 배포, 운영까지를 하나로 통합한 완전판 실전 매뉴얼</p>
                             </a>
 
-                            <a href="page_25.html" class="dash-card">
+                            <a href="page_25.html" class="dash-card" id="card_25">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -777,7 +847,7 @@
                                 <p style="margin-top:10px;">VWorld 공간정보 연동을 통해 통합검토보고서의 데이터 추출 오차율을 0%로 줄인 기술적 혁신 과정을 소개...</p>
                             </a>
 
-                            <a href="page_26.html" class="dash-card">
+                            <a href="page_26.html" class="dash-card" id="card_26">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -786,7 +856,7 @@
                                 <p style="margin-top:10px;">FastAPI+React 기반의 건축 문서 검토 플랫폼(DocReviewPlatform)의 시스템 아키텍처,...</p>
                             </a>
 
-                            <a href="page_27.html" class="dash-card">
+                            <a href="page_27.html" class="dash-card" id="card_27">
                                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
                                     <span class="level-tag level-3">Lv.3 심화</span>
                                     <span class="badge-new">N</span>
@@ -860,6 +930,58 @@
         }}
         
         document.addEventListener('DOMContentLoaded', initFavorite);
+
+        // Progress & Quiz Analytics Logic (서버 DB 기반)
+        const totalDocs = {{total_pages}};
+        async function initAnalytics() {
+            try {
+                const res = await fetch('/api/edu/analytics');
+                if (!res.ok) throw new Error('API error');
+                const data = await res.json();
+                if (!data.success) throw new Error('Not logged in');
+                
+                const completedCount = data.completed_count || 0;
+                const percentage = totalDocs > 0 ? Math.round((completedCount / totalDocs) * 100) : 0;
+                
+                if(document.getElementById('progressFill')) {
+                    document.getElementById('progressFill').style.width = percentage + '%';
+                    document.getElementById('progressText').innerText = `${completedCount}개 완독 (${percentage}%)`;
+                }
+                
+                const progress = data.progress || {};
+                Object.keys(progress).forEach(id => {
+                    const card = document.getElementById('card_' + id);
+                    if(card && !card.querySelector('.badge-done')) {
+                        const badge = document.createElement('div');
+                        badge.className = 'badge-done';
+                        badge.innerHTML = '✓';
+                        badge.title = '완독 완료';
+                        card.appendChild(badge);
+                    }
+                });
+
+                const quizAvg = data.quiz_average || 0;
+                const quizScores = data.quiz_scores || {};
+                if(document.getElementById('quizScoreText')) {
+                    if(Object.keys(quizScores).length > 0) {
+                        document.getElementById('quizScoreText').innerText = quizAvg + '점';
+                    } else {
+                        document.getElementById('quizScoreText').innerText = '-';
+                    }
+                }
+            } catch(e) {
+                console.warn('[J-Hub] 서버 연결 실패, localStorage fallback:', e.message);
+                let progress = JSON.parse(localStorage.getItem('jhub_progress') || '{}');
+                let completedCount = Object.keys(progress).filter(k => progress[k] === true).length;
+                let percentage = totalDocs > 0 ? Math.round((completedCount / totalDocs) * 100) : 0;
+                if(document.getElementById('progressFill')) {
+                    document.getElementById('progressFill').style.width = percentage + '%';
+                    document.getElementById('progressText').innerText = `${completedCount}개 완독 (${percentage}%)`;
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initAnalytics);
+
 
 
         // Keyboard navigation

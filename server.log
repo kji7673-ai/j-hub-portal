@@ -1,3 +1,4 @@
+⚠️ [보안] FLASK_SECRET_KEY 환경변수가 설정되지 않았습니다. 운영 서버에서는 반드시 설정하세요.
 ⚠️ [WARNING] SUPABASE_URL 또는 SUPABASE_KEY가 설정되지 않았습니다. 하드코딩 명단으로만 인증합니다.
  * Serving Flask app 'app'
  * Debug mode: off
@@ -6,3 +7,27 @@
  * Running on http://127.0.0.1:15000
  * Running on http://192.168.219.104:15000
 [33mPress CTRL+C to quit[0m
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jul/2026 17:50:20] "POST /api/logout HTTP/1.1" 200 -

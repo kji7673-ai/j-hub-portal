@@ -132,7 +132,7 @@
     .dashboard-grid {
         display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 40px;
     }
-    .dash-card {
+    .dash-card { position: relative;
         background: var(--canvas); border-radius: 18px; padding: 30px;
         border: 1px solid var(--hairline); text-decoration: none; color: var(--ink);
         box-shadow: 0 4px 24px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s;
@@ -282,6 +282,39 @@
     .pwa-toast-icon { font-size: 24px; }
     .pwa-toast-close { margin-left: auto; background: none; border: none; color: #aaa; font-size: 20px; cursor: pointer; }
     
+    
+    /* PROGRESS & QUIZ UI */
+    .progress-widget { background: var(--surface-pearl); border-radius: 12px; padding: 24px; margin-bottom: 40px; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .progress-info { flex: 1; min-width: 200px; }
+    .progress-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+    .progress-track { width: 100%; height: 8px; background: var(--hairline); border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+    .progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.5s ease; }
+    .progress-stats { font-size: 13px; color: var(--ink-muted); display: flex; justify-content: space-between; }
+    
+    .quiz-widget { background: var(--surface-pearl); border-radius: 12px; padding: 24px; min-width: 150px; text-align: center; border: 1px solid var(--hairline); }
+    .quiz-score { font-size: 32px; font-weight: 700; color: var(--primary); letter-spacing: -1px; }
+    .quiz-label { font-size: 13px; color: var(--ink-muted); margin-top: 4px; font-weight: 600; }
+    
+    .read-btn { display: block; width: 100%; max-width: 300px; margin: 60px auto 20px; padding: 16px; background: var(--canvas); color: var(--primary); border: 2px solid var(--primary); border-radius: 999px; text-align: center; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .read-btn:hover { background: rgba(0, 102, 204, 0.05); }
+    .read-btn.completed { background: var(--primary); color: white; cursor: default; pointer-events: none; border-color: transparent; }
+    
+    .quiz-container { background: var(--surface-pearl); border-radius: 16px; padding: 30px; margin-top: 60px; border: 1px solid var(--hairline); }
+    .quiz-header { font-size: 21px; font-weight: 700; margin-bottom: 24px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+    .quiz-item { margin-bottom: 30px; }
+    .quiz-q { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+    .quiz-opt { padding: 14px 20px; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 10px; cursor: pointer; font-size: 14px; transition: all 0.2s; display: flex; align-items: center; gap: 12px; }
+    .quiz-opt:hover { border-color: var(--primary); }
+    .quiz-opt.selected { border-color: var(--primary); background: rgba(0, 102, 204, 0.05); font-weight: 600; }
+    .quiz-opt.correct { border-color: #2e7d32; background: #e8f5e9; color: #1b5e20; }
+    .quiz-opt.wrong { border-color: #c62828; background: #fce4ec; color: #b71c1c; }
+    .quiz-submit { padding: 14px 24px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 15px; margin-top: 20px; transition: opacity 0.2s; }
+    .quiz-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+    .quiz-exp { margin-top: 16px; padding: 16px; background: #e3f2fd; border-radius: 8px; font-size: 14px; color: #0d47a1; display: none; line-height: 1.5; }
+    
+    .badge-done { position: absolute; top: 16px; right: 16px; background: #2e7d32; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.9; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
     /* RESPONSIVE */
 
     .md-content pre { position: relative; }
@@ -412,6 +445,8 @@
         <div class="toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
         <div class="toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
         <div class="toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)<span class="badge-new">N</span></a></div>
+        <div class="toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)<span class="badge-new">N</span></a></div>
         <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
         <div class="toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         <div class="toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
@@ -452,6 +487,8 @@
         <div class="mobile-toc-item"><a href="page_20.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유<span class="badge-new">N</span></a></div>
         <div class="mobile-toc-item"><a href="page_21.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드<span class="badge-new">N</span></a></div>
         <div class="mobile-toc-item"><a href="page_22.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_28.html">레드팀 데일리 인사이트 (2026-07-19)<span class="badge-new">N</span></a></div>
+        <div class="mobile-toc-item"><a href="page_29.html">레드팀 데일리 인사이트 (2026-07-18)<span class="badge-new">N</span></a></div>
         <div style="font-size: 14px; font-weight: 600; color: var(--ink-muted); margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
         <div class="mobile-toc-item"><a href="page_23.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         <div class="mobile-toc-item"><a href="page_24.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼<span class="badge-new">N</span></a></div>
@@ -539,6 +576,59 @@
 </div>
                 </div>
                 
+                
+            <button id="markReadBtn" class="read-btn" onclick="markAsRead(12)">✓ 이 문서 완독하기</button>
+            <script>
+                async function initReadState() {
+                    try {
+                        const res = await fetch('/api/edu/progress');
+                        const data = await res.json();
+                        if (data.success && data.progress && data.progress['12']) {
+                            const btn = document.getElementById('markReadBtn');
+                            if (btn) {
+                                btn.classList.add('completed');
+                                btn.innerText = '✅ 완독 완료';
+                            }
+                        }
+                    } catch(e) {
+                        const progress = JSON.parse(localStorage.getItem('jhub_progress') || '{}');
+                        if(progress[12]) {
+                            const btn = document.getElementById('markReadBtn');
+                            if (btn) { btn.classList.add('completed'); btn.innerText = '✅ 완독 완료'; }
+                        }
+                    }
+                }
+                function markAsRead(docId) {
+                    // 서버 DB에 완독 기록 저장
+                    fetch('/api/edu/progress', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({doc_id: docId})
+                    }).then(res => res.json()).then(data => {
+                        if(data.success) {
+                            const btn = document.getElementById('markReadBtn');
+                            if (btn) {
+                                btn.classList.add('completed');
+                                btn.innerText = '✅ 완독 완료';
+                            }
+                            const t = document.createElement('div');
+                            t.innerText = '🎉 완독을 축하합니다!';
+                            t.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#2e7d32;color:white;padding:12px 24px;border-radius:999px;font-weight:600;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+                            document.body.appendChild(t);
+                            setTimeout(()=>t.remove(), 2500);
+                        }
+                    }).catch(e => {
+                        // Fallback: 서버 실패 시 localStorage에 임시 저장
+                        let p = JSON.parse(localStorage.getItem('jhub_progress') || '{}');
+                        p[docId] = true;
+                        localStorage.setItem('jhub_progress', JSON.stringify(p));
+                        const btn = document.getElementById('markReadBtn');
+                        if (btn) { btn.classList.add('completed'); btn.innerText = '✅ 완독 완료'; }
+                    });
+                }
+                document.addEventListener('DOMContentLoaded', initReadState);
+            </script>
+        
                 <div class="pagination">
                     <a href="page_11.html" class="btn-page">◀ 이전: 문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a>
                     <a href="page_13.html" class="btn-page">다음: 문서 12. 아찔한 실패 사례와 방어 프롬프트 ▶</a>
@@ -546,20 +636,7 @@
                 </div>
                 
                                 <div style="margin-top: 50px;"><h3 style="font-size:18px; margin-bottom:20px; color:var(--ink);">관련 문서</h3><div style="display:flex; flex-direction:column; gap:12px;"><a href="page_10.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3. AI를 다루는 16가지 핵심 사고방식</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_11.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a><a href="page_13.html" style="padding:16px; background:var(--canvas); border:1px solid var(--hairline); border-radius:12px; text-decoration:none; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,0.02); display:block; transition:transform 0.2s;"><div style="font-weight:600; font-size:15px; margin-bottom:4px;">문서 12. 아찔한 실패 사례와 방어 프롬프트</div><div style="font-size:13px; color:var(--ink-muted);">이 문서와 같은 카테고리의 문서입니다.</div></a></div></div>
-                <div style="margin-top:50px; padding:24px; background:var(--surface-pearl); border-radius:12px; font-size:14px; line-height:1.6; word-break:keep-all;">
-                    <div style="font-weight:600; font-size:16px; margin-bottom:12px; color:var(--primary);">📲 스마트폰 홈 화면에 앱으로 추가하기</div>
-                    <div style="color:var(--ink-muted-80); margin-bottom:16px;">매번 브라우저로 검색해서 들어올 필요 없이, 스마트폰 바탕화면에 앱처럼 설치해두고 터치 한 번에 접속하세요. 로그인 없이 즉시 매뉴얼을 열어볼 수 있습니다.</div>
-                    <div style="display:flex; flex-direction:column; gap:16px;">
-                        <div>
-                            <strong style="color:var(--ink);">🍎 아이폰 (Safari)</strong><br>
-                            화면 하단 메뉴바 정중앙의 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:text-bottom; display:inline-block;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>[공유]</strong> 아이콘을 누른 뒤, 메뉴를 살짝 위로 올려 <strong>[홈 화면에 추가]</strong>를 선택하세요.
-                        </div>
-                        <div>
-                            <strong style="color:var(--ink);">🤖 안드로이드 (Chrome / 삼성 인터넷)</strong><br>
-                            화면 우측 상단 또는 하단의 <strong>[⋮] 메뉴</strong> 아이콘을 누르고, <strong>[홈 화면에 추가]</strong> 혹은 <strong>[현재 페이지 추가]</strong>를 선택하세요.
-                        </div>
-                    </div>
-                </div>
+
 
                 <!-- 익명 피드백 버튼 (개별 문서) -->
                 <div style="margin-top:50px; text-align:center;">
@@ -570,7 +647,7 @@
                 </div>
 
                 <div style="margin-top:60px;text-align:center;color:var(--ink-muted);font-size:13px;">
-                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.28
+                    발행: (주)진양엔지니어링건축사사무소 대표이사 김중일 건축사<br>문서 버전: v1.30
                 </div>
             </div>
         </div>
@@ -595,15 +672,7 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
     
-    <!-- PWA Install Toast -->
-    <div class="pwa-toast" id="pwaToast">
-        <div class="pwa-toast-icon">📲</div>
-        <div>
-            <div style="margin-bottom: 2px;">J-Hub 앱 설치하기</div>
-            <div style="font-size: 12px; font-weight: 400; color: #ccc;" id="pwaToastMsg">공유 아이콘을 누르고 '홈 화면에 추가'를 선택하세요.</div>
-        </div>
-        <button class="pwa-toast-close" onclick="closePwaToast()">×</button>
-    </div>
+
     
     <script>
         // Menu Logic
@@ -621,11 +690,7 @@
             document.body.style.overflow = '';
         }
         
-        // PWA Toast
-        function closePwaToast() {
-            document.getElementById('pwaToast').classList.remove('show');
-            localStorage.setItem('pwaToastDismissed', 'true');
-        }
+
         
         // Wayfinding: Top Button & Progress Bar
         const topBtn = document.getElementById('topBtn');
@@ -675,6 +740,58 @@
         }
         
         document.addEventListener('DOMContentLoaded', initFavorite);
+
+        // Progress & Quiz Analytics Logic (서버 DB 기반)
+        const totalDocs = 30;
+        async function initAnalytics() {
+            try {
+                const res = await fetch('/api/edu/analytics');
+                if (!res.ok) throw new Error('API error');
+                const data = await res.json();
+                if (!data.success) throw new Error('Not logged in');
+                
+                const completedCount = data.completed_count || 0;
+                const percentage = totalDocs > 0 ? Math.round((completedCount / totalDocs) * 100) : 0;
+                
+                if(document.getElementById('progressFill')) {
+                    document.getElementById('progressFill').style.width = percentage + '%';
+                    document.getElementById('progressText').innerText = `${completedCount}개 완독 (${percentage}%)`;
+                }
+                
+                const progress = data.progress || {};
+                Object.keys(progress).forEach(id => {
+                    const card = document.getElementById('card_' + id);
+                    if(card && !card.querySelector('.badge-done')) {
+                        const badge = document.createElement('div');
+                        badge.className = 'badge-done';
+                        badge.innerHTML = '✓';
+                        badge.title = '완독 완료';
+                        card.appendChild(badge);
+                    }
+                });
+
+                const quizAvg = data.quiz_average || 0;
+                const quizScores = data.quiz_scores || {};
+                if(document.getElementById('quizScoreText')) {
+                    if(Object.keys(quizScores).length > 0) {
+                        document.getElementById('quizScoreText').innerText = quizAvg + '점';
+                    } else {
+                        document.getElementById('quizScoreText').innerText = '-';
+                    }
+                }
+            } catch(e) {
+                console.warn('[J-Hub] 서버 연결 실패, localStorage fallback:', e.message);
+                let progress = JSON.parse(localStorage.getItem('jhub_progress') || '{}');
+                let completedCount = Object.keys(progress).filter(k => progress[k] === true).length;
+                let percentage = totalDocs > 0 ? Math.round((completedCount / totalDocs) * 100) : 0;
+                if(document.getElementById('progressFill')) {
+                    document.getElementById('progressFill').style.width = percentage + '%';
+                    document.getElementById('progressText').innerText = `${completedCount}개 완독 (${percentage}%)`;
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initAnalytics);
+
 
 
         // Keyboard navigation
@@ -806,20 +923,6 @@
         });
         
         document.addEventListener('DOMContentLoaded', () => {
-            // PWA Detection
-            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-            const isDismissed = localStorage.getItem('pwaToastDismissed');
-            
-            if (!isStandalone && !isDismissed && window.innerWidth <= 900) {
-                const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-                const msg = isIos ? "[공유] 아이콘을 누르고<br>'홈 화면에 추가'를 선택하세요." : "메뉴(⋮)를 누르고<br>'홈 화면에 추가'를 선택하세요.";
-                document.getElementById('pwaToastMsg').innerHTML = msg;
-                
-                setTimeout(() => {
-                    document.getElementById('pwaToast').classList.add('show');
-                }, 2000);
-            }
-            
             // Search Escape Key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {

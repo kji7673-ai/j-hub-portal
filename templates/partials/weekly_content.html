@@ -1,79 +1,130 @@
 <!-- Weekly Report Content (Admin View) -->
             <div id="weekly-admin-view" style="display: block;">
-                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 6px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
-                    <h2 style="margin: 0; font-size: 13px; font-weight: 600;">
-                        [승인 대기] 통합 주간 보고서 초안
-                    </h2>
-                    <span style="font-size: 11px; font-weight: 400; color: #555; background: #e5e5ea; padding: 2px 6px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
-                </div>
-
-                <!-- Generated Draft Preview -->
-                <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
-                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
-                    </div>
-                </div>
 
                 <!-- ============================================ -->
-                <!-- 📷 본부별 주간 계획서 이미지 업로드 -->
+                <!-- 📷 HERO: 본부별 주간일정 · 회의록 업로드 (최상단 Hero) -->
                 <!-- ============================================ -->
-                <div class="card" style="background: #fff; border: 1px solid var(--accent); margin-top: 16px; margin-bottom: 16px;">
-                    <div class="card-header">
-                        <div class="card-title">📷 본부별 주간 계획서 / 회의록 이미지 업로드</div>
-                        <span class="chip blue" id="upload-week-label"></span>
+                <div id="upload-section" style="
+                    background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+                    border: 2px solid #d2d2d7;
+                    border-radius: 12px;
+                    padding: 0;
+                    margin-bottom: 16px;
+                    overflow: hidden;
+                ">
+                    <!-- Hero 헤더 (다크) -->
+                    <div style="
+                        background: #1d1d1f;
+                        color: #fff;
+                        padding: 20px 28px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                    ">
+                        <div>
+                            <div style="font-size: 20px; font-weight: 600; letter-spacing: -0.28px;">
+                                📷 본부별 주간일정 · 회의록 업로드
+                            </div>
+                            <div style="font-size: 13px; color: #cccccc; margin-top: 4px;">
+                                이미지/PDF를 드래그하거나 클릭하여 업로드 → OCR 텍스트 추출 → 대표이사 승인 → 리포트 자동 반영
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="chip blue" id="upload-week-label" style="background: #0066cc; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px;"></span>
+                            <span style="font-size: 12px; color: #999;">허용: JPG, PNG, PDF | 10MB/건</span>
+                        </div>
                     </div>
-                    <div style="padding: 16px;">
-                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
-                            각 본부 주간 계획서, 회의록 등을 이미지로 업로드하세요. <strong>다중 선택</strong> 가능합니다.<br>
-                            <span style="color: #7a7a7a; font-size: 12px;">허용 형식: JPG, PNG, GIF, WEBP, PDF | 최대 10MB/건 | 로그인된 이름으로 업로더가 자동 기록됩니다.</span>
-                        </p>
 
-                        <!-- 드래그 앤 드롭 영역 -->
+                    <!-- Drop-zone 본체 -->
+                    <div style="padding: 24px 28px;">
                         <div id="upload-drop-zone" style="
-                            border: 2px dashed #d2d2d7; 
-                            border-radius: 8px; 
-                            padding: 40px 20px; 
+                            border: 3px dashed #0066cc; 
+                            border-radius: 12px; 
+                            padding: 48px 20px; 
                             text-align: center; 
                             cursor: pointer;
-                            transition: all 0.2s;
-                            background: #fafafc;
-                            margin-bottom: 16px;
-                        " onclick="document.getElementById('upload-input').click()">
-                            <div style="font-size: 40px; margin-bottom: 8px;">📁</div>
-                            <div style="font-size: 15px; font-weight: 600; color: #1d1d1f;">클릭하여 파일 선택 또는 여기에 드래그</div>
-                            <div style="font-size: 12px; color: #7a7a7a; margin-top: 4px;">Ctrl / Cmd 키로 다중 선택 가능</div>
+                            transition: all 0.25s ease;
+                            background: rgba(255,255,255,0.85);
+                        " onclick="document.getElementById('upload-input').click()"
+                           onmouseenter="this.style.background='rgba(0,102,204,0.04)'; this.style.borderColor='#0071e3'; this.style.transform='scale(1.005)'"
+                           onmouseleave="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='#0066cc'; this.style.transform='scale(1)'"
+                        >
+                            <div style="font-size: 56px; margin-bottom: 12px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));">📁</div>
+                            <div style="font-size: 18px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.2px;">
+                                클릭하여 파일 선택 또는 여기에 드래그 앤 드롭
+                            </div>
+                            <div style="font-size: 13px; color: #7a7a7a; margin-top: 6px;">
+                                Ctrl / Cmd 키로 다중 선택 가능 · 다중 파일 동시 업로드 지원
+                            </div>
                         </div>
                         <input type="file" id="upload-input" multiple accept="image/*,.pdf" style="display: none;">
 
                         <!-- 선택된 파일 미리보기 -->
-                        <div id="upload-preview" style="display: none; margin-bottom: 16px;">
-                            <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">선택된 파일:</div>
+                        <div id="upload-preview" style="display: none; margin-top: 16px;">
+                            <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #333;">선택된 파일:</div>
                             <div id="upload-preview-list" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
                         </div>
 
                         <!-- 업로드 버튼 + 상태 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div id="upload-status" style="font-size: 13px; color: #555;"></div>
                             <button id="upload-btn" onclick="doUpload()" style="
                                 background: #0066cc; color: white; border: none; 
-                                padding: 10px 24px; border-radius: 6px; 
-                                font-weight: bold; cursor: pointer; 
+                                padding: 12px 32px; border-radius: 9999px; 
+                                font-size: 15px; font-weight: 600; cursor: pointer; 
                                 display: none;
-                            ">📤 업로드 하기</button>
+                                transition: background 0.2s;
+                                letter-spacing: -0.2px;
+                            " onmouseenter="this.style.background='#0071e3'" onmouseleave="this.style.background='#0066cc'"
+                            >📤 업로드 하기</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 📸 업로드된 이미지 갤러리 -->
-                <div class="card" style="background: #fff; border: 1px solid var(--accent); margin-bottom: 16px;">
+                <!-- ============================================ -->
+                <!-- 🔗 빠른 이동 스트립 -->
+                <!-- ============================================ -->
+                <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; align-items: center;">
+                    <span style="font-size: 11px; color: #999; font-weight: 600; margin-right: 4px;">빠른 이동 ▸</span>
+                    <button onclick="document.getElementById('gallery-section').scrollIntoView({behavior:'smooth'})" style="padding: 6px 14px; border: 1px solid #0066cc; background: #fff; color: #0066cc; font-size: 12px; font-weight: 600; cursor: pointer; border-radius: 9999px;">📸 업로드 열람 / OCR</button>
+                    <button onclick="document.getElementById('submission-section').scrollIntoView({behavior:'smooth'})" style="padding: 6px 14px; border: 1px solid #d2d2d7; background: #fff; color: #333; font-size: 12px; font-weight: 600; cursor: pointer; border-radius: 9999px;">📋 제출 현황</button>
+                    <button onclick="document.getElementById('report-preview-section').scrollIntoView({behavior:'smooth'})" style="padding: 6px 14px; border: 1px solid #d2d2d7; background: #fff; color: #333; font-size: 12px; font-weight: 600; cursor: pointer; border-radius: 9999px;">📄 보고서 미리보기</button>
+                    <button onclick="document.getElementById('weekly-publish-actions').scrollIntoView({behavior:'smooth'})" style="padding: 6px 14px; border: 1px solid #d2d2d7; background: #fff; color: #333; font-size: 12px; font-weight: 600; cursor: pointer; border-radius: 9999px;">🚀 최종 승인</button>
+                </div>
+
+                <!-- 📸 업로드된 파일 열람 · OCR · 승인 관리 -->
+                <div id="gallery-section" class="card" style="background: #fff; border: 1px solid #e0e0e0; margin-bottom: 16px;">
                     <div class="card-header" style="cursor: pointer;" onclick="loadUploadedImages()">
-                        <div class="card-title">📸 업로드된 이미지 열람</div>
-                        <button class="chip" onclick="event.stopPropagation(); loadUploadedImages()">새로고침</button>
+                        <div class="card-title">📸 업로드된 파일 열람 · OCR · 승인 관리</div>
+                        <button class="chip" onclick="event.stopPropagation(); loadUploadedImages()" style="cursor:pointer;">새로고침</button>
                     </div>
                     <div id="gallery-container" style="padding: 16px;">
                         <p style="color: #999; text-align: center; padding: 20px;">로딩 중...</p>
                     </div>
                 </div>
+
+                <!-- 📋 제출 현황 대시보드 -->
+                <div id="submission-section" class="card" style="background: #fff; border: 1px solid var(--accent); margin-bottom: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">📋 본부별 제출 현황</div>
+                        <button class="chip" onclick="loadSubmissionStatus()" style="cursor:pointer;">새로고침</button>
+                    </div>
+                    <div id="submission-dashboard" style="padding: 16px;">
+                        <p style="color:#999; text-align:center;">로딩 중...</p>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- 📄 주간 보고서 미리보기 (아래로 이동) -->
+                <!-- ============================================ -->
+                <div id="report-preview-section" class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
+                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
+                    </div>
+                </div>
+
 
                 <script>
                 // --- 업로드 기능 ---
@@ -152,6 +203,7 @@
                 }
 
                 // --- 갤러리 로드 ---
+                // --- 갤러리 로드 ---
                 async function loadUploadedImages() {
                     const container = document.getElementById('gallery-container');
                     try {
@@ -161,25 +213,61 @@
                             container.innerHTML = '<p style="color:#999; text-align:center; padding:20px;">아직 업로드된 파일이 없습니다.</p>';
                             return;
                         }
-                        let html = '<table style="width:100%; border-collapse:collapse; font-size:14px;">';
-                        html += '<tr style="border-bottom:2px solid #000;"><th style="text-align:left; padding:8px;">파일명</th><th style="text-align:left; padding:8px;">업로더</th><th style="text-align:left; padding:8px;">업로드 일시</th><th style="text-align:left; padding:8px;">주차</th><th style="padding:8px;">미리보기</th></tr>';
+                        
+                        const isMaster = localStorage.getItem('jhub_is_master') === 'true';
+                        
+                        let html = '<table style="width:100%; border-collapse:collapse; font-size:13px;">';
+                        html += '<tr style="border-bottom:2px solid #000; background:#fafafc;">';
+                        html += '<th style="text-align:left; padding:10px;">파일명</th>';
+                        html += '<th style="text-align:left; padding:10px;">본부(업로더)</th>';
+                        html += '<th style="text-align:center; padding:10px;">상태</th>';
+                        html += '<th style="text-align:center; padding:10px;">OCR / 승인 (대표이사)</th>';
+                        html += '<th style="text-align:center; padding:10px;">미리보기</th>';
+                        html += '</tr>';
+                        
                         data.forEach(item => {
                             const isImage = /\.(jpg|jpeg|png|gif|webp|bmp)$/i.test(item.filename);
                             const previewBtn = isImage 
-                                ? '<button onclick="previewImage(\\'' + '/api/uploads/' + item.week + '/' + item.filename + '\\')" style="background:#0066cc;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px;">보기</button>'
+                                ? `<button onclick="previewImage('/api/uploads/${item.week}/${item.filename}')" style="background:#f5f5f7; color:#333; border:1px solid #ccc; padding:4px 10px; border-radius:4px; cursor:pointer; font-size:12px;">원문 보기</button>`
                                 : '<span style="color:#999; font-size:12px;">PDF</span>';
+                                
+                            // 상태 뱃지
+                            let statusBadge = '<span style="background:#e5e5ea; color:#333; padding:2px 6px; border-radius:12px; font-size:11px;">📥 대기중</span>';
+                            if (item.status === 'approved') statusBadge = '<span style="background:#d4edda; color:#155724; padding:2px 6px; border-radius:12px; font-size:11px;">✅ 승인완료</span>';
+                            if (item.status === 'rejected') statusBadge = `<span style="background:#f8d7da; color:#721c24; padding:2px 6px; border-radius:12px; font-size:11px; cursor:help;" title="${item.reject_reason || '사유 없음'}">❌ 반려됨</span>`;
+                            
+                            // 관리자 액션
+                            let actionBtns = '';
+                            if (isMaster) {
+                                if (item.status === 'pending' || item.status === 'rejected') {
+                                    if (item.ocr_text) {
+                                        actionBtns += `<button onclick="openOcrModal('${item.id}', \`/api/uploads/${item.week}/${item.filename}\`)" style="background:#0066cc; color:#fff; border:none; padding:4px 8px; border-radius:4px; margin-right:4px; font-size:11px; cursor:pointer;">🔍 OCR 검토</button>`;
+                                    } else {
+                                        actionBtns += `<button onclick="runOcr('${item.id}')" style="background:#28a745; color:#fff; border:none; padding:4px 8px; border-radius:4px; margin-right:4px; font-size:11px; cursor:pointer;">⚡ OCR 추출</button>`;
+                                    }
+                                } else if (item.status === 'approved') {
+                                    actionBtns += `<button onclick="openOcrModal('${item.id}', \`/api/uploads/${item.week}/${item.filename}\`)" style="background:#6c757d; color:#fff; border:none; padding:4px 8px; border-radius:4px; font-size:11px; cursor:pointer;">텍스트 보기</button>`;
+                                }
+                            } else {
+                                if (item.ocr_text) {
+                                    actionBtns = `<span style="color:#28a745; font-size:11px;">⚡ 텍스트 추출됨</span>`;
+                                } else {
+                                    actionBtns = `<span style="color:#999; font-size:11px;">추출 전</span>`;
+                                }
+                            }
+                            
                             html += '<tr style="border-bottom:1px solid #e0e0e0;">';
-                            html += '<td style="padding:8px; font-size:13px;">' + (item.original_name || item.filename) + '</td>';
-                            html += '<td style="padding:8px;"><strong>' + item.uploader + '</strong></td>';
-                            html += '<td style="padding:8px; color:#7a7a7a;">' + item.timestamp + '</td>';
-                            html += '<td style="padding:8px;"><span class="chip">' + item.week + '</span></td>';
-                            html += '<td style="padding:8px; text-align:center;">' + previewBtn + '</td>';
+                            html += `<td style="padding:10px; font-weight:500;">${item.original_name || item.filename}</td>`;
+                            html += `<td style="padding:10px; color:#555;">${item.uploader} <br><span style="font-size:10px;color:#999">${item.timestamp}</span></td>`;
+                            html += `<td style="padding:10px; text-align:center;">${statusBadge}</td>`;
+                            html += `<td style="padding:10px; text-align:center;">${actionBtns}</td>`;
+                            html += `<td style="padding:10px; text-align:center;">${previewBtn}</td>`;
                             html += '</tr>';
                         });
                         html += '</table>';
                         container.innerHTML = html;
                     } catch(e) {
-                        container.innerHTML = '<p style="color:red;">데이터 로드 실패</p>';
+                        container.innerHTML = '<p style="color:red; text-align:center;">데이터 로드 실패</p>';
                     }
                 }
 
@@ -190,6 +278,144 @@
                     overlay.innerHTML = '<img src="' + src + '" style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.5);">' 
                         + '<div style="position:fixed;top:20px;right:20px;color:#fff;font-size:32px;cursor:pointer;" onclick="this.parentElement.remove()">✕</div>';
                     document.body.appendChild(overlay);
+                }
+                
+                async function runOcr(fileId) {
+                    if(!confirm("OCR 엔진(macOS Vision)을 가동하여 텍스트를 추출합니다. 계속하시겠습니까?")) return;
+                    
+                    try {
+                        const resp = await fetch('/api/upload/ocr', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({id: fileId})
+                        });
+                        const data = await resp.json();
+                        if(data.success) {
+                            alert("OCR 추출 완료");
+                            loadUploadedImages();
+                        } else {
+                            alert(data.message || "OCR 실패");
+                        }
+                    } catch(e) {
+                        alert("서버 오류");
+                    }
+                }
+                
+                // OCR 모달 데이터 캐싱용
+                window._currentOcrFileId = null;
+
+                async function openOcrModal(fileId, imgSrc) {
+                    // 데이터 페치
+                    const resp = await fetch('/api/uploads');
+                    const data = await resp.json();
+                    const item = data.find(e => e.id === fileId);
+                    if(!item) return;
+                    
+                    window._currentOcrFileId = fileId;
+                    
+                    const isMaster = localStorage.getItem('jhub_is_master') === 'true';
+                    
+                    const overlay = document.createElement('div');
+                    overlay.id = 'ocr-modal-overlay';
+                    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;display:flex;justify-content:center;align-items:center;';
+                    
+                    let html = `
+                    <div style="background:#fff; width:90%; max-width:1200px; height:85vh; border-radius:12px; display:flex; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.2); overflow:hidden;">
+                        <!-- 헤더 -->
+                        <div style="padding:16px 24px; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center; background:#fafafc;">
+                            <h2 style="margin:0; font-size:18px;">🔍 OCR 검토 및 승인: ${item.original_name || item.filename}</h2>
+                            <button onclick="document.getElementById('ocr-modal-overlay').remove()" style="background:none; border:none; font-size:24px; cursor:pointer;">✕</button>
+                        </div>
+                        
+                        <!-- 본문 2단 분할 -->
+                        <div style="display:flex; flex:1; overflow:hidden;">
+                            <!-- 좌측: 원본 이미지 -->
+                            <div style="flex:1; border-right:1px solid #e0e0e0; background:#f5f5f7; display:flex; justify-content:center; align-items:center; padding:16px; overflow:auto;">
+                                <img src="${imgSrc}" style="max-width:100%; max-height:100%; object-fit:contain; border:1px solid #ccc; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                            </div>
+                            
+                            <!-- 우측: 추출 텍스트 -->
+                            <div style="flex:1; display:flex; flex-direction:column; padding:16px;">
+                                <div style="margin-bottom:8px; font-weight:600; font-size:14px; display:flex; justify-content:space-between;">
+                                    <span>📝 추출된 텍스트 (수정 가능)</span>
+                                    ${isMaster && item.status !== 'approved' ? `<button onclick="saveOcrText()" style="background:#0066cc; color:#fff; border:none; padding:4px 12px; border-radius:4px; font-size:12px; cursor:pointer;">임시 저장</button>` : ''}
+                                </div>
+                                <textarea id="ocr-text-area" style="flex:1; width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; font-family:inherit; font-size:14px; line-height:1.6; resize:none;" ${isMaster && item.status !== 'approved' ? '' : 'readonly'}>${item.ocr_text || ''}</textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- 푸터 (승인/반려) -->
+                        <div style="padding:16px 24px; border-top:1px solid #e0e0e0; display:flex; justify-content:flex-end; gap:12px; background:#fafafc;">
+                            ${isMaster && item.status !== 'approved' ? `
+                                <input type="text" id="reject-reason" placeholder="반려 사유 입력..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; width:200px;">
+                                <button onclick="changeStatus('${item.id}', 'rejected')" style="background:#fff; color:#dc3545; border:1px solid #dc3545; padding:8px 24px; border-radius:6px; font-weight:bold; cursor:pointer;">❌ 반려</button>
+                                <button onclick="changeStatus('${item.id}', 'approved')" style="background:#28a745; color:#fff; border:none; padding:8px 24px; border-radius:6px; font-weight:bold; cursor:pointer;">✅ 텍스트 확정 및 승인</button>
+                            ` : `
+                                <button onclick="document.getElementById('ocr-modal-overlay').remove()" style="background:#e5e5ea; color:#333; border:none; padding:8px 24px; border-radius:6px; font-weight:bold; cursor:pointer;">닫기</button>
+                            `}
+                        </div>
+                    </div>
+                    `;
+                    
+                    overlay.innerHTML = html;
+                    document.body.appendChild(overlay);
+                }
+                
+                async function saveOcrText() {
+                    if(!window._currentOcrFileId) return;
+                    const text = document.getElementById('ocr-text-area').value;
+                    
+                    try {
+                        const resp = await fetch('/api/upload/update_text', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({id: window._currentOcrFileId, text: text})
+                        });
+                        const data = await resp.json();
+                        if(data.success) {
+                            alert("텍스트가 임시 저장되었습니다.");
+                            loadUploadedImages();
+                        }
+                    } catch(e) {
+                        alert("저장 실패");
+                    }
+                }
+                
+                async function changeStatus(fileId, newStatus) {
+                    // 승인 시 텍스트도 같이 저장
+                    if (newStatus === 'approved') {
+                        const text = document.getElementById('ocr-text-area').value;
+                        await fetch('/api/upload/update_text', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({id: fileId, text: text})
+                        });
+                    }
+                    
+                    const reasonInput = document.getElementById('reject-reason');
+                    const reason = reasonInput ? reasonInput.value : '';
+                    
+                    if (newStatus === 'rejected' && !reason.trim()) {
+                        alert("반려 사유를 입력해주세요.");
+                        return;
+                    }
+                    
+                    try {
+                        const resp = await fetch('/api/upload/status', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({id: fileId, status: newStatus, reject_reason: reason})
+                        });
+                        const data = await resp.json();
+                        if(data.success) {
+                            document.getElementById('ocr-modal-overlay').remove();
+                            loadUploadedImages();
+                        } else {
+                            alert(data.message || "처리 실패");
+                        }
+                    } catch(e) {
+                        alert("서버 오류");
+                    }
                 }
 
                 // 페이지 진입 시 자동 로드

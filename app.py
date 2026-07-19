@@ -5,12 +5,82 @@ import json
 import glob
 import math
 import datetime
+import time
 import requests
-from flask import Flask, jsonify, request, send_from_directory, session, render_template, abort
+from flask import Flask, jsonify, request, send_from_directory, session, render_template, abort, redirect
+from collections import defaultdict
 
 app = Flask(__name__, static_folder='.', static_url_path='', template_folder='templates')
-# BUG-03 FIX: 고정 시크릿 키 (서버 재시작 시 세션 유지)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", "jh-2026-s3cr3t-k3y-f1x3d-d0-n0t-ch4ng3")
+# SEC-03 FIX: 시크릿 키 — 환경변수 우선, 없으면 고정 키 (단, 운영 시 반드시 환경변수 설정 권장)
+_secret = os.environ.get("FLASK_SECRET_KEY")
+if not _secret:
+    # 로컬 개발용 고정 키 (운영 서버에서는 반드시 FLASK_SECRET_KEY 환경변수를 설정하세요)
+    _secret = "jh-2026-s3cr3t-k3y-f1x3d-d0-n0t-ch4ng3"
+    print("⚠️ [보안] FLASK_SECRET_KEY 환경변수가 설정되지 않았습니다. 운영 서버에서는 반드시 설정하세요.")
+app.secret_key = _secret
+app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(hours=8)  # SEC: 세션 8시간 만료
+
+# ═══════════════════════════════════════════════════════════
+# 보안 미들웨어 (A-4, S-1, S-3 패치)
+# ═══════════════════════════════════════════════════════════
+
+# [A-4] 민감 파일 직접 접근 차단
+_BLOCKED_EXTENSIONS = {'.py', '.pyc', '.db', '.sqlite', '.log', '.env', '.cfg', '.ini', '.key', '.pem'}
+_BLOCKED_FILES = {'server.log', 'requirements.txt', 'nohup.out', '.env', '.gitignore'}
+
+@app.before_request
+def block_sensitive_files():
+    """SEC [A-4]: .py, .db 등 민감 파일에 대한 URL 직접 접근을 차단합니다."""
+    path = request.path.lower()
+    # API 및 특수 경로는 통과
+    if path.startswith('/api/') or path.startswith('/admin/') or path.startswith('/signup') or path.startswith('/register/') or path.startswith('/reset_pw/'):
+        return None
+    # 확장자 차단
+    _, ext = os.path.splitext(path)
+    if ext in _BLOCKED_EXTENSIONS:
+        abort(403)
+    # 특정 파일명 차단
+    basename = os.path.basename(path)
+    if basename in _BLOCKED_FILES:
+        abort(403)
+
+
+# [S-3] 로그인 Rate Limiting (IP별 5회 실패 시 5분 잠금)
+_login_attempts = defaultdict(list)  # IP -> [타임스탬프 ...]
+_LOGIN_MAX_ATTEMPTS = 5
+_LOGIN_LOCKOUT_SECONDS = 300  # 5분
+
+def _check_rate_limit(ip):
+    """SEC [S-3]: 로그인 시도 횟수를 검증합니다."""
+    now = time.time()
+    # 만료된 기록 제거
+    _login_attempts[ip] = [t for t in _login_attempts[ip] if now - t < _LOGIN_LOCKOUT_SECONDS]
+    if len(_login_attempts[ip]) >= _LOGIN_MAX_ATTEMPTS:
+        remaining = int(_LOGIN_LOCKOUT_SECONDS - (now - _login_attempts[ip][0]))
+        return False, remaining
+    return True, 0
+
+def _record_failed_login(ip):
+    _login_attempts[ip].append(time.time())
+
+def _clear_login_attempts(ip):
+    _login_attempts.pop(ip, None)
+
+# ═══════════════════════════════════════════════════════════
+# 교육 플랫폼 백엔드 (Phase A: 중앙 DB + 인증)
+# ═══════════════════════════════════════════════════════════
+from edu_backend import edu_bp
+from edu_db import init_db as init_edu_db
+app.register_blueprint(edu_bp)
+init_edu_db()  # 서버 시작 시 테이블 자동 생성
+
+# ═══════════════════════════════════════════════════════════
+# 회원 관리 시스템 (가입신청 → 승인 → 등록)
+# ═══════════════════════════════════════════════════════════
+from user_backend import user_bp
+from user_db import init_user_tables, check_user_login
+app.register_blueprint(user_bp)
+init_user_tables()  # 서버 시작 시 회원 테이블 자동 생성
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
@@ -265,6 +335,21 @@ def _load_workspace_data():
 
 
 # ═══════════════════════════════════════════════════════════
+# EDU AUTH GATE — 비로그인 시 교육 플랫폼 접근 차단
+# ═══════════════════════════════════════════════════════════
+
+@app.route('/edu/')
+@app.route('/edu/<path:filename>')
+def serve_edu(filename='index.html'):
+    """교육 페이지를 인증 게이트로 보호합니다.
+    로그인하지 않은 사용자는 메인 로그인 페이지로 리다이렉트됩니다.
+    """
+    if not session.get('logged_in'):
+        return redirect('/?login=required&next=/edu/')
+    return send_from_directory('edu', filename)
+
+
+# ═══════════════════════════════════════════════════════════
 # PAGE ROUTES (각 탭이 독립 페이지)
 # ═══════════════════════════════════════════════════════════
 
@@ -384,6 +469,12 @@ def search_api():
 
 @app.route('/api/login', methods=['POST'])
 def login():
+    # [S-3] Rate Limiting 검증
+    client_ip = request.remote_addr
+    allowed, remaining = _check_rate_limit(client_ip)
+    if not allowed:
+        return jsonify({"success": False, "message": f"로그인 시도 횟수를 초과했습니다. {remaining}초 후 다시 시도해 주세요."}), 429
+
     data = request.get_json()
     if not data or 'name' not in data or 'password' not in data:
         return jsonify({"success": False, "message": "Invalid request"}), 400
@@ -401,26 +492,42 @@ def login():
         if response.status_code == 200:
             db_data = response.json()
             if db_data and len(db_data) > 0:
-                # DB에 등록된 유저라면 DB 비밀번호로 검증
                 if db_data[0]['password_hash'] == password_hash:
+                    _clear_login_attempts(client_ip)
                     session['logged_in'] = True
                     session['user_name'] = name
+                    session.permanent = True
                     is_master = (name == '김중일')
                     session['is_master'] = is_master
                     return jsonify({"success": True, "name": name, "isMaster": is_master})
                 else:
+                    _record_failed_login(client_ip)
                     return jsonify({"success": False, "message": "비밀번호가 일치하지 않습니다."}), 401
     except Exception as e:
         print(f"Supabase error: {e}")
 
-    # 2. Supabase에 없다면 기존 하드코딩 명단(ALLOWED_USERS_HASH)으로 검증 (초기 로그인용)
+    # 2. user_accounts 테이블 검증 (신규 회원 관리 시스템)
+    user_account = check_user_login(name, password)
+    if user_account:
+        _clear_login_attempts(client_ip)
+        session['logged_in'] = True
+        session['user_name'] = user_account['display_name']
+        session.permanent = True
+        is_master = (user_account['display_name'] == '김중일')
+        session['is_master'] = is_master
+        return jsonify({"success": True, "name": user_account['display_name'], "isMaster": is_master})
+
+    # 3. 하드코딩 명단으로 검증 (레거시)
     if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == password_hash:
+        _clear_login_attempts(client_ip)
         session['logged_in'] = True
         session['user_name'] = name
+        session.permanent = True
         is_master = (name == '김중일')
         session['is_master'] = is_master
         return jsonify({"success": True, "name": name, "isMaster": is_master})
         
+    _record_failed_login(client_ip)
     return jsonify({"success": False, "message": "이름 또는 비밀번호가 일치하지 않습니다."}), 401
 
 @app.route('/api/change_password', methods=['POST'])
@@ -435,27 +542,47 @@ def change_password():
     if not current_password or not new_password:
         return jsonify({"success": False, "message": "비밀번호를 입력해주세요."}), 400
 
+    if len(new_password) < 6:
+        return jsonify({"success": False, "message": "새 비밀번호는 6자 이상이어야 합니다."}), 400
+
     name = session.get('user_name')
     name_hash = get_hash(name)
     current_password_hash = get_hash(current_password)
     new_password_hash = get_hash(new_password)
 
-    # 기존 비밀번호 일치 여부 확인 (Supabase -> 하드코딩 순)
+    # 기존 비밀번호 일치 여부 확인 (Supabase -> user_accounts -> 하드코딩 순)
     is_valid = False
+    is_user_account = False  # user_accounts 테이블 사용자 여부
+    user_account_id = None
     headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
     try:
         response = requests.get(f"{SUPABASE_URL}/rest/v1/user_credentials?username_hash=eq.{name_hash}", headers=headers)
         if response.status_code == 200 and response.json():
             if response.json()[0]['password_hash'] == current_password_hash:
                 is_valid = True
-        else:
-            if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == current_password_hash:
-                is_valid = True
     except Exception as e:
         print(f"Supabase password check error: {e}")
 
+    # user_accounts 테이블 검증 (display_name은 세션에 저장된 실명)
+    if not is_valid:
+        from user_db import verify_password_by_display_name, update_password as ua_update_password
+        ua_user = verify_password_by_display_name(name, current_password)
+        if ua_user:
+            is_valid = True
+            is_user_account = True
+            user_account_id = ua_user['id']
+        else:
+            if name_hash in ALLOWED_USERS_HASH and ALLOWED_USERS_HASH[name_hash] == current_password_hash:
+                is_valid = True
+
     if not is_valid:
         return jsonify({"success": False, "message": "현재 비밀번호가 일치하지 않습니다."}), 401
+
+    # user_accounts 사용자는 해당 테이블에 직접 업데이트
+    if is_user_account and user_account_id:
+        from user_db import update_password as ua_update_pw
+        ua_update_pw(user_account_id, new_password)
+        return jsonify({"success": True, "message": "비밀번호가 변경되었습니다."})
 
     # 새 비밀번호를 Supabase에 Upsert (저장/업데이트)
     payload = {
@@ -485,6 +612,8 @@ def logout():
     session.pop('is_master', None)
     session.clear()
     return jsonify({"success": True})
+
+
 
 @app.route('/api/calendar_feed.ics')
 def calendar_feed():
@@ -725,7 +854,12 @@ def upload_images():
             "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
             "week": week_folder,
             "size": size,
-            "path": f"reports/weekly/uploads/{week_folder}/{safe_name}"
+            "path": f"reports/weekly/uploads/{week_folder}/{safe_name}",
+            "status": "pending",
+            "ocr_text": None,
+            "approved_by": None,
+            "approved_at": None,
+            "reject_reason": None
         }
         manifest.append(entry)
         uploaded.append(entry)
@@ -759,6 +893,106 @@ def serve_upload(filepath):
         return "Unauthorized", 401
     upload_base = os.path.join(os.path.dirname(__file__), 'reports', 'weekly', 'uploads')
     return send_from_directory(upload_base, filepath)
+
+@app.route('/api/upload/ocr', methods=['POST'])
+def run_ocr_on_upload():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "권한이 없습니다."}), 401
+
+    data = request.get_json()
+    file_id = data.get('id', '')
+    manifest = load_manifest()
+    
+    target_entry = next((e for e in manifest if e.get('id') == file_id), None)
+    if not target_entry:
+        return jsonify({"success": False, "message": "파일을 찾을 수 없습니다."}), 404
+        
+    fpath = os.path.join(os.path.dirname(__file__), target_entry.get('path', ''))
+    if not os.path.exists(fpath):
+        return jsonify({"success": False, "message": "실제 파일이 서버에 없습니다."}), 404
+
+    # Run OCR script
+    import subprocess
+    script_path = os.path.join(os.path.dirname(__file__), 'scripts', 'ocr_extract.py')
+    try:
+        result = subprocess.run(
+            ['python3', script_path, fpath],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        extracted_text = result.stdout.strip()
+        
+        target_entry['ocr_text'] = extracted_text
+        save_manifest(manifest)
+        
+        return jsonify({"success": True, "text": extracted_text})
+    except subprocess.CalledProcessError as e:
+        return jsonify({"success": False, "message": f"OCR 실패: {e.stderr}"}), 500
+    except Exception as e:
+        return jsonify({"success": False, "message": f"오류 발생: {str(e)}"}), 500
+
+@app.route('/api/upload/update_text', methods=['POST'])
+def update_ocr_text():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "권한이 없습니다."}), 401
+        
+    data = request.get_json()
+    file_id = data.get('id', '')
+    new_text = data.get('text', '')
+    
+    manifest = load_manifest()
+    target_entry = next((e for e in manifest if e.get('id') == file_id), None)
+    if not target_entry:
+        return jsonify({"success": False, "message": "파일을 찾을 수 없습니다."}), 404
+        
+    target_entry['ocr_text'] = new_text
+    save_manifest(manifest)
+    return jsonify({"success": True})
+
+@app.route('/api/upload/status', methods=['POST'])
+def change_upload_status():
+    if not session.get('logged_in') or not session.get('is_master'):
+        return jsonify({"success": False, "message": "대표이사 권한이 필요합니다."}), 401
+        
+    data = request.get_json()
+    file_id = data.get('id', '')
+    new_status = data.get('status', 'pending') # 'pending', 'approved', 'rejected'
+    reject_reason = data.get('reject_reason', None)
+    
+    manifest = load_manifest()
+    target_entry = next((e for e in manifest if e.get('id') == file_id), None)
+    if not target_entry:
+        return jsonify({"success": False, "message": "파일을 찾을 수 없습니다."}), 404
+        
+    target_entry['status'] = new_status
+    if new_status == 'approved':
+        target_entry['approved_by'] = session.get('user_name', '대표이사')
+        target_entry['approved_at'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        target_entry['reject_reason'] = None
+    elif new_status == 'rejected':
+        target_entry['reject_reason'] = reject_reason
+        target_entry['approved_by'] = None
+        target_entry['approved_at'] = None
+        
+    save_manifest(manifest)
+
+    # 승인 시 즉시 주간 보고서 + workspace.json에 반영 (비동기)
+    if new_status == 'approved':
+        import subprocess as _sp
+        import threading as _th
+        def _auto_inject():
+            script = os.path.join(os.path.dirname(__file__), 'scripts', 'inject_approved_text.py')
+            try:
+                _sp.run(['python3', script], cwd=os.path.dirname(__file__),
+                        capture_output=True, text=True, check=True)
+                print("✅ [AUTO-INJECT] 승인 후 자동 주입 완료")
+            except Exception as e:
+                print(f"⚠️ [AUTO-INJECT] 자동 주입 실패: {e}")
+        _th.Thread(target=_auto_inject, daemon=True).start()
+
+    return jsonify({"success": True})
+
 
 @app.route('/api/upload/delete', methods=['POST'])
 def delete_upload():

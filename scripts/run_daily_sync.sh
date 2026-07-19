@@ -25,11 +25,24 @@ else
 fi
 
 # ======================================================
+# STEP 1.5: 승인 완료 OCR 텍스트 → 주간 보고서 HTML + workspace.json 주입 (NEW)
+# ======================================================
+echo "[1.5/7] 승인 완료 OCR 텍스트 주입 중..."
+python3 "$SCRIPT_DIR/inject_approved_text.py" >> "$LOG_FILE" 2>&1
+INJECT_RC=$?
+
+if [ $INJECT_RC -ne 0 ]; then
+    echo "❌ inject_approved_text.py 실패 (exit: $INJECT_RC)" >> "$LOG_FILE"
+else
+    echo "✅ OCR 승인 텍스트 주입 성공" >> "$LOG_FILE"
+fi
+
+# ======================================================
 # STEP 2: 주간 보고서 파싱 → 본부별 현황 + 일정 갱신 (NEW)
 # ======================================================
 REPORT_FILE=$(ls -t "$SCRIPT_DIR/../reports/"*주간\ 보고.html 2>/dev/null | head -n 1)
 
-echo "[2/6] 주간 보고서 파싱 중..."
+echo "[2/7] 주간 보고서 파싱 중..."
 if [ -f "$REPORT_FILE" ]; then
     python3 "$SCRIPT_DIR/parse_weekly_report.py" "$REPORT_FILE" >> "$LOG_FILE" 2>&1
     PARSE_RC=$?
@@ -123,6 +136,7 @@ fi
 echo "" >> "$LOG_FILE"
 echo "📊 파이프라인 결과 요약:" >> "$LOG_FILE"
 echo "   법규 크롤링: $([ $LAW_RC -eq 0 ] && echo '✅' || echo '❌')" >> "$LOG_FILE"
+echo "   OCR 주입:   $([ ${INJECT_RC:-1} -eq 0 ] && echo '✅' || echo '❌')" >> "$LOG_FILE"
 echo "   주간보고서:  $([ -f "$REPORT_FILE" ] && echo "$([ ${PARSE_RC:-1} -eq 0 ] && echo '✅' || echo '❌')" || echo '⏭️ 건너뜀')" >> "$LOG_FILE"
 echo "   기사 100선:  $([ $DAILY_RC -eq 0 ] && echo '✅' || echo '❌')" >> "$LOG_FILE"
 echo "   기사 컴파일: $([ $COMPILE_RC -eq 0 ] && echo '✅' || echo '❌')" >> "$LOG_FILE"
