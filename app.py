@@ -248,8 +248,86 @@ def change_password():
 
 @app.route('/api/logout', methods=['POST'])
 def logout():
+    session.pop('logged_in', None)
+    session.pop('user_name', None)
+    session.pop('is_master', None)
     session.clear()
     return jsonify({"success": True})
+
+@app.route('/api/calendar_feed.ics')
+def calendar_feed():
+    try:
+        import json
+        import hashlib
+        import re
+        from datetime import datetime, timedelta
+        
+        with open('data/weekly_articles.json', 'r', encoding='utf-8') as f:
+            articles = json.load(f)
+            
+        lines = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//Jinyang//J-Hub Portal//KO",
+            "CALSCALE:GREGORIAN",
+            "X-WR-CALNAME:진양저널 사내일정",
+            "X-APPLE-CALENDAR-COLOR:#0066cc",
+            "X-WR-TIMEZONE:Asia/Seoul"
+        ]
+        
+        now_str = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+        
+        for article in articles:
+            meta = article.get('meta', '')
+            date_str = ""
+            for token in meta.split('|'):
+                token = token.strip()
+                if token.startswith('20'):
+                    date_str = token
+                    break
+            
+            if not date_str:
+                continue
+                
+            try:
+                dt = datetime.strptime(date_str, "%Y.%m.%d")
+                # 해당 주의 월요일을 구해서 월~금 일정을 표시
+                weekday = dt.weekday()
+                monday = dt - timedelta(days=weekday)
+                friday = monday + timedelta(days=4)
+                
+                dt_start = monday.strftime("%Y%m%d")
+                dt_end = (friday + timedelta(days=1)).strftime("%Y%m%d")
+            except:
+                continue
+                
+            uid = hashlib.md5(article.get('title', '').encode('utf-8')).hexdigest()
+            title = article.get('title', '').replace("\n", " ")
+            excerpt_raw = article.get('excerpt', '')
+            # 태그 제거 및 줄바꿈 처리
+            excerpt = re.sub(r'<br\s*/?>', '\\n', excerpt_raw, flags=re.IGNORECASE)
+            excerpt = re.sub(r'<[^>]+>', '', excerpt)
+            excerpt = excerpt.replace('\r', '').replace('\n', '\\n')
+            
+            lines.append("BEGIN:VEVENT")
+            lines.append(f"UID:{uid}@jinyang")
+            lines.append(f"DTSTAMP:{now_str}")
+            lines.append(f"DTSTART;VALUE=DATE:{dt_start}")
+            lines.append(f"DTEND;VALUE=DATE:{dt_end}")
+            lines.append(f"SUMMARY:{title}")
+            lines.append(f"DESCRIPTION:{excerpt}")
+            lines.append("END:VEVENT")
+            
+        lines.append("END:VCALENDAR")
+        
+        from flask import Response
+        return Response("\r\n".join(lines), mimetype='text/calendar', headers={
+            "Content-Disposition": "attachment; filename=jinyang_schedule.ics"
+        })
+        
+    except Exception as e:
+        return str(e), 500
+
 
 @app.route('/api/check_session', methods=['GET'])
 def check_session():
