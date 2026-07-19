@@ -37,7 +37,7 @@ except ImportError:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.join(BASE_DIR, '..')
 REPORTS_DIR = os.path.join(PROJECT_ROOT, 'reports')
-WORKSPACE_JSON = os.path.join(PROJECT_ROOT, 'data', 'workspace.json')
+WORKSPACE_JSON = os.path.join(PROJECT_ROOT, 'src', 'data', 'workspace.json')
 
 # ── 본부 매핑 (page-header title → 출력 본부명) ───────────
 DEPT_MAP = {
@@ -501,7 +501,26 @@ def parse_schedule_items(soup: BeautifulSoup) -> list:
     schedule_items.sort(key=sort_key)
 
     # 향후 2주 내 일정만 필터 (현재 월/일 기준, 최대 10건)
-    return schedule_items[:10]
+    from datetime import datetime
+    today = datetime.now()
+    current_month = today.month
+    current_day = today.day
+    
+    filtered_items = []
+    for item in schedule_items:
+        parts = item['date'].split('/')
+        try:
+            m = int(parts[0])
+            d = int(parts[1])
+            # Filter dates that are in the past (before today minus 3 days for slight leeway)
+            # Roughly: if the date is earlier than today, skip it.
+            if m < current_month or (m == current_month and d < current_day - 3):
+                continue
+            filtered_items.append(item)
+        except (ValueError, IndexError):
+            pass
+            
+    return filtered_items[:10]
 
 
 # ═══════════════════════════════════════════════════════════
@@ -535,27 +554,55 @@ def merge_into_workspace(ws_data: dict,
                          site_updates: list) -> dict:
     """추출 데이터를 기존 workspace.json에 병합. 건드리지 않는 필드는 보존."""
 
-    # section1
-    if 'section1' not in ws_data:
-        ws_data['section1'] = {}
+    # v2 JSON 형식 적용
+    if 'dashboard' not in ws_data:
+        ws_data['dashboard'] = {}
     if site_updates:
-        ws_data['section1']['siteUpdates'] = site_updates
+        ws_data['dashboard']['field_updates'] = [
+            {"name": su['name'], "content": su['desc']} for su in site_updates
+        ]
 
-    # section2
-    if 'section2' not in ws_data:
-        ws_data['section2'] = {}
+    if 'projects' not in ws_data:
+        ws_data['projects'] = {}
     if departments:
-        ws_data['section2']['departments'] = departments
-    if bidding:
-        ws_data['section2']['bidding'] = bidding
+        # 본부별 매핑
+        design = []
+        urban_dev = []
+        urban_plan = []
+        for d in departments:
+            if '디자인' in d['name']: design.extend(d['projects'])
+            elif '개발' in d['name'] or '재생' in d['name']: urban_dev.extend(d['projects'])
+            elif '계획' in d['name']: urban_plan.extend(d['projects'])
+        
+        if design: ws_data['projects']['design_dept'] = design
+        if urban_dev: ws_data['projects']['urban_dev_dept'] = urban_dev
+        if urban_plan: ws_data['projects']['urban_plan_dept'] = urban_plan
 
-    # section3
+    if bidding:
+        ws_data['projects']['strategy_bids'] = [
+            {"name": b['name'], "date": b['schedule'], "status": b['position'], "highlight": b.get('highlight', False)}
+            for b in bidding
+        ]
+
     if schedule:
-        ws_data['section3'] = schedule
+        # 플랫 리스트를 date 기준으로 그룹화하여 calendar 형식으로 변환
+        cal_dict = {}
+        for s in schedule:
+            dt = s['date']
+            if dt not in cal_dict:
+                # 임의의 요일 할당 또는 파싱 로직 추가 가능, 우선 기본 형태 유지
+                cal_dict[dt] = {"date": dt, "weekday": "", "events": []}
+            cal_dict[dt]['events'].append({
+                "time": s.get('time', ''),
+                "name": s['event'],
+                "note": s.get('note', ''),
+                "important": s.get('important', False)
+            })
+        ws_data['calendar'] = list(cal_dict.values())
 
     # lastUpdated
-    now_str = datetime.now().strftime("%Y.%m.%d %H:%M (주간보고서 파싱 완료)")
-    ws_data['lastUpdated'] = now_str
+    now_str = datetime.now().strftime("%Y.%m.%d %H:%M (실시간 동기화 완료)")
+    ws_data['updated_at'] = now_str
 
     return ws_data
 
@@ -624,7 +671,7 @@ def main():
     ws_data = merge_into_workspace(ws_data, departments, bidding, schedule, site_updates)
     save_workspace(ws_data, WORKSPACE_JSON)
     print(f"   ✅ 저장 완료: {WORKSPACE_JSON}")
-    print(f"   📅 lastUpdated: {ws_data['lastUpdated']}")
+    print(f"   📅 updated_at: {ws_data['updated_at']}")
     print()
     print("=" * 60)
     print("✨ 주간 보고서 파싱 → workspace.json 연동 완료!")

@@ -101,6 +101,23 @@ else
 fi
 
 # ======================================================
+# STEP 7: 빌드 무결성 검증 (Smoke Test — Weekly Report 소실 방지)
+# ======================================================
+echo "[7/7] 빌드 검증 (Smoke Test) 중..."
+python3 "$SCRIPT_DIR/validate_build.py" >> "$LOG_FILE" 2>&1
+VALIDATE_RC=$?
+
+if [ $VALIDATE_RC -ne 0 ]; then
+    echo "🚨 CRITICAL: Smoke Test 실패! 백업에서 롤백합니다." >> "$LOG_FILE"
+    if [ -f "$SCRIPT_DIR/../index.html.bak" ]; then
+        cp "$SCRIPT_DIR/../index.html.bak" "$SCRIPT_DIR/../index.html"
+        echo "🔄 롤백 완료: index.html.bak → index.html" >> "$LOG_FILE"
+    fi
+else
+    echo "✅ Smoke Test 통과 — 모든 필수 섹션 확인됨" >> "$LOG_FILE"
+fi
+
+# ======================================================
 # 결과 요약
 # ======================================================
 echo "" >> "$LOG_FILE"

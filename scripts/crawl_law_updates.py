@@ -35,7 +35,7 @@ from urllib.parse import quote
 # ═══════════════════════════════════════════════════════════════
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-WORKSPACE_JSON = os.path.join(SCRIPT_DIR, '..', 'data', 'workspace.json')
+WORKSPACE_JSON = os.path.join(SCRIPT_DIR, '..', 'src', 'data', 'workspace.json')
 
 # ═══════════════════════════════════════════════════════════════
 # 로거 설정
@@ -530,29 +530,40 @@ def main():
     # 기존 데이터 로드
     ws_data = load_workspace()
 
-    # section4 업데이트 (기존 데이터 보존)
-    existing_section4 = ws_data.get("section4", {})
-    ws_data["section4"] = build_section4_data(articles, existing_section4)
+    # v2 JSON 형식: laws
+    if "laws" not in ws_data:
+        ws_data["laws"] = {}
+    
+    # 임시로 v1 구조(section4)로 넘겨서 데이터 만들고 가져오기
+    existing_laws_mock = {
+        "newLaws": ws_data["laws"].get("new_laws", []),
+        "localNotices": ws_data["laws"].get("local_notices", [])
+    }
+    new_laws_data = build_section4_data(articles, existing_laws_mock)
+    
+    ws_data["laws"]["new_laws"] = new_laws_data.get("newLaws", [])
+    ws_data["laws"]["local_notices"] = new_laws_data.get("localNotices", [])
 
-    # section1.policyUpdates 업데이트
-    if "section1" not in ws_data:
-        ws_data["section1"] = {}
-    existing_policy = ws_data["section1"].get("policyUpdates", [])
-    ws_data["section1"]["policyUpdates"] = build_policy_updates(articles, existing_policy)
+    # v2 JSON 형식: dashboard.policy_updates
+    if "dashboard" not in ws_data:
+        ws_data["dashboard"] = {}
+    existing_policy = ws_data["dashboard"].get("policy_updates", [])
+    ws_data["dashboard"]["policy_updates"] = build_policy_updates(articles, existing_policy)
 
-    # lastUpdated 타임스탬프 갱신
+    # updated_at 타임스탬프 갱신
     now_str = datetime.now().strftime("%Y.%m.%d %H:%M (법규 크롤링 반영)")
-    ws_data["lastUpdated"] = now_str
+    ws_data["updated_at"] = now_str
+
 
     # 저장
     save_workspace(ws_data)
 
     logger.info("\n" + "=" * 60)
     logger.info("🎉 법규 업데이트 크롤링 및 workspace.json 갱신 완료!")
-    logger.info(f"   section4.newLaws: {len(ws_data['section4'].get('newLaws', []))}건")
-    logger.info(f"   section4.localNotices: {len(ws_data['section4'].get('localNotices', []))}건")
-    logger.info(f"   section1.policyUpdates: {len(ws_data['section1'].get('policyUpdates', []))}건")
-    logger.info(f"   lastUpdated: {now_str}")
+    logger.info(f"   laws.new_laws: {len(ws_data['laws'].get('new_laws', []))}건")
+    logger.info(f"   laws.local_notices: {len(ws_data['laws'].get('local_notices', []))}건")
+    logger.info(f"   dashboard.policy_updates: {len(ws_data['dashboard'].get('policy_updates', []))}건")
+    logger.info(f"   updated_at: {now_str}")
     logger.info("=" * 60)
 
 

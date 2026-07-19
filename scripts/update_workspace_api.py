@@ -12,7 +12,7 @@ from datetime import datetime
 # EXT-02 FIX: scripts/ 디렉토리를 모듈 탐색 경로에 추가
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-WORKSPACE_JSON = os.path.join(os.path.dirname(__file__), '../data/workspace.json')
+WORKSPACE_JSON = os.path.join(os.path.dirname(__file__), '../src/data/workspace.json')
 
 def load_workspace():
     with open(WORKSPACE_JSON, 'r', encoding='utf-8') as f:
@@ -69,15 +69,16 @@ def main():
         print("⚠️ API Key가 제공되지 않았습니다. 테스트 모드(더미 데이터)로 작동합니다.")
         api_data = generate_dummy_api_data()
         
-    # 데이터 병합
-    if "section2" not in ws_data:
-        ws_data["section2"] = {}
+    # 데이터 병합 (v2 schema)
+    if "projects" not in ws_data:
+        ws_data["projects"] = {}
     
-    ws_data["section2"]["apiData"] = api_data
+    # v2 schema의 projects.api_crawling 에 추가
+    ws_data["projects"]["api_crawling"] = api_data
     
     # 최종 업데이트 시간 변경
     now_str = datetime.now().strftime("%Y.%m.%d %H:%M (API 자동 동기화)")
-    ws_data["lastUpdated"] = now_str
+    ws_data["updated_at"] = now_str
     
     save_workspace(ws_data)
     print(f"✅ {WORKSPACE_JSON} 업데이트 성공!")

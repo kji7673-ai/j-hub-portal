@@ -2,6 +2,53 @@
         <!-- ========================================== -->
         
 <style>
+                /* Today's Analects Widget */
+                #analects-widget {
+                    background: #fafafc; border: 1px solid #e0e0e0; border-radius: 11px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 16px; display: none;
+                }
+            </style>
+            
+            <div id="analects-widget">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; font-size: 14px; color: #1d1d1f; text-transform: uppercase; font-weight: 600; letter-spacing: -0.224px;">오늘의 논어 (論語)</h3>
+                    <span style="color:#7a7a7a; font-weight:400; font-size:12px; letter-spacing: -0.12px;" id="analects-date"></span>
+                </div>
+                
+                <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #f0f0f0;">
+                    <h1 id="analects-hanja" style="margin: 0 0 12px 0; font-family: 'SF Pro Display', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: 2px; color: #1d1d1f;"></h1>
+                    <p id="analects-ko" style="margin: 0; font-size: 17px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.374px;"></p>
+                </div>
+                
+                <div>
+                    <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #7a7a7a; text-transform: uppercase; letter-spacing: 0.5px;">실무 적용</h4>
+                    <p id="analects-meaning" style="margin: 0; font-size: 14px; color: #333; line-height: 1.5;"></p>
+                </div>
+            </div>
+            
+            <script>
+                fetch('data/analects.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        const today = new Date();
+                        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+                        const item = data[dayOfYear % data.length];
+                        
+                        document.getElementById('analects-date').textContent = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+                        document.getElementById('analects-hanja').textContent = item.hanja;
+                        document.getElementById('analects-ko').textContent = item.korean;
+                        
+                        let charMeaning = item.characters.map(c => `<span style="color:${c.color}">${c.char}(${c.reading})</span>`).join(' ');
+                        let fullMeaning = `<div style="font-weight:600; margin-bottom:12px; font-size:15px;">[한자 풀이] ${charMeaning}</div><div>[실무 적용] ${item.application}</div>`;
+                        document.getElementById('analects-meaning').innerHTML = fullMeaning;
+                        
+                        document.getElementById('analects-widget').style.display = 'flex';
+                    })
+                    .catch(err => {
+                        console.error("Failed to load analects:", err);
+                    });
+            </script>
+            
+            <style>
                 /* Dense 100-Mosaic Tile Grid */
                 .grid-mosaic {
                     display: grid;

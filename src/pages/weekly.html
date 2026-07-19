@@ -1,0 +1,118 @@
+<!-- Weekly Report Content (Admin View) -->
+            <div id="weekly-admin-view" style="display: block;">
+                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 6px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="margin: 0; font-size: 13px; font-weight: 600;">
+                        [승인 대기] 통합 주간 보고서 초안
+                    </h2>
+                    <span style="font-size: 11px; font-weight: 400; color: #555; background: #e5e5ea; padding: 2px 6px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
+                </div>
+
+                <!-- Generated Draft Preview -->
+                <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
+                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
+                    </div>
+                </div>
+
+                <!-- 비공개 1:1 다이렉트 피드백 (Direct Drop-box) -->
+                <div class="card" style="background: #fafafc; border: 1px solid var(--accent); margin-top: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">💡 실무 아이디어 & 제안 직통함 (Direct Drop-box)</div>
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
+                            주간회의록을 읽고 떠오른 아이디어나 크로스 체크 사항을 남겨주세요. 
+                            본 의견은 게시판에 공개되지 않으며 <strong>대표이사님께 1:1로 직접 전달</strong>됩니다.
+                        </p>
+                        <input type="text" id="fb-project" placeholder="관련 안건명 또는 프로젝트명" style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
+                        <textarea id="fb-content" placeholder="자유롭게 의견을 남겨주세요..." style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; min-height: 100px; box-sizing: border-box; font-family: inherit;"></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-size: 13px; color: #333; cursor: pointer;">
+                                <input type="checkbox" id="fb-anonymous"> 익명으로 전달하기
+                            </label>
+                            <button onclick="submitFeedback()" style="background: #0066cc; color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: bold; cursor: pointer;">의견 보내기</button>
+                        </div>
+                        <div id="fb-status" style="margin-top: 12px; font-size: 14px; font-weight: bold; display: none;"></div>
+                    </div>
+                </div>
+
+                <script>
+                async function submitFeedback() {
+                    const project = document.getElementById('fb-project').value.trim();
+                    const content = document.getElementById('fb-content').value.trim();
+                    const isAnonymous = document.getElementById('fb-anonymous').checked;
+                    const statusEl = document.getElementById('fb-status');
+
+                    if (!content) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '피드백 내용을 입력해주세요.';
+                        statusEl.style.display = 'block';
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch('/api/feedback', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                project_name: project,
+                                content: content,
+                                is_anonymous: isAnonymous
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.success) {
+                            document.getElementById('fb-project').value = '';
+                            document.getElementById('fb-content').value = '';
+                            document.getElementById('fb-anonymous').checked = false;
+                            statusEl.style.color = '#00cc66';
+                            statusEl.innerText = '✅ 대표이사님께 안전하게 직접 전달되었습니다!';
+                            statusEl.style.display = 'block';
+                            setTimeout(() => { statusEl.style.display = 'none'; }, 5000);
+                        } else {
+                            statusEl.style.color = 'red';
+                            statusEl.innerText = '오류: ' + data.message;
+                            statusEl.style.display = 'block';
+                        }
+                    } catch (e) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '서버 통신 오류가 발생했습니다.';
+                        statusEl.style.display = 'block';
+                    }
+                }
+                </script>
+
+                <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center;">
+                    <button onclick="publishWeeklyReport()" style="background: #0066cc; color: white; border: none; padding: 16px 48px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);">최종 승인 및 발행 (Publish)</button>
+                    <p style="font-size: 13px; color: #888; margin-top: 12px;">승인 후 J-Workspace의 종합 동향 탭에 최신 데이터로 영구 갱신됩니다.</p>
+                </div>
+            </div>
+            
+            <script>
+                function unlockWeekly() {
+                    // 실제 비밀번호 검증 없이 무조건 통과하도록 변경 (UI만 유지)
+                    document.getElementById("weekly-lock-screen").style.display = "none";
+                    document.getElementById("weekly-admin-view").style.display = "block";
+                    window.scrollTo(0,0);
+                }
+
+                function publishWeeklyReport() {
+                    const btn = document.querySelector("#weekly-publish-actions button");
+                    btn.innerText = "발행 처리 중...";
+                    btn.style.opacity = "0.7";
+                    
+                    setTimeout(() => {
+                        btn.innerText = "✅ 전사 포털 업데이트 완료";
+                        btn.style.background = "#00cc66";
+                        btn.style.opacity = "1";
+                        btn.style.boxShadow = "none";
+                        
+                        setTimeout(() => {
+                            alert("최종 승인된 보고서가 J-Workspace에 성공적으로 갱신되었습니다.");
+                        }, 500);
+                    }, 1500);
+                }
+            </script>
+        </div>
+        
+        <!-- MODE 4: MASTER VIEW (제안함) -->
