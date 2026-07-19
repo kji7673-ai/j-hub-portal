@@ -120,6 +120,52 @@
         50% { transform: scale(1.3); }
         100% { transform: scale(1); }
     }
+
+    /* ─── 📖 용어 해설 섹션 ─── */
+    .glossary-section {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #f0f0f0;
+    }
+    .glossary-header {
+        font-size: 13px;
+        font-weight: 600;
+        color: #0066cc;
+        margin-bottom: 10px;
+        letter-spacing: -0.2px;
+    }
+    .glossary-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    @media (max-width: 640px) {
+        .glossary-grid { grid-template-columns: 1fr; }
+    }
+    .glossary-card {
+        background: #f5f5f7;
+        border-radius: 8px;
+        padding: 10px 14px;
+        border: 1px solid #e8e8ea;
+        transition: all 0.2s ease;
+    }
+    .glossary-card:hover {
+        background: #eef0f4;
+        border-color: #d0d0d4;
+    }
+    .glossary-term {
+        font-size: 13px;
+        font-weight: 700;
+        color: #1d1d1f;
+        margin-bottom: 3px;
+        letter-spacing: -0.2px;
+    }
+    .glossary-desc {
+        font-size: 12px;
+        color: #636366;
+        line-height: 1.45;
+        letter-spacing: -0.1px;
+    }
 </style>
 
 <!-- 논어 위젯 -->
@@ -193,10 +239,15 @@
     <div id="detail-content" style="display: none; width: 100%; text-align: left;">
         <div id="detail-category" style="color: #0066cc; font-size: 12px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase;"></div>
         <h2 id="detail-title" style="font-size: 20px; margin-bottom: 14px; line-height: 1.35; color: #1d1d1f; word-break: keep-all; font-weight: 600;"></h2>
-        <p id="detail-excerpt" style="font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 18px; background: #fafafc; padding: 16px; border-radius: 11px; border: 1px solid #f0f0f0;"></p>
+        <div id="detail-excerpt" style="font-size: 15px; color: #333; line-height: 1.75; margin-bottom: 18px; background: #fafafc; padding: 20px; border-radius: 11px; border: 1px solid #f0f0f0; white-space: pre-line;"></div>
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div id="detail-meta" style="font-size: 12px; color: #7a7a7a;"></div>
             <button id="detail-link-btn" style="padding: 8px 18px; border-radius: 999px; border: none; background: #0066cc; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">↗ 원문 보기</button>
+        </div>
+        <!-- 📖 용어 해설 -->
+        <div id="detail-glossary" class="glossary-section" style="display: none;">
+            <div class="glossary-header">📖 용어 해설</div>
+            <div class="glossary-grid" id="glossary-grid"></div>
         </div>
     </div>
     
@@ -408,9 +459,31 @@
 
         document.getElementById('detail-category').textContent = article.category || '';
         document.getElementById('detail-title').textContent = article.title || '';
-        // XSS FIX: innerHTML → textContent (외부 기사 원문 보안 처리)
         document.getElementById('detail-excerpt').textContent = article.excerpt || '';
         document.getElementById('detail-meta').textContent = article.meta || '';
+
+        // 📖 용어 해설 렌더링
+        const glossarySection = document.getElementById('detail-glossary');
+        const glossaryGrid = document.getElementById('glossary-grid');
+        if (article.glossary && article.glossary.length > 0) {
+            glossaryGrid.innerHTML = '';
+            article.glossary.forEach(g => {
+                const card = document.createElement('div');
+                card.className = 'glossary-card';
+                const termEl = document.createElement('div');
+                termEl.className = 'glossary-term';
+                termEl.textContent = g.term;
+                const descEl = document.createElement('div');
+                descEl.className = 'glossary-desc';
+                descEl.textContent = g.desc;
+                card.appendChild(termEl);
+                card.appendChild(descEl);
+                glossaryGrid.appendChild(card);
+            });
+            glossarySection.style.display = 'block';
+        } else {
+            glossarySection.style.display = 'none';
+        }
 
         currentArticleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(article.title);
         
