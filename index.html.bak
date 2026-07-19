@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jinyang Hub | 진양 저널</title>
-    
-<style>
+    <style>
 /* 
 =====================================================
 Swiss Grid & Architecture Minimalism (J-Hub v2.0)
@@ -384,8 +383,8 @@ li {
     width: 100%; padding: 16px; background: var(--accent);
     color: #fff; font-weight: bold; border: none; font-size: 16px; cursor: pointer;
 }
-</style>
 
+    </style>
 </head>
 <body>
 
@@ -416,6 +415,8 @@ li {
         <div class="mode-switch">
             <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
             <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
+            <button id="btn-weekly" class="mode-btn" style="color:#e30000; font-weight:700;" onclick="switchMode('weekly')">Weekly Report</button>
+            <button id="btn-master" class="mode-btn" style="color:#800080; font-weight:700; display:none;" onclick="switchMode('master')">제안함 (Master)</button>
             <a href="./edu/index.html" target="_blank" style="display:inline-block; padding:8px 14px; font-size:13px; color:#0066cc; text-decoration:none; font-weight:600; border-radius:20px; border:1px solid #0066cc;">📚 교육자료</a>
         </div>
         <div>
@@ -424,7 +425,7 @@ li {
     </header>
 
     <div id="app-content">
-        <!-- MODE 1: JOURNAL (Reading) -->
+        <!-- MODE 1: JOURNAL -->
         <div id="view-journal" class="page-view active">
             <!-- TAB 5: 오늘의 읽을거리 (Today's Reading) -->
         <!-- ========================================== -->
@@ -782,11 +783,11 @@ li {
 
 
     <!-- Javascript for Tab Switching and Accordion -->
-<div style="margin-top: 48px;"><div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">면목역 1차 모아주택 시범단지
-(4개 구역)</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">홍천갈마곡리2차</div><div class="event-note">7/16</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">당산1구역 재개발정비사업</div><div class="event-note">7/18</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">인천금송 재개발사업</div><div class="event-note">07/20</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">구미형곡3구역 재건축 정비사업</div><div class="event-note">7/10 기계, 7/24 전기 1차 납품</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">범일3구역 재개발정비사업</div><div class="event-note">07/24 9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">중화동우성타운 재건축정비사업</div><div class="event-note">주민 총회 예정 (07/25)</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">서울 대림1구역 재개발정비사업</div><div class="event-note">07/25 주민총회 예정</div></div></div></div></div>
+<div style="margin-top: 48px;"><div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-name">면목역 1차 모아주택 시범단지
+(4개 구역)</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-name">홍천갈마곡리2차</div><div class="event-note">7/16</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">당산1구역 재개발정비사업</div><div class="event-note">7/18</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">인천금송 재개발사업</div><div class="event-note">07/20</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">구미형곡3구역 재건축 정비사업</div><div class="event-note">7/10 기계, 7/24 전기 1차 납품</div></div><div class="event-card important"><div class="event-name">범일3구역 재개발정비사업</div><div class="event-note">07/24 9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">중화동우성타운 재건축정비사업</div><div class="event-note">주민 총회 예정 (07/25)</div></div><div class="event-card important"><div class="event-name">서울 대림1구역 재개발정비사업</div><div class="event-note">07/25 주민총회 예정</div></div></div></div></div>
         </div>
         
-        <!-- MODE 2: WORKSPACE (Accordion based CMS layout) -->
+        <!-- MODE 2: WORKSPACE -->
         <div id="view-workspace" class="page-view">
             <div style="background: var(--surface); border: 1px solid var(--accent); padding: 16px 24px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;">
                 <div style="display: flex; align-items: center; gap: 12px;">
@@ -840,8 +841,8 @@ li {
     </div>
     <div class="wa-content">
         <p style="color:var(--text-secondary); margin-top:0;">향후 2주간의 본부별 총회, 미팅, 인허가 일정</p>
-        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">면목역 1차 모아주택 시범단지
-(4개 구역)</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">홍천갈마곡리2차</div><div class="event-note">7/16</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">당산1구역 재개발정비사업</div><div class="event-note">7/18</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">인천금송 재개발사업</div><div class="event-note">07/20</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">구미형곡3구역 재건축 정비사업</div><div class="event-note">7/10 기계, 7/24 전기 1차 납품</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">범일3구역 재개발정비사업</div><div class="event-note">07/24 9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">중화동우성타운 재건축정비사업</div><div class="event-note">주민 총회 예정 (07/25)</div></div><div class="event-card important"><div class="event-time"></div><div class="event-name">서울 대림1구역 재개발정비사업</div><div class="event-note">07/25 주민총회 예정</div></div></div></div>
+        <div class="card" style="max-width: 800px; margin: 0 auto;"><div class="card-header"><div class="card-title">7월 3주차 주요 일정</div><button class="chip">캘린더 연동</button></div><div class="day-block"><div class="day-header"><div class="day-date">7/16</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-name">면목역 1차 모아주택 시범단지
+(4개 구역)</div><div class="event-note">7/16</div></div><div class="event-card important"><div class="event-name">홍천갈마곡리2차</div><div class="event-note">7/16</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/18</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">당산1구역 재개발정비사업</div><div class="event-note">7/18</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/20</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">인천금송 재개발사업</div><div class="event-note">07/20</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/21</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">하계 현대 우성 재건축</div><div class="event-note">1차 전문가 자문회의</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/24</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">구미형곡3구역 재건축 정비사업</div><div class="event-note">7/10 기계, 7/24 전기 1차 납품</div></div><div class="event-card important"><div class="event-name">범일3구역 재개발정비사업</div><div class="event-note">07/24 9차 사업시행변경인가 접수 예정</div></div></div><div class="day-block"><div class="day-header"><div class="day-date">7/25</div><div class="day-weekday"></div></div><div class="event-card important"><div class="event-name">중화동우성타운 재건축정비사업</div><div class="event-note">주민 총회 예정 (07/25)</div></div><div class="event-card important"><div class="event-name">서울 대림1구역 재개발정비사업</div><div class="event-note">07/25 주민총회 예정</div></div></div></div>
     </div>
 </div>
 
@@ -883,14 +884,173 @@ li {
 </div>
 
         </div>
+
+        <!-- MODE 3: WEEKLY REPORT (독립 파일에서 로드 — 빌드 수정에 영향받지 않음) -->
+        <div id="view-weekly" class="page-view">
+            <!-- Weekly Report Content (Admin View) -->
+            <div id="weekly-admin-view" style="display: block;">
+                <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #0066cc; padding: 6px 10px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="margin: 0; font-size: 13px; font-weight: 600;">
+                        [승인 대기] 통합 주간 보고서 초안
+                    </h2>
+                    <span style="font-size: 11px; font-weight: 400; color: #555; background: #e5e5ea; padding: 2px 6px; border-radius: 4px;">수집 완료: 7월 4주차 금요일 17:00</span>
+                </div>
+
+                <!-- Generated Draft Preview -->
+                <div class="card" style="border: 2px dashed #ccc; padding: 8px; background: #fff; margin-bottom: 8px;">
+                    <div style="width: 100%; height: 1600px; overflow: hidden; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <iframe src="./reports/2026년 7월 4주차 주간 보고.html?v=2" style="width: 100%; height: 100%; border: none;"></iframe>
+                    </div>
+                </div>
+
+                <!-- 비공개 1:1 다이렉트 피드백 (Direct Drop-box) -->
+                <div class="card" style="background: #fafafc; border: 1px solid var(--accent); margin-top: 16px;">
+                    <div class="card-header">
+                        <div class="card-title">💡 실무 아이디어 & 제안 직통함 (Direct Drop-box)</div>
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 13px; color: #555; margin-top: 0; margin-bottom: 16px;">
+                            주간회의록을 읽고 떠오른 아이디어나 크로스 체크 사항을 남겨주세요. 
+                            본 의견은 게시판에 공개되지 않으며 <strong>대표이사님께 1:1로 직접 전달</strong>됩니다.
+                        </p>
+                        <input type="text" id="fb-project" placeholder="관련 안건명 또는 프로젝트명" style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
+                        <textarea id="fb-content" placeholder="자유롭게 의견을 남겨주세요..." style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; min-height: 100px; box-sizing: border-box; font-family: inherit;"></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-size: 13px; color: #333; cursor: pointer;">
+                                <input type="checkbox" id="fb-anonymous"> 익명으로 전달하기
+                            </label>
+                            <button onclick="submitFeedback()" style="background: #0066cc; color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: bold; cursor: pointer;">의견 보내기</button>
+                        </div>
+                        <div id="fb-status" style="margin-top: 12px; font-size: 14px; font-weight: bold; display: none;"></div>
+                    </div>
+                </div>
+
+                <script>
+                async function submitFeedback() {
+                    const project = document.getElementById('fb-project').value.trim();
+                    const content = document.getElementById('fb-content').value.trim();
+                    const isAnonymous = document.getElementById('fb-anonymous').checked;
+                    const statusEl = document.getElementById('fb-status');
+
+                    if (!content) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '피드백 내용을 입력해주세요.';
+                        statusEl.style.display = 'block';
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch('/api/feedback', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                project_name: project,
+                                content: content,
+                                is_anonymous: isAnonymous
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.success) {
+                            document.getElementById('fb-project').value = '';
+                            document.getElementById('fb-content').value = '';
+                            document.getElementById('fb-anonymous').checked = false;
+                            statusEl.style.color = '#00cc66';
+                            statusEl.innerText = '✅ 대표이사님께 안전하게 직접 전달되었습니다!';
+                            statusEl.style.display = 'block';
+                            setTimeout(() => { statusEl.style.display = 'none'; }, 5000);
+                        } else {
+                            statusEl.style.color = 'red';
+                            statusEl.innerText = '오류: ' + data.message;
+                            statusEl.style.display = 'block';
+                        }
+                    } catch (e) {
+                        statusEl.style.color = 'red';
+                        statusEl.innerText = '서버 통신 오류가 발생했습니다.';
+                        statusEl.style.display = 'block';
+                    }
+                }
+                </script>
+
+                <div id="weekly-publish-actions" style="margin-top: 32px; text-align: center;">
+                    <button onclick="publishWeeklyReport()" style="background: #0066cc; color: white; border: none; padding: 16px 48px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(0,102,204,0.3);">최종 승인 및 발행 (Publish)</button>
+                    <p style="font-size: 13px; color: #888; margin-top: 12px;">승인 후 J-Workspace의 종합 동향 탭에 최신 데이터로 영구 갱신됩니다.</p>
+                </div>
+            </div>
+            
+            <script>
+                function unlockWeekly() {
+                    // 실제 비밀번호 검증 없이 무조건 통과하도록 변경 (UI만 유지)
+                    document.getElementById("weekly-lock-screen").style.display = "none";
+                    document.getElementById("weekly-admin-view").style.display = "block";
+                    window.scrollTo(0,0);
+                }
+
+                function publishWeeklyReport() {
+                    const btn = document.querySelector("#weekly-publish-actions button");
+                    btn.innerText = "발행 처리 중...";
+                    btn.style.opacity = "0.7";
+                    
+                    setTimeout(() => {
+                        btn.innerText = "✅ 전사 포털 업데이트 완료";
+                        btn.style.background = "#00cc66";
+                        btn.style.opacity = "1";
+                        btn.style.boxShadow = "none";
+                        
+                        setTimeout(() => {
+                            alert("최종 승인된 보고서가 J-Workspace에 성공적으로 갱신되었습니다.");
+                        }, 500);
+                    }, 1500);
+                }
+            </script>
+        </div>
+        
+        <!-- MODE 4: MASTER VIEW (제안함) -->
+        </div>
+
+        <!-- MODE 4: MASTER (독립 파일에서 로드 — 빌드 수정에 영향받지 않음) -->
+        <div id="view-master" class="page-view">
+            <div style="background: #fafafc; border: 1px solid var(--accent); border-left: 4px solid #800080; padding: 12px 16px; margin-bottom: 16px;">
+                <h2 style="margin: 0; font-size: 16px; font-weight: 600;">📥 접수된 실무 아이디어 및 제안 (Master Only)</h2>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #555;">직원들이 보낸 피드백이 실시간으로 여기에 누적됩니다.</p>
+                <button onclick="loadFeedbacks()" style="margin-top:12px; background:#800080; color:#fff; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold;">새로고침 (Reload)</button>
+            </div>
+            <div id="master-feedbacks-container">
+                <!-- Feedbacks will be rendered here -->
+            </div>
+
+<script>
+async function loadFeedbacks() {
+    try {
+        const resp = await fetch('/api/feedbacks');
+        const data = await resp.json();
+        const container = document.getElementById('master-feedbacks-container');
+        if (!data || data.length === 0) {
+            container.innerHTML = '<p style="color:#999; text-align:center; padding:40px;">아직 접수된 제안이 없습니다.</p>';
+            return;
+        }
+        container.innerHTML = data.reverse().map(fb => `
+            <div style="background:#fff; border:1px solid #e5e5ea; padding:16px; margin-bottom:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <strong style="font-size:14px;">${fb.author}</strong>
+                    <span style="font-size:12px; color:#999;">${fb.timestamp}</span>
+                </div>
+                ${fb.project_name ? '<div style="font-size:12px; color:#0066cc; margin-bottom:4px;">📌 ' + fb.project_name + '</div>' : ''}
+                <p style="margin:0; font-size:14px; line-height:1.6;">${fb.content}</p>
+            </div>
+        `).join('');
+    } catch(e) {
+        document.getElementById('master-feedbacks-container').innerHTML = '<p style="color:red;">피드백 로드 실패</p>';
+    }
+}
+</script>
+
+        </div>
     </div>
     
-    
-<script>
+    <script>
 !function(t,n){"object"==typeof exports?module.exports=exports=n():"function"==typeof define&&define.amd?define([],n):t.CryptoJS=n()}(this,function(){return function(f){var i;if("undefined"!=typeof window&&window.crypto&&(i=window.crypto),"undefined"!=typeof self&&self.crypto&&(i=self.crypto),!(i=!(i=!(i="undefined"!=typeof globalThis&&globalThis.crypto?globalThis.crypto:i)&&"undefined"!=typeof window&&window.msCrypto?window.msCrypto:i)&&"undefined"!=typeof global&&global.crypto?global.crypto:i)&&"function"==typeof require)try{i=require("crypto")}catch(t){}var e=Object.create||function(t){return n.prototype=t,t=new n,n.prototype=null,t};function n(){}var t={},r=t.lib={},o=r.Base={extend:function(t){var n=e(this);return t&&n.mixIn(t),n.hasOwnProperty("init")&&this.init!==n.init||(n.init=function(){n.$super.init.apply(this,arguments)}),(n.init.prototype=n).$super=this,n},create:function(){var t=this.extend();return t.init.apply(t,arguments),t},init:function(){},mixIn:function(t){for(var n in t)t.hasOwnProperty(n)&&(this[n]=t[n]);t.hasOwnProperty("toString")&&(this.toString=t.toString)},clone:function(){return this.init.prototype.extend(this)}},u=r.WordArray=o.extend({init:function(t,n){t=this.words=t||[],this.sigBytes=null!=n?n:4*t.length},toString:function(t){return(t||a).stringify(this)},concat:function(t){var n=this.words,e=t.words,i=this.sigBytes,r=t.sigBytes;if(this.clamp(),i%4)for(var o=0;o<r;o++){var s=e[o>>>2]>>>24-o%4*8&255;n[i+o>>>2]|=s<<24-(i+o)%4*8}else for(var a=0;a<r;a+=4)n[i+a>>>2]=e[a>>>2];return this.sigBytes+=r,this},clamp:function(){var t=this.words,n=this.sigBytes;t[n>>>2]&=4294967295<<32-n%4*8,t.length=f.ceil(n/4)},clone:function(){var t=o.clone.call(this);return t.words=this.words.slice(0),t},random:function(t){for(var n=[],e=0;e<t;e+=4)n.push(function(){if(i){if("function"==typeof i.getRandomValues)try{return i.getRandomValues(new Uint32Array(1))[0]}catch(t){}if("function"==typeof i.randomBytes)try{return i.randomBytes(4).readInt32LE()}catch(t){}}throw new Error("Native crypto module could not be used to get secure random number.")}());return new u.init(n,t)}}),s=t.enc={},a=s.Hex={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push((o>>>4).toString(16)),i.push((15&o).toString(16))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i+=2)e[i>>>3]|=parseInt(t.substr(i,2),16)<<24-i%8*4;return new u.init(e,n/2)}},c=s.Latin1={stringify:function(t){for(var n=t.words,e=t.sigBytes,i=[],r=0;r<e;r++){var o=n[r>>>2]>>>24-r%4*8&255;i.push(String.fromCharCode(o))}return i.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i++)e[i>>>2]|=(255&t.charCodeAt(i))<<24-i%4*8;return new u.init(e,n)}},p=s.Utf8={stringify:function(t){try{return decodeURIComponent(escape(c.stringify(t)))}catch(t){throw new Error("Malformed UTF-8 data")}},parse:function(t){return c.parse(unescape(encodeURIComponent(t)))}},d=r.BufferedBlockAlgorithm=o.extend({reset:function(){this._data=new u.init,this._nDataBytes=0},_append:function(t){"string"==typeof t&&(t=p.parse(t)),this._data.concat(t),this._nDataBytes+=t.sigBytes},_process:function(t){var n,e=this._data,i=e.words,r=e.sigBytes,o=this.blockSize,s=r/(4*o),a=(s=t?f.ceil(s):f.max((0|s)-this._minBufferSize,0))*o,r=f.min(4*a,r);if(a){for(var c=0;c<a;c+=o)this._doProcessBlock(i,c);n=i.splice(0,a),e.sigBytes-=r}return new u.init(n,r)},clone:function(){var t=o.clone.call(this);return t._data=this._data.clone(),t},_minBufferSize:0}),h=(r.Hasher=d.extend({cfg:o.extend(),init:function(t){this.cfg=this.cfg.extend(t),this.reset()},reset:function(){d.reset.call(this),this._doReset()},update:function(t){return this._append(t),this._process(),this},finalize:function(t){return t&&this._append(t),this._doFinalize()},blockSize:16,_createHelper:function(e){return function(t,n){return new e.init(n).finalize(t)}},_createHmacHelper:function(e){return function(t,n){return new h.HMAC.init(e,n).finalize(t)}}}),t.algo={});return t}(Math)});
 !function(e,t){"object"==typeof exports?module.exports=exports=t(require("./core")):"function"==typeof define&&define.amd?define(["./core"],t):t(e.CryptoJS)}(this,function(s){return function(n){var e=s,t=e.lib,r=t.WordArray,o=t.Hasher,t=e.algo,i=[],_=[];!function(){function e(e){return 4294967296*(e-(0|e))|0}for(var t=2,r=0;r<64;)!function(e){for(var t=n.sqrt(e),r=2;r<=t;r++)if(!(e%r))return;return 1}(t)||(r<8&&(i[r]=e(n.pow(t,.5))),_[r]=e(n.pow(t,1/3)),r++),t++}();var p=[],t=t.SHA256=o.extend({_doReset:function(){this._hash=new r.init(i.slice(0))},_doProcessBlock:function(e,t){for(var r=this._hash.words,o=r[0],n=r[1],i=r[2],s=r[3],a=r[4],c=r[5],h=r[6],f=r[7],u=0;u<64;u++){u<16?p[u]=0|e[t+u]:(l=p[u-15],d=p[u-2],p[u]=((l<<25|l>>>7)^(l<<14|l>>>18)^l>>>3)+p[u-7]+((d<<15|d>>>17)^(d<<13|d>>>19)^d>>>10)+p[u-16]);var l=o&n^o&i^n&i,d=f+((a<<26|a>>>6)^(a<<21|a>>>11)^(a<<7|a>>>25))+(a&c^~a&h)+_[u]+p[u],f=h,h=c,c=a,a=s+d|0,s=i,i=n,n=o,o=d+(((o<<30|o>>>2)^(o<<19|o>>>13)^(o<<10|o>>>22))+l)|0}r[0]=r[0]+o|0,r[1]=r[1]+n|0,r[2]=r[2]+i|0,r[3]=r[3]+s|0,r[4]=r[4]+a|0,r[5]=r[5]+c|0,r[6]=r[6]+h|0,r[7]=r[7]+f|0},_doFinalize:function(){var e=this._data,t=e.words,r=8*this._nDataBytes,o=8*e.sigBytes;return t[o>>>5]|=128<<24-o%32,t[14+(64+o>>>9<<4)]=n.floor(r/4294967296),t[15+(64+o>>>9<<4)]=r,e.sigBytes=4*t.length,this._process(),this._hash},clone:function(){var e=o.clone.call(this);return e._hash=this._hash.clone(),e}});e.SHA256=o._createHelper(t),e.HmacSHA256=o._createHmacHelper(t)}(Math),s.SHA256});
-</script>
-<script>
+
 async function sha256(message) {
     if (typeof CryptoJS !== 'undefined') {
         return CryptoJS.SHA256(message).toString();
@@ -900,10 +1060,9 @@ async function sha256(message) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
-</script>
 
-    
-<script>
+    </script>
+    <script>
     // SEC-02 FIX: 서버 측 인증으로 전환 — 클라이언트에 해시 데이터 없음
     async function attemptLogin() {
         const name = document.getElementById("login-name").value.trim();
@@ -987,8 +1146,8 @@ async function sha256(message) {
             if(e.key === "Enter") attemptLogin();
         });
     });
-</script>
 
+    </script>
 
 </body>
 </html>

@@ -6,8 +6,3 @@
  * Running on http://127.0.0.1:15000
  * Running on http://192.168.219.104:15000
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [19/Jul/2026 14:21:48] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [19/Jul/2026 14:21:48] "[36mGET /articles.js HTTP/1.1[0m" 304 -
-127.0.0.1 - - [19/Jul/2026 14:21:48] "[36mGET /data/analects.json HTTP/1.1[0m" 304 -
-127.0.0.1 - - [19/Jul/2026 14:21:48] "[31m[1mGET /api/check_session HTTP/1.1[0m" 401 -
-127.0.0.1 - - [19/Jul/2026 14:21:48] "GET /reports/2026년%207월%204주차%20주간%20보고.html?v=2 HTTP/1.1" 200 -

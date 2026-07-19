@@ -415,9 +415,143 @@ def get_feedbacks():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Protect sensitive static files (like the weekly report html/pdf if they exist in a protected folder)
-# Currently, the frontend loads an iframe to a local file or absolute path, which isn't secure. 
-# But this satisfies the basic requirement of server-side login.
+# ======================================================
+# 주간 계획서 이미지 업로드 API
+# ======================================================
+
+UPLOAD_DIR = os.path.join(os.path.dirname(__file__), 'reports', 'weekly', 'uploads')
+MANIFEST_FILE = os.path.join(UPLOAD_DIR, 'manifest.json')
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp', 'heic', 'pdf'}
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def load_manifest():
+    if os.path.exists(MANIFEST_FILE):
+        with open(MANIFEST_FILE, 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []
+
+def save_manifest(data):
+    os.makedirs(os.path.dirname(MANIFEST_FILE), exist_ok=True)
+    import fcntl
+    with open(MANIFEST_FILE, 'w', encoding='utf-8') as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        fcntl.flock(f, fcntl.LOCK_UN)
+
+@app.route('/api/upload', methods=['POST'])
+def upload_images():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "로그인이 필요합니다."}), 401
+
+    if 'files' not in request.files:
+        return jsonify({"success": False, "message": "파일이 선택되지 않았습니다."}), 400
+
+    files = request.files.getlist('files')
+    if not files or all(f.filename == '' for f in files):
+        return jsonify({"success": False, "message": "파일이 선택되지 않았습니다."}), 400
+
+    uploader = session.get('user_name', 'Unknown')
+    now = datetime.datetime.now()
+    year, week_num, _ = now.isocalendar()
+    week_folder = f"{year}-W{week_num:02d}"
+    save_dir = os.path.join(UPLOAD_DIR, week_folder)
+    os.makedirs(save_dir, exist_ok=True)
+
+    manifest = load_manifest()
+    uploaded = []
+
+    for f in files:
+        if f.filename == '':
+            continue
+        if not allowed_file(f.filename):
+            continue
+        # Check file size
+        f.seek(0, 2)
+        size = f.tell()
+        f.seek(0)
+        if size > MAX_FILE_SIZE:
+            continue
+
+        # Safe filename with timestamp
+        ext = f.filename.rsplit('.', 1)[1].lower()
+        safe_name = f"{uploader}_{now.strftime('%Y%m%d_%H%M%S')}_{len(uploaded)+1}.{ext}"
+        save_path = os.path.join(save_dir, safe_name)
+        f.save(save_path)
+
+        entry = {
+            "id": hashlib.md5(f"{now.isoformat()}{safe_name}".encode()).hexdigest()[:8],
+            "filename": safe_name,
+            "original_name": f.filename,
+            "uploader": uploader,
+            "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
+            "week": week_folder,
+            "size": size,
+            "path": f"reports/weekly/uploads/{week_folder}/{safe_name}"
+        }
+        manifest.append(entry)
+        uploaded.append(entry)
+
+    save_manifest(manifest)
+
+    return jsonify({
+        "success": True,
+        "message": f"{len(uploaded)}건 업로드 완료 ({uploader})",
+        "uploaded": uploaded
+    })
+
+@app.route('/api/uploads', methods=['GET'])
+def get_uploads():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "로그인이 필요합니다."}), 401
+
+    week = request.args.get('week', None)
+    manifest = load_manifest()
+
+    if week:
+        manifest = [m for m in manifest if m.get('week') == week]
+
+    # 최신순 정렬
+    manifest.sort(key=lambda x: x.get('timestamp', ''), reverse=True)
+    return jsonify(manifest)
+
+@app.route('/api/uploads/<path:filepath>')
+def serve_upload(filepath):
+    if not session.get('logged_in'):
+        return "Unauthorized", 401
+    upload_base = os.path.join(os.path.dirname(__file__), 'reports', 'weekly', 'uploads')
+    return send_from_directory(upload_base, filepath)
+
+@app.route('/api/upload/delete', methods=['POST'])
+def delete_upload():
+    if not session.get('logged_in') or not session.get('is_master'):
+        return jsonify({"success": False, "message": "권한이 없습니다."}), 401
+
+    data = request.get_json()
+    file_id = data.get('id', '')
+    manifest = load_manifest()
+    new_manifest = []
+    deleted = False
+
+    for entry in manifest:
+        if entry.get('id') == file_id:
+            fpath = os.path.join(os.path.dirname(__file__), entry.get('path', ''))
+            if os.path.exists(fpath):
+                os.remove(fpath)
+            deleted = True
+        else:
+            new_manifest.append(entry)
+
+    if deleted:
+        save_manifest(new_manifest)
+        return jsonify({"success": True, "message": "삭제 완료"})
+    return jsonify({"success": False, "message": "파일을 찾을 수 없습니다."}), 404
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 15000))
