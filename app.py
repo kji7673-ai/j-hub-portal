@@ -7,8 +7,8 @@ import requests
 from flask import Flask, jsonify, request, send_from_directory, session
 
 app = Flask(__name__, static_folder='.', static_url_path='')
-# 임시 비밀키 (실제 운영 시 랜덤 문자열 사용 필요)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", os.urandom(32).hex())
+# BUG-03 FIX: 고정 시크릿 키 (서버 재시작 시 세션 유지)
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "jh-2026-s3cr3t-k3y-f1x3d-d0-n0t-ch4ng3")
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
@@ -478,9 +478,10 @@ def upload_images():
         if size > MAX_FILE_SIZE:
             continue
 
-        # Safe filename with timestamp
+        # BUG-06 FIX: ASCII-safe 파일명 (한글 인코딩 문제 방지)
+        import uuid
         ext = f.filename.rsplit('.', 1)[1].lower()
-        safe_name = f"{uploader}_{now.strftime('%Y%m%d_%H%M%S')}_{len(uploaded)+1}.{ext}"
+        safe_name = f"{uuid.uuid4().hex[:8]}_{len(uploaded)+1}.{ext}"
         save_path = os.path.join(save_dir, safe_name)
         f.save(save_path)
 

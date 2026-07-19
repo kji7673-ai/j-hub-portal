@@ -23,6 +23,11 @@
                 if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
+                // BUG-02 FIX: Master 버튼 표시
+                if (data.isMaster) {
+                    const masterBtn = document.getElementById('btn-master');
+                    if (masterBtn) masterBtn.style.display = 'inline-block';
+                }
                 document.getElementById('login-screen').style.display = 'none';
             } else {
                 err.textContent = data.message || '이름 또는 비밀번호가 일치하지 않습니다.';
@@ -50,6 +55,11 @@
                 if(localStorage.getItem('jhub_badge_knowledge_master') === 'true') {
                     document.getElementById('user-profile-badge').innerHTML = '<span style="background: linear-gradient(135deg, #FFD700, #FDB931); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; margin-left: 6px; animation: badgeGlow 2s infinite;">지식 마스터 🏅</span>';
                 }
+                // BUG-02 FIX: 세션 복원 시 Master 버튼 표시
+                if (data.is_master) {
+                    const masterBtn = document.getElementById('btn-master');
+                    if (masterBtn) masterBtn.style.display = 'inline-block';
+                }
                 return;
             }
         } catch(e) { /* 로컬 파일 모드 */ }
@@ -76,8 +86,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        checkLogin();
+        // BUG-01 FIX: checkLogin() 제거 (미정의 함수였음)
         document.getElementById("login-pass").addEventListener("keypress", e => {
+            if(e.key === "Enter") attemptLogin();
+        });
+        document.getElementById("login-name").addEventListener("keypress", e => {
             if(e.key === "Enter") attemptLogin();
         });
     });
