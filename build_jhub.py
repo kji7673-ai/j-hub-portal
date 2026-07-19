@@ -657,9 +657,10 @@ html_template = f'''<!DOCTYPE html>
         <div class="mode-switch">
             <button id="btn-journal" class="mode-btn active" onclick="switchMode('journal')">Jinyang Journal</button>
             <button id="btn-workspace" class="mode-btn" onclick="switchMode('workspace')">J-Workspace</button>
+            <a href="./edu/index.html" style="display:inline-block; padding:8px 14px; font-size:13px; color:#0066cc; text-decoration:none; font-weight:600; border-radius:20px; border:1px solid #0066cc;">📚 교육자료</a>
         </div>
         <div>
-            <button onclick="document.getElementById('login-screen').style.display='flex'; localStorage.removeItem('jhub_logged_in'); document.getElementById('user-profile-badge').innerHTML='';" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
+            <button onclick="(async()=>{{try{{await fetch('/api/logout',{{method:'POST'}})}}catch(e){{}}localStorage.removeItem('jhub_logged_in');localStorage.removeItem('jhub_user_name');document.getElementById('login-screen').style.display='flex';document.getElementById('user-profile-badge').innerHTML='';}})();" style="background:transparent; border:1px solid #d2d2d7; color:#1d1d1f; padding: 4px 12px; font-size:12px; border-radius: 5px; cursor: pointer;">로그아웃</button>
         </div>
     </header>
 

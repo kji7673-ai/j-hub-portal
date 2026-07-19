@@ -39,28 +39,57 @@ def run_pipeline():
         from bs4 import BeautifulSoup
         import xml.etree.ElementTree as ET
         
-        # 실제 환경에서는 RSS 피드 등을 사용
-        url = "https://rss.hankyung.com/new/news_estate.xml"
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            xml_data = response.read()
+        # EXT-03 FIX: 다중 RSS 피드 + 카테고리 자동 분류
+        RSS_FEEDS = [
+            ("https://rss.hankyung.com/new/news_estate.xml", "부동산 · 경제", "한국경제"),
+            ("https://rss.hankyung.com/new/news_economy.xml", "정책 · 인허가", "한국경제"),
+            ("https://www.mk.co.kr/rss/30100041/", "부동산 · 경제", "매일경제"),
+            ("https://rss.hankyung.com/new/news_international.xml", "해외 동향", "한국경제"),
+        ]
         
-        root = ET.fromstring(xml_data)
-        for item in root.findall('.//item'):
-            title = item.find('title').text if item.find('title') is not None else "제목 없음"
-            desc = item.find('description').text if item.find('description') is not None else ""
-            pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
-            
-            # BS4로 html 태그 제거
-            soup = BeautifulSoup(desc, "html.parser")
-            excerpt = soup.get_text()[:200]
-            
-            articles.append({
-                "category": "부동산 · 경제",
-                "title": title,
-                "excerpt": excerpt,
-                "meta": f"한국경제 | {pub_date}"
-            })
+        # 카테고리 키워드 매핑 (제목 기반 자동 분류)
+        CATEGORY_KEYWORDS = {
+            "ESG · 친환경": ["ESG", "친환경", "탄소", "ZEB", "제로에너지", "녹색", "그린"],
+            "테크 · 프롭테크": ["AI", "프롭테크", "스마트", "디지털", "자동화", "메타버스", "로봇"],
+            "미래 도시": ["도시재생", "스마트시티", "미래", "혁신도시", "공공주택"],
+            "해외 동향": ["미국", "중국", "일본", "유럽", "해외", "글로벌"],
+            "정책 · 인허가": ["정책", "인허가", "법", "규제", "의무화", "시행령", "조례"],
+        }
+        
+        def classify_category(title, default_cat):
+            for cat, keywords in CATEGORY_KEYWORDS.items():
+                if any(kw in title for kw in keywords):
+                    return cat
+            return default_cat
+        
+        for feed_url, default_cat, publisher in RSS_FEEDS:
+            try:
+                req = urllib.request.Request(feed_url, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    xml_data = response.read()
+                
+                root = ET.fromstring(xml_data)
+                for item in root.findall('.//item'):
+                    title = item.find('title').text if item.find('title') is not None else "제목 없음"
+                    desc = item.find('description').text if item.find('description') is not None else ""
+                    pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
+                    
+                    soup = BeautifulSoup(desc, "html.parser")
+                    excerpt = soup.get_text()[:200].strip()
+                    
+                    articles.append({
+                        "category": classify_category(title, default_cat),
+                        "title": title,
+                        "excerpt": excerpt if excerpt else f"{title}에 대한 최신 동향 기사입니다.",
+                        "meta": f"{publisher} | {pub_date}"
+                    })
+                    
+                    if len(articles) >= 100:
+                        break
+                        
+            except Exception as feed_err:
+                print(f"⚠️ RSS 피드 실패 ({feed_url}): {feed_err}")
+                continue
             
             if len(articles) >= 100:
                 break

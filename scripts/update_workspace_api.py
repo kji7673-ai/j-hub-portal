@@ -9,6 +9,9 @@ import os
 import sys
 from datetime import datetime
 
+# EXT-02 FIX: scripts/ 디렉토리를 모듈 탐색 경로에 추가
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 WORKSPACE_JSON = os.path.join(os.path.dirname(__file__), '../data/workspace.json')
 
 def load_workspace():
@@ -53,7 +56,8 @@ def fetch_real_data(api_key):
         return generate_dummy_api_data()
 
 def main():
-    api_key = sys.argv[1] if len(sys.argv) > 1 else None
+    # EXT-01/EXT-02 FIX: 환경변수에서도 API Key 탐색
+    api_key = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('SEOUL_API_KEY', None)
     
     print("🚀 J-Workspace API 연동 파이프라인 시작...")
     

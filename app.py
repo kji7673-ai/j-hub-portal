@@ -298,16 +298,27 @@ def submit_feedback():
         "content": content
     }
     
+    # ADD-07 FIX: 파일 잠금으로 동시 접속 시 Race Condition 방지
+    import fcntl
+    feedback_path = os.path.join(os.path.dirname(__file__), 'feedback_db.json')
     try:
-        feedback_list = []
-        if os.path.exists('feedback_db.json'):
-            with open('feedback_db.json', 'r', encoding='utf-8') as f:
+        # 파일이 없으면 빈 배열로 생성
+        if not os.path.exists(feedback_path):
+            with open(feedback_path, 'w', encoding='utf-8') as f:
+                json.dump([], f)
+        
+        with open(feedback_path, 'r+', encoding='utf-8') as f:
+            fcntl.flock(f, fcntl.LOCK_EX)  # 배타적 잠금
+            try:
                 feedback_list = json.load(f)
-        
-        feedback_list.append(feedback_entry)
-        
-        with open('feedback_db.json', 'w', encoding='utf-8') as f:
+            except json.JSONDecodeError:
+                feedback_list = []
+            
+            feedback_list.append(feedback_entry)
+            f.seek(0)
+            f.truncate()
             json.dump(feedback_list, f, ensure_ascii=False, indent=4)
+            fcntl.flock(f, fcntl.LOCK_UN)  # 잠금 해제
             
         return jsonify({"success": True, "message": "Feedback safely delivered."})
     except Exception as e:

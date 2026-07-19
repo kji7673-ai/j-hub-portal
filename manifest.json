@@ -2,7 +2,7 @@
   "name": "Jinyang Hub | 진양 저널",
   "short_name": "J-Hub",
   "description": "진양 엔지니어링 건축사 사무소 전사 포털",
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f5f7",
   "theme_color": "#0066cc",
