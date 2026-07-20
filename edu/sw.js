@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'jhub-pwa-v1784536408';
+const CACHE_NAME = 'jhub-pwa-v1784550600';
 const urlsToCache = [
   './index.html',
   './manifest.json',
