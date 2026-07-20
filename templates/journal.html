@@ -64,8 +64,9 @@
         <span style="color:var(--text-secondary); font-size:12px;" id="analects-date"></span>
     </div>
     <div style="text-align:center; padding:24px 0; border-bottom:1px solid #f0f0f0;">
-        <h1 id="analects-hanja" style="margin:0 0 12px; font-size:34px; font-weight:600; letter-spacing:2px;"></h1>
-        <p id="analects-ko" style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.374px;"></p>
+        <h1 id="analects-hanja" style="margin:0 0 16px; font-size:34px; font-weight:600; letter-spacing:2px;"></h1>
+        <div style="color:var(--text-secondary); font-size:13px; font-weight:600; text-transform:uppercase; margin-bottom:6px;">[해석]</div>
+        <p id="analects-ko" style="margin:0; font-size:18px; font-weight:600; letter-spacing:-0.374px; color:#1d1d1f;"></p>
     </div>
     <div>
         <h4 style="margin:0 0 8px; font-size:12px; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.5px;">실무 적용</h4>
@@ -119,18 +120,27 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="/articles.js"></script>
+<script src="{{ '/articles.js' | auto_v }}"></script>
 <script>
 function escJ(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 
 // Analects
 fetch('/data/analects.json').then(r=>r.json()).then(data=>{
-    const t=new Date(),dy=Math.floor((t-new Date(t.getFullYear(),0,0))/864e5),it=data[dy%data.length];
+    const t=new Date(),dy=Math.floor((t-new Date(t.getFullYear(),0,0))/864e5),item=data[dy%data.length];
     document.getElementById('analects-date').textContent=`${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')}`;
-    document.getElementById('analects-hanja').textContent=it.hanja;
-    document.getElementById('analects-ko').textContent=it.korean;
-    let cm=it.characters.map(c=>`<span style="color:${escJ(c.color)}">${escJ(c.char)}(${escJ(c.reading)})</span>`).join(' ');
-    document.getElementById('analects-meaning').innerHTML=`<div style="font-weight:600;margin-bottom:12px;font-size:15px;">[한자 풀이] ${cm}</div><div>[실무 적용] ${escJ(it.application)}</div>`;
+    document.getElementById('analects-hanja').textContent=item.hanja;
+    document.getElementById('analects-ko').textContent=item.korean;
+    let charMeaning = item.characters.map(c => `<span style="color:${escJ(c.color)}">${escJ(c.char)}<span style="font-size:12px; color:#666;">(${escJ(c.reading)})</span></span>`).join(' ');
+    let fullMeaning = `
+        <div style="margin-bottom:16px;">
+            <span style="display:inline-block; font-size:12px; color:#0066cc; font-weight:600; margin-bottom:6px; background:#f0f4f8; padding:4px 8px; border-radius:4px;">[한자 풀이]</span>
+            <div style="font-weight:600; font-size:16px; line-height:1.5;">${charMeaning}</div>
+        </div>
+        <div>
+            <span style="display:inline-block; font-size:12px; color:#86868b; font-weight:600; margin-bottom:6px; background:#f5f5f7; padding:4px 8px; border-radius:4px;">[실무 적용]</span>
+            <div style="font-size:14px; line-height:1.6; color:#333;">${escJ(item.application)}</div>
+        </div>`;
+    document.getElementById('analects-meaning').innerHTML = fullMeaning;
     document.getElementById('analects-widget').style.display='flex';
 }).catch(()=>{});
 
