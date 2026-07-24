@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="J-Hub">
     <link rel="apple-touch-icon" href="icon-192.png">
-    <link rel="manifest" href="manifest.json?v=1784898544">
+    <link rel="manifest" href="manifest.json?v=1784899036">
     
     <!-- Cache Busting Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -425,7 +425,7 @@
         .dashboard-grid { grid-template-columns: 1fr; }
     }
     </style>
-    <script src="search_index.js?v=1784898544"></script>
+    <script src="search_index.js?v=1784899036"></script>
     <script>
         // Dark Mode Logic
         function initTheme() {
@@ -593,7 +593,7 @@
 <a href="#AI를-직원처럼-부리는CEO의-매니지먼트-룰">AI를 직원처럼 부리는CEO의 매니지먼트 룰</a>
 </div>
                 <div class="breadcrumb"><a href="index.html">홈</a> > 🌱 AI 입문 (경영자/의사결정자) > <span>현재 문서</span></div>
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom: 8px;"><span class="level-tag level-1">🌱 Lv.1 입문</span><span style="font-size:14px; color:var(--ink-muted); font-weight:600;">⏱️ 예상 읽기 시간: 4분</span></div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom: 8px;"><span class="level-tag level-1">🌱 Lv.1 입문</span><span style="font-size:14px; color:var(--ink-muted); font-weight:600;">⏱️ 예상 읽기 시간: 5분</span></div>
                 <h1 class="page-title" style="margin-top: 0;">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</h1>
 
                 <div class="md-content gated-content" id="mdContentWrapper">
@@ -636,21 +636,12 @@
 .pdf-viewer-wrap {
   position: relative;
   width: 100%;
-  padding-bottom: 141.4%; /* A4 ratio */
-  background: #f5f5f7;
+  height: 75vh;
+  background: #2a2a2c;
   border-radius: 12px;
-  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   box-shadow: rgba(0,0,0,0.12) 0 4px 24px;
-}
-.pdf-viewer-wrap iframe,
-.pdf-viewer-wrap embed,
-.pdf-viewer-wrap object {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
 }
 .viewer-controls {
   display: flex;
@@ -704,12 +695,55 @@
 <p>코드를 한 줄도 모르는 50대 중반 건축사가<br/>AI로 업무 시스템을 바꾼 현장 기록</p>
 <span class="author-badge">✍️ 김중일 저 · (주)진양엔지니어링건축사사무소</span>
 </div>
-<div class="pdf-viewer-wrap">
-<iframe src="data/AI_JI.pdf#toolbar=1&amp;navpanes=0&amp;scrollbar=1&amp;view=FitH" title="AI를 직원처럼 부리는 CEO의 매니지먼트 룰" type="application/pdf">
-<p>PDF 뷰어를 지원하지 않는 브라우저입니다. 
-    <a download="" href="data/AI_JI.pdf">여기를 클릭하여 PDF를 다운로드</a>하세요.</p>
-</iframe>
+<div class="pdf-viewer-wrap" id="pdf-viewer-wrap">
+<div id="pdf-container" style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
+<p id="pdf-loading-msg" style="padding: 40px; font-weight: bold; color: #fff; font-size: 16px;">📚 뷰어 엔진 로딩 중... 잠시만 기다려주세요.</p>
 </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script>
+  (function() {
+    var url = 'data/AI_JI.pdf';
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    var loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(function(pdf) {
+      var container = document.getElementById('pdf-container');
+      container.innerHTML = '';
+
+      var canvases = [];
+      for (var i = 1; i <= pdf.numPages; i++) {
+          var canvas = document.createElement('canvas');
+          canvas.style.display = "block";
+          canvas.style.margin = "0 auto 20px auto";
+          canvas.style.maxWidth = "100%";
+          canvas.style.width = "100%";
+          canvas.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+          container.appendChild(canvas);
+          canvases.push(canvas);
+      }
+
+      for (var i = 1; i <= pdf.numPages; i++) {
+        (function(pageNum, canvasElement) {
+          pdf.getPage(pageNum).then(function(page) {
+            var scale = 2.0; 
+            var viewport = page.getViewport({scale: scale});
+            var context = canvasElement.getContext('2d');
+            canvasElement.height = viewport.height;
+            canvasElement.width = viewport.width;
+            var renderContext = { canvasContext: context, viewport: viewport };
+            page.render(renderContext);
+          });
+        })(i, canvases[i-1]);
+      }
+    }, function (reason) {
+      console.error(reason);
+      var loadingMsg = document.getElementById('pdf-loading-msg');
+      if (loadingMsg) loadingMsg.innerText = "PDF를 불러오는데 실패했습니다.";
+    });
+  })();
+</script>
 <div class="viewer-controls">
 <a class="btn-download" download="AI를_직원처럼_부리는_CEO의_매니지먼트룰_v1.pdf" href="data/AI_JI.pdf">📥 PDF 다운로드</a>
 <a class="btn-fullscreen" href="data/AI_JI.pdf" target="_blank">🔲 새 탭에서 전체화면</a>
