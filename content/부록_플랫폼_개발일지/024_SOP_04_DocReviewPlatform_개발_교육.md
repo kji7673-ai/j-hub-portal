@@ -180,7 +180,7 @@ cp .env.example .env
 `.env` 파일을 편집합니다:
 ```env
 # 필수: Google Gemini API 키 (AI 분석용)
-GOOGLE_API_KEY=your_gemini_api_key_here
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY_HERE
 
 # 필수: 국가법령정보센터 OC 키 (법령 검색용)
 LAW_API_OC=KIMjooman0416
