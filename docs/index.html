@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>전체 목차 및 학습 로드맵 - (주)진양엔지니어링 AI 교육 플랫폼</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --ink: #000000;
+            --body: #222222;
+            --body-muted: #666666;
+            --canvas: #ffffff;
+            --canvas-parchment: #fcfcfc;
+            --surface-black: #000000;
+            --hairline: #e0e0e0;
+            --blueprint-blue: #0055ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+        }
+
+        body {
+            background-color: var(--canvas-parchment);
+            color: var(--body);
+            line-height: 1.8;
+            letter-spacing: -0.3px;
+            overflow-x: hidden;
+        }
+
+        /* Global Nav */
+        .global-nav {
+            background-color: var(--surface-black);
+            color: #ffffff;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            opacity: 0; /* Hidden on Splash */
+            transition: opacity 0.5s ease-in;
+            pointer-events: none;
+        }
+        .global-nav.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-brand {
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        /* Top Menu (Desktop) */
+        .top-menu {
+            display: flex;
+            list-style: none;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .top-menu > li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .top-menu > li:hover {
+            background-color: #222;
+        }
+
+        /* Mega Menu Dropdown */
+        .dropdown-menu {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            min-width: 320px;
+            background-color: var(--canvas);
+            border: 1px solid var(--hairline);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            list-style: none;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 2100;
+        }
+        /* Right-align the last two dropdowns to prevent right-side overflow */
+        .top-menu > li:nth-last-child(-n+2) .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+        .top-menu > li:hover .dropdown-menu {
+            display: flex;
+        }
+        .dropdown-menu li {
+            border-bottom: 1px solid var(--hairline);
+        }
+        .dropdown-menu a {
+            padding: 12px 20px;
+            display: block;
+            color: var(--ink);
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+            color: var(--blueprint-blue);
+        }
+
+        .dropdown-menu::-webkit-scrollbar { width: 6px; }
+        .dropdown-menu::-webkit-scrollbar-track { background: var(--canvas); }
+        .dropdown-menu::-webkit-scrollbar-thumb { background: #ccc; }
+
+        /* Mobile Hamburger Button */
+        #mobile-menu-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+        #mobile-menu-btn span {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        /* Sidebar & Overlay */
+        .sidebar-overlay {
+            position: fixed; top: 60px; left: 0; width: 100%; height: calc(100vh - 60px);
+            background: rgba(0,0,0,0.4); z-index: 1400; display: none; opacity: 0; transition: opacity 0.3s;
+        }
+        .sidebar-overlay.open { display: block; opacity: 1; }
+
+        .sidebar {
+            position: fixed; top: 60px; left: -320px; width: 300px; height: calc(100vh - 60px);
+            background-color: var(--canvas); border-right: 1px solid var(--hairline);
+            box-shadow: 5px 0 15px rgba(0,0,0,0.05); z-index: 1500;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow-y: auto; padding: 20px 0;
+        }
+        .sidebar.open { left: 0; }
+        
+        .entry-list-item { padding: 15px 24px; border-bottom: 1px solid var(--hairline); cursor: pointer; transition: background 0.2s; }
+        .entry-list-item:hover { background-color: #f5f5f5; }
+        .entry-list-item.active { border-left: 4px solid var(--blueprint-blue); background-color: #f0f5ff; }
+        .entry-list-item h4 { font-size: 14px; color: var(--ink); font-weight: 600; margin-bottom: 4px; line-height:1.4; }
+        .entry-list-item a { text-decoration: none; color: inherit; display: block; }
+
+        /* Main Container */
+        .main-container {
+            margin-top: 60px;
+            min-height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Splash Page */
+        #splash-page {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 140px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            opacity: 1;
+            transform: translateY(0);
+            position: absolute;
+            top: 40px;
+            z-index: 100;
+        }
+        #splash-page.fade-out {
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+
+        .splash-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--body-muted);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        .manifesto-text {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            font-weight: 300;
+            color: var(--ink);
+            text-align: left;
+            margin-bottom: 60px;
+            word-break: keep-all;
+        }
+        
+        .manifesto-text strong {
+            font-weight: 700;
+            box-shadow: inset 0 -12px 0 rgba(0, 85, 255, 0.1);
+        }
+
+        .btn-start {
+            background-color: var(--ink);
+            color: var(--canvas);
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .btn-start:hover {
+            background-color: var(--blueprint-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,85,255,0.3);
+        }
+
+        /* Viewer Page */
+        #viewer-page {
+            max-width: 900px;
+            width: 100%;
+            background: var(--canvas);
+            padding: 60px 80px;
+            border: 1px solid var(--hairline);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            position: relative;
+        }
+        #viewer-page.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .viewer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--hairline);
+            padding-bottom: 20px;
+        }
+        
+        .viewer-nav-btn {
+            background: transparent;
+            border: 1px solid var(--ink);
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--ink);
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .viewer-nav-btn:hover {
+            background: var(--ink);
+            color: var(--canvas);
+        }
+        .viewer-nav-btn.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .viewer-content-wrapper { text-align: left; color: var(--body); }
+        
+        /* Markdown / HTML Content Styling */
+        .viewer-content-wrapper h3 { font-size: 26px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); color: var(--ink); }
+        .viewer-content-wrapper h4 { font-size: 20px; font-weight: 600; margin: 30px 0 15px; color: var(--ink); }
+        .viewer-content-wrapper p { margin-bottom: 16px; line-height: 1.8; }
+        .viewer-content-wrapper ul, .viewer-content-wrapper ol { margin-bottom: 24px; padding-left: 24px; line-height: 1.8; }
+        .viewer-content-wrapper li { margin-bottom: 8px; }
+        
+        /* Table Styling */
+        .viewer-content-wrapper table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 14px; background-color: var(--canvas); border: 1px solid var(--hairline); }
+        .viewer-content-wrapper th, .viewer-content-wrapper td { border: 1px solid #dcdcdc; padding: 14px 16px; text-align: left; vertical-align: top; }
+        .viewer-content-wrapper th { background-color: #f5f5f5; font-weight: 600; color: var(--ink); }
+        .viewer-content-wrapper tr:nth-child(even) { background-color: #fafafc; }
+        
+        /* Block/Alert Styling */
+        .viewer-content-wrapper .alert { padding: 20px; border-radius: 8px; margin: 20px 0; background-color: #f8f9fa; border: 1px solid var(--hairline); border-left: 4px solid var(--blueprint-blue); }
+        .viewer-content-wrapper .alert-info { background-color: #f0f5ff; border-left-color: var(--blueprint-blue); }
+        .viewer-content-wrapper .alert-secondary { background-color: #fafafc; border-left-color: #555; }
+        
+        /* Definition List Styling */
+        .viewer-content-wrapper dl { margin-bottom: 24px; }
+        .viewer-content-wrapper dt { font-weight: 700; font-size: 16px; margin-top: 16px; color: var(--ink); }
+        .viewer-content-wrapper dd { margin-bottom: 16px; padding-left: 16px; color: var(--body-muted); border-left: 2px solid var(--hairline); }
+        .viewer-content-wrapper strong { font-weight: 700; color: var(--ink); }
+
+        @media (max-width: 768px) {
+            .top-menu { display: none; }
+            #mobile-menu-btn { display: flex; }
+            .manifesto-text { font-size: 1.2rem; }
+            #viewer-page { padding: 30px 20px; border: none; box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+    <style>
+        body { background-color: #fcfcfc; color: #222; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        #viewer-page { max-width: 800px; width: 100%; background-color: #ffffff; padding: 60px 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #e0e0e0; margin: 40px auto; }
+        @media (max-width: 768px) {
+            #viewer-page { padding: 30px 20px; border: none; box-shadow: none; margin: 0 auto; }
+            .main-container { padding-top: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="global-nav visible" id="global-nav" style="transform: translateY(0);">
+        <button id="mobile-menu-btn" onclick="toggleSidebar()">
+            ☰ <span>목차</span>
+        </button>
+        <a href="index.html" class="nav-brand">
+            (주)진양엔지니어링 AI 교육 플랫폼
+        </a>
+        <ul class="top-menu" id="top-menu">
+            <li>📖 시작하기 전에
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">전체 목차 및 학습 로드맵</a></li>
+                </ul>
+            </li>
+            <li>제1장. 도입 및 총론
+                <ul class="dropdown-menu">
+                    <li><a href="page_1.html">문서 1. 여는 글: AI와 마주한 건축의 미래</a></li>
+                    <li><a href="page_2.html">문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</a></li>
+                </ul>
+            </li>
+            <li>제2장. AI 및 시스템 기본 이해
+                <ul class="dropdown-menu">
+                    <li><a href="page_3.html">문서 3. AI를 다루는 16가지 핵심 사고방식</a></li>
+                    <li><a href="page_4.html">문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</a></li>
+                    <li><a href="page_15.html">문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</a></li>
+                </ul>
+            </li>
+            <li>제3장. 행동 지침 및 사내 문화
+                <ul class="dropdown-menu">
+                    <li><a href="page_5.html">문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</a></li>
+                    <li><a href="page_6.html">문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</a></li>
+                </ul>
+            </li>
+            <li>제4장. 보안 및 품질 관리
+                <ul class="dropdown-menu">
+                    <li><a href="page_7.html">문서 7. 전사 보안 규정 및 데이터 해시화</a></li>
+                    <li><a href="page_8.html">문서 8. AI 환각 방지 및 교차 검증 매뉴얼</a></li>
+                </ul>
+            </li>
+            <li>제5장. 실무 시스템 활용
+                <ul class="dropdown-menu">
+                    <li><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></li>
+                </ul>
+            </li>
+            <li>제6장. 사내 소통 및 문화
+                <ul class="dropdown-menu">
+                    <li><a href="page_10.html">문서 10. 진양 저널: 사내 소통과 게이미피케이션</a></li>
+                </ul>
+            </li>
+            <li>제7장. 실무 밀착형 튜토리얼 (SOP)
+                <ul class="dropdown-menu">
+                    <li><a href="page_11.html">문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</a></li>
+                    <li><a href="page_12.html">문서 12. 아찔한 실패 사례와 방어 프롬프트</a></li>
+                    <li><a href="page_13.html">문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</a></li>
+                    <li><a href="page_14.html">문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</a></li>
+                    <li><a href="page_16.html">문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</a></li>
+                </ul>
+            </li>
+            <li>제4장. 시스템 연동 및 자동화 실무
+                <ul class="dropdown-menu">
+                    <li><a href="page_17.html">네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <div class="sidebar" id="entry-list">
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">📖 시작하기 전에</div>
+        <div class="entry-list-item active">
+            <a href="index.html" style="text-decoration:none; color:inherit;"><h4>전체 목차 및 학습 로드맵</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제1장. 도입 및 총론</div>
+        <div class="entry-list-item">
+            <a href="page_1.html" style="text-decoration:none; color:inherit;"><h4>문서 1. 여는 글: AI와 마주한 건축의 미래</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_2.html" style="text-decoration:none; color:inherit;"><h4>문서 2. 설계 생애주기 통합: 진양 AI 7대 비전</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제2장. AI 및 시스템 기본 이해</div>
+        <div class="entry-list-item">
+            <a href="page_3.html" style="text-decoration:none; color:inherit;"><h4>문서 3. AI를 다루는 16가지 핵심 사고방식</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_4.html" style="text-decoration:none; color:inherit;"><h4>문서 4. 1인 1플랫폼의 명암: 코어는 하나로, 엣지는 개인화로</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_15.html" style="text-decoration:none; color:inherit;"><h4>문서 3-B. 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제3장. 행동 지침 및 사내 문화</div>
+        <div class="entry-list-item">
+            <a href="page_5.html" style="text-decoration:none; color:inherit;"><h4>문서 5. 매뉴얼을 넘어 실전으로: 우리가 마주할 4가지 절벽</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_6.html" style="text-decoration:none; color:inherit;"><h4>문서 6. K-제너러티브 배치 알고리즘 V2: 데크 우선주의와 리듬 그리드</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제4장. 보안 및 품질 관리</div>
+        <div class="entry-list-item">
+            <a href="page_7.html" style="text-decoration:none; color:inherit;"><h4>문서 7. 전사 보안 규정 및 데이터 해시화</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_8.html" style="text-decoration:none; color:inherit;"><h4>문서 8. AI 환각 방지 및 교차 검증 매뉴얼</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제5장. 실무 시스템 활용</div>
+        <div class="entry-list-item">
+            <a href="page_9.html" style="text-decoration:none; color:inherit;"><h4>문서 9. 통합 사업성 검토 플랫폼 활용 가이드</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제6장. 사내 소통 및 문화</div>
+        <div class="entry-list-item">
+            <a href="page_10.html" style="text-decoration:none; color:inherit;"><h4>문서 10. 진양 저널: 사내 소통과 게이미피케이션</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제7장. 실무 밀착형 튜토리얼 (SOP)</div>
+        <div class="entry-list-item">
+            <a href="page_11.html" style="text-decoration:none; color:inherit;"><h4>문서 11. 실전 튜토리얼: 가상의 대상지 사업성 검토 따라하기</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_12.html" style="text-decoration:none; color:inherit;"><h4>문서 12. 아찔한 실패 사례와 방어 프롬프트</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_13.html" style="text-decoration:none; color:inherit;"><h4>문서 13. 즉시 복사해서 쓰는 마법의 프롬프트 템플릿</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_14.html" style="text-decoration:none; color:inherit;"><h4>문서 14. AI 배치 실전 SOP: 계산값·프롬프트·체크리스트 완전판</h4></a>
+        </div>
+        <div class="entry-list-item">
+            <a href="page_16.html" style="text-decoration:none; color:inherit;"><h4>문서 15. 핵심 용어 해설집 (배치·지하·법규 편)</h4></a>
+        </div>
+        <div style="padding: 15px 24px 5px; font-size: 12px; font-weight: bold; color: #666;">제4장. 시스템 연동 및 자동화 실무</div>
+        <div class="entry-list-item">
+            <a href="page_17.html" style="text-decoration:none; color:inherit;"><h4>네이버 밴드 ↔ 진양저널 주간회의록 안전 연동 가이드</h4></a>
+        </div>
+
+    </div>
+
+    <div class="main-container">
+        <div id="viewer-page" style="display:block;">
+            <div class="viewer-header">
+                <span class="viewer-nav-btn disabled" style="visibility:hidden;">◀ 이전 글</span>
+
+                <div style="text-align:center;">
+                    <span style="font-size: 12px; color: #666; display:block; margin-bottom:4px;">📖 시작하기 전에</span>
+                    <span style="font-weight:600; font-size: 14px;">문서 1 / 18</span>
+                </div>
+                <a href="page_1.html" class="viewer-nav-btn">다음 글 ▶</a>
+
+            </div>
+            
+            <div class="viewer-content-wrapper" style="color: #222;">
+                <h3>진양엔지니어링 AI 플랫폼 매뉴얼 — 전체 지도</h3>
+<p>처음 오셨나요? 이 페이지 하나만 먼저 읽으시면 전체 매뉴얼의 구조가 한눈에 보입니다.<br>
+당신의 역할과 숙련도에 따라 <strong>어디서 시작할지</strong>를 먼저 확인하십시오.</p>
+
+<div class="row" style="margin-top:24px;">
+  <div class="col-md-4 mb-3">
+    <div style="border:2px solid #3182ce;border-radius:12px;padding:18px;height:100%;">
+      <h5 style="color:#3182ce;">👶 입사 1년 차 / 처음 접하는 분</h5>
+      <p style="font-size:13px;">AI가 뭔지, 어떻게 말해야 하는지부터 배웁니다.</p>
+      <ol style="font-size:13px;padding-left:18px;">
+        <li>문서 1 (여는 글)</li>
+        <li>문서 3 (16가지 사고방식)</li>
+        <li>문서 3-B (첫 프롬프트 실습)</li>
+        <li>문서 8 (환각 방지)</li>
+        <li>문서 13 (프롬프트 템플릿)</li>
+      </ol>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div style="border:2px solid #276749;border-radius:12px;padding:18px;height:100%;">
+      <h5 style="color:#276749;">🏗️ 3~5년 차 실무 설계자</h5>
+      <p style="font-size:13px;">법규 검토, 사업성 분석, 배치 설계에 AI를 연결합니다.</p>
+      <ol style="font-size:13px;padding-left:18px;">
+        <li>문서 4 (플랫폼 철학)</li>
+        <li>문서 9 (사업성 검토 플랫폼)</li>
+        <li>문서 11 (튜토리얼)</li>
+        <li>문서 6 (배치 알고리즘 V2)</li>
+        <li>문서 14 (배치 SOP 완전판)</li>
+      </ol>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div style="border:2px solid #744210;border-radius:12px;padding:18px;height:100%;">
+      <h5 style="color:#744210;">🎯 팀장 / 선임 건축사</h5>
+      <p style="font-size:13px;">조직 문화, 품질 관리, 배치 알고리즘 고도화를 다룹니다.</p>
+      <ol style="font-size:13px;padding-left:18px;">
+        <li>문서 2 (7대 비전)</li>
+        <li>문서 5 (4가지 절벽)</li>
+        <li>문서 7 (보안 규정)</li>
+        <li>문서 12 (실패 사례)</li>
+        <li>문서 6 + 14 (배치 알고리즘)</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<h4 style="margin-top:30px; color:var(--blueprint-blue);">📚 전체 챕터 목차</h4>
+<table style="width:100%;font-size:13px;border-collapse:collapse;">
+  <tr style="background:#e2e8f0;"><th style="padding:8px;border:1px solid #cbd5e0;">문서</th><th style="padding:8px;border:1px solid #cbd5e0;">제목</th><th style="padding:8px;border:1px solid #cbd5e0;">대상</th><th style="padding:8px;border:1px solid #cbd5e0;">소요시간</th></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">1</td><td style="padding:7px;border:1px solid #cbd5e0;">여는 글: AI와 마주한 건축의 미래</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">5분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">2</td><td style="padding:7px;border:1px solid #cbd5e0;">진양 AI 7대 비전</td><td style="padding:7px;border:1px solid #cbd5e0;">팀장 이상</td><td style="padding:7px;border:1px solid #cbd5e0;">10분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">3</td><td style="padding:7px;border:1px solid #cbd5e0;">AI를 다루는 16가지 핵심 사고방식</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">20분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">3-B</td><td style="padding:7px;border:1px solid #cbd5e0;">🆕 첫 프롬프트 실습: 5분 만에 AI 대화 시작하기</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원 (필수)</td><td style="padding:7px;border:1px solid #cbd5e0;">5분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">4</td><td style="padding:7px;border:1px solid #cbd5e0;">1인 1플랫폼의 명암</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">10분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">5</td><td style="padding:7px;border:1px solid #cbd5e0;">매뉴얼을 넘어 실전으로: 4가지 절벽</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">10분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">6</td><td style="padding:7px;border:1px solid #cbd5e0;">K-제너러티브 배치 알고리즘 V2</td><td style="padding:7px;border:1px solid #cbd5e0;">설계팀</td><td style="padding:7px;border:1px solid #cbd5e0;">20분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">7</td><td style="padding:7px;border:1px solid #cbd5e0;">전사 보안 규정</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">5분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">8</td><td style="padding:7px;border:1px solid #cbd5e0;">AI 환각 방지 및 교차 검증</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원 (필수)</td><td style="padding:7px;border:1px solid #cbd5e0;">15분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">9</td><td style="padding:7px;border:1px solid #cbd5e0;">통합 사업성 검토 플랫폼 활용</td><td style="padding:7px;border:1px solid #cbd5e0;">설계/기획팀</td><td style="padding:7px;border:1px solid #cbd5e0;">15분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">10</td><td style="padding:7px;border:1px solid #cbd5e0;">진양 저널: 소통과 게이미피케이션</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">5분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">11</td><td style="padding:7px;border:1px solid #cbd5e0;">실전 튜토리얼: 사업성 검토 따라하기</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">30분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">12</td><td style="padding:7px;border:1px solid #cbd5e0;">아찔한 실패 사례와 방어 프롬프트</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">10분</td></tr>
+  <tr style="background:#f7fafc;"><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">13</td><td style="padding:7px;border:1px solid #cbd5e0;">즉시 복사해서 쓰는 프롬프트 템플릿</td><td style="padding:7px;border:1px solid #cbd5e0;">전직원</td><td style="padding:7px;border:1px solid #cbd5e0;">5분</td></tr>
+  <tr><td style="padding:7px;border:1px solid #cbd5e0;text-align:center;">14</td><td style="padding:7px;border:1px solid #cbd5e0;">AI 배치 실전 SOP: 계산값·프롬프트·체크리스트</td><td style="padding:7px;border:1px solid #cbd5e0;">설계팀</td><td style="padding:7px;border:1px solid #cbd5e0;">30분</td></tr>
+</table>
+            </div>
+            
+            <div style="margin-top: 80px; border-top: 1px solid #e0e0e0; padding-top: 30px; text-align: center; color: #666; font-size: 0.9rem; line-height: 1.8;">
+                발행: <strong>(주)진양엔지니어링건축사사무소 대표이사 김중일 건축사</strong><br>
+                문서 버전: <strong>v1.18</strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('entry-list').classList.toggle('open');
+            document.getElementById('sidebar-overlay').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

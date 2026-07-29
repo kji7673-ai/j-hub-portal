@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사 교육 자료 매뉴얼</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Apple Design System & Paged Media CSS */
+        :root {
+            --primary: #0055ff;
+            --primary-focus: #0033aa;
+            --ink: #000000;
+            --body: #000000;
+            --body-muted: #86868b;
+            --canvas: #ffffff;
+            --canvas-parchment: #f9f9f9;
+            --surface-tile-1: #111111;
+            --surface-tile-2: #2a2a2c;
+            --hairline: #000000;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'SF Pro Display', 'Noto Sans KR', sans-serif;
+            color: var(--ink);
+            background: var(--canvas-parchment);
+            line-height: 1.47;
+            letter-spacing: -0.02em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Paged Media - Auto Page Breaking */
+        @page {
+            size: A4 landscape; /* Default to landscape for Guidebooks/Presentations. Can be overridden */
+            margin: 0; /* Let the content control the padding to allow full-bleed tiles */
+        }
+        
+        /* The container for a single logical section. Will page-break automatically if content overflows */
+        .page {
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            padding: 80px 100px;
+            page-break-after: always; /* Force start on a new page */
+            break-inside: auto;       /* Let Chrome break inside if it's super long */
+            overflow: hidden;
+        }
+        
+        /* Surface Colors */
+        .tile-light { background: var(--canvas); color: var(--ink); }
+        .tile-dark { background: var(--surface-tile-1); color: #ffffff; }
+        
+        /* Typography */
+        .hairline-bottom { border-bottom: 1px solid var(--hairline); padding-bottom: 16px; margin-bottom: 32px; }
+        .display-lg { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 24px; }
+        .lead { font-size: 24px; font-weight: 500; color: var(--body-muted); margin-bottom: 40px; }
+        .body-text { font-size: 17px; line-height: 1.6; }
+        
+        /* Common Components */
+        .term-box {
+            background: var(--canvas-parchment);
+            border-left: 4px solid var(--primary);
+            border: 1px solid var(--hairline);
+            padding: 20px;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .tile-dark .term-box {
+            background: var(--canvas-parchment);
+            border-left: 4px solid var(--primary);
+            border: 1px solid var(--hairline);
+            padding: 20px;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        
+        .grid-2, .grid-column {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        
+        /* Mermaid Fixes */
+        .mermaid {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            page-break-inside: avoid; /* Keep flowcharts in one piece */
+        }
+        .mermaid svg { max-width: 100%; height: auto; }
+        .mermaid .nodeLabel { font-size: 14px !important; font-weight: 500; line-height: 1.3; padding: 5px; }
+
+        /* Footers */
+        .page-footer {
+            position: absolute;
+            bottom: 30px;
+            left: 100px;
+            right: 100px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--body-muted);
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 15px;
+        }
+        .tile-dark .page-footer { border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+    
+        /* Typography Dramatic Contrast */
+        .markdown-body h1 {
+            font-size: 3rem !important;
+            font-weight: 800 !important;
+            letter-spacing: -1px !important;
+            margin-bottom: 2rem !important;
+            border-bottom: 2px solid var(--ink) !important;
+            padding-bottom: 0.5rem !important;
+            line-height: 1.2 !important;
+        }
+        .markdown-body h2 {
+            font-size: 2.2rem !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.5px !important;
+            margin-top: 3rem !important;
+            margin-bottom: 1.5rem !important;
+            line-height: 1.3 !important;
+        }
+        .markdown-body h3 {
+            font-size: 1.5rem !important;
+            font-weight: 600 !important;
+            margin-top: 2rem !important;
+            margin-bottom: 1rem !important;
+        }
+        .markdown-body p, .markdown-body li {
+            font-size: 1.05rem !important;
+            line-height: 1.8 !important;
+            color: #222 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Jinja2 Content Injection -->
+    <div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제1장. 핵심 AI 기초와 지식 경영</h2>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-left:4px solid #000; border: 1px solid #000;; margin-bottom:15px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="color:var(--ink); font-size:16px;">👨‍💼 김대표 (50대 중반, 대표이사)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "김사원, 이번 장 <strong>『핵심 AI 기초와 지식 경영』</strong> 내용을 좀 살펴보려고 하네. 이게 실무에서 정확히 왜 필요한 건가? 가장 중요한 핵심만 딱 짚어서 설명해 줄 수 있겠나?"
+            </p>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border-left:4px solid var(--primary); border: 1px solid #000;; margin-bottom:30px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="font-weight:bold; font-size:16px;">🧑‍💻 MZ 김사원 (기술 특화 신입)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "네, 대표님! 전혀 어렵지 않습니다. 제가 대표님께서 바로 이해하실 수 있도록 아래에 실무 핵심 자료를 요약해 두었습니다. 함께 보시죠!"
+            </p>
+        </div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>3대 핵심 AI 모델 비교 및 실무 가이드</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            안티그래비티는 교체 가능한 '두뇌(모델)'를 탑재하는 시스템입니다. 어떤 두뇌를 선택하느냐에 따라 <strong>작업 퀄리티와 과금(비용)</strong>이 극심하게 차이납니다. 작업 전 목적에 맞는 모델을 선택하는 것이 가장 중요합니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">1. 모델별 특성 및 요금 구조</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-font-weight:bold;">
+                    <strong style="font-weight:bold; font-size:16px;">1️⃣ Gemini 3.1 Pro (디폴트 추천)</strong><br>
+                    <strong>[가성비 & 밸런스]</strong> 안티그래비티 생태계(코딩, 렌더링)와 가장 긴밀하게 결합된 구글의 최고 모델입니다. 초거대 컨텍스트를 지원하여 수백 페이지의 렌더링이나 복잡한 파이프라인 구동에 <strong>가장 안정적입니다.</strong>
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:16px;">3️⃣ GPT-4o (트러블슈팅 전용)</strong><br>
+                    <strong>[명확한 지시 수행]</strong> 속도가 매우 빠르고 밸런스가 좋습니다. 코딩 중 알 수 없는 에러가 지속될 때 잠시 전환하여 빠른 해결책을 얻어내는 용도로 추천합니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:#fff3e0; border-color:#ff9800;">
+                    <strong style="color:#f57c00; font-size:16px;">2️⃣ Claude 4.6 Opus (특수 기획용)</strong><br>
+                    <strong>[최고 지능 & 고비용]</strong> 가장 똑똑하고 글솜씨가 유려하지만, 타 모델 대비 <strong>수십 배 비쌉니다.</strong> 복잡한 법규 해석이나 제안서 서론 작성 등 고난도 <strong>논리 검증에만 제한적으로</strong> 사용해야 요금 폭탄을 피할 수 있습니다.
+                </div>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">2. 문맥 한계 (Context Limit)와 모듈화의 비밀</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            아무리 뛰어난 AI라도 한 대화방에서 기억할 수 있는 한계(보통 300~400페이지 분량)가 있습니다. 한계치에 다다르면 AI가 과거 지시를 깜빡하거나 멈춥니다.<br>
+            <strong>👉 극복 방안:</strong> 한 번에 통째로 렌더링하지 않고 <strong>'모듈(Chapter)' 단위로 잘게 쪼개어 작업한 뒤, 마지막에 파이썬 엔진으로 한 번에 병합하는 것</strong>이 이 한계를 우회하는 우리 시스템의 최고 핵심 기술입니다.
+        </div>
+
+        <div style="margin-top:40px;">
+        <h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 실무 상황별 추천 모델 선택 가이드</h3>
+        <pre class="mermaid" style="background:transparent;">
+        flowchart TD
+            A{작업의 성격은?}
+            A -- 보고서 렌더링 / 코딩 --> B[Gemini 3.1 Pro]
+            A -- 복잡한 논리 검증 / 제안서 --> C[Claude 4.6 Opus]
+            A -- 단순 에러 디버깅 --> D[GPT-4o]
+            
+            C -.-> E[⚠️ 주의: 매우 비싼 요금]
+            B -.-> F[가성비 및 안정성 최상]
+            style B fill:var(--primary),stroke:var(--primary),stroke-width:2px,color:#fff
+            style C fill:#f57c00,stroke:#f57c00,stroke-width:2px,color:#fff
+        </pre>
+        </div>
+
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>AI 시스템 필수 개념</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            플랫폼 기반의 건축 실무를 수행하기 위해 반드시 알아야 할 AI 필수 용어와 개념입니다.
+        </p>
+        
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">1. 거대 언어 모델 (LLM, Large Language Model)</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--ink);">
+                수많은 텍스트 문서를 학습하여 사람처럼 문장을 이해하고 생성할 수 있는 AI입니다. 우리 회사의 법규 검토서 및 일일 동향 보고서를 작성하는 핵심 지능입니다.
+            </p>
+        </div>
+        
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">2. 프롬프트 엔지니어링 (Prompt Engineering)</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--ink);">
+                AI에게 원하는 결과물을 얻어내기 위해 질문(프롬프트)을 정교하게 설계하는 기술입니다. 역할(Role), 작업(Task), 형식(Format)을 명확히 지정하는 것이 중요합니다.
+            </p>
+        </div>
+        
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">3. AI 환각 현상 (Hallucination)</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--ink);">
+                AI가 사실이 아닌 정보나 거짓된 수치를 마치 정답인 것처럼 그럴듯하게 대답하는 현상입니다. 건축 법규나 용적률 검토 시 이 환각을 방지하기 위해 항상 원문 교차 검증(Cross-check)과 인간의 개입(Human-in-the-loop)이 필요합니다.
+            </p>
+        </div>
+        
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">4. 에이전트 (Agent)</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--ink);">
+                단순히 질문에 답하는 챗봇을 넘어, 스스로 도구(코드 실행, 파일 읽기, API 호출 등)를 사용하여 주어진 목표를 달성하는 능동적인 AI 시스템입니다. (예: Google Antigravity)
+            </p>
+        </div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[지식 경영] AI 에이전트 마크다운(MD) 생태계</h3>
+<div class="page tile-light">
+    <div class="content-wrap grid-2">
+        <div class="grid-column">
+            <h2 class="display-lg hairline-bottom">제3장. [지식 경영] AI 에이전트 마크다운(MD) 생태계</h2>
+            <p class="body-text" style="margin-bottom:30px;">
+                진양엔지니어링의 AI 시스템에서 마크다운(<code>.md</code>) 파일은 단순한 메모장이 아닙니다. 에이전트의 헌법, 기술(스킬), 경험치, 그리고 전사 데이터베이스를 유기적으로 구성하는 <strong>거대한 지식 신경망</strong>입니다.
+            </p>
+            
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935;">
+                <strong style="color:#d32f2f; font-size:14px;">1. 시스템 코어 헌법 (AGENTS.md)</strong><br>
+                에이전트가 채팅을 시작할 때 <strong>가장 먼저 읽고 절대적으로 복종</strong>하는 글로벌 룰입니다. 보안 인증 규정, 문서 버전 표기 원칙, 치명적 오류 회피 수칙 등 워크스페이스의 뿌리가 담겨 있습니다.
+            </div>
+
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#1e88e5; margin-top:15px;">
+                <strong style="color:#1976d2; font-size:14px;">2. 기능 모듈 매뉴얼 (SKILL.md)</strong><br>
+                에이전트가 특정 임무(예: 삽도 생성, 문서 렌더링, 규모 검토)를 수행할 때 장착하는 <strong>전용 무기 사용법</strong>입니다. 개별 스킬 폴더 안에 격리되어 독립적으로 관리됩니다.
+            </div>
+        </div>
+        
+        <div class="grid-column" style="margin-top:60px;">
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00;">
+                <strong style="color:#f57c00; font-size:14px;">3. 지식 베이스 (Knowledge Base)</strong><br>
+                모든 대화방(세션)이 실시간으로 참조하고 업데이트하는 <strong>중앙 기억 장치(RAM)</strong>입니다.<br>
+                • <code>법규_핵심요약.md</code>: 축적된 조례 및 지식 공유<br>
+                • <code>실무_교훈.md</code>: 실시간 오류 및 극복 노하우
+            </div>
+            
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#43a047; margin-top:15px;">
+                <strong style="color:#388e3c; font-size:14px;">4. 전사 통합 실무교훈 (Global DB)</strong><br>
+                매일 에이전트들이 겪은 치명적인 실수와 그 해결책(SOP)이 <strong>최종적으로 누적 기록되는 영구 보관소(ROM)</strong>입니다. 매일 아침 스케줄러가 이를 읽어내어 모든 에이전트의 교육 데이터로 병합합니다.
+            </div>
+
+            <!-- MD Ecosystem Flowchart -->
+           
+
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>구글의 두 모델: NotebookLM과 Antigravity</h3>
+<div class="page tile-light">
+    <div class="content-wrap grid-2">
+        <div class="grid-column">
+            <h2 class="display-lg hairline-bottom">제4장. 구글의 두 모델: NotebookLM과 Antigravity</h2>
+            <p class="body-text" style="margin-bottom:30px;">
+                두 시스템 모두 구글(Google)의 강력한 Gemini 모델을 엔진으로 사용하지만, 그 역할은 확연히 다릅니다. 이 둘은 경쟁 관계가 아니라 <strong>완벽한 상호 보완(Synergy) 관계</strong>로 작동하며 데이터를 공유할 수 있습니다.
+            </p>
+            
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935;">
+                <strong style="color:#d32f2f; font-size:16px;">1. NotebookLM: 맞춤형 지능형 비서</strong><br><br>
+                • <strong>어원:</strong> <strong>L</strong>anguage <strong>M</strong>odel(언어 모델)의 약자로, 대규모 언어 모델이 결합된 '지능형 노트'라는 뜻입니다.<br>
+                • <strong>역할:</strong> 업로드된 문서만 읽고 환각 없이 요약하는 <strong>'수동적 조력자'</strong>입니다. 책상 위에서 수천 장의 법규를 검토하는 똑똑한 비서의 두뇌입니다.
+            </div>
+
+            <div class="term-box" style="background:var(--canvas-parchment); border-color:#1e88e5; margin-top:15px;">
+                <strong style="color:#1976d2; font-size:16px;">2. Antigravity (안티그래비티): 능동형 실무 동료</strong><br><br>
+                • <strong>어원 (反重力):</strong> 무거운 단순 반복 업무(중력)의 사슬을 끊고, 실무자를 무중력 상태처럼 가볍게 날게 하겠다는 구글 딥마인드의 비전이 담긴 이름입니다.<br>
+                • <strong>역할:</strong> 직접 키보드를 두드려 코드를 짜고, 터미널 명령어를 실행하며, 문서를 렌더링하는 <strong>'능동적 수석 엔지니어'</strong>입니다.
+            </div>
+        </div>
+        
+        <div class="grid-column">
+            <h3 class="display-md" style="margin-bottom:15px; color:#43a047;">🔄 두 시스템의 데이터 공유 및 시너지 파이프라인</h3>
+            <div class="term-box" style="background:#e8f5e9; border-color:#43a047;">
+                대표이사님께서 질문하신 <strong>"두 모델 간의 공유"</strong>는 전사 자동화의 핵심 파이프라인입니다. 두 시스템은 아래와 같은 흐름으로 데이터를 공유합니다.<br><br>
+                
+                <strong>[STEP 1. 지식의 이관 (Antigravity ➡️ NotebookLM)]</strong><br>
+                안티그래비티가 그동안 축적한 절대 규칙 문서(<code>AGENTS.md</code>)와 수십 개의 <code>SKILL.md</code> 파일들을 NotebookLM에 업로드합니다. 이제 NotebookLM은 우리 회사의 모든 실무 노하우를 통달하게 됩니다.<br><br>
+
+                <strong>[STEP 2. 레시피 추출 (NotebookLM ➡️ 사람)]</strong><br>
+                NotebookLM에게 "창신10구역 통합보고서를 만들려면 안티그래비티에게 어떻게 명령해야 해?"라고 물어보면, 완벽한 '프롬프트 레시피'를 짜줍니다.<br><br>
+
+                <strong>[STEP 3. 실행 및 렌더링 (사람 ➡️ Antigravity)]</strong><br>
+                그 레시피를 안티그래비티 대화창에 그대로 복사해 넣으면, 안티그래비티가 스스로 파이썬 엔진을 돌려 단 몇 초 만에 10장짜리 PDF 보고서를 찍어냅니다.
+            </div>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>05</span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>운영 환경 및 대화 기술</h3>
+<div class="page tile-light">
+<div class="part-divider">
+<div class="part-number">Part 2. 시스템 기초 및 프롬프트</div>
+<h2 class="display-lg hairline-bottom" style="display:none;">제6장. 운영 환경 및 대화 기술</h2>
+<h1 class="part-title">제6장. 운영 환경 및 대화 기술</h1>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>AI 환각(Hallucination) 방지 및 교차 검증 매뉴얼</h3>
+<p class="body-text" style="margin-bottom:20px;">
+<strong>[Human-in-the-Loop 대원칙]</strong> AI의 계산 결과(법규, 개요)를 맹신하지 마십시오. 최종 검수와 법적 책임은 반드시 인간(건축사)에게 있습니다. 아래 3단계 교차 검증을 반드시 수행하십시오.
+            </p>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-color:#d93025; background:#fff;">
+<strong style="color:#d93025; font-size:14px;">1. 지적도 데이터 추출 검증</strong><br/><br/>
+                        • <strong>면적 검증:</strong> AI가 추출한 '총 대지면적 합계'와 VWorld에서 측정한 '전체 폴리곤 면적' 오차율이 1% 미만인지 대조합니다.<br/>
+                        • <strong>샘플링:</strong> 추출된 100개 필지 중 무작위 2~3개 지번을 뽑아 실제 토지이음(eum.go.kr) 지목/면적과 육안 대조합니다.
+                    </div>
+<div class="term-box" style="border-color:#d93025; background:#fff;">
+<strong style="color:#d93025; font-size:14px;">2. 법규 검토 결과 검증</strong><br/><br/>
+                        • <strong>시행일 확인:</strong> AI가 답변한 조례의 [시행일자]가 가장 최신인지 법제처(law.go.kr) 원문 링크를 눌러 크로스체크합니다.<br/>
+                        • <strong>예외 조항:</strong> AI는 일반론을 제시하므로, 해당 구역이 '역사문화환경 보존지역' 등 예외적 규제에 묶여 있는지 토지이음 확인서를 최종 점검합니다.
+                    </div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#d93025; background:#fff;">
+<strong style="color:#d93025; font-size:14px;">3. 건축개요(규모검토) 검증</strong><br/><br/>
+                        • <strong>합계 공식 체크:</strong> 지상 연면적 + 지하 연면적 = 총 연면적이 맞는지 엑셀로 한 번 더 Sum()을 돌려봅니다.<br/>
+                        • <strong>주차 대수:</strong> 조례상 요구되는 세대당 주차대수 산식(예: 85㎡ 초과 1.5대)이 역산했을 때 소수점 올림 처리가 정확히 법정 대수를 충족하는지 검증합니다.<br/>
+                        • <strong>모아타운 임대:</strong> 임대 제공 시 종상향분 50%의 1/2 공식을 정확히 탔는지 검산합니다.
+                    </div>
+</div>
+</div>
+</div>
+<div class="page-footer"><span>제10장. 환각 방지 데이터 교차 검증법</span><span>08</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[핵심] 실전 에러 극복 '마법의 프롬프트'</h3>
+<p class="body-text" style="margin-bottom:30px;">
+                오류 발생 시 당황하지 마십시오. 아래의 초록색 <strong>프롬프트(명령어)</strong> 박스 텍스트를 그대로 복사해서 AI 채팅창에 붙여넣기만 하면 시스템이 문제를 즉시 자가 수리합니다.
+            </p>
+<div style="text-align:center; margin-bottom: 20px;">
+<img alt="AI 복구" src="images/robot.jpg" style="max-width: 100%; height: auto; height:80px;  box-shadow:0 4px 10px rgba(0,0,0,0.1);"/>
+</div>
+<div class="grid-2">
+<div class="grid-column">
+<div style="margin-bottom: 24px;">
+<strong style="color:var(--ink); font-size:15px;">❌ 에러 1. 표 글씨가 너무 작아 임원진 보고 불가 현상</strong>
+<p style="font-size:12px; color:#666; margin: 6px 0;">많은 열이 하나의 표에 구겨져 들어가 HTML 렌더링 가독성이 붕괴될 때.</p>
+<div class="prompt-box">"모든 표는 무조건 14px 이상으로 키우고, 열이 5개를 초과하면 표를 강제로 2개로 분할해서 렌더링해 줘."</div>
+</div>
+<div style="margin-bottom: 24px;">
+<strong style="color:var(--ink); font-size:15px;">❌ 에러 2. 지번 데이터 무단 축약 (누락) 현상</strong>
+<p style="font-size:12px; color:#666; margin: 6px 0;">AI가 귀찮아서 36개 필지 중 5개만 쓰고 '외 31필지'로 뭉뚱그릴 때.</p>
+<div class="prompt-box">"지번 데이터 임의 요약 절대 금지. 시간 걸려도 좋으니 36개 필지 전수 다 표에 빠짐없이 기록해."</div>
+</div>
+<div style="margin-bottom: 24px;">
+<strong style="color:var(--ink); font-size:15px;">❌ 에러 3. 대화방 멈춤/응답 없음 (세션 크래시)</strong>
+<p style="font-size:12px; color:#666; margin: 6px 0;">어제 하던 방대한 작업이 먹통이 되어 날아갈 위기에 처했을 때.</p>
+<div class="prompt-box">"recover_session.py 스크립트 실행해서, 어제 멈춘 대화방(ID: 350cc...)의 작업 기억과 로그를 지금 이 방으로 전부 복구해서 합쳐 줘."</div>
+</div>
+</div>
+<div class="grid-column">
+<div style="margin-bottom: 24px;">
+<strong style="color:var(--ink); font-size:15px;">❌ 에러 4. 도면 삽도가 배경 지도와 엇나가는 현상</strong>
+<p style="font-size:12px; color:#666; margin: 6px 0;">캐드 선형 투영법(DXF용)을 이미지(PNG) 렌더링에 써서 좌표가 밀릴 때.</p>
+<div class="prompt-box">"투영법이 어긋났어. 캐드용 선형 상수 쓰지 말고, VWorld 배경이랑 똑같이 Web Mercator (EPSG:3857) 좌표계 함수 적용해서 줌 레벨 오토로 맞춰서 다시 그려줘."</div>
+</div>
+<div style="margin-bottom: 24px;">
+<strong style="color:var(--ink); font-size:15px;">❌ 에러 5. 템플릿에 타 현장 주소가 묻어나는 하드코딩 충돌</strong>
+<p style="font-size:12px; color:#666; margin: 6px 0;">용문동 보고서를 템플릿으로 만들었더니 강남 보고서에 용문동 주소가 튀어나올 때.</p>
+<div class="prompt-box">"보고서를 공용 템플릿으로 승격 시킬 건데, 하드코딩된 특정 현장 수치(예: 26번지) 남기지 말고, {{전체면적}} 처럼 변수(머스태치)로 전부 치환해 줘."</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer"><span>제11장. 실전 에러 마법의 프롬프트</span><span>09</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>프롬프트 엔지니어링 'RTF 공식'</h3>
+<p class="body-text" style="margin-bottom:24px;">
+                AI에게 가장 완벽한 대답을 얻어내려면 글로벌 스탠다드인 <strong>RTF 프레임워크</strong>에 맞춰 지시해야 합니다. AI는 눈치가 없기 때문에 구체적으로 쪼개서 명령할수록 똑똑해집니다.
+            </p>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-color:#1e88e5; background:#f0f8ff;">
+<strong style="color:#1e88e5; font-size:15px;">R (Role) : 역할 부여</strong><br/><br/>
+                        AI가 어떤 전문가의 페르소나를 가질지 지정합니다.<br/>
+                        • <strong>Bad:</strong> "이거 검토해줘."<br/>
+                        • <strong>Good:</strong> <span style="font-weight:bold;">"너는 20년 차 베테랑 서울시 정비사업 전문 건축사야."</span> (AI가 건축사 수준의 전문 용어와 법규를 활성화합니다)
+                    </div>
+<div class="term-box" style="border-color:#fbbc04; background:#fffdf0;">
+<strong style="color:#fbbc04; font-size:15px;">T (Task) : 명확한 작업 지시</strong><br/><br/>
+                        정확히 무엇을 해야 하는지 목표와 범위를 한정합니다.<br/>
+                        • <strong>Bad:</strong> "보고서 써줘."<br/>
+                        • <strong>Good:</strong> <span style="color:#e65100;">"제공된 은평구 도면 데이터를 바탕으로 모아타운 임대 세대수 산출표를 계산해줘."</span>
+</div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#34a853; background:#f1f8e9;">
+<strong style="color:#34a853; font-size:15px;">F (Format) : 출력 형식 지정</strong><br/><br/>
+                        결과물이 어떤 형태로 나와야 하는지 강제합니다.<br/>
+                        • <strong>Bad:</strong> "보기 좋게 해줘."<br/>
+                        • <strong>Good:</strong> <span style="color:#2e7d32;">"결과는 무조건 14px 폰트 크기의 표 형식으로 만들고, 마크다운 코드로 출력해."</span>
+</div>
+<div style="background:var(--ink); color:#ffffff; padding:15px;  font-size:13px; line-height:1.5; margin-top:10px;">
+<strong>[실전 조합 예시]</strong><br/>
+                        "너는 20년차 건축사야(Role). 내가 준 지번들의 노후도를 계산해서(Task), 엑셀로 복사하기 쉬운 표 형태로 요약해줘(Format)."
+                    </div>
+</div>
+</div>
+</div>
+<div class="page-footer"><span>제9장. 프롬프트 RTF 공식</span><span>07</span>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-left:4px solid #000; border: 1px solid #000;; margin-top:40px; margin-bottom:15px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="color:var(--ink); font-size:16px;">👨‍💼 김대표 (50대 중반, 대표이사)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "아하! 자네가 정리해준 자료와 설명을 같이 보니까 이제 확실히 이해가 되네. 이런 식으로 잘 정리해두면 우리 직원들도 금방 익히고 따라올 수 있겠어. 수고했네!"
+            </p>
+        </div>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제2장. 전사 IT 용어 및 보안 규정</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>기초 IT 용어 5분 해설집 (Glossary)</h3>
+<p class="body-text" style="margin-bottom:24px;">건축 실무자에게 낯선 시스템 용어들을 가장 직관적인 비유로 설명합니다. 이 책을 읽기 전 반드시 숙지해 주십시오.</p>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">1. API (Application Programming Interface) = 웨이터</strong><br/>
+                        식당 주방(관공서 DB)에 직접 들어갈 수 없으니, 웨이터(API)에게 메뉴판(요청)을 주면 정확히 조리된 음식(데이터)만 가져다주는 통로입니다. 화면 전체를 긁어오는 크롤링(Crawling)보다 100배 안정적입니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">2. 퍼지 매칭 (Fuzzy Matching) = 융통성 있는 채점관</strong><br/>
+                        '수권소위위원회'와 '수권소위원회'처럼 글자가 미세하게 달라도 융통성을 발휘해 "같은 단어의 오타"로 간주하는 똘똘한 비교 알고리즘입니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">3. 해시화 (Anonymization) = 자동 모자이크</strong><br/>
+                        민감한 기밀인 '용문동 26번지'를 AI가 알아서 '[Y구역]'으로 모자이크 처리하여 외부 유출을 원천 차단하는 필수 보안 기술입니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">4. 파이프라인 (Pipeline) = 컨베이어 벨트 공정</strong><br/>
+                        석유가 관(파이프)을 타고 흐르며 정제되듯, 원시 데이터(도면, 뉴스 등)가 입력되면 <b>[추출 → 가공 → 조립 → PDF 출력]</b>까지 중간에 사람의 개입 없이 물 흐르듯 자동 완성되는 '소프트웨어 컨베이어 벨트'를 뜻합니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">5. KPI 카드 (Key Performance Indicator) = 요약 전광판</strong><br/>
+                        가장 중요한 핵심 숫자(총 대지면적, 용적률, 세대수 등)를 뽑아내어, 보고서 맨 앞장에 큼직한 상자로 띄워주는 디자인 기법입니다. 경영진이 3초 만에 사업성을 판단하게 돕는 1등 공신입니다.
+                    </div>
+</div>
+<div class="grid-column">
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">6. Web Mercator (EPSG:3857) = 지구본 펴기</strong><br/>
+                        캐드(DXF) 도면과 VWorld 지도의 좌표계가 달라서 그림이 엇나갈 때, 귤껍질(지구본)을 평면으로 깔끔하게 펴는 수학 공식입니다. 삽도가 위성지도에 완벽히 맞물리게 합니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">7. SSOT (Single Source of Truth) = 절대 법전</strong><br/>
+                        여러 명의 직원이 동시에 AI를 써도 일관된 퀄리티가 나오도록, 회사 전체가 바라보는 단 한 권의 절대 규칙 문서(<code>AGENTS.md</code>)를 의미합니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">8. LaunchAgent = 강제 기상 스케줄러</strong><br/>
+                        맥(Mac) 컴퓨터가 덮여서 잠자고 있어도, 아침 9시가 되면 스스로 깨어나 보고서를 찍어내도록 맥의 멱살을 잡고 깨우는(Wake) 애플의 강력한 시스템입니다.
+                    </div>
+<div class="term-box">
+<strong style="font-weight:bold; font-size:14px;">9. CSV (Comma-Separated Values) = 만능 데이터 혈관</strong><br/>
+                        무거운 엑셀과 달리 쉼표(,)로만 데이터를 구분하는 순수한 텍스트입니다. 지번과 면적을 담아두면, AI가 환각 없이 완벽하게 수식을 연산하게 해주는 <b>'데이터 혈관'</b>이자 동적 렌더링의 핵심입니다.
+                    </div>
+</div>
+</div>
+</div>
+<div class="page-footer"><span>제2장. 용어 사전</span><span>04</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>전사 보안 규정 및 가명 처리</h3>
+<div class="page tile-light">
+<div class="content-wrap grid-2">
+<div class="grid-column">
+<h2 class="display-lg hairline-bottom">제17장. 전사 보안 규정 및 가명 처리</h2>
+<p class="body-text">
+                    인공지능의 가장 큰 리스크는 정보 유출입니다. 진양엔지니어링은 이를 원천 차단하는 강력한 2중 보안 장치를 시스템(AGENTS.md) 최우선 규칙으로 강제합니다.
+                </p>
+<div class="term-box" style="border-color:#d93025; background:#fff0f0;">
+<strong style="color: #d93025; font-size:14px;">[보안 규정 1] 데이터 해시화 (가명 처리) 의무</strong><br/>
+                    • 모든 보고서 작성 시, 원본 데이터의 실제 지명(예: 용문동, 은평)을 <strong>[A구역]</strong>, <strong>[Y동]</strong>과 같이 블라인드(가명) 처리하는 것을 최우선 명령으로 설정했습니다.
+                </div>
+<div class="term-box" style="border-color:#fbbc04; background:#fffdf0;">
+<strong style="color: #fbbc04; font-size:14px;">[보안 규정 2] 대표이사 전용 보안 모드 (Passcode)</strong><br/>
+                    • <code>"Our family"</code> 또는 <code>"비밀을 열어 줘"</code>라는 특수 암호(Passcode)를 대화창에 입력해야만 기밀 저널 파일의 암호화(AES-256)가 해제되고 업무가 시작됩니다.
+                </div>
+</div>
+<div class="grid-column">
+<h2 class="display-lg hairline-bottom">제17장. 전사 보안 규정 및 가명 처리</h2>
+<p class="body-text">
+                    "어떤 인공지능을 써야 완벽한 자동화가 가능한가?"
+                </p>
+<table class="report-table" style="font-size:12px; margin-top:10px; background:#fff;">
+<tr style="background:var(--canvas-parchment);">
+<th style="border-top:2px solid var(--ink);" width="50%">Google Antigravity<br/><span style="font-size:10px; font-weight:normal;">(실행형 비서 - 주력)</span></th>
+<th style="border-top:2px solid var(--ink);" width="50%">Google NotebookLM<br/><span style="font-size:10px; font-weight:normal;">(연구형 비서 - 보조)</span></th>
+</tr>
+<tr>
+<td><strong>[자동화]</strong> 내 컴퓨터 파일을 읽고 매일 정해진 시간에 문서 자동 코딩 및 생성.</td>
+<td><strong>[환각 0%]</strong> 업로드된 방대한 법령 문서 안에서만 엄격히 대답.</td>
+</tr>
+<tr>
+<td><strong>[단점]</strong> 룰(AGENTS.md)을 정교하게 코딩해 줘야 함.</td>
+<td><strong>[단점]</strong> 스스로 문서를 만들거나 자동 스케줄링을 할 수 없음.</td>
+</tr>
+</table>
+<div class="prompt-box">
+                    // 왕초보 프롬프트 튜토리얼<br/>
+                    1. "'주간업무계획' 폴더를 연동해줘."<br/>
+                    2. "회의록 비교 시 내용이 80% 이상 일치하면 단순 오타로 간주해 (퍼지매칭)."<br/>
+                    3. "오늘자 동향 보고서 생성해줘."
+                </div>
+</div>
+</div>
+<div class="page-footer"><span>제2-3장. 보안 및 도구 전략</span><span>05</span></div>
+</div>
+
+<script>
+document.querySelectorAll('strong').forEach(el => {
+    if(el.innerText.match(/[a-zA-Z]+/)) {
+        el.classList.add('tooltip');
+        el.setAttribute('data-tip', '🧑‍💻 김사원: "이건 실무에서 자주 쓰는 영어 용어예요!"');
+    }
+});
+</script>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제3장. 정비사업 통합 플랫폼 아키텍처</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>정비사업 통합 검토 시스템 구축 및 활용 가이드</h3>
+<div class="page tile-light" style="background: url('../../../2026-07-12/교육자료_매뉴얼/scratch/images/hero.jpg') center/cover; position: relative;">
+<div style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.85);"></div>
+<div class="content-wrap" style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+<p style="font-weight:bold; font-weight: 600; letter-spacing: 2px; margin-bottom: 24px;">AI 교육 매뉴얼</p>
+<h1 class="display-xl" style="margin-bottom: 20px;">제7장. 정비사업 통합 검토 시스템 구축 및 활용 가이드</h1>
+<p class="lead" style="max-width: 600px; margin-bottom: 40px; color: #ff5252; font-weight: bold;">
+                ※ 대외비 자료로 외부로의 유출 시 주의해 주십시오.
+            </p>
+<div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px; max-width: 400px;">
+<p style="color: var(--ink); font-size: 14px; margin-bottom: 8px;"><strong>발행:</strong> (주)진양엔지니어링건축사사무소</p>
+<p style="color: var(--ink); font-size: 14px; margin-bottom: 8px;"><strong>작성:</strong> 대표이사 김중일 건축사</p>
+<p style="color: var(--ink); font-size: 14px; opacity: 0.7;"><strong>최종 작성 일자:</strong> 2026.07.13 (V2)</p>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>01</span></div>
+</div>
+
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>5대 통합 플랫폼 기반 건축 실무 워크플로우</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            "오늘 만든 플랫폼을 통해 건축 업무를 혁신하겠다"는 결심에서 출발한 <strong>5대 통합 플랫폼 체계</strong>의 실무 연계 가이드입니다. 각 플랫폼이 유기적으로 연결되어 기획부터 최종 보고, 지식 축적까지의 전 과정을 어떻게 지배하는지 설명합니다.
+        </p>
+        
+        <h3 class="display-md" style="margin-top:20px; font-weight:bold;">1. 진양엔지니어링 5대 통합 플랫폼</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas); border:1px solid var(--primary); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">① 전사업 통합 검토소 플랫폼</strong><br>
+                    정비사업(모아타운, 도심복합 등)의 법규 분석, 구역계 추출, 용적률 연산, 기부채납 보정 및 삽도 이미지를 자동 렌더링하는 <strong>'기술 엔진'</strong>입니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); height:100%;">
+                    <strong style="color:var(--ink); font-size:16px;">② 건축 문서 통합 관리 플랫폼</strong><br>
+                    검토소에서 도출된 숫자와 이미지를 조립하여 도시계획 마크다운 템플릿에 주입하고, 최종 마스터 PDF 보고서를 자동 생성하는 <strong>'출판 엔진'</strong>입니다.
+                </div>
+            </div>
+        </div>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); height:100%;">
+                    <strong style="color:var(--ink); font-size:16px;">③ 회사 일정에 대한 플랫폼</strong><br>
+                    입찰, 수주 현황, 프로젝트 마일스톤 및 전사 동향 브리핑(일일 리포트)을 관제하는 <strong>'스케줄링 엔진'</strong>입니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); height:100%;">
+                    <strong style="color:var(--ink); font-size:16px;">④ 회사 교육 자료 플랫폼</strong><br>
+                    실무에서 얻은 에러 대처법(SSOT)과 워크플로우를 모듈형 웹 매뉴얼로 구축하여 전 직원이 즉시 참고할 수 있게 돕는 <strong>'지식 베이스 엔진'</strong> (현재 플랫폼)입니다.
+                </div>
+            </div>
+        </div>
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-bottom: 20px;">
+            <strong style="color:var(--ink); font-size:16px;">⑤ 개인 삶에 대한 플랫폼</strong><br>
+            대표이사의 철학과 개인 업무 저널, 통찰(Insights)을 기록하여 회사 경영의 나침반 역할을 하는 <strong>'비전 엔진'</strong>입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; font-weight:bold;">2. 실전 건축 업무 워크플로우 (A to Z)</h3>
+        <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); padding:30px;">
+            <div style="margin-bottom:20px;">
+                <strong style="font-weight:bold; font-size:15px;">STEP 1. 수주 및 기획 (일정 플랫폼)</strong>
+                <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">프로젝트 의뢰 접수 및 입찰 분석을 거쳐 마일스톤을 캘린더에 등재합니다.</p>
+            </div>
+            <div style="margin-bottom:20px; border-top:1px dashed var(--hairline); padding-top:20px;">
+                <strong style="font-weight:bold; font-size:15px;">STEP 2. 법규 시뮬레이션 (통합 검토소 플랫폼)</strong>
+                <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">VWorld API를 통해 토지 대장을 끌어오고, 자동화 모듈이 상가를 제척하여 최대 허용 용적률과 세대수를 1초 만에 뽑아냅니다.</p>
+            </div>
+            <div style="margin-bottom:20px; border-top:1px dashed var(--hairline); padding-top:20px;">
+                <strong style="font-weight:bold; font-size:15px;">STEP 3. 마스터 보고서 렌더링 (문서 관리 플랫폼)</strong>
+                <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">검토된 데이터를 A4 모듈형 렌더링 엔진에 태워, KPI가 전면에 배치된 압도적 디자인의 PDF를 경영진과 발주처에 제출합니다.</p>
+            </div>
+            <div style="border-top:1px dashed var(--hairline); padding-top:20px;">
+                <strong style="font-weight:bold; font-size:15px;">STEP 4. 지식의 내재화 (교육 자료 & 개인 삶 플랫폼)</strong>
+                <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">프로젝트 중 발생한 에러나 노하우를 AGENTS.md(SSOT)에 적고, 본 교육 자료 플랫폼에 새 챕터로 발간하여 전체 조직의 역량을 상향 평준화시킵니다.</p>
+            </div>
+        </div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>시스템 코어 아키텍처</h3>
+<div class="page tile-light">
+<div class="part-divider">
+<div class="part-number">Part 2</div>
+<h1 class="part-title">제10장. 시스템 코어 아키텍처</h1>
+<p style="font-size:18px; margin-top:20px; color:rgba(255,255,255,0.6);">자동화 파이프라인의 거시적 흐름과 2대 산출물(일일동향, 건축개요)의 정밀 해부</p>
+</div>
+<div class="page-footer"><span>제2부. 코어 기술</span><span>06</span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>전사 시스템 거시적 아키텍처 (Macro View)</h3>
+<p class="body-text" style="margin-bottom:20px;">
+                우리가 잠든 사이, 4개의 거대한 톱니바퀴(스케줄러, 공공 데이터, AI 두뇌, 렌더링 엔진)가 어떻게 맞물려 돌아가 최종 마스터피스를 찍어내는지 그 전 과정을 시각화했습니다.
+            </p>
+<div class="mermaid">
+graph LR
+    %% Styling
+    classDef scheduler fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px;
+    classDef data fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef brain fill:#e8f5e9,stroke:#43a047,stroke-width:2px;
+    classDef output fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px;
+
+    A[LaunchAgent<br/>09:00 기상]:::scheduler
+    B(국가법령 API):::data
+    C(VWorld API):::data
+    D{AGENTS.md<br/>해시화 룰}:::brain
+    E{퍼지매칭<br/>분석기}:::brain
+    F[HTML 코딩]:::output
+    G[Chrome PDF<br/>최종 출력]:::output
+
+    A --&gt;|트리거| B
+    A --&gt;|트리거| C
+    B --&gt;|JSON| D
+    C --&gt;|면적| D
+    D --&gt;|교차검증| E
+    E --&gt;|결과물| F
+    F --&gt;|렌더링| G
+            </div>
+<p class="body-text" style="text-align:center; color:var(--body-muted); font-size:12px; margin-top:0;">
+                * 위 흐름도는 시스템 전체가 유기적으로 돌아가는 거시적 파이프라인입니다.
+            </p>
+</div>
+<div class="page-footer"><span>제12장. 거시적 아키텍처</span><span>11</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>형상 관리 및 다중 세션 동기화</h3>
+<div class="page tile-light">
+<div class="content-wrap grid-2">
+<div class="grid-column">
+<h2 class="display-lg hairline-bottom">제14장. 형상 관리 및 다중 세션 동기화</h2>
+<p class="body-text">
+                    수십 개의 채팅방이 룰을 공유하고 파일이 뒤섞이지 않게 통제하는 최상위 협업 및 파일 관리 기술입니다.
+                </p>
+<div class="term-box" style="border-color:#1e88e5; background:#f0f8ff;">
+<strong style="color:#1e88e5; font-size:14px;">[협업 원칙] 단일 진실 공급원 (SSOT)</strong><br/>
+                    모든 AI는 <code>.agents/AGENTS.md</code>를 뇌로 공유합니다. A채팅방이 룰을 업데이트하면, B채팅방도 똑같이 적용합니다.<br/><br/>
+<strong style="color:#d93025; font-size:14px;">[무결점 복구] Fault Tolerance 스크립트</strong><br/>
+                    세션이 먹통 되면 당황하지 않고 <code>recover_session.py --convo_id [이전_ID]</code> 를 호출하여 기억과 로그를 고스란히 융합 복원합니다.
+                </div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="margin-top:60px; border-color:#8e24aa; background:#fdf7ff;">
+<strong style="color:#8e24aa; font-size:14px;">[파일 관리] OLD 폴더 자동 이관 (Version Control)</strong><br/><br/>
+                    - <strong>상황:</strong> 매일 업데이트되는 보고서 파일이 바탕화면에 뒤죽박죽 섞이는 참사.<br/>
+                    - <strong>진양 로직:</strong> AI가 출력물을 생성할 때, 무조건 <code>생성 자료/[오늘 날짜]/[프로젝트 폴더명]/</code> 구조로 폴더를 강제 생성합니다.<br/>
+                    - 파일이 중복될 경우 기존 버전을 지우지 않고 <code>OLD/</code> 하위 폴더를 만들어 기존 파일을 전부 이관 및 영구 보존(백업)시키는 형상 관리 기법이 적용되어 있습니다.
+                </div>
+</div>
+</div>
+<div class="page-footer"><span>제13장. 파일 자동 관리 및 복원</span><span>15</span></div>
+</div>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제4장. 실무 자동화 파이프라인 (건축 특화)</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>자동화 시스템 구축 가이드북</h3>
+<div class="page tile-light" style="background: url('images/hero.jpg') center/cover; position: relative;">
+<div style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85);"></div>
+<div class="content-wrap" style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+<p style="color: var(--primary-on-dark); font-weight: 600; letter-spacing: 2px; margin-bottom: 24px;">AI 교육자료</p>
+<h1 class="display-xl" style="margin-bottom: 20px;">제11장. 자동화 시스템 구축 가이드북</h1>
+<p class="lead" style="max-width: 600px; margin-bottom: 40px; color: #ff5252; font-weight: bold;">
+                ※ 대외비 자료로 외부로의 유출 시 주의해 주십시오.
+            </p>
+<div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; max-width: 400px;">
+<p style="color: var(--ink); font-size: 14px; margin-bottom: 8px;"><strong>발행:</strong> (주)진양엔지니어링건축사사무소</p>
+<p style="color: var(--ink); font-size: 14px; margin-bottom: 8px;"><strong>작성:</strong> 대표이사 김중일 건축사</p>
+<p style="color: var(--ink); font-size: 14px; opacity: 0.7;"><strong>최종 작성 일자:</strong> 2026.07.13 (V48)</p>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>01</span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>자동화 시스템 실전</h3>
+<div class="page tile-light">
+<div class="part-divider">
+<div class="part-number">Part 3. 파이프라인 및 실무 사례</div>
+<h2 class="display-lg hairline-bottom" style="display:none;">제12장. 자동화 시스템 실전</h2>
+<h1 class="part-title">제12장. 자동화 시스템 실전</h1>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>공동주택 자동 배치 검증 시스템 구축 전략 및 LISP 가이드 (1/2)</h3>
+<h3 style="font-weight:bold; font-size: 16px; margin-bottom: 10px; margin-top: 20px;">1. 목표 세대수 및 평형대별 배분 비율 인식 방법</h3>
+<p class="body-text">
+                AI가 마음대로 건물을 배치하는 것이 아니라, 확정한 '목표 세대수와 평형 비율'을 강제 할당(Quota)으로 인식하고 배치합니다.<br/>
+                • <strong>엑셀 작성:</strong> 직원이 제출하는 `01_건축개요.xlsx` 내에 [목표 세대수 및 타입별 배분표] 작성<br/>
+                • <strong>파이썬 처리:</strong> `openpyxl` 라이브러리가 목표치(Target Quota)를 파악 (예: 84A 600세대, 59B 400세대)<br/>
+                • <strong>AI 구동:</strong> 제너러티브 엔진이 빈 대지에 레고 블록을 뿌릴 때 이 수량을 100% 채울 때까지만 블록을 가져와 배치합니다.
+            </p>
+<h3 style="font-weight:bold; font-size: 16px; margin-bottom: 10px; margin-top: 20px;">2. 거실/안방 남향(Front Facade) 기준 등재 (핵심)</h3>
+<p class="body-text">
+                거실과 안방 창문이 있는 전면부(Front)가 남쪽을 바라보도록 기준을 부여합니다.<br/>
+                • <strong>Front Vector 도입:</strong> AI 에셋 DB(`BLDG_101.json`)에 '거실 방향 벡터' 추가<br/>
+                • <strong>채점 로직:</strong><br/>
+                  1) 최우선 배치(100점): 남동~남서(135도~225도)<br/>
+                  2) 허용 범위(감점): 동향 치우친 남향 ~ 서향 치우친 남향<br/>
+                  3) 원천 배제(0점): 조금이라도 북향으로 치우친 배치안 즉시 폐기
+            </p>
+</div>
+<div class="page-footer"><span>제17장. 자동배치 LISP (1/2)</span><span>21</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>공동주택 자동 배치 검증 시스템 구축 전략 및 LISP 가이드 (2/2)</h3>
+<h3 style="font-weight:bold; font-size: 16px; margin-bottom: 10px; margin-top: 20px;">3. 리습(LISP) 지정 항목 및 3단계 클릭법</h3>
+<p class="body-text">
+                • <strong>명령어:</strong> `JBE` (Jinyang Block Export)<br/>
+                • <strong>1. 레고 블록 선택:</strong> 폴리라인과 엘리베이터 코어 선택<br/>
+                • <strong>2. Base Point 지정 (클릭 1):</strong> 1호 라인 엘리베이터 중심점 클릭<br/>
+                • <strong>3. 거실 전면 방향 지정 (클릭 2):</strong> 1호 라인 거실 발코니 바깥쪽으로 쭉 빼서 클릭 (거실 방향 Vector 저장)
+            </p>
+<div style="background:var(--canvas-parchment); padding:15px;  margin-top:20px;">
+<div class="mermaid">
+                graph LR
+                    A[1. 기획 및<br/>평면도 작도] --&gt; B[2. JBE 리습<br/>실행]
+                    B --&gt; C[3. 1호코어 및<br/>거실방향 클릭]
+                    C --&gt; D[4. 엑셀 목표세대수<br/>작성]
+                    D --&gt; E[5. 서버 자동배치<br/>연동]
+                </div>
+</div>
+</div>
+<div class="page-footer"><span>제17장. 자동배치 LISP (2/2)</span><span>22</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>데이터 수집 파이프라인 (Data Pipeline)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            모든 분석의 출발점은 '정확한 지적 데이터'의 확보입니다. 파이프라인의 첫 단계인 VWorld API 연동과 CSV 데이터의 관리 원리를 설명합니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">1. VWorld Open API를 통한 '1초 렌더링'</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-font-weight:bold;">
+                    <strong style="font-weight:bold; font-size:16px;">1️⃣ 좌표 변환 (Web Mercator)</strong><br>
+                    설계 사무소에서 주로 쓰는 캐드 도면(DXF)과 지도 API(VWorld)는 좌표계가 다릅니다. 파이썬의 <code>lonlat_to_world_px</code> 함수가 이 좌표를 강제로 펴서 삽도 이미지와 정확히 포개어 줍니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:16px;">2️⃣ 지적/공시지가 동시 추출</strong><br>
+                    지정된 폴리곤(구역계) 안에 들어오는 모든 지번(예: 용문동 26번지 외 35필지)의 면적과 ㎡당 공시지가를 순식간에 배열로 저장합니다. 수작업 시 발생하는 오타(Human Error)가 완전히 차단됩니다.
+                </div>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">2. CSV: 만능 데이터 혈관의 구조</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            추출된 지적 데이터는 무거운 엑셀(`.xlsx`)이 아닌, 쉼표로 구분된 텍스트 파일(`.csv`)에 저장됩니다. 
+            <br><br>
+            <strong>왜 엑셀이 아닌 CSV인가요?</strong><br>
+            CSV는 '순수한 텍스트'입니다. AI가 읽기 가장 편안한 형태이며, 파이썬 코드(`build_document.py`)가 엑셀의 복잡한 서식 오류 없이 수만 건의 면적을 0.01초 만에 더하고 곱할 수 있게 만들어 주는 파이프라인의 핵심입니다.
+        </div>
+        
+        <h3 class="display-md" style="margin-top:30px; color:#d32f2f;">🚨 환각(Hallucination) 방지 수칙</h3>
+        <div class="term-box" style="background:#fff3e0; border-color:#ff9800;">
+            <strong style="color:#f57c00; font-size:16px;">인간의 크로스체크는 필수입니다!</strong><br>
+            VWorld API가 간헐적으로 면적을 `0`으로 응답하거나, 서버 점검으로 누락될 수 있습니다. AI(안티그래비티)는 이 누락된 상태로 용적률을 곱해버릴 수 있습니다. 따라서 작업자는 <strong>가장 먼저 <code>data.csv</code>를 열어 공백이나 0이 없는지 눈으로 검수</strong>해야 합니다.
+        </div>
+
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>04</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>모아타운 및 도심복합 용적률·임대 산출 체계</h3>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-font-weight:bold;">
+<strong style="font-weight:bold; font-size:16px;">1. 모아타운 용적률 3단계 체계</strong><br/><br/>
+<strong>① 기준 용적률 (제2종 200%)</strong><br/>
+<strong>② 허용 용적률 (최대 250%)</strong><br/>
+                        - 기반시설 기부채납 등에 따라 인센티브 부여<br/>
+<strong>③ 상한 및 법적상한 용적률 (최대 300%)</strong><br/>
+                        - 종상향 기부채납 (증가된 용적률의 50%의 1/2) 및 친환경/지능형 인센티브(15%) 적용.<br/>
+                        - 매입형 임대주택 적용을 통한 최종 상한 도달.
+                    </div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#e65100; background:#fffdf0;">
+<strong style="color:#e65100; font-size:16px;">2. 매입형 임대 '직선보간법' 산출 공식</strong><br/><br/>
+                        매입형 임대 의무비율은 기본 10%~20% 범위이나, 아래 산식에 따라 결정됩니다.<br/><br/>
+<strong>산식:</strong> `10% + (20% - 10%) × (확보된 완화폭 / 전체 완화가능폭)`<br/><br/>
+                        - <strong>변수 1 (사업성 보정계수):</strong> 1.0~1.5 구간에 따라 기준점이 달라짐.<br/>
+                        - <strong>변수 2 (기부채납/세입자대책):</strong> 공공시설 등 부지 제공 시 제공 면적만큼 임대 비율 차감. 세입자 이주대책 수립 시 임대 의무 비율 대폭 경감.<br/>
+                        - <strong>총세대수 주의사항:</strong> 전체 세대의 10~20%가 아닌, `(분양세대 + 기부채납 임대)`의 합계에 산출된 비율(예: 16%)을 곱하여 계산함.
+                    </div>
+</div>
+</div>
+<div class="term-box" style="margin-top:20px; border-color:#34a853;">
+<strong style="color:#34a853; font-size:16px;">3. 도심복합사업 (창신 12구역 등) 핵심 요건 및 검증</strong><br/><br/>
+                - <strong>역세권 정비사업과의 비교:</strong> 역세권 기준은 승강장 경계 기준 350m 이내. 도심복합사업(성장거점형)은 "20m 간선도로에 대지 경계의 1/8 이상 연접"해야 하는 까다로운 선결 요건 존재.<br/>
+                - <strong>용적률 환수 메커니즘:</strong> 규제 완화로 상승한 용적률의 50% 수준은 임대주택 및 공공기여로 환수되므로, 총사업비 검토 시 가용 분양면적에서 공공기여분을 사전 차감하는 정밀한 세대수 매핑이 필수입니다.
+            </div>
+</div>
+<div class="page-footer"><span>제16장. 정비사업별 용적률 및 임대 산출</span><span>17</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>소규모 정비(모아타운) 자동화 3대 절대 원칙</h3>
+<p class="body-text" style="margin-bottom:24px;">
+                과거 규모 검토 시 발생하던 로직 오류를 막기 위해, 시스템에 강제로 심어둔 진양엔지니어링만의 <strong>특급 방어 알고리즘</strong>입니다. AI는 아래 3가지 원칙을 수학적으로 위배할 수 없습니다.
+            </p>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-color:#1e88e5; background:#fff;">
+<strong style="color: #1e88e5; font-size:14px;">[로직 1] 기부채납 임대 산정 공식</strong><br/><br/>
+                        • <strong>오류:</strong> 최종 용적률과 상한의 차이를 임대로 떼어주는 오류.<br/>
+                        • <strong>진양 로직:</strong> 순수하게 '종상향'으로 인해 늘어난 기준용적률 증가분(예: 2종→3종 50% 증가)의 <strong>절반(25%)</strong>만 실사용 대지면적에 곱하여 필요 면적을 정확히 산출합니다.
+                    </div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#fbbc04; background:#fff;">
+<strong style="color: #fbbc04; font-size:14px;">[로직 2] 매입형 임대 40㎡ 루프 방어문</strong><br/><br/>
+                        • 단순히 세대수(10~20%)만 맞추기 위해 39㎡로 전부 채우면 조례 위반입니다.<br/>
+                        • <strong>진양 로직:</strong> 제공되는 매입형 임대 전체의 <strong>평균 전용면적이 40.0㎡ 이상을 충족</strong>할 때까지, 51㎡와 59㎡를 강제 혼합 배분하는 루프(Loop) 알고리즘을 가동합니다.
+                    </div>
+</div>
+</div>
+<div class="term-box" style="border-color:#d93025; background:#fff; margin-bottom:0;">
+<strong style="color: #d93025; font-size:14px;">[로직 3] 소규모 국공유지 방어 및 입체 기부채납</strong><br/><br/>
+                • 구역 내 국공유지가 공원 법정 최소면적(300㎡)에 미달할 때 사유지를 깎아서 억지로 공원을 만들지 않습니다. 대신 AI는 즉시 <strong>'국공립 어린이집 등 건축물 입체 기부채납'</strong>으로 기부채납 방식을 일원화하여 분양 면적을 사수하도록 프로그래밍되어 있습니다.
+            </div>
+</div>
+<div class="page-footer"><span>제15장. 모아타운 3대 원칙</span><span>14</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>핵심 자동화 모듈 활용법 (Core Modules)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            수집된 데이터를 바탕으로, 실제 정비사업의 성패를 가르는 <strong>'용적률/세대수/건축 개요'</strong>를 파이썬과 AI가 어떻게 수초 만에 계산해 내는지 그 원리를 다룹니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">1. 법규 연산 엔진: 상가 제척 & 기부채납</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-font-weight:bold;">
+            가장 난이도가 높은 작업입니다. 정비구역 내에서 반대가 심한 상가나 종교시설을 구역에서 제외(제척)할 경우, 대지면적이 줄어들면서 용적률과 세대수가 요동칩니다.<br><br>
+            <strong>[파이프라인의 마법]</strong><br>
+            우리 시스템은 직원이 <code>data.csv</code>에서 상가 지번 단 1줄만 삭제하고 저장하면, 파이썬 엔진이 알아서 전체 대지면적을 줄이고, 변경된 면적에 비례하여 기부채납 면적을 새로 곱한 뒤, 최종 허용 용적률과 임대 세대수를 새로 짜냅니다. 즉, <strong>'동적 시뮬레이션(Dynamic Simulation)'</strong>이 실시간으로 가능한 것입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">2. 삽도 및 지형도 자동 생성 엔진</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">VWorld 타일 + GeoJSON 오버레이</strong><br>
+                    대상지 폴리곤 데이터(GeoJSON)를 VWorld 위성지도 타일 위에 반투명한 빨간색(Red) 영역으로 덮어씌워 PNG 이미지로 즉석 렌더링합니다. 별도의 포토샵이나 일러스트 작업이 전혀 필요 없습니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">오토캐드(CAD) LISP 연동망</strong><br>
+                    계산된 결과값(건폐율, 최대 건축 한계선)은 다시 좌표 데이터(DXF)로 변환되어, 캐드 상에서 자동으로 주동(아파트 매스)을 배치하는 초기 검토 라인을 그려주는 근간이 됩니다.
+                </div>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">3. 도시계획 템플릿 연동 기술 (Markdown)</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            산출된 모든 숫자들(용적률 250%, 800세대 등)은 <code>템플릿_도심복합개발사업.md</code>와 같은 '마크다운 정본' 템플릿의 변수 자리(<code>{{ total_far }}</code>)에 쏙쏙 박혀 들어갑니다. 이렇게 완성된 글 덩어리가 최종 보고서의 본문이 됩니다.
+        </div>
+
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>05</span>
+<div class='mermaid' style='margin-bottom:40px; page-break-inside:avoid;'> J((보고서 PDF 생성))                                          style A fill:#e3f2fd,stroke:#1e88e5                     style D fill:#ffebee,stroke:#e53935                     style H fill:#fff3e0,stroke:#f57c00                     style J fill:#e8f5e9,stroke:#43a047                                    * 설명: 공사비 분쟁과 문화재 앙각 리스크를 선제적으로 찾아내어 방어하는 최첨단 통합 파이프라인입니다.</div><div class='mermaid' style='margin-bottom:40px; page-break-inside:avoid;'> I((토지 현황 데이터최종 확정))                                          style A fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px                     style B fill:#fff3e0,stroke:#f57c00,stroke-width:2px                     style H fill:#ffebee,stroke:#e53935,stroke-width:2px,stroke-dasharray: 5 5                     style I fill:#e8f5e9,stroke:#43a047,stroke-width:2px                                    * 설명: 단순 DXF 면적이 아닌, VWorld 공간 교차(Spatial Intersection)를 통해 실제 지적공부상 면적을 추출하고, 인간 건축사가 면적 오차를 최종 승인해야 파이프라인이 넘어갑니다.</div>
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제5장. 용문동 통합보고서 및 실전 튜토리얼</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[미래 비전] 대화형 범용 통합보고서 5단계 파이프라인</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            지금까지의 시스템 작동 방식을 한 차원 더 발전시킨 <strong>'미래형 범용 통합보고서 엔진'</strong>의 작동 방식입니다. 이제 복잡한 지시나 개별 프롬프트를 외울 필요 없이, AI와 사람처럼 대화하며 5단계를 거치면 10장짜리 마스터 보고서가 단 3초 만에 렌더링됩니다.
+        </p>
+
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:30px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 범용 템플릿 기동 프롬프트</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "새로운 구역 보고서 시작해 줘" 또는 "용문동처럼 통합 보고서 만들어 줘"
+            </code>
+        </div>
+
+        <div style="text-align:center; margin-bottom:30px;">
+            <p class="body-text" style="margin-bottom:10px; font-size:13px; color:#7a7a7a;">▼ [삽도] AI와 대화하듯 5단계를 거쳐 보고서가 자동 생성되는 화면 예시</p>
+            <img src="scratch/assets/five_step_dialog_mockup.jpg" alt="5단계 대화형 보고서 생성 화면 모의" style="max-width:340px;  box-shadow: rgba(0,0,0,0.22) 3px 5px 30px 0;">
+        </div>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">대화형 5단계 핵심 정보 입력</h3>
+        <p class="body-text" style="margin-bottom:15px;">
+            기동 프롬프트를 입력하면 AI가 즉시 스킬을 발동하여 아래 5가지 정보를 순차적으로 묻습니다. 묻는 질문에만 답하시면 됩니다.
+        </p>
+
+        <div class="grid-2">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">1. 기본 정보 설정</strong><br>
+                    대상지의 명칭과 보고서를 요청한 의뢰자 정보를 입력합니다. (표지 및 메타데이터 생성용)
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">2. 토지 분석 연계</strong><br>
+                    총 대지면적, 공시지가, 지목 현황을 입력합니다. (AI가 VWorld 스킬과 연계하여 자동 추출 가능)
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">3. 사업 방식 결정</strong><br>
+                    재개발, 도심복합, 모아타운 중 비교할 2~3개의 사업 방식과 주력 타겟을 설정합니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">4. 평형 배분 전략 (택 1)</strong><br>
+                    A(수익성 극대화), B(절충안), C(공사비 절감안) 중 대상지에 맞는 단위세대 평형 배분 전략을 선택합니다.
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935;">
+                    <strong style="color:#d32f2f; font-size:14px;">5. 구역계 DXF 업로드</strong><br>
+                    세대수 자동 산출 및 배치 검증을 위한 대상지 구역계(DXF) 도면 파일을 채팅창에 첨부합니다.
+                </div>
+            </div>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-top:30px;">
+            <strong style="color:#f57c00; font-size:16px;">🚀 [Zero-Click] 초고속 백그라운드 렌더링</strong><br><br>
+            이 5개의 질문에 답하시고 마지막으로 DXF 도면을 올려주시는 순간, <strong>AI는 대표님의 추가 승인을 기다리지 않습니다.</strong><br><br>
+            즉시 백그라운드에서 파이썬 렌더링 엔진(<code>build_pdf.py</code> 등)을 기동하여, 분석된 모듈들을 병합하고 <strong>단 3초 만에 10장짜리 완벽한 마스터 보고서(PDF)를 화면에 띄워드립니다.</strong>
+        
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 대화형 범용 통합보고서 5단계 아키텍처</h3>
+<pre class="mermaid" style="background:transparent;">
+sequenceDiagram
+    participant User as 대표이사(User)
+    participant AI as 안티그래비티(AI)
+    participant Engine as 렌더링 엔진
+    
+    User->>AI: "용문동처럼 통합 보고서 만들어줘"
+    AI-->>User: 1. 기본 정보는 무엇인가요?
+    User->>AI: "종로구 창신동, 기획본부 의뢰"
+    AI-->>User: 2. 토지 분석 (면적, 공시지가)?
+    User->>AI: "VWorld 자동 연계해 줘"
+    AI-->>User: 3. 비교할 사업방식은?
+    User->>AI: "재개발 vs 도심복합"
+    AI-->>User: 4. 평형 배분 전략은?
+    User->>AI: "A안(수익성 극대화)"
+    AI-->>User: 5. 대상지 구역계(DXF)를 올려주세요.
+    User->>AI: [DXF 파일 업로드]
+    
+    Note over AI,Engine: Zero-Click 백그라운드 구동
+    AI->>Engine: build_pdf.py 기동 (세대수 산출)
+    Engine-->>User: 3초 후 10장짜리 마스터 보고서(PDF) 출력 완료!
+</pre>
+</div>
+</div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼 1] 일일 동향 및 주간회의록 가이드 (상)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+이 튜토리얼은 <strong>'일일동향보고서/SKILL.md'</strong> 규칙에 기반하여, 매일 쏟아지는 수많은 법규 변경과 부동산 뉴스를 전사 표준 규격(8+2 체계)으로 완벽하게 자동 편찬하는 방법을 다룹니다.
+</p>
+
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 0. 사전 준비 및 보안 모드 설정</h3>
+<div class="term-box" style="background:#fff3e0; border-color:#ff9800; margin-bottom: 20px;">
+<strong>[환경 구성]</strong> 렌더링된 리포트는 반드시 <code>생성 자료/YYYY-MM-DD/일일_동향보고서</code> 위치에 저장됩니다.<br>
+<strong>[해시화(블라인드) 원칙]</strong> 🔒 전사 보안 규정에 따라, 민감한 내부 정보나 입찰 현황은 <strong>반드시 가명 처리([A구역], [B사])</strong>하여 보고서를 렌더링해야 합니다.
+</div>
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 1. 불가역 확장 원칙 (Ratchet Rule)</h3>
+<div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+한 번이라도 보고서에 포함된 조사 항목은 영원히 표준에 유지됩니다. (삭제 불가)<br>
+AI에게 <strong>"일일 보고서 만들어줘"</strong>라고 지시하면, AI는 즉시 체크리스트(SSOT)를 읽고 9개 핵심 구역, 4개 소규모정비 구역, 9대 법규, 7대 인접지 등 수십 개의 키워드를 빠짐없이 동시 웹 검색합니다.
+</div>
+
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 2. 8개 핵심 섹션 파싱 및 생성</h3>
+<div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+<div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 일일 동향 기동 프롬프트 예시</div>
+<code style="font-family:monospace; line-height:1.5;">
+"오늘자 전사 일일 동향 보고서를 만들어 줘.<br>
+특히 변경된 법령은 조항 번호를 포함해 '변경 전 → 변경 후' 포맷으로 병기하고,<br>
+경제/사회 파트(건설공사비 지수 등)를 꼭 3페이지 분량으로 채워 줘."
+</code>
+</div>
+
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 일일 동향 렌더링 파이프라인</h3>
+<pre class="mermaid" style="background:transparent;">
+graph TD
+    A[AI 에이전트 기동] --> B{SSOT 체크리스트 확인}
+    B --> C[9대 핵심 구역 검색]
+    B --> D[4대 소규모 정비 검색]
+    B --> E[9대 법규 변경사항 추적]
+    C --> F((데이터 파싱 및 해시화))
+    D --> F
+    E --> F
+    F --> G[HTML 모듈 생성]
+    G --> H[build_pdf.py 구동]
+    H --> I[최종 PDF 렌더링]
+    style A fill:var(--primary),stroke:var(--primary),stroke-width:2px,color:#fff
+    style H fill:var(--ink),stroke:var(--ink),stroke-width:2px,color:#fff
+    style I fill:#4caf50,stroke:#388e3c,stroke-width:2px,color:#fff
+</pre>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼 1] 일일 동향 및 주간회의록 가이드 (하)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+일일 동향 보고서가 성공적으로 쌓이면, 이를 바탕으로 매주 월요일 진행되는 <strong>주간회의록</strong>을 자동 연동하여 작성할 수 있습니다.
+</p>
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 3. 주간회의록 연동 및 중복 금지 로직</h3>
+<div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-bottom: 20px;">
+<strong style="color:#f57c00;">[핵심 규칙] 섹션 6 (본부별 주간 현황) 통합</strong><br>
+일일 동향 보고서의 <strong>조건부 섹션 6</strong>에 주간회의록이 파싱되어 통합됩니다. 단, 입찰/수주 현황 등은 섹션 5에 별도로 존재하므로, 섹션 6에는 <strong>순수 업무 내용만</strong>을 기재하여 중복을 원천 차단합니다.
+</div>
+
+<div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+<div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 주간회의록 연동 프롬프트 예시</div>
+<code style="font-family:monospace; line-height:1.5;">
+"이번 주 누적된 일일 동향 리포트와 지난주 주간회의_자료 폴더를 읽어줘.<br>
+중복되는 입찰 정보를 제외하고, 순수 업무 진척도만을 파싱해서<br>
+동향 보고서 섹션 6에 삽입한 '종합 주간회의록' 모듈을 렌더링해 줘."
+</code>
+</div>
+
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 주간회의록 자동 연동 및 중복 필터링 로직</h3>
+<pre class="mermaid" style="background:transparent;">
+flowchart LR
+    A[(월~금 일일 동향)] --> C{주간 데이터 취합}
+    B[(기존 주간회의_자료)] --> C
+    C --> D{중복 필터링}
+    D -- 입찰/수주 정보 --> E[섹션 5에 분리 유지]
+    D -- 순수 업무 진척도 --> F[섹션 6 주간회의록 모듈화]
+    F --> G[최종 주간 통합보고서 렌더링]
+    style F fill:var(--primary),stroke:var(--primary),stroke-width:2px,color:#fff
+    style G fill:#4caf50,stroke:#388e3c,stroke-width:2px,color:#fff
+</pre>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (1/3)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            이 튜토리얼은 신규 담당자가 처음 자리에 앉아 <strong>'용문동 통합보고서'</strong>를 A부터 Z까지 완벽하게 뽑아내는 모든 과정을 추적합니다. 사전 준비물부터 지번 추출, 복잡한 용적률 산정 로직, 그리고 최종 PDF 렌더링까지 순차적으로 따라해 보십시오.
+        </p>
+
+        <h3 class="display-md" style="margin-top:40px; color:#1e88e5;">Step 1. 사전 준비 및 파이프라인 기동</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            <strong style="color:#424242;">1) 사전 준비물 세팅</strong><br>
+            • <strong>도면 확보:</strong> 대상 구역의 폐합된 폴리라인이 담긴 DXF 도면 (예: <code>용문동_구역계.dxf</code>)<br>
+            • <strong>워크스페이스 헌법:</strong> 에이전트가 작동할 수 있도록 <code>.agents/AGENTS.md</code>와 지식베이스, 스킬 폴더가 동기화된 워크스페이스 환경<br>
+            • <strong>인증 키:</strong> VWorld Open API 접근을 위한 시스템 환경 변수(API Key) 세팅
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 AI 기동 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "첨부된 용문동 DXF 도면을 바탕으로, '도시계획-검토보고서' 스킬을 로드해서 사업성 검토를 시작해 줘."
+            </code>
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; color:#1e88e5;">Step 2. 지적 현황 분석 및 지번 전수 추출</h3>
+        <p class="body-text" style="margin-bottom:15px;">
+            도면이 주어지면, AI는 가장 먼저 도면의 좌표를 읽어 실제 토지(지적) 데이터와 매핑하는 작업을 수행합니다.
+        </p>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            <strong style="color:#424242;">1) 좌표 변환 및 API 매핑 (Fuzzy Matching)</strong><br>
+            AI는 내부적으로 <code>CoordMapper</code>를 기동하여 DXF의 로컬 좌표계를 <strong>Web Mercator(EPSG:3857)</strong>로 완벽하게 변환합니다. 변환된 폴리곤 좌표를 VWorld 지적도 API에 던져, 구역 선에 단 1픽셀이라도 걸치는 모든 필지의 지번, 지목, 대지면적 데이터를 전수(全數) 추출해 냅니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 지번 추출 지시 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "도면 좌표를 VWorld API에 연동해서 용문동 구역 내 포함된 전체 필지 지번, 지목, 면적 조서를 빠짐없이 추출해 줘."
+            </code>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (2/3)</h3>
+<h3 class="display-md" style="margin-top:30px; color:#1e88e5;">Step 3. 용적률 및 임대주택 산정 근거 도출 (Legal Calculation)</h3>
+        <p class="body-text" style="margin-bottom:20px;">
+            이 단계는 통합보고서의 핵심이자 실무자들이 가장 치명적인 오류를 범하기 쉬운 구간입니다. 추출된 지적 데이터를 바탕으로 <strong>서울시 조례</strong>를 해석하고, <strong>[사업성 보정계수]</strong>와 <strong>[친환경 인센티브]</strong>가 임대주택 건립 의무량에 미치는 파급 효과를 완벽히 이해해야 합니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935; margin-bottom: 20px;">
+            <strong style="color:#d32f2f; font-size:16px;">🔥 [핵심] 기부채납 vs 매입형 임대 분리 산정 로직</strong><br><br>
+            
+            <strong>1) 친환경 인센티브 배분</strong><br>
+            상한 용적률로 도달하기 전 '허용 용적률' 구간에서 친환경 인센티브 포인트를 얼마나 획득하고 배분하느냐에 따라 전체 용적률 파이와 의무 임대 비율이 연쇄적으로 변동합니다.<br><br>
+
+            <strong>2) 종상향 기부채납 임대 (보정 불가 / 고정값 ❌)</strong><br>
+            용도지역이 1종에서 2종, 혹은 2종에서 3종으로 종상향 될 때 늘어나는 용적률의 절반(50%)을 시에 기부채납(임대주택)해야 합니다. 이 부분은 <strong>법적 고정값</strong>으로, 아무리 대지 가격이 낮아도 '사업성 보정계수'에 의한 할인을 일절 받지 못합니다.<br><br>
+
+            <strong>3) 매입형 임대 (보정계수 반비례 연동 / 할인 ✅)</strong><br>
+            기준/허용 용적률에서 상한 용적률로 가기 위해 늘어나는 부분에 대한 매입형 임대 건립 의무량은 <strong>[사업성 보정계수]</strong>의 적용을 받습니다. 즉, 지가가 낮은 강북/도봉 같은 지역(보정계수 2.0 등)에서는 이 요구 비율이 반비례하여 대폭 할인되므로 사업성이 극대화되는 효과가 나타납니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 용적률 및 임대 산출 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "서울시 조례를 기준으로 대상지의 최대 상한 용적률을 산출해 줘.<br>
+            단, <strong>친환경 인센티브</strong> 배분율과 <strong>사업성 보정계수(예: 1.5)</strong>를 적용하여,<br>
+            보정 할인이 안 되는 <strong>종상향 기부채납 세대수</strong>와,<br>
+            계수에 따라 할인되는 <strong>매입형 임대 세대수</strong>를 명확히 분리해서 표로 정리해."
+            </code>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (3/3)</h3>
+<h3 class="display-md" style="margin-top:30px; color:#1e88e5;">Step 4. 동적 모듈화 렌더링 및 최종 출력 (PDF Rendering)</h3>
+        <p class="body-text" style="margin-bottom:20px;">
+            AI가 모든 검토를 마치면 산출된 지번 표, 보정계수가 반영된 용적률 산출 표, 그리고 Mermaid로 그려진 파이프라인 흐름도 등 수많은 결과물이 쏟아집니다. 이 데이터를 최종 보고서로 묶어내는 마지막 단계입니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-bottom: 20px;">
+            <strong style="color:#f57c00; font-size:16px;">💡 [핵심] 왜 '동적 모듈화' 렌더링을 거쳐야 하는가?</strong><br><br>
+            
+            초창기 시스템에서는 AI가 결과물을 하나의 거대한 텍스트(Markdown)로 찍어내려 했습니다. 하지만 수십 개의 필지 조서와 거대한 표가 들어가자, <strong>글자가 잘리거나(Truncation), PDF 변환 시 페이지 여백이 깨지고 다이어그램(Mermaid) 렌더링이 실패</strong>하는 치명적 한계가 발생했습니다.<br><br>
+            
+            이를 극복하기 위해, 우리는 <strong>각 분석 결과를 별도의 작은 HTML 모듈(레고 블록)로 분리</strong>한 뒤, 백그라운드에서 <code>build_document.py</code> 엔진과 <strong>Headless Chrome(동적 브라우저)</strong>을 기동하여 자바스크립트 기반의 다이어그램까지 완벽하게 스크린샷 찍듯 PDF로 구워내는 방식을 채택했습니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 렌더링 기동 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "모든 지번 추출과 용적률 산정 검토가 끝났어.<br>
+            이제 <strong>'모듈형-문서렌더링-엔진'</strong> 스킬을 기동해서 지금까지의 결과물을<br>
+            모듈로 조립한 뒤, <code>용문동_통합보고서_최종.pdf</code> 로 렌더링해서 출력해 줘."
+            </code>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#43a047; margin-top:20px;">
+            <strong style="color:#388e3c; font-size:14px;">✅ 튜토리얼 완료</strong><br>
+            이 4단계 프롬프트 시퀀스를 정확히 이해하면, <strong>어떤 신규 사업지가 주어지더라도 에이전트를 이용해 하루 만에 완벽한 법적 타당성 검토 보고서를 자동으로 뽑아낼 수 있습니다.</strong>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>원클릭 마스터 보고서 렌더링</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            파이프라인의 종착역입니다. 쪼개져 있는 HTML 조각과 데이터들을 모아, 경영진과 발주처에 제출할 '압도적 디자인의 마스터 PDF'를 뽑아내는 과정입니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">1. 의사결정의 핵심: KPI 카드 디자인</h3>
+        <div class="term-box" style="background:#ffffff; border-font-weight:bold;">
+            바쁜 경영진은 20장짜리 보고서의 줄글을 모두 읽을 시간이 없습니다. 따라서 보고서의 맨 앞장(Executive Summary)에는 <strong>'KPI 카드(Key Performance Indicator)'</strong>를 전면 배치해야 합니다.<br><br>
+            총 대지면적, 예상 용적률, 최고 층수, 예상 세대수 등 프로젝트의 성패를 가르는 4가지 핵심 숫자만을 큼직한 상자 UI로 띄워, 보고서를 펼치자마자 3초 만에 사업성을 판단할 수 있게 돕는 것이 우리 보고서의 가장 강력한 디자인 무기입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">2. 쪼개진 모듈의 병합 (build_document.py)</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">AI 문맥 한계 우회 기술</strong><br>
+                    안티그래비티나 Gemini 모델에게 한 번에 20장짜리 책을 통째로 짜라고 하면 기억력의 한계로 에러가 납니다. 따라서 우리는 표지(000), 1장(001), 2장(002)을 <strong>각각 독립된 HTML로 쪼개서 작업(모듈화)</strong>합니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">파이썬 병합 엔진</strong><br>
+                    작업이 끝난 후, <code>build_document.py</code>를 실행하면 쪼개진 20개의 HTML 파일이 순서대로 조립되어 거대한 하나의 완성된 <code>마스터_최종.html</code>로 태어납니다.
+                </div>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">3. Headless Chrome PDF 출력</h3>
+        <div class="term-box" style="background:#ffffff; border-color:var(--hairline); margin-bottom: 20px;">
+            최종 HTML이 만들어지면 브라우저를 열어 "인쇄 -> PDF로 저장"을 누를 필요가 없습니다. <br>
+            터미널에서 <code>Google Chrome --headless --print-to-pdf</code> 명령어를 백그라운드 작업(Task)으로 실행시키면, 컴퓨터 안에 보이지 않는 크롬 브라우저가 뜨고 애플 스타일(Apple Design) CSS가 완벽히 적용된 초고화질 PDF 파일이 스르륵 떨어집니다. 이 모든 과정이 <strong>단 한 번의 원클릭(One-Click)</strong>으로 이루어집니다.
+        </div>
+
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>06</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>통합보고서 작성 및 AI 활용 (창신10구역 사례)</h3>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-color:#1e88e5; background:#fff;">
+<strong style="color:#1e88e5; font-size:15px;">1. 공동주택성능요구서 및 평가서 (시공사 선정 핵심)</strong><br/><br/>
+                        창신10구역의 보고서 작성 시, 단순 개요 도출에 그치지 않고 AI를 통해 입찰 전 필수 도서를 역추출했습니다.<br/>
+                        - <strong>작성 시기:</strong> 사업시행인가 전, 특히 시공자 선정 입찰 지침서 작성 시.<br/>
+                        - <strong>필요 이유:</strong> 시공사가 내장재, 단열, 층간소음, 친환경 자재 성능을 입찰 내역에 명확히 반영(공사비 근거)하게 하여 추후 공사비 증액 분쟁을 막기 위함입니다.<br/>
+                        - <strong>AI 프롬프트 사례:</strong> <em>"시공사 입찰 시 조합이 절대 누락하면 안 되는 법정 도서와 그 이유를 전문가 시각에서 정리해."</em>
+</div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#d93025; background:#fff;">
+<strong style="color:#d93025; font-size:15px;">2. 한양도성 세계문화유산 등재 등 특수 리스크</strong><br/><br/>
+                        도심 사업지의 가장 큰 맹점은 문화재청 앙각(경관) 규제입니다.<br/>
+                        - <strong>우리의 선제 조치:</strong> 창신10구역 북측 한양도성에 의한 최고 높이 제한 및 건축위원회/문화재위원회 공동 심의 가능성을 보고서 전면에 경고함.<br/>
+                        - <strong>AI 활용법:</strong> 구역계 데이터만 주면 AI는 알지 못합니다. <em>"해당 PNU 주변 500m 내 세계문화유산, 역사문화환경 보존지역 여부를 국가법령과 결합해 분석해줘"</em>라고 지시하여 리스크를 끄집어냅니다.
+                    </div>
+</div>
+</div>
+<div class="term-box" style="margin-top:20px; border-color:#000; background:#fff;">
+<strong style="color:#000; font-size:15px;">3. 통합 보고서(PDF) 생성 및 출력 렌더링 방법</strong><br/><br/>
+                모든 분석이 완료되면, 산출된 데이터 세트(JSON)와 인쇄 레이아웃(Jinja2 HTML)을 결합합니다.<br/>
+                이후 `Chrome Headless` 명령어를 백그라운드 구동하여 CSS `@page` 규칙이 적용된 완벽한 A4 규격의 보고서를 1초 만에 PDF로 렌더링해 냅니다.
+            </div>
+</div>
+<div class="page-footer"><span>제20장. 통합보고서 및 AI 응용 사례</span><span>19</span>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제6장. 시스템 운영 및 출력물 배포 원칙</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>냉정하게 바라본 우리 시스템의 현주소</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            대표이사 개인 일기 플랫폼에 기록된 통찰을 바탕으로, 앞으로 진양엔지니어링이 나아가야 할 방향성과 플랫폼 중심의 건축사무소 운영 철학을 공유합니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas); border-left: 4px solid var(--primary); padding:30px; margin-bottom: 30px;">
+            <strong style="font-weight:bold; font-size:18px;">"플랫폼을 통한 설계사무소가 진행되어야 한다."</strong>
+            <p style="margin-top:15px; font-size:16px; color:var(--ink); line-height: 1.6;">
+                예전처럼 선배가 후배를 도제식으로 가르치고 개인의 역량에 의존하던 시대는 지났습니다. 이제 설계사무소의 수준과 품질의 유지는, <strong>출력물을 나오게 하는 플랫폼에 대한 공동 관리와 데이터의 축적</strong>에 있습니다.
+            </p>
+            <p style="margin-top:15px; font-size:16px; color:var(--ink); line-height: 1.6;">
+                시스템이 품질의 하한선을 완벽하게 방어하고, 파이프라인이 반복적인 업무를 자동화할 때, 우리는 더 높은 차원의 기획과 디자인에 역량을 집중할 수 있습니다. 개인의 암묵지가 아닌, 플랫폼에 축적된 명시적 데이터가 우리 회사의 진짜 자산입니다.
+            </p>
+        </div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>모듈형 엔진과 동적 렌더링 엔진의 차이점 (Q&A)</h3>
+<div class="page tile-light">
+    <div class="content-wrap grid-2">
+        <div class="grid-column">
+            <h2 class="display-lg hairline-bottom">제22장. 모듈형 엔진과 동적 렌더링 엔진의 차이점 (Q&A)</h2>
+            <p class="body-text" style="color:var(--body-muted); margin-bottom:30px;">
+                최근 진양엔지니어링 시스템에 도입된 두 가지 핵심 엔진 개념(모듈 조립과 동적 렌더링)의 차이점과 도입 이유에 대한 문답입니다.
+            </p>
+            
+            <div class="term-box" style="background:#2a2a2c; border-color:#e53935; color:#ffffff;">
+                <strong style="color:#ff5252; font-size:16px;">Q. 모듈형 문서 엔진과 동적 렌더링 엔진의 차이가 무엇입니까?</strong><br><br>
+                <strong>A. </strong> 두 엔진은 역할이 완전히 다릅니다.<br><br>
+                • <strong>모듈형 엔진 (데이터 조립기):</strong> 챕터 1, 챕터 2 등 뿔뿔이 흩어진 텍스트(HTML) 조각들을 레고 블록처럼 모아 하나의 긴 문서로 안전하게 <strong>'조립'</strong>해 주는 엔진입니다. (Jinja2 기술 사용)<br><br>
+                • <strong>동적 렌더링 엔진 (시각화 출력기):</strong> 조립이 끝난 문서를 읽고, CSS 디자인을 입히고, 자바스크립트(Mermaid 흐름도 등)를 실행하여 페이지가 넘쳐흐르지 않도록 계산한 뒤 최종 PDF로 <strong>'굽는'</strong> 엔진입니다. (Headless Chrome 기술 사용)
+            </div>
+
+            <div class="term-box" style="background:#2a2a2c; border-color:#43a047; color:#ffffff; margin-top:15px;">
+                <strong style="color:#4caf50; font-size:16px;">Q. 각 방식의 장단점은 무엇입니까?</strong><br><br>
+                <strong>[모듈형 조립 엔진]</strong><br>
+                • <strong>장점:</strong> 부록 중복 오류나 글씨 잘림 같은 물리적 에러가 원천 차단됩니다. 한 챕터만 수정하기 쉽습니다.<br>
+                • <strong>단점:</strong> 초기 세팅(템플릿 구조화)이 복잡하고 손이 많이 갑니다.<br><br>
+                <strong>[동적 렌더링 엔진]</strong><br>
+                • <strong>장점:</strong> 화면을 브라우저가 직접 그려주므로, 어두운 테마(Dark mode)나 복잡한 다이어그램도 완벽하게 PDF로 출력됩니다. 알아서 줄바꿈(Page break)을 계산합니다.<br>
+                • <strong>단점:</strong> 렌더링을 위해 가상의 크롬(Chrome) 브라우저를 백그라운드에서 띄워야 하므로, 단순 텍스트 변환보다 시스템 리소스(RAM)를 약간 더 소모합니다.
+            </div>
+        </div>
+        
+        <div class="grid-column" style="margin-top:60px;">
+            <div class="term-box" style="background:#333333; border-color:#1e88e5; color:#ffffff;">
+                <strong style="color:#2997ff; font-size:16px;">Q. 과거의 정적 변환기를 버리고, 굳이 무거운 '동적 렌더링 엔진'을 도입하게 된 결정적 이유는 무엇입니까?</strong><br><br>
+                <strong>A. </strong> 가장 큰 이유는 <strong>'디자인의 진화'</strong>와 <strong>'자동 줄바꿈 한계'</strong> 때문이었습니다.<br>
+                과거의 정적 텍스트 슬라이싱 방식은 단순히 글자 수를 세서 억지로 상자에 구겨 넣었기 때문에 내용이 넘쳐 사라지는 치명적 오류가 잦았습니다.<br>
+                또한, 대표이사님께서 도입하신 <strong>다크 모드 디자인, Mermaid 흐름도, Apple 스타일의 정밀한 CSS</strong>는 일반적인 PDF 변환기로는 흑백의 깨진 글자로만 출력됩니다.<br>
+                이를 해결하기 위해, <strong>'실제 브라우저가 자바스크립트를 모두 실행하고 화면을 완벽히 그린 다음 사진을 찍듯이 PDF로 저장'</strong>하도록 하는 <strong>동적 렌더링(Headless Chrome)</strong> 기술을 도입할 수밖에 없었습니다.
+            </div>
+
+            <!-- Flowchart -->
+            <div class="mermaid">
+graph TD
+    A[조각난 챕터 파일들<br>1장.html, 2장.html] --> B((모듈형 조립 엔진<br>Jinja2))
+    B -->|하나의 긴 코드로 병합| C[마스터 HTML<br>조립 완료]
+    C --> D{동적 렌더링 엔진<br>Headless Chrome}
+    D -.->|1. CSS 디자인 적용| D
+    D -.->|2. 자바스크립트 실행 흐름도| D
+    D -.->|3. 자동 페이지 높이 계산| D
+    D --> E[완벽한 V35 PDF 출력]
+
+    style B fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
+    style D fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#43a047,stroke-width:2px
+            </div>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>01</span></div>
+</div>
+
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[조직 확장] AI 워크스페이스 완벽 복제 및 인수인계 (Q&A)</h3>
+<div class="page tile-light">
+    <div class="content-wrap grid-2">
+        <div class="grid-column">
+            <h2 class="display-lg hairline-bottom">제37장. [조직 확장] AI 워크스페이스 완벽 복제 및 인수인계 (Q&A)</h2>
+            <p class="body-text" style="color:var(--body-muted); margin-bottom:30px;">
+                조직 확장을 대비하여, 개인의 PC에 구축된 고성능 AI 파이프라인을 <strong>신규 입사자에게 100% 동일하게 이식(Clone)</strong>하는 방안에 대한 문답입니다.
+            </p>
+            
+            <div class="term-box" style="background:#2a2a2c; border-color:#e53935; color:#ffffff;">
+                <strong style="color:#ff5252; font-size:16px;">Q. 내 지식(MD 파일들)만 넘겨주면, 다른 사람도 용문동 보고서를 똑같이 자동 생성할 수 있을까요?</strong><br><br>
+                <strong>A. 불가능합니다.</strong> <code>AGENTS.md</code>나 <code>지식베이스</code> 같은 MD 파일은 AI의 <strong>'두뇌(기억과 룰)'</strong>일 뿐입니다. AI에게 "용문동 검토해"라고 지시해도, 그것을 물리적으로 그려낼 <strong>'근육(코드)'</strong>과 공공데이터를 열 <strong>'열쇠(API 키)'</strong>가 그 사람의 PC에 없다면 AI는 에러를 반환하고 멈춥니다.
+            </div>
+
+            <div class="term-box" style="background:#2a2a2c; border-font-weight:bold; color:#ffffff; margin-top:15px;">
+                <strong style="color:#2997ff; font-size:16px;">Q. 그렇다면 다른 사람이 똑같은 작업을 하려면 구체적으로 무엇을 더 전달해야 합니까?</strong><br><br>
+                <strong>A. 완벽한 복제를 위해 다음 3대 필수 요소가 함께 전달되어야 합니다.</strong><br>
+                1. <strong>The Engine (스크립트/템플릿):</strong> <code>.agents/skills/</code> 폴더 하위의 파이썬 파일 및 HTML 레이아웃 파일. (렌더링을 수행하는 실체)<br>
+                2. <strong>The Keys (환경변수 및 API 키):</strong> VWorld, 국가법령정보 등 데이터를 끌어오기 위한 공용 인증키.<br>
+                3. <strong>The Trigger (최초 기동 프롬프트):</strong> 시스템을 로드하기 위해 새 담당자가 AI에게 던져야 하는 정확한 첫 번째 지시어.
+            </div>
+        </div>
+        
+        <div class="grid-column" style="margin-top:60px;">
+            <div class="term-box" style="background:#333333; border-color:#fbbc04; color:#ffffff;">
+                <strong style="color:#fbbc04; font-size:14px;">[핵심 용어 사전 (Glossary)]</strong><br>
+                • <strong>환경 이식성 (Environment Portability):</strong> 내 컴퓨터에서 돌아가는 자동화 시스템이 남의 컴퓨터에서도 설정 변경 없이 똑같이 돌아가게 만드는 능력.<br>
+                • <strong>워크스페이스 복제 (Workspace Clone):</strong> 파일 몇 개만 메일로 보내는 것이 아니라, <code>.agents/</code> 숨김 폴더 전체를 Git이나 클라우드로 동기화하여 인프라를 통째로 복사하는 행위.<br>
+                • <strong>트리거 (Trigger):</strong> 스크립트와 MD가 완벽히 세팅된 상태에서, 파이프라인의 폭발을 일으키는 단 하나의 '방아쇠' 문장.
+            </div>
+
+            <!-- Onboarding Flowchart -->
+            <div class="mermaid">
+graph LR
+    subgraph 기존 구축자 (대표이사)
+        A[두뇌: MD 생태계]
+        B[근육: 스크립트 엔진]
+        C[열쇠: API Keys]
+    end
+
+    subgraph 클라우드 동기화 (Git / Drive)
+        D((워크스페이스 통째로 Clone))
+    end
+
+    subgraph 신규 담당자 (타인)
+        E[환경 100% 복원 완료]
+        F[방아쇠: Trigger 프롬프트 입력<br>ex: '용문동 검토 시작해']
+        G((통합보고서 출력))
+    end
+
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+
+    style D fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+    style G fill:#e8f5e9,stroke:#43a047,stroke-width:2px
+            </div>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>01</span></div>
+</div>
+
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>공공 API 직결 및 무인 스케줄링</h3>
+<div class="page tile-light">
+<div class="content-wrap grid-2">
+<div class="grid-column">
+<h2 class="display-lg hairline-bottom">제38장. 공공 API 직결 및 무인 스케줄링</h2>
+<p class="body-text" style="margin-bottom:30px;">
+                    인터넷 화면을 대충 긁어오면 홈페이지 개편 시 시스템이 멈춥니다. 국가 DB 창고로 직결되는 전용 통로(API)를 뚫어 <strong>오류 확률 0%</strong>를 보장합니다.
+                </p>
+<div class="term-box" style="background:#2a2a2c; border-font-weight:bold; color:#ffffff;">
+<strong style="color: #2997ff; font-size:14px;">[적용 1] 국가법령정보센터 API (법규 검토)</strong><br/>
+                    • <strong>목적:</strong> 엑셀에 적힌 구버전 용적률을 적용하는 참사 차단.<br/>
+                    • <strong>발급법:</strong> <code>open.law.go.kr</code>에서 오픈 API 키 신청.
+                </div>
+<div class="term-box" style="background:#2a2a2c; border-color:#34a853; color:#ffffff;">
+<strong style="color: #34a853; font-size:14px;">[적용 2] VWorld 공간정보 API (건축개요)</strong><br/>
+                    • <strong>목적:</strong> 수십 개 지번을 수기로 치는 휴먼 에러 방지.<br/>
+                    • <strong>발급법:</strong> <code>vworld.kr</code> 데이터 서비스 인증키 발급.
+                </div>
+</div>
+<div class="grid-column" style="margin-top:60px;">
+<div class="term-box" style="background:#333; border-color:#fbbc04; color:#fff;">
+<strong style="color: #fbbc04; font-size:14px;">[무인 스케줄러] LaunchAgent (맥 네이티브)</strong><br/>
+                    - 크론탭(Cron)은 컴퓨터가 잠들면 멈추지만, <code>LaunchAgent</code>는 맥을 강제로 깨워(Wake) 실행합니다.<br/><br/>
+<strong>* 구현 방법:</strong><br/>
+                    1. <code>~/Library/LaunchAgents/com.jinyang.plist</code> 생성.<br/>
+                    2. <code>StartCalendarInterval</code>을 09시 00분으로 지정.<br/>
+                    3. <code>&lt;key&gt;WakeReason&lt;/key&gt;</code> 속성을 부여하여 멱살 잡고 기상.<br/>
+                    4. <code>launchctl load</code> 로 심장 박동 가동.
+                </div>
+</div>
+</div>
+<div class="page-footer"><span>제14장. API 연동 및 스케줄링</span><span>13</span></div>
+</div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>무료 웹호스팅 기반 사내 포털 배포 매뉴얼</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            사내 인트라넷이나 포털을 구축하기 위해서는 보통 서버 임대 비용과 도메인 구매 비용이 발생합니다. 하지만 정적 파일로만 구성된 웹페이지의 경우, 글로벌 플랫폼(GitHub + Vercel)을 활용하면 <strong>100% 무료</strong>로 초고속 호스팅 환경을 구축할 수 있습니다. 본 매뉴얼은 진양 엔지니어링의 J-Hub 포털을 비용 없이 인터넷에 런칭했던 실제 사례를 바탕으로 작성되었습니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; font-weight:bold;">1. 사전 준비 및 환경 구성</h3>
+        <ul class="body-text">
+            <li><strong>[준비물 1] GitHub 계정</strong>: 코드를 무료로 저장할 수 있는 클라우드 저장소</li>
+            <li><strong>[준비물 2] Vercel 계정</strong>: GitHub에 저장된 코드를 읽어와 전 세계 인터넷으로 방송(송출)해 주는 무료 호스팅 서비스</li>
+            <li><strong>[작업 폴더]</strong>: 작성된 웹사이트 코드 파일(예: <code>index.html</code>)이 특정 폴더에 준비되어 있어야 합니다.</li>
+        </ul>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border:1px solid var(--hairline); margin-top: 20px; margin-bottom: 30px;">
+            <strong style="font-weight:bold; font-size:16px;">💡 필수 용어 해설</strong>
+            <ul style="margin-top: 10px; font-size: 14px;">
+                <li><strong>웹 호스팅(Web Hosting)</strong>: 내 컴퓨터에 있는 파일을 24시간 켜져 있는 거대한 서버 컴퓨터에 빌려 올려두고, 누구나 인터넷 주소로 접속해 볼 수 있게 하는 서비스입니다.</li>
+                <li><strong>GitHub (깃허브)</strong>: 전 세계 개발자들이 자신의 코드(문서)를 올려두고 보관하는 가장 큰 '소스코드 은행'입니다.</li>
+                <li><strong>Vercel (버셀)</strong>: 깃허브 창고에 있는 코드를 가져다가 예쁘게 포장해서 빠르고 안정적인 인터넷 주소(URL)로 연결해 주는 자동화 배포 플랫폼입니다.</li>
+                <li><strong>Repository (창고/저장소)</strong>: 프로젝트 단위로 코드를 보관하는 하나의 폴더 개념입니다.</li>
+            </ul>
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; font-weight:bold;">2. 전체 배포 플로우차트</h3>
+        <p class="body-text">아래는 전체 배포 과정을 요약한 다이어그램입니다.</p>
+        <div class="mermaid" style="margin-top: 20px; margin-bottom: 30px;">
+flowchart TD
+    A[웹사이트 코드 작성 완료] --> B[GitHub 로그인 및 New Repository 생성]
+    B --> C[파일 Drag & Drop 업로드]
+    C --> D[Vercel 로그인 및 GitHub 연동]
+    D --> E[저장소 Import 및 배포 Deploy]
+    E --> F[나만의 고유 인터넷 주소 URL 획득!]
+    
+    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-width:1px
+    style D fill:#fff,stroke:#333,stroke-width:1px
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; font-weight:bold;">3. 상세 진행 단계 (Step-by-Step)</h3>
+        
+        <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); padding:30px; margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">STEP 1: GitHub에 빈 창고(Repository) 만들기</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">가장 먼저 우리가 만든 <code>index.html</code> 파일을 보관할 빈 창고를 만들어야 합니다.</p>
+            <ol style="margin-top:10px; font-size:14px; color:var(--ink);">
+                <li>GitHub에 로그인한 뒤, 상단의 초록색 <strong>New</strong> 버튼을 클릭합니다.</li>
+                <li>창고 이름(Repository name)에 <code>j-hub-portal</code>과 같이 원하는 이름을 영어로 입력합니다.</li>
+                <li>스크롤을 내려 맨 아래 초록색 <strong>Create repository</strong> 버튼을 클릭합니다.</li>
+            </ol>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); padding:30px; margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">STEP 2: 파일 업로드하기 (Drag & Drop)</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">빈 창고가 생성되면, 파일을 올릴 수 있는 화면이 나타납니다.</p>
+            <ol style="margin-top:10px; font-size:14px; color:var(--ink);">
+                <li>화면 중간의 하늘색 박스 안에 있는 파란색 글씨 <strong>uploading an existing file</strong>을 클릭합니다.</li>
+                <li>점선으로 된 큰 네모 칸이 나오면, 내 컴퓨터에 있는 <code>index.html</code> 파일을 마우스로 끌어다 놓습니다.</li>
+                <li>업로드가 완료되면 하단의 초록색 <strong>Commit changes</strong> 버튼을 눌러 저장합니다.</li>
+            </ol>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); padding:30px; margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">STEP 3: Vercel 계정 연동 및 배포 권한 부여</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">GitHub에 파일이 잘 저장되었다면, 이제 Vercel을 통해 인터넷 주소를 만들 차례입니다.</p>
+            <ol style="margin-top:10px; font-size:14px; color:var(--ink);">
+                <li>Vercel 메인 화면에서 <strong>Continue with GitHub</strong> 까만색 버튼을 클릭합니다.</li>
+                <li>Vercel이 GitHub 창고를 들여다볼 수 있도록 <strong>Install</strong> 또는 <strong>Authorize</strong> 버튼을 눌러 권한을 허락합니다.</li>
+                <li><em>주의: 중간에 <code>Secure Your Account with 2FA</code> 화면이 나오면, 하단 <code>Skip securing my account</code>를 눌러 건너뛸 수 있습니다.</em></li>
+            </ol>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border:1px solid var(--hairline); padding:30px; margin-bottom: 20px;">
+            <strong style="font-weight:bold; font-size:16px;">STEP 4: 최종 배포 (Deploy) 및 URL 획득</strong>
+            <p style="margin-top:8px; font-size:14px; color:var(--body-muted);">권한 연동이 끝나면 메인 대시보드로 이동합니다.</p>
+            <ol style="margin-top:10px; font-size:14px; color:var(--ink);">
+                <li><code>Deploy your first project</code> 항목 첫 번째에 방금 만든 창고(예: <code>j-hub-portal</code>)가 표시됩니다.</li>
+                <li>우측 파란색 <strong>Import</strong> 버튼을 클릭합니다.</li>
+                <li>이어지는 설정 화면에서 아무것도 바꾸지 말고 파란색 <strong>Deploy</strong> 버튼을 클릭합니다.</li>
+            </ol>
+            <p style="margin-top:10px; font-size:14px; font-weight:bold;">약 10초 뒤 축하 꽃가루(🎉) 효과와 함께 프로젝트가 전 세계 인터넷망에 런칭되며, Vercel이 제공하는 무료 도메인 주소(예: <code>j-hub-portal.vercel.app</code>)가 생성됩니다!</p>
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; font-weight:bold;">4. 🤖 AI 프롬프트 실전 예시</h3>
+        <p class="body-text">본 과정을 진행할 때 AI 에이전트에게 다음과 같이 명령하면 막히는 부분 없이 도움을 받을 수 있습니다.</p>
+        <div class="term-box" style="background:var(--canvas-parchment); border-left: 4px solid var(--primary); padding:20px; margin-top: 10px;">
+            <p style="font-size: 14px; font-style: italic;">💬 "내가 만든 index.html 파일을 무료 웹호스팅으로 인터넷에 띄우고 싶어. Vercel을 이용할 건데, 내가 지금 GitHub에 로그인한 상태야. 다음 단계부터 무엇을 눌러야 하는지 1번부터 차례대로 안내해 줘."</p>
+        </div>
+        <div class="term-box" style="background:var(--canvas-parchment); border-left: 4px solid var(--primary); padding:20px; margin-top: 10px;">
+            <p style="font-size: 14px; font-style: italic;">💬 "화면에 'Secure Your Account with 2FA'라는 영어 창이 떴는데, 여기서 무엇을 눌러야 다음으로 넘어갈 수 있는지 화면을 캡처해서 줄 테니 알려줘."</p>
+        </div>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>웹 플랫폼과 출력물의 완벽한 이원화(Dual-track) 설계 원칙</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            모니터에서 보는 웹 화면과 종이로 인쇄되는 출력물을 왜 완벽하게 분리해야 하는지, 호기심 많은 50대 대표이사와 똑부러지는 MZ 신입사원의 대화를 통해 알아봅니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-left:4px solid #000; border: 1px solid #000;; margin-bottom:15px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="color:var(--ink); font-size:16px;">👨‍💼 김대표 (50대 중반, 대표이사)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "김사원, 내가 이번에 만든 사업성 검토 플랫폼을 보니까 화면에 표가 참 예쁘게 잘 나왔더라고. 그래서 그걸 그대로 보고서로 쓰려고 브라우저에서 `Ctrl+P`(인쇄)를 눌렀지. 그런데 표가 다음 장으로 넘어가면서 반으로 쪼개지고, 회사 워터마크나 목차도 안 들어가서 영 폼이 안 나. 이거 시스템 오류 아닌가?"
+            </p>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border-left:4px solid var(--primary); border: 1px solid #000;; margin-bottom:30px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="font-weight:bold; font-size:16px;">🧑‍💻 MZ 김사원 (기술 특화 신입)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "아하! 대표님, 오류가 아닙니다! 그건 저희 진양엔지니어링의 핵심 아키텍처인 <strong>'작업 환경과 출력물의 이원화 설계 원칙'</strong>을 적용했기 때문이에요. 화면(Web)은 단순히 데이터를 입력해보고 요리조리 시뮬레이션해보는 '뷰어'일 뿐입니다. 진짜 제출용 고품질 출력물(PDF)은 전용 생산 공장인 <strong>'동적 모듈형 렌더링 엔진'</strong>으로 넘겨서 찍어내야 해요!"
+            </p>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "대표님 방식으로 비유하자면, 웹 화면은 고객한테 보여주는 예쁜 '모델하우스'고, 출력용 엔진은 실제로 건물을 짓는 정교한 '실시설계 도면'이라고 생각하시면 됩니다. 이 둘을 철저히 분리해야만 우리 회사의 하이엔드 문서 퀄리티를 유지할 수 있거든요."
+            </p>
+        </div>
+
+        <h3 class="display-md" style="margin-top:20px; font-weight:bold;">1. 시각적 개념 및 업무 흐름도</h3>
+        <p class="body-text" style="margin-bottom:15px;">똑부러지는 김사원이 화이트보드에 완벽하게 검증된 무결점 흐름도를 그려가며 설명을 이어갑니다.</p>
+
+        <div class="mermaid" style="page-break-inside:avoid;">
+graph TD
+    A[대표이사 데이터 입력] -->|UI에서 빠르게 검토| B(작업용 웹 프로토타입 화면)
+    B -->|버튼 클릭: '최종 출력'| C{데이터 분리 및 전송}
+    
+    C -->|1. 브라우저 인쇄 시도 X| D[❌ 레이아웃 깨짐 발생]
+    C -->|2. JSON 데이터 안전 전송| E[[출력용 동적 모듈 렌더링 엔진]]
+    
+    E --> F[표지 및 목차 자동 모듈 조립]
+    E --> G[A4 규격 여백 및 페이지 분할 적용]
+    
+    F --> H([최종 고품질 A4 PDF 출력])
+    G --> H
+    
+    style B fill:#e3f2fd,stroke:#1e88e5
+    style E fill:#fff3e0,stroke:#f57c00
+    style D fill:#ffebee,stroke:#e53935
+    style H fill:#e8f5e9,stroke:#43a047
+        </div>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-left:4px solid #000; border: 1px solid #000;; margin-top:20px; margin-bottom:15px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="color:var(--ink); font-size:16px;">👨‍💼 김대표 (50대 중반, 대표이사)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "아하! 그러니까 브라우저 인쇄는 절대 쓰면 안 되고, 백엔드 서버에 있는 '진자2(Jinja2)' 렌더링 엔진으로 데이터만 쏴서, 규격화된 A4 템플릿에 쏟아붓는 방식이라는 거구만! 신입사원이 나보다 훨씬 낫네, 껄껄."
+            </p>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas); border-left:4px solid var(--primary); border: 1px solid #000;; margin-bottom:30px; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="font-weight:bold; font-size:16px;">🧑‍💻 MZ 김사원 (기술 특화 신입)</strong>
+            <p style="margin-top:8px; font-size:15px; color:var(--ink);">
+                "맞습니다, 대표님! 그래서 앞으로 AI 에이전트한테 새로운 플랫폼을 만들어 달라고 하실 때도, <em>'전사 원칙에 따라 설계해'</em>라고 한 마디만 하시면 됩니다. 그럼 AI가 알아서 `AGENTS.md` 규칙을 읽고 조작 화면과 출력 모듈을 분리해서 설계해 드릴 거예요. 대표님, 마지막으로 제가 오늘 설명해 드린 핵심 용어 3가지를 깔끔하게 요약해 드릴게요!"
+            </p>
+        </div>
+
+        <div class="term-box" style="background:var(--surface-tile-1); border-left:4px solid var(--primary); border: 1px solid #000;; color:#ffffff; page-break-inside:avoid; break-inside:avoid;">
+            <strong style="color:var(--canvas-parchment); font-size:16px;">📌 [김사원의 요약 노트] 핵심 용어 총정리</strong>
+            <ul style="margin-top:10px; margin-left:20px; font-size:14px; line-height:1.6; color:var(--canvas-parchment);">
+                <li><strong>웹 프로토타입 (Web Prototype):</strong> 모니터 화면에서 이리저리 조건을 바꿔보며 조작하기 위한 껍데기. 시뮬레이터 역할이므로 <strong>절대 인쇄 금지!</strong></li>
+                <li><strong>동적 모듈 렌더링 엔진:</strong> 데이터를 넘겨받아 A4 마스터 템플릿(`base_layout.html`)에 쏟아부어, 잘림 현상 없는 완벽한 PDF를 찍어내는 전용 출력 공장.</li>
+                <li><strong>Jinja2 (진자2):</strong> 렌더링 엔진 공장이 빈칸이 뚫린 템플릿 문서에 실제 데이터를 정확히 찔러 넣을 때 사용하는 파이썬 기반의 언어 기술.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+<div class="part-divider">
+<div class="part-number">Appendix Gallery</div>
+<h2 class="display-lg hairline-bottom" style="display:none;">부록: 전체 페이지 모형 갤러리 (APPENDIX GALLERY)</h2>
+<h1 class="part-title">부록: 전체 페이지 모형 갤러리 (APPENDIX GALLERY)</h1>
+<p style="font-size:18px; margin-top:20px; color:rgba(255,255,255,0.6);">API 연동, 퍼지매칭, 디자인 토큰이 결합하여 만들어낸 기적</p>
+</div>
+<div class="page-footer"><span>특별 부록. 갤러리</span><span>23</span></div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+<!-- PAGE BREAK -->
+
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-dark">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">시스템 유지보수 및 에러 대처법</h2>
+        <p class="body-text" style="margin-bottom:30px; color:var(--body-muted);">
+            파이프라인이 멈추거나 예상치 못한 결과가 나왔을 때, 당황하지 않고 원인을 찾아내는 가장 핵심적인 체크리스트입니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#2997ff;">1. 공공 API 서버 장애 (VWorld 타임아웃)</h3>
+        <div class="term-box" style="background:var(--surface-tile-2); border-color:#2997ff;">
+            <strong>증상:</strong> 파이썬 스크립트 실행 중 `requests.exceptions.Timeout` 에러가 발생하거나, 삽도가 하얗게 비어 나옵니다.<br><br>
+            <strong>대처법:</strong> 국토부 VWorld 서버 점검 시간일 확률이 90%입니다. 이럴 때는 강제로 스크립트를 재실행하지 말고, 인터넷 창에 `map.vworld.kr`을 쳐서 사이트가 정상적으로 열리는지 먼저 확인하십시오. 사이트가 다운되었다면 서버 복구를 기다리는 것이 유일한 해결책입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#2997ff;">2. 용적률 산출 오류 (CSV 누락)</h3>
+        <div class="term-box" style="background:var(--surface-tile-2); border-color:#2997ff; margin-bottom: 20px;">
+            <strong>증상:</strong> 건축 개요표에 대지면적이나 용적률이 터무니없이 작게 산출됩니다.<br><br>
+            <strong>대처법:</strong> 가장 먼저 `data.csv` 파일을 여십시오. 특정 지번의 면적 값이 '0'이거나 아예 비어있는 칸이 있는지 확인해야 합니다. 지번 분할/합병으로 인해 최신 지적도와 API 데이터가 불일치할 때 발생하는 현상입니다. 비어있는 값을 토지이음(eum.go.kr)에서 수동으로 찾아 기입해주면 시스템은 정상 연산합니다.
+        </div>
+        
+        <h3 class="display-md" style="margin-top:30px; color:#ff5252;">3. 단일 진실 공급원 (SSOT) 훼손 금지</h3>
+        <div class="term-box" style="background:#331515; border-color:#ff5252;">
+            <strong style="color:#ff5252; font-size:16px;">AGENTS.md는 절대 법전입니다.</strong><br>
+            직원들이 각자의 채팅방에서 새로운 업무 꿀팁이나 스크립트 수정 사항을 알아냈을 때, 이를 혼자만 알고 넘어가는 것은 우리 시스템의 암(Cancer)입니다.<br><br>
+            새로운 지식을 얻었다면 무조건 워크스페이스의 <strong>`AGENTS.md` (혹은 지식베이스 파일)</strong>에 적어두십시오. 이 절대 법전이 훼손되거나 파편화되면, 직원마다 AI가 내놓는 보고서의 퀄리티가 달라지는 치명적인 사고가 발생합니다.
+        </div>
+
+    </div>
+    <div class="page-footer" style="border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);"><span>(주)진양엔지니어링 건축사 사무소</span><span>07</span></div>
+</div>
+
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
+
+
+    <!-- Mermaid Initialization -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ffffff',
+                primaryTextColor: '#1d1d1f',
+                primaryBorderColor: '#0066cc',
+                lineColor: '#86868b',
+                secondaryColor: '#f5f5f7',
+                tertiaryColor: '#ffffff'
+            },
+            flowchart: { htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+</body>
+</html>
