@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Use content-column wrapper for new flex layout -->
+<div class="main-content" style="display: flex; gap: 40px; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 40px;">
+<div class="content-column" id="mdContentWrapper" style="position:relative; overflow:hidden;">
+    
+    <!-- Meta Info & Breadcrumb -->
+    <div style="margin-bottom: 24px;">
+        <div class="breadcrumb">
+            <a href="index.html">홈</a> <span style="margin: 0 8px;">/</span> 
+            <span>{{ title }}</span>
+        </div>
+        <div class="doc-meta-header" style="margin-top: 12px;">
+            <span class="level-tag {{ level_class }}" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">{{ level_label }}</span>
+            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">{{ date }}</span>
+            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: {{ id }}</span>
+        </div>
+    </div>
+    
+    <!-- Title -->
+    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">{{ title }}</h1>
+    
+    <!-- Summary / Hook -->
+    <div style="margin-bottom: 60px; padding: 40px; background: var(--surface-pearl); border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--primary); letter-spacing: -0.2px; margin-bottom: 16px; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            핵심 요약 (Key Takeaway)
+        </div>
+        <div class="lead-airy" style="color: var(--ink);">
+            {{ summary }}
+        </div>
+    </div>
+
+    <!-- Gated Markdown Content -->
+    <div class="gated-content {% if level == 1 %}unlocked{% endif %}" style="position: relative; {% if level == 1 %}max-height: none !important;{% endif %}">
+        <div class="markdown-body md-content" style="font-size: 17px; line-height: 1.6; letter-spacing: -0.374px;">
+            {{ content | safe }}
+        </div>
+        
+        <!-- Premium Lead Magnet / Paywall Gate -->
+        {% if level > 1 %}
+        <div class="lead-magnet-overlay">
+            <div class="lead-magnet-box">
+                <div style="margin-bottom: 24px; color: var(--primary); display: flex; justify-content: center;">
+                    <div style="width: 56px; height: 56px; background: rgba(0, 102, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                </div>
+                <h3>사내 기밀 실무 데이터 잠금</h3>
+                <p>프롬프트 엔지니어링 사례 및 실제 적용 가이드는 진양엔지니어링 임직원에게만 제공됩니다.</p>
+                
+                <div style="margin-bottom: 16px;">
+                    <input type="email" id="lmEmail" class="lm-input" placeholder="사내 이메일 주소 (@jinyang.com)">
+                    <input type="text" id="lmCompany" class="lm-input" placeholder="소속 부서">
+                </div>
+                
+                <button onclick="unlockContent()" class="lm-btn">권한 요청 및 열람하기</button>
+                <div style="margin-top: 20px;">
+                    <button onclick="masterLogin()" style="background: none; border: none; font-size: 13px; font-weight: 600; color: var(--ink-muted); text-decoration: underline; cursor: pointer;">마스터 계정 인증</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- Footer Navigation -->
+    <div style="margin-top: 80px; display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid var(--hairline);">
+        {% if prev_link %}
+        <a href="{{ prev_link }}" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--canvas-parchment); border-radius: 999px;">← 이전 문서</a>
+        {% else %}
+        <div></div>
+        {% endif %}
+        
+        {% if next_link %}
+        <a href="{{ next_link }}" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--primary); color: white; border-radius: 999px;">다음 문서 →</a>
+        {% else %}
+        <div></div>
+        {% endif %}
+    </div>
+
+    <!-- Feedback UI -->
+    <div style="margin-top: 60px; padding: 40px; background: var(--canvas); border-radius: 24px; border: 1px solid var(--hairline); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+        <h3 class="tagline" style="margin-bottom: 24px; color: var(--ink);">이 문서가 실무에 도움이 되었나요?</h3>
+        <div style="display:flex; justify-content:center; gap:16px;">
+            <button onclick="submitFeedback(true, {{ id }})" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
+            <button onclick="submitFeedback(false, {{ id }})" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
+        </div>
+        <p id="feedbackThanks" style="display:none; color:var(--primary); font-size:15px; font-weight:600; margin-top:24px;">소중한 피드백이 전송되었습니다. 시스템 개선에 반영하겠습니다!</p>
+    </div>
+</div>
+
+<!-- Right Side Sticky TOC (Outside of content-column) -->
+<div class="article-toc" id="articleToc">
+    <strong>본문 목차</strong>
+    <!-- TOC will be dynamically injected by a JS script traversing h2/h3 -->
+    <div id="dynamicTocList"></div>
+    <div style="margin-top: 24px; border-top: 1px solid var(--hairline); padding-top: 20px;">
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="background: none; border: none; font-size: 13px; font-weight: 600; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; gap: 6px;">
+            ↑ 맨 위로 이동
+        </button>
+    </div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic In-page TOC Generator
+    const mdContent = document.querySelector('.md-content');
+    const tocList = document.getElementById('dynamicTocList');
+    if(mdContent && tocList) {
+        const headings = mdContent.querySelectorAll('h2, h3');
+        if (headings.length === 0) {
+            document.getElementById('articleToc').style.display = 'none';
+            return;
+        }
+        
+        headings.forEach((heading, idx) => {
+            if (!heading.id) heading.id = 'heading-' + idx;
+            const a = document.createElement('a');
+            a.href = '#' + heading.id;
+            a.textContent = heading.textContent;
+            a.style.marginLeft = heading.tagName === 'H3' ? '12px' : '0';
+            a.style.fontSize = heading.tagName === 'H3' ? '13px' : '14px';
+            tocList.appendChild(a);
+        });
+    }
+});
+</script>
+{% endblock %}
