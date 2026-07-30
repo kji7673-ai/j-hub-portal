@@ -13,8 +13,18 @@
 <h3>AI 전투 교본: 수작업의 종말과 '검증'의 시작</h3>
 
 <figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/prompt.jpg" alt="터미널에서 정교한 블루프린트가 생성되는 모습" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도] 완벽한 프롬프트(명령어)가 수작업 3일의 도면을 3분 만에 생성합니다.</figcaption>
+  <img src="static/images/illustrations/prompt_blueprint.jpg" alt="터미널에서 정교한 블루프린트가 생성되는 모습" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
+  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 1] 완벽한 프롬프트(명령어)가 수작업 3일의 도면을 3분 만에 생성합니다.</figcaption>
+</figure>
+
+<figure style="text-align: center; margin: 40px 0;">
+  <img src="static/images/illustrations/prompt_4_pillars.jpg" alt="프롬프트 4대 기둥" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
+  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 2] 강력한 결과를 만드는 4대 기둥 (맥락, 역할, 작업, 포맷)</figcaption>
+</figure>
+
+<figure style="text-align: center; margin: 40px 0;">
+  <img src="static/images/illustrations/prompt_before_after.jpg" alt="프롬프트 전후 비교" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
+  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 3] 흐릿한 지시(연기)가 명확한 지시(큐브)로 바뀔 때 달라지는 결과물</figcaption>
 </figure>
 
 <p>과거 우리는 VWorld를 열어 지적도를 확인하고, 디스코(Disco)에서 실거래가를 검색하며, 국가법령정보센터에서 조례를 뒤적이는 데 <strong>꼬박 3일</strong>을 썼습니다. 이제 J-Hub AI 플랫폼은 지번 하나만으로 이 모든 데이터를 <strong>단 3분</strong> 만에 긁어옵니다.</p>
