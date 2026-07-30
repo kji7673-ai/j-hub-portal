@@ -120,10 +120,11 @@
     
     /* MAIN CONTENT */
     .main-content-wrapper {
-        padding-left: 280px;
-        transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-left: 280px;
+        width: calc(100% - 280px);
+        transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s;
     }
-    .main-content-wrapper.collapsed { padding-left: 0; }
+    .main-content-wrapper.collapsed { margin-left: 0; width: 100%; }
     
     .main-content {
         padding: 40px; max-width: 1200px; margin: 0 auto; position: relative;
@@ -464,7 +465,7 @@
     }
     @media (max-width: 900px) {
         .desktop-sidebar { display: none; }
-        .main-content-wrapper { padding-left: 0; }
+        .main-content-wrapper { margin-left: 0 !important; width: 100% !important; }
         .main-content { padding: 0; }
         .viewer-card { padding: 24px 16px; border-radius: 0; border: none; box-shadow: none; background: transparent; min-height: auto; }
         .md-content { line-height: 1.65; word-break: keep-all; overflow-wrap: break-word; }
@@ -624,7 +625,8 @@
     </div>
 
     <!-- Main Content Block -->
-    
+    <div class="main-content-wrapper">
+        
 <!-- Use content-column wrapper for new flex layout -->
 <div class="main-content" style="display: flex; gap: 40px; align-items: flex-start; max-width: 1200px; margin: 0 auto; padding: 40px;">
 <div class="content-column" id="mdContentWrapper" style="position:relative; overflow:hidden;">
@@ -1489,6 +1491,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+    </div>
 
     <!-- Common Scripts -->
     <script>
