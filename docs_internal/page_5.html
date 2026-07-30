@@ -692,121 +692,130 @@ graph TD
 <div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>오토데스크 포마(Forma) 같은 글로벌 AI는 대지를 찰흙으로 보고 예쁘게 깎습니다. 하지만 지하주차장 모듈, 4-Bay 코어, 한국형 인동거리가 생명인 K-아파트에 이 서양식 알고리즘을 그대로 적용하면 <strong>시공 불가+공사비 폭발의 기형 도면</strong>이 나옵니다.</div>
 <p>진양의 배치 알고리즘은 다릅니다. <strong>"데크가 먼저, 그리드가 다음, 주동이 마지막으로 올라탄다."</strong></p>
 
-<div class="alert alert-danger" style="margin-top:20px;">
-    <h5>🚨 8.4m 단순 바둑판 그리드의 함정</h5>
-    <p>지하 주차장 기둥 간격이 X축(주차 3칸 폭 ≈ 8.1~8.4m)과 Y축(주차+차로+주차 리듬)이 다른데, 이를 정사각 바둑판으로 단순화하면 <strong>기둥이 차로 한가운데에 박히고, 외곽부에 차로를 먼저 두면 주차 면적이 낭비</strong>됩니다. 대지 외곽부에는 주차 칸이 먼저 와야 최대 효율입니다.</p>
+<div class="alert alert-danger" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-top: 32px; margin-bottom: 40px;">
+  <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 12px;">🚨 8.4m 단순 바둑판 그리드의 함정</h4>
+  <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0;">
+    서양의 알고리즘은 지하 주차장을 단순한 '정사각 바둑판(Grid)'으로 쪼갭니다. 하지만 X축(주차 3칸 폭 ≈ 8.1~8.4m)과 Y축(주차+차로+주차 리듬)이 엄연히 다른 한국의 아파트에서 이 공식을 그대로 쓰면, <strong>기둥이 차로 한가운데에 박히는 대참사</strong>가 벌어집니다. 대지 외곽부에 차로를 두는 서양식 낭비를 걷어내고, 주차 칸을 가장 바깥으로 밀어내어 극한의 효율을 뽑아내는 것. 이것이 진양 고유 알고리즘의 출발점입니다.
+  </p>
 </div>
 
 <h4 style="margin-top:25px; color:var(--blueprint-blue);">진양 배치 알고리즘 7단계</h4>
 
-<div class="alert alert-secondary">
-    <h5><span style="background:#2b6cb0;color:white;padding:2px 8px;border-radius:4px;">STEP 0</span> 사업 목표 확정 — 모든 계산의 출발점</h5>
+<div class="row" style="margin-top: 32px; gap: 24px;">
+  <!-- STEP 0 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#2b6cb0;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 0</span> 사업 목표 확정 — 모든 계산의 심장
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
+      엔진을 켜기 전, 우리는 나침반을 세워야 합니다. <strong>목표 세대수</strong>, <strong>세대 Mix 비율</strong>, 그리고 <strong>용적률 상한 및 최고 층수</strong>. 이 3가지 숫자는 단순한 입력값이 아니라 앞으로 펼쳐질 수백만 가지의 경우의 수를 통제하는 거대한 기준점입니다. 이 숫자가 흔들리면 이후의 모든 렌더링은 무의미한 허구에 불과합니다.
+    </p>
+  </div>
 
-    <p>이 숫자들이 없으면 이후 모든 단계가 허구입니다. AI에게 가장 먼저 입력해야 할 3가지:</p>
-    <ul>
-        <li><strong>목표 세대수</strong> (예: 300세대)</li>
-        <li><strong>세대 Mix</strong> (예: 59㎡×100 + 84㎡×150 + 114㎡×50)</li>
-        <li><strong>용적률 상한 + 최고 층수</strong> (예: 250%, 30층 이하)</li>
-    </ul>
-</div>
-
-<div class="alert alert-secondary">
-    <h5><span style="background:#744210;color:white;padding:2px 8px;border-radius:4px;">STEP 1</span> 데크 우선 설정 — 지하층 판정 자동 검증 포함</h5>
-
-    <p>AI가 수치지형도를 읽어 고저차를 산출하고, 데크 단 수와 레벨을 제안합니다. 단, 인간이 최종 승인하기 전에 아래 법정 루틴이 자동 실행됩니다.</p>
-    <div style="background:#fff8e1;border-left:4px solid #f59e0b;padding:10px;border-radius:4px;font-size:13px;">
-        <strong>⚖️ 지하층 자동 판정 공식 (건축법 시행령 제119조 제1항 제9호)</strong><br>
-        평균지반면 = Σ(각 구간 지반고 × 구간 길이) ÷ 전체 둘레 길이<br>
-        <em>※ 4m 간격 측점 기준</em><br><br>
-        <strong>판정 조건: (평균지반면 − 1층 바닥 FL) ≥ 해당 층 높이 × 1/2 → 🔴 지하층 경고</strong><br>
-        경고 발생 시, AI가 "지상층 확보 최소 데크 레벨(역산값)"을 자동 제안합니다.
+  <!-- STEP 1 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#744210;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 1</span> 데크 우선 설정 — 땅의 숨결을 읽다
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 16px;">
+      AI는 차가운 수치지형도를 3D로 스캔하여 고저차를 읽어내고 최적의 데크 레벨을 제안합니다. 하지만 그 제안이 법을 넘어서는 안 됩니다. 시스템 내부에서는 <code>평균지반면 = Σ(지반고 × 길이) ÷ 둘레</code>라는 엄격한 <strong>지하층 자동 판정 공식</strong>이 백그라운드에서 쉴 새 없이 돌아가며, 1층 바닥(FL)이 법적 컷오프를 넘는 순간 🔴 <strong>지하층 경고</strong>를 띄워 치명적인 설계 오류를 원천 차단합니다.
+    </p>
+    <div style="background:#fff; border-left:4px solid #f59e0b; padding:16px; border-radius:8px; font-size:14px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <strong>진양 표준 지하층 층고 스택 (총 굴착 깊이 ≈ 11.9m)</strong><br>
+      • <strong>B1 (5.2m):</strong> 토층 1.2m + 보 0.9m + 탑차 유효고 2.7m 등<br>
+      • <strong>B2 (3.3m):</strong> 보 0.6m + 차량통행고 2.3m 등 (코어 주변 설비공간 상향 적용)<br>
+      • <strong>B3 (3.4m):</strong> 무근/설비 + 천장고 2.3m 등
     </div>
-    <p style="margin-top:10px;"><strong>진양 표준 지하층 층고 스택:</strong></p>
-    <table style="font-size:13px;width:100%;border-collapse:collapse;">
-        <tr style="background:#e2e8f0;"><th style="padding:5px;border:1px solid #cbd5e0;">층</th><th style="padding:5px;border:1px solid #cbd5e0;">구성</th><th style="padding:5px;border:1px solid #cbd5e0;">합계</th></tr>
-        <tr><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B1</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">토층 1.2 + 보 0.9 + 설비 0.4 + 탑차 유효고 2.7</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>5.2m</strong></td></tr>
-        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B2</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">슬라브+보 0.6 + 설비 0.4 + 차량통행고 2.3</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>3.3m</strong></td></tr>
-        <tr><td style="padding:5px;border:1px solid #cbd5e0;"><strong>B3 (최하)</strong></td><td style="padding:5px;border:1px solid #cbd5e0;">천장고 2.3 + 무근 0.1 + 설비 0.4 + 슬라브+보 0.6</td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>3.4m</strong></td></tr>
-        <tr style="background:#f7fafc;"><td style="padding:5px;border:1px solid #cbd5e0;" colspan="2"><strong>지하 3개층 총 굴착 깊이</strong></td><td style="padding:5px;border:1px solid #cbd5e0;"><strong>≈ 11.9m + 기초</strong></td></tr>
-    </table>
-    <p style="font-size:12px;color:#718096;margin-top:6px;">⚠️ B2 코어 주변은 설비 0.4m → 0.6m 상향 적용. B1 탑차 유효고는 진입로·상하차 Zone에만 국소 적용.</p>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#276749;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 2</span> 방위각 지배 — 빛을 향한 선언
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
+      주동을 세우기 전, 거실 전면이 어느 방향의 빛을 받을 것인지 인간 건축사가 먼저 '선언'해야 합니다. 남향 판상형이라면 그리드는 동서로 전개되고, 랜드마크 앵커 동이 있다면 그 동의 방위각이 전체 대지의 X/Y축을 지배하게 됩니다. 이 단 한 번의 결정이 쾌적함을 좌우합니다.
+    </p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#c53030;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 3</span> 통합 마스킹 — 비움의 미학
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
+      캔버스 위를 마우스로 색칠하여 지을 수 없는 곳(No-Build Zone)과 의도적으로 비워야 할 곳(Urban Void: 통경축, 중앙 광장)을 한 번에 정의합니다. 무엇을 채울지보다 <strong>무엇을 비울지</strong>를 먼저 결정하는 것, 이것이 진정한 공간의 뼈대를 잡는 작업입니다.
+    </p>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#553c9a;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 4</span> 리듬 그리드 — 지하가 지상을 지배한다
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
+      방위각(STEP 2)과 마스킹(STEP 3)이 완료되면 비로소 대지에 그리드가 깔립니다. 진양의 AI는 대지 경계선의 가장자리부터 [주차 칸]을 우겨넣고, 그 안쪽으로 [차로]와 [주차]의 교차 리듬을 형성합니다. 이렇게 엮인 <strong>구조적 기둥 교차점</strong>은 곧 지상의 주동이 올라탈 수 있는 가장 완벽하고 튼튼한 '스냅 포인트'가 됩니다.
+    </p>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 12px;">
+      <span style="background:#276749;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 5</span> 파라메트릭 블록 — 유연한 뼈대
+    </h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
+      코어 타입과 세대 평면 같은 생명줄(고정 뼈대)은 철저히 통제하되, 층수와 동 길이(±1베이)는 AI가 주변 상황에 맞게 유연하게 늘리고 줄이도록(파라메트릭) 허용합니다. 1~2개의 핵심 랜드마크 앵커 동만 인간이 확정 지어주면, 나머지 필요 동 수는 AI가 묵묵히 계산해 냅니다.
+    </p>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 16px;">
+      <span style="background:#744210;color:white;padding:4px 10px;border-radius:6px;font-size:16px;vertical-align:middle;margin-right:8px;">STEP 6</span> AI 물리 엔진과 게이트키퍼의 최종 사투
+    </h4>
+
+    <div class="episode ep-fail" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 16px;">
+      <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px;">💥 에피소드: 깐깐한 문지기와 텅 빈 도면</h4>
+      <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted);">
+        사용자가 마우스로 정교하게 대지 구역을 그렸습니다. 하지만 AI는 지나치게 깐깐했습니다. 경계선에 단 1mm라도 걸치거나 일부만 포함된 필지들을 가차 없이 누락시켰고, 결과적으로 사용자는 듬성듬성 구멍이 뚫린 텅 빈 배치도를 마주해야만 했습니다. 기계적인 정확함이 오히려 사용자의 의도를 훼손한 순간이었습니다.
+      </p>
+    </div>
+    <div class="episode ep-solve" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 32px;">
+      <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: var(--primary);">💡 극복: 관대한 포용력, 다각형 교차 판정의 미학</h4>
+      <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80);">
+        우리는 AI에게 '융통성'을 가르치기로 했습니다. 교차 판정 로직을 2단계의 유연한 그물망으로 재설계했습니다.<br><br>
+        <strong>1차 그물망 (면적의 포용):</strong> 필지 면적의 단 20%만 구역에 포함되어도, 전체를 우리의 대지로 포용합니다.<br>
+        <strong>2차 그물망 (최후의 보루):</strong> 복잡한 지형으로 면적 계산이 실패하더라도, 필지의 중심점이나 꼭짓점 단 하나라도 선 안에 들어오면 놓치지 않고 잡아냅니다.<br><br>
+        이제 AI는 기계적인 '절단'이 아닌, 건축가의 '의도'를 읽어냅니다.
+      </p>
+    </div>
+
+    <div class="episode ep-fail" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 16px;">
+      <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px;">💥 에피소드: 단 0.5m가 불러온 나비효과</h4>
+      <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted);">
+        [A구역] 프로젝트에서 AI는 완벽해 보이는 배치도를 뽑아냈습니다. 하지만 실무진이 CAD에 얹어본 결과, 대지 경계선에서 동간 거리가 단 0.5m 부족했습니다. 이 미세한 오차는 그대로 <strong>일조권 사선 위반</strong>이라는 치명적인 결과로 이어져, 건축심의 자체를 통과하지 못할 뻔한 아찔한 위기를 만들었습니다.
+      </p>
+    </div>
+    <div class="episode ep-solve" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 32px;">
+      <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: var(--primary);">💡 극복: 최후의 방어선, 게이트키퍼(Gatekeeper)</h4>
+      <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80);">
+        AI는 99%의 속도와 영감을 제공하지만, 마지막 1%의 법적 책임과 디테일은 결국 인간의 몫입니다. 우리는 시스템을 무조건 신뢰하는 대신, 인간 건축사가 <strong>게이트키퍼</strong>로서 최종 승인하는 프로세스를 SOP(표준 작업 절차)의 심장부에 박아 넣었습니다. AI의 산출물은 반드시 인간의 교차 검증(인동거리, 일조사선, 채광창 이격)을 거쳐야만 비로소 '도면'이 됩니다.
+      </p>
+    </div>
+
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--hairline);">
+      <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); font-weight: 600; margin-bottom: 12px;">인간 건축사(게이트키퍼)가 최종 확인하는 체크리스트:</p>
+      <ul style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.6; color: var(--ink-muted-80);">
+          <li>✅ 인동거리의 완벽한 충족 여부</li>
+          <li>✅ 동지일 기준 일조시간의 쾌적성 확인</li>
+          <li>✅ 주동 확정 후 평균지반면 재계산을 통한 지하층 판정 방어</li>
+          <li>✅ 최대 용적률의 최종 팩트 체크</li>
+          <li>✅ 주동 위치를 100% 반영한 2차 데크 레벨의 미세 조정</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="alert alert-secondary">
-    <h5><span style="background:#276749;color:white;padding:2px 8px;border-radius:4px;">STEP 2</span> 향(方向) 우선 결정 — 그리드의 방위각을 지배</h5>
-
-    <p>주동 배치보다 앞서, 거실 전면이 바라볼 주방향을 인간이 먼저 결정합니다. 이 방위각이 확정되어야 그리드의 X/Y축 방향이 정해집니다.</p>
-    <ul>
-        <li>남향 판상형 → 그리드 동서 방향 전개</li>
-        <li>탑상형 → 4방향 동등 검토, 조망 우선</li>
-        <li>혼합형 → 앵커 동(랜드마크)의 방위각 기준으로 설정</li>
-    </ul>
-</div>
-
-<div class="alert alert-secondary">
-    <h5><span style="background:#c53030;color:white;padding:2px 8px;border-radius:4px;">STEP 3</span> 통합 마스킹 — 비울 곳과 금지 구역을 한 번에</h5>
-
-    <p>마우스로 대지 위를 색칠합니다. 두 가지 성격을 통합하여 한 번에 처리합니다.</p>
-    <ul>
-        <li>🔴 <strong>No-Build Zone:</strong> 법적 이격거리, 암반, 위험 구역</li>
-        <li>🔵 <strong>Urban Void:</strong> 통경축, 공공보행통로, 중앙 광장</li>
-    </ul>
-    <p style="font-size:12px;color:#718096;">※ 이 마스킹이 끝나야 비로소 그리드를 깔 수 있습니다.</p>
-</div>
-
-<div class="alert alert-secondary">
-    <h5><span style="background:#553c9a;color:white;padding:2px 8px;border-radius:4px;">STEP 4</span> 주차 리듬 그리드 생성 — 지하의 뼈대가 지상을 지배</h5>
-
-    <p>STEP 2(방위각)와 STEP 3(마스킹)을 반영한 상태에서 그리드를 생성합니다.</p>
-    <ul>
-        <li><strong>외곽부 우선:</strong> 대지 경계 안쪽 → [주차 칸] 먼저 배치 (경계부 주차 = 최대 면적 효율)</li>
-        <li><strong>내부 리듬:</strong> [차로 6.0~6.5m] − [주차 칸] − [주차 칸] − [차로] 교차 반복</li>
-        <li><strong>그리드 스냅 포인트:</strong> 주동이 올라탈 수 있는 구조적 기둥 교차점 자동 확정</li>
-    </ul>
-</div>
-
-<div class="alert alert-secondary">
-    <h5><span style="background:#276749;color:white;padding:2px 8px;border-radius:4px;">STEP 5</span> 파라메트릭 블록 선택 + 동 수 산출</h5>
-
-    <p>인간이 주동 타입을 선택합니다. 단, 완전 고정 블록이 아니라 <strong>파라메트릭 블록</strong>(뼈대는 고정, 층수와 길이는 유연)을 사용합니다.</p>
-    <table style="font-size:13px;width:100%;border-collapse:collapse;">
-        <tr style="background:#e2e8f0;"><th style="padding:5px;border:1px solid #cbd5e0;">구분</th><th style="padding:5px;border:1px solid #cbd5e0;">고정값 (건드리지 말 것)</th><th style="padding:5px;border:1px solid #cbd5e0;">변수값 (AI가 조정)</th></tr>
-        <tr><td style="padding:5px;border:1px solid #cbd5e0;">뼈대</td><td style="padding:5px;border:1px solid #cbd5e0;">코어 타입, 베이 수, 베이 간격, 세대 평면</td><td style="padding:5px;border:1px solid #cbd5e0;">층수, 동 길이(±1베이), 방위각(±15°)</td></tr>
-    </table>
-    <p style="margin-top:8px;">필요 동 수 = 목표 세대수 ÷ 타입별 세대/동 (AI 자동 산출)</p>
-    <p>앵커(닻) 고정: 핵심 1~2개 동만 인간이 위치와 타입 확정</p>
-</div>
-
-<div class="alert alert-secondary">
-    <h5><span style="background:#744210;color:white;padding:2px 8px;border-radius:4px;">STEP 6
-<span class="ep-title">에피소드: 깐깐한 문지기와 관대한 문지기 (다각형 교차 판정의 미학)</span><span class="ep-tag">실패</span></div>
-<p>사용자가 지도에서 다각형을 그려 구역을 설정했을 때, 다각형 경계선과 맞물리거나 일부만 포함된 필지들이 선택되지 않는 현상이 발생함.</p>
-<p></div>
-<span class="ep-title">극복: 깐깐한 문지기와 관대한 문지기 (다각형 교차 판정의 미학) 해결</span><span class="ep-tag">해결</span></div>
-<br />
-<p>교차 판정 로직을 2단계로 완화함.
-1) Turf.js를 사용하여 면적 교차 비율을 계산하고, 전체 면적의 20% 이상이 포함되면 해당 필지를 선택하도록 변경.
-2) Turf.js 계산 실패 시 폴백으로 필지의 '중심점(Center)'이 다각형 내부에 있거나, 필지의 '아무 꼭짓점 하나라도' 다각형 내부에 있으면 선택하도록 조건 완화.</p></p>
-<p></div></span> AI 물리 엔진 솔버 — 잔여 동 자동 배치</h5></p>
-<div class="episode ep-fail">
-  <div class="ep-header"><div class="ep-icon">💥</div><span class="ep-title">에피소드: 인동거리 0.5m 차이로 일조권 사선 위반</span><span class="ep-tag">실패</span></div>
-  <p>[A구역] 프로젝트에서 AI가 산출한 동간 거리가 실제 대지 경계선에서 0.5m 부족하여, 건축심의에서 일조권 사선 위반 판정을 받을 뻔한 사건. 자동 배치 결과를 무조건 신뢰하면 안 되는 이유입니다.</p>
-</div>
-<div class="episode ep-solve">
-  <div class="ep-header"><div class="ep-icon">💡</div><span class="ep-title">극복: 게이트키퍼 검증의 중요성</span><span class="ep-tag">해결</span></div>
-  <p>AI 배치 결과를 CAD에 옮긴 뒤, 반드시 인동거리·일조사선·채광창 이격거리를 수동으로 교차 검증하는 STEP을 SOP에 추가했습니다.</p>
-</div>
-
-<pre><code>&lt;p&gt;인간 건축사(게이트키퍼)가 최종 확인합니다.&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;✅ 인동거리 충족 여부&lt;/li&gt;
-    &lt;li&gt;✅ 동지일 기준 일조시간 확인&lt;/li&gt;
-    &lt;li&gt;✅ 지하층 판정 재확인 (주동 확정 후 평균지반면 재계산)&lt;/li&gt;
-    &lt;li&gt;✅ 용적률 최종 체크&lt;/li&gt;
-    &lt;li&gt;✅ 2차 데크 레벨 미세 조정 (주동 위치 반영)&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-</div>
 <hr />
 <h3>모르는 용어가 나왔을 때 찾아보는 빠른 사전</h3>
 <p>문서 6·14의 배치 알고리즘과 법규 내용에서 자주 등장하는 전문 용어들을 쉽게 풀어 설명합니다.</p>
