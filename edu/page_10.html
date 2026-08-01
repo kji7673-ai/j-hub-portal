@@ -4,33 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
-    <title>서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</title>
+    <title>01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</title>
     <style>
     :root {
         --primary: #0066cc;
+        --primary-focus: #0071e3;
+        --primary-on-dark: #2997ff;
         --ink: #1d1d1f;
+        --body: #1d1d1f;
+        --body-on-dark: #ffffff;
+        --body-muted: #cccccc;
         --ink-muted: #6e6e73;
         --ink-muted-80: #333333;
+        --ink-muted-48: #7a7a7a;
+        --divider-soft: #f0f0f0;
+        --hairline: #e0e0e0;
         --canvas: #ffffff;
         --canvas-parchment: #f5f5f7;
-        --surface-black: #000000;
         --surface-pearl: #fafafc;
-        --hairline: #e0e0e0;
+        --surface-tile-1: #272729;
+        --surface-tile-2: #2a2a2c;
+        --surface-tile-3: #252527;
+        --surface-black: #000000;
+        --surface-chip-translucent: #d2d2d7;
+        --on-primary: #ffffff;
+        --on-dark: #ffffff;
     }
     
     [data-theme="dark"] {
         --primary: #2997ff;
+        --primary-focus: #4aa4ff;
+        --primary-on-dark: #2997ff;
         --ink: #ffffff;
+        --body: #ffffff;
+        --body-on-dark: #ffffff;
+        --body-muted: #a1a1a6;
         --ink-muted: #a1a1a6;
         --ink-muted-80: #cccccc;
+        --ink-muted-48: #555555;
+        --divider-soft: #38383a;
+        --hairline: #38383a;
         --canvas: #000000;
         --canvas-parchment: #1c1c1e;
-        --surface-black: #1d1d1f;
         --surface-pearl: #2c2c2e;
-        --hairline: #38383a;
+        --surface-tile-1: #1c1c1e;
+        --surface-tile-2: #2c2c2e;
+        --surface-tile-3: #38383a;
+        --surface-black: #1d1d1f;
+        --surface-chip-translucent: #38383a;
+        --on-primary: #ffffff;
+        --on-dark: #ffffff;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -120,10 +147,11 @@
     
     /* MAIN CONTENT */
     .main-content-wrapper {
-        padding-left: 280px;
-        transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-left: 280px;
+        width: calc(100% - 280px);
+        transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s;
     }
-    .main-content-wrapper.collapsed { padding-left: 0; }
+    .main-content-wrapper.collapsed { margin-left: 0; width: 100%; }
     
     .main-content {
         padding: 40px; max-width: 1200px; margin: 0 auto; position: relative;
@@ -464,7 +492,7 @@
     }
     @media (max-width: 900px) {
         .desktop-sidebar { display: none; }
-        .main-content-wrapper { padding-left: 0; }
+        .main-content-wrapper { margin-left: 0 !important; width: 100% !important; }
         .main-content { padding: 0; }
         .viewer-card { padding: 24px 16px; border-radius: 0; border: none; box-shadow: none; background: transparent; min-height: auto; }
         .md-content { line-height: 1.65; word-break: keep-all; overflow-wrap: break-word; }
@@ -498,7 +526,7 @@
     
         <div class="toc-category">📘 실전 가이드</div>
         
-        <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 수백억을 날릴 뻔한 사건</a></div>
+        <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="toc-item"><a href="page_2.html" >01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
@@ -512,40 +540,50 @@
         
         <div class="toc-item"><a href="page_7.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_8.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="toc-item"><a href="page_8.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        
+        <div class="toc-item"><a href="page_9.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        
+        <div class="toc-item"><a href="page_10.html" class="active">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        
+        <div class="toc-item"><a href="page_11.html" >01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        
+        <div class="toc-item"><a href="page_12.html" >01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        
+        <div class="toc-item"><a href="page_13.html" >01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
     
         <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
         
-        <div class="toc-item"><a href="page_9.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="toc-item"><a href="page_14.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="toc-item"><a href="page_11.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="toc-item"><a href="page_16.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
-        <div class="toc-item"><a href="page_16.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="toc-item"><a href="page_21.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-        <div class="toc-item"><a href="page_17.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
+        <div class="toc-item"><a href="page_22.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
     
         <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
         
-        <div class="toc-item"><a href="page_10.html" class="active">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="toc-item"><a href="page_15.html" >서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         
-        <div class="toc-item"><a href="page_13.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
+        <div class="toc-item"><a href="page_18.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
-        <div class="toc-item"><a href="page_14.html" >SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
+        <div class="toc-item"><a href="page_19.html" >SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_15.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
+        <div class="toc-item"><a href="page_20.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="toc-item"><a href="page_20.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_25.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
     
         <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
         
-        <div class="toc-item"><a href="page_12.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        <div class="toc-item"><a href="page_17.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div class="toc-item"><a href="page_18.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_23.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
         
-        <div class="toc-item"><a href="page_19.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_24.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
         
     
     </div> <!-- end desktop-sidebar -->
@@ -562,7 +600,7 @@
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📘 실전 가이드</div>
         
-        <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 수백억을 날릴 뻔한 사건</a></div>
+        <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="mobile-toc-item"><a href="page_2.html">01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
@@ -576,40 +614,50 @@
         
         <div class="mobile-toc-item"><a href="page_7.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_8.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_9.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_10.html">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_11.html">01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_12.html">01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_13.html">01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
         
-        <div class="mobile-toc-item"><a href="page_9.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="mobile-toc-item"><a href="page_14.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_11.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="mobile-toc-item"><a href="page_16.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_16.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-        <div class="mobile-toc-item"><a href="page_17.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
+        <div class="mobile-toc-item"><a href="page_22.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
         
-        <div class="mobile-toc-item"><a href="page_10.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="mobile-toc-item"><a href="page_15.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         
-        <div class="mobile-toc-item"><a href="page_13.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
+        <div class="mobile-toc-item"><a href="page_18.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_14.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
+        <div class="mobile-toc-item"><a href="page_19.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_15.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_20.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_20.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_25.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
         
-        <div class="mobile-toc-item"><a href="page_12.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        <div class="mobile-toc-item"><a href="page_17.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div class="mobile-toc-item"><a href="page_18.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_23.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
         
-        <div class="mobile-toc-item"><a href="page_19.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_24.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
         
         
     </div>
@@ -634,17 +682,17 @@
     <div style="margin-bottom: 24px;">
         <div class="breadcrumb">
             <a href="index.html">홈</a> <span style="margin: 0 8px;">/</span> 
-            <span>서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</span>
+            <span>01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</span>
         </div>
         <div class="doc-meta-header" style="margin-top: 12px;">
-            <span class="level-tag level-3" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🏗️ Lv.3 심화</span>
-            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">2026-07-17</span>
-            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 20</span>
+            <span class="level-tag level-1" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🌱 Lv.1 입문</span>
+            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">2026-08-01</span>
+            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 6</span>
         </div>
     </div>
     
     <!-- Title -->
-    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</h1>
+    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</h1>
     
     <!-- Summary / Hook -->
     <div style="margin-bottom: 60px; padding: 40px; background: var(--surface-pearl); border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
@@ -653,186 +701,64 @@
             핵심 요약 (Key Takeaway)
         </div>
         <div class="lead-airy" style="color: var(--ink);">
-            VWorld 공간정보 연동을 통해 통합검토보고서의 데이터 추출 오차율을 0%로 줄인 기술적 혁신 과정을 소개합니다.
+            "다 했습니다"라는 AI의 거짓말을 끊어내는 최종 검증 자동화의 빛과 그림자
         </div>
     </div>
 
     <!-- Gated Markdown Content -->
-    <div class="gated-content " style="position: relative; ">
+    <div class="gated-content unlocked" style="position: relative; max-height: none !important;">
         <div class="markdown-body md-content" style="font-size: 17px; line-height: 1.6; letter-spacing: -0.374px;">
-            <h3>서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</h3>
+            <div class="alert alert-warning" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 32px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
+  <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: #ff9f0a;">⚠️ [Red Team 경고] "죄송합니다, 다시 하겠습니다"의 무한 루프</h4>
+  <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted);">
+    플랫폼을 구축해 보신 분들은 뼈저리게 공감하실 겁니다. AI가 "완료되었습니다!"라고 자신 있게 외쳐서 화면을 켜보면, UI가 깨져 있거나 중요한 데이터가 누락되어 있습니다. 지적하면 "죄송합니다, 놓쳤습니다"라며 수정하지만 또 다른 곳이 망가집니다. <br><br>
+    왜 이런 일이 발생할까요? <strong>AI는 '코드(문자)'의 세계에서 작업할 뿐, 인간처럼 완성된 '결과물(시각적/맥락적 결과)'을 직접 눈으로 보며 교차 검증하지 않기 때문</strong>입니다.
+  </p>
+</div>
 
+<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>이 지독한 '수정의 늪'에서 벗어나기 위해 진양 교육 플랫폼(J-Hub)과 태스크방이 전격적으로 도입한 것이 바로 <strong>'Visual Auto-Healer (시각적 자동 감리 봇)'</strong> 시스템입니다. </div>
 <figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/bigdata.jpg" alt="도시 위로 쏟아지는 빅데이터 스트림" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도] 공공 빅데이터가 API 파이프라인을 타고 우리의 대지 위로 꽂히는 형상</figcaption>
+  <img src="static/images/illustrations/vision_7step_loop_1785306510411.jpg" alt="Visual Auto-Healer의 구조" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
+  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[시스템 다이어그램] 코드를 작성하는 AI와, 화면을 렌더링해 1px 단위로 감리하는 Vision AI의 분리</figcaption>
 </figure>
 
-<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>이 문서는 정비사업 통합검토 플랫폼의 핵심 기반인 <strong>공공 빅데이터 API 연동</strong>의 기술적 상세를 다룹니다. 수작업으로 하루 종일 조회하던 데이터를 <strong>파이썬 스크립트 한 번으로 수십 초 만에 자동 수집</strong>하는 파이프라인의 구조와 코드를 살펴봅니다.</div>
-
-<h4>1. 데이터 소스 아키텍처</h4>
-<p>우리 플랫폼이 연동하는 주요 공공 API는 다음 5가지입니다.</p>
-<table class="table">
-  <thead><tr><th>#</th><th>데이터 소스</th><th>제공 기관</th><th>핵심 데이터</th><th>API 유형</th></tr></thead>
-  <tbody>
-    <tr><td>1</td><td>서울 열린데이터광장</td><td>서울특별시</td><td>정비구역 현황, 건축허가, 토지이용</td><td>REST (XML/JSON)</td></tr>
-    <tr><td>2</td><td>VWorld 지도/지적</td><td>국토교통부</td><td>지적 경계, 위성영상, 용도지역</td><td>WMTS/WFS</td></tr>
-    <tr><td>3</td><td>건축물대장 API</td><td>공공데이터포털</td><td>건물 층수, 면적, 구조, 용도, 승인일</td><td>REST (XML)</td></tr>
-    <tr><td>4</td><td>UPIS 도시계획정보</td><td>국토교통부</td><td>용도지역/지구, 도시계획시설</td><td>REST (XML)</td></tr>
-    <tr><td>5</td><td>KLIS 토지이용규제</td><td>국토교통부</td><td>행위 제한, 규제 항목</td><td>REST (XML)</td></tr>
-  </tbody>
-</table>
-
-<h4>2. 서울 열린데이터광장 API 호출 예시</h4>
-<p>서울시 정비구역 현황 데이터를 자동 수집하는 Python 코드입니다.</p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:16px;border-radius:8px;font-size:13px;overflow-x:auto;">
-import requests
-
-API_KEY = "YOUR_API_KEY"  # data.seoul.go.kr에서 발급
-BASE_URL = "http://openapi.seoul.go.kr:8088"
-
-def fetch_redevelopment_zones(gu_name="강남구"):
-    """서울시 정비구역 현황 조회"""
-    url = f"{BASE_URL}/{API_KEY}/json/tbLnOpendataRtmsRent/1/100/"
-    params = {"GU_NM": gu_name}
-
-    response = requests.get(url, params=params)
-    data = response.json()
-
-    zones = data.get("tbLnOpendataRtmsRent", {}).get("row", [])
-    print(f"[{gu_name}] {len(zones)}건 조회 완료")
-    return zones
-
-# 실행
-zones = fetch_redevelopment_zones("[A구]")
-for z in zones[:5]:
-    print(f"  구역명: {z.get('BJDONG_NM')} | 면적: {z.get('BLDG_AREA')}㎡")
-</pre>
-
-<h4>3. 건축물대장 API 연동</h4>
-<p>건축물대장 표제부/총괄표제부를 일괄 조회하여 건물 현황을 자동 수집합니다.</p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:16px;border-radius:8px;font-size:13px;overflow-x:auto;">
-import requests
-import xml.etree.ElementTree as ET
-
-SERVICE_KEY = "YOUR_SERVICE_KEY"
-
-def fetch_building_ledger(sigungu_cd, bjdong_cd, bun, ji):
-    """건축물대장 표제부 조회"""
-    url = "http://apis.data.go.kr/1613000/BldRgstService_v2/getBrTitleInfo"
-    params = {
-        "serviceKey": SERVICE_KEY,
-        "sigunguCd": sigungu_cd,
-        "bjdongCd": bjdong_cd,
-        "bun": bun.zfill(4),
-        "ji": ji.zfill(4),
-        "numOfRows": 100
-    }
-
-    resp = requests.get(url, params=params)
-    root = ET.fromstring(resp.text)
-    items = root.findall(".//item")
-
-    results = []
-    for item in items:
-        results.append({
-            "건물명": item.findtext("bldNm", ""),
-            "주용도": item.findtext("mainPurpsCdNm", ""),
-            "구조": item.findtext("strctCdNm", ""),
-            "연면적": item.findtext("totArea", ""),
-            "층수": f"지상{item.findtext('grndFlrCnt', '')}층/지하{item.findtext('ugrndFlrCnt', '')}층",
-            "사용승인일": item.findtext("useAprDay", "")
-        })
-    return results
-
-# [A구역] 36개 필지 일괄 조회 예시
-parcels = [
-    ("11680", "10300", "123", "4"),
-    ("11680", "10300", "123", "5"),
-    # ... 나머지 34개 필지
-]
-
-for p in parcels:
-    buildings = fetch_building_ledger(*p)
-    for b in buildings:
-        print(f"  {b['건물명']} | {b['주용도']} | {b['연면적']}㎡ | {b['사용승인일']}")
-</pre>
-
-<h4>4. VWorld 지도 타일 연동</h4>
-<p>VWorld WMTS API를 통해 배경 지도 타일과 지적도를 오버레이합니다.</p>
-<pre style="background:#2d3748;color:#e2e8f0;padding:16px;border-radius:8px;font-size:13px;overflow-x:auto;">
-# VWorld 배경 지도 타일 URL 패턴 (WMTS)
-VWORLD_BASE = "https://api.vworld.kr/req/wmts/1.0.0"
-API_KEY = "YOUR_VWORLD_KEY"
-
-# 배경 지도 타일 (Satellite, Base, Hybrid)
-tile_url = f"{VWORLD_BASE}/{API_KEY}/Base/{{z}}/{{y}}/{{x}}.png"
-
-# 지적도 WFS (경계선)
-cadastral_url = f"https://api.vworld.kr/req/wfs?service=WFS&version=2.0.0"
-cadastral_url += f"&request=GetFeature&typeName=lt_c_lisdlbpt"
-cadastral_url += f"&key={API_KEY}&output=application/json"
-cadastral_url += f"&bbox=126.97,37.55,126.98,37.56,EPSG:4326"
-</pre>
-
-<h4>5. 데이터 정제 및 전처리 워크플로우</h4>
-<p>수집된 원시 데이터를 분석 가능한 형태로 변환하는 파이프라인입니다.</p>
-<ol>
-  <li><strong>수집(Collect)</strong>: API 호출 → 원시 XML/JSON 저장</li>
-  <li><strong>파싱(Parse)</strong>: XML → Python dict / JSON 변환</li>
-  <li><strong>정제(Clean)</strong>: 누락값 처리, 날짜 포맷 통일, 면적 단위 변환(㎡↔평)</li>
-  <li><strong>병합(Merge)</strong>: 건축물대장 + 지적 + 도시계획 데이터를 PNU(필지고유번호) 기준으로 JOIN</li>
-  <li><strong>분석(Analyze)</strong>: 노후도 산정, 과소 필지 판별, 용적률 여유분 계산</li>
-  <li><strong>보고(Report)</strong>: JSON → HTML/PDF 보고서 자동 생성</li>
-</ol>
-
-<h4>6. 실전 사례: [A구역] 36개 필지 일괄 조회 자동화</h4>
-<p>과거 수작업으로 2~3일 걸리던 36개 필지의 건축물 현황 조사를 <strong>파이썬 스크립트 1회 실행(약 45초)</strong>으로 완료한 실전 사례입니다.</p>
-<table class="table">
-  <thead><tr><th>항목</th><th>수작업 (Before)</th><th>자동화 (After)</th></tr></thead>
-  <tbody>
-    <tr><td>소요 시간</td><td>2~3일 (1인 기준)</td><td>45초</td></tr>
-    <tr><td>오류율</td><td>~8% (오타, 누락)</td><td>0% (API 원본)</td></tr>
-    <tr><td>산출물</td><td>엑셀 수동 입력</td><td>JSON + 자동 보고서</td></tr>
-    <tr><td>재실행</td><td>처음부터 다시</td><td>스크립트 재실행 1초</td></tr>
-  </tbody>
-</table>
-
-<div class="alert alert-info">
-<strong>💡 실무 팁:</strong> 공공데이터포털(data.go.kr) API 키는 무료이지만 일일 호출 한도(1,000~10,000건)가 있습니다. 대규모 조회 시에는 rate limiting(0.5초 간격)을 적용하고, 결과를 로컬 캐시(SQLite)에 저장하여 중복 호출을 방지하세요.
-</div>
-
-<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
-    <!-- NEXT_READ_SECTION -->
-    <h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
-    <ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
-        <li><a href="page_9.html">문서 9. 통합 사업성 검토 플랫폼 활용 가이드</a></li><li><a href="page_26.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></li>
+<h3>🛠️ 에피소드: "화면이 깨지면 절대 배포되지 않는다"</h3>
+<p>최근 J-Hub 교육 플랫폼에 '살아 움직이는 삽도(Living Diagram)' 기능을 추가했을 때의 일입니다. 코드를 담당하는 AI는 에러 없이 완벽하게 기능이 작동한다고 보고했습니다. 하지만 <strong>Auto-Healer(시각적 감리 봇)</strong>는 달랐습니다. </p>
+<p>Auto-Healer는 백그라운드에서 가상의 브라우저를 띄워 모바일 뷰포트(너비 390px)로 화면의 스크린샷을 찍었습니다. 그리고 Vision AI가 이 화면을 픽셀 단위로 스캔한 뒤 다음과 같이 경고하며 <strong>플랫폼의 글로벌 배포를 비상 정지(Exit 1)</strong> 시켰습니다.</p>
+<blockquote>
+<p><em>"경고: 살아 움직이는 삽도(SVG)의 가로폭이 화면을 10px 초과하여 오버플로우가 발생했습니다. 또한, 일조권 경고 텍스트가 0.5초 만에 나타나 시선을 강탈합니다. Apple Design Guide의 프리미엄 UX에 위배되므로 배포를 차단합니다."</em></p>
+</blockquote>
+<p>AI가 코드를 다 짰더라도, 감리자(Auto-Healer)가 부여한 깐깐한 '시각적 체크리스트'를 통과하지 못하면 절대 건축주(사용자)에게 도달하지 못하는 <strong>원천 차단 시스템</strong>이 가동된 것입니다.</p>
+<hr />
+<h3>🟢 자동 검증 체계의 장점 (빛)</h3>
+<p><strong>1. 인간의 리소스(시간) 해방</strong>
+과거에는 AI가 코드를 짜오면, 대표나 실무진이 직접 화면을 열어보고, 버튼을 눌러보고, 에러를 캡처해서 다시 명령을 내려야 했습니다. 검증 자동화 체계가 도입되면, "테스트를 통과할 때까지 나를 부르지 마라"는 룰이 적용되어 인간의 QA(품질 보증) 시간이 혁신적으로 단축됩니다.</p>
+<p><strong>2. 에러의 상호 교차 검증 (Red Team AI의 도입)</strong>
+코드를 짜는 '생성형 AI'와, 버그를 잡는 '검토용 AI(Red Team)'를 분리할 수 있습니다. 
+예를 들어, 보고서 작성 AI가 용적률을 계산하면, 법규 검토 AI가 백그라운드에서 지자체 조례 데이터베이스를 뒤져 "주거지역 용적률 상한 250% 초과"라는 에러를 스스로 찾아내고 반려합니다. 인간이 개입하기 전에 1차적인 논리적 오류가 차단되는 것입니다.</p>
+<hr />
+<h3>🔴 자동 검증 체계의 단점 (그림자)</h3>
+<p><strong>1. '맹점(Blind Spot)'의 복제 및 궤변의 합리화</strong>
+가장 무서운 단점입니다. 만약 CEO가 '검증용 체크리스트' 자체를 허술하게 짰다면 어떻게 될까요? 
+AI 감리자는 잘못된 기준표를 들고 "완벽합니다!"라고 합격 목걸이를 걸어줄 것입니다. 때로는 두 AI가 서로 틀린 논리를 주고받으며 "이 법규 해석이 맞다"고 <strong>자기들끼리 궤변을 합리화</strong>하는 현상(Confirmation Bias)이 발생합니다. 결국 쓰레기를 넣으면 쓰레기가 나오는(GIGO) 현상이 가속화됩니다.</p>
+<p><strong>2. 과도한 비용(Token)과 지연 시간(Latency)</strong>
+스스로 검증하고 재작업하는 과정을 거치다 보니, 한 번의 클릭에 수많은 백그라운드 연산이 일어납니다. 시스템이 무거워지고, API 호출 비용이 급증하며, 사용자는 결과물을 받기까지 한참을 기다려야 할 수도 있습니다. </p>
+<hr />
+<h3>💡 건축사(CEO)는 무엇을 해야 하는가?</h3>
+<p>결론적으로 AI의 자동 검증 체계는 필수불가결한 시대적 흐름입니다. 하지만 이 시스템이 완벽하게 돌아가기 위해서는 <strong>가장 윗단에 있는 마스터 아키텍트(CEO)의 역할</strong>이 그 어느 때보다 중요해집니다.</p>
+<div class="alert alert-info" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin: 32px 0;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 16px; font-size: 21px; color: var(--primary);">🎯 최종 룰 메이커(Rule Maker)로서의 통찰</h4>
+    <ul style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.6; padding-left: 20px;">
+      <li style="margin-bottom: 12px;"><strong>검증의 '기준'은 인간이 짠다:</strong> AI가 스스로 검증하게 하려면, "무엇이 정답이고 무엇이 오답인지"에 대한 명확한 테스트 케이스(Test Case)를 CEO가 직접 설계하여 주입해야 합니다.</li>
+      <li style="margin-bottom: 12px;"><strong>시각적 결과물과 논리적 결과물의 분리:</strong> 코드가 에러 없이 돌아가는 것과, 건축적으로 타당한 것은 다릅니다. AI에게 "화면상에 요소가 겹치지 않는가?", "법적 상한선을 초과하지 않았는가?"를 구체적으로 질문하도록 시스템을 구축해야 합니다.</li>
+      <li style="margin-bottom: 0;"><strong>신뢰하되 검증하라 (Trust, but Verify):</strong> 자동 검증 체계가 도입되더라도, 최종 결재권자인 CEO는 AI의 검증 로그(Log)를 역추적하여 맹점이 없는지 주기적으로 감사(Audit)해야 합니다.</li>
     </ul>
 </div>
+
+<p><strong>"AI의 수정을 자동화한다는 것은, 나의 까다로운 눈썰미를 AI에게 그대로 복제해 준다"</strong>는 것을 의미합니다. 끝없는 사과의 루프를 끊어내는 유일한 방법은, 대표님의 그 매서운 '레드팀'의 시각을 플랫폼의 검증 알고리즘 깊숙한 곳에 이식하는 것뿐입니다.</p>
         </div>
         
         <!-- Premium Lead Magnet / Paywall Gate -->
-        
-        <div class="lead-magnet-overlay">
-            <div class="lead-magnet-box">
-                <div style="margin-bottom: 24px; color: var(--primary); display: flex; justify-content: center;">
-                    <div style="width: 56px; height: 56px; background: rgba(0, 102, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    </div>
-                </div>
-                <h3>사내 기밀 실무 데이터 잠금</h3>
-                <p>프롬프트 엔지니어링 사례 및 실제 적용 가이드는 진양엔지니어링 임직원에게만 제공됩니다.</p>
-                
-                <div style="margin-bottom: 16px;">
-                    <input type="email" id="lmEmail" class="lm-input" placeholder="사내 이메일 주소 (@jinyang.com)">
-                    <input type="text" id="lmCompany" class="lm-input" placeholder="소속 부서">
-                </div>
-                
-                <button onclick="unlockContent()" class="lm-btn">권한 요청 및 열람하기</button>
-                <div style="margin-top: 20px;">
-                    <button onclick="masterLogin()" style="background: none; border: none; font-size: 13px; font-weight: 600; color: var(--ink-muted); text-decoration: underline; cursor: pointer;">마스터 계정 인증</button>
-                </div>
-            </div>
-        </div>
         
     </div>
     
@@ -851,8 +777,8 @@ cadastral_url += f"&bbox=126.97,37.55,126.98,37.56,EPSG:4326"
     <div style="margin-top: 60px; padding: 40px; background: var(--canvas); border-radius: 24px; border: 1px solid var(--hairline); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
         <h3 class="tagline" style="margin-bottom: 24px; color: var(--ink);">이 문서가 실무에 도움이 되었나요?</h3>
         <div style="display:flex; justify-content:center; gap:16px;">
-            <button onclick="submitFeedback(true, 20)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
-            <button onclick="submitFeedback(false, 20)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
+            <button onclick="submitFeedback(true, 6)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
+            <button onclick="submitFeedback(false, 6)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
         </div>
         <p id="feedbackThanks" style="display:none; color:var(--primary); font-size:15px; font-weight:600; margin-top:24px;">소중한 피드백이 전송되었습니다. 시스템 개선에 반영하겠습니다!</p>
     </div>
