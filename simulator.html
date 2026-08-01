@@ -203,11 +203,20 @@
             to { transform: rotate(360deg); }
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 18px; }
-            .input-group { flex-direction: column; }
-            .input-group button { padding: 16px; }
+        .living-diagram-section {
+            background-color: var(--canvas-parchment);
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .diagram-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--canvas);
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
         }
     </style>
 </head>
@@ -219,6 +228,37 @@
             <div class="hero-badge">J-Hub 시뮬레이터</div>
             <h1 style="font-size: 48px;">AI로 예쁜 투시도만<br>그리고 계십니까?</h1>
             <p>건축 설계의 본질은 CG가 아니라 '사유와 논리'입니다.<br>외주 개발자가 결코 대신할 수 없는 영역,<br>건축사(CEO)의 통찰력을 시스템으로 이식하는 첫 단추.</p>
+        </div>
+    </section>
+
+    <!-- Living Diagram Section (Architectural Visuals) -->
+    <section class="living-diagram-section">
+        <div style="max-width: 1000px; margin: 0 auto; text-align: center; margin-bottom: 40px;">
+            <div class="hero-badge" style="background: var(--primary); color: white;">프로토타입</div>
+            <h2 style="font-size: 34px; font-weight: 600; margin-bottom: 16px;">살아 움직이는 삽도 (Living Diagram)</h2>
+            <p style="font-size: 17px; color: var(--ink-muted);">AI가 텍스트(법규)를 시각적 체적으로 변환하는 과정을 실시간으로 확인하세요.<br>아래 버튼을 눌러 정북방향 일조권 사선제한 로직을 가동해보십시오.</p>
+        </div>
+
+        <div class="diagram-container">
+            <svg width="400" height="350" viewBox="0 0 400 350" style="margin: 0 auto; display: block; overflow: visible;">
+                <!-- Base grid -->
+                <path d="M 20 300 L 380 300" stroke="var(--hairline)" stroke-width="2"/>
+                <text x="30" y="320" fill="var(--ink-muted)" font-size="12" font-family="SF Pro Text">인접 대지 경계선</text>
+                
+                <!-- The chunk that gets cut away -->
+                <polygon id="cutBlock" points="200,50 300,50 300,150" fill="var(--surface-tile-1)" style="transition: all 0.5s ease-out;" />
+                
+                <!-- The main building that stays -->
+                <polygon id="mainBlock" points="100,300 100,50 200,50 300,150 300,300" fill="var(--surface-tile-1)" />
+                
+                <!-- The setback line -->
+                <path id="setbackLine" d="M 350 200 L 150 0" stroke="#ff3b30" stroke-width="3" stroke-dasharray="400" stroke-dashoffset="400" fill="none" style="transition: stroke-dashoffset 1s ease-out;" />
+                <text id="setbackText" x="300" y="80" fill="#ff3b30" font-size="14" font-weight="bold" font-family="SF Pro Text" style="opacity: 0; transition: opacity 0.5s;">사선 제한선 (1:2)</text>
+            </svg>
+
+            <button onclick="runLivingDiagram()" style="margin-top: 30px; padding: 14px 32px; background: var(--surface-tile-1); color: white; border: none; border-radius: 12px; font-size: 17px; font-weight: 600; cursor: pointer; transition: background 0.2s;">일조권 검토 AI 로직 가동</button>
+
+            <div id="diagramResult" style="margin-top: 24px; min-height: 24px; font-weight: 600; color: var(--primary);"></div>
         </div>
     </section>
 
@@ -405,6 +445,28 @@
                 document.getElementById('miniTypewriterText').innerHTML += text.charAt(index);
                 setTimeout(() => typeWriterEffectMini(text, index + 1), 20); // Slightly faster typing
             }
+        }
+
+        // Living Diagram Logic
+        function runLivingDiagram() {
+            const resultText = document.getElementById('diagramResult');
+            resultText.innerHTML = '<span class="spinner" style="width:16px; height:16px; border-width:2px; margin-right:8px; border-top-color:#ff3b30;"></span> 법규 스캔 및 시각화 중...';
+            
+            // 1. Draw the setback line
+            document.getElementById('setbackLine').style.strokeDashoffset = '0';
+            
+            // 2. Highlight the illegal volume
+            setTimeout(() => {
+                document.getElementById('cutBlock').style.fill = 'rgba(255, 59, 48, 0.4)';
+                document.getElementById('setbackText').style.opacity = '1';
+                resultText.innerHTML = '<span style="color:#ff3b30;">⚠️ 일조권 사선제한 저촉 면적 감지됨</span>';
+            }, 1000);
+            
+            // 3. Auto-Healer slices it away
+            setTimeout(() => {
+                document.getElementById('cutBlock').style.opacity = '0';
+                resultText.innerHTML = '✅ <strong>Auto-Healer 조치 완료:</strong> 저촉 면적 삭제 및 테라스(Terrace) 형태로 매스 재조정됨. 리스크 차단 완료.';
+            }, 2500);
         }
     </script>
 </body>
