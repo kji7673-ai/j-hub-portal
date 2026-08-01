@@ -74,6 +74,41 @@
         </div>
     </div>
 
+    <!-- Red Team Feedback / SOP Updates -->
+    <div class="section-pad" style="padding: 80px 40px; background: var(--canvas-parchment);">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+                <div>
+                    <h2 class="display-md" style="margin-bottom: 8px; color: var(--ink);">최근 레드팀 피드백 및 SOP 업데이트</h2>
+                    <p style="font-size: 17px; color: var(--ink-muted);">AI의 오류를 잡아내고 프롬프트를 개선한 가장 최근의 치열한 논의 과정입니다.</p>
+                </div>
+                <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; font-size: 14px;">모든 피드백 보기 →</a>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+                <!-- Card 1 -->
+                <div style="background: var(--canvas); border-radius: 18px; padding: 32px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                        <span style="background: rgba(255,59,48,0.1); color: #ff3b30; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">환각 감지 (Hallucination)</span>
+                        <span style="color: var(--ink-muted); font-size: 12px;">2026. 08. 01</span>
+                    </div>
+                    <h3 style="font-size: 21px; font-weight: 600; margin-bottom: 24px;">용적률 산출 시 '도로 사선 제한' 미적용 오류</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div style="background: var(--surface-pearl); padding: 16px; border-radius: 12px; border: 1px dashed #ff3b30;">
+                            <div style="font-weight: 600; color: #ff3b30; margin-bottom: 8px; font-size: 14px;">❌ Before (오류 상황)</div>
+                            <p style="font-size: 14px; color: var(--ink-muted);">AI가 대지면적 기반으로 250% 용적률을 꽉 채운 매스를 제안했으나, 전면 도로 폭(4m)에 따른 사선 제한을 인지하지 못함.</p>
+                        </div>
+                        <div style="background: rgba(52,199,89,0.05); padding: 16px; border-radius: 12px; border: 1px solid rgba(52,199,89,0.3);">
+                            <div style="font-weight: 600; color: #27c93f; margin-bottom: 8px; font-size: 14px;">✅ After (프롬프트/SOP 개선)</div>
+                            <p style="font-size: 14px; color: var(--ink-muted);">"가로구역별 최고높이 제한 스캔 로직"을 프롬프트 Step 1으로 강제 이동 배치. 이후 유사 사례 오류율 0% 달성.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Tracks (The Learning Journey) -->
     <div class="section-pad" style="padding: 80px 40px; background: var(--surface-black);">
         <div style="max-width: 1000px; margin: 0 auto;">
