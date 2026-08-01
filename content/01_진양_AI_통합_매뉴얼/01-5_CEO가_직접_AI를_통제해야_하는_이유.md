@@ -6,13 +6,14 @@
   "level": 1,
   "is_internal": false,
   "date": "2026-08-01",
-  "summary": "IT 외주의 참사부터 게이트키퍼까지, 리더가 직접 AI를 설계해야 하는 생생한 이유"
+  "summary": "IT 외주의 참사부터 게이트키퍼까지, 리더가 직접 AI를 설계해야 하는 생생한 이유",
+  "track": "sop"
 }
 ---
 
-<div class="alert alert-danger" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 32px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: #ff3b30;">🚨 [Red Team 경고] "개발자에게 AI를 맡기면, 예쁜 쓰레기가 탄생합니다."</h4>
-  <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted);">
+<div class="alert alert-danger" class="alert-danger-custom">
+  <h4 class="alert-danger-title">🚨 [Red Team 경고] "개발자에게 AI를 맡기면, 예쁜 쓰레기가 탄생합니다."</h4>
+  <p class="alert-danger-text">
     "AI는 컴퓨터 공학의 영역이니 IT 직원이나 외주 업체에 맡기면 되겠지."<br>
     이것이 대한민국 수많은 기업들이 AI 도입에 실패하는 가장 치명적인 착각입니다. 건축에서의 AI는 단순한 소프트웨어가 아닙니다. <strong>대표이사(CEO)의 30년 설계 철학과 판단의 위계질서를 디지털로 복제하는 작업</strong>입니다. 
   </p>
@@ -30,9 +31,9 @@
 
 ### 1. 외주의 참사: 코드는 짤 수 있어도, '사유의 위계'는 짤 수 없다
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/hallucination_filter_1785306520160.jpg" alt="환각 필터링" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[에피소드 1] 맹목적인 데이터가 아닌, 건축사의 필터가 적용되어야 하는 이유</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/hallucination_filter_1785306520160.jpg" alt="환각 필터링" class="figure-img">
+  <figcaption class="figure-caption">[에피소드 1] 맹목적인 데이터가 아닌, 건축사의 필터가 적용되어야 하는 이유</figcaption>
 </figure>
 
 **[실패 에피소드: 화려한 투시도의 배신]**
@@ -40,15 +41,15 @@
 하지만 이 프로젝트는 건축 심의에서 휴지조각이 되었습니다. 왜일까요?
 IT 개발자는 숫자로 된 '용적률 최대치'는 코딩했지만, **'일조권 사선 제한'과 '가로구역별 최고높이 제한' 중 무엇이 우선하는지(사유의 위계질서)**를 알지 못했기 때문입니다.
 
-건축은 단순한 데이터의 나열이 아닙니다. *"서울시 조례에서는 이렇지만, 이 대지는 지구단위계획이 우선한다"*와 같은 고도의 '판단 로직'이 필요합니다. 개발자는 노후도 40년이라는 숫자는 타이핑할 수 있어도, 그 숫자가 틀렸을 때 건축주에게 발생하는 수백억 원의 손실은 상상하지 못합니다. **AI에 '실무 로직'을 이식할 수 있는 사람은 오직 마스터 아키텍트(CEO)뿐입니다.**
+건축은 단순한 데이터의 나열이 아닙니다. *"서울시 조례에서는 이렇지만, 이 대지는 지구단위계획이 우선한다"*와 같은 고도의 '판단 로직'이 필요합니다. 개발자는 노후도 40년이라는 숫자는 타이핑할 수 있어도, 그 숫자가 틀렸을 때 발생하는 **용적률 10% 축소나 기부채납 비용 증가 등 치명적인 사업성 악화**는 상상하지 못합니다. **AI에 '실무 로직'을 이식할 수 있는 사람은 오직 마스터 아키텍트(CEO)뿐입니다.**
 
 ---
 
 ### 2. 영구적인 자산화: 개인의 뇌(Brain)에서 조직의 시스템(System)으로
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/rag_library_brain_1785307257460.jpg" alt="지식의 시스템화" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[에피소드 2] CEO의 머릿속 8개 서랍장이 거대한 라이브러리(RAG)로 진화하다</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/rag_library_brain_1785307257460.jpg" alt="지식의 시스템화" class="figure-img">
+  <figcaption class="figure-caption">[에피소드 2] CEO의 머릿속 8개 서랍장이 거대한 라이브러리(RAG)로 진화하다</figcaption>
 </figure>
 
 **[성공 에피소드: 신입사원이 CEO의 시각으로 법규를 검토하다]**
@@ -62,9 +63,9 @@ CEO가 직접 AI를 통제해야 하는 이유는 명확합니다. 플랫폼은 
 
 ### 3. 최후의 게이트키퍼: 환각(Hallucination)의 시대를 통제할 자격
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/gatekeeper_balance_1785307066162.jpg" alt="게이트키퍼의 균형" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[에피소드 3] 쏟아지는 AI의 데이터 속에서 진실의 무게를 다는 게이트키퍼</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/gatekeeper_balance_1785307066162.jpg" alt="게이트키퍼의 균형" class="figure-img">
+  <figcaption class="figure-caption">[에피소드 3] 쏟아지는 AI의 데이터 속에서 진실의 무게를 다는 게이트키퍼</figcaption>
 </figure>
 
 **[위기 에피소드: 그럴듯한 거짓말과 마스터 아키텍트의 직관]**
@@ -77,7 +78,7 @@ AI는 완벽하지 않습니다. 수만 장의 법규를 1초 만에 스캔하�
 <br>
 <hr>
 
-<div class="alert alert-info" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin: 32px 0;">
+<div class="alert alert-info" class="alert-info-custom">
     <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 16px; font-size: 21px; color: var(--primary);">💡 CEO의 행동 강령 (Action Item)</h4>
     <ul style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.6; padding-left: 20px;">
       <li style="margin-bottom: 12px;"><strong>지시는 곧 알고리즘이다:</strong> 직원에게 구두로 지시하던 방식을 버리고, 프롬프트(Prompt)로 명문화하여 나의 '사유의 위계질서'를 시스템에 각인하라.</li>

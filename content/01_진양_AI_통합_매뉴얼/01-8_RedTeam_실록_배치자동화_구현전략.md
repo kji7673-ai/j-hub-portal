@@ -6,7 +6,8 @@
   "level": 1,
   "is_internal": false,
   "date": "2026-08-01",
-  "summary": "추상적인 비전을 실제 코드로 변환하기 위한 CEO와 Red Team AI의 치열한 난상토론 기록"
+  "summary": "추상적인 비전을 실제 코드로 변환하기 위한 CEO와 Red Team AI의 치열한 난상토론 기록",
+  "track": "sop"
 }
 ---
 

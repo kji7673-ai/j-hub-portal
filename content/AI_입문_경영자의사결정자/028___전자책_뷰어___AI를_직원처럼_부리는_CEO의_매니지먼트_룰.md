@@ -6,7 +6,8 @@
   "level": 1,
   "is_internal": false,
   "date": "2026-07-20",
-  "summary": "코드를 한 줄도 모르는 50대 건축사의 AI 실전 기록. Canva 시각화 완성본을 책처럼 넘겨보세요."
+  "summary": "코드를 한 줄도 모르는 50대 건축사의 AI 실전 기록. Canva 시각화 완성본을 책처럼 넘겨보세요.",
+  "track": "ceo"
 }
 ---
 

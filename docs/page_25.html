@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
-    <title>SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</title>
+    <title>레드팀 데일리 인사이트 (2026-07-18)</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -248,6 +248,35 @@
     .md-content td { padding: 12px; border-bottom: 1px solid var(--hairline); }
     .md-content a { color: var(--primary); text-decoration: none; }
     .md-content pre { background: var(--surface-pearl); padding: 20px; border-radius: 11px; overflow-x: auto; margin: 30px 0; font-size: 14px; border: 1px solid var(--hairline); }
+
+    /* Refactored MD Content Classes */
+    .md-content .next-doc-card { margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary); }
+    .md-content .next-doc-title { margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .md-content .next-doc-list { margin-bottom: 0; padding-left: 20px; font-size: 14px; }
+    
+    .md-content .code-block { background:#2d3748; color:#e2e8f0; padding:16px; border-radius:8px; font-size:13px; overflow-x:auto; }
+    
+    .md-content .figure-center { text-align: center; margin: 40px 0; }
+    .md-content .figure-img { max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px; }
+    .md-content .figure-caption { font-size: 13px; color: var(--ink-muted); margin-top: 12px; }
+    
+    .md-content .alert-danger-custom { background-color: #fff5f5; color: var(--ink); padding: 32px; border-radius: 18px; margin-bottom: 32px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px; border-left: 4px solid #ff3b30; }
+    .md-content .alert-danger-title { font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: #ff3b30; margin-top: 0; }
+    .md-content .alert-danger-text { font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0; }
+    
+    .md-content .alert-info-custom { background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin: 32px 0; }
+    
+    .md-content .mermaid-container { display:flex; justify-content:center; margin: 40px 0; background: var(--canvas-parchment); padding: 24px; border-radius: 18px; overflow-x: auto; }
+
+    @media (max-width: 768px) {
+        .md-content .alert-danger-custom, .md-content .alert-info-custom { padding: 20px; border-radius: 12px; }
+        .md-content .alert-danger-title { font-size: 20px; }
+        .md-content .alert-danger-text { font-size: 15px; }
+        .md-content .next-doc-card { padding: 20px; }
+        .md-content .mermaid-container { padding: 16px; border-radius: 12px; }
+    }
+    
+    /* Callouts & Alerts */
     .md-content code { background: var(--surface-pearl); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: var(--ink); }
     .md-content pre code { background: transparent; padding: 0; border: none; }
     .md-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; color: var(--ink-muted); font-size: 21px; font-weight: 300; margin: 40px 0; }
@@ -519,54 +548,57 @@
     <div class="desktop-sidebar" id="desktopSidebar">
     <!-- Sidebar Items (Jinja) -->
     
-        <div class="toc-category">📚 공통 모듈</div>
+        <div class="toc-category">ceo</div>
         
         <div class="toc-item"><a href="page_0.html" >전체 목차 및 학습 로드맵</a></div>
         
+        <div class="toc-item"><a href="page_17.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        
+        <div class="toc-item"><a href="page_22.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        
+        <div class="toc-item"><a href="page_23.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        
+        <div class="toc-item"><a href="page_26.html" >01-10 [미래 비전] 엔드투엔드(End-to-End) 시뮬레이터: 스케치에서 가능성의 탐색으로</a></div>
+        
+        <div class="toc-item"><a href="page_27.html" >01-11 [시스템 철학] 피드백 루프: 논의의 과정이 곧 플랫폼의 자산이다</a></div>
+        
     
-        <div class="toc-category">📘 실전 가이드</div>
+        <div class="toc-category">sop</div>
         
         <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="toc-item"><a href="page_2.html" >01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
-        <div class="toc-item"><a href="page_3.html" >02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
+        <div class="toc-item"><a href="page_3.html" >01-3 우리의 7대 비전과 진화</a></div>
         
-        <div class="toc-item"><a href="page_4.html" >01-3 우리의 7대 비전과 진화</a></div>
+        <div class="toc-item"><a href="page_4.html" >01-4 만능주의의 함정과 우리의 역할</a></div>
         
-        <div class="toc-item"><a href="page_5.html" >03 K 제너러티브 배치 및 용어해설</a></div>
+        <div class="toc-item"><a href="page_5.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
         
-        <div class="toc-item"><a href="page_6.html" >01-4 만능주의의 함정과 우리의 역할</a></div>
+        <div class="toc-item"><a href="page_6.html" >01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
         
-        <div class="toc-item"><a href="page_7.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="toc-item"><a href="page_7.html" >01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
         
-        <div class="toc-item"><a href="page_8.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        <div class="toc-item"><a href="page_8.html" >01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
         
-        <div class="toc-item"><a href="page_9.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="toc-item"><a href="page_9.html" >01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
-        <div class="toc-item"><a href="page_10.html" >01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        <div class="toc-item"><a href="page_10.html" >02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
         
-        <div class="toc-item"><a href="page_11.html" >01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        <div class="toc-item"><a href="page_11.html" >03 K 제너러티브 배치 및 용어해설</a></div>
         
-        <div class="toc-item"><a href="page_12.html" >01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        <div class="toc-item"><a href="page_12.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_13.html" >01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
+        <div class="toc-item"><a href="page_13.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
     
-        <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
+        <div class="toc-category">system</div>
         
         <div class="toc-item"><a href="page_14.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="toc-item"><a href="page_16.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
-        
-        <div class="toc-item"><a href="page_21.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
-        
-        <div class="toc-item"><a href="page_22.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
-        
-    
-        <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        
         <div class="toc-item"><a href="page_15.html" >서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        
+        <div class="toc-item"><a href="page_16.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
         <div class="toc-item"><a href="page_18.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
@@ -574,16 +606,11 @@
         
         <div class="toc-item"><a href="page_20.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="toc-item"><a href="page_25.html" class="active">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_21.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-    
-        <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
+        <div class="toc-item"><a href="page_24.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
-        <div class="toc-item"><a href="page_17.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
-        
-        <div class="toc-item"><a href="page_23.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
-        
-        <div class="toc-item"><a href="page_24.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_25.html" class="active">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
     
     </div> <!-- end desktop-sidebar -->
@@ -593,54 +620,57 @@
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
         <div style="margin-bottom: 40px; font-size: 14px; color: #7a7a7a; font-weight: 600;">J-Hub Portal 목차</div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📚 공통 모듈</div>
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">ceo</div>
         
         <div class="mobile-toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵</a></div>
         
+        <div class="mobile-toc-item"><a href="page_17.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📘 실전 가이드</div>
+        <div class="mobile-toc-item"><a href="page_22.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_23.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_26.html">01-10 [미래 비전] 엔드투엔드(End-to-End) 시뮬레이터: 스케치에서 가능성의 탐색으로</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_27.html">01-11 [시스템 철학] 피드백 루프: 논의의 과정이 곧 플랫폼의 자산이다</a></div>
+        
+        
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">sop</div>
         
         <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="mobile-toc-item"><a href="page_2.html">01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
-        <div class="mobile-toc-item"><a href="page_3.html">02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
+        <div class="mobile-toc-item"><a href="page_3.html">01-3 우리의 7대 비전과 진화</a></div>
         
-        <div class="mobile-toc-item"><a href="page_4.html">01-3 우리의 7대 비전과 진화</a></div>
+        <div class="mobile-toc-item"><a href="page_4.html">01-4 만능주의의 함정과 우리의 역할</a></div>
         
-        <div class="mobile-toc-item"><a href="page_5.html">03 K 제너러티브 배치 및 용어해설</a></div>
+        <div class="mobile-toc-item"><a href="page_5.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_6.html">01-4 만능주의의 함정과 우리의 역할</a></div>
+        <div class="mobile-toc-item"><a href="page_6.html">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
         
-        <div class="mobile-toc-item"><a href="page_7.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="mobile-toc-item"><a href="page_7.html">01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
         
-        <div class="mobile-toc-item"><a href="page_8.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
         
-        <div class="mobile-toc-item"><a href="page_9.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_9.html">01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
-        <div class="mobile-toc-item"><a href="page_10.html">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        <div class="mobile-toc-item"><a href="page_10.html">02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
         
-        <div class="mobile-toc-item"><a href="page_11.html">01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">03 K 제너러티브 배치 및 용어해설</a></div>
         
-        <div class="mobile-toc-item"><a href="page_12.html">01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_13.html">01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
+        <div class="mobile-toc-item"><a href="page_13.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">system</div>
         
         <div class="mobile-toc-item"><a href="page_14.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_16.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_21.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_22.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
-        
-        
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        
         <div class="mobile-toc-item"><a href="page_15.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_16.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
         <div class="mobile-toc-item"><a href="page_18.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
@@ -648,16 +678,11 @@
         
         <div class="mobile-toc-item"><a href="page_20.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_25.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
+        <div class="mobile-toc-item"><a href="page_24.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
-        
-        <div class="mobile-toc-item"><a href="page_17.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_23.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_24.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_25.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
         
     </div>
@@ -682,17 +707,17 @@
     <div style="margin-bottom: 24px;">
         <div class="breadcrumb">
             <a href="index.html">홈</a> <span style="margin: 0 8px;">/</span> 
-            <span>SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</span>
+            <span>레드팀 데일리 인사이트 (2026-07-18)</span>
         </div>
         <div class="doc-meta-header" style="margin-top: 12px;">
             <span class="level-tag level-2" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🔧 Lv.2 실무</span>
-            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;"></span>
-            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 33</span>
+            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">2026-07-18</span>
+            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 38</span>
         </div>
     </div>
     
     <!-- Title -->
-    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</h1>
+    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">레드팀 데일리 인사이트 (2026-07-18)</h1>
     
     <!-- Summary / Hook -->
     <div style="margin-bottom: 60px; padding: 40px; background: var(--surface-pearl); border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
@@ -701,102 +726,260 @@
             핵심 요약 (Key Takeaway)
         </div>
         <div class="lead-airy" style="color: var(--ink);">
-            레드팀 v9 감사 피드백을 반영한 모바일 UX/UI 고도화 SOP
+            2026-07-18 레드팀 의견 8건 + 보완사항 7건 (소급 수집)
         </div>
     </div>
 
     <!-- Gated Markdown Content -->
     <div class="gated-content " style="position: relative; ">
         <div class="markdown-body md-content" style="font-size: 17px; line-height: 1.6; letter-spacing: -0.374px;">
-            <div style="padding: 24px; background: var(--canvas-parchment); border-left: 4px solid var(--primary); margin-bottom: 32px; border-radius: 0 12px 12px 0;">
-    <h2 style="margin-top: 0; color: var(--ink); font-size: 20px;">💡 교육 개요 (도입 배경)</h2>
-    <p style="font-size: 15px; color: var(--ink-muted-80); margin-bottom: 0;">
-        본 매뉴얼은 <strong>[프로젝트 J-Platform]</strong>(사내 통합 매뉴얼) 오픈 직후 실시된 <strong>레드팀(Red Team) V9 보안/UX 감사</strong>에서 지적된 
-        '검색 기능 부재' 및 '모바일 가독성 저하' 문제를 어떻게 기술적으로 해결하고 시스템에 이식했는지 그 실무 조치 과정을 교육하기 위해 작성되었습니다.
-    </p>
-</div>
-
-<h3>1. 사전 준비 및 환경 구성</h3>
-<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>
-이 작업을 수행하기 위해서는 프론트엔드 정적 파일 구조에 대한 이해가 필요합니다. 별도의 백엔드(Node.js, Python 등) 없이 오직 브라우저와 정적 호스팅(GitHub Pages)만으로 동작하는 구조를 준비해야 합니다.
-</div>
-<pre><code class="language-bash"># 작업 전 디렉토리 계층 구조 확인
-/J-Platform
-├── docs/                 # 최종 빌드된 정적 HTML이 모이는 곳
-│   ├── search_index.js   # ⬅️ (신규) 전체 텍스트 검색용 인메모리 DB
-│   └── sw.js             # ⬅️ (신규) PWA 서비스워커
-├── static/
-│   ├── css/style.css     # ⬅️ (수정) 마이크로 타이포그래피 적용
-│   └── manifest.json     # ⬅️ (신규) PWA 앱 설치 매니페스트
-└── generate_static.py    # 빌드 파이썬 스크립트</code></pre>
-
-<h3>2. 핵심 문제 상황 및 해결 흐름도 (Flowchart)</h3>
-<p>
-레드팀 감사에서 가장 치명적으로 지적받은 것은 <strong>"수백 개의 문서를 스크롤만으로 찾아야 하는 비효율성"</strong>이었습니다. 이를 해결하기 위해 백엔드 서버 없이 동작하는 <strong>초고속 인메모리 검색(In-Memory Search)</strong> 엔진을 설계했습니다.
-</p>
-<pre><code class="language-mermaid">sequenceDiagram
-    participant B as 브라우저 (사용자)
-    participant S as search_index.js (메모리)
-    participant U as UI (모달)
-
-    B->>S: 1. 페이지 접속 시 인덱스 스크립트 비동기 로드
-    B->>U: 2. 돋보기 아이콘 클릭 -> 검색 모달 오픈
-    B->>U: 3. 키워드 타이핑 ("건축법")
-    U->>S: 4. 배열 filter() 및 indexOf() 실시간 매칭
-    S-->>U: 5. 일치하는 문서 제목 + 본문 하이라이팅 반환
-    U-->>B: 6. 0.1초 내 결과 출력 및 클릭 시 즉시 이동
-</code></pre>
-
-<h3>3. [블라인드] 주요 조치 사항 상세</h3>
-
-<h4>A. 초고속 전역 검색(Search) 기능 탑재</h4>
-<p>
-정적 웹사이트의 한계를 극복하기 위해, 파이썬 빌드 시점에 모든 문서의 텍스트를 하나의 자바스크립트 배열(`search_index.js`)로 압축하여 생성했습니다. 
-</p>
-<div style="text-align: center; margin: 32px 0;">
-    <img src="static/images/journal_01.png" alt="검색 모달 UI 모의 삽도" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-    <p style="font-size: 13px; color: var(--ink-muted-80); margin-top: 12px;">▲ <em>[모의 삽도] 검색어 입력 시 즉각적으로 결과가 팝업되는 UI</em></p>
-</div>
-
-<h4>B. 마이크로 타이포그래피 (모바일 가독성)</h4>
-<p>
-기존 위키(Wiki) 스타일의 빽빽한 글씨를, 매거진(진양저널) 수준의 편안한 레이아웃으로 변경했습니다.
-</p>
-<ul>
-    <li><code>word-break: keep-all;</code>: 모바일 화면 가장자리에서 한국어 단어가 의미 단위로 끊어지도록 강제 (예: '건축사'가 '건축<br>사'로 잘리지 않음)</li>
-    <li><code>line-height: 1.65;</code>: 모바일 환경에서 스크롤 시 줄 간격 여백을 넓혀 눈의 피로도 감소</li>
-    <li><code>box-shadow</code> 및 테두리 제거: 모바일에서는 카드 형태 대신 좌우를 꽉 채우는 Edge-to-Edge 풀스크린 레이아웃 채택</li>
-</ul>
-
-<h4>C. PWA (앱 설치 기능) 도입</h4>
-<p>
-모바일 기기 바탕화면에 네이티브 앱처럼 아이콘을 추가할 수 있도록 매니페스트와 서비스 워커를 적용했습니다. 특히 애플리케이션 하단에 직관적인 <strong>'홈 화면에 추가하기' 토스트(Toast) 팝업 및 영구 안내판</strong>을 삽입하여 사용자 경험을 극대화했습니다.
-</p>
-
-<div style="background: var(--surface-pearl); padding: 20px; border-radius: 8px; margin: 24px 0;">
-    <h4 style="margin-top: 0; color: var(--primary);">📚 필수 용어 해설</h4>
-    <ul style="font-size: 14px; margin-bottom: 0;">
-        <li style="margin-bottom: 8px;"><strong>PWA (Progressive Web App)</strong>: 일반 웹사이트를 마치 스마트폰 앱(App)처럼 설치하고, 오프라인에서도 작동하게 만들 수 있는 웹 기술의 표준 명칭.</li>
-        <li style="margin-bottom: 8px;"><strong>Vanilla JS (바닐라 자바스크립트)</strong>: React, Vue 같은 무거운 프레임워크를 전혀 쓰지 않고 브라우저에 내장된 순수 자바스크립트만을 사용하는 것. 매우 가볍고 빠름.</li>
-        <li><strong>In-Memory Indexing (인메모리 인덱싱)</strong>: 데이터베이스(서버)를 조회하는 대신, 브라우저의 램(RAM) 메모리에 검색할 데이터를 미리 다 올려두고 찾는 방식. 데이터가 적을 때 극단적으로 빠른 속도를 자랑함.</li>
-    </ul>
-</div>
-
-<h3>4. AI 프롬프트 실전 예시</h3>
-<p>에이전트에게 이러한 복잡한 UX 개선을 지시할 때는, 단순히 "예쁘게 해주세요"가 아니라 <strong>디자인 레퍼런스와 기술적 구현 방식을 명확히 짚어주어야</strong> 합니다.</p>
-<pre><code class="language-markdown">"현재 정적 사이트에 전체 검색 기능이 없어 불편합니다. 백엔드 없이 브라우저 단에서 동작하는 Vanilla JS 기반의 검색 모달을 만들어주세요. 파이썬 빌드 스크립트를 수정해 전체 문서 텍스트를 담은 search_index.js를 자동 생성하도록 하고, 검색어 입력 시 노란색 하이라이팅이 적용되게 해주세요."
-
-"모바일 가독성을 진양저널 수준으로 끌어올리려 합니다. CSS 미디어 쿼리를 사용해 모바일 화면(max-width: 900px)에서만 word-break: keep-all 과 line-height: 1.65 를 적용하고, 본문 카드의 좌우 여백을 없애 풀스크린처럼 보이게 해주세요."</code></pre>
-
-<p style="margin-top: 40px; text-align: center; font-weight: 600; color: var(--primary);">
-    이 교육 자료를 통해, 타 부서에서도 피드백을 어떻게 시스템 기능으로 전환하는지 그 프로세스를 숙지하시기 바랍니다.
-</p>
-
-<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
+            <h1>🔴 레드팀 데일리 인사이트 (2026-07-18)</h1>
+<blockquote>
+<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>금요일 하루 동안 5개 채팅방에서 15건의 레드팀 의견 및 보완사항이 발생했습니다.
+이 문서는 소급 수집하여 자동 생성되었습니다.</div>
+</blockquote>
+<h2>📊 요약</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">건수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">🔴 레드팀 의견</td>
+<td style="text-align: left;">8건</td>
+</tr>
+<tr>
+<td style="text-align: left;">🔧 보완사항</td>
+<td style="text-align: left;">7건</td>
+</tr>
+</tbody>
+</table>
+<h2>📋 채팅방별 상세</h2>
+<h3>💬 정비사업 보고서 데이터 이관</h3>
+<h4>🔴 [🔧 보완] 레드팀 3차 감사 14건 — 보안·기능·코드품질·UX 전수 수정</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 보안 | <strong>태그</strong>: 보안, 인증, 세션관리, 환경분리</p>
+<p><strong>❓ 문제 상황</strong>
+[A플랫폼] fetch()에 credentials:'include' 누락(6곳), 세션 미들웨어에 https_only/same_site 미적용, DEV_BYPASS_AUTH가 프로덕션에서도 작동</p>
+<p><strong>🔍 레드팀 분석</strong>
+API 호출 시 인증 쿠키 미전송으로 세션 탈취 노출. DEV_BYPASS_AUTH 환경 분리 없이 방치 시 프로덕션 침투 경로로 악용 가능</p>
+<p><strong>✅ 해결 조치</strong>
+6곳 fetch에 credentials 추가, SessionMiddleware에 https_only/same_site/max_age 적용, DEV_BYPASS_AUTH에 ENVIRONMENT≠production 이중 가드</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>개발 편의용 인증 우회는 반드시 환경변수 이중 가드로 차단해야 한다</p>
+</blockquote>
+<hr />
+<h4>🔴 [🔧 보완] useCallback/useEffect 순서 오류로 Temporal Dead Zone 크래시</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 품질 | <strong>태그</strong>: React, Hooks, TDZ, 코드품질</p>
+<p><strong>❓ 문제 상황</strong>
+[A플랫폼] useEffect(22행)에서 scanRisks를 호출하나, scanRisks는 useCallback(28행)으로 아래에 정의됨 → const 호이스팅 미지원으로 앱 완전 중단</p>
+<p><strong>🔍 레드팀 분석</strong>
+React Hooks의 순서 의존성을 간과한 전형적 버그. const로 선언된 useCallback은 호이스팅되지 않으므로 반드시 참조 전에 정의해야 함</p>
+<p><strong>✅ 해결 조치</strong>
+scanRisks useCallback 정의를 useEffect 앞으로 이동</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>React에서 useCallback 정의는 반드시 이를 참조하는 useEffect보다 상단에 배치해야 한다</p>
+</blockquote>
+<hr />
+<h4>🔴 [🔧 보완] Optional Chaining 미적용으로 저장 시 화면 멈춤</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 품질 | <strong>태그</strong>: JavaScript, Null-safety, 방어적프로그래밍</p>
+<p><strong>❓ 문제 상황</strong>
+[A플랫폼] handleSaveVersion에서 document.meta.base_title 참조 시 meta가 undefined이면 TypeError → 저장 클릭 시 화면 완전 정지</p>
+<p><strong>🔍 레드팀 분석</strong>
+Null-safety 미적용으로 방어적 프로그래밍 원칙 위반. 백엔드에서 빈 meta 객체를 반환하는 경우까지 고려해야 함</p>
+<p><strong>✅ 해결 조치</strong>
+Optional Chaining 적용 (document.meta?.base_title || document.title)</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>백엔드 응답의 중첩 객체 접근 시 반드시 Optional Chaining(?.)을 적용해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟠 [🔧 보완] 100vh + overflow:hidden 조합으로 화면 하단 52px 잘림</h4>
+<p><strong>심각도</strong>: 높음 | <strong>카테고리</strong>: UX/UI | <strong>태그</strong>: CSS, 레이아웃, 100vh, flex</p>
+<p><strong>❓ 문제 상황</strong>
+[A플랫폼] .app-container의 height:100vh가 헤더(52px)와 합산되어 하단 52px 영역 클릭 및 스크롤 차단</p>
+<p><strong>🔍 레드팀 분석</strong>
+고정 높이 + overflow:hidden 조합은 헤더가 있는 레이아웃에서 반드시 발생하는 구조적 버그</p>
+<p><strong>✅ 해결 조치</strong>
+height:100vh 제거 → flex:1; overflow:hidden으로 변경하여 부모 레이아웃 대응</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>헤더가 있는 레이아웃에서 100vh 고정은 금물, flex:1로 가변 처리해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟡 [🔴 레드팀] Notion 연동 폐기 → 자체 Apple Design 템플릿 전환</h4>
+<p><strong>심각도</strong>: 보통 | <strong>카테고리</strong>: 아키텍처 | <strong>태그</strong>: 아키텍처, Notion, 자체구축, 보안</p>
+<p><strong>❓ 문제 상황</strong>
+[A플랫폼] Notion API 연동 시 외부 서버 데이터 전송에 따른 보안 리스크 및 복잡도 과다</p>
+<p><strong>🔍 레드팀 분석</strong>
+레드팀이 Notion 연동의 보안 리스크(외부 서버 전송)를 경고. 자체 경량 템플릿이 보안과 UX 양면에서 유리</p>
+<p><strong>✅ 해결 조치</strong>
+자체 Apple Design System 기반 문서 템플릿 3종(회의록/검토보고서/일일업무) 내장, 3종 내보내기 구현</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>외부 SaaS 연동보다 자체 경량 템플릿이 보안과 UX 양면에서 유리할 수 있다</p>
+</blockquote>
+<hr />
+<h3>💬 정비사업보고서 검토 및 이관</h3>
+<h4>🔴 [🔴 레드팀] SQL 인젝션 취약점 — 원시 SQL(sqlite3) 직접 호출로 공격 노출</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 보안 | <strong>태그</strong>: 보안, SQL인젝션, ORM, SQLAlchemy</p>
+<p><strong>❓ 문제 상황</strong>
+[B플랫폼] 백엔드 FastAPI가 sqlite3 모듈로 원시 SQL을 직접 구성하여 실행 → SQL 인젝션 공격에 무방비</p>
+<p><strong>🔍 레드팀 분석</strong>
+상용화 시 가장 먼저 격파해야 할 보안 취약점. ORM 미적용 상태에서 사용자 입력이 SQL에 직접 삽입되면 DB 전체 탈취 가능</p>
+<p><strong>✅ 해결 조치</strong>
+SQLAlchemy ORM 전면 도입, 6개 테이블 스키마 매핑, 모든 라우터에서 원시 SQL 제거</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>프로토타입이라도 ORM은 초기부터 적용해야 상용화 전환 비용이 줄어든다</p>
+</blockquote>
+<hr />
+<h4>🔴 [🔴 레드팀] 1920px 고정 해상도 — 모바일/태블릿 완전 사용 불가</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 아키텍처 | <strong>태그</strong>: 반응형, CSS, 모바일, 레이아웃</p>
+<p><strong>❓ 문제 상황</strong>
+[B플랫폼] 모든 HTML이 position:absolute; width:1920px으로 하드코딩 → 아이패드/스마트폰에서 화면 완전 파손</p>
+<p><strong>🔍 레드팀 분석</strong>
+현장 소장이나 외부 미팅 시 태블릿으로 보고서 열람 불가 → 상용화 최대 장벽</p>
+<p><strong>✅ 해결 조치</strong>
+viewport 메타태그 추가, CSS Grid/Flexbox 기반 반응형 전환, Apple 가이드라인(max-width:1440px) 적용</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>프로토타입 단계에서도 반응형 기본 구조는 처음부터 설계해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟠 [🔴 레드팀] AI 에어갭(Air-gapped) 모듈 설계 — 데이터 오염 방어</h4>
+<p><strong>심각도</strong>: 높음 | <strong>카테고리</strong>: 아키텍처 | <strong>태그</strong>: AI, 에어갭, 환각방지, 데이터무결성</p>
+<p><strong>❓ 문제 상황</strong>
+[B플랫폼] AI 파싱 데이터가 시스템 DB에 자동 유입되면 환각(Hallucination) 데이터로 DB 오염 위험</p>
+<p><strong>🔍 레드팀 분석</strong>
+AI 분석 결과의 자동 유입(Auto-fill) 원천 차단한 에어갭 설계는 훌륭한 아키텍처 결정. Advisory Panel에만 노출하고 자동 완성 금지</p>
+<p><strong>✅ 해결 조치</strong>
+AI 분석 결과는 참고용 패널에만 표시, 사용자가 직접 판단 후 수동 입력하는 구조 확립</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>AI 결과물은 절대 DB에 자동 저장하지 말고, 반드시 인간 판단을 거치는 에어갭 구조를 유지해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟠 [🔧 보완] LAW_DB 하드코딩 제거 → 독립 룰 엔진 분리 및 Explainable AI</h4>
+<p><strong>심각도</strong>: 높음 | <strong>카테고리</strong>: 프로세스 | <strong>태그</strong>: 룰엔진, Explainable, 법규분리, 유지보수</p>
+<p><strong>❓ 문제 상황</strong>
+[B플랫폼] 비례율/보정계수 산출 로직이 프론트엔드에 3,000줄 이상 하드코딩 → 법규 개정 시 코드 직접 수정 필요</p>
+<p><strong>🔍 레드팀 분석</strong>
+법규 데이터와 비즈니스 로직의 분리 없이는 유지보수 불가. 산출 근거의 투명성(Explainable AI)이 의뢰인 신뢰의 핵심</p>
+<p><strong>✅ 해결 조치</strong>
+LAW_DB를 backend JSON으로 분리 + API화, law_engine.js 독립 엔진 생성, PDF에 산출 근거 각주 출력</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>비즈니스 룰은 코드에서 분리하여 JSON/설정 파일로 관리하고, 산출 근거를 투명하게 출력해야 한다</p>
+</blockquote>
+<hr />
+<h3>💬 책 제작 데이터 복구 요청</h3>
+<h4>🟠 [🔴 레드팀] 개인 저널 → 사내 문서 단방향 이관(Fire &amp; Forget) 아키텍처</h4>
+<p><strong>심각도</strong>: 높음 | <strong>카테고리</strong>: 아키텍처 | <strong>태그</strong>: 아키텍처, 데이터분리, 단방향, 개인정보</p>
+<p><strong>❓ 문제 상황</strong>
+[C플랫폼] 개인 일기장과 사내 통합문서관리 간 양방향 동기화 시 개인 사생활 노출 및 데이터 혼재 위험</p>
+<p><strong>🔍 레드팀 분석</strong>
+양방향 Sync는 절대 불가. 대표이사가 명시적으로 이관 버튼을 누른 텍스트만 AI가 공식 양식으로 변환 후 1회성 Push하는 구조가 올바름</p>
+<p><strong>✅ 해결 조치</strong>
+에디터에 배포 버튼 추가, AI가 양식 변환 + YAML 메타데이터 + 스마트 파일명 + 3줄 요약을 자동 생성하여 Push</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>개인 데이터와 사내 데이터는 단방향 Push로만 연결하고, 양방향 Sync는 절대 금지해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟡 [🔴 레드팀] 문서 검색 최적화 3종 — 메타데이터/파일명/3줄요약 자동 주입</h4>
+<p><strong>심각도</strong>: 보통 | <strong>카테고리</strong>: 프로세스 | <strong>태그</strong>: 검색최적화, 메타데이터, SEO, 문서관리</p>
+<p><strong>❓ 문제 상황</strong>
+[C플랫폼] AI가 포맷만 바꿔 사내 폴더에 저장하면, 나중에 직원들이 검색해 찾지 못해 데이터 쓰레기에 불과</p>
+<p><strong>🔍 레드팀 분석</strong>
+이관 시 단순 양식 변환만으로는 불충분. YAML 메타데이터 + 스마트 파일명 + AI 3줄 요약을 묶어야 검색 생태계 완성</p>
+<p><strong>✅ 해결 조치</strong>
+/api/publish_doc 엔드포인트에 검색 최적화 3종 세트 파이프라인 통합 구현</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>문서 이관 시 양식 변환만으로는 부족하고, 검색 가능한 메타데이터를 반드시 동시에 주입해야 한다</p>
+</blockquote>
+<hr />
+<h4>🟢 [🔴 레드팀] 불필요한 안내 텍스트 삭제 + calshow:// 캘린더 딥링크 도입</h4>
+<p><strong>심각도</strong>: 낮음 | <strong>카테고리</strong>: UX/UI | <strong>태그</strong>: UX, NoChrome, 딥링크, Apple</p>
+<p><strong>❓ 문제 상황</strong>
+[C플랫폼] 이미 학습 완료된 홈화면 추가 안내문이 매일 시야를 어지럽히는 시각적 공해</p>
+<p><strong>🔍 레드팀 분석</strong>
+Apple 디자인 'No Chrome' 원칙에 따라 군더더기 삭제. 날짜 클릭 시 calshow:// URL Scheme으로 기기 내장 캘린더 직접 호출이 가장 우아한 방법</p>
+<p><strong>✅ 해결 조치</strong>
+홈화면 추가 안내 HTML 삭제, 날짜 영역에 calshow:// 딥링크 삽입</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>이미 학습된 안내문은 즉시 제거하고, 네이티브 앱 연동은 딥링크(URL Scheme)를 활용하라</p>
+</blockquote>
+<hr />
+<h3>💬 7월 2주차 주간 일정표 작성</h3>
+<h4>🔴 [🔧 보완] J-Hub 레드팀 감사 18건 — XSS/secret_key/오프라인 로그인 등 전수 수정</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 보안 | <strong>태그</strong>: XSS, 보안, Flask, secret_key</p>
+<p><strong>❓ 문제 상황</strong>
+[D포털] XSS 취약점(innerHTML 스크립트 주입), Flask secret_key 하드코딩, 서버 미구동 시 로그인 불가</p>
+<p><strong>🔍 레드팀 분석</strong>
+5건 Critical + 7건 Major + 6건 Minor 총 18건 결함 식별. XSS와 secret_key는 외부 공격 벡터로 즉시 대응 필수</p>
+<p><strong>✅ 해결 조치</strong>
+sanitizeHTML() 유틸 도입, os.urandom(32).hex() 기반 secret_key 랜덤화, localStorage 오프라인 세션 복원</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>사내 포털이라도 XSS 방어와 비밀키 랜덤화는 최소한의 보안 기본기로 반드시 적용해야 한다</p>
+</blockquote>
+<hr />
+<h4>🔴 [🔴 레드팀] 데이터 파이프라인 전수 진단 — cron 미등록, 가짜 기사, API 스텁으로 자동화 전면 미작동</h4>
+<p><strong>심각도</strong>: 긴급 | <strong>카테고리</strong>: 아키텍처 | <strong>태그</strong>: 자동화, cron, 파이프라인, 운영</p>
+<p><strong>❓ 문제 상황</strong>
+[D포털] 9개 동기화 스크립트 존재하나 crontab 미등록(0건), pipeline_daily.py는 랜덤 조합으로 가짜 기사 100건 생성, fetch_real_data()는 stub</p>
+<p><strong>🔍 레드팀 분석</strong>
+자동화 시스템이 설계는 되어 있으나 단 한 번도 실제 가동된 적 없음. 두 개의 완전히 단절된 파이프라인이 서로를 호출하지 않는 구조적 문제</p>
+<p><strong>✅ 해결 조치</strong>
+cron 등록, run_daily_sync.sh에 기사 파이프라인 통합, 보고서 경로 동적 탐지, ISO 8601 정규화</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>자동화 스크립트는 작성만으로 끝이 아니라 cron 등록 + 실행 검증 + 로그 모니터링까지 완료해야 자동화라 할 수 있다</p>
+</blockquote>
+<hr />
+<h4>🟠 [🔧 보완] 서버 코드 미적용 — 코드 변경 후 재기동 미이행으로 로그인 불가</h4>
+<p><strong>심각도</strong>: 높음 | <strong>카테고리</strong>: 프로세스 | <strong>태그</strong>: 배포, 서버운영, 재기동, linter</p>
+<p><strong>❓ 문제 상황</strong>
+[D포털] 보안 코드 수정이 과거 서버 메모리에 반영되지 않음. flask import 구문 유실로 서버 기동 자체 불가</p>
+<p><strong>🔍 레드팀 분석</strong>
+코드 수정 후 서버 재기동을 하지 않으면 변경이 반영되지 않는 기본 운영 원칙 미이행. import 유실은 코드 리뷰 부재의 증거</p>
+<p><strong>✅ 해결 조치</strong>
+구 서버 프로세스 강제 종료, 필수 모듈 복구 후 최신 코드로 재기동, GitHub Push → 클라우드 자동 배포</p>
+<p><strong>💡 교훈</strong></p>
+<blockquote>
+<p>코드 변경 후에는 반드시 서버 재기동 + API 테스트 검증까지 수행해야 하며, linter 도입이 필요하다</p>
+</blockquote>
+<hr />
+<h2>🎓 오늘의 학습 포인트</h2>
+<ol>
+<li><strong>레드팀 3차 감사 14건 — 보안·기능·코드품질·UX 전수 수정</strong> — 개발 편의용 인증 우회는 반드시 환경변수 이중 가드로 차단해야 한다</li>
+<li><strong>useCallback/useEffect 순서 오류로 Temporal Dead Zone 크래시</strong> — React에서 useCallback 정의는 반드시 이를 참조하는 useEffect보다 상단에 배치해야 한다</li>
+<li><strong>Optional Chaining 미적용으로 저장 시 화면 멈춤</strong> — 백엔드 응답의 중첩 객체 접근 시 반드시 Optional Chaining(?.)을 적용해야 한다</li>
+<li><strong>100vh + overflow:hidden 조합으로 화면 하단 52px 잘림</strong> — 헤더가 있는 레이아웃에서 100vh 고정은 금물, flex:1로 가변 처리해야 한다</li>
+<li><strong>Notion 연동 폐기 → 자체 Apple Design 템플릿 전환</strong> — 외부 SaaS 연동보다 자체 경량 템플릿이 보안과 UX 양면에서 유리할 수 있다</li>
+<li><strong>SQL 인젝션 취약점 — 원시 SQL(sqlite3) 직접 호출로 공격 노출</strong> — 프로토타입이라도 ORM은 초기부터 적용해야 상용화 전환 비용이 줄어든다</li>
+<li><strong>1920px 고정 해상도 — 모바일/태블릿 완전 사용 불가</strong> — 프로토타입 단계에서도 반응형 기본 구조는 처음부터 설계해야 한다</li>
+<li><strong>AI 에어갭(Air-gapped) 모듈 설계 — 데이터 오염 방어</strong> — AI 결과물은 절대 DB에 자동 저장하지 말고, 반드시 인간 판단을 거치는 에어갭 구조를 유지해야 한다</li>
+<li><strong>LAW_DB 하드코딩 제거 → 독립 룰 엔진 분리 및 Explainable AI</strong> — 비즈니스 룰은 코드에서 분리하여 JSON/설정 파일로 관리하고, 산출 근거를 투명하게 출력해야 한다</li>
+<li><strong>개인 저널 → 사내 문서 단방향 이관(Fire &amp; Forget) 아키텍처</strong> — 개인 데이터와 사내 데이터는 단방향 Push로만 연결하고, 양방향 Sync는 절대 금지해야 한다</li>
+<li><strong>문서 검색 최적화 3종 — 메타데이터/파일명/3줄요약 자동 주입</strong> — 문서 이관 시 양식 변환만으로는 부족하고, 검색 가능한 메타데이터를 반드시 동시에 주입해야 한다</li>
+<li><strong>불필요한 안내 텍스트 삭제 + calshow:// 캘린더 딥링크 도입</strong> — 이미 학습된 안내문은 즉시 제거하고, 네이티브 앱 연동은 딥링크(URL Scheme)를 활용하라</li>
+<li><strong>J-Hub 레드팀 감사 18건 — XSS/secret_key/오프라인 로그인 등 전수 수정</strong> — 사내 포털이라도 XSS 방어와 비밀키 랜덤화는 최소한의 보안 기본기로 반드시 적용해야 한다</li>
+<li><strong>데이터 파이프라인 전수 진단 — cron 미등록, 가짜 기사, API 스텁으로 자동화 전면 미작동</strong> — 자동화 스크립트는 작성만으로 끝이 아니라 cron 등록 + 실행 검증 + 로그 모니터링까지 완료해야 자동화라 할 수 있다</li>
+<li><strong>서버 코드 미적용 — 코드 변경 후 재기동 미이행으로 로그인 불가</strong> — 코드 변경 후에는 반드시 서버 재기동 + API 테스트 검증까지 수행해야 하며, linter 도입이 필요하다</li>
+</ol>
+<div class="next-doc-card">
     <!-- NEXT_READ_SECTION -->
-    <h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
-    <ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
-        <li><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></li><li><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></li>
+    <h4 class="next-doc-title">🧭 다음 읽을 문서</h4>
+    <ul class="next-doc-list">
+        <li><a href="page_27.html">레드팀 데일리 인사이트 (2026-07-19)</a></li><li><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></li>
     </ul>
 </div>
         </div>
@@ -834,7 +1017,7 @@
         
         
         
-        <div></div>
+        <a href="page_26.html" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--primary); color: white; border-radius: 999px;">다음 문서 →</a>
         
     </div>
 
@@ -842,8 +1025,8 @@
     <div style="margin-top: 60px; padding: 40px; background: var(--canvas); border-radius: 24px; border: 1px solid var(--hairline); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
         <h3 class="tagline" style="margin-bottom: 24px; color: var(--ink);">이 문서가 실무에 도움이 되었나요?</h3>
         <div style="display:flex; justify-content:center; gap:16px;">
-            <button onclick="submitFeedback(true, 33)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
-            <button onclick="submitFeedback(false, 33)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
+            <button onclick="submitFeedback(true, 38)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
+            <button onclick="submitFeedback(false, 38)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
         </div>
         <p id="feedbackThanks" style="display:none; color:var(--primary); font-size:15px; font-weight:600; margin-top:24px;">소중한 피드백이 전송되었습니다. 시스템 개선에 반영하겠습니다!</p>
     </div>

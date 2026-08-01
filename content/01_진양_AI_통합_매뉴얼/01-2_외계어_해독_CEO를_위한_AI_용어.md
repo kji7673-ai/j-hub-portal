@@ -6,25 +6,26 @@
   "level": 1,
   "is_internal": false,
   "date": "2026-07-29",
-  "summary": "우리의 업무를 도와줄 똑똑한 비서들을 소개합니다."
+  "summary": "우리의 업무를 도와줄 똑똑한 비서들을 소개합니다.",
+  "track": "sop"
 }
 ---
 
 <h3>새로운 도구, 너무 어렵게 생각하지 마세요</h3>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/terminology_data_diamond.png" alt="복잡한 데이터가 정제된 다이아몬드 지식으로 변환되는 과정" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 1] 복잡한 원리를 몰라도, 정제된 지식(결과물)을 취하는 것이 핵심입니다.</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/terminology_data_diamond.png" alt="복잡한 데이터가 정제된 다이아몬드 지식으로 변환되는 과정" class="figure-img">
+  <figcaption class="figure-caption">[삽도 1] 복잡한 원리를 몰라도, 정제된 지식(결과물)을 취하는 것이 핵심입니다.</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/terminology_fact_check.png" alt="팩트와 환각 구별" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 2] 환각(가짜 정보)과 팩트를 명확히 구분하는 교차 검증의 돋보기</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/terminology_fact_check.png" alt="팩트와 환각 구별" class="figure-img">
+  <figcaption class="figure-caption">[삽도 2] 환각(가짜 정보)과 팩트를 명확히 구분하는 교차 검증의 돋보기</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/terminology_prompt_anatomy.png" alt="프롬프트 해부도" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 3] 지시어, 맥락, 형식이 조립되는 프롬프트의 뼈대 구조</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/terminology_prompt_anatomy.png" alt="프롬프트 해부도" class="figure-img">
+  <figcaption class="figure-caption">[삽도 3] 지시어, 맥락, 형식이 조립되는 프롬프트의 뼈대 구조</figcaption>
 </figure>
 
 <p>세상에는 어려운 기술 용어들이 넘쳐납니다. 하지만 우리가 건축을 할 때 중장비의 엔진 구조를 알 필요가 없듯이, 새로운 시스템의 복잡한 원리를 모두 이해할 필요는 없습니다. 우리가 알아야 할 것은 <strong>'이 도구들을 어떻게 활용하여 우리의 생각을 실현할 것인가'</strong>입니다.</p>
@@ -66,7 +67,7 @@
   </tbody>
 </table>
 
-<div class="alert alert-success" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin: 32px 0;">
+<div class="alert alert-success" class="alert-info-custom">
   <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 16px; font-size: 21px; color: var(--primary);">도구를 통제하는 자가 결과를 지배합니다</h4>
   <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; margin-bottom: 0;">
     AI는 전지전능한 요술 방망이가 아닙니다. 아무리 뛰어난 기술이라도, 결국 우리의 명확한 의지(프롬프트)와 회사 고유의 축적된 자산(RAG)이 결합되지 않으면 허공에 흩어지는 헛소리(할루시네이션)에 불과합니다. 이 새로운 비서를 <strong>가장 강력한 진양의 무기로 벼려내는 책임</strong>, 그것이 바로 이 시스템을 도입하는 우리의 진정한 역할입니다.

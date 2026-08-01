@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
-    <title>01-3 우리의 7대 비전과 진화</title>
+    <title>01-4 만능주의의 함정과 우리의 역할</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -248,6 +248,35 @@
     .md-content td { padding: 12px; border-bottom: 1px solid var(--hairline); }
     .md-content a { color: var(--primary); text-decoration: none; }
     .md-content pre { background: var(--surface-pearl); padding: 20px; border-radius: 11px; overflow-x: auto; margin: 30px 0; font-size: 14px; border: 1px solid var(--hairline); }
+
+    /* Refactored MD Content Classes */
+    .md-content .next-doc-card { margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary); }
+    .md-content .next-doc-title { margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .md-content .next-doc-list { margin-bottom: 0; padding-left: 20px; font-size: 14px; }
+    
+    .md-content .code-block { background:#2d3748; color:#e2e8f0; padding:16px; border-radius:8px; font-size:13px; overflow-x:auto; }
+    
+    .md-content .figure-center { text-align: center; margin: 40px 0; }
+    .md-content .figure-img { max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px; }
+    .md-content .figure-caption { font-size: 13px; color: var(--ink-muted); margin-top: 12px; }
+    
+    .md-content .alert-danger-custom { background-color: #fff5f5; color: var(--ink); padding: 32px; border-radius: 18px; margin-bottom: 32px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px; border-left: 4px solid #ff3b30; }
+    .md-content .alert-danger-title { font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 12px; font-size: 24px; color: #ff3b30; margin-top: 0; }
+    .md-content .alert-danger-text { font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0; }
+    
+    .md-content .alert-info-custom { background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin: 32px 0; }
+    
+    .md-content .mermaid-container { display:flex; justify-content:center; margin: 40px 0; background: var(--canvas-parchment); padding: 24px; border-radius: 18px; overflow-x: auto; }
+
+    @media (max-width: 768px) {
+        .md-content .alert-danger-custom, .md-content .alert-info-custom { padding: 20px; border-radius: 12px; }
+        .md-content .alert-danger-title { font-size: 20px; }
+        .md-content .alert-danger-text { font-size: 15px; }
+        .md-content .next-doc-card { padding: 20px; }
+        .md-content .mermaid-container { padding: 16px; border-radius: 12px; }
+    }
+    
+    /* Callouts & Alerts */
     .md-content code { background: var(--surface-pearl); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: var(--ink); }
     .md-content pre code { background: transparent; padding: 0; border: none; }
     .md-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; color: var(--ink-muted); font-size: 21px; font-weight: 300; margin: 40px 0; }
@@ -519,54 +548,57 @@
     <div class="desktop-sidebar" id="desktopSidebar">
     <!-- Sidebar Items (Jinja) -->
     
-        <div class="toc-category">📚 공통 모듈</div>
+        <div class="toc-category">ceo</div>
         
         <div class="toc-item"><a href="page_0.html" >전체 목차 및 학습 로드맵</a></div>
         
+        <div class="toc-item"><a href="page_17.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        
+        <div class="toc-item"><a href="page_22.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        
+        <div class="toc-item"><a href="page_23.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        
+        <div class="toc-item"><a href="page_26.html" >01-10 [미래 비전] 엔드투엔드(End-to-End) 시뮬레이터: 스케치에서 가능성의 탐색으로</a></div>
+        
+        <div class="toc-item"><a href="page_27.html" >01-11 [시스템 철학] 피드백 루프: 논의의 과정이 곧 플랫폼의 자산이다</a></div>
+        
     
-        <div class="toc-category">📘 실전 가이드</div>
+        <div class="toc-category">sop</div>
         
         <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="toc-item"><a href="page_2.html" >01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
-        <div class="toc-item"><a href="page_3.html" >02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
+        <div class="toc-item"><a href="page_3.html" >01-3 우리의 7대 비전과 진화</a></div>
         
-        <div class="toc-item"><a href="page_4.html" class="active">01-3 우리의 7대 비전과 진화</a></div>
+        <div class="toc-item"><a href="page_4.html" class="active">01-4 만능주의의 함정과 우리의 역할</a></div>
         
-        <div class="toc-item"><a href="page_5.html" >03 K 제너러티브 배치 및 용어해설</a></div>
+        <div class="toc-item"><a href="page_5.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
         
-        <div class="toc-item"><a href="page_6.html" >01-4 만능주의의 함정과 우리의 역할</a></div>
+        <div class="toc-item"><a href="page_6.html" >01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
         
-        <div class="toc-item"><a href="page_7.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="toc-item"><a href="page_7.html" >01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
         
-        <div class="toc-item"><a href="page_8.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        <div class="toc-item"><a href="page_8.html" >01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
         
-        <div class="toc-item"><a href="page_9.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="toc-item"><a href="page_9.html" >01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
-        <div class="toc-item"><a href="page_10.html" >01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        <div class="toc-item"><a href="page_10.html" >02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
         
-        <div class="toc-item"><a href="page_11.html" >01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        <div class="toc-item"><a href="page_11.html" >03 K 제너러티브 배치 및 용어해설</a></div>
         
-        <div class="toc-item"><a href="page_12.html" >01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        <div class="toc-item"><a href="page_12.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_13.html" >01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
+        <div class="toc-item"><a href="page_13.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
     
-        <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
+        <div class="toc-category">system</div>
         
         <div class="toc-item"><a href="page_14.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="toc-item"><a href="page_16.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
-        
-        <div class="toc-item"><a href="page_21.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
-        
-        <div class="toc-item"><a href="page_22.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
-        
-    
-        <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        
         <div class="toc-item"><a href="page_15.html" >서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        
+        <div class="toc-item"><a href="page_16.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
         <div class="toc-item"><a href="page_18.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
@@ -574,16 +606,11 @@
         
         <div class="toc-item"><a href="page_20.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="toc-item"><a href="page_25.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_21.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-    
-        <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
+        <div class="toc-item"><a href="page_24.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
-        <div class="toc-item"><a href="page_17.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
-        
-        <div class="toc-item"><a href="page_23.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
-        
-        <div class="toc-item"><a href="page_24.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_25.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
     
     </div> <!-- end desktop-sidebar -->
@@ -593,54 +620,57 @@
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
         <div style="margin-bottom: 40px; font-size: 14px; color: #7a7a7a; font-weight: 600;">J-Hub Portal 목차</div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📚 공통 모듈</div>
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">ceo</div>
         
         <div class="mobile-toc-item"><a href="page_0.html">전체 목차 및 학습 로드맵</a></div>
         
+        <div class="mobile-toc-item"><a href="page_17.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📘 실전 가이드</div>
+        <div class="mobile-toc-item"><a href="page_22.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_23.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_26.html">01-10 [미래 비전] 엔드투엔드(End-to-End) 시뮬레이터: 스케치에서 가능성의 탐색으로</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_27.html">01-11 [시스템 철학] 피드백 루프: 논의의 과정이 곧 플랫폼의 자산이다</a></div>
+        
+        
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">sop</div>
         
         <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="mobile-toc-item"><a href="page_2.html">01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
-        <div class="mobile-toc-item"><a href="page_3.html">02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
+        <div class="mobile-toc-item"><a href="page_3.html">01-3 우리의 7대 비전과 진화</a></div>
         
-        <div class="mobile-toc-item"><a href="page_4.html">01-3 우리의 7대 비전과 진화</a></div>
+        <div class="mobile-toc-item"><a href="page_4.html">01-4 만능주의의 함정과 우리의 역할</a></div>
         
-        <div class="mobile-toc-item"><a href="page_5.html">03 K 제너러티브 배치 및 용어해설</a></div>
+        <div class="mobile-toc-item"><a href="page_5.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_6.html">01-4 만능주의의 함정과 우리의 역할</a></div>
+        <div class="mobile-toc-item"><a href="page_6.html">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
         
-        <div class="mobile-toc-item"><a href="page_7.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
+        <div class="mobile-toc-item"><a href="page_7.html">01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
         
-        <div class="mobile-toc-item"><a href="page_8.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
         
-        <div class="mobile-toc-item"><a href="page_9.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_9.html">01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
         
-        <div class="mobile-toc-item"><a href="page_10.html">01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
+        <div class="mobile-toc-item"><a href="page_10.html">02 실전 SOP: 수작업 3일에서 AI 3분으로</a></div>
         
-        <div class="mobile-toc-item"><a href="page_11.html">01-7 미래 비전: AI 배치 시뮬레이터 - '격투기 링과 선수들'</a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">03 K 제너러티브 배치 및 용어해설</a></div>
         
-        <div class="mobile-toc-item"><a href="page_12.html">01-8 [Red Team 실록] AI 배치 시뮬레이터, 어떻게 구현할 것인가?</a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_13.html">01-9 [Red Team 실록 2] 정확성보다 가능성: 스케치의 허용 오차</a></div>
+        <div class="mobile-toc-item"><a href="page_13.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
+        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">system</div>
         
         <div class="mobile-toc-item"><a href="page_14.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_16.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_21.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_22.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
-        
-        
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
-        
         <div class="mobile-toc-item"><a href="page_15.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_16.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
         <div class="mobile-toc-item"><a href="page_18.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
@@ -648,16 +678,11 @@
         
         <div class="mobile-toc-item"><a href="page_20.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_25.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
+        <div class="mobile-toc-item"><a href="page_24.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
-        <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
-        
-        <div class="mobile-toc-item"><a href="page_17.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_23.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
-        
-        <div class="mobile-toc-item"><a href="page_24.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_25.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
         
     </div>
@@ -682,17 +707,17 @@
     <div style="margin-bottom: 24px;">
         <div class="breadcrumb">
             <a href="index.html">홈</a> <span style="margin: 0 8px;">/</span> 
-            <span>01-3 우리의 7대 비전과 진화</span>
+            <span>01-4 만능주의의 함정과 우리의 역할</span>
         </div>
         <div class="doc-meta-header" style="margin-top: 12px;">
-            <span class="level-tag level-2" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🔧 Lv.2 실무</span>
+            <span class="level-tag level-3" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🏗️ Lv.3 심화</span>
             <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">2026-07-29</span>
-            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 3</span>
+            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 4</span>
         </div>
     </div>
     
     <!-- Title -->
-    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">01-3 우리의 7대 비전과 진화</h1>
+    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">01-4 만능주의의 함정과 우리의 역할</h1>
     
     <!-- Summary / Hook -->
     <div style="margin-bottom: 60px; padding: 40px; background: var(--surface-pearl); border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
@@ -701,78 +726,64 @@
             핵심 요약 (Key Takeaway)
         </div>
         <div class="lead-airy" style="color: var(--ink);">
-            우리가 만들어가는 지식 경영의 5단계 진화 과정입니다.
+            시스템이 발달할수록 가장 중요한 것은 '사람의 검증'입니다.
         </div>
     </div>
 
     <!-- Gated Markdown Content -->
     <div class="gated-content " style="position: relative; ">
         <div class="markdown-body md-content" style="font-size: 17px; line-height: 1.6; letter-spacing: -0.374px;">
-            <h3>끊임없는 발전, J-Hub 플랫폼의 진화 단계</h3>
+            <h3 style="color: #e53e3e;">비판적 성찰: 시스템의 함정과 우리가 넘어야 할 벽</h3>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/vision_7step_loop.png" alt="건축설계 생애주기 진화 사이클" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 1] 지속적으로 순환하며 진화하는 플랫폼 생태계 (7대 비전 루프)</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/gatekeeper_balance.png" alt="AI의 힘과 인간 건축사의 통제력이 균형을 이루는 저울" class="figure-img">
+  <figcaption class="figure-caption">[삽도 1] 기계에 의존하기 전에 인간의 가설과 직관으로 중심을 잡는 저울</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/vision_gatekeeper_role.png" alt="게이트키퍼 역할" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 2] 체스판의 말(단순 오퍼레이터)이 될 것인가, 플레이어(게이트키퍼)가 될 것인가</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/gatekeeper_blind_trust.png" alt="맹목적인 믿음 경고" class="figure-img">
+  <figcaption class="figure-caption">[삽도 2] 생각의 통제권을 기계에 넘긴 자가 맞이할 치명적 위험</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/vision_automation_stairs.png" alt="진화의 계단" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 3] 수작업에서 지능화(Phase 5)로 이어지는 진양의 거대한 진화 계단</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/gatekeeper_hitl_process.png" alt="인간 중심 프로세스" class="figure-img">
+  <figcaption class="figure-caption">[삽도 3] 시스템의 루프 속에 인간(건축사)이 개입하여 흐름을 교정하는 통제 체계</figcaption>
 </figure>
 
-<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>현재 우리가 사용하고 있는 '정비사업 통합검토보고서'와 'J-Hub 교육 플랫폼'은 하루아침에 만들어진 것이 아닙니다. 기술의 발전과 우리의 치열한 비판, 그리고 실무진의 피드백이 결합되어 폭발적으로 진화해 왔습니다.</div>
-
-<div class="mermaid" style="display:flex; justify-content:center; margin: 40px 0; background: var(--canvas-parchment); padding: 24px; border-radius: 18px;">
-timeline
-    title 플랫폼 진화의 연대기
-    Phase 1 : 2024.01~2024.06 : 수작업과 엑셀의 시대
-    Phase 2 : 2024.07~2025.03 : 시스템 도입 및 표준화
-    Phase 3 : 2025.04~2025.12 : 통합 검토 플랫폼 구축
-    Phase 4 : 2026.01~2026.07 : 교육 플랫폼 및 지식 경영
-    Phase 5 : 2026.08~2027 : 상용화 및 산업 확산
-</div>
+<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>플랫폼이 모든 것을 해결해 주지 않습니다. 화려한 비전 이면에는 우리가 반드시 경계하고 극복해야 할 냉혹한 현실의 함정들이 도사리고 있습니다.</div>
 
 <div class="row" style="margin-top: 40px; gap: 24px;">
   <div class="col-md-12" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 8px;">Phase 1: 수작업과 엑셀의 시대 (2024 상반기)</h4>
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 12px;">경계 1: '생각을 멈추는 자판기'의 유혹</h4>
     <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0;">
-      우리의 출발점은 척박했습니다. 모든 법규 검토와 대지면적 산출을 담당자의 경험과 엑셀 수작업에 전적으로 의존하던 시기였습니다. 밤을 새워도 잦은 수식 오류의 불안감에서 벗어날 수 없었던, 시스템 부재의 아픔을 겪었던 태동기입니다.
+      우리가 가장 두려워하는 시나리오는 실무진이 이 거대한 플랫폼을 단순한 '자판기'로 취급하는 것입니다. 버튼 하나면 결과가 쏟아지는 시대에, "왜 이런 결과가 나왔는지" 집요하게 파고드는 사유의 훈련을 멈춘다면 우리의 미래는 없습니다. 기계에 키보드를 맡기기 전에, 반드시 여러분 <strong>고유의 가설과 건축적 직관</strong>을 먼저 세우는 혹독한 습관을 유지해야 합니다.
     </p>
   </div>
 
-  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 8px;">Phase 2: 시스템 도입 및 프롬프트 표준화</h4>
-    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
-      혼란을 끝내기 위해 우리는 새로운 비서 시스템(AI)을 실무에 과감히 이식했습니다. 가장 빛나는 성과는 개인의 필력에 의존하던 지시 방식을 규격화하여, 누구나 <strong>'마법의 지시문(프롬프트 템플릿)'</strong> 하나로 최고 수준의 법규 요약을 뽑아낼 수 있게 된 것입니다.
-    </p>
-  </div>
-
-  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 8px;">Phase 3: 통합 플랫폼의 구축 (Quantum Leap)</h4>
-    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
-      파편화된 지시문들을 거대한 하나의 톱니바퀴로 결집했습니다. '정비사업 통합검토보고서 자동생성 시스템'의 탄생입니다. 6~9일이 걸리던 지루한 법규 검토 시간이 <strong>단 하루</strong>로 압축되며, 건축사는 비로소 '생산'이 아닌 '설계'에 집중할 자유를 얻었습니다.
-    </p>
-  </div>
-
-  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: var(--primary); margin-bottom: 8px;">Phase 4: 지식 경영과 교육 플랫폼 (현재)</h4>
-    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
-      우리는 시스템의 완성을 넘어, 그 시스템을 다루는 '사람'에게 주목했습니다. 수많은 시행착오와 노하우를 파편화된 매뉴얼이 아닌 체계적인 지식 자산으로 응축했습니다. 지금 여러분이 보고 계신 이 플랫폼이 바로 진양의 집단 지성이 숨 쉬는 현재 진행형의 역사입니다.
-    </p>
-  </div>
-
-  <div class="col-md-12" style="background-color: var(--surface-tile-2); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 8px;">Phase 5: 상용화 및 산업 생태계 확산 (전망)</h4>
+  <div class="col-md-12" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 24px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 12px;">경계 2: 오염의 역설 (Garbage In, Garbage Out)</h4>
     <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0;">
-      진양엔지니어링 내부의 혁신에 머물지 않습니다. 우리의 검증된 워크플로우와 매니지먼트 룰은 곧 대한민국 모든 건축 파트너들이 열망하는 산업 표준(De facto standard)이자 상용 솔루션으로 발돋움할 것입니다.
+      지식 경영의 시스템은 양날의 검입니다. 누군가 무심코 던져넣은 엉터리 논리나 검증되지 않은 해석 하나가 거대한 저장소를 오염시키고, 결국 우리 모두의 자산을 좀먹습니다. 이 거대한 지식의 생태계는 오직 <strong>'서로를 향한 치열한 의심과 교차 검증'</strong>이라는 자양분을 먹고 자랄 때만 똑똑해집니다.
+    </p>
+  </div>
+
+  <div class="col-md-12" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 32px;">
+    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 12px;">경계 3: 플랫폼은 감옥이 아닙니다</h4>
+    <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--body-muted); margin-bottom: 0;">
+      우리가 세워둔 규칙과 템플릿의 뼈대가 여러분의 비상하는 창의성을 옭아매는 족쇄가 되어서는 안 됩니다. 시스템을 신뢰하되, 동시에 그 시스템의 맹점을 가장 먼저 발견하고 거침없이 파괴하여 더 나은 대안을 제시하는 것. 그것이 진양이 기대하는 진정한 인재의 모습입니다.
     </p>
   </div>
 </div>
+
+<div class="alert alert-success" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 40px;">
+  <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; letter-spacing: -0.374px; margin-bottom: 16px; font-size: 21px; color: var(--primary);">대표이사의 약속</h4>
+  <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; margin-bottom: 0; color: var(--ink-muted-80);">
+    훌륭한 업무 방식을 새롭게 발견하거나, 치명적인 잠재 에러를 끈질기게 파고들어 <strong>'진양의 시스템 자체를 한 단계 진화시킨 구성원'</strong>에게는 그 헌신에 걸맞은 파격적인 보상을 약속합니다.
+  </p>
+</div>
+
+<h4>게이트키퍼(Gatekeeper)의 책임</h4>
+<p>결국 최종 책임은 AI가 아닌 도장을 찍는 건축사에게 있습니다. AI가 가져온 방대한 데이터와 요약본을 맹신하지 않고, 의심의 눈초리로 교차 검증을 수행하는 사람. 우리는 그들을 <strong>게이트키퍼(문지기)</strong>라고 부릅니다. 진양의 모든 구성원은 이 깐깐한 문지기가 되어야 합니다.</p>
         </div>
         
         <!-- Premium Lead Magnet / Paywall Gate -->
@@ -816,8 +827,8 @@ timeline
     <div style="margin-top: 60px; padding: 40px; background: var(--canvas); border-radius: 24px; border: 1px solid var(--hairline); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
         <h3 class="tagline" style="margin-bottom: 24px; color: var(--ink);">이 문서가 실무에 도움이 되었나요?</h3>
         <div style="display:flex; justify-content:center; gap:16px;">
-            <button onclick="submitFeedback(true, 3)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
-            <button onclick="submitFeedback(false, 3)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
+            <button onclick="submitFeedback(true, 4)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
+            <button onclick="submitFeedback(false, 4)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
         </div>
         <p id="feedbackThanks" style="display:none; color:var(--primary); font-size:15px; font-weight:600; margin-top:24px;">소중한 피드백이 전송되었습니다. 시스템 개선에 반영하겠습니다!</p>
     </div>

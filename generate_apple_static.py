@@ -98,10 +98,10 @@ def build(output_dir, include_internal=False):
     search_data = []
     
     for i, p in enumerate(db):
-        cat = p.get("category", "목차")
-        if cat not in toc:
-            toc[cat] = []
-        toc[cat].append({
+        track = p.get("track", "sop")
+        if track not in toc:
+            toc[track] = []
+        toc[track].append({
             "idx": i, 
             "title": p["title"],
             "date": p.get("date", "")
@@ -123,7 +123,7 @@ def build(output_dir, include_internal=False):
         search_data.append({
             "id": i,
             "title": p["title"],
-            "category": cat,
+            "category": track,
             "content": strip_markdown(p["content"]),
             "url": filename
         })
@@ -150,20 +150,18 @@ def build(output_dir, include_internal=False):
     env = Environment(loader=FileSystemLoader('templates'))
     
     track_meta = {
-        "📚 공통 모듈": {"icon": "📚", "desc": "전 트랙 공유 — 학습 로드맵, 용어 해설, 사내 소통 체계", "badge_class": "track-badge-common", "color": "#7a7a7a"},
-        "🌱 AI 입문 (경영자/의사결정자)": {"icon": "🌱", "desc": "AI 시대의 건축 비전, 7대 전략, Archi-Synapse 철학, 레드팀 방법론", "badge_class": "track-badge-a", "color": "#2e7d32"},
-        "🔧 AI 실무 활용 (설계자/실무자)": {"icon": "🔧", "desc": "프롬프트 실습, 환각 방지, K-배치 알고리즘, 실전 SOP", "badge_class": "track-badge-b", "color": "#1565c0"},
-        "🛡️ 보안 및 데이터 거버넌스": {"icon": "🛡️", "desc": "전사 보안 규정, 데이터 해시화, 클라우드 인프라, API 연동 보안", "badge_class": "track-badge-c", "color": "#c62828"},
-        "🏗️ 플랫폼 개발 (개발자/DX)": {"icon": "🏗️", "desc": "UX/UI 고도화, 포털 구축, DocReview, 빅데이터 자동 추출", "badge_class": "track-badge-d", "color": "#6a1b9a"},
+        "ceo": {"title": "트랙 1. CEO & 임원진 (비전과 통제)", "icon": "🌱", "desc": "AI 시대의 건축 비전, 7대 전략, Archi-Synapse 철학, 레드팀 방법론", "badge_class": "track-badge-a", "color": "#2e7d32"},
+        "sop": {"title": "트랙 2. 설계 실무진 (SOP와 활용)", "icon": "🔧", "desc": "프롬프트 실습, 환각 방지, K-배치 알고리즘, 실전 SOP", "badge_class": "track-badge-b", "color": "#1565c0"},
+        "system": {"title": "트랙 3. 시스템 & IT (구축과 연동)", "icon": "🏗️", "desc": "UX/UI 고도화, 포털 구축, DocReview, 빅데이터 연동", "badge_class": "track-badge-d", "color": "#6a1b9a"},
     }
     level_labels = {1: "🌱 Lv.1 입문", 2: "🔧 Lv.2 실무", 3: "🏗️ Lv.3 심화"}
     level_css = {1: "level-1", 2: "level-2", 3: "level-3"}
     
     today_date = datetime.datetime.now()
     tracks_for_index = {}
-    for cat, items in toc.items():
-        meta = track_meta.get(cat, {"icon": "📄", "desc": "", "badge_class": "track-badge-common", "color": "#7a7a7a"})
-        cat_short = cat.split('(')[0].strip() if '(' in cat else cat
+    for track_key, items in toc.items():
+        meta = track_meta.get(track_key, track_meta["sop"])
+        cat_short = meta["title"]
         track_items = []
         for item in items:
             is_fresh = False
@@ -187,7 +185,7 @@ def build(output_dir, include_internal=False):
                 "level_class": level_css.get(doc_level, "level-1"),
                 "summary": summary_text
             })
-        tracks_for_index[cat] = {
+        tracks_for_index[track_key] = {
             "title": cat_short,
             "icon": meta["icon"],
             "desc": meta["desc"],

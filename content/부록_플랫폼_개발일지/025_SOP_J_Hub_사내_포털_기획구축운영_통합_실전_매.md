@@ -6,11 +6,12 @@
   "level": 2,
   "is_internal": false,
   "date": "2026-07-19",
-  "summary": "J-Hub(진양저널) 사내 포털의 기획부터 구축, 배포, 운영까지를 하나로 통합한 완전판 실전 매뉴얼"
+  "summary": "J-Hub(진양저널) 사내 포털의 기획부터 구축, 배포, 운영까지를 하나로 통합한 완전판 실전 매뉴얼",
+  "track": "system"
 }
 ---
 
-<div class="mermaid" style="display:flex; justify-content:center; margin: 40px 0; background: var(--canvas-parchment); padding: 24px; border-radius: 18px;">
+<div class="mermaid" class="mermaid-container">
 
 flowchart TD
     A[마크다운 파일들<br>.md] --> B(파이썬 빌드 스크립트)
@@ -90,7 +91,7 @@ flowchart TD
 ### 1단계: 메인 대시보드 및 로그인 인터페이스
 가장 먼저 사용자를 맞이하는 로그인 화면과 로그인 성공 직후의 대시보드 구조를 짭니다. 이때 XSS 공격을 방어하기 위한 텍스트 정제(Sanitization) 로직이 필수입니다.
 
-[📸 삽도: J-Hub 교육 플랫폼 참조]
+
 
 > [!IMPORTANT]
 > - 입력 폼 생성 시 텍스트 필드 값은 반드시 특수문자를 걸러내야 합니다.
@@ -99,12 +100,12 @@ flowchart TD
 ### 2단계: 모자이크(Mosaic) UI 및 지식 베이스 열람
 진양저널의 핵심인 주간 보고서와 실무 지식을 열람하는 뷰어 화면입니다. 서버 API에서 받아온 `[ID-a8f9]` 번호 등 고유 식별자를 통해 데이터를 동적으로 아코디언(Accordion) UI에 그려냅니다.
 
-[📸 삽도: J-Hub 교육 플랫폼 참조]
+
 
 ### 3단계: 모바일 반응형 및 편의 기능 (비밀번호 변경 등)
 대표이사 및 실무진들이 현장에서 스마트폰으로 접근할 때 깨짐이 없도록 미디어 쿼리(Media Query)를 적용하고, 하단 내비게이션 바에 비밀번호 변경 등 유틸리티 기능을 배치합니다.
 
-[📸 삽도: J-Hub 교육 플랫폼 참조]
+
 
 > [!CAUTION]
 > 비밀번호 처리 시 절대 평문으로 저장해서는 안 됩니다.
@@ -137,9 +138,7 @@ flowchart TD
 
 ## 📌 Part 2: 구축 아키텍처 심화 (기존 SOP 07 내용)
 
-# J-Hub (진양저널) 사내 포털 구축 교육 매뉴얼
-
-> 이 문서는 진양 엔지니어링의 정비사업 동향 관리 포털인 **J-Hub (진양저널)**을 기초부터 다시 구축한다고 가정할 때, 기획 단계부터 완성까지의 흐름을 정리한 교육 자료입니다. 사내 데이터 파이프라인의 이해 및 새로운 기능 확장을 위한 안내서로 활용하시기 바랍니다.
+> 이 섹션은 진양 엔지니어링의 정비사업 동향 관리 포털인 **J-Hub (진양저널)**의 데이터 파이프라인 흐름을 이해하고, 새로운 기능 확장을 위한 안내서로 활용할 수 있도록 작성되었습니다.
 
 ---
 
@@ -225,10 +224,10 @@ J-Hub를 직접 구축하며 얻은 중요한 기술적 교훈은 다음과 같�
 
 > 💡 **대표이사님을 위한 한 줄 요약**: J-Hub 구축의 핵심은 "사람이 수동으로 문서를 편집하던 행위를 파이썬 봇(Bot)이 대신 하도록 코드를 짜고, 이를 새벽마다 자동으로 실행되게 만드는 것"입니다.
 
-<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
+<div class="next-doc-card">
     <!-- NEXT_READ_SECTION -->
-    <h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
-    <ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
+    <h4 class="next-doc-title">🧭 다음 읽을 문서</h4>
+    <ul class="next-doc-list">
         <li><a href="page_33.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></li><li><a href="page_24.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></li>
     </ul>
 </div>

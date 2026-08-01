@@ -20,6 +20,12 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "🚀 3. GitHub 글로벌 서버로 전송 중..."
+echo "📦 3.1 GitHub Pages 배포용 docs 및 edu 폴더 동기화..."
+rm -rf docs
+cp -r docs_apple docs
+rm -rf edu
+cp -r docs_apple edu
+
 git add .
 git commit -m "교육 플랫폼 업데이트 (Auto-Healer 감리 통과): $(date '+%Y-%m-%d %H:%M:%S')"
 git push

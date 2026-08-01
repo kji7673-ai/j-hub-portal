@@ -6,7 +6,8 @@
   "level": 3,
   "is_internal": false,
   "date": "2026-07-18",
-  "summary": "FastAPI+React 기반의 건축 문서 검토 플랫폼(DocReviewPlatform)의 시스템 아키텍처, 개발 환경, 국가법령정보센터 API 연동, Gemini AI 통합, 레드팀 보안 감사 과정을 담은 개발자용 교육 매뉴얼"
+  "summary": "FastAPI+React 기반의 건축 문서 검토 플랫폼(DocReviewPlatform)의 시스템 아키텍처, 개발 환경, 국가법령정보센터 API 연동, Gemini AI 통합, 레드팀 보안 감사 과정을 담은 개발자용 교육 매뉴얼",
+  "track": "system"
 }
 ---
 # 📘 DocReviewPlatform 개발 교육 매뉴얼
@@ -644,10 +645,10 @@ with ThreadPoolExecutor(max_workers=1) as executor:
 > **📌 이 문서는 DocReviewPlatform의 v3.0 (Phase 3 완료) 기준으로 작성되었습니다.**  
 > 향후 기능 추가 시 해당 섹션을 업데이트해 주세요.
 
-<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
+<div class="next-doc-card">
     <!-- NEXT_READ_SECTION -->
-    <h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
-    <ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
+    <h4 class="next-doc-title">🧭 다음 읽을 문서</h4>
+    <ul class="next-doc-list">
         <li><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></li><li><a href="page_26.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></li>
     </ul>
 </div>

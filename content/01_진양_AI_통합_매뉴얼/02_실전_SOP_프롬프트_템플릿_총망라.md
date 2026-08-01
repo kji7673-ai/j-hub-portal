@@ -1,30 +1,31 @@
 ---json
 {
-  "id": 2,
+  "id": 12,
   "title": "02 실전 SOP: 수작업 3일에서 AI 3분으로",
   "category": "📘 실전 가이드",
   "level": 1,
   "is_internal": false,
   "date": "2026-07-28",
-  "summary": "AI를 활용한 5단계 사업성 검토 워크플로우와 교차 검증(Cross-Check) 실전 교본"
+  "summary": "AI를 활용한 5단계 사업성 검토 워크플로우와 교차 검증(Cross-Check) 실전 교본",
+  "track": "sop"
 }
 ---
 
 <h3>AI 전투 교본: 수작업의 종말과 '검증'의 시작</h3>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/prompt_blueprint.png" alt="터미널에서 정교한 블루프린트가 생성되는 모습" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 1] 완벽한 프롬프트(명령어)가 수작업 3일의 도면을 3분 만에 생성합니다.</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/prompt_blueprint.png" alt="터미널에서 정교한 블루프린트가 생성되는 모습" class="figure-img">
+  <figcaption class="figure-caption">[삽도 1] 완벽한 프롬프트(명령어)가 수작업 3일의 도면을 3분 만에 생성합니다.</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/prompt_4_pillars.png" alt="프롬프트 4대 기둥" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 2] 강력한 결과를 만드는 4대 기둥 (맥락, 역할, 작업, 포맷)</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/prompt_4_pillars.png" alt="프롬프트 4대 기둥" class="figure-img">
+  <figcaption class="figure-caption">[삽도 2] 강력한 결과를 만드는 4대 기둥 (맥락, 역할, 작업, 포맷)</figcaption>
 </figure>
 
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/prompt_before_after.png" alt="프롬프트 전후 비교" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 3] 흐릿한 지시(연기)가 명확한 지시(큐브)로 바뀔 때 달라지는 결과물</figcaption>
+<figure class="figure-center">
+  <img src="static/images/illustrations/prompt_before_after.png" alt="프롬프트 전후 비교" class="figure-img">
+  <figcaption class="figure-caption">[삽도 3] 흐릿한 지시(연기)가 명확한 지시(큐브)로 바뀔 때 달라지는 결과물</figcaption>
 </figure>
 
 <p>과거 우리는 VWorld를 열어 지적도를 확인하고, 디스코(Disco)에서 실거래가를 검색하며, 국가법령정보센터에서 조례를 뒤적이는 데 <strong>꼬박 3일</strong>을 썼습니다. 이제 J-Hub AI 플랫폼은 지번 하나만으로 이 모든 데이터를 <strong>단 3분</strong> 만에 긁어옵니다.</p>
@@ -140,4 +141,4 @@ graph TD
 <hr style="margin: 40px 0; border: 0; border-top: 1px solid var(--hairline);">
 
 <h3>결론: AI는 조수일 뿐, 책임은 건축사에게 있다</h3>
-<p>수작업 3일의 고통이 AI를 통해 3분으로 줄어들었습니다. 하지만 그 3분 만에 나온 결과물이 수백억 단위의 정비사업 향방을 결정짓습니다. <strong>AI가 주는 데이터를 100% 맹신하지 말고, 끊임없이 의심하고 집요하게 검증하는 것.</strong> 그것이 진양의 J-Hub를 지배하는 '마스터 건축사'의 길입니다.</p>
+<p>수작업 3일의 고통이 AI를 통해 3분으로 줄어들었습니다. 하지만 그 3분 만에 나온 결과물이 **수천 세대 규모의 정비사업 사업성을 좌우하는 핵심 기준**이 됩니다. <strong>AI가 주는 데이터를 100% 맹신하지 말고, 끊임없이 의심하고 집요하게 검증하는 것.</strong> 그것이 진양의 J-Hub를 지배하는 '마스터 건축사'의 길입니다.</p>
