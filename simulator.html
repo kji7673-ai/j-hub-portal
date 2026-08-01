@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Hub AI 시뮬레이터 (레드팀 프로토타입)</title>
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-focus: #0071e3;
+            --ink: #1d1d1f;
+            --ink-muted: #6e6e73;
+            --canvas: #ffffff;
+            --canvas-parchment: #f5f5f7;
+            --surface-black: #000000;
+            --surface-tile-1: #272729;
+            --hairline: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+            background-color: var(--canvas);
+            color: var(--ink);
+            line-height: 1.5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--surface-black);
+            background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(39,39,41,1) 100%);
+            color: #ffffff;
+            padding: 120px 24px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,59,48,0.15);
+            color: #ff3b30;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 24px;
+            font-weight: 300;
+            color: #a1a1a6;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Simulator Section */
+        .simulator-section {
+            background-color: var(--surface-tile-1);
+            padding: 0 24px 100px 24px;
+        }
+
+        .simulator-container {
+            max-width: 800px;
+            margin: -60px auto 0 auto;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+        }
+
+        .sim-header {
+            background: var(--canvas-parchment);
+            color: var(--ink);
+            padding: 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .sim-header h3 {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .sim-body {
+            padding: 40px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 17px;
+            border: 1px solid var(--hairline);
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
+        }
+
+        .input-group button {
+            padding: 0 32px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+
+        .input-group button:hover {
+            background-color: var(--primary-focus);
+        }
+
+        .sim-result {
+            display: none;
+            background: var(--canvas-parchment);
+            border-radius: 12px;
+            padding: 24px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .sim-result.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            color: var(--ink-muted);
+            font-size: 15px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,102,204,0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .typewriter {
+            font-family: 'SF Mono', Consolas, Monaco, monospace;
+            font-size: 14px;
+            color: var(--ink);
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .input-group { flex-direction: column; }
+            .input-group button { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <div class="hero-badge">J-Hub 시뮬레이터</div>
+            <h1 style="font-size: 48px;">AI로 예쁜 투시도만<br>그리고 계십니까?</h1>
+            <p>건축 설계의 본질은 CG가 아니라 '사유와 논리'입니다.<br>외주 개발자가 결코 대신할 수 없는 영역,<br>건축사(CEO)의 통찰력을 시스템으로 이식하는 첫 단추.</p>
+        </div>
+    </section>
+
+    <!-- Simulator Section (Interactive Experience) -->
+    <section class="simulator-section">
+        <div class="simulator-container">
+            <div class="sim-header">
+                <h3>💡 진양 AI 에이전트 실시간 시뮬레이션</h3>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-top: 8px;">마스터 아키텍트의 설계 로직이 주입된 AI의 차이를 체험해보세요.</p>
+            </div>
+            
+            <div class="sim-body">
+                <p style="font-size: 17px; margin-bottom: 20px; font-weight: 600;">검토하고 싶은 대지 위치(지번)를 입력하세요.</p>
+                <div class="input-group">
+                    <input type="text" id="addressInput" placeholder="예: 서울특별시 강남구 역삼동 123" value="서울특별시 강남구 역삼동 123 수익률 극대화 검토">
+                    <button onclick="runSimulation()" id="simBtn">AI 검토 시작</button>
+                </div>
+
+                <div class="loading" id="simLoading">
+                    <div class="spinner"></div> CEO의 설계 SOP를 기반으로 자치구 조례 및 수익성 분석 중...
+                </div>
+
+                <div class="sim-result" id="simResult">
+                    <div style="font-weight: 600; color: var(--primary); margin-bottom: 12px; font-size: 14px;">[분석 완료] 진양 AI 에이전트</div>
+                    <div class="typewriter" id="typewriterText"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section class="simulator-section" style="padding-top: 60px; background-color: var(--canvas-parchment);">
+        <div style="max-width: 1000px; margin: 0 auto; text-align: center; margin-bottom: 40px;">
+            <div class="hero-badge" style="background: var(--primary); color: white;">NEW</div>
+            <h2 style="font-size: 34px; font-weight: 600; margin-bottom: 16px;">마스터 아키텍트의 5대 시스템 로직</h2>
+            <p style="font-size: 17px; color: var(--ink-muted);">수만 건의 과거 프로젝트와 기술 대화에서 추출한 CEO의 통찰력이 시스템으로 어떻게 구현되는지 직접 체험하세요.</p>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+            
+            <!-- Card 1 -->
+            <div style="background: var(--canvas); border-radius: 18px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary);">에피소드 1</span>
+                    <span style="font-size: 10px; background: #ff3b30; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 600;">NEW 업데이트</span>
+                </div>
+                <h4 style="font-size: 21px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">왜 항상 용적률에서 15%의 오차가 날까?</h4>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 24px; min-height: 63px;">엑셀 수작업 시 발생하는 공급/전용면적 산출 오류와 휴먼 에러를 AI가 어떻게 교차 검증하는지 확인하세요.</p>
+                <button onclick="runMiniSim(1)" style="width: 100%; padding: 12px; background: var(--canvas-parchment); color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;">오류 감지 시뮬레이션</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="background: var(--canvas); border-radius: 18px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary);">에피소드 2</span>
+                    <span style="font-size: 10px; background: #ff3b30; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 600;">NEW 업데이트</span>
+                </div>
+                <h4 style="font-size: 21px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">내 머릿속의 8개 서랍장</h4>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 24px; min-height: 63px;">30년 차 아키텍트가 지번만 보고 8개 사업유형에 맞는 법규 필터를 즉각 씌우는 과정을 AI DB로 체험합니다.</p>
+                <button onclick="runMiniSim(2)" style="width: 100%; padding: 12px; background: var(--canvas-parchment); color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;">동적 매핑 시뮬레이션</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div style="background: var(--canvas); border-radius: 18px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary);">에피소드 3</span>
+                    <span style="font-size: 10px; background: #ff3b30; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 600;">NEW 업데이트</span>
+                </div>
+                <h4 style="font-size: 21px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">서울 논리가 부산에서 깨지는 이유</h4>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 24px; min-height: 63px;">지자체 조례 위임 사항에 따른 지역별 이격거리 특례를 AI가 지역 맥락에 맞춰 어떻게 해석하는지 확인하세요.</p>
+                <button onclick="runMiniSim(3)" style="width: 100%; padding: 12px; background: var(--canvas-parchment); color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;">조례 해석 시뮬레이션</button>
+            </div>
+
+            <!-- Card 4 -->
+            <div style="background: var(--canvas); border-radius: 18px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary);">에피소드 4</span>
+                    <span style="font-size: 10px; background: #ff3b30; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 600;">NEW 업데이트</span>
+                </div>
+                <h4 style="font-size: 21px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">법을 놓치는 순간 휴지조각이 된다</h4>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 24px; min-height: 63px;">도정법 개정(노후도 30년→40년) 시 중앙 플랫폼 단 한 곳의 수정으로 전 직원의 산출물이 동기화되는 위력.</p>
+                <button onclick="runMiniSim(4)" style="width: 100%; padding: 12px; background: var(--canvas-parchment); color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;">중앙 통제 시뮬레이션</button>
+            </div>
+
+            <!-- Card 5 -->
+            <div style="background: var(--canvas); border-radius: 18px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary);">에피소드 5</span>
+                    <span style="font-size: 10px; background: #ff3b30; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 600;">NEW 업데이트</span>
+                </div>
+                <h4 style="font-size: 21px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">설계는 그림이 아니라 의사결정 순서다</h4>
+                <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 24px; min-height: 63px;">2030 기본계획-심의-조례 순서로 이어지는 판단의 위계질서를 AI 프롬프트 지휘(Orchestrate)로 체험합니다.</p>
+                <button onclick="runMiniSim(5)" style="width: 100%; padding: 12px; background: var(--canvas-parchment); color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;">위계질서 시뮬레이션</button>
+            </div>
+
+        </div>
+
+        <!-- Mini Sim Result Modal -->
+        <div id="miniSimResult" style="display: none; max-width: 1000px; margin: 40px auto 40px auto; background: var(--surface-tile-1); border-radius: 18px; padding: 32px; color: white; text-align: left;">
+            <div style="font-weight: 600; color: #2997ff; margin-bottom: 12px; font-size: 14px;">[J-Hub 로직 분석 엔진]</div>
+            <div class="typewriter" id="miniTypewriterText" style="color: white;"></div>
+        </div>
+    </section>
+
+    <script>
+        const fakeResponse = `📍 대상지: 서울특별시 강남구 역삼동 123 (제3종일반주거지역)
+
+✅ 기초 법규 검토 요약:
+1. 건폐율: 최대 50% 이하 / 용적률: 최대 250% 이하 (조례 제54, 55조)
+
+🧠 [마스터 아키텍트 로직 분석] 진양 SOP 기반 수익률 극대화 전략:
+단순히 용적률을 꽉 채운 박스형 설계보다, 강남구의 최근 임대 동향을 고려할 때 
+'일조권 사선제한'을 역이용한 테라스(Terrace) 특화 설계가 유리합니다.
+과거 진양의 설계 데이터 45건을 분석한 결과, 역삼동 일대에서 이 방식을 적용 시 
+평당 분양가 및 임대수익률이 평균 15% 상승했습니다.
+
+💡 AI 제안: 
+현재 대지는 가로구역별 최고높이 제한구역에 속하므로, 이를 우회하면서 
+테라스 면적을 최대로 확보하는 매스(Mass) 가설계를 3가지 대안으로 생성할까요?
+
+⏱ 설계 사유 프로세스 도출 시간: 1.8초 (대표님의 30년 노하우 적용 완료)`;
+
+        function runSimulation() {
+            const input = document.getElementById('addressInput').value;
+            const btn = document.getElementById('simBtn');
+            if(!input.trim()) {
+                alert("지번을 입력해주세요.");
+                return;
+            }
+
+            // UI Reset
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            document.getElementById('simResult').classList.remove('active');
+            document.getElementById('typewriterText').innerHTML = '';
+            document.getElementById('simLoading').classList.add('active');
+
+            // Simulate Network Delay
+            setTimeout(() => {
+                document.getElementById('simLoading').classList.remove('active');
+                document.getElementById('simResult').classList.add('active');
+                typeWriterEffect(fakeResponse, 0, () => {
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                });
+            }, 1800);
+        }
+
+        function typeWriterEffect(text, index, callback) {
+            if (index < text.length) {
+                document.getElementById('typewriterText').innerHTML += text.charAt(index);
+                setTimeout(() => typeWriterEffect(text, index + 1, callback), 25); // Typing speed
+            } else if (callback) {
+                callback();
+            }
+        }
+
+        const simData = {
+            1: `🚨 [오류 감지: Module W 작동]\n입력된 전용면적과 공용면적의 합산 비율이 통상적인 '공급면적 계수'를 15% 이탈했습니다.\n→ 조치: 용적률 보정계수가 누락되었을 확률이 99%입니다. 재설계(Recalculate)를 강제합니다.\n💡 Insight: 인간은 피곤하면 엑셀 수식을 놓치지만, 시스템은 놓치지 않습니다.`,
+            2: `📂 [법규 필터링: Module H 작동]\n입력하신 지번은 '가로주택정비사업'에 해당합니다.\n→ 조치: 재개발/재건축용 120개 법규 체크리스트를 자동 숨김(display:none) 처리하고, 가로주택용 35개 필수 체크리스트만 화면에 출력합니다.\n💡 Insight: 30년 차 건축사의 머릿속 '8개 서랍장'이 AI로 구현된 순간입니다.`,
+            3: `🗺 [지역 맥락 스캐닝: 조례 위임 분석]\n분석 지역: 부산광역시\n→ 조치: 건축법 시행령 기본 규정 외에, 부산광역시 건축 조례 제00조 특례(채광방향 이격거리 0.5H 완화)를 인지하여 용적률 가산 시뮬레이션을 재실행합니다.\n💡 Insight: 지역 조례를 모르면 20%의 용적률을 허공에 날리게 됩니다.`,
+            4: `🔄 [중앙 통제 동기화: 노후도 기준 배포]\n법령 개정 감지: 도정법 시행령 (철근콘크리트 노후도 30년 → 40년)\n→ 조치: J-Hub 코어 엔진 업데이트 완료. 이 시간 이후 전국 모든 진양 소속 건축사가 생성하는 보고서는 즉각 '40년' 기준으로 산출됩니다.\n💡 Insight: 파편화된 수백 개의 엑셀 파일은 회사의 리스크입니다. 플랫폼이 필요한 이유입니다.`,
+            5: `🧠 [프롬프트 오케스트레이션: 판단의 위계질서]\nAI 지휘 프로토콜 가동:\n1. 2030 도시기본계획 우선 스캔 (용적률 뼈대 확립)\n2. 자치구 건축/경관 심의 기준 적용 (디자인 제약 확인)\n3. 지자체 조례 특례 반영 (최종 사업성 판단)\n→ 조치: 단순 챗봇이 아닌, 건축사의 의사결정 순서(Hierarchy)대로 논리가 전개됩니다.\n💡 Insight: 설계는 예쁜 그림을 그리는 것이 아니라, 올바른 순서로 의사결정을 내리는 것입니다.`
+        };
+
+        function runMiniSim(id) {
+            const resultBox = document.getElementById('miniSimResult');
+            const textBox = document.getElementById('miniTypewriterText');
+            
+            resultBox.style.display = 'block';
+            textBox.innerHTML = '<span class="spinner" style="width:16px; height:16px; border-width:2px; margin-right:8px;"></span> 로직 연산 중...';
+            
+            // Scroll to result box smoothly
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            setTimeout(() => {
+                textBox.innerHTML = '';
+                typeWriterEffectMini(simData[id], 0);
+            }, 800);
+        }
+
+        function typeWriterEffectMini(text, index) {
+            if (index < text.length) {
+                document.getElementById('miniTypewriterText').innerHTML += text.charAt(index);
+                setTimeout(() => typeWriterEffectMini(text, index + 1), 20); // Slightly faster typing
+            }
+        }
+    </script>
+</body>
+</html>

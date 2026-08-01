@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
@@ -11,26 +12,52 @@
     <style>
     :root {
         --primary: #0066cc;
+        --primary-focus: #0071e3;
+        --primary-on-dark: #2997ff;
         --ink: #1d1d1f;
+        --body: #1d1d1f;
+        --body-on-dark: #ffffff;
+        --body-muted: #cccccc;
         --ink-muted: #6e6e73;
         --ink-muted-80: #333333;
+        --ink-muted-48: #7a7a7a;
+        --divider-soft: #f0f0f0;
+        --hairline: #e0e0e0;
         --canvas: #ffffff;
         --canvas-parchment: #f5f5f7;
-        --surface-black: #000000;
         --surface-pearl: #fafafc;
-        --hairline: #e0e0e0;
+        --surface-tile-1: #272729;
+        --surface-tile-2: #2a2a2c;
+        --surface-tile-3: #252527;
+        --surface-black: #000000;
+        --surface-chip-translucent: #d2d2d7;
+        --on-primary: #ffffff;
+        --on-dark: #ffffff;
     }
     
     [data-theme="dark"] {
         --primary: #2997ff;
+        --primary-focus: #4aa4ff;
+        --primary-on-dark: #2997ff;
         --ink: #ffffff;
+        --body: #ffffff;
+        --body-on-dark: #ffffff;
+        --body-muted: #a1a1a6;
         --ink-muted: #a1a1a6;
         --ink-muted-80: #cccccc;
+        --ink-muted-48: #555555;
+        --divider-soft: #38383a;
+        --hairline: #38383a;
         --canvas: #000000;
         --canvas-parchment: #1c1c1e;
-        --surface-black: #1d1d1f;
         --surface-pearl: #2c2c2e;
-        --hairline: #38383a;
+        --surface-tile-1: #1c1c1e;
+        --surface-tile-2: #2c2c2e;
+        --surface-tile-3: #38383a;
+        --surface-black: #1d1d1f;
+        --surface-chip-translucent: #38383a;
+        --on-primary: #ffffff;
+        --on-dark: #ffffff;
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -499,7 +526,7 @@
     
         <div class="toc-category">📘 실전 가이드</div>
         
-        <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 수백억을 날릴 뻔한 사건</a></div>
+        <div class="toc-item"><a href="page_1.html" >01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="toc-item"><a href="page_2.html" class="active">01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
@@ -513,40 +540,42 @@
         
         <div class="toc-item"><a href="page_7.html" >04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_8.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="toc-item"><a href="page_8.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        
+        <div class="toc-item"><a href="page_9.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
     
         <div class="toc-category">🛡️ 보안 및 데이터 거버넌스</div>
         
-        <div class="toc-item"><a href="page_9.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="toc-item"><a href="page_10.html" >일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="toc-item"><a href="page_11.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="toc-item"><a href="page_12.html" >통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
-        <div class="toc-item"><a href="page_16.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="toc-item"><a href="page_17.html" >레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-        <div class="toc-item"><a href="page_17.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
+        <div class="toc-item"><a href="page_18.html" >레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
     
         <div class="toc-category">🏗️ 플랫폼 개발 (개발자/DX)</div>
         
-        <div class="toc-item"><a href="page_10.html" >서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="toc-item"><a href="page_11.html" >서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         
-        <div class="toc-item"><a href="page_13.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
+        <div class="toc-item"><a href="page_14.html" >SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
-        <div class="toc-item"><a href="page_14.html" >SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
+        <div class="toc-item"><a href="page_15.html" >SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
         
-        <div class="toc-item"><a href="page_15.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
+        <div class="toc-item"><a href="page_16.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="toc-item"><a href="page_20.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_21.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
     
         <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
         
-        <div class="toc-item"><a href="page_12.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        <div class="toc-item"><a href="page_13.html" >1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div class="toc-item"><a href="page_18.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_19.html" >📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
         
-        <div class="toc-item"><a href="page_19.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="toc-item"><a href="page_20.html" >📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
         
     
     </div> <!-- end desktop-sidebar -->
@@ -563,7 +592,7 @@
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">📘 실전 가이드</div>
         
-        <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 수백억을 날릴 뻔한 사건</a></div>
+        <div class="mobile-toc-item"><a href="page_1.html">01-1 프롤로그: 통찰력을 시스템화하다</a></div>
         
         <div class="mobile-toc-item"><a href="page_2.html">01-2 외계어 해독: CEO를 위한 새로운 도구</a></div>
         
@@ -577,40 +606,42 @@
         
         <div class="mobile-toc-item"><a href="page_7.html">04 AI 환각 방지 및 교차 검증 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_8.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_8.html">01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
+        
+        <div class="mobile-toc-item"><a href="page_9.html">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🛡️ 보안 및 데이터 거버넌스</div>
         
-        <div class="mobile-toc-item"><a href="page_9.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
+        <div class="mobile-toc-item"><a href="page_10.html">일반 서버 vs 클라우드 서버: 진양저널이 클라우드를 선택한 이유</a></div>
         
-        <div class="mobile-toc-item"><a href="page_11.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
+        <div class="mobile-toc-item"><a href="page_12.html">통합문서관리 플랫폼 기술 및 교육 가이드: RAG와 클라우드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_16.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
+        <div class="mobile-toc-item"><a href="page_17.html">레드팀 데일리 인사이트 (2026-07-19)</a></div>
         
-        <div class="mobile-toc-item"><a href="page_17.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
+        <div class="mobile-toc-item"><a href="page_18.html">레드팀 데일리 인사이트 (2026-07-18)</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🏗️ 플랫폼 개발 (개발자/DX)</div>
         
-        <div class="mobile-toc-item"><a href="page_10.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
+        <div class="mobile-toc-item"><a href="page_11.html">서울시 빅데이터 연동: 도시·정비업체가 탐내는 궁극의 자동 추출 도구</a></div>
         
-        <div class="mobile-toc-item"><a href="page_13.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
+        <div class="mobile-toc-item"><a href="page_14.html">SOP 04: DocReviewPlatform 개발 교육 매뉴얼 — 건축 문서 통합 관리 플랫폼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_14.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
+        <div class="mobile-toc-item"><a href="page_15.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></div>
         
-        <div class="mobile-toc-item"><a href="page_15.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
+        <div class="mobile-toc-item"><a href="page_16.html">SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="mobile-toc-item"><a href="page_20.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="mobile-toc-item"><a href="page_21.html">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
         
         <div style="font-size: 14px; font-weight: 600; color: #7a7a7a; margin: 30px 0 10px;">🌱 AI 입문 (경영자/의사결정자)</div>
         
-        <div class="mobile-toc-item"><a href="page_12.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
+        <div class="mobile-toc-item"><a href="page_13.html">1-4. 진양 AI 철학: 아키-시냅스와 플랫폼, 그리고 레드팀 실전 사례</a></div>
         
-        <div class="mobile-toc-item"><a href="page_18.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_19.html">📙 AI를 직원처럼 부리는 CEO의 매니지먼트 룰 (전자책 뷰어)</a></div>
         
-        <div class="mobile-toc-item"><a href="page_19.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
+        <div class="mobile-toc-item"><a href="page_20.html">📙 AI는 요술지팡이 맞지만, 또 아니다 (전자책 뷰어)</a></div>
         
         
     </div>
