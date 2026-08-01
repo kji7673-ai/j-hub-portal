@@ -240,7 +240,7 @@
         </div>
 
         <div class="diagram-container">
-            <svg width="400" height="350" viewBox="0 0 400 350" style="margin: 0 auto; display: block; overflow: visible;">
+            <svg width="400" height="350" viewBox="0 0 400 350" style="margin: 0 auto; display: block; overflow: visible; max-width: 100%; height: auto;">
                 <!-- Base grid -->
                 <path d="M 20 300 L 380 300" stroke="var(--hairline)" stroke-width="2"/>
                 <text x="30" y="320" fill="var(--ink-muted)" font-size="12" font-family="SF Pro Text">인접 대지 경계선</text>
@@ -253,7 +253,7 @@
                 
                 <!-- The setback line -->
                 <path id="setbackLine" d="M 350 200 L 150 0" stroke="#ff3b30" stroke-width="3" stroke-dasharray="400" stroke-dashoffset="400" fill="none" style="transition: stroke-dashoffset 1s ease-out;" />
-                <text id="setbackText" x="300" y="80" fill="#ff3b30" font-size="14" font-weight="bold" font-family="SF Pro Text" style="opacity: 0; transition: opacity 0.5s;">사선 제한선 (1:2)</text>
+                <text id="setbackText" x="300" y="80" fill="#ff3b30" font-size="14" font-weight="bold" font-family="SF Pro Text" style="opacity: 0; transition: opacity 1.0s ease-in-out;">사선 제한선 (1:2)</text>
             </svg>
 
             <button onclick="runLivingDiagram()" style="margin-top: 30px; padding: 14px 32px; background: var(--surface-tile-1); color: white; border: none; border-radius: 12px; font-size: 17px; font-weight: 600; cursor: pointer; transition: background 0.2s;">일조권 검토 AI 로직 가동</button>
