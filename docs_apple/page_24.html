@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
-    <title>05 진양저널 주간보고 및 밴드연동 가이드</title>
+    <title>SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</title>
     <style>
     :root {
         --primary: #0066cc;
@@ -542,7 +542,7 @@
         
         <div class="toc-item"><a href="page_8.html" >01-5 CEO가 직접 AI를 통제해야 하는 3가지 이유</a></div>
         
-        <div class="toc-item"><a href="page_9.html" class="active">05 진양저널 주간보고 및 밴드연동 가이드</a></div>
+        <div class="toc-item"><a href="page_9.html" >05 진양저널 주간보고 및 밴드연동 가이드</a></div>
         
         <div class="toc-item"><a href="page_10.html" >01-6 끝나지 않는 수정의 늪: AI 자동 검증(Auto-Healer) 시스템의 명암</a></div>
         
@@ -572,7 +572,7 @@
         
         <div class="toc-item"><a href="page_19.html" >SOP 06: 정비사업 통합검토보고서 플랫폼 — 구축 교육 가이드</a></div>
         
-        <div class="toc-item"><a href="page_24.html" >SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
+        <div class="toc-item"><a href="page_24.html" class="active">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</a></div>
         
     
         <div class="toc-category">🌱 AI 입문 (경영자/의사결정자)</div>
@@ -678,17 +678,17 @@
     <div style="margin-bottom: 24px;">
         <div class="breadcrumb">
             <a href="index.html">홈</a> <span style="margin: 0 8px;">/</span> 
-            <span>05 진양저널 주간보고 및 밴드연동 가이드</span>
+            <span>SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</span>
         </div>
         <div class="doc-meta-header" style="margin-top: 12px;">
-            <span class="level-tag level-1" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🌱 Lv.1 입문</span>
-            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;">2026-07-25</span>
-            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 37</span>
+            <span class="level-tag level-2" style="padding: 4px 12px; font-size: 12px; border-radius: 999px;">🔧 Lv.2 실무</span>
+            <span class="doc-date" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px;"></span>
+            <span class="doc-id-badge" style="font-size: 13px; color: var(--ink-muted); margin-left: 12px; border: 1px solid var(--hairline); padding: 2px 8px; border-radius: 4px;">ID: 33</span>
         </div>
     </div>
     
     <!-- Title -->
-    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">05 진양저널 주간보고 및 밴드연동 가이드</h1>
+    <h1 class="display-lg" style="margin-bottom: 32px; color: var(--ink);">SOP 03: 레드팀 v9 감사 피드백 기반 모바일 UX/UI 고도화 실무</h1>
     
     <!-- Summary / Hook -->
     <div style="margin-bottom: 60px; padding: 40px; background: var(--surface-pearl); border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
@@ -697,134 +697,140 @@
             핵심 요약 (Key Takeaway)
         </div>
         <div class="lead-airy" style="color: var(--ink);">
-            05 진양저널 주간보고 및 밴드연동 가이드 통합 매뉴얼입니다.
+            레드팀 v9 감사 피드백을 반영한 모바일 UX/UI 고도화 SOP
         </div>
     </div>
 
     <!-- Gated Markdown Content -->
-    <div class="gated-content unlocked" style="position: relative; max-height: none !important;">
+    <div class="gated-content " style="position: relative; ">
         <div class="markdown-body md-content" style="font-size: 17px; line-height: 1.6; letter-spacing: -0.374px;">
-            <h3>진양 저널(Jinyang Journal) 개요</h3>
-
-<figure style="text-align: center; margin: 40px 0;">
-  <img src="static/images/illustrations/weekly_report_satellite.png" alt="자동으로 주간 보고서가 전송되는 레이다 위성" style="max-width: 100%; border-radius: 12px; box-shadow: rgba(0,0,0,0.1) 0 4px 24px;">
-  <figcaption style="font-size: 13px; color: #7a7a7a; margin-top: 12px;">[삽도 1] 밴드의 기록을 스캔하여 데이터 위성을 통해 자동으로 리포트를 송출합니다.</figcaption>
-</figure>
-
-<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>진양 저널은 단순한 업무 지시나 건조한 회의록 공유를 넘어, 직원들이 매일 즐겁게 방문하고 소통할 수 있도록 기획된 사내 디지털 매거진입니다. 매일 자동으로 업데이트되는 법규 동향과 함께, 직원들의 피로를 덜어주기 위한 <strong>'게이미피케이션(Gamification)'</strong> 요소가 결합되어 있습니다.</div>
-
-<div class="grid-2" style="margin-bottom: 30px;">
-    <div><img src="static/images/journal_01.png" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--hairline); box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></div>
-    <div><img src="static/images/journal_02.png" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--hairline); box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></div>
+            <div style="padding: 24px; background: var(--canvas-parchment); border-left: 4px solid var(--primary); margin-bottom: 32px; border-radius: 0 12px 12px 0;">
+    <h2 style="margin-top: 0; color: var(--ink); font-size: 20px;">💡 교육 개요 (도입 배경)</h2>
+    <p style="font-size: 15px; color: var(--ink-muted-80); margin-bottom: 0;">
+        본 매뉴얼은 <strong>[프로젝트 J-Platform]</strong>(사내 통합 매뉴얼) 오픈 직후 실시된 <strong>레드팀(Red Team) V9 보안/UX 감사</strong>에서 지적된 
+        '검색 기능 부재' 및 '모바일 가독성 저하' 문제를 어떻게 기술적으로 해결하고 시스템에 이식했는지 그 실무 조치 과정을 교육하기 위해 작성되었습니다.
+    </p>
 </div>
 
-<h4>1. 주요 수록 내용 (Daily/Weekly Data)</h4>
+<h3>1. 사전 준비 및 환경 구성</h3>
+<div class="alert alert-info" style="margin-top:20px;"><strong>⏱️ 핵심 30초 요약</strong><br>
+이 작업을 수행하기 위해서는 프론트엔드 정적 파일 구조에 대한 이해가 필요합니다. 별도의 백엔드(Node.js, Python 등) 없이 오직 브라우저와 정적 호스팅(GitHub Pages)만으로 동작하는 구조를 준비해야 합니다.
+</div>
+<pre><code class="language-bash"># 작업 전 디렉토리 계층 구조 확인
+/J-Platform
+├── docs/                 # 최종 빌드된 정적 HTML이 모이는 곳
+│   ├── search_index.js   # ⬅️ (신규) 전체 텍스트 검색용 인메모리 DB
+│   └── sw.js             # ⬅️ (신규) PWA 서비스워커
+├── static/
+│   ├── css/style.css     # ⬅️ (수정) 마이크로 타이포그래피 적용
+│   └── manifest.json     # ⬅️ (신규) PWA 앱 설치 매니페스트
+└── generate_static.py    # 빌드 파이썬 스크립트</code></pre>
+
+<h3>2. 핵심 문제 상황 및 해결 흐름도 (Flowchart)</h3>
+<p>
+레드팀 감사에서 가장 치명적으로 지적받은 것은 <strong>"수백 개의 문서를 스크롤만으로 찾아야 하는 비효율성"</strong>이었습니다. 이를 해결하기 위해 백엔드 서버 없이 동작하는 <strong>초고속 인메모리 검색(In-Memory Search)</strong> 엔진을 설계했습니다.
+</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant B as 브라우저 (사용자)
+    participant S as search_index.js (메모리)
+    participant U as UI (모달)
+
+    B->>S: 1. 페이지 접속 시 인덱스 스크립트 비동기 로드
+    B->>U: 2. 돋보기 아이콘 클릭 -> 검색 모달 오픈
+    B->>U: 3. 키워드 타이핑 ("건축법")
+    U->>S: 4. 배열 filter() 및 indexOf() 실시간 매칭
+    S-->>U: 5. 일치하는 문서 제목 + 본문 하이라이팅 반환
+    U-->>B: 6. 0.1초 내 결과 출력 및 클릭 시 즉시 이동
+</code></pre>
+
+<h3>3. [블라인드] 주요 조치 사항 상세</h3>
+
+<h4>A. 초고속 전역 검색(Search) 기능 탑재</h4>
+<p>
+정적 웹사이트의 한계를 극복하기 위해, 파이썬 빌드 시점에 모든 문서의 텍스트를 하나의 자바스크립트 배열(`search_index.js`)로 압축하여 생성했습니다. 
+</p>
+<div style="text-align: center; margin: 32px 0;">
+    <img src="static/images/journal_01.png" alt="검색 모달 UI 모의 삽도" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+    <p style="font-size: 13px; color: var(--ink-muted-80); margin-top: 12px;">▲ <em>[모의 삽도] 검색어 입력 시 즉각적으로 결과가 팝업되는 UI</em></p>
+</div>
+
+<h4>B. 마이크로 타이포그래피 (모바일 가독성)</h4>
+<p>
+기존 위키(Wiki) 스타일의 빽빽한 글씨를, 매거진(진양저널) 수준의 편안한 레이아웃으로 변경했습니다.
+</p>
 <ul>
-    <li><strong>주간 회의록:</strong> 회사의 주요 의사결정 사항과 부서별 진행 현황을 투명하게 공유합니다.</li>
-    <li><strong>인접지 법규 및 사업 동향:</strong> 현재 진행 중인 프로젝트 주변의 최신 법규 변화와 시장 동향을 매일 업데이트합니다.</li>
-    <li><strong>'정보몽땅' 스크랩:</strong> 서울시 정비사업 정보몽땅의 주요 공지사항과 기록들을 자동 연동하여 제공합니다.</li>
-    <li><strong>주간 주요 일정:</strong> 회사 차원의 주요 미팅, 심의 일정 등을 캘린더 형태로 공유합니다.</li>
+    <li><code>word-break: keep-all;</code>: 모바일 화면 가장자리에서 한국어 단어가 의미 단위로 끊어지도록 강제 (예: '건축사'가 '건축<br>사'로 잘리지 않음)</li>
+    <li><code>line-height: 1.65;</code>: 모바일 환경에서 스크롤 시 줄 간격 여백을 넓혀 눈의 피로도 감소</li>
+    <li><code>box-shadow</code> 및 테두리 제거: 모바일에서는 카드 형태 대신 좌우를 꽉 채우는 Edge-to-Edge 풀스크린 레이아웃 채택</li>
 </ul>
 
-<h4>2. 소통과 휴식을 위한 게이미피케이션 (Gamification)</h4>
-<p>저널에는 총 99개의 엄선된 <strong>건축 관련 칼럼</strong>이 타일 형태로 배치되어 있습니다. 이는 직원들이 업무 중 잠시 머리를 식히고 지식을 충전할 수 있도록 마련된 공간입니다.</p>
-<div style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-top: 24px;">
-  <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 21px; color: var(--primary); margin-bottom: 12px;">💣 깜짝 이벤트 기능: 유쾌한 피로 해소제</h4>
-  <p style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.47; color: var(--ink-muted-80); margin-bottom: 0;">
-    99개의 칼럼 타일 어딘가에는 '행운의 폭탄'이 숨겨져 있습니다. 특정 칼럼을 우연히 클릭하는 순간, 화면 가득 화려한 축포 효과와 함께 <strong>"오늘 하루도 수고하셨습니다!"</strong>라는 따뜻한 격려 팝업이 떠오릅니다. 더불어 100개의 칼럼을 모두 독파한 열정적인 직원에게는 <strong>"정말 고생 많으셨습니다!"</strong>라는 특별한 축하 메시지가 주어져, 지루한 일상에 작은 성취감과 미소를 선물합니다.
-  </p>
-</div>
+<h4>C. PWA (앱 설치 기능) 도입</h4>
+<p>
+모바일 기기 바탕화면에 네이티브 앱처럼 아이콘을 추가할 수 있도록 매니페스트와 서비스 워커를 적용했습니다. 특히 애플리케이션 하단에 직관적인 <strong>'홈 화면에 추가하기' 토스트(Toast) 팝업 및 영구 안내판</strong>을 삽입하여 사용자 경험을 극대화했습니다.
+</p>
 
-<hr style="margin: 40px 0; border: 0; border-top: 1px solid var(--hairline);">
-
-<h3>비판적 의견 및 대안 제언 (Critical Review & Suggestions)</h3>
-
-<div class="row" style="margin-top: 32px; gap: 24px;">
-  <div class="col-md-12" style="background-color: var(--surface-tile-1); color: var(--on-dark); padding: 32px; border-radius: 18px; margin-bottom: 24px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 24px; color: #fff; margin-bottom: 16px;">🤔 [레드팀 비판] 정보의 혼재와 동기부여의 역설</h4>
-    <ul style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.6; color: var(--body-muted);">
-        <li><strong>무거운 정보와 가벼운 정보의 충돌:</strong> 엄숙한 '법규 동향/정비 몽땅 기록(Heavy Data)'과 가벼운 '폭탄 터지기 게임/칼럼(Casual Data)'이 한 화면에 엉켜 있으면 사용자는 길을 잃습니다. 업무 집중과 휴식의 경계가 무너지면 결국 어느 쪽도 제대로 전달되지 않습니다.</li>
-        <li><strong>'폭탄' UI의 심리적 오해:</strong> '폭탄이 터진다'는 연출은 기획자의 의도와 달리, 보수적인 업무 플랫폼에서는 '치명적인 시스템 에러'나 '경고'로 오인되어 직원들에게 불필요한 스트레스를 유발할 수 있습니다.</li>
-        <li><strong>데일리 업데이트의 독(Notification Fatigue):</strong> 법규 동향이 매일 바뀌는 것은 중요하지만, 회의록이나 주간 일정까지 매일 알람을 울려대면 직원들은 결국 알람을 꺼버립니다. 정보의 홍수는 곧 정보의 단절을 의미합니다.</li>
+<div style="background: var(--surface-pearl); padding: 20px; border-radius: 8px; margin: 24px 0;">
+    <h4 style="margin-top: 0; color: var(--primary);">📚 필수 용어 해설</h4>
+    <ul style="font-size: 14px; margin-bottom: 0;">
+        <li style="margin-bottom: 8px;"><strong>PWA (Progressive Web App)</strong>: 일반 웹사이트를 마치 스마트폰 앱(App)처럼 설치하고, 오프라인에서도 작동하게 만들 수 있는 웹 기술의 표준 명칭.</li>
+        <li style="margin-bottom: 8px;"><strong>Vanilla JS (바닐라 자바스크립트)</strong>: React, Vue 같은 무거운 프레임워크를 전혀 쓰지 않고 브라우저에 내장된 순수 자바스크립트만을 사용하는 것. 매우 가볍고 빠름.</li>
+        <li><strong>In-Memory Indexing (인메모리 인덱싱)</strong>: 데이터베이스(서버)를 조회하는 대신, 브라우저의 램(RAM) 메모리에 검색할 데이터를 미리 다 올려두고 찾는 방식. 데이터가 적을 때 극단적으로 빠른 속도를 자랑함.</li>
     </ul>
-  </div>
-
-  <div class="col-md-12" style="background-color: var(--canvas-parchment); color: var(--ink); padding: 32px; border-radius: 18px; border: 1px solid var(--hairline); margin-bottom: 40px;">
-    <h4 style="font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 21px; color: var(--primary); margin-bottom: 16px;">💡 [솔루션] UX 고도화 제언</h4>
-    <ol style="font-family: 'SF Pro Text', sans-serif; font-size: 17px; line-height: 1.6; color: var(--ink-muted-80);">
-        <li><strong>[섹션의 완전한 분리] 대시보드 vs 라운지:</strong> 무겁고 날카로운 업무 데이터(법규, 동향)는 <code>[진양 인텔리전스]</code>라는 독립된 대시보드로 격리하십시오. 주간 회의록과 칼럼, 격려 메시지는 <code>[진양 라운지]</code>라는 소통 전용 탭으로 분리하여 사용자가 스스로 모드를 전환하게 만들어야 합니다.</li>
-        <li><strong>[게이미피케이션의 우아한 진화]:</strong> 심장을 철렁이게 하는 폭탄 대신, 칼럼 클릭 시 <strong>"☕ 잠시 쉬어가세요! 오늘 하루도 수고하셨습니다."</strong>라는 부드럽고 따뜻한 커피 팝업을 띄우십시오. 100개 완독 시에는 사내 <strong>'건축 지식 마스터' 배지(디지털 훈장)</strong>를 프로필에 영구 부여하여 명예로운 동기부여를 제공하는 것이 압도적으로 효과적입니다.</li>
-        <li><strong>[정보의 리듬, 업데이트 주기 차등화]:</strong> 법규와 사업 동향은 <strong>매일(Daily)</strong> 침묵 속에 누적하되, 주간 회의록과 일정은 <strong>매주 월요일(Weekly) 아침 9시</strong>에만 발행하십시오. "월요일 아침 출근길, 커피 한 잔과 함께 읽는 진양 저널"이라는 우아한 리듬(Routine)을 선물해야 합니다.</li>
-    </ol>
-  </div>
 </div>
 
-<hr />
-<div class="page tile-light">
-    <div class="content-wrap">
-        <h2 class="display-lg hairline-bottom">네이버 밴드 ↔ 진양저널 연동 정석 가이드</h2>
+<h3>4. AI 프롬프트 실전 예시</h3>
+<p>에이전트에게 이러한 복잡한 UX 개선을 지시할 때는, 단순히 "예쁘게 해주세요"가 아니라 <strong>디자인 레퍼런스와 기술적 구현 방식을 명확히 짚어주어야</strong> 합니다.</p>
+<pre><code class="language-markdown">"현재 정적 사이트에 전체 검색 기능이 없어 불편합니다. 백엔드 없이 브라우저 단에서 동작하는 Vanilla JS 기반의 검색 모달을 만들어주세요. 파이썬 빌드 스크립트를 수정해 전체 문서 텍스트를 담은 search_index.js를 자동 생성하도록 하고, 검색어 입력 시 노란색 하이라이팅이 적용되게 해주세요."
 
-        <p class="body-text">이 문서는 네이버 밴드에 기록된 <strong>'주간 회의록 및 일정표'</strong>를 진양저널 시스템으로 안전하고 정확하게 수집(Pull)하는 <strong>최적의 실무 파이프라인과 규칙(SOP)</strong>을 안내합니다.</p>
+"모바일 가독성을 진양저널 수준으로 끌어올리려 합니다. CSS 미디어 쿼리를 사용해 모바일 화면(max-width: 900px)에서만 word-break: keep-all 과 line-height: 1.65 를 적용하고, 본문 카드의 좌우 여백을 없애 풀스크린처럼 보이게 해주세요."</code></pre>
 
-        <h3 class="display-md" style="margin-top: 40px;">1. 왜 이 방식이 '정석'인가? (CEO 인사이트 반영)</h3>
-        <p class="body-text">초기에는 "현장 사진만 밴드에 올리면 AI가 알아서 회의록을 써주는" 완전 자동화를 고려했으나, 이는 <strong>AI의 환각(거짓 정보 생성) 리스크</strong>와 <strong>보안 유출 위험</strong>이 컸습니다. 따라서 <strong>'밴드에 먼저 명확한 텍스트를 작성하고, 이를 수집하는 방식'</strong>으로 선회했습니다.</p>
+<p style="margin-top: 40px; text-align: center; font-weight: 600; color: var(--primary);">
+    이 교육 자료를 통해, 타 부서에서도 피드백을 어떻게 시스템 기능으로 전환하는지 그 프로세스를 숙지하시기 바랍니다.
+</p>
 
-        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
-            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
-                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">환각(Hallucination) 제로화</div>
-                <p class="caption">사진의 불완전한 맥락을 AI가 상상해서 채우지 않도록, 직원이 직접 작성한 '확정된 텍스트'만 가져오므로 오류가 0%에 수렴합니다.</p>
-            </div>
-            <div class="card" style="padding: 20px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); background: var(--canvas-parchment);">
-                <div class="body-strong" style="color: var(--primary); margin-bottom: 8px;">단일 진실 공급원 (SSOT)</div>
-                <p class="caption">소통의 중심인 '네이버 밴드'가 기준 데이터가 되고, 진양저널은 이를 영구 보관(Archive)하는 역할로 명확히 분리됩니다.</p>
-            </div>
-        </div>
-
-        <h3 class="display-md" style="margin-top: 50px;">2. 실무 적용을 위한 밴드 작성 규칙 (SOP)</h3>
-        <p class="body-text">프로그램을 복잡하게 만드는 대신, <strong>직원들이 밴드에 글을 올리는 가벼운 약속</strong>을 통해 자동화를 완성합니다.</p>
-
-        <div style="background: var(--surface-tile-1); color: var(--on-dark); padding: 24px; border-radius: var(--rounded-lg); margin: 20px 0;">
-            <p class="body-strong" style="margin-bottom: 12px; color: var(--primary-on-dark);">📌 밴드 주간보고 작성 템플릿</p>
-            <pre style="background: transparent; color: var(--on-dark); font-family: 'SF Pro Text', monospace; font-size: 14px; margin: 0; line-height: 1.6;">#진양저널_주간보고
-
-[일정표]
-- 7/20(월): A구역 건축심의 준비
-- 7/22(수): B구역 조합 회의
-
-[회의록]
-- 지하주차장 모듈 8.4m 적용 확정
-- 데크 레벨 산정 재검토 필요
-(여기에 필요한 현장 사진 첨부)</pre>
-        </div>
-
-        <h3 class="display-md" style="margin-top: 40px;">3. 진양저널 API 수집 파이프라인 (Python 로직)</h3>
-        <p class="body-text">위 규칙을 바탕으로 진양저널 서버는 <strong>매주 월요일</strong>에 다음과 같은 로직을 수행합니다.</p>
-
-        <ul style="margin: 0; padding-left: 20px; font-family: 'SF Pro Text', sans-serif; line-height: 1.6;">
-            <li><strong>STEP 1. 필터링 호출:</strong> 밴드 API를 통해 글을 읽어올 때, 본문에 <code>#진양저널_주간보고</code> 태그가 있는 게시글만 수집합니다. (노이즈 완벽 제거)</li>
-            <li><strong>STEP 2. 파싱(Parsing):</strong> 가져온 글 본문에서 <code>[일정표]</code>와 <code>[회의록]</code> 키워드를 기준으로 텍스트를 분리합니다.</li>
-            <li><strong>STEP 3. 외부 AI 통과 X:</strong> 텍스트가 이미 사람이 정제한 완벽한 상태이므로, 구글이나 OpenAI 서버에 데이터를 보낼 필요 없이 즉시 J 저널 마크다운으로 변환합니다. (보안성 최고 등급)</li>
-            <li><strong>STEP 4. 자동 저장:</strong> 진양저널의 특정 폴더(예: 주간회의록)에 새 마크다운 파일로 영구 저장합니다.</li>
-        </ul>
-
-    </div>
+<div style="margin-top: 50px; padding: 24px; background: var(--surface-pearl); border-radius: 12px; border-left: 4px solid var(--primary);">
+    <!-- NEXT_READ_SECTION -->
+    <h4 style="margin-top: 0; color: var(--primary); font-size: 16px; font-weight: 700;">🧭 다음 읽을 문서</h4>
+    <ul style="margin-bottom: 0; padding-left: 20px; font-size: 14px;">
+        <li><a href="page_19.html">레드팀(Red Team)의 역할과 실전 사례: 비판이 시스템을 완성한다</a></li><li><a href="page_25.html">SOP: J-Hub 사내 포털 기획·구축·운영 통합 실전 매뉴얼</a></li>
+    </ul>
 </div>
-
-<hr />
         </div>
         
         <!-- Premium Lead Magnet / Paywall Gate -->
+        
+        <div class="lead-magnet-overlay">
+            <div class="lead-magnet-box">
+                <div style="margin-bottom: 24px; color: var(--primary); display: flex; justify-content: center;">
+                    <div style="width: 56px; height: 56px; background: rgba(0, 102, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                </div>
+                <h3>사내 기밀 실무 데이터 잠금</h3>
+                <p>프롬프트 엔지니어링 사례 및 실제 적용 가이드는 진양엔지니어링 임직원에게만 제공됩니다.</p>
+                
+                <div style="margin-bottom: 16px;">
+                    <input type="email" id="lmEmail" class="lm-input" placeholder="사내 이메일 주소 (@jinyang.com)">
+                    <input type="text" id="lmCompany" class="lm-input" placeholder="소속 부서">
+                </div>
+                
+                <button onclick="unlockContent()" class="lm-btn">권한 요청 및 열람하기</button>
+                <div style="margin-top: 20px;">
+                    <button onclick="masterLogin()" style="background: none; border: none; font-size: 13px; font-weight: 600; color: var(--ink-muted); text-decoration: underline; cursor: pointer;">마스터 계정 인증</button>
+                </div>
+            </div>
+        </div>
         
     </div>
     
     <!-- Footer Navigation -->
     <div style="margin-top: 80px; display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid var(--hairline);">
         
-        <a href="page_8.html" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--canvas-parchment); border-radius: 999px;">← 이전 문서</a>
+        <a href="page_23.html" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--canvas-parchment); border-radius: 999px;">← 이전 문서</a>
         
         
         
-        <a href="page_10.html" class="action-btn" style="text-decoration:none; padding: 12px 24px; background: var(--primary); color: white; border-radius: 999px;">다음 문서 →</a>
+        <div></div>
         
     </div>
 
@@ -832,8 +838,8 @@
     <div style="margin-top: 60px; padding: 40px; background: var(--canvas); border-radius: 24px; border: 1px solid var(--hairline); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
         <h3 class="tagline" style="margin-bottom: 24px; color: var(--ink);">이 문서가 실무에 도움이 되었나요?</h3>
         <div style="display:flex; justify-content:center; gap:16px;">
-            <button onclick="submitFeedback(true, 37)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
-            <button onclick="submitFeedback(false, 37)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
+            <button onclick="submitFeedback(true, 33)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👍 실무에 도움됨</button>
+            <button onclick="submitFeedback(false, 33)" style="padding:14px 28px; border-radius:999px; border:1px solid var(--hairline); background:var(--canvas-parchment); color:var(--ink); cursor:pointer; font-size:15px; font-weight:600; transition:all 0.2s;">👎 개선이 필요함</button>
         </div>
         <p id="feedbackThanks" style="display:none; color:var(--primary); font-size:15px; font-weight:600; margin-top:24px;">소중한 피드백이 전송되었습니다. 시스템 개선에 반영하겠습니다!</p>
     </div>
