@@ -153,6 +153,7 @@ def build(output_dir, include_internal=False):
         "ceo": {"title": "트랙 1. CEO & 임원진 (비전과 통제)", "icon": "🌱", "desc": "AI 시대의 건축 비전, 7대 전략, Archi-Synapse 철학, 레드팀 방법론", "badge_class": "track-badge-a", "color": "#2e7d32"},
         "sop": {"title": "트랙 2. 설계 실무진 (SOP와 활용)", "icon": "🔧", "desc": "프롬프트 실습, 환각 방지, K-배치 알고리즘, 실전 SOP", "badge_class": "track-badge-b", "color": "#1565c0"},
         "system": {"title": "트랙 3. 시스템 & IT (구축과 연동)", "icon": "🏗️", "desc": "UX/UI 고도화, 포털 구축, DocReview, 빅데이터 연동", "badge_class": "track-badge-d", "color": "#6a1b9a"},
+        "arch": {"title": "트랙 4. 건축 실무 가이드 (자료실)", "icon": "🏛️", "desc": "공동주택 법정 인증제도, 관련 부담금, 세제 혜택 등 핵심 설계 정보", "badge_class": "track-badge-c", "color": "#d84315"},
     }
     level_labels = {1: "🌱 Lv.1 입문", 2: "🔧 Lv.2 실무", 3: "🏗️ Lv.3 심화"}
     level_css = {1: "level-1", 2: "level-2", 3: "level-3"}
