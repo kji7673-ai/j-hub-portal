@@ -489,8 +489,11 @@
     </button>
 
 
+    <!-- Secret Trigger (Top Left) -->
+    <div style="position:fixed; top:0; left:0; width:60px; height:60px; z-index:2000; cursor:default;" ondblclick="promptAdmin()"></div>
+
     <!-- Editor Tools (For Studio) -->
-    <div class="edit-toolbar">
+    <div class="edit-toolbar" style="display: none;">
         <button class="btn" onclick="openSecretPanel()">원고 수정 / 비판 요청</button>
     </div>
 
@@ -972,6 +975,17 @@
         if(tocBtn) tocBtn.addEventListener('click', openTOC);
         if(closeTocBtn) closeTocBtn.addEventListener('click', closeTOC);
         if(tocOverlay) tocOverlay.addEventListener('click', closeTOC);
+
+        function promptAdmin() {
+            const pwd = prompt("관리자 비밀번호를 입력하세요:");
+            if (pwd === "9376105152") {
+                const toolbar = document.querySelector('.edit-toolbar');
+                if (toolbar) toolbar.style.display = 'block';
+            } else if (pwd) {
+                alert("비밀번호가 일치하지 않습니다.");
+            }
+        }
+
 
         window.onload = renderBook;
     </script>
