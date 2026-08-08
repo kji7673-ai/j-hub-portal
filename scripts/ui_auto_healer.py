@@ -2,7 +2,7 @@
 """
 J-Hub UI Auto-Healer (시각적 감리 봇)
 - 역할: Headless 브라우저로 정적 HTML을 렌더링하고, 스크린샷을 찍어 Vision AI로 시각적 결함을 찾아냅니다.
-- 설치 필요: pip install playwright google-generativeai && playwright install chromium
+- 설치 필요: pip install playwright google-genai && playwright install chromium
 """
 
 import os
@@ -15,10 +15,11 @@ try:
     from playwright.sync_api import sync_playwright
 except ImportError:
     print("🚨 [Auto-Healer] 의존성 패키지가 없습니다. 아래 명령어를 실행하세요:")
-    print("pip3 install playwright google-generativeai && playwright install chromium")
+    print("pip3 install playwright google-genai && playwright install chromium")
     sys.exit(1)
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 # ==========================================
 # 🛑 Option A: 깐깐한 감리 (Strict Audit Rules)
@@ -70,22 +71,21 @@ def analyze_with_vision(image_path: str) -> str:
         print("⚠️ 실제 Vision AI 검증을 건너뛰고 'Mock(가짜) 응답'으로 대체합니다.")
         return '{"status": "PASS", "defects": [], "suggested_css_fix": null}'
 
-    genai.configure(api_key=api_key)
-    # 최신 모델 사용 (시각 분석용)
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    client = genai.Client(api_key=api_key)
     
     with open(image_path, "rb") as image_file:
         image_data = image_file.read()
     
-    image_parts = [
-        {
-            "mime_type": "image/png",
-            "data": image_data
-        }
-    ]
+    image_part = types.Part.from_bytes(
+        data=image_data,
+        mime_type="image/png"
+    )
     
     print("🤖 [Auto-Healer] Vision AI 분석 중... (Option A 룰 적용)")
-    response = model.generate_content([STRICT_AUDIT_PROMPT, image_parts[0]])
+    response = client.models.generate_content(
+        model='gemini-2.5-pro',
+        contents=[STRICT_AUDIT_PROMPT, image_part]
+    )
     return response.text
 
 def main():
