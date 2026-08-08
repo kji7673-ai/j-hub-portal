@@ -63,7 +63,7 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             padding: 10% 8%; 
-            display: block;
+            display: none;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -71,6 +71,8 @@
             column-width: 100%;
             column-gap: 40px;
             column-fill: auto;
+            height: 100%;
+            max-height: 100%;
             box-sizing: border-box;
             
             word-break: keep-all; 
@@ -79,7 +81,20 @@
             z-index: 1;
         }
 
+        
+        .page-content p.subtitle-text {
+            font-family: var(--font-display, "SF Pro Display", sans-serif);
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            margin-top: 0;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+
         .page-content.active {
+            display: block;
             opacity: 1;
             pointer-events: auto;
         }
@@ -750,22 +765,12 @@
             const translatePx = currentColumn * (w + COLUMN_GAP);
             activePage.style.transform = `translateX(-${translatePx}px)`;
             
-            let totalVirtualPages = 0;
-            let currentVirtualPage = 0;
-            
-            for (let i = 0; i < pageEls.length; i++) {
-                const cols = getChapterMaxColumns(i);
-                if (i < currentChapter) {
-                    currentVirtualPage += cols;
-                } else if (i === currentChapter) {
-                    currentVirtualPage += currentColumn + 1;
-                }
-                totalVirtualPages += cols;
-            }
-            
-            document.getElementById('prev-btn').disabled = (currentVirtualPage === 1);
-            document.getElementById('next-btn').disabled = (currentVirtualPage === totalVirtualPages);
-            document.getElementById('page-num').innerText = `${currentVirtualPage} / ${totalVirtualPages}`;
+            // Removed heavy loop over all 131 chapters that causes Safari to crash.
+            // Now we only calculate maxCols for the CURRENT chapter.
+            const totalChapters = bookData.pages.length;
+            document.getElementById('prev-btn').disabled = (currentChapter === 0 && currentColumn === 0);
+            document.getElementById('next-btn').disabled = (currentChapter === totalChapters - 1 && currentColumn === maxCols - 1);
+            document.getElementById('page-num').innerText = `[${currentChapter + 1}/${totalChapters}] ${currentColumn + 1} / ${maxCols}`;
         }
 
         function prevPage() {
@@ -834,7 +839,7 @@
             panel.classList.add('open');
             
             // Load current page text
-            const activePage = bookData.pages[currentPage];
+            const activePage = bookData.pages[currentChapter];
             let contentText = activePage.text || '';
             if (!contentText && activePage.title) {
                 contentText = activePage.title + (activePage.subtitle ? '\n' + activePage.subtitle : '');
@@ -928,8 +933,8 @@
             if(!confirm('AI가 대화 내역과 앞뒤 문맥을 고려하여 최종 원고를 덮어씁니다. 진행하시겠습니까?')) return;
             
             const originalText = document.getElementById('panel-original-text').value;
-            const prevText = currentPage > 0 ? bookData.pages[currentPage-1].text : '';
-            const nextText = currentPage < bookData.pages.length - 1 ? bookData.pages[currentPage+1].text : '';
+            const prevText = currentChapter > 0 ? bookData.pages[currentChapter-1].text : '';
+            const nextText = currentChapter < bookData.pages.length - 1 ? bookData.pages[currentChapter+1].text : '';
             
             const saveBtn = document.querySelector('.btn-save');
             const oldSaveText = saveBtn.innerText;
@@ -941,7 +946,7 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
-                        page_index: currentPage, 
+                        page_index: currentChapter, 
                         original_text: originalText,
                         chat_history: currentChatHistory,
                         prev_text: prevText || '',
@@ -952,7 +957,7 @@
                 
                 if (result.status === 'success') {
                     // Update local object and re-render
-                    bookData.pages[currentPage].text = result.revised_text;
+                    bookData.pages[currentChapter].text = result.revised_text;
                     document.getElementById('panel-original-text').value = result.revised_text;
                     renderBook();
                     alert('AI가 앞뒤 문맥에 맞게 최종 원고를 성공적으로 재작성했습니다.');
@@ -986,7 +991,7 @@
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
-                                page_index: currentPage,
+                                page_index: currentChapter,
                                 image_data: base64Data,
                                 image_layout: layout
                             })
@@ -995,7 +1000,7 @@
                         const result = await response.json();
                         
                         if (result.status === 'success') {
-                            const activePage = bookData.pages[currentPage];
+                            const activePage = bookData.pages[currentChapter];
                             activePage.image = result.image_url;
                             activePage.type = layout;
                             
@@ -1017,7 +1022,7 @@
         // Handle Layout Change without upload
         document.getElementById('panel-image-layout').addEventListener('change', async function(e) {
             const layout = e.target.value;
-            const activePage = bookData.pages[currentPage];
+            const activePage = bookData.pages[currentChapter];
             if(activePage.type !== layout) {
                 // If we need to just save the type change (requires backend endpoint, but for now we just change it locally. To save permanently, we'd need a save_layout API. Let's just alert.)
                 alert("레이아웃만 변경하는 기능은 새 이미지를 업로드할 때 함께 반영되거나, 원고 수정 시 반영됩니다.");
@@ -1046,7 +1051,7 @@
                     item.addEventListener('click', () => {
                         currentChapter = index;
                         currentColumn = 0;
-                        renderBook();
+                        updateControls();
                         closeTOC();
                     });
                     tocList.appendChild(item);
