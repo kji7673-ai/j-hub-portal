@@ -586,9 +586,42 @@
                 
                 if (page.type === 'cover') {
                     pageEl.className += ' bg-dark';
-                    contentHTML += `<div class="cover-content">`;
-                    contentHTML += `<h1 class="book-title" style="text-align:center;">${page.title}</h1>`;
-                    if(page.subtitle) contentHTML += `<p style="text-align:center; color:#a0a0a0; font-weight: 300;">${page.subtitle}</p>`;
+                    
+                    let rawTitle = page.title;
+                    let part = "";
+                    let mainTitle = rawTitle;
+                    let subtitle = page.subtitle || "";
+                    
+                    // 1. Extract Subtitle from parentheses
+                    if (!subtitle) {
+                        const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                        if (subMatch) {
+                            mainTitle = subMatch[1].trim();
+                            subtitle = subMatch[2].trim();
+                        }
+                    }
+                    
+                    // 2. Extract Part / Theme
+                    const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?:\s*|에필로그:\s*))(.+)$/);
+                    if (partMatch) {
+                        part = partMatch[1].trim();
+                        mainTitle = partMatch[2].trim();
+                    }
+                    
+                    contentHTML += `<div class="cover-content" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 10% 8%;">`;
+                    
+                    if (part) {
+                        contentHTML += `<p style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: 14px; font-weight: 600; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.1em; margin-bottom: 16px; text-transform: uppercase;">${part}</p>`;
+                    }
+                    
+                    contentHTML += `<h1 class="book-title" style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: clamp(28px, 6vw, 44px); font-weight: 700; color: #ffffff; margin: 0 0 24px 0; line-height: 1.25; letter-spacing: -0.02em; word-break: keep-all;">${mainTitle}</h1>`;
+                    
+                    if (subtitle) {
+                        contentHTML += `<p style="font-family: var(--font-body, 'SF Pro Text', sans-serif); font-size: 18px; font-weight: 300; color: #a0a0a0; margin: 0; word-break: keep-all; line-height: 1.5;">${subtitle}</p>`;
+                    }
+                    
+                    // Decorative line
+                    contentHTML += `<div style="width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin-top: 40px;"></div>`;
                     contentHTML += `</div>`;
                 }
 
