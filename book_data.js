@@ -1,11 +1,11 @@
 const bookData = {
-    "title": "여백을 설계하는 자가 살아남는다",
+    "title": "도면 위에 머무는 시간",
     "author": "CEO",
     "pages": [
         {
             "type": "image_full",
-            "title": "여백을 설계하는 자가 살아남는다",
-            "subtitle": "기계의 연산이 끝난 곳에서 시작되는 인간의 위대한 통찰",
+            "title": "도면 위에 머무는 시간",
+            "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
             "image": "static/images/1.jpg"
         },
         {
