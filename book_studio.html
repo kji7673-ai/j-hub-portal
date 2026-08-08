@@ -45,12 +45,30 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: hidden; /* Prevent text spilling out */
             border-radius: 4px 12px 12px 4px; /* Slightly rounded on the right edge like a book */
         }
 
         /* Pagination Layout */
-        
+        .page-content {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            padding: 10% 8%; 
+            display: block;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            
+            column-width: 100%;
+            column-gap: 40px;
+            column-fill: auto;
+            box-sizing: border-box;
+            
+            word-break: keep-all; 
+            text-align: justify;
+            color: var(--ink); 
+            z-index: 1;
+        }
 
         .page-content.active {
             opacity: 1;
@@ -571,7 +589,9 @@
 
     <script src="book_data.js"></script>
     <script>
-        let currentPage = 0;
+        let currentChapter = 0;
+        let currentColumn = 0;
+        const COLUMN_GAP = 40;
 
         function renderBook() {
             const container = document.getElementById('book-container');
@@ -580,7 +600,7 @@
 
             bookData.pages.forEach((page, index) => {
                 const pageEl = document.createElement('div');
-                pageEl.className = 'page-content' + (index === currentPage ? ' active' : '');
+                pageEl.className = 'page-content' + (index === currentChapter ? ' active' : '');
                 
                 let contentHTML = '';
                 
@@ -708,30 +728,80 @@
             updateControls();
         }
 
+        function getChapterMaxColumns(chapterIndex) {
+            const pageEls = document.querySelectorAll('.page-content');
+            const p = pageEls[chapterIndex];
+            if (!p) return 1;
+            const w = p.clientWidth || document.getElementById('book-container').clientWidth;
+            const sw = p.scrollWidth || w;
+            return Math.max(1, Math.round((sw + COLUMN_GAP) / (w + COLUMN_GAP)));
+        }
+
         function updateControls() {
-            document.getElementById('prev-btn').disabled = currentPage === 0;
-            document.getElementById('next-btn').disabled = currentPage === bookData.pages.length - 1;
-            document.getElementById('page-num').innerText = `${currentPage + 1} / ${bookData.pages.length}`;
+            const pageEls = document.querySelectorAll('.page-content');
             
-            document.querySelectorAll('.page-content').forEach((p, idx) => {
-                if(idx === currentPage) p.classList.add('active');
-                else p.classList.remove('active');
+            pageEls.forEach((p, idx) => {
+                if (idx === currentChapter) {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                    p.style.transform = `translateX(0px)`;
+                }
             });
+            
+            const maxCols = getChapterMaxColumns(currentChapter);
+            if (currentColumn >= maxCols) currentColumn = maxCols - 1;
+            if (currentColumn < 0) currentColumn = 0;
+            
+            const activePage = pageEls[currentChapter];
+            const w = activePage.clientWidth || document.getElementById('book-container').clientWidth;
+            const translatePx = currentColumn * (w + COLUMN_GAP);
+            activePage.style.transform = `translateX(-${translatePx}px)`;
+            
+            let totalVirtualPages = 0;
+            let currentVirtualPage = 0;
+            
+            for (let i = 0; i < pageEls.length; i++) {
+                const cols = getChapterMaxColumns(i);
+                if (i < currentChapter) {
+                    currentVirtualPage += cols;
+                } else if (i === currentChapter) {
+                    currentVirtualPage += currentColumn + 1;
+                }
+                totalVirtualPages += cols;
+            }
+            
+            document.getElementById('prev-btn').disabled = (currentVirtualPage === 1);
+            document.getElementById('next-btn').disabled = (currentVirtualPage === totalVirtualPages);
+            document.getElementById('page-num').innerText = `${currentVirtualPage} / ${totalVirtualPages}`;
         }
 
         function prevPage() {
-            if (currentPage > 0) {
-                currentPage--;
+            if (currentColumn > 0) {
+                currentColumn--;
+                updateControls();
+            } else if (currentChapter > 0) {
+                currentChapter--;
+                currentColumn = 999; // updateControls will clamp it to maxCols - 1
                 updateControls();
             }
         }
 
         function nextPage() {
-            if (currentPage < bookData.pages.length - 1) {
-                currentPage++;
+            const maxCols = getChapterMaxColumns(currentChapter);
+            if (currentColumn < maxCols - 1) {
+                currentColumn++;
+                updateControls();
+            } else if (currentChapter < bookData.pages.length - 1) {
+                currentChapter++;
+                currentColumn = 0;
                 updateControls();
             }
         }
+        
+        window.addEventListener('resize', () => {
+            updateControls();
+        });
 
         
         // Secret Room Logic
