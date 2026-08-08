@@ -596,7 +596,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js"></script>
+    <script src="book_data.js?v=2"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1061,7 +1061,8 @@
                     item.className = 'toc-item';
                     item.textContent = page.title;
                     item.addEventListener('click', () => {
-                        currentPage = index;
+                        currentChapter = index;
+                        currentColumn = 0;
                         renderBook();
                         closeTOC();
                     });
