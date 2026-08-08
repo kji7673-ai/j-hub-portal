@@ -259,11 +259,8 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             pointer-events: none;
-            overflow-y: hidden;
+            overflow-y: auto;
             overflow-x: hidden;
-            column-width: 100vw; /* Force single column per viewport */
-            column-gap: 24vw; /* Huge gap so next column is completely out of view */
-            column-fill: auto;
             height: 100%;
             box-sizing: border-box;
             scroll-behavior: smooth;
@@ -489,8 +486,7 @@
     </button>
 
 
-    <!-- Secret Trigger (Top Left) -->
-    <div style="position:fixed; top:0; left:0; width:60px; height:60px; z-index:2000; cursor:default;" ondblclick="promptAdmin()"></div>
+    <!-- Secret Trigger removed (using global 3 clicks) -->
 
     <!-- Editor Tools (For Studio) -->
     <div class="edit-toolbar" style="display: none;">
@@ -503,8 +499,8 @@
         <div class="secret-modal-content">
             <h3 style="margin-bottom:10px;">비밀 집필실</h3>
             <p style="font-size:12px; color:#666;">접근 코드를 입력하세요</p>
-            <input type="password" id="secret-pw" maxlength="6">
-            <button class="btn" onclick="checkSecretPassword()">입장</button>
+            <input type="password" id="secret-pw" maxlength="15">
+            <button class="btn" onclick="checkSecretPassword()">확인</button>
         </div>
     </div>
     
@@ -727,12 +723,13 @@
 
         function checkSecretPassword() {
             const pw = document.getElementById('secret-pw').value;
-            if (pw === '937610') {
+            if (pw === '9376105152') {
                 document.getElementById('secret-modal').style.display = 'none';
                 document.getElementById('secret-pw').value = '';
-                openSecretPanel();
+                const toolbar = document.querySelector('.edit-toolbar');
+                if (toolbar) toolbar.style.display = 'block';
             } else {
-                alert('코드가 일치하지 않습니다.');
+                alert('비밀번호가 일치하지 않습니다.');
                 document.getElementById('secret-modal').style.display = 'none';
             }
         }
@@ -975,17 +972,6 @@
         if(tocBtn) tocBtn.addEventListener('click', openTOC);
         if(closeTocBtn) closeTocBtn.addEventListener('click', closeTOC);
         if(tocOverlay) tocOverlay.addEventListener('click', closeTOC);
-
-        function promptAdmin() {
-            const pwd = prompt("관리자 비밀번호를 입력하세요:");
-            if (pwd === "9376105152") {
-                const toolbar = document.querySelector('.edit-toolbar');
-                if (toolbar) toolbar.style.display = 'block';
-            } else if (pwd) {
-                alert("비밀번호가 일치하지 않습니다.");
-            }
-        }
-
 
         window.onload = renderBook;
     </script>
