@@ -235,6 +235,54 @@ const bookData = {
             "image": "static/images/42.jpg"
         },
         {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_01.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_02.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_03.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_04.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_05.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_06.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_07.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_08.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_09.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_10.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_11.png"
+        },
+        {
+            "type": "image_full",
+            "image": "static/images/yongmun_report_12.png"
+        },
+        {
             "type": "image_top",
             "title": "",
             "text": "가장 강력한 한 방은 '사업 방식의 심층 비교'였다. \n클라이언트는 항상 불안하다. \"재개발이 맞나? 역세권 시프트가 낫나? 모아타운이 정답인가?\" 마법사는 이 3가지 시나리오를 동시에 시뮬레이션했다. 기부채납 비율, 임대 보상, 최고 층수 제한을 알고리즘이 교차 검증한 결과, **'모아타운 방식'이 토지 기부채납 없이 사업성을 극대화할 수 있는 유일한 해답**임을 논리적으로 도출해 냈다.\n\n결과는 소름 돋을 정도로 정밀했다.\n* **최종 용적률:** 300% (가산 용적률 3.86%p, 친환경 인센티브 10%p 등 완벽 반영)\n* **총 건립 세대:** 345세대\n* **최종 비례율:** 167.8% (분양가 시나리오별 손익분기 완벽 제시)\n\n> **[그림 삽입: 비례율 167.8% 시뮬레이션 요약 대시보드 (보고서 본문)]**\n> *3가지 사업 방식을 비교하고 최적의 사업성(167.8%)을 증명한 핵심 페이지*\n\n과거처럼 고연차 소장이 며칠 밤을 새우며 엑셀을 두드린 결과가 아니다. 입사 한 달 차 신입사원이라도, 플랫폼이 묻는 질문에 정확한 팩트만 입력하면 30년 차 대표 수준의 조화로운 재무적 타당성(Feasibility) 분석이 쏟아져 나오는 '지식의 상향 평준화'가 이루어진 것이다.\n\n[결과가 아닌 '과정'이 신뢰를 만든다, 그리고 얻어낸 승리]",
