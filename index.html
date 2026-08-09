@@ -609,7 +609,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=13"></script>
+    <script src="book_data.js?v=16"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -625,6 +625,14 @@
                 pageEl.className = 'page-content' + (index === currentChapter ? ' active' : '');
                 
                 let contentHTML = '';
+                
+                // Default fallback for legacy book_data.js structure
+                page.type = page.type || 'image_top';
+                page.image = page.image || page.bgImage;
+                
+                if (page.image && !page.image.startsWith('http') && !page.image.startsWith('static/images/')) {
+                    page.image = 'static/images/' + page.image;
+                }
                 
                 if (page.type === 'cover') {
                     pageEl.className += ' bg-dark';
