@@ -68,9 +68,7 @@
             pointer-events: none;
             transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             
-            column-width: 100%;
-            column-gap: 40px;
-            column-fill: auto;
+            /* Multi-column layout removed in favor of vertical scrolling */
             box-sizing: border-box;
             
             word-break: keep-all; 
@@ -144,13 +142,51 @@
             margin: 5px 0 20px 24px;
             border-radius: 8px;
             background: transparent;
-            /* Removed overflow: hidden to prevent clipping shadows */
         }
 
         /* Alternate image placement (left/right) based on page number */
         .page-content:nth-child(even) .image-container {
             float: left;
             margin: 5px 24px 20px 0;
+        }
+
+        /* Special layout for pages with very short text */
+        .page-content.short-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .page-content.short-text .chapter-title {
+            text-align: center;
+            order: 1; /* Title first */
+            margin-bottom: 20px !important;
+        }
+        .page-content.short-text .subtitle-text {
+            order: 2; /* Subtitle second */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .page-content.short-text .image-container {
+            float: none;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 30px auto;
+            order: 3; /* Image third */
+        }
+        .page-content.short-text p.body-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            order: 4; /* Text fourth */
+        }
+        .page-content.short-text p.body-text:first-of-type::first-letter {
+            float: none;
+            margin: 0;
+            font-size: inherit;
+            color: inherit;
+            font-weight: inherit;
         }
 
         .image-container img {
@@ -291,7 +327,8 @@
     
         /* -- Prevent Vertical Scroll (Strict Pagination) -- */
         .page-content {
-            overflow: hidden; /* Force NO vertical scroll */
+            overflow-y: auto; /* Enable vertical scroll */
+            overflow-x: hidden;
         }
         
         .page-content > * {
@@ -586,7 +623,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=18"></script>
+    <script src="book_data.js?v=20"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -665,6 +702,9 @@
                 }
  
                 else if (page.type === 'image_top') {
+                    if (page.text && page.text.length < 350) {
+                        pageEl.className += ' short-text';
+                    }
                     if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}"><img src="${page.image}" alt="sketch"></div>`;
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
                     if(page.text) {
@@ -736,12 +776,8 @@
         }
 
         function getChapterMaxColumns(chapterIndex) {
-            const pageEls = document.querySelectorAll('.page-content');
-            const p = pageEls[chapterIndex];
-            if (!p) return 1;
-            const w = p.clientWidth || document.getElementById('book-container').clientWidth;
-            const sw = p.scrollWidth || w;
-            return Math.max(1, Math.round((sw + COLUMN_GAP) / (w + COLUMN_GAP)));
+            // Horizontal columns are disabled in favor of native vertical scrolling.
+            return 1;
         }
 
         function updateControls() {
