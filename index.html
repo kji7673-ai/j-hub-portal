@@ -623,7 +623,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=20"></script>
+    <script src="book_data.js?v=21"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -708,12 +708,15 @@
                     if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}"><img src="${page.image}" alt="sketch"></div>`;
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
                     if(page.text) {
-                        const paragraphs = page.text.split('\n\n');
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--primary);">$1</strong>');
+                        const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
                             if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
                                 contentHTML += p;
                             } else {
-                                contentHTML += `<p class="body-text">${p}</p>`;
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9;">${htmlP}</p>`;
                             }
                         });
                     }
@@ -727,9 +730,12 @@
                     if(page.title) contentHTML += `<h1 class="book-title" style="text-align:center; color:#1d1d1f; font-size:48px; margin-bottom:20px; text-shadow: 0 2px 15px rgba(255,255,255,0.9); font-weight:700;">${page.title}</h1>`;
                     if(page.subtitle) contentHTML += `<p style="text-align:center; color:#333; font-size:24px; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9);">${page.subtitle}</p>`;
                     if(page.text) {
-                        const paragraphs = page.text.split('\n\n');
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--primary);">$1</strong>');
+                        const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
-                            contentHTML += `<p class="body-text" style="color:#1d1d1f; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9); text-align:center; font-size:18px;">${p}</p>`;
+                            let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                            htmlP = htmlP.replace(/\n/g, '<br>');
+                            contentHTML += `<p class="body-text" style="color:#1d1d1f; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9); text-align:center; font-size:18px; line-height: 1.9;">${htmlP}</p>`;
                         });
                     }
                     contentHTML += `</div>`;
