@@ -160,11 +160,11 @@
         }
         .page-content.short-text .chapter-title {
             text-align: center;
-            order: 1; /* Title first */
+            order: 1;
             margin-bottom: 20px !important;
         }
         .page-content.short-text .subtitle-text {
-            order: 2; /* Subtitle second */
+            order: 2;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -173,13 +173,13 @@
             width: 100%;
             max-width: 450px;
             margin: 0 auto 30px auto;
-            order: 3; /* Image third */
+            order: 3;
         }
         .page-content.short-text p.body-text {
             text-align: center;
             max-width: 600px;
             margin: 0 auto 20px auto;
-            order: 4; /* Text fourth */
+            order: 4;
         }
         .page-content.short-text p.body-text:first-of-type::first-letter {
             float: none;
@@ -187,6 +187,26 @@
             font-size: inherit;
             color: inherit;
             font-weight: inherit;
+        }
+
+        /* Anti-Boredom Elements */
+        blockquote.pull-quote {
+            border-left: 4px solid var(--primary);
+            background: rgba(0, 102, 204, 0.03);
+            padding: 20px 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            color: var(--primary);
+            line-height: 1.8;
+        }
+        p.subheading {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: var(--primary);
         }
 
         /* Philosophy Mode Typography (Part 5 onwards) */
@@ -644,7 +664,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=22"></script>
+    <script src="book_data.js?v=23"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -744,8 +764,15 @@
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--primary);">$1</strong>');
                         const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
-                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
                                 contentHTML += p;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
                             } else {
                                 let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
                                 htmlP = htmlP.replace(/\n/g, '<br>');
@@ -796,12 +823,22 @@
                 else if (page.type === 'text_only') {
                     if(page.title) contentHTML += `<h2 class="chapter-title">${page.title}</h2>`;
                     if(page.text) {
-                        const paragraphs = page.text.split('\n\n');
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--primary);">$1</strong>');
+                        const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
-                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
                                 contentHTML += p;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
                             } else {
-                                contentHTML += `<p class="body-text">${p}</p>`;
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9;">${htmlP}</p>`;
                             }
                         });
                     }
