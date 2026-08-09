@@ -189,6 +189,27 @@
             font-weight: inherit;
         }
 
+        /* Philosophy Mode Typography (Part 5 onwards) */
+        .page-content.philosophy-mode p.body-text {
+            font-family: 'KoPub Batang', 'AppleMyungjo', 'Noto Serif KR', serif !important;
+            font-size: clamp(15px, 2.7cqw, 16px) !important;
+            line-height: 2.3 !important; /* Slower, deeper reading pace */
+            letter-spacing: 0.01em !important; /* Slightly wider tracking */
+            margin-bottom: 30px !important; /* More breathing room */
+            color: #2c2c2f !important; /* Softer ink color */
+        }
+        .page-content.philosophy-mode .chapter-title {
+            font-family: 'KoPub Batang', 'AppleMyungjo', 'Noto Serif KR', serif !important;
+            font-weight: 500 !important;
+            color: #2c2c2f !important;
+            letter-spacing: -0.01em !important;
+            margin-bottom: 40px !important;
+        }
+        .page-content.philosophy-mode p.body-text:first-of-type::first-letter {
+            font-family: 'KoPub Batang', 'AppleMyungjo', 'Noto Serif KR', serif !important;
+            font-weight: normal !important;
+        }
+
         .image-container img {
             width: 100%;
             height: auto;
@@ -623,7 +644,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=21"></script>
+    <script src="book_data.js?v=22"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -634,9 +655,21 @@
             // Remove existing pages
             document.querySelectorAll('.page-content').forEach(p => p.remove());
 
+            let isPhilosophySection = false; // Tracks if we are in Part 5+
+
             bookData.pages.forEach((page, index) => {
+                // Detect start of philosophy section
+                if (page.title && (page.title.includes('5부.') || page.title.includes('[철학편]'))) {
+                    isPhilosophySection = true;
+                }
+
                 const pageEl = document.createElement('div');
                 pageEl.className = 'page-content' + (index === currentChapter ? ' active' : '');
+                
+                // Apply philosophy-mode if in philosophy section
+                if (isPhilosophySection) {
+                    pageEl.className += ' philosophy-mode';
+                }
                 
                 let contentHTML = '';
                 
