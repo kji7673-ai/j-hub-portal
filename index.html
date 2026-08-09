@@ -289,21 +289,9 @@
         .btn-save { background: #0066cc; color: #fff; border: none; padding: 12px 24px; border-radius: 999px; cursor: pointer; font-weight: 600; }
 
     
-        /* -- Custom Scrollbar for pages -- */
+        /* -- Prevent Vertical Scroll (Strict Pagination) -- */
         .page-content {
-            flex: 1;
-            padding: 10% 12% 15% 12%; 
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            pointer-events: none;
-            overflow-y: auto;
-            overflow-x: hidden;
-            height: 100%;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+            overflow: hidden; /* Force NO vertical scroll */
         }
         
         .page-content > * {
@@ -312,17 +300,6 @@
         
         .page-content p {
             break-inside: auto; /* Allow paragraphs to break across columns */
-        }
-
-        .page-content::-webkit-scrollbar {
-            width: 6px;
-        }
-        .page-content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .page-content::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
         }
 
         /* -- Cover Design (Dark Mode) -- */
@@ -609,7 +586,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=16"></script>
+    <script src="book_data.js?v=18"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
