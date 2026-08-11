@@ -1,15 +1,22 @@
 import json
 
-DB_PATH = 'data/manual_db.json'
-with open(DB_PATH, 'r', encoding='utf-8') as f:
-    db = json.load(f)
+with open("book_data.js", "r", encoding="utf-8") as f:
+    content = f.read()
 
-for doc in db:
-    if 'html' in doc and '/static/images/journal_01.png' in doc['html']:
-        doc['html'] = doc['html'].replace('/static/images/journal_01.png', 'static/images/journal_01.png')
-    if 'content' in doc and '/static/images/journal_01.png' in doc['content']:
-        doc['content'] = doc['content'].replace('/static/images/journal_01.png', 'static/images/journal_01.png')
+json_start = content.find("{")
+json_end = content.rfind("}") + 1
+json_str = content[json_start:json_end]
+data = json.loads(json_str)
 
-with open(DB_PATH, 'w', encoding='utf-8') as f:
-    json.dump(db, f, ensure_ascii=False, indent=4)
-print("Fixed image path in JSON")
+page_idx = 71
+if len(data["pages"]) > page_idx:
+    data["pages"][page_idx]["image"] = "static/images/72.jpg"
+    print("Added image to index", page_idx, ":", data["pages"][page_idx].get("title"))
+else:
+    print("Index", page_idx, "out of range")
+
+new_json_str = json.dumps(data, ensure_ascii=False, indent=4)
+new_content = content[:json_start] + new_json_str + content[json_end:]
+
+with open("book_data.js", "w", encoding="utf-8") as f:
+    f.write(new_content)
