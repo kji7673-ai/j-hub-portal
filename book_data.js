@@ -624,7 +624,6 @@ const bookData = {
             "image": "static/images/default.jpg"
         }
     ]
-    ]
 };
 
 if (typeof module !== 'undefined' && module.exports) {
