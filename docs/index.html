@@ -1254,7 +1254,7 @@
         let clickCount = 0;
         let clickTimer;
         
-        // Listen for clicks on the book container (but specifically we want to target top header area or just globally handle 3 clicks fast)
+        // Listen for clicks on the book container (but specifically we want to target top header area or just globally handle 2 clicks fast)
         document.body.addEventListener('click', function(e) {
             // Only trigger if clicking on empty space or the container itself to avoid interfering with buttons
             if(e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -1263,7 +1263,7 @@
             clearTimeout(clickTimer);
             clickTimer = setTimeout(() => { clickCount = 0; }, 500);
             
-            if (clickCount >= 3) {
+            if (clickCount >= 2) {
                 clickCount = 0;
                 document.getElementById('secret-modal').style.display = 'flex';
                 document.getElementById('secret-pw').focus();
@@ -1272,7 +1272,7 @@
 
         function checkSecretPassword() {
             const pw = document.getElementById('secret-pw').value;
-            if (pw === '9376105152') {
+            if (pw === '937610') {
                 document.getElementById('secret-modal').style.display = 'none';
                 document.getElementById('secret-pw').value = '';
                 const toolbar = document.querySelector('.edit-toolbar');
