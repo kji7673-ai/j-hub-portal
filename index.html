@@ -563,7 +563,17 @@
             max-width: 450px;
         }
 
-    </style>
+    
+        @media (max-width: 768px) {
+            .page-content.page-layout .image-container,
+            .page-content:nth-child(even).page-layout .image-container {
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 20px 0;
+            }
+        }
+</style>
 </head>
 <body>
 
@@ -656,7 +666,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=32"></script>
+    <script src="book_data.js?v=33"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
