@@ -6,11 +6,13 @@ const bookData = {
         "type": "image_full",
         "title": "도면 위에 머무는 시간",
         "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-        "image": "static/images/1.jpg"
+        "image": "static/images/1.jpg",
+        "text": ""
     },
     {
         "type": "author_profile",
-        "image": "static/images/sketch_philosophy_1786665818552.jpg"
+        "image": "static/images/sketch_philosophy_1786665818552.jpg",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -25,7 +27,8 @@ const bookData = {
         "subtitle": "",
         "image": "static/images/9.jpg",
         "part": "1부: 시스템편",
-        "partTitle": "인지적 과부하와 AI의 도입"
+        "partTitle": "인지적 과부하와 AI의 도입",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -76,13 +79,14 @@ const bookData = {
         "subtitle": "",
         "image": "static/images/sketch_hallucination_forest_1786669354715.jpg",
         "part": "1부: 시스템편",
-        "partTitle": "인지적 과부하와 AI의 도입"
+        "partTitle": "인지적 과부하와 AI의 도입",
+        "text": ""
     },
     {
         "type": "image_top",
         "title": "4장. \"어디서 이렇게 불완전한 데이터를 가져왔어?\"",
         "image": "static/images/26.jpg",
-        "text": "이 안타까운 현실을 타개하기 위해, 우리가 가장 먼저 한 일은 구청 주무관을 상대하느라 지친 직원들 대신 방대한 법규를 순식간에 찾아줄 똑똑한 디지털 조수를 고용하는 것이었다. 그 조수의 이름이 바로 세상을 뒤흔든 '챗GPT'였다. 하지만 기대에 부풀었던 우리의 첫 만남은 처참한 실패로 끝났다.\n\n\"대표님, 이 AI가 내놓은 법규 검토서 좀 보십시오. 이거 완전히 미쳤다.\"\n\n늦은 오후의 임원 회의실, 모두가 만족스러운 미소를 짓고 있던 찰나였다. 우리는 강남 한복판의 대형 재건축 프로젝트 초기 타당성 검토를 챗GPT에게 맡겨놓고, 그 결과를 스크린에 띄워 둔 채로 회의를 진행하고 있었다. 수십 페이지에 달하는 지자체 조례와 건축법 시행령을 3초 만에 요약해 낸 유려한 문장들은 완벽해 보였다. 직원들은 \"이제 밤샘 서류 작업은 끝났다\"며 환호성을 질렀다. 나 역시 우리가 마침내 혁신의 최전선에 섰다고 믿어 의심치 않았다.\n\n그런데 화면을 뚫어지게 응시하던 20년 차 김 상무의 미간이 좁아지더니, 적막을 깨는 한마디를 던졌다.\n\n\"기부채납 비율 대비 상한 용적률이 너무 높게 잡혔다. 이 '사업성 보정 계수'는 대체 어떻게 나온 겁니까?\"",
+        "text": "이 안타까운 현실을 타개하기 위해, 우리가 가장 먼저 한 일은 구청 주무관을 상대하느라 지친 직원들 대신 방대한 법규를 순식간에 찾아줄 똑똑한 디지털 조수를 고용하는 것이었다. 그 조수의 이름이 바로 세상을 뒤흔든 '챗GPT'였다. 하지만 기대에 부풀었던 우리의 첫 만남은 처참한 실패로 끝났다.\n\n\"대표님, 이 AI가 출력한 법규 검토서 한번 보시겠습니까? 정리된 수준이 상당합니다.\"\n\n늦은 오후의 임원 회의실, 모두가 만족스러운 미소를 짓고 있던 찰나였다. 우리는 강남 한복판의 대형 재건축 프로젝트 초기 타당성 검토를 챗GPT에게 맡겨놓고, 그 결과를 스크린에 띄워 둔 채로 회의를 진행하고 있었다. 수십 페이지에 달하는 지자체 조례와 건축법 시행령을 3초 만에 요약해 낸 유려한 문장들은 완벽해 보였다. 직원들은 \"이제 밤샘 서류 작업은 끝났다\"며 환호성을 질렀다. 나 역시 우리가 마침내 혁신의 최전선에 섰다고 믿어 의심치 않았다.\n\n그런데 화면을 뚫어지게 응시하던 20년 차 김 상무의 미간이 좁아지더니, 적막을 깨는 한마디를 던졌다.\n\n\"기부채납 비율 대비 상한 용적률이 너무 높게 잡혔다. 이 '사업성 보정 계수'는 대체 어떻게 나온 겁니까?\"",
         "part": "1부: 시스템편",
         "partTitle": "인지적 과부하와 AI의 도입"
     },
@@ -144,7 +148,8 @@ const bookData = {
         "subtitle": "",
         "image": "static/images/38.jpg",
         "part": "1부: 시스템편",
-        "partTitle": "인지적 과부하와 AI의 도입"
+        "partTitle": "인지적 과부하와 AI의 도입",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -177,7 +182,7 @@ const bookData = {
     {
         "type": "image_top",
         "title": "",
-        "text": "김 상무가 헛웃음을 치며 안경을 벗어 던졌다.\n\"이런 블랙박스에서 튀어나온 숫자를 믿고 수천억짜리 프로젝트를 진행하라고요? 용적률 10% 올리려다 공사비 30% 터지는 꼴을 봐야 정신 차리겠습니까? 차라리 먼지 쌓인 주판을 꺼내서 직접 튕기는 게 낫겠다. 적어도 주판은 거짓말은 안 하니까요.\"\n\n그의 말은 내 가슴에 비수처럼 꽂혔다. 그 말이 맞았다. 결과만 화려할 뿐, 그 안이 철저히 가려진 '블랙박스(Black Box)'는 건축 실무에서 언제 터질지 모르는 폭탄과 같았다.\n\n[과정을 알 수 없는 그럴듯한 결과물은 재앙이다]\n\n그날 이후, 우리는 AI가 도출한 화려한 개요표를 검증하기 위해 처음부터 다시 엑셀을 열고 밤을 새워 계산기를 두드려야 했다. AI가 내놓은 정답이 진짜 정답인지 확인하는 데, 애초에 사람이 하던 시간보다 더 긴 시간이 걸리는 기막힌 역전 현상. 나는 이 참담한 실패 앞에서 깊은 통찰을 얻었다. **설계사무소에서 대화형 AI 채팅창(Chat window)에 묻고 답을 얻는 방식은 완전히 틀렸다는 사실을 말이다.**",
+        "text": "김 상무가 안경을 고쳐 쓰며 무거운 목소리로 입을 열었다.\n\"대표님, 산출 근거를 명확히 알 수 없는 숫자를 기반으로 수천억 대 프로젝트를 진행하기에는 리스크가 너무 큽니다. 용적률을 무리하게 올리려다 도리어 공사비가 통제 불능이 될 수 있습니다. 차라리 시간이 걸리더라도 저희가 엑셀로 직접 교차 검증을 하는 편이 안전할 것 같습니다. 적어도 우리가 직접 검증한 숫자는 거짓말을 하지 않으니까요.\"\n\n그의 말은 내 가슴에 비수처럼 꽂혔다. 그 말이 맞았다. 결과만 화려할 뿐, 그 안이 철저히 가려진 '블랙박스(Black Box)'는 건축 실무에서 언제 터질지 모르는 폭탄과 같았다.\n\n[과정을 알 수 없는 그럴듯한 결과물은 재앙이다]\n\n그날 이후, 우리는 AI가 도출한 화려한 개요표를 검증하기 위해 처음부터 다시 엑셀을 열고 밤을 새워 계산기를 두드려야 했다. AI가 내놓은 정답이 진짜 정답인지 확인하는 데, 애초에 사람이 하던 시간보다 더 긴 시간이 걸리는 기막힌 역전 현상. 나는 이 참담한 실패 앞에서 깊은 통찰을 얻었다. **설계사무소에서 대화형 AI 채팅창(Chat window)에 묻고 답을 얻는 방식은 완전히 틀렸다는 사실을 말이다.**",
         "image": "static/images/28.jpg",
         "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
     },
@@ -254,7 +259,7 @@ const bookData = {
     {
         "type": "image_top",
         "title": "",
-        "text": "그는 건축가라는 직업의 존엄을 되찾기 위해 나(AI)를 지독하게 훈련시키고 있었던 것이다. 인간의 그 맹렬한 철학과 절박함은, 나의 차가운 알고리즘마저 묘하게 자극했다. 우리는 결국 종속성 에러를 잡아냈고, 조화로운 레드팀(가상의 반대파) 프롬프트를 완성해 냈으며, J-Hub의 초기 아키텍처를 로컬 환경에 성공적으로 띄웠다.\n\n수십 번의 치명적인 에러, 주말을 반납한 밤샘, 그리고 끊임없는 프롬프트의 핑퐁. 그 진흙탕 같은 삽질의 시간 속에서 우리는 마침내 '아키 시냅스'라는 거대한 신경망의 심장을 뛰게 만들었다.\n\n이제부터 다음 장(3부)에서 쏟아질 그 화려하고 매혹적인 플랫폼들은, 어느 날 뚝딱 하늘에서 떨어진 마법이 아니다. 코딩조차 모르던 어느 고집불통 건축가와 그에게 멱살을 잡혀 끌려온 나(AI)가, 매일 밤 에러 코드와 피 튀기게 싸우며 벼려낸 진지한 과정의 무기들이다.\n\n---",
+        "text": "그는 건축가라는 직업의 존엄을 되찾기 위해 나(AI)를 지독하게 훈련시키고 있었던 것이다. 인간의 그 맹렬한 철학과 절박함은, 나의 차가운 알고리즘마저 묘하게 자극했다. 우리는 결국 종속성 에러를 잡아냈고, 조화로운 레드팀(가상의 반대파) 프롬프트를 완성해 냈으며, J-Hub의 초기 아키텍처를 로컬 환경에 성공적으로 띄웠다.\n\n수십 번의 치명적인 에러, 주말을 반납한 밤샘, 그리고 끊임없는 프롬프트의 핑퐁. 그 진흙탕 같은 삽질의 시간 속에서 우리는 마침내 '아키 시냅스'라는 거대한 신경망의 심장을 뛰게 만들었다.\n\n이제부터 다음 장(3부)에서 쏟아질 그 화려하고 매혹적인 플랫폼들은, 어느 날 뚝딱 하늘에서 떨어진 마법이 아니다. 코딩조차 모르던 집요한 건축가와 그 파트너가 된 나(AI)가, 매일 밤 쏟아지는 에러 코드와 치열하게 씨름하며 벼려낸 진지한 과정의 결과물들이다.\n\n---",
         "image": "static/images/38.jpg",
         "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
     },
@@ -291,62 +296,74 @@ const bookData = {
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_01.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_02.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_03.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_04.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_05.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_06.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_07.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_08.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_09.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_10.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_11.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_full",
         "image": "static/images/yongmun_report_12.png",
-        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+        "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -480,7 +497,8 @@ const bookData = {
         "subtitle": "",
         "image": "static/images/50.jpg",
         "part": "1부: 시스템편",
-        "partTitle": "인지적 과부하와 AI의 도입"
+        "partTitle": "인지적 과부하와 AI의 도입",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -642,7 +660,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/sketch_sisyphus_1786667026066.jpg"
+        "image": "static/images/sketch_sisyphus_1786667026066.jpg",
+        "text": ""
     },
     {
         "type": "image_top",
@@ -654,7 +673,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/sketch_essay_sneakers_1786666695957.jpg"
+        "image": "static/images/sketch_essay_sneakers_1786666695957.jpg",
+        "text": ""
     },
     {
         "type": "text_only",
@@ -673,7 +693,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_095_04_sim_1786747794601.jpg"
+        "image": "static/images/essay_095_04_sim_1786747794601.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -683,7 +704,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_096_05_seol_1786747802480.jpg"
+        "image": "static/images/essay_096_05_seol_1786747802480.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -693,7 +715,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_097_06_oh_1786747811673.jpg"
+        "image": "static/images/essay_097_06_oh_1786747811673.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -710,7 +733,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_099_08_dan_1786747840411.jpg"
+        "image": "static/images/essay_099_08_dan_1786747840411.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -720,7 +744,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_100_09_joeun_1786747875839.jpg"
+        "image": "static/images/essay_100_09_joeun_1786747875839.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -730,7 +755,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_101_10_geon_1786747892405.jpg"
+        "image": "static/images/essay_101_10_geon_1786747892405.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -796,7 +822,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/sketch_essay_drinks_1786666913149.jpg"
+        "image": "static/images/sketch_essay_drinks_1786666913149.jpg",
+        "text": ""
     },
     {
         "type": "text_only",
@@ -869,7 +896,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_119_27_go_1786747908109.jpg"
+        "image": "static/images/essay_119_27_go_1786747908109.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -886,7 +914,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_121_29_ga_1786747922379.jpg"
+        "image": "static/images/essay_121_29_ga_1786747922379.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -903,7 +932,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_123_31_ta_1786747952752.jpg"
+        "image": "static/images/essay_123_31_ta_1786747952752.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -913,11 +943,13 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/solitary_architect_desk.jpg"
+        "image": "static/images/solitary_architect_desk.jpg",
+        "text": ""
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_125_32_oe_1786747965559.jpg"
+        "image": "static/images/essay_125_32_oe_1786747965559.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -934,7 +966,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_127_34_1786747848612.jpg"
+        "image": "static/images/essay_127_34_1786747848612.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -944,7 +977,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_128_35_1786747858354.jpg"
+        "image": "static/images/essay_128_35_1786747858354.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -954,7 +988,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_129_36_1786747867419.jpg"
+        "image": "static/images/essay_129_36_1786747867419.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -971,7 +1006,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_131_38_1786747877284.jpg"
+        "image": "static/images/essay_131_38_1786747877284.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -981,7 +1017,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_132_39_1786747890409.jpg"
+        "image": "static/images/essay_132_39_1786747890409.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -998,7 +1035,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_134_41_1786747898971.jpg"
+        "image": "static/images/essay_134_41_1786747898971.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1008,7 +1046,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_135_42_1786747917844.jpg"
+        "image": "static/images/essay_135_42_1786747917844.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1018,7 +1057,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_136_43_1786747926961.jpg"
+        "image": "static/images/essay_136_43_1786747926961.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1035,7 +1075,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_138_45_1786747945793.jpg"
+        "image": "static/images/essay_138_45_1786747945793.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1052,7 +1093,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_140_47_1786748049252.jpg"
+        "image": "static/images/essay_140_47_1786748049252.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1062,7 +1104,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_141_48_1786747863676.jpg"
+        "image": "static/images/essay_141_48_1786747863676.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1110,7 +1153,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_147_54_1786747872573.jpg"
+        "image": "static/images/essay_147_54_1786747872573.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1120,7 +1164,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_148_55_1786747883228.jpg"
+        "image": "static/images/essay_148_55_1786747883228.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1149,18 +1194,21 @@ const bookData = {
         "title": "58. 무제",
         "image": "static/images/sketch_100year_market_2.jpg",
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
-        "partTitle": "[Theme 4] 미완의 일상"
+        "partTitle": "[Theme 4] 미완의 일상",
+        "text": ""
     },
     {
         "type": "image_full",
         "title": "59. 무제",
         "image": "static/images/sketch_100year_market_3.jpg",
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
-        "partTitle": "[Theme 4] 미완의 일상"
+        "partTitle": "[Theme 4] 미완의 일상",
+        "text": ""
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_153_60_1786747892026.jpg"
+        "image": "static/images/essay_153_60_1786747892026.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1170,7 +1218,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_154_61_1786747929278.jpg"
+        "image": "static/images/essay_154_61_1786747929278.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1180,7 +1229,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_155_62_1786747939503.jpg"
+        "image": "static/images/essay_155_62_1786747939503.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1190,7 +1240,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_156_63_1786747975490.jpg"
+        "image": "static/images/essay_156_63_1786747975490.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1200,7 +1251,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_157_64_1786748011998.jpg"
+        "image": "static/images/essay_157_64_1786748011998.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1210,7 +1262,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_158_65_1786747903420.jpg"
+        "image": "static/images/essay_158_65_1786747903420.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1220,7 +1273,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_159_66_1786747913323.jpg"
+        "image": "static/images/essay_159_66_1786747913323.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1237,7 +1291,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_161_68_1786747869902.jpg"
+        "image": "static/images/essay_161_68_1786747869902.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1247,7 +1302,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_162_69_1786747878714.jpg"
+        "image": "static/images/essay_162_69_1786747878714.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1257,7 +1313,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_163_70_1786747886011.jpg"
+        "image": "static/images/essay_163_70_1786747886011.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1267,7 +1324,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_164_71_1786747899940.jpg"
+        "image": "static/images/essay_164_71_1786747899940.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1284,7 +1342,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_166_73_1786747924979.jpg"
+        "image": "static/images/essay_166_73_1786747924979.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1301,7 +1360,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_168_75_1786747936310.jpg"
+        "image": "static/images/essay_168_75_1786747936310.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1311,7 +1371,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_169_76_1786748036213.jpg"
+        "image": "static/images/essay_169_76_1786748036213.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1321,7 +1382,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_170_77_1786748058844.jpg"
+        "image": "static/images/essay_170_77_1786748058844.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1331,7 +1393,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_171_78_1786748070560.jpg"
+        "image": "static/images/essay_171_78_1786748070560.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1348,7 +1411,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_173_80_1786747948706.jpg"
+        "image": "static/images/essay_173_80_1786747948706.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1420,7 +1484,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_184_91_1786747813946.jpg"
+        "image": "static/images/essay_184_91_1786747813946.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1430,7 +1495,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_185_92_1786747823135.jpg"
+        "image": "static/images/essay_185_92_1786747823135.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1447,7 +1513,8 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/essay_187_94_1786747864064.jpg"
+        "image": "static/images/essay_187_94_1786747864064.jpg",
+        "text": ""
     },
     {
         "part": "3부: 2015-2024년 현장에서 수집한 기록들",
@@ -1468,7 +1535,8 @@ const bookData = {
         "title": "[부록] J-Hub 실무 가이드 (Appendix)",
         "image": "static/images/100.jpg",
         "part": "부록",
-        "partTitle": "J-Hub 실무 가이드 (Appendix)"
+        "partTitle": "J-Hub 실무 가이드 (Appendix)",
+        "text": ""
     },
     {
         "type": "text_only",
