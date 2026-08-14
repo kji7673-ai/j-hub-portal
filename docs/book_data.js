@@ -13,7 +13,7 @@ const bookData = {
         "image": "static/images/sketch_philosophy_1786665818552.jpg"
     },
     {
-        "type": "split",
+        "type": "image_top",
         "title": "프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기",
         "subtitle": "",
         "image": "static/images/3.jpg",
