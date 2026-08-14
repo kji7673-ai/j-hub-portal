@@ -249,8 +249,7 @@ const bookData = {
         "subtitle": "",
         "image": "static/images/68.jpg",
         "part": "2부: 철학편",
-        "partTitle": "시스템 너머의 본질",
-        "text": "<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[AI와의 대화]</h4>\nAI는 수천 장의 마스터플랜을 학습하여 시각적으로 가장 완벽한 황금비를 1초 만에 스크린에 띄웁니다. 하지만 웅장한 로비에 들어섰을 때 인간이 느끼는 낯선 경외감이나, 낮게 떨어지는 처마 밑에서 느끼는 포근함이라는 '감각의 크기'를 결코 이해하지 못합니다. 숫자로 환산된 면적이 아니라, 공간 안에서 연약한 인간이 느끼는 감정의 스케일은 오직 사람만이 조율할 수 있습니다.\n</div>"
+        "partTitle": "시스템 너머의 본질"
     },
     {
         "type": "cover",
