@@ -136,7 +136,7 @@ const bookData = {
             "type": "image_full",
             "title": "2부. [시스템편] AI라는 환각의 숲을 지나다 (기술의 배신과 레드팀)",
             "subtitle": "",
-            "image": "static/images/sketch_redteam_1786665807608.jpg"
+            "image": "static/images/sketch_hallucination_forest_1786669354715.jpg"
         },
         {
             "type": "image_top",
