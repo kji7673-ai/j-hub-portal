@@ -228,7 +228,7 @@
             object-fit: contain;
             border-radius: 18px; /* Apple rounded.lg */
             box-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0; /* Apple's single signature drop-shadow */
-            background-color: var(--canvas);
+            background-color: transparent;
             display: block;
         }
         /* Controls */
@@ -768,7 +768,7 @@
                             extraImgStyle = "max-width: 700px; width: 80%; margin-bottom: 40px;";
                         }
                     }
-                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}" style="${extraImgStyle}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}" style="${extraImgStyle}"><img src="${page.image}" alt="sketch" loading="lazy"></div>`;
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
                     if(page.text) {
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--primary);">$1</strong>');
@@ -796,7 +796,7 @@
                     pageEl.style.padding = '0';
                     if(page.image) {
                         contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; padding:0; z-index:0; background:#000;">
-                            <img src="${page.image}" alt="full_image" style="width:100%; height:100%; object-fit:cover; opacity: 0.85;">
+                            <img src="${page.image}" alt="full_image" style="width:100%; height:100%; object-fit:cover; opacity: 0.85;" loading="lazy">
                         </div>`;
                     }
                     if(page.title || page.subtitle || page.text) {
