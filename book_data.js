@@ -6,7 +6,7 @@ const bookData = {
             "type": "image_full",
             "title": "도면 위에 머무는 시간",
             "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-            "image": "static/images/1.jpg"
+            "image": "static/images/1_1786840438550.jpg"
         },
         {
             "type": "author_profile",
@@ -14,7 +14,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_3_1_1786749920872.jpg"
+            "image": "static/images/essay_3_1_1786749920872_1786840450810.jpg"
         },
         {
             "type": "image_top",
@@ -27,13 +27,13 @@ const bookData = {
             "type": "image_full",
             "title": "1장. 우리는 왜 설계하지 못하는가? (인지적 과부하의 시대)",
             "subtitle": "",
-            "image": "static/images/9.jpg",
+            "image": "static/images/9_1786840582616.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_5_1786750073122.jpg"
+            "image": "static/images/essay_5_1786750073122_1786840596745.jpg"
         },
         {
             "type": "image_top",
@@ -52,7 +52,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_10_3_ai_1786750085223.jpg"
+            "image": "static/images/essay_10_3_ai_1786750085223_1786840613207.jpg"
         },
         {
             "type": "image_top",
@@ -86,7 +86,7 @@ const bookData = {
             "type": "image_full",
             "title": "3장. AI라는 환각의 숲을 지나다 (기술의 배신과 레드팀)",
             "subtitle": "",
-            "image": "static/images/sketch_hallucination_forest_1786669354715.jpg",
+            "image": "static/images/sketch_hallucination_forest_1786669354715_1786840623984.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
@@ -100,7 +100,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_17_interlude_1786750126271.jpg"
+            "image": "static/images/essay_17_interlude_1786750126271_1786840636697.jpg"
         },
         {
             "type": "image_top",
@@ -111,7 +111,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_18_6_arch_1786750178405.jpg"
+            "image": "static/images/essay_18_6_arch_1786750178405_1786840658579.jpg"
         },
         {
             "type": "image_top",
@@ -122,7 +122,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_19_7_1786750189144.jpg"
+            "image": "static/images/essay_19_7_1786750189144_1786840673052.jpg"
         },
         {
             "type": "image_top",
@@ -140,7 +140,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_16_5_4_1786750112517.jpg"
+            "image": "static/images/essay_16_5_4_1786750112517_1786840683761.jpg"
         },
         {
             "type": "text_only",
@@ -170,7 +170,7 @@ const bookData = {
             "type": "image_full",
             "title": "7장. 통찰력을 시스템화하다 (J-Hub 프로젝트)",
             "subtitle": "",
-            "image": "static/images/38.jpg",
+            "image": "static/images/38_1786840691856.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
@@ -225,7 +225,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_36_1786750201392.jpg"
+            "image": "static/images/essay_36_1786750201392_1786840706786.jpg"
         },
         {
             "type": "text_only",
@@ -236,7 +236,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_37_8_case_1_1786750212887.jpg"
+            "image": "static/images/essay_37_8_case_1_1786750212887_1786840719722.jpg"
         },
         {
             "type": "image_top",
@@ -247,7 +247,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_38_1786750240483.jpg"
+            "image": "static/images/essay_38_1786750240483_1786840735062.jpg"
         },
         {
             "type": "image_top",
@@ -330,62 +330,62 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_01.png",
+            "image": "static/images/yongmun_report_01_1786840817908.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_02.png",
+            "image": "static/images/yongmun_report_02_1786840832853.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_03.png",
+            "image": "static/images/yongmun_report_03_1786841011305.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_04.png",
+            "image": "static/images/yongmun_report_04_1786841263911.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_05.png",
+            "image": "static/images/yongmun_report_05_1786841283227.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_06.png",
+            "image": "static/images/yongmun_report_06_1786841296259.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_07.png",
+            "image": "static/images/yongmun_report_07_1786840561846.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_08.png",
+            "image": "static/images/yongmun_report_08_1786841017355.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_09.png",
+            "image": "static/images/yongmun_report_09_1786841031484.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_10.png",
+            "image": "static/images/yongmun_report_10_1786841318744.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_11.png",
+            "image": "static/images/yongmun_report_11_1786841329387.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/yongmun_report_12.png",
+            "image": "static/images/yongmun_report_12_1786841360251.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
@@ -404,7 +404,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_66_universal_in_1786804348289.jpg"
+            "image": "static/images/essay_66_universal_in_1786804348289_1786841371529.jpg"
         },
         {
             "type": "image_top",
@@ -416,7 +416,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_67_1786749892518.jpg"
+            "image": "static/images/essay_67_1786749892518_1786841383679.jpg"
         },
         {
             "type": "text_only",
@@ -428,7 +428,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_68_ai_1786749965247.jpg"
+            "image": "static/images/essay_68_ai_1786749965247_1786841395371.jpg"
         },
         {
             "type": "image_top",
@@ -475,7 +475,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_62_1786749812878.jpg"
+            "image": "static/images/essay_62_1786749812878_1786841487071.jpg"
         },
         {
             "type": "text_only",
@@ -487,7 +487,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_63_10_case_3_1786749823507.jpg"
+            "image": "static/images/essay_63_10_case_3_1786749823507_1786840542868.jpg"
         },
         {
             "type": "image_top",
@@ -499,7 +499,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_78_13_1786750196565.jpg"
+            "image": "static/images/essay_78_13_1786750196565_1786840573490.jpg"
         },
         {
             "type": "image_top",
@@ -517,7 +517,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_66_1786749865523.jpg"
+            "image": "static/images/essay_66_1786749865523_1786840585101.jpg"
         },
         {
             "type": "image_top",
@@ -529,7 +529,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_82_2_1786750227920.jpg"
+            "image": "static/images/essay_82_2_1786750227920_1786840732748.jpg"
         },
         {
             "type": "text_only",
@@ -548,7 +548,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_86_3_1786749867379.jpg"
+            "image": "static/images/essay_86_3_1786749867379_1786840754748.jpg"
         },
         {
             "type": "cover",
@@ -567,7 +567,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_89_1786749987633.jpg"
+            "image": "static/images/essay_89_1786749987633_1786840726500.jpg"
         },
         {
             "type": "image_top",
@@ -578,7 +578,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_90_1786749997485.jpg"
+            "image": "static/images/essay_90_1786749997485_1786840770371.jpg"
         },
         {
             "type": "text_only",
@@ -617,7 +617,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_095_04_sim_1786747794601.jpg"
+            "image": "static/images/essay_095_04_sim_1786747794601_1786840828052.jpg"
         },
         {
             "type": "image_top",
@@ -629,7 +629,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_097_06_oh_1786747811673.jpg"
+            "image": "static/images/essay_097_06_oh_1786747811673_1786840993132.jpg"
         },
         {
             "type": "image_top",
@@ -641,7 +641,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_099_08_dan_1786747840411.jpg"
+            "image": "static/images/essay_099_08_dan_1786747840411_1786841005130.jpg"
         },
         {
             "type": "image_top",
@@ -653,7 +653,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_100_09_joeun_1786747875839.jpg"
+            "image": "static/images/essay_100_09_joeun_1786747875839_1786840516334.jpg"
         },
         {
             "type": "image_top",
@@ -665,7 +665,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_101_10_geon_1786747892405.jpg"
+            "image": "static/images/essay_101_10_geon_1786747892405_1786840528576.jpg"
         },
         {
             "type": "text_only",
@@ -677,7 +677,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_102_07_1786750019172.jpg"
+            "image": "static/images/essay_102_07_1786750019172_1786840542745.jpg"
         },
         {
             "type": "text_only",
@@ -689,7 +689,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_104_action_3_j_edu_1786805306928.jpg"
+            "image": "static/images/essay_104_action_3_j_edu_1786805306928_1786840735145.jpg"
         },
         {
             "type": "text_only",
@@ -701,7 +701,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_105_1jang_design_1_1786805323246.jpg"
+            "image": "static/images/essay_105_1jang_design_1_1786805323246_1786840876787.jpg"
         },
         {
             "type": "text_only",
@@ -713,7 +713,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_106_2jang_design_2_1786805420956.jpg"
+            "image": "static/images/essay_106_2jang_design_2_1786805420956_1786840894930.jpg"
         },
         {
             "type": "text_only",
@@ -733,7 +733,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_111_13_1786750173856.jpg"
+            "image": "static/images/essay_111_13_1786750173856_1786840908731.jpg"
         },
         {
             "type": "image_top",
@@ -745,7 +745,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_113_15_1786750201402.jpg"
+            "image": "static/images/essay_113_15_1786750201402_1786840919707.jpg"
         },
         {
             "type": "image_top",
@@ -764,7 +764,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/sketch_sisyphus_1786667026066.jpg",
+            "image": "static/images/sketch_sisyphus_1786667026066_1786840931767.jpg",
             "text": ""
         },
         {
@@ -777,7 +777,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_119_27_go_1786747908109.jpg"
+            "image": "static/images/essay_119_27_go_1786747908109_1786840945742.jpg"
         },
         {
             "type": "text_only",
@@ -935,7 +935,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/sketch_essay_drinks_1786666913149.jpg",
+            "image": "static/images/sketch_essay_drinks_1786666913149_1786840434474.jpg",
             "text": ""
         },
         {
@@ -948,7 +948,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_153_19_100_1786804808674.jpg"
+            "image": "static/images/essay_153_19_100_1786804808674_1786840451514.jpg"
         },
         {
             "type": "text_only",
@@ -960,7 +960,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_154_61_1786747929278.jpg"
+            "image": "static/images/essay_154_61_1786747929278_1786840466111.jpg"
         },
         {
             "type": "image_top",
@@ -972,7 +972,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_156_44_1786750211657.jpg"
+            "image": "static/images/essay_156_44_1786750211657_1786840777956.jpg"
         },
         {
             "type": "image_top",
@@ -984,7 +984,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_158_65_1786747903420.jpg"
+            "image": "static/images/essay_158_65_1786747903420_1786840790201.jpg"
         },
         {
             "type": "image_top",
@@ -996,7 +996,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_122_23_1786750002921.jpg"
+            "image": "static/images/essay_122_23_1786750002921_1786840820186.jpg"
         },
         {
             "type": "image_top",
@@ -1008,7 +1008,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_162_69_1786747878714.jpg"
+            "image": "static/images/essay_162_69_1786747878714_1786840834065.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1019,7 +1019,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_164_71_1786747899940.jpg"
+            "image": "static/images/essay_164_71_1786747899940_1786840864166.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1030,7 +1030,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_166_73_1786747924979.jpg"
+            "image": "static/images/essay_166_73_1786747924979_1786840877255.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1041,7 +1041,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_168_75_1786747936310.jpg"
+            "image": "static/images/essay_168_75_1786747936310_1786840963789.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1344,14 +1344,14 @@ const bookData = {
         {
             "type": "image_full",
             "title": "58. 무제",
-            "image": "static/images/sketch_100year_market_2.jpg",
+            "image": "static/images/sketch_100year_market_2_1786841003338.jpg",
             "part": "3부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상"
         },
         {
             "type": "image_full",
             "title": "59. 무제",
-            "image": "static/images/sketch_100year_market_3.jpg",
+            "image": "static/images/sketch_100year_market_3_1786841159363.jpg",
             "part": "3부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상"
         },
@@ -1467,7 +1467,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_272_74_1786805386306.jpg"
+            "image": "static/images/essay_272_74_1786805386306_1786840617270.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1502,7 +1502,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_281_79_1786805405583.jpg"
+            "image": "static/images/essay_281_79_1786805405583_1786840625676.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1513,7 +1513,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_173_80_1786747948706.jpg",
+            "image": "static/images/essay_173_80_1786747948706_1786840639791.jpg",
             "text": ""
         },
         {
@@ -1524,7 +1524,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_284_81_1786805417713.jpg"
+            "image": "static/images/essay_284_81_1786805417713_1786840727083.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1534,7 +1534,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_285_82_1786805426347.jpg"
+            "image": "static/images/essay_285_82_1786805426347_1786840740195.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1545,7 +1545,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_286_83_1786805445531.jpg"
+            "image": "static/images/essay_286_83_1786805445531_1786840876479.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1555,7 +1555,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_218_84_1786750205729.jpg"
+            "image": "static/images/essay_218_84_1786750205729_1786841458728.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1571,7 +1571,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_220_86_1786749996064.jpg"
+            "image": "static/images/essay_220_86_1786749996064_1786841471086.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1587,7 +1587,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_222_88_1786750176678.jpg"
+            "image": "static/images/essay_222_88_1786750176678_1786841488293.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1603,7 +1603,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_224_90_1786750195478.jpg"
+            "image": "static/images/essay_224_90_1786750195478_1786841501847.jpg"
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1639,7 +1639,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_309_j_hub_1786805619048.jpg"
+            "image": "static/images/essay_309_j_hub_1786805619048_1786841606227.jpg"
         },
         {
             "type": "image_top",
@@ -1651,7 +1651,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_310_j_hub_1786805628658.jpg"
+            "image": "static/images/essay_310_j_hub_1786805628658_1786841765096.jpg"
         },
         {
             "type": "cover",
@@ -1662,7 +1662,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_311_1786804257277.jpg"
+            "image": "static/images/essay_311_1786804257277_1786841903268.jpg"
         },
         {
             "type": "text_only",
@@ -1674,7 +1674,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_312_qr_1786804267305.jpg"
+            "image": "static/images/essay_312_qr_1786804267305_1786841912131.jpg"
         },
         {
             "type": "text",
@@ -1685,7 +1685,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_313_1786804865246.jpg"
+            "image": "static/images/essay_313_1786804865246_1786841941592.jpg"
         },
         {
             "type": "image_top",
@@ -1695,7 +1695,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_314_1786804875954.jpg"
+            "image": "static/images/essay_314_1786804875954_1786841948814.jpg"
         },
         {
             "type": "text_only",
@@ -1707,7 +1707,7 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/essay_315_1786804911329.jpg"
+            "image": "static/images/essay_315_1786804911329_1786841957590.jpg"
         },
         {
             "type": "image_top",
