@@ -19,7 +19,7 @@
             --primary: #0066cc;
             --ink: #1d1d1f;
             --canvas: #ffffff;
-            --canvas-parchment: #f5f5f7;
+            --canvas-parchment: #ffffff;
             --hairline: #e0e0e0;
             --font-display: "SF Pro Display", system-ui, -apple-system, sans-serif;
             --font-body: "SF Pro Text", system-ui, -apple-system, sans-serif;
@@ -48,9 +48,7 @@
             max-width: 90vh; /* Responsive sizing for tablets */
             aspect-ratio: 1 / 1; /* Square format for 210x210 */
             background-color: #ffffff; /* Warm paper color */
-            box-shadow: 
-                inset 20px 0 30px -10px rgba(0,0,0,0.05), /* Subtle book spine shadow on the left */
-                0 15px 40px rgba(0,0,0,0.12); /* Outer elevation */
+            
             position: relative;
             display: flex;
             flex-direction: column;
@@ -314,7 +312,7 @@
             background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;
         }
         .secret-modal-content {
-            background: #fff; padding: 30px; border-radius: 18px; width: 300px; text-align: center;
+            background: #fff; padding: 30px; border-radius: 0; width: 300px; text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         .secret-modal input {
@@ -349,7 +347,7 @@
         }
         .feedback-box {
             flex: 1; border: 1px solid #d2d2d7; border-radius: 12px; padding: 15px;
-            background: #f5f5f7; font-family: 'SF Pro Text', sans-serif; font-size: 14px;
+            background: #ffffff; font-family: 'SF Pro Text', sans-serif; font-size: 14px;
             overflow-y: auto; line-height: 1.5; color: #1d1d1f;
         }
         .panel-footer { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
@@ -412,7 +410,7 @@
             border-bottom: 1px solid var(--hairline);
         }
         .custom-table th {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             font-weight: 600;
             color: #333;
         }
@@ -473,7 +471,7 @@
             line-height: 1.4;
         }
         .toc-item:hover {
-            background: var(--canvas-parchment);
+            background: #ffffff;
             color: var(--primary);
         }
         .toc-overlay {
@@ -503,7 +501,7 @@
             height: 100%;
             padding: 40px;
             text-align: center;
-            background: linear-gradient(135deg, var(--canvas) 0%, var(--canvas-parchment) 100%);
+            background: linear-gradient(135deg, var(--canvas) 0%, #ffffff 100%);
         }
         .author-header {
             margin-bottom: 32px;
@@ -747,7 +745,7 @@
                 else if (page.type === 'author_profile') {
                     contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
                     contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
-                    contentHTML += `<div style="background: var(--canvas-parchment, #f5f5f7); border-radius: 18px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--hairline, #e0e0e0); width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
                     contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
                     contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
                     
@@ -887,7 +885,7 @@
                 else if (page.type === 'author_profile') {
                     contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
                     contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
-                    contentHTML += `<div style="background: var(--canvas-parchment, #f5f5f7); border-radius: 18px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--hairline, #e0e0e0); width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
                     contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
                     contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
                     
@@ -1025,7 +1023,7 @@
                 else if (page.type === 'author_profile') {
                     contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
                     contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
-                    contentHTML += `<div style="background: var(--canvas-parchment, #f5f5f7); border-radius: 18px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--hairline, #e0e0e0); width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
                     contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
                     contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
                     
@@ -1169,7 +1167,7 @@
                 else if (page.type === 'author_profile') {
                     contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
                     contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
-                    contentHTML += `<div style="background: var(--canvas-parchment, #f5f5f7); border-radius: 18px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--hairline, #e0e0e0); width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
                     contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
                     contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
                     
