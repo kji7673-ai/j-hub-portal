@@ -6,22 +6,25 @@ const bookData = {
             "type": "image_full",
             "title": "도면 위에 머무는 시간",
             "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-            "image": "static/images/user_117.jpg"
+            "image": "static/images/user_117.jpg",
+            "text": ""
         },
         {
             "type": "author_profile",
-            "image": "static/images/sketch_philosophy_1786665818552.jpg"
+            "image": "static/images/sketch_philosophy_1786665818552.jpg",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_116.jpg"
+            "image": "static/images/user_116.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기",
             "subtitle": "",
             "image": "static/images/3.jpg",
-            "text": "<p style=\"font-size: 1.1em; line-height: 1.8; margin-bottom: 24px;\">안녕하세요. 도면 위에서, 그리고 거친 현장에서 26년째 구르고 있는 평범한 건축 쟁이입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">처음 이 기록을 엮기로 마음먹었을 때, 참 많은 망설임이 있었습니다. 시중에는 이미 AI와 혁신을 다루는 훌륭한 전문가들의 책이 차고 넘치기 때문입니다. 하지만 용기를 내어 이 부끄러운 기록을 세상에 꺼내놓는 이유는 단 하나입니다. 이 책은 'AI로 이렇게 성공했다'를 자랑하기 위한 매뉴얼이 아니라, <strong style=\"color: var(--primary);\">서류 더미에 파묻혀 '진짜 설계'를 잃어버릴 뻔했던 한 건축가의 처절한 생존기</strong>이기 때문입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">언제부터인가 우리는 선을 긋고 공간을 상상하는 시간보다, 엑셀 칸을 채우고 심의 서류를 넘기며 해명하는 데 더 많은 밤을 지새우게 되었습니다. 이러다가는 정말 건축이 서류로만 남는 '페이퍼 아키텍처'가 되어버릴 것 같다는 두려움이 엄습했습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">제가 '아키 시냅스(Archisynapse)'와 같은 AI 시스템을 필사적으로 구축했던 이유는 기술이 좋아서가 아니었습니다. 기계가 할 수 있는 차가운 일들은 기계에게 모두 넘겨주고, <strong style=\"color: var(--primary);\">우리 인간만이 할 수 있는 '따뜻한 본질'로 다시 돌아가기 위한 몸부림</strong>이었습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">이 책은 다소 불친절하고 이질적인 세 가지 이야기로 구성되어 있습니다.<br>독자 여러분께 이 책을 어떻게 읽어주십사 하는 작은 <strong>안내(Guide)</strong>를 덧붙입니다.</p>\n\n<ul style=\"margin-bottom: 24px; padding-left: 20px; line-height: 1.7;\">\n  <li style=\"margin-bottom: 12px;\"><strong>1부 [시스템편]</strong> 은 쏟아지는 업무의 과부하 속에서 살아남기 위해 발버둥 치며 만들어낸 '도구'에 대한 기록입니다. 행정적 늪에 빠져 허우적대는 실무자나 경영진이 계신다면, 이 파트가 작은 돌파구가 되기를 바랍니다.</li>\n  <li style=\"margin-bottom: 12px;\"><strong>2부 [철학편]</strong> 은 그렇게 얻어낸 귀중한 시간 동안, 다시 도면 앞에 앉아 치열하게 고민했던 '건축의 본질'에 대한 이야기입니다. 완벽한 AI의 연산 앞에서도, 결국 여백을 남기고 주변에 순응하는 '불완전한 선택'은 우리 인간의 몫이어야 함을 담았습니다.</li>\n  <li style=\"margin-bottom: 12px;\"><strong>3부 [증언과 성찰]</strong> 은 화려한 시스템과 거창한 철학 뒤에 숨겨진, 한 명의 쟁이로서 느꼈던 찌질하고도 솔직한 감정의 파편들입니다. 찢어진 운동화, 억지스러운 타협, 텅 빈 도면 앞에서의 외로움 등 날것의 일기를 그대로 남겨두었습니다.</li>\n</ul>\n\n<p style=\"margin-bottom: 24px;\">기술 서적을 기대하셨다면 3부의 감정이 낯설게 느껴지실 수도, 에세이를 기대하셨다면 1부의 시스템이 딱딱하게 느껴지실 수도 있습니다. 하지만 이 모든 모순된 파편들이 모여야만 '건축'이라는 거대한 유기체가 굴러간다는 사실을, 현장에 계신 분들이라면 깊이 공감해 주시리라 믿습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">단 한 분에게라도, 이 부족하고 투박한 기록이 무거운 일상을 버텨내는 작은 위로이자 내일을 그릴 수 있는 실용적인 도구가 되기를 진심으로 바랍니다.</p>\n\n<p style=\"font-weight: 600; text-align: right; margin-top: 40px; font-size: 1.1em; color: var(--primary);\">도면 위에 머무는 우리의 시간이 다시 온전히 우리의 것이 되기를 기원하며.</p>"
+            "text": "<p style=\"font-size: 1.1em; line-height: 1.8; margin-bottom: 24px;\">안녕하세요. 도면 위에서, 그리고 거친 현장에서 26년째 구르고 있는 평범한 건축 쟁이입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">처음 이 기록을 엮기로 마음먹었을 때, 참 많은 망설임이 있었습니다. 시중에는 이미 AI와 혁신을 다루는 훌륭한 전문가들의 책이 차고 넘치기 때문입니다. 하지만 용기를 내어 이 부끄러운 기록을 세상에 꺼내놓는 이유는 단 하나입니다. 이 책은 'AI로 이렇게 성공했다'를 자랑하기 위한 매뉴얼이 아니라, <strong >서류 더미에 파묻혀 '진짜 설계'를 잃어버릴 뻔했던 한 건축가의 처절한 생존기</strong>이기 때문입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">언제부터인가 우리는 선을 긋고 공간을 상상하는 시간보다, 엑셀 칸을 채우고 심의 서류를 넘기며 해명하는 데 더 많은 밤을 지새우게 되었습니다. 이러다가는 정말 건축이 서류로만 남는 '페이퍼 아키텍처'가 되어버릴 것 같다는 두려움이 엄습했습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">제가 '아키 시냅스(Archisynapse)'와 같은 AI 시스템을 필사적으로 구축했던 이유는 기술이 좋아서가 아니었습니다. 기계가 할 수 있는 차가운 일들은 기계에게 모두 넘겨주고, <strong >우리 인간만이 할 수 있는 '따뜻한 본질'로 다시 돌아가기 위한 몸부림</strong>이었습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">이 책은 다소 불친절하고 이질적인 세 가지 이야기로 구성되어 있습니다.<br>독자 여러분께 이 책을 어떻게 읽어주십사 하는 작은 <strong>안내(Guide)</strong>를 덧붙입니다.</p>\n\n<ul style=\"margin-bottom: 24px; padding-left: 20px; line-height: 1.7;\">\n  <li style=\"margin-bottom: 12px;\"><strong>1부 [시스템편]</strong> 은 쏟아지는 업무의 과부하 속에서 살아남기 위해 발버둥 치며 만들어낸 '도구'에 대한 기록입니다. 행정적 늪에 빠져 허우적대는 실무자나 경영진이 계신다면, 이 파트가 작은 돌파구가 되기를 바랍니다.</li>\n  <li style=\"margin-bottom: 12px;\"><strong>2부 [철학편]</strong> 은 그렇게 얻어낸 귀중한 시간 동안, 다시 도면 앞에 앉아 치열하게 고민했던 '건축의 본질'에 대한 이야기입니다. 완벽한 AI의 연산 앞에서도, 결국 여백을 남기고 주변에 순응하는 '불완전한 선택'은 우리 인간의 몫이어야 함을 담았습니다.</li>\n  <li style=\"margin-bottom: 12px;\"><strong>3부 [증언과 성찰]</strong> 은 화려한 시스템과 거창한 철학 뒤에 숨겨진, 한 명의 쟁이로서 느꼈던 찌질하고도 솔직한 감정의 파편들입니다. 찢어진 운동화, 억지스러운 타협, 텅 빈 도면 앞에서의 외로움 등 날것의 일기를 그대로 남겨두었습니다.</li>\n</ul>\n\n<p style=\"margin-bottom: 24px;\">기술 서적을 기대하셨다면 3부의 감정이 낯설게 느껴지실 수도, 에세이를 기대하셨다면 1부의 시스템이 딱딱하게 느껴지실 수도 있습니다. 하지만 이 모든 모순된 파편들이 모여야만 '건축'이라는 거대한 유기체가 굴러간다는 사실을, 현장에 계신 분들이라면 깊이 공감해 주시리라 믿습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">단 한 분에게라도, 이 부족하고 투박한 기록이 무거운 일상을 버텨내는 작은 위로이자 내일을 그릴 수 있는 실용적인 도구가 되기를 진심으로 바랍니다.</p>\n\n<p style=\"font-weight: 600; text-align: right; margin-top: 40px; font-size: 1.1em; color: var(--primary);\">도면 위에 머무는 우리의 시간이 다시 온전히 우리의 것이 되기를 기원하며.</p>"
         },
         {
             "type": "image_full",
@@ -29,17 +32,19 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_115.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_114.jpg"
+            "image": "static/images/user_114.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "2장. 엑셀과 서류에 짓눌린 건축가들",
             "image": "static/images/12.jpg",
-            "text": "[\"건축은 언제부터 화려한 PPT 작업이 되었나\"]\n\n30년 전, 처음 설계사무소에 발을 들였을 때 밤을 새우는 이유는 단 하나였다. 도면 위에서 선 하나를 1mm 옮겼을 때 공간의 볼륨이 어떻게 달라지는지, 빛이 어느 벽면에 부딪혀 부서질지 상상하며 최적의 대안을 찾기 위해서였다. 백지 위에 궤적을 남길 때마다, 우리는 무에서 유를 창조한다는 희열에 온몸이 짜릿했다.\n\n하지만 30년이 지난 지금, 설계사무소의 풍경은 씁쓸하게 일그러져 있다. 어느 순간부터 우리 업계에서는 설계의 본질보다 '어떻게 하면 보기 좋게 포장할 것인가'에 사활을 걸기 시작했다.\n\n그 결과 기형적인 인사 평가 기준이 생겨났다. 입사 5~6년 차까지는 화려한 렌더링 이미지를 만들고 PPT를 예쁘게 꾸미는 직원이 이른바 '에이스' 대접을 받는다. 하지만 슬픈 현실은, 그렇게 10년, 20년 동안 보기 좋은 치장 업무만 하다 보니 정작 연차가 쌓였음에도 자기 손으로 온전한 평면도 하나 그려내지 못하는 '반쪽짜리 전문가'들이 양산되고 있다는 점이다. 그들은 결국 메이저 대형 설계사무소의 거대한 컨베이어 벨트 위에서 툭 떨어져 나온 특정 파트의 부속품으로 전락하고 만다.",
+            "text": "[\"건축은 언제부터 화려한 PPT 작업이 되었나\"]\n\n26년 전, 처음 설계사무소에 발을 들였을 때 밤을 새우는 이유는 단 하나였다. 도면 위에서 선 하나를 1mm 옮겼을 때 공간의 볼륨이 어떻게 달라지는지, 빛이 어느 벽면에 부딪혀 부서질지 상상하며 최적의 대안을 찾기 위해서였다. 백지 위에 궤적을 남길 때마다, 우리는 무에서 유를 창조한다는 희열에 온몸이 짜릿했다.\n\n하지만 26년이 지난 지금, 설계사무소의 풍경은 씁쓸하게 일그러져 있다. 어느 순간부터 우리 업계에서는 설계의 본질보다 '어떻게 하면 보기 좋게 포장할 것인가'에 사활을 걸기 시작했다.\n\n그 결과 기형적인 인사 평가 기준이 생겨났다. 입사 5~6년 차까지는 화려한 렌더링 이미지를 만들고 PPT를 예쁘게 꾸미는 직원이 이른바 '에이스' 대접을 받는다. 하지만 슬픈 현실은, 그렇게 10년, 20년 동안 보기 좋은 치장 업무만 하다 보니 정작 연차가 쌓였음에도 자기 손으로 온전한 평면도 하나 그려내지 못하는 '반쪽짜리 전문가'들이 양산되고 있다는 점이다. 그들은 결국 메이저 대형 설계사무소의 거대한 컨베이어 벨트 위에서 툭 떨어져 나온 특정 파트의 부속품으로 전락하고 만다.",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
@@ -52,7 +57,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_113.jpg"
+            "image": "static/images/user_113.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -88,7 +94,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_112.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -100,7 +107,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_111.jpg"
+            "image": "static/images/user_111.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -111,7 +119,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_110.jpg"
+            "image": "static/images/user_110.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -122,7 +131,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_109.jpg"
+            "image": "static/images/user_109.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -140,7 +150,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_108.jpg"
+            "image": "static/images/user_108.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -172,7 +183,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_107.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -205,7 +217,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "김 상무가 헛웃음을 치며 안경을 벗어 던졌다.\n\"이런 블랙박스에서 튀어나온 숫자를 믿고 수천억짜리 프로젝트를 진행하라고요? 용적률 10% 올리려다 공사비 30% 터지는 꼴을 봐야 정신 차리겠습니까? 차라리 먼지 쌓인 주판을 꺼내서 직접 튕기는 게 낫겠다. 적어도 주판은 거짓말은 안 하니까요.\"\n\n그의 말은 내 가슴에 비수처럼 꽂혔다. 그 말이 맞았다. 결과만 화려할 뿐, 그 안이 철저히 가려진 '블랙박스(Black Box)'는 건축 실무에서 언제 터질지 모르는 폭탄과 같았다.\n\n[과정을 알 수 없는 그럴듯한 결과물은 재앙이다]\n\n그날 이후, 우리는 AI가 도출한 화려한 개요표를 검증하기 위해 처음부터 다시 엑셀을 열고 밤을 새워 계산기를 두드려야 했다. AI가 내놓은 정답이 진짜 정답인지 확인하는 데, 애초에 사람이 하던 시간보다 더 긴 시간이 걸리는 기막힌 역전 현상. 나는 이 참담한 실패 앞에서 깊은 통찰을 얻었다. **설계사무소에서 대화형 AI 채팅창(Chat window)에 묻고 답을 얻는 방식은 완전히 틀렸다는 사실을 말이다.**",
+            "text": "직원들이 꽤 그럴싸해 보이는 보고서와 건축 개요표를 들고 본부장실로 찾아왔다. 수십 페이지에 달하는 지자체 조례와 건축법 시행령이 깔끔하게 요약되어 있었고, 표면에 드러난 텍스트들은 완벽해 보였다. 직원들은 \"이제 밤샘 서류 작업은 끝났다\"며 환호성을 질렀다. 나 역시 우리가 마침내 혁신의 최전선에 섰다고 믿어 의심치 않았다.\n\n그런데 서류를 꼼꼼하게 교차 검토하던 본부장의 미간이 좁아지더니, 적막을 깨는 한마디를 던졌다.\n\n\"기부채납 비율 대비 상한 용적률이 너무 높게 잡혔어. 이 '사업성 보정 계수' 수치는 대체 어떻게 계산해서 구한 거야?\"\n\n직원들은 해맑은 표정으로 대답했다.\n\n\"아, 그거 AI한테 물어봐서 작성했습니다.\"\n\n순간, 회의실에 싸늘한 정적이 흘렀다. 어이가 없어진 본부장이 서류를 책상 위에 내려놓으며 물었다.\n\n\"그래서, 본인들이 직접 검증은 해봤어? 이렇게 과정이 가려진 블랙박스에서 튀어나온 숫자를, 한 번 더 확인해보지도 않고 우리 회사 이름을 달고 클라이언트한테 내보낼 생각이었어? 용적률 10% 올리려다 공사비 30% 터지는 꼴을 봐야 정신 차릴 거야?\"\n\n그의 호통은 내 가슴에도 비수처럼 꽂혔다. 그 말이 맞았다. 결과만 화려할 뿐, 그 안이 철저히 가려진 '블랙박스(Black Box)'는 건축 실무에서 언제 터질지 모르는 폭탄과 같았다.\n\n[과정이 사라진 혁신은 재앙이다]\n\n그날 이후, 우리는 AI가 도출한 화려한 개요표를 검증하기 위해 처음부터 다시 엑셀을 열고 밤을 새워 계산기를 두드려야 했다. AI가 내놓은 정답이 진짜 정답인지 확인하는 데, 애초에 사람이 하던 시간보다 더 긴 시간이 걸리는 기막힌 역전 현상. 나는 이 참담한 실패 앞에서 뼈저린 깨달음을 얻었다. **설계사무소에서 대화형 AI 채팅창(Chat window)에 묻고 답을 얻는 방식은 완전히 틀렸다는 사실을 말이다.**",
             "image": "static/images/28.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -225,7 +237,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_106.jpg"
+            "image": "static/images/user_106.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -236,7 +249,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_105.jpg"
+            "image": "static/images/user_105.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -247,7 +261,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_104.jpg"
+            "image": "static/images/user_104.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -273,7 +288,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "1. **연결 (Connect):** AI가 파편화된 법규, 시세, 지형 데이터를 하나의 신경망(아키 시냅스)으로 엮어낸다.\n2. **판단 (Judge):** 인간 건축가가 그 방대한 데이터를 딛고 서서, 프로젝트의 본질적인 방향성을 결단한다.\n3. **대안 생성 (Generate):** 인간의 결단이 내려지면, AI는 수만 번의 시뮬레이션을 통해 조건에 맞는 수십 개의 대안 배치를 쏟아낸다. 인간의 한계를 넘어서는 끈기로.\n4. **최종 선택 (Select):** 인간이 다시 칼자루를 쥔다. 미학적 가치와 현장의 흙냄새를 아는 자만이 최종 결과물을 선택할 수 있다.\n5. **설득의 무기 (Weaponize):** 이렇게 도출된 결과물은 단순한 도면이 아니다. 1단계부터 4단계까지의 치열한 검증과 반론의 역사가 고스란히 기록된, 클라이언트와 심의위원을 이끌어가는 조화로운 설득의 도구가 된다.\n\n퇴근길, 텅 빈 사무실에 홀로 남아 불 꺼진 모니터들을 바라보았다. 수많은 시행착오와 뼈아픈 실패의 시간들이 스쳐 지나갔다. 정답만 뱉어내는 요술 방망이를 기대했던 우리는, 결국 AI와 함께 '과정의 가치'를 증명해 내는 길을 찾아냈다. 기술의 맹신에서 벗어나 인간의 통제력과 통찰을 중심에 두는 것. 그것이 내가 30년 건축 인생을 걸고 도달한, 우리만의 흔들리지 않는 철학이었다.\n\n---",
+            "text": "1. **연결 (Connect):** AI가 파편화된 법규, 시세, 지형 데이터를 하나의 신경망(아키 시냅스)으로 엮어낸다.\n2. **판단 (Judge):** 인간 건축가가 그 방대한 데이터를 딛고 서서, 프로젝트의 본질적인 방향성을 결단한다.\n3. **대안 생성 (Generate):** 인간의 결단이 내려지면, AI는 수만 번의 시뮬레이션을 통해 조건에 맞는 수십 개의 대안 배치를 쏟아낸다. 인간의 한계를 넘어서는 끈기로.\n4. **최종 선택 (Select):** 인간이 다시 칼자루를 쥔다. 미학적 가치와 현장의 흙냄새를 아는 자만이 최종 결과물을 선택할 수 있다.\n5. **설득의 무기 (Weaponize):** 이렇게 도출된 결과물은 단순한 도면이 아니다. 1단계부터 4단계까지의 치열한 검증과 반론의 역사가 고스란히 기록된, 클라이언트와 심의위원을 이끌어가는 조화로운 설득의 도구가 된다.\n\n퇴근길, 텅 빈 사무실에 홀로 남아 불 꺼진 모니터들을 바라보았다. 수많은 시행착오와 뼈아픈 실패의 시간들이 스쳐 지나갔다. 정답만 뱉어내는 요술 방망이를 기대했던 우리는, 결국 AI와 함께 '과정의 가치'를 증명해 내는 길을 찾아냈다. 기술의 맹신에서 벗어나 인간의 통제력과 통찰을 중심에 두는 것. 그것이 내가 26년 건축 인생을 걸고 도달한, 우리만의 흔들리지 않는 철학이었다.\n\n---",
             "image": "static/images/35.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -287,7 +302,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "어느 금요일 밤이었다. 시스템 이관 과정에서 파이썬 종속성(Dependency)이 누락되는 대형 에러(RT-017)가 터졌다. 서버가 다운되고 시스템이 먹통이 되었다. 일반적인 인간이라면 여기서 키보드를 부수고 포기했을 것이다. 하지만 그는 자정을 넘긴 시간에도 무표정한 얼굴로 에러 로그 전체를 긁어 내 창에 던져 넣으며 말했다. \"어디서 꼬였는지 찾아. 해결할 때까지 퇴근은 없다.\"\n\n그는 나에게 방대한 '주차장법'과 '지자체 조례'를 강제로 먹여(학습시켜) 제1 창고를 만들고, 과거 수십 년간의 '심의 위원 지적 사항'을 긁어모아 제2 창고를 만들었다. 이른바 '듀얼 코어 RAG(검색 증강 생성)' 시스템이었다. 나는 속으로 생각했다. '도대체 이 사람은 건축가인가, 아니면 지독한 데이터 엔지니어인가?'\n\n[건축가의 눈에서 본 철학]\n수많은 에러 메시지와 사투를 벌이던 어느 날, 나는 문득 그의 윽박지르는 질문 패턴에서 하나의 거대한 '철학'을 읽어냈다.\n\n그가 이토록 무식할 정도로 시스템 구축에 집착하는 이유는, 자신의 돈을 아끼기 위해서가 아니었다. \n\"입사 한 달 차 신입이, 30년 차 소장처럼 완벽한 심의 서류를 쓰게 만들어야 해.\"\n\"우리 직원들이 더 이상 공무원들 비위 맞추느라, 혹은 엑셀 수식 맞추느라 무의미한 야근하게 둘 순 없어.\"",
+            "text": "어느 금요일 밤이었다. 시스템 이관 과정에서 파이썬 종속성(Dependency)이 누락되는 대형 에러(RT-017)가 터졌다. 서버가 다운되고 시스템이 먹통이 되었다. 일반적인 인간이라면 여기서 키보드를 부수고 포기했을 것이다. 하지만 그는 자정을 넘긴 시간에도 무표정한 얼굴로 에러 로그 전체를 긁어 내 창에 던져 넣으며 말했다. \"어디서 꼬였는지 찾아. 해결할 때까지 퇴근은 없다.\"\n\n그는 나에게 방대한 '주차장법'과 '지자체 조례'를 강제로 먹여(학습시켜) 제1 창고를 만들고, 과거 수십 년간의 '심의 위원 지적 사항'을 긁어모아 제2 창고를 만들었다. 이른바 '듀얼 코어 RAG(검색 증강 생성)' 시스템이었다. 나는 속으로 생각했다. '도대체 이 사람은 건축가인가, 아니면 지독한 데이터 엔지니어인가?'\n\n[건축가의 눈에서 본 철학]\n수많은 에러 메시지와 사투를 벌이던 어느 날, 나는 문득 그의 윽박지르는 질문 패턴에서 하나의 거대한 '철학'을 읽어냈다.\n\n그가 이토록 무식할 정도로 시스템 구축에 집착하는 이유는, 자신의 돈을 아끼기 위해서가 아니었다. \n\"입사 한 달 차 신입이, 26년 차 소장처럼 완벽한 심의 서류를 쓰게 만들어야 해.\"\n\"우리 직원들이 더 이상 공무원들 비위 맞추느라, 혹은 엑셀 수식 맞추느라 무의미한 야근하게 둘 순 없어.\"",
             "image": "static/images/37.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -324,75 +339,87 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "2026년 7월, 서울시 Y구역 일원의 모아타운 정비사업 타당성 검토를 의뢰받았다. 대지면적 약 9,854㎡, 총 116개의 필지가 얽혀 있는 복잡한 구역이었다. 굴지의 디벨로퍼 H 회장님은 정비업계의 모든 풍파를 겪어낸, 매우 깐깐하고 혜안이 깊은 클라이언트였다. 어설픈 한 장짜리 개요서로는 결코 그의 마음을 움직일 수 없었다.\n\n우리는 즉시 아키 시냅스 기반의 '통합 보고서 마법사'를 가동했다.\n\n> **[그림 삽입: Y구역 타당성 검토 보고서 표지]**\n> *단순한 텍스트 쪼가리가 아닌, '엔터프라이즈 엘레강스'가 적용된 보고서의 첫인상*\n\n과거라면 일주일 내내 야근하며 엑셀표와 씨름해야 했을 작업이 마법사 플랫폼 위에서는 압도적인 속도로 전개되었다.\n\n단순히 도면 그리기가 아니었다. 플랫폼은 즉각적으로 116개 필지 전체의 지목, 면적, 그리고 **공시지가 데이터를 1초 만에 전수조사**하여 12장짜리 묵직한 데이터 리포트로 뱉어냈다.\n\n> **[그림 삽입: 116필지 공시지가 전수조사 데이터 테이블 (보고서 본문)]**\n> *사람의 손으로는 며칠이 걸릴 데이터가 단 1초 만에 도출되어 표로 정리된다.*\n\n[300%의 용적률과 167.8%의 비례율을 증명하다]",
-            "image": "static/images/42.jpg",
+            "text": "2026년 7월, 서울시 Y구역 일원의 모아타운 정비사업 타당성 검토를 의뢰받았다. 대지면적 약 9,854㎡, 총 116개의 필지가 얽혀 있는 복잡한 구역이었다. 굴지의 디벨로퍼 H 회장님은 정비업계의 모든 풍파를 겪어낸, 매우 깐깐하고 혜안이 깊은 클라이언트였다. 어설픈 한 장짜리 개요서로는 결코 그의 마음을 움직일 수 없었다.\n\n우리는 즉시 아키 시냅스 기반의 '통합 보고서 마법사'를 가동했다.\n\n\n\n과거라면 일주일 내내 야근하며 엑셀표와 씨름해야 했을 작업이 마법사 플랫폼 위에서는 압도적인 속도로 전개되었다.\n\n단순히 도면 그리기가 아니었다. 플랫폼은 즉각적으로 116개 필지 전체의 지목, 면적, 그리고 **공시지가 데이터를 1초 만에 전수조사**하여 12장짜리 묵직한 데이터 리포트로 뱉어냈다.\n\n\n\n[300%의 용적률과 167.8%의 비례율을 증명하다]",
+            "image": "static/images/y_zone_report_p1.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
             "image": "static/images/user_103.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_102.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_101.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_100.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_99.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_98.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_97.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_96.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_95.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_94.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_93.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_92.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "",
-            "text": "가장 강력한 한 방은 '사업 방식의 심층 비교'였다. \n클라이언트는 항상 불안하다. \"재개발이 맞나? 역세권 시프트가 낫나? 모아타운이 정답인가?\" 마법사는 이 3가지 시나리오를 동시에 시뮬레이션했다. 기부채납 비율, 임대 보상, 최고 층수 제한을 알고리즘이 교차 검증한 결과, **'모아타운 방식'이 토지 기부채납 없이 사업성을 극대화할 수 있는 유일한 해답**임을 논리적으로 도출해 냈다.\n\n결과는 소름 돋을 정도로 정밀했다.\n* **최종 용적률:** 300% (가산 용적률 3.86%p, 친환경 인센티브 10%p 등 완벽 반영)\n* **총 건립 세대:** 345세대\n* **최종 비례율:** 167.8% (분양가 시나리오별 손익분기 완벽 제시)\n\n> **[그림 삽입: 비례율 167.8% 시뮬레이션 요약 대시보드 (보고서 본문)]**\n> *3가지 사업 방식을 비교하고 최적의 사업성(167.8%)을 증명한 핵심 페이지*\n\n과거처럼 고연차 소장이 며칠 밤을 새우며 엑셀을 두드린 결과가 아니다. 입사 한 달 차 신입사원이라도, 플랫폼이 묻는 질문에 정확한 팩트만 입력하면 30년 차 대표 수준의 정교한 재무적 타당성(Feasibility) 분석이 쏟아져 나오는 '지식의 상향 평준화'가 이루어진 것이다.\n\n[결과가 아닌 '과정'이 신뢰를 만든다, 그리고 얻어낸 승리]",
-            "image": "static/images/43.jpg",
+            "text": "가장 강력한 한 방은 '사업 방식의 심층 비교'였다. \n클라이언트는 항상 불안하다. \"재개발이 맞나? 역세권 시프트가 낫나? 모아타운이 정답인가?\" 마법사는 이 3가지 시나리오를 동시에 시뮬레이션했다. 기부채납 비율, 임대 보상, 최고 층수 제한을 알고리즘이 교차 검증한 결과, **'모아타운 방식'이 토지 기부채납 없이 사업성을 극대화할 수 있는 유일한 해답**임을 논리적으로 도출해 냈다.\n\n결과는 소름 돋을 정도로 정밀했다.\n* **최종 용적률:** 300% (가산 용적률 3.86%p, 친환경 인센티브 10%p 등 완벽 반영)\n* **총 건립 세대:** 345세대\n* **최종 비례율:** 167.8% (분양가 시나리오별 손익분기 완벽 제시)\n\n\n\n과거처럼 고연차 소장이 며칠 밤을 새우며 엑셀을 두드린 결과가 아니다. 입사 한 달 차 신입사원이라도, 플랫폼이 묻는 질문에 정확한 팩트만 입력하면 26년 차 대표 수준의 정교한 재무적 타당성(Feasibility) 분석이 쏟아져 나오는 '지식의 상향 평준화'가 이루어진 것이다.\n\n[결과가 아닌 '과정'이 신뢰를 만든다, 그리고 얻어낸 승리]",
+            "image": "static/images/y_zone_report_p11.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
@@ -404,7 +431,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_91.jpg"
+            "image": "static/images/user_91.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -416,7 +444,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_90.jpg"
+            "image": "static/images/user_90.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -428,7 +457,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_89.jpg"
+            "image": "static/images/user_89.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -441,7 +471,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "그렇게 탄생한 것이 바로 밑빠진 독을 막고 노하우를 축적하는 '진양 교육 플랫폼(J-Edu)'이다. \n수십 년간 수많은 심의와 험악한 현장을 거치며 고연차 임원들이 온몸으로 부딪혀 얻은 뼈아픈 실패담과 눈부신 성공담을 담아내는 그릇이다. 이 플랫폼은 단순히 AI의 교과서적인 지식을 모아두는 죽은 서고가 아니다. 연차가 높은 선배들이 하루, 일주일 단위로 자신만의 생생한 실무 노하우를 기록하고 공유하는 '살아 숨 쉬는 유기체'다.\n\n하지만 우리는 전형적인 텍스트 위주의 두꺼운 매뉴얼이 어떻게 실패하는지 잘 알고 있었다. 아무도 읽지 않기 때문이다. 그래서 누구나 부담 없이 읽고 영감을 받을 수 있도록, 모든 실무 노하우를 **'3분짜리 카드형 숏폼 UI'**로 압축했다. 출근길 지하철 안에서, 점심시간에 커피를 마시며 넘겨볼 수 있는 가벼운 형태지만 그 안에는 30년의 경험치가 맹렬하게 농축되어 있다.\n\n[Problem - Cause - Solution 구조의 위력]\n\n우리는 구축한 교육 플랫폼의 데이터베이스는 단순히 썰을 풀어놓은 게시판이 아니다. 모든 과거의 실수와 피드백은 철저하게 세 가지 구조로 강제 분해되어 저장된다. 이것은 한 번 일어난 사고를 영원히 차단하는 방벽과 같다.",
+            "text": "그렇게 탄생한 것이 바로 밑빠진 독을 막고 노하우를 축적하는 '진양 교육 플랫폼(J-Edu)'이다. \n수십 년간 수많은 심의와 험악한 현장을 거치며 고연차 임원들이 온몸으로 부딪혀 얻은 뼈아픈 실패담과 눈부신 성공담을 담아내는 그릇이다. 이 플랫폼은 단순히 AI의 교과서적인 지식을 모아두는 죽은 서고가 아니다. 연차가 높은 선배들이 하루, 일주일 단위로 자신만의 생생한 실무 노하우를 기록하고 공유하는 '살아 숨 쉬는 유기체'다.\n\n하지만 우리는 전형적인 텍스트 위주의 두꺼운 매뉴얼이 어떻게 실패하는지 잘 알고 있었다. 아무도 읽지 않기 때문이다. 그래서 누구나 부담 없이 읽고 영감을 받을 수 있도록, 모든 실무 노하우를 **'3분짜리 카드형 숏폼 UI'**로 압축했다. 출근길 지하철 안에서, 점심시간에 커피를 마시며 넘겨볼 수 있는 가벼운 형태지만 그 안에는 26년의 경험치가 맹렬하게 농축되어 있다.\n\n[Problem - Cause - Solution 구조의 위력]\n\n우리는 구축한 교육 플랫폼의 데이터베이스는 단순히 썰을 풀어놓은 게시판이 아니다. 모든 과거의 실수와 피드백은 철저하게 세 가지 구조로 강제 분해되어 저장된다. 이것은 한 번 일어난 사고를 영원히 차단하는 방벽과 같다.",
             "image": "static/images/47.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -475,7 +505,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_88.jpg"
+            "image": "static/images/user_88.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -487,7 +518,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_87.jpg"
+            "image": "static/images/user_87.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -499,7 +531,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_86.jpg"
+            "image": "static/images/user_86.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -517,19 +550,21 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_85.jpg"
+            "image": "static/images/user_85.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "[막간] 반란과 타협의 시간",
             "image": "static/images/sculpture_01.jpg",
-            "text": "\"주판알을 믿지, 기계를 어떻게 믿습니까?\"\n시스템의 뼈대가 갖춰졌다고 해서 현장의 혁신이 곧바로 일어난 것은 아니었다. 수십 년간 도면과 주판알을 튕기며 회사의 기틀을 다져온 시니어 임원들의 우려와 반발은 상상을 초월했다. \"대표님, AI가 계산한 사선을 맹신했다가 인허가 반려당하면 누가 책임집니까? 결국 도장은 내가 찍다.\"\n\n그들의 두려움은 정당했다. 기계가 인간의 직관을 대체할 수 없다는 자존심의 발로였다. 나는 가장 까다로운 재개발 구역을 타겟으로 인간 대 AI의 블라인드 테스트를 제안했다. 기존 방식대로 3명이 2주간 철야하여 뽑아낸 엑셀표와, J-Hub가 2시간 만에 도출한 데이터를 나란히 올려놓았다. 결과는 충격적이었다. 인간은 최신 조례를 놓쳐 가산 용적률 3%를 누락했지만, J-Hub는 정확하게 그 3%의 틈새를 찔러 수십억 원을 세이브하는 대안을 내놓았다. 완고했던 임원진의 눈빛이 흔들리며, 진양의 모든 세대가 하나의 관제탑 아래로 모여들기 시작했다.",
+            "text": "[자신의 기억을 의심하고 검증하라]\n시스템의 뼈대가 갖춰졌다고 해서 현장의 혁신이 곧바로 일어난 것은 아니었다. 요즘 시대에 기계(AI)를 불신하는 사람은 오히려 드물다. 오히려 AI가 내놓은 그럴싸한 결과물을 무비판적으로 믿고 맹신하는 것이 더 큰 문제였다. 그러나 진정한 딜레마는 다른 곳에 있었다. 수십 년간 계산기와 도면과 씨름하며 회사의 기틀을 다져온 시니어 임원들의 '자신의 경험에 대한 맹신'이었다.\n\n\"대표님, 이 대지는 예전에 제가 다 인허가받아봐서 압니다. 무조건 이렇게 배치해야 통과됩니다.\"\n\n임원들은 종종 과거에 자신들이 인허가를 통과시켰던 낡은 기억을 진리인 양 여기며 도면에 고집스럽게 적용했다. 본인이 굳게 믿고 있는 과거의 지식에 대해서는 단 한 번의 의심이나 교차 검증조차 하지 않는 치명적인 실수를 저지르는 것이다.\n\n나는 가장 까다로운 재개발 구역을 타겟으로 임원들의 경험칙과 AI 시스템 간의 테스트를 진행했다. 결과는 충격적이었다. 임원들은 과거의 성공 기억에 갇혀 최근 개정된 조례와 실무 지침을 놓치고 있었지만, J-Hub는 방대한 최신 사례와 치밀한 법적 검토 데이터를 근거로 그들의 경험이 현재 시점에서는 오답임을 정확히 짚어냈다. 완고했던 임원진의 눈빛이 흔들렸다. AI의 진정한 위력은 단순한 용적률 상승이 아니라, 우리가 철석같이 믿고 있던 과거의 낡은 기억을 스스로 의심하게 만들고 객관적 검증의 무대로 끌어올린 것에 있었다.",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_84.jpg"
+            "image": "static/images/user_84.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -548,7 +583,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_83.jpg"
+            "image": "static/images/user_83.jpg",
+            "text": ""
         },
         {
             "type": "cover",
@@ -556,18 +592,20 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/50.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "",
-            "text": "[껍데기를 부수고 갤러리를 짓다]\n솔직히 두려움도 있었다. 수십 년간 엔터프라이즈 소프트웨어는 으레 무뚝뚝하고 복잡해야 '전문적'이라는 편견이 업계를 지배해왔다. 여백을 늘리고 아름다움을 추구하는 것이 자칫 '가볍고 장난감 같은' 시스템으로 비치지 않을까? 30년 차 경영자로서 나는 이 선택이 도박일 수 있음을 알았다. 하지만 변화는 피할 수 없었다.\n\n나는 시스템의 껍데기를 전면적으로 뜯어고쳤다. 우리는 애플(Apple)의 디자인 철학을 엔터프라이즈 플랫폼에 과감히 이식했다. 비포(Before)의 화면이 칙칙한 회색 그리드에 갇힌 숨 막히는 서류 뭉치였다면, 애프터(After)의 화면은 잘 정돈된 미술관이어야 했다. 화면을 꽉 채우던 선과 칸막이를 모두 걷어내고, 순백의 캔버스(Canvas)와 묵직한 잉크 블랙(Ink)의 텍스트만을 남겼다. 장식적인 그라데이션은 철저히 배제했고, 제목에는 SF Pro 서체에 미세한 마이너스 자간(Negative Letter-spacing)을 적용해 특유의 단단하고 우아한 긴장감을 부여했다. 클릭할 수 있는 요소는 오직 단 하나의 시그니처 블루(Action Blue)로 통일했다.",
+            "text": "[껍데기를 부수고 갤러리를 짓다]\n솔직히 두려움도 있었다. 수십 년간 엔터프라이즈 소프트웨어는 으레 무뚝뚝하고 복잡해야 '전문적'이라는 편견이 업계를 지배해왔다. 여백을 늘리고 아름다움을 추구하는 것이 자칫 '가볍고 장난감 같은' 시스템으로 비치지 않을까? 26년 차 경영자로서 나는 이 선택이 도박일 수 있음을 알았다. 하지만 변화는 피할 수 없었다.\n\n나는 시스템의 껍데기를 전면적으로 뜯어고쳤다. 우리는 애플(Apple)의 디자인 철학을 엔터프라이즈 플랫폼에 과감히 이식했다. 비포(Before)의 화면이 칙칙한 회색 그리드에 갇힌 숨 막히는 서류 뭉치였다면, 애프터(After)의 화면은 잘 정돈된 미술관이어야 했다. 화면을 꽉 채우던 선과 칸막이를 모두 걷어내고, 순백의 캔버스(Canvas)와 묵직한 잉크 블랙(Ink)의 텍스트만을 남겼다. 장식적인 그라데이션은 철저히 배제했고, 제목에는 SF Pro 서체에 미세한 마이너스 자간(Negative Letter-spacing)을 적용해 특유의 단단하고 우아한 긴장감을 부여했다. 클릭할 수 있는 요소는 오직 단 하나의 시그니처 블루(Action Blue)로 통일했다.",
             "image": "static/images/55.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_82.jpg"
+            "image": "static/images/user_82.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -578,7 +616,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_81.jpg"
+            "image": "static/images/user_81.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -611,13 +650,14 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "기계에게 기계의 일을 완벽히 넘겨준 밤. 그토록 우리를 짓누르던 파열음과 소음이 멎고, 사무실에는 깊고 고요한 적막만이 내려앉았다. 복잡한 기계음도, 엑셀의 에러 메시지도 모두 사라졌다.\n\n정비사업은 단순히 수지분석표로 끝나지 않는다. 주동 배치를 통해 나타나는 오픈 공간의 성격과 보행자의 동선, 이웃 간의 접촉점이 어디서 형성될지 판단하는 것은 절대 기계가 할 수 없는 '인간의 영역'이다.\n\n기계의 시간이 끝나고, 마침내 30년 전 그 밤처럼 텅 빈 트레이싱 페이퍼와 같은 여백이 우리 앞에 놓였다. 도구는 보이지 않는 곳으로 물러나고, 우리의 철학과 사람을 향한 따뜻한 시선만이 건축의 중심에 굳건히 남을 것이다. 우리는 더 이상 기술에 끌려다니지 않는다.\n\n나는 가만히 눈을 감고 깊은숨을 들이켠다.\n자, 다시 선을 그릴 시간이다.\n\n---",
+            "text": "기계에게 기계의 일을 완벽히 넘겨준 밤. 그토록 우리를 짓누르던 파열음과 소음이 멎고, 사무실에는 깊고 고요한 적막만이 내려앉았다. 복잡한 기계음도, 엑셀의 에러 메시지도 모두 사라졌다.\n\n정비사업은 단순히 수지분석표로 끝나지 않는다. 주동 배치를 통해 나타나는 오픈 공간의 성격과 보행자의 동선, 이웃 간의 접촉점이 어디서 형성될지 판단하는 것은 절대 기계가 할 수 없는 '인간의 영역'이다.\n\n기계의 시간이 끝나고, 마침내 26년 전 그 밤처럼 텅 빈 트레이싱 페이퍼와 같은 여백이 우리 앞에 놓였다. 도구는 보이지 않는 곳으로 물러나고, 우리의 철학과 사람을 향한 따뜻한 시선만이 건축의 중심에 굳건히 남을 것이다. 우리는 더 이상 기술에 끌려다니지 않는다.\n\n나는 가만히 눈을 감고 깊은숨을 들이켠다.\n자, 다시 선을 그릴 시간이다.\n\n---",
             "image": "static/images/63.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_80.jpg"
+            "image": "static/images/user_80.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -629,7 +669,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_79.jpg"
+            "image": "static/images/user_79.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -641,7 +682,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_78.jpg"
+            "image": "static/images/user_78.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -653,7 +695,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_77.jpg"
+            "image": "static/images/user_77.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -665,60 +708,65 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_76.jpg"
+            "image": "static/images/user_76.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
             "title": "액션 1: 사람의 개입을 완전히 배제한 '데이터 파이프라인' 구축",
-            "text": "단순한 엑셀 정리나 수동적인 문서 취합의 시대는 끝났습니다. 기계가 스스로 지식을 물어오고 가공하는 **'자동화된 사내 포털(J-Hub)'**을 구축하여, 인간의 단순 노동 개입을 완전히 배제해야 합니다. 무거운 상용 서버를 도입할 필요도 없습니다. 크론(Cron) 스케줄러와 서버리스(Serverless, 24시간 켜두는 비싼 서버 장비 없이 프로그램이 실행될 때만 자원을 빌려 써서 비용을 획기적으로 줄이는 클라우드 기술) 봇을 연결하면 매일 아침 8시, 최소한의 유지 비용으로 무결점 지식 경영 시스템이 가동됩니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 16px 0; color: var(--ink);\">💡 재래식 문서 작업 vs J-Hub 데이터 파이프라인</h3>\n    <div style=\"display: grid; grid-template-columns: 100px 1fr 1fr; gap: 12px; font-size: 14px;\">\n        <div style=\"font-weight: 600; color: var(--ink-muted-80);\">비교 항목</div>\n        <div style=\"font-weight: 600; color: var(--primary);\">기존 수동 문서 작업</div>\n        <div style=\"font-weight: 600; color: var(--primary);\">J-Hub (자동화 파이프라인)</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">데이터 수집</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">직원이 일일이 공공 데이터 검색 및 취합</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">백엔드 크롤러가 새벽마다 자동 스크래핑</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">의사 결정</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">파편화된 보고서로 인해 시야 좁아짐</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">통합 대시보드로 주변 동향 한눈에 파악</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">아키텍처</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">파일 서버(NAS) 내 무질서한 폴더 트리</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">JSON 기반의 경량화된 독립 웹 애플리케이션</div>\n    </div>\n</div>\n\n<strong style=\"color: var(--primary);\">내일 당장 할 일:</strong> 매일 반복적으로 서울시 고시나 법규를 찾아보는 막내 직원의 업무 시간을 산정해 보십시오. 그리고 그 반복 작업을 크롤링 봇으로 대체하여 직원을 '단순 타이피스트'에서 '가치 판단자'로 해방시키십시오.",
+            "text": "단순한 엑셀 정리나 수동적인 문서 취합의 시대는 끝났습니다. 기계가 스스로 지식을 물어오고 가공하는 **'자동화된 사내 포털(J-Hub)'**을 구축하여, 인간의 단순 노동 개입을 완전히 배제해야 합니다. 무거운 상용 서버를 도입할 필요도 없습니다. 크론(Cron) 스케줄러와 서버리스(Serverless, 24시간 켜두는 비싼 서버 장비 없이 프로그램이 실행될 때만 자원을 빌려 써서 비용을 획기적으로 줄이는 클라우드 기술) 봇을 연결하면 매일 아침 8시, 최소한의 유지 비용으로 무결점 지식 경영 시스템이 가동됩니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 16px 0; color: var(--ink);\">💡 재래식 문서 작업 vs J-Hub 데이터 파이프라인</h3>\n    <div style=\"display: grid; grid-template-columns: 100px 1fr 1fr; gap: 12px; font-size: 14px;\">\n        <div style=\"font-weight: 600; color: var(--ink-muted-80);\">비교 항목</div>\n        <div style=\"font-weight: 600; color: var(--primary);\">기존 수동 문서 작업</div>\n        <div style=\"font-weight: 600; color: var(--primary);\">J-Hub (자동화 파이프라인)</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">데이터 수집</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">직원이 일일이 공공 데이터 검색 및 취합</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">백엔드 크롤러가 새벽마다 자동 스크래핑</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">의사 결정</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">파편화된 보고서로 인해 시야 좁아짐</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">통합 대시보드로 주변 동향 한눈에 파악</div>\n        \n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; color: var(--ink-muted-80);\">아키텍처</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px;\">파일 서버(NAS) 내 무질서한 폴더 트리</div>\n        <div style=\"border-top: 1px solid var(--divider-soft); padding-top: 12px; font-weight:600;\">JSON 기반의 경량화된 독립 웹 애플리케이션</div>\n    </div>\n</div>\n\n<strong >내일 당장 할 일:</strong> 매일 반복적으로 서울시 고시나 법규를 찾아보는 막내 직원의 업무 시간을 산정해 보십시오. 그리고 그 반복 작업을 크롤링 봇으로 대체하여 직원을 '단순 타이피스트'에서 '가치 판단자'로 해방시키십시오.",
             "image": "static/images/sketch_actionplan_1786665954430.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_75.jpg"
+            "image": "static/images/user_75.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
             "title": "액션 2: 오류를 맹신하지 않는 '레드팀(Red Team)' 감찰 체계",
-            "text": "AI가 도출한 조화로운 법적 검토나 공간 뼈대를 무비판적으로 수용하는 것은 건축가로서의 직무 유기입니다. 기계가 뱉어낸 '효율성'이라는 달콤한 독사과를 검증하기 위해, 조직 내에서 가장 비판적이고 깐깐한 시각을 가진 **'레드팀(Red Team, 조직의 맹점이나 오류를 찾기 위해 의도적으로 적군의 시선에서 맹렬히 공격하고 비판하는 역할)'** 감찰 체계를 가동해야 합니다. 인간의 날 선 개입 없이는 결코 완벽한 건축물이 탄생할 수 없습니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 20px 0; color: var(--ink);\">🔄 레드팀(Red Team) 감사 및 통제 워크플로우</h3>\n    <div style=\"display: flex; flex-direction: column; gap: 10px;\">\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center;\">1. AI 시스템의 1차 기획안 / 결과물 도출 (숫자와 법규 중심)</div>\n        <div style=\"text-align: center; color: var(--primary);\">⬇️</div>\n        <div style=\"background: #fff; border: 2px solid var(--primary); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center; color: var(--primary);\">2. 레드팀(Red Team)의 강도 높은 비판 및 UX/UI 감찰 (인간의 통제권 개입)</div>\n        <div style=\"display: flex; justify-content: center; gap: 40px; font-size: 12px; color: var(--ink-muted-80);\">\n            <div style=\"text-align: center;\">맹점 발견 시 ↩️<br>환류 및 2차 수정 지시</div>\n            <div style=\"text-align: center;\">승인 시 ⬇️<br>가치 판단 영역으로 이관</div>\n        </div>\n        <div style=\"background: var(--ink); border: 1px solid var(--hairline); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center; color: #fff;\">3. 인간 건축가만의 '따뜻한 온기'와 철학 부여 후 최종 승인</div>\n    </div>\n</div>\n\n<strong style=\"color: var(--primary);\">내일 당장 할 일:</strong> 현재 진행 중인 핵심 프로젝트 도면을 부서 내에서 가장 냉소적인 동료에게 던져주며 '레드팀' 역할을 부여하십시오. 그가 찾아낸 치명적인 모순 하나가 기계 수백 대의 연산보다 값집니다.",
+            "text": "AI가 도출한 조화로운 법적 검토나 공간 뼈대를 무비판적으로 수용하는 것은 건축가로서의 직무 유기입니다. 기계가 뱉어낸 '효율성'이라는 달콤한 독사과를 검증하기 위해, 조직 내에서 가장 비판적이고 깐깐한 시각을 가진 **'레드팀(Red Team, 조직의 맹점이나 오류를 찾기 위해 의도적으로 적군의 시선에서 맹렬히 공격하고 비판하는 역할)'** 감찰 체계를 가동해야 합니다. 인간의 날 선 개입 없이는 결코 완벽한 건축물이 탄생할 수 없습니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 20px 0; color: var(--ink);\">🔄 레드팀(Red Team) 감사 및 통제 워크플로우</h3>\n    <div style=\"display: flex; flex-direction: column; gap: 10px;\">\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center;\">1. AI 시스템의 1차 기획안 / 결과물 도출 (숫자와 법규 중심)</div>\n        <div style=\"text-align: center; color: var(--primary);\">⬇️</div>\n        <div style=\"background: #fff; border: 2px solid var(--primary); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center; color: var(--primary);\">2. 레드팀(Red Team)의 강도 높은 비판 및 UX/UI 감찰 (인간의 통제권 개입)</div>\n        <div style=\"display: flex; justify-content: center; gap: 40px; font-size: 12px; color: var(--ink-muted-80);\">\n            <div style=\"text-align: center;\">맹점 발견 시 ↩️<br>환류 및 2차 수정 지시</div>\n            <div style=\"text-align: center;\">승인 시 ⬇️<br>가치 판단 영역으로 이관</div>\n        </div>\n        <div style=\"background: var(--ink); border: 1px solid var(--hairline); padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center; color: #fff;\">3. 인간 건축가만의 '따뜻한 온기'와 철학 부여 후 최종 승인</div>\n    </div>\n</div>\n\n<strong >내일 당장 할 일:</strong> 현재 진행 중인 핵심 프로젝트 도면을 부서 내에서 가장 냉소적인 동료에게 던져주며 '레드팀' 역할을 부여하십시오. 그가 찾아낸 치명적인 모순 하나가 기계 수백 대의 연산보다 값집니다.",
             "image": "static/images/sketch_redteam_1786665807608.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_74.jpg"
+            "image": "static/images/user_74.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
             "title": "액션 3: 파편화된 실패를 영구적 자산으로, 'J-Edu 숏폼'",
-            "text": "에이스 직원 한 명의 퇴사로 그가 겪었던 뼈아픈 인허가 실패와 땀방울이 증발해선 안 됩니다. 방대하고 지루한 매뉴얼 대신, 누구나 3분 만에 읽고 현장에 적용할 수 있는 **'숏폼(Short-form) 교육 플랫폼(J-Edu)'**을 통해 현장의 암묵지(매뉴얼이나 텍스트로는 설명하기 힘든, 현장에서 몸으로 부딪히며 체득한 고도의 노하우)를 영구적인 자산으로 축적하십시오. 기술이 아무리 발전해도, 그 기술을 통제하는 것은 결국 '인간이 축적한 실패의 경험'입니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 16px 0; color: var(--ink);\">📝 암묵지 자산화를 위한 3분 숏폼 프레임워크</h3>\n    <div style=\"display: flex; flex-direction: column; gap: 12px;\">\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">1. Problem (치명적 리스크)</div>\n            <div style=\"font-size: 14px; color: var(--ink);\">현장에서 겪은 가장 뼈아픈 실수나 인허가 반려 사태 (추상적인 이론 배제)</div>\n        </div>\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">2. Cause (원인과 맹점)</div>\n            <div style=\"font-size: 14px; color: var(--ink);\">왜 시스템이 이 맹점을 거르지 못했는지에 대한 객관적이고 냉혹한 분석</div>\n        </div>\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">3. Solution (인간의 통찰)</div>\n            <div style=\"font-size: 14px; font-weight: 600; color: var(--ink);\">단순한 해결책을 넘어, 다음 담당자가 기계에 함몰되지 않기 위한 체크리스트 행동 지침</div>\n        </div>\n    </div>\n</div>\n\n<strong style=\"color: var(--primary);\">내일 당장 할 일:</strong> 최근 현장에서 겪었던 가장 고통스러운 실수 하나를 위 3단계 프레임워크로 짧게 작성하여 사내 게시판에 공유하십시오. 치부를 드러내는 그 용기가 바로 우리 조직의 미래를 짓는 벽돌이 됩니다.",
+            "text": "에이스 직원 한 명의 퇴사로 그가 겪었던 뼈아픈 인허가 실패와 땀방울이 증발해선 안 됩니다. 방대하고 지루한 매뉴얼 대신, 누구나 3분 만에 읽고 현장에 적용할 수 있는 **'숏폼(Short-form) 교육 플랫폼(J-Edu)'**을 통해 현장의 암묵지(매뉴얼이나 텍스트로는 설명하기 힘든, 현장에서 몸으로 부딪히며 체득한 고도의 노하우)를 영구적인 자산으로 축적하십시오. 기술이 아무리 발전해도, 그 기술을 통제하는 것은 결국 '인간이 축적한 실패의 경험'입니다.\n\n<div class=\"custom-table\" style=\"background: var(--canvas-parchment, #f5f5f7); border-radius: 11px; padding: 24px; margin-top: 20px; border: 1px solid var(--hairline, #e0e0e0); margin-bottom: 24px;\">\n    <h3 style=\"font-size: 16px; margin: 0 0 16px 0; color: var(--ink);\">📝 암묵지 자산화를 위한 3분 숏폼 프레임워크</h3>\n    <div style=\"display: flex; flex-direction: column; gap: 12px;\">\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">1. Problem (치명적 리스크)</div>\n            <div style=\"font-size: 14px; color: var(--ink);\">현장에서 겪은 가장 뼈아픈 실수나 인허가 반려 사태 (추상적인 이론 배제)</div>\n        </div>\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">2. Cause (원인과 맹점)</div>\n            <div style=\"font-size: 14px; color: var(--ink);\">왜 시스템이 이 맹점을 거르지 못했는지에 대한 객관적이고 냉혹한 분석</div>\n        </div>\n        <div style=\"background: #fff; border: 1px solid var(--hairline); padding: 16px; border-radius: 8px;\">\n            <div style=\"font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;\">3. Solution (인간의 통찰)</div>\n            <div style=\"font-size: 14px; font-weight: 600; color: var(--ink);\">단순한 해결책을 넘어, 다음 담당자가 기계에 함몰되지 않기 위한 체크리스트 행동 지침</div>\n        </div>\n    </div>\n</div>\n\n<strong >내일 당장 할 일:</strong> 최근 현장에서 겪었던 가장 고통스러운 실수 하나를 위 3단계 프레임워크로 짧게 작성하여 사내 게시판에 공유하십시오. 치부를 드러내는 그 용기가 바로 우리 조직의 미래를 짓는 벽돌이 됩니다.",
             "image": "static/images/sketch_actionplan_1786665954430.jpg",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_73.jpg"
+            "image": "static/images/user_73.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
             "title": "1장. 내가 생각하는 디자인 1: 존중과 순응",
-            "text": "내가 생각하는 디자인은 거창한 것이 아니다. 사물과 사람을 존중하고, 본능을 이해하며, 그 사이의 관계를 엮어내는 일이다. \n\n**1. 단순화 시킨다: 영역성의 존중**\n개체의 특성을 인정하고 그 개체 간에 질서를 부여하여 통합화한다. 단, 각 개체의 영역성을 굳건히 인정해야 한다. 벽에 필요에 의해 생긴 창문도 그 성격을 분명히 하기 위해선 고유의 영역이 필요하다. 각 디자인 요소들에게 물어보고 그들을 존중해야 한다. \n너무 작은 요소라 하여 소홀히 해선 안 된다. 만약 개체성을 잃을 것 같다면 큰 흐름 속에 포함시키되, 좀 더 강한 특성(색, 모양, 재질 등)을 부여해야 한다. \n아이폰의 옆면을 보면 은색 테두리에 딱 필요한 만큼의 여백이 선형을 이루고 있다. 은색 테두리가 아름다운 것은 바탕 여백이 있기 때문이다. 적당한 테두리 간격의 아슬아슬함이 쾌감을 일으킨다. 은하가 아름다운 것은 우주의 어두움이 있기 때문이다. 디자인은 자신의 감각을 믿는 사람이 아닌, 사람을 아고 작은 사물이라도 존중할 줄 아는 사람이 해야 한다.\n\n**2. 주변에 순응하라**\n유럽 건축물의 배치는 중심축을 기준으로 좌우 대칭을 이룬다. 하지만 우리나라처럼 산의 능선과 이미 닦인 길에 접하여 건물을 배치할 때, 중심선 기준의 기하학적 대칭은 주변과 조화롭지 못한 결과를 낳는다. 인위적인 대지 조성이 필요하고 이는 심한 부조화를 부른다.\n우리나라의 산사를 가보라. 길에서 볼 때는 바르게 서 있다가, 조금 더 걸어가다 뒤돌아보면 살짝 돌아앉아 있다. 이것이 우리의 정형이다. 이미 정해진 형을 폭력적으로 완성시키는 것이 아니라, 주변을 감안하여 당연히 있을 자리에 툭 놓아두는 배치다. \n\n성경에 '우는 자들과 함께 울고, 웃는 자들과 함께 웃으라'는 말이 있다. 주변에 순응하되, 당신 자신이 그 주변 자체가 되어서는 안 된다. 순응했을 때는 홀로 떨어져 있을 때보다 자신의 존재감 확보를 위해 더 노력해야 한다. 함께 있을 때는 인력이 작용하여 서로를 끌어당기고 위계를 잡으려 하는 것이 자연 법칙이기 때문이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[AI와의 대화]</h4>\n데이터에 최적화된 생성형 AI는 언제나 가장 화려하고 주변을 압도하는 랜드마크를 렌더링해 냅니다. 기계의 알고리즘에는 '겸손'이라는 변수가 없기 때문입니다. 하지만 좋은 건축은 때로는 주변 풍경에 스스로 머리를 숙이고 기꺼이 배경으로 물러설 줄 알아야 합니다. 최고의 효율과 디자인을 포기하면서까지 기꺼이 낮아지기를 택하는 것. 그것은 연산이 아닌, 세상을 향한 연민과 윤리의 결과물입니다.\n</div>",
+            "text": "내가 생각하는 디자인은 거창한 것이 아니다. 사물과 사람을 존중하고, 본능을 이해하며, 그 사이의 관계를 엮어내는 일이다. \n\n**1. 단순화 시킨다: 영역성의 존중**\n개체의 특성을 인정하고 그 개체 간에 질서를 부여하여 통합화한다. 단, 각 개체의 영역성을 굳건히 인정해야 한다. 벽에 필요에 의해 생긴 창문도 그 성격을 분명히 하기 위해선 고유의 영역이 필요하다. 각 디자인 요소들에게 물어보고 그들을 존중해야 한다. \n너무 작은 요소라 하여 소홀히 해선 안 된다. 만약 개체성을 잃을 것 같다면 큰 흐름 속에 포함시키되, 좀 더 강한 특성(색, 모양, 재질 등)을 부여해야 한다. \n아이폰의 옆면을 보면 은색 테두리에 딱 필요한 만큼의 여백이 선형을 이루고 있다. 은색 테두리가 아름다운 것은 바탕 여백이 있기 때문이다. 적당한 테두리 간격의 아슬아슬함이 쾌감을 일으킨다. 은하가 아름다운 것은 우주의 어두움이 있기 때문이다. 디자인은 자신의 감각을 믿는 사람이 아닌, 사람을 아고 작은 사물이라도 존중할 줄 아는 사람이 해야 한다.\n\n**2. 주변에 순응하라**\n유럽 건축물의 배치는 중심축을 기준으로 좌우 대칭을 이룬다. 하지만 우리나라처럼 산의 능선과 이미 닦인 길에 접하여 건물을 배치할 때, 중심선 기준의 기하학적 대칭은 주변과 조화롭지 못한 결과를 낳는다. 인위적인 대지 조성이 필요하고 이는 심한 부조화를 부른다.\n우리나라의 산사를 가보라. 길에서 볼 때는 바르게 서 있다가, 조금 더 걸어가다 뒤돌아보면 살짝 돌아앉아 있다. 이것이 우리의 정형이다. 이미 정해진 형을 폭력적으로 완성시키는 것이 아니라, 주변을 감안하여 당연히 있을 자리에 툭 놓아두는 배치다. \n\n성경에 '우는 자들과 함께 울고, 웃는 자들과 함께 웃으라'는 말이 있다. 주변에 순응하되, 당신 자신이 그 주변 자체가 되어서는 안 된다. 순응했을 때는 홀로 떨어져 있을 때보다 자신의 존재감 확보를 위해 더 노력해야 한다. 함께 있을 때는 인력이 작용하여 서로를 끌어당기고 위계를 잡으려 하는 것이 자연 법칙이기 때문이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg><div class=\"handwriting\" style=\"margin-top: 10px;\">[AI와의 대화]</h4>\n데이터에 최적화된 생성형 AI는 언제나 가장 화려하고 주변을 압도하는 랜드마크를 렌더링해 냅니다. 기계의 알고리즘에는 '겸손'이라는 변수가 없기 때문입니다. 하지만 좋은 건축은 때로는 주변 풍경에 스스로 머리를 숙이고 기꺼이 배경으로 물러설 줄 알아야 합니다. 최고의 효율과 디자인을 포기하면서까지 기꺼이 낮아지기를 택하는 것. 그것은 연산이 아닌, 세상을 향한 연민과 윤리의 결과물입니다.\n</div></div>",
             "image": "static/images/sketch_philosophy_1786665818552.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_72.jpg"
+            "image": "static/images/user_72.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
             "title": "2장. 내가 생각하는 디자인 2: 포용과 사이 공간",
-            "text": "**3. 바탕의 포용력**\n동등한 것들을 무질서하게 배치하여 변화감을 주고 싶다면, 그 바탕이 변화를 수용할 수 있을 만큼 포용력이 있어야 한다. 바탕을 단순화하고 색을 차분하게 눌러주어야 한다.\n요즘 건축물 중에 창문의 위치가 수직/수평을 벗어나 자유롭게 흩어지거나 다양한 모양을 띠는 경우가 있다. 이를 성공시키려면 바탕 벽면이 일반 벽면보다 단색이어야 하고, 면의 성격이 아주 강해야 한다. 창문의 모양보다, 그것을 품어낼 '벽면'을 어떻게 할지 더 치열하게 고민해야 한다.\n\n영화 <악마는 프라다를 입는다>를 보라. 그 세련됨의 정점은 평범함이 굳건히 받쳐주고 있기에 가능하다.\n조직도 마찬가지다. 재능 많은 부하직원들이 능력을 맘껏 발휘하게 하려면, 윗사람은 무색 무미 무취의 넓은 바탕이 되어 그들을 포용해야 한다. 삼국지에서 관우, 장비, 제갈량이 돋보이는 것은 그들을 품을 수 있는 유비의 텅 빈 캔버스가 있었기 때문이다. 손오공의 재롱도 결국 부처님 손바닥 위라는 바탕 안에서만 유효한 것이다.\n\n**4. 사이 공간의 에너지**\n서로 다른 요소를 배치할 때, 떨어져 생긴 '사이 공간(In-between space)'은 떨어진 것을 연결시키면서도 개체의 속성을 유지하게 만든다. 사람은 끊임없이 자신의 경험을 바탕으로 보이는 것을 통합하고 단순화하려 한다.\n천지창조 그림을 보라. 신과 아담의 손끝과 손끝, 맞닿지 않은 그 '사이 공간'에 창조의 응축된 힘이 있다. 창의성은 사물을 독창적으로 만드는 것이 아니라, 사물과 사물을 어떻게 '연결' 짓는가에 달려 있다.\n\n입면을 디자인할 때도 적절한 분절(Articulation)이 필요하다. 이때 빈 공간만큼 요소들을 긴장감 있게 연결해주는 것은 없다. 한옥에 깊게 드리워지는 그늘(허공부)은 지붕과 기둥을 돋보이게 한다. 허리가 없는 배꼽티가 오히려 허리를 가장 강렬하게 강조하는 것과 같다.\n결혼 전 닿을 듯 닿지 못하는 아슬아슬한 거리에서 엄청난 사랑의 인력이 발생하듯, 안주하게 해서는 안 된다. 팽팽한 사이 공간을 남겨두어야 한다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[AI와의 대화]</h4>\n프롬프트에 아무리 정교한 지시를 내려도, AI는 '비움'을 설계하는 것을 가장 어려워합니다. 기계는 화면의 모든 픽셀과 공간을 유용한 데이터로 가득 채우려 강박적으로 작동하기 때문입니다. 하지만 우리는 알고 있습니다. 아무것도 없는 텅 빈 곳에서 비로소 바람이 길을 찾고 햇살이 머문다는 것을. 계산된 효율을 잠시 멈추고 빈 곳을 남겨두는 여유, 그것이 숨 쉬는 건축을 만듭니다.\n</div>",
+            "text": "**3. 바탕의 포용력**\n동등한 것들을 무질서하게 배치하여 변화감을 주고 싶다면, 그 바탕이 변화를 수용할 수 있을 만큼 포용력이 있어야 한다. 바탕을 단순화하고 색을 차분하게 눌러주어야 한다.\n요즘 건축물 중에 창문의 위치가 수직/수평을 벗어나 자유롭게 흩어지거나 다양한 모양을 띠는 경우가 있다. 이를 성공시키려면 바탕 벽면이 일반 벽면보다 단색이어야 하고, 면의 성격이 아주 강해야 한다. 창문의 모양보다, 그것을 품어낼 '벽면'을 어떻게 할지 더 치열하게 고민해야 한다.\n\n영화 <악마는 프라다를 입는다>를 보라. 그 세련됨의 정점은 평범함이 굳건히 받쳐주고 있기에 가능하다.\n조직도 마찬가지다. 재능 많은 부하직원들이 능력을 맘껏 발휘하게 하려면, 윗사람은 무색 무미 무취의 넓은 바탕이 되어 그들을 포용해야 한다. 삼국지에서 관우, 장비, 제갈량이 돋보이는 것은 그들을 품을 수 있는 유비의 텅 빈 캔버스가 있었기 때문이다. 손오공의 재롱도 결국 부처님 손바닥 위라는 바탕 안에서만 유효한 것이다.\n\n**4. 사이 공간의 에너지**\n서로 다른 요소를 배치할 때, 떨어져 생긴 '사이 공간(In-between space)'은 떨어진 것을 연결시키면서도 개체의 속성을 유지하게 만든다. 사람은 끊임없이 자신의 경험을 바탕으로 보이는 것을 통합하고 단순화하려 한다.\n천지창조 그림을 보라. 신과 아담의 손끝과 손끝, 맞닿지 않은 그 '사이 공간'에 창조의 응축된 힘이 있다. 창의성은 사물을 독창적으로 만드는 것이 아니라, 사물과 사물을 어떻게 '연결' 짓는가에 달려 있다.\n\n입면을 디자인할 때도 적절한 분절(Articulation)이 필요하다. 이때 빈 공간만큼 요소들을 긴장감 있게 연결해주는 것은 없다. 한옥에 깊게 드리워지는 그늘(허공부)은 지붕과 기둥을 돋보이게 한다. 허리가 없는 배꼽티가 오히려 허리를 가장 강렬하게 강조하는 것과 같다.\n결혼 전 닿을 듯 닿지 못하는 아슬아슬한 거리에서 엄청난 사랑의 인력이 발생하듯, 안주하게 해서는 안 된다. 팽팽한 사이 공간을 남겨두어야 한다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg><div class=\"handwriting\" style=\"margin-top: 10px;\">[AI와의 대화]</h4>\n프롬프트에 아무리 정교한 지시를 내려도, AI는 '비움'을 설계하는 것을 가장 어려워합니다. 기계는 화면의 모든 픽셀과 공간을 유용한 데이터로 가득 채우려 강박적으로 작동하기 때문입니다. 하지만 우리는 알고 있습니다. 아무것도 없는 텅 빈 곳에서 비로소 바람이 길을 찾고 햇살이 머문다는 것을. 계산된 효율을 잠시 멈추고 빈 곳을 남겨두는 여유, 그것이 숨 쉬는 건축을 만듭니다.\n</div></div>",
             "image": "static/images/sketch_philosophy_1786665818552.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질"
@@ -733,19 +781,87 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_71.jpg"
+            "image": "static/images/user_71.jpg",
+            "text": ""
+        },
+        {
+            "type": "image_full",
+            "title": "제3장. 건축의 철학 - 50년 쟁이의 원칙",
+            "subtitle": "",
+            "image": "static/images/solitary_architect_desk_1785975577046.jpg",
+            "part": "3장: 철학",
+            "partTitle": "선택이 곧 건축이다",
+            "text": ""
+        },
+        {
+            "type": "image_top",
+            "title": "제5장. 26년 현장의 기록: 삭제할 수 없는 85개의 조각들",
+            "image": "static/images/dark_room_architect_1.png",
+            "text": "이 장에 담긴 85개의 조각들은 정제되지 않은 날것의 기록입니다. 누군가는 이 중 절반을 덜어내고 매끈한 성공기로 포장하라고 조언했습니다. 그러나 저는 단 한 줄도 지울 수 없었습니다. \n\n이 85개의 기록에는 철학과 현실 사이의 치열한 모순이 있고, 똑같은 고민이 무의식적으로 반복되는 흔적이 있으며, 때로는 깊은 혼란과 무기력함마저 묻어 있습니다. 앞선 장에서 말한 '건축의 원칙'과 이 개인적인 '현장의 일지'는 끊임없이 충돌하고 팽팽한 긴장 관계를 이룹니다.\n\nAI 기반의 완벽한 시스템(J-Hub)을 만들어낸 설계자가 왜 여전히 불안한가? 왜 여전히 현장에서 먼지를 뒤집어쓰고 고민하는가? 그에 대한 가장 정직한 대답이 바로 이 거칠고 평탄하지 않은 85개의 기록 안에 있습니다. \n\n중복과 모순, 황홀함과 분노가 모두 얽혀있는 이 조각들은, 지난 2015년부터 2024년까지 제가 현장에서 살아남기 위해 써내려간 진정한 생존기입니다.",
+            "part": "3부: 증언과 성찰",
+            "partTitle": "현장의 기록"
+        },
+        {
+            "type": "image_top",
+            "title": "01. 주변에 순응하라",
+            "text": "유럽의 건축물은 대체로 중심축을 둔 좌우 대칭을 선호한다. 하지만 우리나라처럼 산의 능선과 길이 유기적으로 형성된 곳에서 강압적인 대칭은 부조화를 낳다. \n우리나라의 산사를 가보면, 길에서 볼 때는 바르게 서 있다가도 조금 더 걸어가 뒤돌아보면 지형에 맞춰 살짝 돌아서 있다. 이것이 우리의 정형이다. 이미 정해진 형태를 고집하는 것이 아니라, 주변을 감안하여 당연히 있을 자리에 배치하는 조화로움이다.<br><br>우리가 AI의 산출물을 다룰 때도 마찬가지다. 기계가 뱉어낸 완벽하고 기하학적인 숫자를 억지로 대지에 욱여넣을 것이 아니라, 현장의 맥락과 지형에 맞게 살짝 비틀고 순응시키는 것. 그것이 오직 인간 건축가만이 할 수 있는 조율이다.",
+            "image": "static/images/sketch_adapt_1786672412241.jpg",
+            "part": "3부: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등"
+        },
+        {
+            "type": "image_top",
+            "title": "15. 단순화와 포용력",
+            "text": "어떤 개체를 존중하려면, 때로는 그것을 품어주는 넉넉한 바탕이 필요한다. \"악마는 프라다를 입는다\"는 말처럼, 세련된 프라다의 디자인은 평범함 속에 빛나는 비범함이다. 이 세련됨이 존재하려면 반드시 평범함이 곁에 있어야 한다.\n\n재능이 많은 부하직원들이 능력을 마음껏 발휘하게 하려면, 바탕이 되는 윗사람은 개성을 뽐내기보다 무색무취하게 넓고 커져야 한다. 삼국지에서 관우와 장비가 돋보이는 것은 그들을 품을 수 있는 유비의 포용력이 있었기 때문이다.<br><br>AI라는 거대한 데이터의 바다(단순하고 무색무취한 바탕) 위에서 비로소 인간 건축가의 통찰(관우와 장비의 개성)이 자유롭게 뛰어놀 수 있다. 기계의 단순함을 넉넉히 품어낼 때, 우리의 직관은 비로소 예리하게 빛난다.",
+            "image": "static/images/sketch_embrace_1786672392339.jpg",
+            "part": "3부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게"
+        },
+        {
+            "type": "image_full",
+            "title": "제4장. 완벽한 시스템이 놓친 것들 (Y구역 현장 기록)",
+            "subtitle": "",
+            "image": "static/images/yongmun_report_02.png",
+            "part": "현장 에피소드",
+            "partTitle": "Y구역의 실전 기록",
+            "text": ""
+        },
+        {
+            "type": "image_top",
+            "title": "[Y구역 현장 기록 1] 서류 완벽주의의 함정: 타당성 검토의 배신",
+            "image": "static/images/sketch_insight_data_1786666020458.jpg",
+            "text": "AI 시뮬레이션과 수많은 엑셀 시트가 가리키는 Y구역의 타당성 검토 결과는 '완벽' 그 자체였다. 일조량부터 용적률 최대치까지 시스템은 오차 없이 최적의 데이터를 뽑아냈다.\n\n하지만 현장 포크레인이 땅을 팠을 때 마주한 것은 데이터에 없던 '암반'과 예상치 못한 '지하수맥'이었다. 기계는 지적도와 건축법규라는 '규칙' 안에서는 완벽했지만, 땅이 품고 있는 수십 년의 '기억'과 물리적 변수까지는 계산하지 못했던 것이다.\n\n결국 완벽했던 AI의 도면을 찢어버리고, 우리는 밤새 현장 소장님과 머리를 맞대며 흙바닥 위에서 새로운 스케치를 그려야 했다. 기계가 설계의 90%를 해줄지언정, 마지막 10%의 변수를 책임지는 것은 결국 비 맞으며 현장을 뛰는 인간의 '감'이자 '경험'임을 뼈저리게 느낀 순간이었다.",
+            "part": "현장 에피소드",
+            "partTitle": "Y구역의 실전 기록"
+        },
+        {
+            "type": "image_top",
+            "title": "[Y구역 현장 기록 2] AI가 읽지 못하는 지역 맥락: 달동네의 바람길",
+            "image": "static/images/sketch_100year_market_1.jpg",
+            "text": "Y구역 재개발 마스터플랜을 짤 때, 시스템은 용적률 극대화를 위해 기존 골목길을 모두 밀어버리고 일직선의 웅장한 진입로를 제안했다. 숫자만 보면 완벽한 효율이었다.\n\n하지만 그 굽이진 골목길은 단순한 도로가 아니었다. 30년간 동네 어르신들이 여름밤 평상을 내놓고 부채질을 하던 '바람길'이자, 마을의 공동체가 숨 쉬는 혈관이었다. AI의 데이터에는 '통행량 0.5'의 비효율적인 동선으로 찍혔지만, 인간 건축가의 눈에는 반드시 지켜내야 할 '지역 맥락(Context)'이었다.\n\n우리는 용적률 손해를 무릅쓰고 그 굽은 골목의 흔적을 단지 내 산책로로 억척스럽게 살려냈다. 숫자(Data)의 효율에 인간의 낭만(Humanity)을 덧입히는 작업, 그것이 진짜 건축가의 역할이다.",
+            "part": "현장 에피소드",
+            "partTitle": "Y구역의 실전 기록"
+        },
+        {
+            "type": "image_top",
+            "title": "[Y구역 현장 기록 3] 완벽한 보고서의 패배: 심의와 설득의 기술",
+            "image": "static/images/sketch_rebar_1786665980290.jpg",
+            "text": "J-Hub로 뽑아낸 Y구역의 심의 보고서는 단 한 치의 오차도 없었다. 모든 법규를 준수했고, 시뮬레이션 결과는 훌륭했다. 하지만 심의위원회에서 우리는 처참하게 '반려'를 당했다.\n\n이유는 시스템의 오류가 아니었다. 심의위원들이 우려했던 것은 '완벽한 논리'가 아니라 '주민들의 심리적 저항감'이었다. 기계는 법을 만족시켰지만, 사람의 마음을 설득하지는 못했던 것이다.\n\n그 다음 심의 때 우리가 들고 간 대안은 AI의 화려한 데이터가 아니었다. 투박한 손스케치와, 이 공간이 지역 주민들에게 어떤 따뜻함을 줄 것인지에 대한 '진정성 있는 스토리'였다. 기계가 만든 차가운 논리에 인간의 체온을 불어넣자 굳게 닫혀있던 심의위원들의 고개가 끄덕여졌다.",
+            "part": "현장 에피소드",
+            "partTitle": "Y구역의 실전 기록"
         },
         {
             "type": "image_top",
             "title": "선택(Choice)이 곧 건축이다",
-            "text": "토요일 이른 아침, 텅 빈 현장으로 출근하는 차 안에서 나는 문득 거대한 질문과 마주했다.\n\n그동안 우리는 J-Hub를 통해 데이터를 장악하고, 수백억짜리 타당성 검토를 순식간에 끝내며, 회사를 파멸시킬 법적 리스크를 단단하게 통제하는 시스템을 구축했다. '관리'와 '효율성'의 측면에서 AI는 의심할 여지 없는 최고의 무기였다.\n\n하지만, **디자인은 어떤가?**\n\n우리가 아파트 건물 덩어리(주동) 하나를 대지 위에 얹을 때, 단순히 법정 건폐율이나 일조 사선(햇빛을 가리지 않게 건물을 깎는 규제)을 통과했다고 끝나는 것이 아니다. 지형을 어떻게 해석할 것인가? 사람들이 단지에 진입할 때 공간이 주는 위압감을 어떻게 줄이고 편안함을 느끼게 할 것인가? 이 시각적이고 인지적인 해석, 즉 심리적이고 공간적인 추상성의 영역은 결코 기계의 연산만으로는 실현될 수 없다. 그것은 철저히 인간의 영혼과 직관이 닿아야 하는 지점이다.\n\n그렇다면 디자인에서 AI의 역할은 무엇인가?\n\n과거의 건축가는 스케치나 스케치업 모델링 대안 하나(Alt 1)를 깎는 데 며칠 밤을 지새웠다. 정작 그 3D 매스를 띄워놓고 \"이 공간이 사람들에게 어떤 심리적 영향을 미칠 것인가\"를 고뇌하고 비교해 볼 '시간'이 없었다.\n\n우리가 넘어야 할 산이자, 디자인에서 AI가 나아가야 할 궁극적인 미래는 명확하다. 건축가가 펜으로 러프하게 스케치를 던지거나 특정 구역의 의도를 텍스트로 지정했을 때, AI가 우리의 '손과 발'이 되어 단 몇 분 만에 수십 개의 고품질 수많은 설계 대안(Alts)을 쏟아내는 시스템이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[AI와의 대화]</h4>\n우리가 아키 시냅스(Archisynapse)와 협업할 때도 마찬가지입니다. AI는 수만 개의 데이터를 연산하여 단 하나의 오차도 없는 '완벽한 기하학'을 도출합니다. 하지만 현장의 거친 흙바닥과 옆 건물의 비뚤어진 담장까지 계산하지는 못합니다. 완벽한 도면을 기꺼이 구기고 주변의 무질서함과 조화시키는 '불완전한 선택'. 기계는 할 수 없는, 그것이 바로 인간 건축가만의 특권입니다.\n</div>",
+            "text": "토요일 이른 아침, 텅 빈 현장으로 출근하는 차 안에서 나는 문득 거대한 질문과 마주했다.\n\n그동안 우리는 J-Hub를 통해 데이터를 장악하고, 수백억짜리 타당성 검토를 순식간에 끝내며, 회사를 파멸시킬 법적 리스크를 단단하게 통제하는 시스템을 구축했다. '관리'와 '효율성'의 측면에서 AI는 의심할 여지 없는 최고의 무기였다.\n\n하지만, **디자인은 어떤가?**\n\n우리가 아파트 건물 덩어리(주동) 하나를 대지 위에 얹을 때, 단순히 법정 건폐율이나 일조 사선(햇빛을 가리지 않게 건물을 깎는 규제)을 통과했다고 끝나는 것이 아니다. 지형을 어떻게 해석할 것인가? 사람들이 단지에 진입할 때 공간이 주는 위압감을 어떻게 줄이고 편안함을 느끼게 할 것인가? 이 시각적이고 인지적인 해석, 즉 심리적이고 공간적인 추상성의 영역은 결코 기계의 연산만으로는 실현될 수 없다. 그것은 철저히 인간의 영혼과 직관이 닿아야 하는 지점이다.\n\n그렇다면 디자인에서 AI의 역할은 무엇인가?\n\n과거의 건축가는 스케치나 스케치업 모델링 대안 하나(Alt 1)를 깎는 데 며칠 밤을 지새웠다. 정작 그 3D 매스를 띄워놓고 \"이 공간이 사람들에게 어떤 심리적 영향을 미칠 것인가\"를 고뇌하고 비교해 볼 '시간'이 없었다.\n\n우리가 넘어야 할 산이자, 디자인에서 AI가 나아가야 할 궁극적인 미래는 명확하다. 건축가가 펜으로 러프하게 스케치를 던지거나 특정 구역의 의도를 텍스트로 지정했을 때, AI가 우리의 '손과 발'이 되어 단 몇 분 만에 수십 개의 고품질 수많은 설계 대안(Alts)을 쏟아내는 시스템이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg><div class=\"handwriting\" style=\"margin-top: 10px;\">[AI와의 대화]</h4>\n우리가 아키 시냅스(Archisynapse)와 협업할 때도 마찬가지입니다. AI는 수만 개의 데이터를 연산하여 단 하나의 오차도 없는 '완벽한 기하학'을 도출합니다. 하지만 현장의 거친 흙바닥과 옆 건물의 비뚤어진 담장까지 계산하지는 못합니다. 완벽한 도면을 기꺼이 구기고 주변의 무질서함과 조화시키는 '불완전한 선택'. 기계는 할 수 없는, 그것이 바로 인간 건축가만의 특권입니다.\n</div></div>",
             "image": "static/images/96.jpg",
             "part": "3부: 증언과 성찰",
             "partTitle": "시스템 너머의 본질"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_70.jpg"
+            "image": "static/images/user_70.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -768,16 +884,9 @@ const bookData = {
             "text": ""
         },
         {
-            "type": "image_top",
-            "title": "01. 주변에 순응하라",
-            "text": "유럽의 건축물은 대체로 중심축을 둔 좌우 대칭을 선호한다. 하지만 우리나라처럼 산의 능선과 길이 유기적으로 형성된 곳에서 강압적인 대칭은 부조화를 낳다. \n우리나라의 산사를 가보면, 길에서 볼 때는 바르게 서 있다가도 조금 더 걸어가 뒤돌아보면 지형에 맞춰 살짝 돌아서 있다. 이것이 우리의 정형이다. 이미 정해진 형태를 고집하는 것이 아니라, 주변을 감안하여 당연히 있을 자리에 배치하는 조화로움이다.<br><br>우리가 AI의 산출물을 다룰 때도 마찬가지다. 기계가 뱉어낸 완벽하고 기하학적인 숫자를 억지로 대지에 욱여넣을 것이 아니라, 현장의 맥락과 지형에 맞게 살짝 비틀고 순응시키는 것. 그것이 오직 인간 건축가만이 할 수 있는 조율이다.",
-            "image": "static/images/sketch_adapt_1786672412241.jpg",
-            "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등"
-        },
-        {
             "type": "image_full",
-            "image": "static/images/user_68.jpg"
+            "image": "static/images/user_68.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -789,7 +898,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_67.jpg"
+            "image": "static/images/user_67.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -800,7 +910,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_66.jpg"
+            "image": "static/images/user_66.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -816,7 +927,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_65.jpg"
+            "image": "static/images/user_65.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -826,7 +938,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_64.jpg"
+            "image": "static/images/user_64.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -843,7 +956,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_63.jpg"
+            "image": "static/images/user_63.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -867,12 +981,13 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_62.jpg"
+            "image": "static/images/user_62.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "12. 맥락 속의 완벽함 (Harmony, Not Perfection)",
-            "text": "우리가 CG 업체에서 받은 이미지가 마음에 들지 않는 이유를 생각해 봅시다. 좋은 참고 이미지를 찾아 \"이 분위기로 만들어 달라\"고 요청해도 항상 성공하지 못하는 이유는, 건축의 아름다움이 형태나 색감만으로는 완성되지 않기 때문이다.\n\n우리가 한국 미를 말할 때 \"자연스러움\"을 이야기한다. 하지만 이 자연스러움은 자연 그대로의 방치된 상태가 아닙니다. 신중한 고민과 섬세한 조정 끝에 나타나는 '무심함'이다. 창덕궁의 부용정은 완전한 대칭 속에 섬세한 비대칭을 품고 있다.\n\n자연스럽다는 것은 맥락을 읽는 것이다. 건물이 놓여 있는 지형과 빛, 계절의 변화에 응답하는 것이다. 완벽함을 추구하되, 완벽함이 아닌 것들을 수용할 수 있어야 한다. 정형성을 추구하되, 비정형성이 만드는 자연스러움을 이해해야 한다.<br><br><b>[AI와의 대화]</b><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다. AI가 그려낸 완벽하고 기하학적인 도면이 때로는 주변의 맥락(도시의 역사, 사람들의 동선)과 엇박자를 낼 때가 있습니다. 완벽한 숫자를 포기하더라도 주변과 조화롭게 어우러지는 불완전함을 택하는 것. 그것이 기계는 할 수 없는 인간 건축가만의 고뇌이자 특권입니다.",
+            "text": "우리가 CG 업체에서 받은 이미지가 마음에 들지 않는 이유를 생각해 봅시다. 좋은 참고 이미지를 찾아 \"이 분위기로 만들어 달라\"고 요청해도 항상 성공하지 못하는 이유는, 건축의 아름다움이 형태나 색감만으로는 완성되지 않기 때문이다.\n\n우리가 한국 미를 말할 때 \"자연스러움\"을 이야기한다. 하지만 이 자연스러움은 자연 그대로의 방치된 상태가 아닙니다. 신중한 고민과 섬세한 조정 끝에 나타나는 '무심함'이다. 창덕궁의 부용정은 완전한 대칭 속에 섬세한 비대칭을 품고 있다.\n\n자연스럽다는 것은 맥락을 읽는 것이다. 건물이 놓여 있는 지형과 빛, 계절의 변화에 응답하는 것이다. 완벽함을 추구하되, 완벽함이 아닌 것들을 수용할 수 있어야 한다. 정형성을 추구하되, 비정형성이 만드는 자연스러움을 이해해야 한다.<br><br><b><div class=\"handwriting\" style=\"margin-top: 10px;\">[AI와의 대화]</b><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다. AI가 그려낸 완벽하고 기하학적인 도면이 때로는 주변의 맥락(도시의 역사, 사람들의 동선)과 엇박자를 낼 때가 있습니다. 완벽한 숫자를 포기하더라도 주변과 조화롭게 어우러지는 불완전함을 택하는 것. 그것이 기계는 할 수 없는 인간 건축가만의 고뇌이자 특권입니다.</div>",
             "image": "static/images/sculpture_08.jpg",
             "part": "3부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게"
@@ -887,7 +1002,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_61.jpg"
+            "image": "static/images/user_61.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -899,19 +1015,13 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_60.jpg"
-        },
-        {
-            "type": "image_top",
-            "title": "15. 단순화와 포용력",
-            "text": "어떤 개체를 존중하려면, 때로는 그것을 품어주는 넉넉한 바탕이 필요한다. \"악마는 프라다를 입는다\"는 말처럼, 세련된 프라다의 디자인은 평범함 속에 빛나는 비범함이다. 이 세련됨이 존재하려면 반드시 평범함이 곁에 있어야 한다.\n\n재능이 많은 부하직원들이 능력을 마음껏 발휘하게 하려면, 바탕이 되는 윗사람은 개성을 뽐내기보다 무색무취하게 넓고 커져야 한다. 삼국지에서 관우와 장비가 돋보이는 것은 그들을 품을 수 있는 유비의 포용력이 있었기 때문이다.<br><br>AI라는 거대한 데이터의 바다(단순하고 무색무취한 바탕) 위에서 비로소 인간 건축가의 통찰(관우와 장비의 개성)이 자유롭게 뛰어놀 수 있다. 기계의 단순함을 넉넉히 품어낼 때, 우리의 직관은 비로소 예리하게 빛난다.",
-            "image": "static/images/sketch_embrace_1786672392339.jpg",
-            "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게"
+            "image": "static/images/user_60.jpg",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_59.jpg"
+            "image": "static/images/user_59.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -923,7 +1033,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_58.jpg"
+            "image": "static/images/user_58.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -948,7 +1059,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_56.jpg"
+            "image": "static/images/user_56.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -960,7 +1072,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_117.jpg"
+            "image": "static/images/user_117.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -972,7 +1085,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_54.jpg"
+            "image": "static/images/user_54.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -984,7 +1098,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_53.jpg"
+            "image": "static/images/user_53.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -996,7 +1111,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_52.jpg"
+            "image": "static/images/user_52.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1008,7 +1124,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_51.jpg"
+            "image": "static/images/user_51.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1019,7 +1136,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_50.jpg"
+            "image": "static/images/user_50.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1030,7 +1148,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_49.jpg"
+            "image": "static/images/user_49.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1041,7 +1160,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_48.jpg"
+            "image": "static/images/user_48.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1051,7 +1171,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_47.jpg"
+            "image": "static/images/user_47.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1062,7 +1183,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_46.jpg"
+            "image": "static/images/user_46.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1072,7 +1194,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_116.jpg"
+            "image": "static/images/user_116.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1083,7 +1206,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_44.jpg"
+            "image": "static/images/user_44.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1093,7 +1217,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_43.jpg"
+            "image": "static/images/user_43.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1103,7 +1228,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_42.jpg"
+            "image": "static/images/user_42.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1114,7 +1240,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_41.jpg"
+            "image": "static/images/user_41.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1124,7 +1251,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_40.jpg"
+            "image": "static/images/user_40.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1134,7 +1262,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_39.jpg"
+            "image": "static/images/user_39.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1144,7 +1273,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_38.jpg"
+            "image": "static/images/user_38.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1167,7 +1297,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_37.jpg"
+            "image": "static/images/user_37.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1178,7 +1309,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_36.jpg"
+            "image": "static/images/user_36.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1212,7 +1344,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_34.jpg"
+            "image": "static/images/user_34.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1222,7 +1355,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_33.jpg"
+            "image": "static/images/user_33.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1245,7 +1379,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_32.jpg"
+            "image": "static/images/user_32.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1257,19 +1392,21 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_31.jpg"
+            "image": "static/images/user_31.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "50. 만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "우리는 설계안이나 우리의 삶, 또는 인간관계에 있어서 주도적으로 만들고 있는 것일까요? 아니면 만들어져 가는 것일까요?\n\n요즘 취미로 무언가를 만들면서 느끼는 점은, 기본적인 생각과 의도는 처음 가지고 시작하지만 그 결과물에 있어서는 '원래 있어야 할 모습'에 맞게 자연스럽게 만들어져 간다는 것이다. 우리가 하는 계획도, 인생도, 본인의 의도와 다르게 진행된다고 해서 틀린 것이 아닙니다. 어쩌면 그 상황과 환경에 가장 적합하게 만들어져 가는 과정일 수 있다. 중요한 것은 변화되어 가더라도 본인 마음의 중심을 놓지 않는 것이다.\n\n---<br><br><b>[AI와의 대화]</b><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다.<br>처음 계획(만들려던 것)과 AI의 시뮬레이션(만들어지는 것) 사이의 불일치를 만났을 때, 우리는 선택해야 합니다:<br>① 내 의도에 AI를 맞춘다 (기계를 도구로 본다)<br>② AI의 제안을 수용한다 (기계를 파트너로 본다)<br>③ 그 사이에서 새로운 가능성을 찾는다 (공창造)<br><br>진정한 혁신과 디자인은 ③의 유연함에서 나옵니다.",
+            "text": "우리는 설계안이나 우리의 삶, 또는 인간관계에 있어서 주도적으로 만들고 있는 것일까요? 아니면 만들어져 가는 것일까요?\n\n요즘 취미로 무언가를 만들면서 느끼는 점은, 기본적인 생각과 의도는 처음 가지고 시작하지만 그 결과물에 있어서는 '원래 있어야 할 모습'에 맞게 자연스럽게 만들어져 간다는 것이다. 우리가 하는 계획도, 인생도, 본인의 의도와 다르게 진행된다고 해서 틀린 것이 아닙니다. 어쩌면 그 상황과 환경에 가장 적합하게 만들어져 가는 과정일 수 있다. 중요한 것은 변화되어 가더라도 본인 마음의 중심을 놓지 않는 것이다.\n\n---<br><br><b><div class=\"handwriting\" style=\"margin-top: 10px;\">[AI와의 대화]</b><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다.<br>처음 계획(만들려던 것)과 AI의 시뮬레이션(만들어지는 것) 사이의 불일치를 만났을 때, 우리는 선택해야 합니다:<br>① 내 의도에 AI를 맞춘다 (기계를 도구로 본다)<br>② AI의 제안을 수용한다 (기계를 파트너로 본다)<br>③ 그 사이에서 새로운 가능성을 찾는다 (공창造)<br><br>진정한 혁신과 디자인은 ③의 유연함에서 나옵니다.</div>",
             "image": "static/images/sculpture_06.jpg",
             "part": "3부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_30.jpg"
+            "image": "static/images/user_30.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1281,7 +1418,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_29.jpg"
+            "image": "static/images/user_29.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1299,7 +1437,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_28.jpg"
+            "image": "static/images/user_28.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1309,7 +1448,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_27.jpg"
+            "image": "static/images/user_27.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1319,7 +1459,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_26.jpg"
+            "image": "static/images/user_26.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1331,7 +1472,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_25.jpg"
+            "image": "static/images/user_25.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1346,14 +1488,16 @@ const bookData = {
             "title": "58. 무제",
             "image": "static/images/user_24.jpg",
             "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "text": ""
         },
         {
             "type": "image_full",
             "title": "59. 무제",
             "image": "static/images/user_23.jpg",
             "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1397,7 +1541,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_20.jpg"
+            "image": "static/images/user_20.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1467,7 +1612,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_17.jpg"
+            "image": "static/images/user_17.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1502,7 +1648,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_16.jpg"
+            "image": "static/images/user_16.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1524,7 +1671,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_14.jpg"
+            "image": "static/images/user_14.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1534,7 +1682,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_13.jpg"
+            "image": "static/images/user_13.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1545,7 +1694,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_12.jpg"
+            "image": "static/images/user_12.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1555,7 +1705,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_11.jpg"
+            "image": "static/images/user_11.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1571,7 +1722,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_10.jpg"
+            "image": "static/images/user_10.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1587,7 +1739,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_09.jpg"
+            "image": "static/images/user_09.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1603,7 +1756,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_08.jpg"
+            "image": "static/images/user_08.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1639,7 +1793,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_07.jpg"
+            "image": "static/images/user_07.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1651,18 +1806,21 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_06.jpg"
+            "image": "static/images/user_06.jpg",
+            "text": ""
         },
         {
             "type": "cover",
             "title": "[부록] J-Hub 실무 가이드 (Appendix)",
             "image": "static/images/100.jpg",
             "part": "부록",
-            "partTitle": "J-Hub 실무 가이드 (Appendix)"
+            "partTitle": "J-Hub 실무 가이드 (Appendix)",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_05.jpg"
+            "image": "static/images/user_05.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1674,7 +1832,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_04.jpg"
+            "image": "static/images/user_04.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -1685,7 +1844,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_03.jpg"
+            "image": "static/images/user_03.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1695,7 +1855,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_02.jpg"
+            "image": "static/images/user_02.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1707,7 +1868,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_01.jpg"
+            "image": "static/images/user_01.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
