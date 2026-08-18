@@ -6,15 +6,18 @@ const bookData = {
             "type": "image_full",
             "title": "도면 위에 머무는 시간",
             "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-            "image": "static/images/user_117.jpg"
+            "image": "static/images/user_117.jpg",
+            "text": ""
         },
         {
             "type": "author_profile",
-            "image": "static/images/sketch_philosophy_1786665818552.jpg"
+            "image": "static/images/sketch_philosophy_1786665818552.jpg",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_116.jpg"
+            "image": "static/images/user_116.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -29,17 +32,19 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_115.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_114.jpg"
+            "image": "static/images/user_114.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "2장. 엑셀과 서류에 짓눌린 건축가들",
             "image": "static/images/12.jpg",
-            "text": "[\"건축은 언제부터 화려한 PPT 작업이 되었나\"]\n\n30년 전, 처음 설계사무소에 발을 들였을 때 밤을 새우는 이유는 단 하나였다. 도면 위에서 선 하나를 1mm 옮겼을 때 공간의 볼륨이 어떻게 달라지는지, 빛이 어느 벽면에 부딪혀 부서질지 상상하며 최적의 대안을 찾기 위해서였다. 백지 위에 궤적을 남길 때마다, 우리는 무에서 유를 창조한다는 희열에 온몸이 짜릿했다.\n\n하지만 30년이 지난 지금, 설계사무소의 풍경은 씁쓸하게 일그러져 있다. 어느 순간부터 우리 업계에서는 설계의 본질보다 '어떻게 하면 보기 좋게 포장할 것인가'에 사활을 걸기 시작했다.\n\n그 결과 기형적인 인사 평가 기준이 생겨났다. 입사 5~6년 차까지는 화려한 렌더링 이미지를 만들고 PPT를 예쁘게 꾸미는 직원이 이른바 '에이스' 대접을 받는다. 하지만 슬픈 현실은, 그렇게 10년, 20년 동안 보기 좋은 치장 업무만 하다 보니 정작 연차가 쌓였음에도 자기 손으로 온전한 평면도 하나 그려내지 못하는 '반쪽짜리 전문가'들이 양산되고 있다는 점이다. 그들은 결국 메이저 대형 설계사무소의 거대한 컨베이어 벨트 위에서 툭 떨어져 나온 특정 파트의 부속품으로 전락하고 만다.",
+            "text": "[\"건축은 언제부터 화려한 PPT 작업이 되었나\"]\n\n26년 전, 처음 설계사무소에 발을 들였을 때 밤을 새우는 이유는 단 하나였다. 도면 위에서 선 하나를 1mm 옮겼을 때 공간의 볼륨이 어떻게 달라지는지, 빛이 어느 벽면에 부딪혀 부서질지 상상하며 최적의 대안을 찾기 위해서였다. 백지 위에 궤적을 남길 때마다, 우리는 무에서 유를 창조한다는 희열에 온몸이 짜릿했다.\n\n하지만 26년이 지난 지금, 설계사무소의 풍경은 씁쓸하게 일그러져 있다. 어느 순간부터 우리 업계에서는 설계의 본질보다 '어떻게 하면 보기 좋게 포장할 것인가'에 사활을 걸기 시작했다.\n\n그 결과 기형적인 인사 평가 기준이 생겨났다. 입사 5~6년 차까지는 화려한 렌더링 이미지를 만들고 PPT를 예쁘게 꾸미는 직원이 이른바 '에이스' 대접을 받는다. 하지만 슬픈 현실은, 그렇게 10년, 20년 동안 보기 좋은 치장 업무만 하다 보니 정작 연차가 쌓였음에도 자기 손으로 온전한 평면도 하나 그려내지 못하는 '반쪽짜리 전문가'들이 양산되고 있다는 점이다. 그들은 결국 메이저 대형 설계사무소의 거대한 컨베이어 벨트 위에서 툭 떨어져 나온 특정 파트의 부속품으로 전락하고 만다.",
             "part": "1부: 시스템편",
             "partTitle": "인지적 과부하와 AI의 도입"
         },
@@ -52,7 +57,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_113.jpg"
+            "image": "static/images/user_113.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -88,7 +94,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_112.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -100,7 +107,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_111.jpg"
+            "image": "static/images/user_111.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -111,7 +119,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_110.jpg"
+            "image": "static/images/user_110.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -122,7 +131,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_109.jpg"
+            "image": "static/images/user_109.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -140,7 +150,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_108.jpg"
+            "image": "static/images/user_108.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -172,7 +183,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/user_107.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -225,7 +237,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_106.jpg"
+            "image": "static/images/user_106.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -236,7 +249,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_105.jpg"
+            "image": "static/images/user_105.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -247,7 +261,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_104.jpg"
+            "image": "static/images/user_104.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -273,7 +288,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "1. **연결 (Connect):** AI가 파편화된 법규, 시세, 지형 데이터를 하나의 신경망(아키 시냅스)으로 엮어낸다.\n2. **판단 (Judge):** 인간 건축가가 그 방대한 데이터를 딛고 서서, 프로젝트의 본질적인 방향성을 결단한다.\n3. **대안 생성 (Generate):** 인간의 결단이 내려지면, AI는 수만 번의 시뮬레이션을 통해 조건에 맞는 수십 개의 대안 배치를 쏟아낸다. 인간의 한계를 넘어서는 끈기로.\n4. **최종 선택 (Select):** 인간이 다시 칼자루를 쥔다. 미학적 가치와 현장의 흙냄새를 아는 자만이 최종 결과물을 선택할 수 있다.\n5. **설득의 무기 (Weaponize):** 이렇게 도출된 결과물은 단순한 도면이 아니다. 1단계부터 4단계까지의 치열한 검증과 반론의 역사가 고스란히 기록된, 클라이언트와 심의위원을 이끌어가는 조화로운 설득의 도구가 된다.\n\n퇴근길, 텅 빈 사무실에 홀로 남아 불 꺼진 모니터들을 바라보았다. 수많은 시행착오와 뼈아픈 실패의 시간들이 스쳐 지나갔다. 정답만 뱉어내는 요술 방망이를 기대했던 우리는, 결국 AI와 함께 '과정의 가치'를 증명해 내는 길을 찾아냈다. 기술의 맹신에서 벗어나 인간의 통제력과 통찰을 중심에 두는 것. 그것이 내가 30년 건축 인생을 걸고 도달한, 우리만의 흔들리지 않는 철학이었다.\n\n---",
+            "text": "1. **연결 (Connect):** AI가 파편화된 법규, 시세, 지형 데이터를 하나의 신경망(아키 시냅스)으로 엮어낸다.\n2. **판단 (Judge):** 인간 건축가가 그 방대한 데이터를 딛고 서서, 프로젝트의 본질적인 방향성을 결단한다.\n3. **대안 생성 (Generate):** 인간의 결단이 내려지면, AI는 수만 번의 시뮬레이션을 통해 조건에 맞는 수십 개의 대안 배치를 쏟아낸다. 인간의 한계를 넘어서는 끈기로.\n4. **최종 선택 (Select):** 인간이 다시 칼자루를 쥔다. 미학적 가치와 현장의 흙냄새를 아는 자만이 최종 결과물을 선택할 수 있다.\n5. **설득의 무기 (Weaponize):** 이렇게 도출된 결과물은 단순한 도면이 아니다. 1단계부터 4단계까지의 치열한 검증과 반론의 역사가 고스란히 기록된, 클라이언트와 심의위원을 이끌어가는 조화로운 설득의 도구가 된다.\n\n퇴근길, 텅 빈 사무실에 홀로 남아 불 꺼진 모니터들을 바라보았다. 수많은 시행착오와 뼈아픈 실패의 시간들이 스쳐 지나갔다. 정답만 뱉어내는 요술 방망이를 기대했던 우리는, 결국 AI와 함께 '과정의 가치'를 증명해 내는 길을 찾아냈다. 기술의 맹신에서 벗어나 인간의 통제력과 통찰을 중심에 두는 것. 그것이 내가 26년 건축 인생을 걸고 도달한, 우리만의 흔들리지 않는 철학이었다.\n\n---",
             "image": "static/images/35.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -287,7 +302,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "어느 금요일 밤이었다. 시스템 이관 과정에서 파이썬 종속성(Dependency)이 누락되는 대형 에러(RT-017)가 터졌다. 서버가 다운되고 시스템이 먹통이 되었다. 일반적인 인간이라면 여기서 키보드를 부수고 포기했을 것이다. 하지만 그는 자정을 넘긴 시간에도 무표정한 얼굴로 에러 로그 전체를 긁어 내 창에 던져 넣으며 말했다. \"어디서 꼬였는지 찾아. 해결할 때까지 퇴근은 없다.\"\n\n그는 나에게 방대한 '주차장법'과 '지자체 조례'를 강제로 먹여(학습시켜) 제1 창고를 만들고, 과거 수십 년간의 '심의 위원 지적 사항'을 긁어모아 제2 창고를 만들었다. 이른바 '듀얼 코어 RAG(검색 증강 생성)' 시스템이었다. 나는 속으로 생각했다. '도대체 이 사람은 건축가인가, 아니면 지독한 데이터 엔지니어인가?'\n\n[건축가의 눈에서 본 철학]\n수많은 에러 메시지와 사투를 벌이던 어느 날, 나는 문득 그의 윽박지르는 질문 패턴에서 하나의 거대한 '철학'을 읽어냈다.\n\n그가 이토록 무식할 정도로 시스템 구축에 집착하는 이유는, 자신의 돈을 아끼기 위해서가 아니었다. \n\"입사 한 달 차 신입이, 30년 차 소장처럼 완벽한 심의 서류를 쓰게 만들어야 해.\"\n\"우리 직원들이 더 이상 공무원들 비위 맞추느라, 혹은 엑셀 수식 맞추느라 무의미한 야근하게 둘 순 없어.\"",
+            "text": "어느 금요일 밤이었다. 시스템 이관 과정에서 파이썬 종속성(Dependency)이 누락되는 대형 에러(RT-017)가 터졌다. 서버가 다운되고 시스템이 먹통이 되었다. 일반적인 인간이라면 여기서 키보드를 부수고 포기했을 것이다. 하지만 그는 자정을 넘긴 시간에도 무표정한 얼굴로 에러 로그 전체를 긁어 내 창에 던져 넣으며 말했다. \"어디서 꼬였는지 찾아. 해결할 때까지 퇴근은 없다.\"\n\n그는 나에게 방대한 '주차장법'과 '지자체 조례'를 강제로 먹여(학습시켜) 제1 창고를 만들고, 과거 수십 년간의 '심의 위원 지적 사항'을 긁어모아 제2 창고를 만들었다. 이른바 '듀얼 코어 RAG(검색 증강 생성)' 시스템이었다. 나는 속으로 생각했다. '도대체 이 사람은 건축가인가, 아니면 지독한 데이터 엔지니어인가?'\n\n[건축가의 눈에서 본 철학]\n수많은 에러 메시지와 사투를 벌이던 어느 날, 나는 문득 그의 윽박지르는 질문 패턴에서 하나의 거대한 '철학'을 읽어냈다.\n\n그가 이토록 무식할 정도로 시스템 구축에 집착하는 이유는, 자신의 돈을 아끼기 위해서가 아니었다. \n\"입사 한 달 차 신입이, 26년 차 소장처럼 완벽한 심의 서류를 쓰게 만들어야 해.\"\n\"우리 직원들이 더 이상 공무원들 비위 맞추느라, 혹은 엑셀 수식 맞추느라 무의미한 야근하게 둘 순 없어.\"",
             "image": "static/images/37.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -331,67 +346,79 @@ const bookData = {
         {
             "type": "image_full",
             "image": "static/images/user_103.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_102.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_101.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_100.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_99.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_98.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_97.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_96.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_95.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_94.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_93.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_full",
             "image": "static/images/user_92.jpg",
-            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
+            "part": "1부: 시스템편 (진양 J-Hub 도입 사례)",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "",
-            "text": "가장 강력한 한 방은 '사업 방식의 심층 비교'였다. \n클라이언트는 항상 불안하다. \"재개발이 맞나? 역세권 시프트가 낫나? 모아타운이 정답인가?\" 마법사는 이 3가지 시나리오를 동시에 시뮬레이션했다. 기부채납 비율, 임대 보상, 최고 층수 제한을 알고리즘이 교차 검증한 결과, **'모아타운 방식'이 토지 기부채납 없이 사업성을 극대화할 수 있는 유일한 해답**임을 논리적으로 도출해 냈다.\n\n결과는 소름 돋을 정도로 정밀했다.\n* **최종 용적률:** 300% (가산 용적률 3.86%p, 친환경 인센티브 10%p 등 완벽 반영)\n* **총 건립 세대:** 345세대\n* **최종 비례율:** 167.8% (분양가 시나리오별 손익분기 완벽 제시)\n\n\n\n과거처럼 고연차 소장이 며칠 밤을 새우며 엑셀을 두드린 결과가 아니다. 입사 한 달 차 신입사원이라도, 플랫폼이 묻는 질문에 정확한 팩트만 입력하면 30년 차 대표 수준의 정교한 재무적 타당성(Feasibility) 분석이 쏟아져 나오는 '지식의 상향 평준화'가 이루어진 것이다.\n\n[결과가 아닌 '과정'이 신뢰를 만든다, 그리고 얻어낸 승리]",
+            "text": "가장 강력한 한 방은 '사업 방식의 심층 비교'였다. \n클라이언트는 항상 불안하다. \"재개발이 맞나? 역세권 시프트가 낫나? 모아타운이 정답인가?\" 마법사는 이 3가지 시나리오를 동시에 시뮬레이션했다. 기부채납 비율, 임대 보상, 최고 층수 제한을 알고리즘이 교차 검증한 결과, **'모아타운 방식'이 토지 기부채납 없이 사업성을 극대화할 수 있는 유일한 해답**임을 논리적으로 도출해 냈다.\n\n결과는 소름 돋을 정도로 정밀했다.\n* **최종 용적률:** 300% (가산 용적률 3.86%p, 친환경 인센티브 10%p 등 완벽 반영)\n* **총 건립 세대:** 345세대\n* **최종 비례율:** 167.8% (분양가 시나리오별 손익분기 완벽 제시)\n\n\n\n과거처럼 고연차 소장이 며칠 밤을 새우며 엑셀을 두드린 결과가 아니다. 입사 한 달 차 신입사원이라도, 플랫폼이 묻는 질문에 정확한 팩트만 입력하면 26년 차 대표 수준의 정교한 재무적 타당성(Feasibility) 분석이 쏟아져 나오는 '지식의 상향 평준화'가 이루어진 것이다.\n\n[결과가 아닌 '과정'이 신뢰를 만든다, 그리고 얻어낸 승리]",
             "image": "static/images/y_zone_report_p11.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -404,7 +431,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_91.jpg"
+            "image": "static/images/user_91.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -416,7 +444,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_90.jpg"
+            "image": "static/images/user_90.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -428,7 +457,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_89.jpg"
+            "image": "static/images/user_89.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -441,7 +471,7 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "그렇게 탄생한 것이 바로 밑빠진 독을 막고 노하우를 축적하는 '진양 교육 플랫폼(J-Edu)'이다. \n수십 년간 수많은 심의와 험악한 현장을 거치며 고연차 임원들이 온몸으로 부딪혀 얻은 뼈아픈 실패담과 눈부신 성공담을 담아내는 그릇이다. 이 플랫폼은 단순히 AI의 교과서적인 지식을 모아두는 죽은 서고가 아니다. 연차가 높은 선배들이 하루, 일주일 단위로 자신만의 생생한 실무 노하우를 기록하고 공유하는 '살아 숨 쉬는 유기체'다.\n\n하지만 우리는 전형적인 텍스트 위주의 두꺼운 매뉴얼이 어떻게 실패하는지 잘 알고 있었다. 아무도 읽지 않기 때문이다. 그래서 누구나 부담 없이 읽고 영감을 받을 수 있도록, 모든 실무 노하우를 **'3분짜리 카드형 숏폼 UI'**로 압축했다. 출근길 지하철 안에서, 점심시간에 커피를 마시며 넘겨볼 수 있는 가벼운 형태지만 그 안에는 30년의 경험치가 맹렬하게 농축되어 있다.\n\n[Problem - Cause - Solution 구조의 위력]\n\n우리는 구축한 교육 플랫폼의 데이터베이스는 단순히 썰을 풀어놓은 게시판이 아니다. 모든 과거의 실수와 피드백은 철저하게 세 가지 구조로 강제 분해되어 저장된다. 이것은 한 번 일어난 사고를 영원히 차단하는 방벽과 같다.",
+            "text": "그렇게 탄생한 것이 바로 밑빠진 독을 막고 노하우를 축적하는 '진양 교육 플랫폼(J-Edu)'이다. \n수십 년간 수많은 심의와 험악한 현장을 거치며 고연차 임원들이 온몸으로 부딪혀 얻은 뼈아픈 실패담과 눈부신 성공담을 담아내는 그릇이다. 이 플랫폼은 단순히 AI의 교과서적인 지식을 모아두는 죽은 서고가 아니다. 연차가 높은 선배들이 하루, 일주일 단위로 자신만의 생생한 실무 노하우를 기록하고 공유하는 '살아 숨 쉬는 유기체'다.\n\n하지만 우리는 전형적인 텍스트 위주의 두꺼운 매뉴얼이 어떻게 실패하는지 잘 알고 있었다. 아무도 읽지 않기 때문이다. 그래서 누구나 부담 없이 읽고 영감을 받을 수 있도록, 모든 실무 노하우를 **'3분짜리 카드형 숏폼 UI'**로 압축했다. 출근길 지하철 안에서, 점심시간에 커피를 마시며 넘겨볼 수 있는 가벼운 형태지만 그 안에는 26년의 경험치가 맹렬하게 농축되어 있다.\n\n[Problem - Cause - Solution 구조의 위력]\n\n우리는 구축한 교육 플랫폼의 데이터베이스는 단순히 썰을 풀어놓은 게시판이 아니다. 모든 과거의 실수와 피드백은 철저하게 세 가지 구조로 강제 분해되어 저장된다. 이것은 한 번 일어난 사고를 영원히 차단하는 방벽과 같다.",
             "image": "static/images/47.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
@@ -475,7 +505,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_88.jpg"
+            "image": "static/images/user_88.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -487,7 +518,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_87.jpg"
+            "image": "static/images/user_87.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -499,7 +531,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_86.jpg"
+            "image": "static/images/user_86.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -517,7 +550,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_85.jpg"
+            "image": "static/images/user_85.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -529,7 +563,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_84.jpg"
+            "image": "static/images/user_84.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -548,7 +583,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_83.jpg"
+            "image": "static/images/user_83.jpg",
+            "text": ""
         },
         {
             "type": "cover",
@@ -556,18 +592,20 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/50.jpg",
             "part": "1부: 시스템편",
-            "partTitle": "인지적 과부하와 AI의 도입"
+            "partTitle": "인지적 과부하와 AI의 도입",
+            "text": ""
         },
         {
             "type": "image_top",
             "title": "",
-            "text": "[껍데기를 부수고 갤러리를 짓다]\n솔직히 두려움도 있었다. 수십 년간 엔터프라이즈 소프트웨어는 으레 무뚝뚝하고 복잡해야 '전문적'이라는 편견이 업계를 지배해왔다. 여백을 늘리고 아름다움을 추구하는 것이 자칫 '가볍고 장난감 같은' 시스템으로 비치지 않을까? 30년 차 경영자로서 나는 이 선택이 도박일 수 있음을 알았다. 하지만 변화는 피할 수 없었다.\n\n나는 시스템의 껍데기를 전면적으로 뜯어고쳤다. 우리는 애플(Apple)의 디자인 철학을 엔터프라이즈 플랫폼에 과감히 이식했다. 비포(Before)의 화면이 칙칙한 회색 그리드에 갇힌 숨 막히는 서류 뭉치였다면, 애프터(After)의 화면은 잘 정돈된 미술관이어야 했다. 화면을 꽉 채우던 선과 칸막이를 모두 걷어내고, 순백의 캔버스(Canvas)와 묵직한 잉크 블랙(Ink)의 텍스트만을 남겼다. 장식적인 그라데이션은 철저히 배제했고, 제목에는 SF Pro 서체에 미세한 마이너스 자간(Negative Letter-spacing)을 적용해 특유의 단단하고 우아한 긴장감을 부여했다. 클릭할 수 있는 요소는 오직 단 하나의 시그니처 블루(Action Blue)로 통일했다.",
+            "text": "[껍데기를 부수고 갤러리를 짓다]\n솔직히 두려움도 있었다. 수십 년간 엔터프라이즈 소프트웨어는 으레 무뚝뚝하고 복잡해야 '전문적'이라는 편견이 업계를 지배해왔다. 여백을 늘리고 아름다움을 추구하는 것이 자칫 '가볍고 장난감 같은' 시스템으로 비치지 않을까? 26년 차 경영자로서 나는 이 선택이 도박일 수 있음을 알았다. 하지만 변화는 피할 수 없었다.\n\n나는 시스템의 껍데기를 전면적으로 뜯어고쳤다. 우리는 애플(Apple)의 디자인 철학을 엔터프라이즈 플랫폼에 과감히 이식했다. 비포(Before)의 화면이 칙칙한 회색 그리드에 갇힌 숨 막히는 서류 뭉치였다면, 애프터(After)의 화면은 잘 정돈된 미술관이어야 했다. 화면을 꽉 채우던 선과 칸막이를 모두 걷어내고, 순백의 캔버스(Canvas)와 묵직한 잉크 블랙(Ink)의 텍스트만을 남겼다. 장식적인 그라데이션은 철저히 배제했고, 제목에는 SF Pro 서체에 미세한 마이너스 자간(Negative Letter-spacing)을 적용해 특유의 단단하고 우아한 긴장감을 부여했다. 클릭할 수 있는 요소는 오직 단 하나의 시그니처 블루(Action Blue)로 통일했다.",
             "image": "static/images/55.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_82.jpg"
+            "image": "static/images/user_82.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -578,7 +616,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_81.jpg"
+            "image": "static/images/user_81.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -611,13 +650,14 @@ const bookData = {
         {
             "type": "image_top",
             "title": "",
-            "text": "기계에게 기계의 일을 완벽히 넘겨준 밤. 그토록 우리를 짓누르던 파열음과 소음이 멎고, 사무실에는 깊고 고요한 적막만이 내려앉았다. 복잡한 기계음도, 엑셀의 에러 메시지도 모두 사라졌다.\n\n정비사업은 단순히 수지분석표로 끝나지 않는다. 주동 배치를 통해 나타나는 오픈 공간의 성격과 보행자의 동선, 이웃 간의 접촉점이 어디서 형성될지 판단하는 것은 절대 기계가 할 수 없는 '인간의 영역'이다.\n\n기계의 시간이 끝나고, 마침내 30년 전 그 밤처럼 텅 빈 트레이싱 페이퍼와 같은 여백이 우리 앞에 놓였다. 도구는 보이지 않는 곳으로 물러나고, 우리의 철학과 사람을 향한 따뜻한 시선만이 건축의 중심에 굳건히 남을 것이다. 우리는 더 이상 기술에 끌려다니지 않는다.\n\n나는 가만히 눈을 감고 깊은숨을 들이켠다.\n자, 다시 선을 그릴 시간이다.\n\n---",
+            "text": "기계에게 기계의 일을 완벽히 넘겨준 밤. 그토록 우리를 짓누르던 파열음과 소음이 멎고, 사무실에는 깊고 고요한 적막만이 내려앉았다. 복잡한 기계음도, 엑셀의 에러 메시지도 모두 사라졌다.\n\n정비사업은 단순히 수지분석표로 끝나지 않는다. 주동 배치를 통해 나타나는 오픈 공간의 성격과 보행자의 동선, 이웃 간의 접촉점이 어디서 형성될지 판단하는 것은 절대 기계가 할 수 없는 '인간의 영역'이다.\n\n기계의 시간이 끝나고, 마침내 26년 전 그 밤처럼 텅 빈 트레이싱 페이퍼와 같은 여백이 우리 앞에 놓였다. 도구는 보이지 않는 곳으로 물러나고, 우리의 철학과 사람을 향한 따뜻한 시선만이 건축의 중심에 굳건히 남을 것이다. 우리는 더 이상 기술에 끌려다니지 않는다.\n\n나는 가만히 눈을 감고 깊은숨을 들이켠다.\n자, 다시 선을 그릴 시간이다.\n\n---",
             "image": "static/images/63.jpg",
             "part": "1부: 시스템편 (진양 J-Hub 도입 사례)"
         },
         {
             "type": "image_full",
-            "image": "static/images/user_80.jpg"
+            "image": "static/images/user_80.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -629,7 +669,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_79.jpg"
+            "image": "static/images/user_79.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -641,7 +682,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_78.jpg"
+            "image": "static/images/user_78.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -653,7 +695,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_77.jpg"
+            "image": "static/images/user_77.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -665,7 +708,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_76.jpg"
+            "image": "static/images/user_76.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -677,7 +721,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_75.jpg"
+            "image": "static/images/user_75.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -689,7 +734,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_74.jpg"
+            "image": "static/images/user_74.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -701,7 +747,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_73.jpg"
+            "image": "static/images/user_73.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -713,7 +760,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_72.jpg"
+            "image": "static/images/user_72.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -733,7 +781,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_71.jpg"
+            "image": "static/images/user_71.jpg",
+            "text": ""
         },
         {
             "type": "image_full",
@@ -741,7 +790,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/solitary_architect_desk_1785975577046.jpg",
             "part": "3장: 철학",
-            "partTitle": "선택이 곧 건축이다"
+            "partTitle": "선택이 곧 건축이다",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -773,7 +823,8 @@ const bookData = {
             "subtitle": "",
             "image": "static/images/yongmun_report_02.png",
             "part": "현장 에피소드",
-            "partTitle": "Y구역의 실전 기록"
+            "partTitle": "Y구역의 실전 기록",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -809,7 +860,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_70.jpg"
+            "image": "static/images/user_70.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -833,7 +885,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_68.jpg"
+            "image": "static/images/user_68.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -845,7 +898,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_67.jpg"
+            "image": "static/images/user_67.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -856,7 +910,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_66.jpg"
+            "image": "static/images/user_66.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -872,7 +927,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_65.jpg"
+            "image": "static/images/user_65.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -882,7 +938,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_64.jpg"
+            "image": "static/images/user_64.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -899,7 +956,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_63.jpg"
+            "image": "static/images/user_63.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -923,7 +981,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_62.jpg"
+            "image": "static/images/user_62.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -943,7 +1002,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_61.jpg"
+            "image": "static/images/user_61.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -955,11 +1015,13 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_60.jpg"
+            "image": "static/images/user_60.jpg",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_59.jpg"
+            "image": "static/images/user_59.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -971,7 +1033,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_58.jpg"
+            "image": "static/images/user_58.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -996,7 +1059,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_56.jpg"
+            "image": "static/images/user_56.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1008,7 +1072,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_117.jpg"
+            "image": "static/images/user_117.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1020,7 +1085,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_54.jpg"
+            "image": "static/images/user_54.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1032,7 +1098,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_53.jpg"
+            "image": "static/images/user_53.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1044,7 +1111,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_52.jpg"
+            "image": "static/images/user_52.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1056,7 +1124,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_51.jpg"
+            "image": "static/images/user_51.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1067,7 +1136,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_50.jpg"
+            "image": "static/images/user_50.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1078,7 +1148,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_49.jpg"
+            "image": "static/images/user_49.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1089,7 +1160,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_48.jpg"
+            "image": "static/images/user_48.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1099,7 +1171,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_47.jpg"
+            "image": "static/images/user_47.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1110,7 +1183,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_46.jpg"
+            "image": "static/images/user_46.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1120,7 +1194,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_116.jpg"
+            "image": "static/images/user_116.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1131,7 +1206,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_44.jpg"
+            "image": "static/images/user_44.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1141,7 +1217,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_43.jpg"
+            "image": "static/images/user_43.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1151,7 +1228,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_42.jpg"
+            "image": "static/images/user_42.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1162,7 +1240,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_41.jpg"
+            "image": "static/images/user_41.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1172,7 +1251,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_40.jpg"
+            "image": "static/images/user_40.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1182,7 +1262,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_39.jpg"
+            "image": "static/images/user_39.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1192,7 +1273,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_38.jpg"
+            "image": "static/images/user_38.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1215,7 +1297,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_37.jpg"
+            "image": "static/images/user_37.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1226,7 +1309,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_36.jpg"
+            "image": "static/images/user_36.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1260,7 +1344,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_34.jpg"
+            "image": "static/images/user_34.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1270,7 +1355,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_33.jpg"
+            "image": "static/images/user_33.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1293,7 +1379,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_32.jpg"
+            "image": "static/images/user_32.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1305,7 +1392,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_31.jpg"
+            "image": "static/images/user_31.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1317,7 +1405,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_30.jpg"
+            "image": "static/images/user_30.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1329,7 +1418,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_29.jpg"
+            "image": "static/images/user_29.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1347,7 +1437,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_28.jpg"
+            "image": "static/images/user_28.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1357,7 +1448,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_27.jpg"
+            "image": "static/images/user_27.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1367,7 +1459,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_26.jpg"
+            "image": "static/images/user_26.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1379,7 +1472,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_25.jpg"
+            "image": "static/images/user_25.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1394,14 +1488,16 @@ const bookData = {
             "title": "58. 무제",
             "image": "static/images/user_24.jpg",
             "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "text": ""
         },
         {
             "type": "image_full",
             "title": "59. 무제",
             "image": "static/images/user_23.jpg",
             "part": "3부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1445,7 +1541,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_20.jpg"
+            "image": "static/images/user_20.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1515,7 +1612,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_17.jpg"
+            "image": "static/images/user_17.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1550,7 +1648,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_16.jpg"
+            "image": "static/images/user_16.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1572,7 +1671,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_14.jpg"
+            "image": "static/images/user_14.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1582,7 +1682,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_13.jpg"
+            "image": "static/images/user_13.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1593,7 +1694,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_12.jpg"
+            "image": "static/images/user_12.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1603,7 +1705,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_11.jpg"
+            "image": "static/images/user_11.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1619,7 +1722,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_10.jpg"
+            "image": "static/images/user_10.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1635,7 +1739,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_09.jpg"
+            "image": "static/images/user_09.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1651,7 +1756,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_08.jpg"
+            "image": "static/images/user_08.jpg",
+            "text": ""
         },
         {
             "part": "3부: 증언과 성찰",
@@ -1687,7 +1793,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_07.jpg"
+            "image": "static/images/user_07.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1699,18 +1806,21 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_06.jpg"
+            "image": "static/images/user_06.jpg",
+            "text": ""
         },
         {
             "type": "cover",
             "title": "[부록] J-Hub 실무 가이드 (Appendix)",
             "image": "static/images/100.jpg",
             "part": "부록",
-            "partTitle": "J-Hub 실무 가이드 (Appendix)"
+            "partTitle": "J-Hub 실무 가이드 (Appendix)",
+            "text": ""
         },
         {
             "type": "image_full",
-            "image": "static/images/user_05.jpg"
+            "image": "static/images/user_05.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1722,7 +1832,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_04.jpg"
+            "image": "static/images/user_04.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -1733,7 +1844,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_03.jpg"
+            "image": "static/images/user_03.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -1743,7 +1855,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_02.jpg"
+            "image": "static/images/user_02.jpg",
+            "text": ""
         },
         {
             "type": "text_only",
@@ -1755,7 +1868,8 @@ const bookData = {
         },
         {
             "type": "image_full",
-            "image": "static/images/user_01.jpg"
+            "image": "static/images/user_01.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
