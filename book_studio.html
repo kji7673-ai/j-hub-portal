@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>J-Journal Studio</title>
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-on-dark: #2997ff;
+            --ink: #1d1d1f;
+            --ink-muted-80: #333333;
+            --canvas-parchment: #f5f5f7;
+            --hairline: #e0e0e0;
+            --font-display: 'SF Pro Display', system-ui, -apple-system, sans-serif;
+            --font-body: 'SF Pro Text', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: var(--font-body);
+            background: #fff;
+            color: var(--ink);
+            overflow: hidden;
+        }
+        #book-container {
+            width: 100vw; height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transition: width 0.3s ease;
+        }
+        .page-content {
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            padding: 80px 80px 120px 80px;
+            transition: transform 0.5s ease;
+            opacity: 0; pointer-events: none;
+        }
+        .page-content.active {
+            opacity: 1; pointer-events: auto;
+        }
+        .bg-dark {
+            background: #1d1d1f;
+        }
+        .controls {
+            position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 20px; align-items: center;
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px; border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .controls button {
+            border: none; background: transparent; cursor: pointer;
+            font-size: 16px; color: var(--primary);
+        }
+        .controls button:disabled { color: #ccc; cursor: not-allowed; }
+        
+        #secret-panel {
+            position: fixed; top: 0; right: -400px; width: 400px; height: 100vh;
+            background: #fff; box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s ease; z-index: 1000;
+            display: flex; flex-direction: column; padding: 20px; box-sizing: border-box;
+        }
+        #secret-panel.open { right: 0; }
+        
+        #gallery-modal, #secret-modal {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.5); z-index: 2000;
+            display: none; justify-content: center; align-items: center;
+        }
+        .modal-content {
+            background: #fff; padding: 30px; border-radius: 12px;
+            max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;
+        }
+        
+        .toc-btn { position: fixed; top: 30px; left: 30px; z-index: 100; background: rgba(255,255,255,0.8); border: none; padding: 10px; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .toc-modal { position: fixed; top: 0; left: -300px; width: 300px; height: 100vh; background: #fff; transition: left 0.3s ease; z-index: 1000; padding: 20px; box-sizing: border-box; box-shadow: 5px 0 20px rgba(0,0,0,0.1); }
+        .toc-modal.active { left: 0; }
+        .toc-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); display: none; z-index: 999; }
+        .toc-overlay.active { display: block; }
+        .toc-item { padding: 10px; cursor: pointer; border-bottom: 1px solid #eee; }
+        .toc-item:hover { background: #f5f5f7; }
+        
+        .image-container img { width: 100%; max-height: 50vh; object-fit: cover; border-radius: 12px; }
+        .chapter-title { font-family: var(--font-display); font-size: 34px; font-weight: 600; }
+        .body-text { font-size: 17px; line-height: 1.47; color: var(--ink); margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <button class="toc-btn">목차</button>
+    <div class="toc-overlay"></div>
+    <div class="toc-modal">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <h2 style="margin:0;">목차</h2>
+            <button class="close-toc-btn" style="border:none; background:transparent; font-size:20px; cursor:pointer;">&times;</button>
+        </div>
+        <div id="toc-list" style="overflow-y:auto; height:calc(100vh - 80px);"></div>
+    </div>
+
+    <div id="book-container">
+        <div class="controls">
+            <button id="prev-btn" onclick="prevPage()">이전</button>
+            <span id="page-num" style="font-size:14px; font-weight:600; min-width:80px; text-align:center;"></span>
+            <button id="next-btn" onclick="nextPage()">다음</button>
+        </div>
+    </div>
+
+    <div id="secret-modal">
+        <div class="modal-content" style="text-align:center; max-width:300px;">
+            <h3>비밀의 방</h3>
+            <input type="password" id="secret-pw" style="width:100%; padding:10px; margin-bottom:15px; box-sizing:border-box;" placeholder="비밀번호 입력" onkeyup="if(event.key==='Enter') checkSecretPassword()">
+            <button onclick="checkSecretPassword()" style="padding:10px 20px; background:var(--primary); color:#fff; border:none; border-radius:6px; cursor:pointer;">확인</button>
+        </div>
+    </div>
+
+    <div id="secret-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <h3 style="margin:0; color:var(--primary);">Secret Panel</h3>
+            <button onclick="closeSecretPanel()" style="border:none; background:transparent; font-size:24px; cursor:pointer;">&times;</button>
+        </div>
+        
+        <div style="margin-bottom:15px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:5px;">현재 원고</label>
+            <textarea id="panel-original-text" style="width:100%; height:120px; padding:10px; box-sizing:border-box; border:1px solid #ccc; border-radius:6px; font-family:var(--font-body);"></textarea>
+        </div>
+        
+        <div style="margin-bottom:15px; display:flex; gap:10px; align-items:center;">
+            <div style="flex:1;">
+                <label style="display:block; font-size:12px; font-weight:600; margin-bottom:5px;">레이아웃 변경</label>
+                <select id="panel-image-layout" style="width:100%; padding:8px; border-radius:6px; border:1px solid #ccc;">
+                    <option value="text_only">텍스트만</option>
+                    <option value="image_top">상단 이미지</option>
+                    <option value="image_full">전체 풀스크린 이미지</option>
+                    <option value="cover">표지 스타일</option>
+                    <option value="author_profile">저자 소개</option>
+                </select>
+            </div>
+            <div style="flex:1;">
+                <label style="display:block; font-size:12px; font-weight:600; margin-bottom:5px;">이미지 찾기</label>
+                <button onclick="openGalleryModal()" style="width:100%; padding:8px; background:#f0f0f0; border:1px solid #ccc; border-radius:6px; cursor:pointer; font-size:13px;">갤러리 열기</button>
+            </div>
+        </div>
+        
+        <div style="margin-bottom:20px;">
+            <input type="file" id="panel-image-upload" accept="image/*" style="display:none;">
+            <label for="panel-image-upload" style="display:block; text-align:center; padding:10px; background:#f0f0f0; border:1px dashed #999; border-radius:6px; cursor:pointer; font-size:13px;">새 이미지 업로드</label>
+        </div>
+
+        <div style="flex:1; display:flex; flex-direction:column; border:1px solid #ccc; border-radius:6px; overflow:hidden;">
+            <div id="chat-history" style="flex:1; padding:10px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; background:#fafafc;">
+                <!-- Chat messages -->
+            </div>
+            <div style="display:flex; border-top:1px solid #ccc;">
+                <input type="text" id="chat-input" placeholder="피드백 요청..." style="flex:1; padding:10px; border:none; outline:none;" onkeyup="if(event.key==='Enter') sendChatMessage()">
+                <button onclick="sendChatMessage()" style="padding:0 15px; background:var(--primary); color:#fff; border:none; cursor:pointer;">전송</button>
+            </div>
+        </div>
+        
+        <div style="display:flex; gap:10px; margin-top:15px;">
+            <button onclick="manualSave()" style="flex:1; padding:12px; background:#0066cc; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:600;">수동 저장</button>
+            <button class="btn-save" onclick="applyFinalRevision()" style="flex:1; padding:12px; background:#34c759; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:600;">AI 재작성 & 적용</button>
+        </div>
+    </div>
+
+    <div id="gallery-modal">
+        <div class="modal-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h3 style="margin:0;">이미지 갤러리</h3>
+                <button onclick="document.getElementById('gallery-modal').style.display='none'" style="border:none; background:transparent; font-size:24px; cursor:pointer;">&times;</button>
+            </div>
+            <div id="gallery-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:15px; max-height:60vh; overflow-y:auto; padding:5px;">
+                <!-- Images loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="book_data.js?v=3"></script>
+    <script>
+        let currentChapter = 0;
+        let currentColumn = 0;
+        const COLUMN_GAP = 40;
+
+        function renderBook() {
+            const container = document.getElementById('book-container');
+            document.querySelectorAll('.page-content').forEach(p => p.remove());
+
+            bookData.pages.forEach((page, index) => {
+                const pageEl = document.createElement('div');
+                pageEl.className = 'page-content' + (index === currentChapter ? ' active' : '');
+                
+                let contentHTML = '';
+                
+                if (page.type === 'cover') {
+                    pageEl.className += ' bg-dark';
+                    let rawTitle = page.title;
+                    let part = "";
+                    let mainTitle = rawTitle;
+                    let subtitle = page.subtitle || "";
+                    
+                    if (!subtitle) {
+                        const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                        if (subMatch) {
+                            mainTitle = subMatch[1].trim();
+                            subtitle = subMatch[2].trim();
+                        }
+                    }
+                    
+                    const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?:\s*|에필로그:\s*))(.+)$/);
+                    if (partMatch) {
+                        part = partMatch[1].trim();
+                        mainTitle = partMatch[2].trim();
+                    }
+                    
+                    contentHTML += `<div class="cover-content" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 10% 8%;">`;
+                    
+                    if (part) {
+                        contentHTML += `<p style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: 14px; font-weight: 600; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.1em; margin-bottom: 16px; text-transform: uppercase;">${part}</p>`;
+                    }
+                    
+                    contentHTML += `<h1 class="book-title" style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: clamp(28px, 6vw, 44px); font-weight: 700; color: #ffffff; margin: 0 0 24px 0; line-height: 1.25; letter-spacing: -0.02em; word-break: keep-all;">${mainTitle}</h1>`;
+                    
+                    if (subtitle) {
+                        contentHTML += `<p style="font-family: var(--font-body, 'SF Pro Text', sans-serif); font-size: 18px; font-weight: 300; color: #a0a0a0; margin: 0; word-break: keep-all; line-height: 1.5;">${subtitle}</p>`;
+                    }
+                    
+                    contentHTML += `<div style="width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin-top: 40px;"></div></div>`;
+                }
+                else if (page.type === 'author_profile') {
+                    contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
+                    contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #f5f5f7); border-radius: 18px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--hairline, #e0e0e0); width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
+                    contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p></div></div>`;
+                }
+                else if (page.type === 'image_top') {
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                                contentHTML += p;
+                            } else {
+                                contentHTML += `<p class="body-text">${p}</p>`;
+                            }
+                        });
+                    }
+                }
+                else if (page.type === 'image_full') {
+                    pageEl.style.padding = '0';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; border-radius:0; z-index:0; background:transparent;"><img src="${page.image}" alt="full_image" style="width:100%; height:100%; object-fit:cover; border-radius:0; box-shadow:none; max-width:none;"></div>`;
+                    }
+                    contentHTML += `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background: rgba(255,255,255,0.4); padding: 40px; box-sizing:border-box;">`;
+                    if(page.title) contentHTML += `<h1 class="book-title" style="text-align:center; color:#1d1d1f; font-size:48px; margin-bottom:20px; text-shadow: 0 2px 15px rgba(255,255,255,0.9); font-weight:700;">${page.title}</h1>`;
+                    if(page.subtitle) contentHTML += `<p style="text-align:center; color:#333; font-size:24px; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9);">${page.subtitle}</p>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            contentHTML += `<p class="body-text" style="color:#1d1d1f; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9); text-align:center; font-size:18px;">${p}</p>`;
+                        });
+                    }
+                    contentHTML += `</div>`;
+                }
+                else if (page.type === 'text_only') {
+                    if(page.title) contentHTML += `<h2 class="chapter-title">${page.title}</h2>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                                contentHTML += p;
+                            } else {
+                                contentHTML += `<p class="body-text">${p}</p>`;
+                            }
+                        });
+                    }
+                }
+
+                pageEl.innerHTML = contentHTML;
+                container.insertBefore(pageEl, container.querySelector('.controls'));
+            });
+
+            updateControls();
+        }
+
+        function getChapterMaxColumns(chapterIndex) {
+            const pageEls = document.querySelectorAll('.page-content');
+            const p = pageEls[chapterIndex];
+            if (!p) return 1;
+            const w = p.clientWidth || document.getElementById('book-container').clientWidth;
+            const sw = p.scrollWidth || w;
+            return Math.max(1, Math.round((sw + COLUMN_GAP) / (w + COLUMN_GAP)));
+        }
+
+        function updateControls() {
+            const pageEls = document.querySelectorAll('.page-content');
+            
+            pageEls.forEach((p, idx) => {
+                if (idx === currentChapter) {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                    p.style.transform = `translateX(0px)`;
+                }
+            });
+            
+            const maxCols = getChapterMaxColumns(currentChapter);
+            if (currentColumn >= maxCols) currentColumn = maxCols - 1;
+            if (currentColumn < 0) currentColumn = 0;
+            
+            const activePage = pageEls[currentChapter];
+            const w = activePage.clientWidth || document.getElementById('book-container').clientWidth;
+            const translatePx = currentColumn * (w + COLUMN_GAP);
+            activePage.style.transform = `translateX(-${translatePx}px)`;
+            
+            const totalChapters = bookData.pages.length;
+            document.getElementById('prev-btn').disabled = (currentChapter === 0 && currentColumn === 0);
+            document.getElementById('next-btn').disabled = (currentChapter === totalChapters - 1 && currentColumn === maxCols - 1);
+            document.getElementById('page-num').innerText = `[${currentChapter + 1}/${totalChapters}] ${currentColumn + 1} / ${maxCols}`;
+
+            // Update Secret Panel if it is currently open
+            const panel = document.getElementById('secret-panel');
+            if (panel && panel.classList.contains('open')) {
+                const bookPage = bookData.pages[currentChapter];
+                let contentText = bookPage.text || '';
+                if (!contentText && bookPage.title) {
+                    contentText = bookPage.title + (bookPage.subtitle ? '\n' + bookPage.subtitle : '');
+                }
+                document.getElementById('panel-original-text').value = contentText;
+                document.getElementById('panel-image-layout').value = bookPage.type || 'text_only';
+            }
+        }
+
+        function prevPage() {
+            if (currentColumn > 0) {
+                currentColumn--;
+                updateControls();
+            } else if (currentChapter > 0) {
+                currentChapter--;
+                currentColumn = 999;
+                updateControls();
+            }
+        }
+
+        function nextPage() {
+            const maxCols = getChapterMaxColumns(currentChapter);
+            if (currentColumn < maxCols - 1) {
+                currentColumn++;
+                updateControls();
+            } else if (currentChapter < bookData.pages.length - 1) {
+                currentChapter++;
+                currentColumn = 0;
+                updateControls();
+            }
+        }
+        
+        window.addEventListener('resize', () => { updateControls(); });
+
+        // Secret Room Logic
+        let clickCount = 0;
+        let clickTimer;
+        
+        document.body.addEventListener('click', function(e) {
+            if(e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
+            clickCount++;
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => { clickCount = 0; }, 500);
+            
+            if (clickCount >= 3) {
+                clickCount = 0;
+                document.getElementById('secret-modal').style.display = 'flex';
+                document.getElementById('secret-pw').focus();
+            }
+        });
+
+        function checkSecretPassword() {
+            const pw = document.getElementById('secret-pw').value;
+            if (pw === '937610') {
+                document.getElementById('secret-modal').style.display = 'none';
+                document.getElementById('secret-pw').value = '';
+                openSecretPanel();
+            } else {
+                alert('비밀번호가 일치하지 않습니다.');
+                document.getElementById('secret-modal').style.display = 'none';
+            }
+        }
+
+        let currentChatHistory = [];
+
+        function openSecretPanel() {
+            const panel = document.getElementById('secret-panel');
+            panel.classList.add('open');
+            document.getElementById('book-container').style.width = 'calc(100vw - 400px)';
+            updateControls();
+            
+            const activePage = bookData.pages[currentChapter];
+            let contentText = activePage.text || '';
+            if (!contentText && activePage.title) {
+                contentText = activePage.title + (activePage.subtitle ? '\n' + activePage.subtitle : '');
+            }
+            document.getElementById('panel-original-text').value = contentText;
+            document.getElementById('panel-image-layout').value = activePage.type || 'text_only';
+            
+            currentChatHistory = [];
+            document.getElementById('chat-history').innerHTML = '<div style="text-align:center; color:#888;">AI 레드팀과 대화를 시작하세요.</div>';
+            document.getElementById('chat-input').value = '';
+        }
+        
+        function closeSecretPanel() {
+            document.getElementById('secret-panel').classList.remove('open');
+            document.getElementById('book-container').style.width = '100vw';
+            updateControls();
+        }
+
+        function appendChatMessage(role, content) {
+            const historyBox = document.getElementById('chat-history');
+            const msgDiv = document.createElement('div');
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px';
+            msgDiv.style.maxWidth = '85%';
+            msgDiv.style.fontSize = '14px';
+            msgDiv.style.lineHeight = '1.5';
+            
+            if (role === 'user') {
+                msgDiv.style.background = '#0066cc';
+                msgDiv.style.color = '#fff';
+                msgDiv.style.alignSelf = 'flex-end';
+                msgDiv.style.borderBottomRightRadius = '4px';
+            } else {
+                msgDiv.style.background = '#e5e5ea';
+                msgDiv.style.color = '#1d1d1f';
+                msgDiv.style.alignSelf = 'flex-start';
+                msgDiv.style.borderBottomLeftRadius = '4px';
+            }
+            msgDiv.innerHTML = content.replace(/\n/g, '<br>');
+            
+            if (historyBox.children.length === 1 && historyBox.children[0].innerText.includes('시작하세요')) {
+                historyBox.innerHTML = '';
+            }
+            
+            historyBox.appendChild(msgDiv);
+            historyBox.scrollTop = historyBox.scrollHeight;
+            
+            if (role !== 'system') {
+                currentChatHistory.push({ role: role, content: content });
+            }
+        }
+
+        async function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const originalText = document.getElementById('panel-original-text').value;
+            const msg = input.value.trim();
+            
+            if (!msg) return;
+            
+            input.value = '';
+            appendChatMessage('user', msg);
+            appendChatMessage('system', '<i>답변 생성 중...</i>');
+            
+            try {
+                const response = await fetch('/api/redteam_chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        original_text: originalText, 
+                        chat_history: currentChatHistory.slice(0, -1), 
+                        message: msg 
+                    })
+                });
+                const result = await response.json();
+                
+                const historyBox = document.getElementById('chat-history');
+                historyBox.removeChild(historyBox.lastChild);
+                
+                appendChatMessage('model', result.feedback);
+            } catch (e) {
+                const historyBox = document.getElementById('chat-history');
+                historyBox.removeChild(historyBox.lastChild);
+                appendChatMessage('system', '<span style="color:red;">서버 통신 오류가 발생했습니다.</span>');
+            }
+        }
+
+        async function applyFinalRevision() {
+            if(!confirm('AI가 대화 내역과 앞뒤 문맥을 고려하여 최종 원고를 덮어씁니다. 진행하시겠습니까?')) return;
+            
+            const originalText = document.getElementById('panel-original-text').value;
+            const prevText = currentChapter > 0 ? bookData.pages[currentChapter-1].text : '';
+            const nextText = currentChapter < bookData.pages.length - 1 ? bookData.pages[currentChapter+1].text : '';
+            
+            const saveBtn = document.querySelector('.btn-save');
+            const oldSaveText = saveBtn.innerText;
+            saveBtn.innerText = 'AI가 재작성 중...';
+            saveBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/apply_revision', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        page_index: currentChapter, 
+                        original_text: originalText,
+                        chat_history: currentChatHistory,
+                        prev_text: prevText || '',
+                        next_text: nextText || ''
+                    })
+                });
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    bookData.pages[currentChapter].text = result.revised_text;
+                    document.getElementById('panel-original-text').value = result.revised_text;
+                    renderBook();
+                    alert('AI가 앞뒤 문맥에 맞게 최종 원고를 성공적으로 재작성했습니다.');
+                } else {
+                    alert('저장 실패: ' + result.message);
+                }
+            } catch (e) {
+                alert('오류 발생: 서버와 통신할 수 없습니다.');
+            }
+            
+            saveBtn.innerText = oldSaveText;
+            saveBtn.disabled = false;
+        }
+
+        async function manualSave() {
+            const revisedText = document.getElementById('panel-original-text').value;
+            
+            try {
+                const response = await fetch('/api/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        page_index: currentChapter, 
+                        revised_text: revisedText
+                    })
+                });
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    bookData.pages[currentChapter].text = revisedText;
+                    renderBook();
+                    alert('현재 텍스트가 수동으로 저장되었습니다.');
+                } else {
+                    alert('저장 실패: ' + result.message);
+                }
+            } catch (e) {
+                alert('오류 발생: 서버와 통신할 수 없습니다.');
+            }
+        }
+
+        // Gallery Modal Logic
+        async function openGalleryModal() {
+            const modal = document.getElementById('gallery-modal');
+            const grid = document.getElementById('gallery-grid');
+            modal.style.display = 'flex';
+            grid.innerHTML = '<div style="text-align:center; padding: 20px; grid-column: 1 / -1; color: #888;">로딩 중...</div>';
+            
+            try {
+                const response = await fetch('/api/images');
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    grid.innerHTML = '';
+                    if (result.images.length === 0) {
+                        grid.innerHTML = '<div style="grid-column: 1 / -1; text-align:center; padding:20px; color:#888;">업로드된 이미지가 없습니다.</div>';
+                        return;
+                    }
+                    
+                    result.images.forEach(img => {
+                        const imgBox = document.createElement('div');
+                        imgBox.style.cursor = 'pointer';
+                        imgBox.style.borderRadius = '8px';
+                        imgBox.style.overflow = 'hidden';
+                        imgBox.style.border = '1px solid #e0e0e0';
+                        imgBox.style.position = 'relative';
+                        
+                        imgBox.innerHTML = `
+                            <img src="${img.url}" style="width: 100%; height: 150px; object-fit: cover; display: block;" title="${img.name}">
+                            <div style="padding: 5px; font-size: 11px; text-align: center; background: #fafafc; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${img.name}</div>
+                        `;
+                        
+                        imgBox.onclick = () => selectGalleryImage(img.url);
+                        grid.appendChild(imgBox);
+                    });
+                } else {
+                    grid.innerHTML = `<div style="grid-column: 1 / -1; color:red; text-align:center;">${result.message}</div>`;
+                }
+            } catch(e) {
+                grid.innerHTML = '<div style="grid-column: 1 / -1; color:red; text-align:center;">이미지 목록을 불러오지 못했습니다.</div>';
+            }
+        }
+
+        async function selectGalleryImage(imageUrl) {
+            if(!confirm('현재 페이지의 이미지를 이 이미지로 교체하시겠습니까?')) return;
+            
+            const layout = document.getElementById('panel-image-layout').value || 'image_top';
+            
+            try {
+                const response = await fetch('/api/select_image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        page_index: currentChapter,
+                        image_url: imageUrl,
+                        image_layout: layout
+                    })
+                });
+                
+                const result = await response.json();
+                if (result.status === 'success') {
+                    const activePage = bookData.pages[currentChapter];
+                    activePage.image = imageUrl;
+                    activePage.type = layout;
+                    renderBook();
+                    document.getElementById('gallery-modal').style.display = 'none';
+                } else {
+                    alert("교체 실패: " + result.message);
+                }
+            } catch (e) {
+                alert("서버 통신 오류가 발생했습니다.");
+            }
+        }
+
+        // Image upload in panel
+        document.getElementById('panel-image-upload').addEventListener('change', async function(e) {
+            if(e.target.files && e.target.files[0]) {
+                const file = e.target.files[0];
+                const layout = document.getElementById('panel-image-layout').value;
+                const reader = new FileReader();
+                
+                const uploadLabel = document.querySelector('label[for="panel-image-upload"]');
+                const originalLabel = uploadLabel.innerText;
+                uploadLabel.innerText = "업로드 중...";
+                
+                reader.onload = async function(e) {
+                    const base64Data = e.target.result;
+                    try {
+                        const response = await fetch('/api/upload_image', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                page_index: currentChapter,
+                                image_data: base64Data,
+                                image_layout: layout
+                            })
+                        });
+                        
+                        const result = await response.json();
+                        if (result.status === 'success') {
+                            const activePage = bookData.pages[currentChapter];
+                            activePage.image = result.image_url;
+                            activePage.type = layout;
+                            
+                            renderBook();
+                            uploadLabel.innerText = originalLabel;
+                        } else {
+                            alert("업로드 실패: " + result.message);
+                            uploadLabel.innerText = originalLabel;
+                        }
+                    } catch (error) {
+                        alert("서버 통신 오류: " + error.message);
+                        uploadLabel.innerText = originalLabel;
+                    }
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        document.getElementById('panel-image-layout').addEventListener('change', async function(e) {
+            const layout = e.target.value;
+            const activePage = bookData.pages[currentChapter];
+            if(activePage.type !== layout) {
+                alert("레이아웃만 변경하는 기능은 새 이미지를 업로드할 때 함께 반영되거나, 원고 수정 시 반영됩니다.");
+                activePage.type = layout;
+                renderBook();
+            }
+        });
+
+        // TOC Logic
+        const tocBtn = document.querySelector('.toc-btn');
+        const tocModal = document.querySelector('.toc-modal');
+        const tocOverlay = document.querySelector('.toc-overlay');
+        const closeTocBtn = document.querySelector('.close-toc-btn');
+        const tocList = document.getElementById('toc-list');
+        
+        function populateTOC() {
+            if(!tocList) return;
+            tocList.innerHTML = '';
+            bookData.pages.forEach((page, index) => {
+                if (page.title && page.title.trim() !== "") {
+                    const item = document.createElement('div');
+                    item.className = 'toc-item';
+                    item.textContent = page.title;
+                    item.addEventListener('click', () => {
+                        currentChapter = index;
+                        currentColumn = 0;
+                        updateControls();
+                        closeTOC();
+                    });
+                    tocList.appendChild(item);
+                }
+            });
+        }
+        
+        function openTOC() {
+            populateTOC();
+            if(tocModal) tocModal.classList.add('active');
+            if(tocOverlay) tocOverlay.classList.add('active');
+        }
+        
+        function closeTOC() {
+            if(tocModal) tocModal.classList.remove('active');
+            if(tocOverlay) tocOverlay.classList.remove('active');
+        }
+        
+        if(tocBtn) tocBtn.addEventListener('click', openTOC);
+        if(closeTocBtn) closeTocBtn.addEventListener('click', closeTOC);
+        if(tocOverlay) tocOverlay.addEventListener('click', closeTOC);
+
+        window.onload = renderBook;
+    </script>

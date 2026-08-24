@@ -1,53 +1,15 @@
-import json
+import sys
 import os
+import subprocess
 
-js_path = "book_data.js"
-images_dir = "static/images"
+print("=========================================================================")
+print("⚠️ WARNING: update_images.py is now DEPRECATED for sequential image mapping.")
+print("The '1.jpg, 2.jpg' sequential enforcement has been removed to allow ")
+print("custom image names to be uploaded and managed via J-Hub Studio.")
+print("=========================================================================")
+print("Running validate_book.py instead to check integrity...\n")
 
-with open(js_path, 'r', encoding='utf-8') as f:
-    text = f.read()
-
-json_start = text.find('{')
-json_end = text.rfind('};\n')
-if json_end == -1:
-    json_end = text.rfind('};')
-
-if json_start != -1 and json_end != -1:
-    json_str = text[json_start:json_end+1]
-    data = json.loads(json_str)
-    
-    updated_count = 0
-    
-    for i, page in enumerate(data.get('pages', [])):
-        if page.get('type') in ['image_top', 'image_full']:
-            expected_img_name = f"{i+1}.jpg"
-            expected_img_path = os.path.join(images_dir, expected_img_name)
-            
-            # Check for alternative naming e.g., 105-1.jpg
-            alt_img_name = f"{i+1}-1.jpg"
-            alt_img_path = os.path.join(images_dir, alt_img_name)
-            
-            # Check for leading zero e.g., 01.jpg, 02.jpg
-            padded_img_name = f"{i+1:02d}.jpg"
-            padded_img_path = os.path.join(images_dir, padded_img_name)
-            
-            if os.path.exists(expected_img_path):
-                page['image'] = f"static/images/{expected_img_name}"
-                updated_count += 1
-            elif os.path.exists(alt_img_path):
-                page['image'] = f"static/images/{alt_img_name}"
-                updated_count += 1
-            elif os.path.exists(padded_img_path):
-                page['image'] = f"static/images/{padded_img_name}"
-                updated_count += 1
-                
-    data['pages'] = data.get('pages', [])
-    
-    export_snippet = "\nif (typeof module !== 'undefined' && module.exports) {\n    module.exports = bookData;\n}\n"
-    new_js = "const bookData = " + json.dumps(data, ensure_ascii=False, indent=4) + ";" + export_snippet
-    with open(js_path, 'w', encoding='utf-8') as f:
-        f.write(new_js)
-    
-    print(f"Updated {updated_count} image paths successfully.")
+if os.path.exists("validate_book.py"):
+    subprocess.run([sys.executable, "validate_book.py"])
 else:
-    print("Failed to find JSON data.")
+    print("validate_book.py not found in current directory.")

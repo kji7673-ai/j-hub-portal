@@ -1,0 +1,337 @@
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-light">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">제5장. 용문동 통합보고서 및 실전 튜토리얼</h2>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[미래 비전] 대화형 범용 통합보고서 5단계 파이프라인</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            지금까지의 시스템 작동 방식을 한 차원 더 발전시킨 <strong>'미래형 범용 통합보고서 엔진'</strong>의 작동 방식입니다. 이제 복잡한 지시나 개별 프롬프트를 외울 필요 없이, AI와 사람처럼 대화하며 5단계를 거치면 10장짜리 마스터 보고서가 단 3초 만에 렌더링됩니다.
+        </p>
+
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:30px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 범용 템플릿 기동 프롬프트</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "새로운 구역 보고서 시작해 줘" 또는 "용문동처럼 통합 보고서 만들어 줘"
+            </code>
+        </div>
+
+        <div style="text-align:center; margin-bottom:30px;">
+            <p class="body-text" style="margin-bottom:10px; font-size:13px; color:#7a7a7a;">▼ [삽도] AI와 대화하듯 5단계를 거쳐 보고서가 자동 생성되는 화면 예시</p>
+            <img src="scratch/assets/five_step_dialog_mockup.jpg" alt="5단계 대화형 보고서 생성 화면 모의" style="max-width:340px;  box-shadow: rgba(0,0,0,0.22) 3px 5px 30px 0;">
+        </div>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">대화형 5단계 핵심 정보 입력</h3>
+        <p class="body-text" style="margin-bottom:15px;">
+            기동 프롬프트를 입력하면 AI가 즉시 스킬을 발동하여 아래 5가지 정보를 순차적으로 묻습니다. 묻는 질문에만 답하시면 됩니다.
+        </p>
+
+        <div class="grid-2">
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">1. 기본 정보 설정</strong><br>
+                    대상지의 명칭과 보고서를 요청한 의뢰자 정보를 입력합니다. (표지 및 메타데이터 생성용)
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">2. 토지 분석 연계</strong><br>
+                    총 대지면적, 공시지가, 지목 현황을 입력합니다. (AI가 VWorld 스킬과 연계하여 자동 추출 가능)
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">3. 사업 방식 결정</strong><br>
+                    재개발, 도심복합, 모아타운 중 비교할 2~3개의 사업 방식과 주력 타겟을 설정합니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline);">
+                    <strong style="font-weight:bold; font-size:14px;">4. 평형 배분 전략 (택 1)</strong><br>
+                    A(수익성 극대화), B(절충안), C(공사비 절감안) 중 대상지에 맞는 단위세대 평형 배분 전략을 선택합니다.
+                </div>
+                <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935;">
+                    <strong style="color:#d32f2f; font-size:14px;">5. 구역계 DXF 업로드</strong><br>
+                    세대수 자동 산출 및 배치 검증을 위한 대상지 구역계(DXF) 도면 파일을 채팅창에 첨부합니다.
+                </div>
+            </div>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-top:30px;">
+            <strong style="color:#f57c00; font-size:16px;">🚀 [Zero-Click] 초고속 백그라운드 렌더링</strong><br><br>
+            이 5개의 질문에 답하시고 마지막으로 DXF 도면을 올려주시는 순간, <strong>AI는 대표님의 추가 승인을 기다리지 않습니다.</strong><br><br>
+            즉시 백그라운드에서 파이썬 렌더링 엔진(<code>build_pdf.py</code> 등)을 기동하여, 분석된 모듈들을 병합하고 <strong>단 3초 만에 10장짜리 완벽한 마스터 보고서(PDF)를 화면에 띄워드립니다.</strong>
+        
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 대화형 범용 통합보고서 5단계 아키텍처</h3>
+<pre class="mermaid" style="background:transparent;">
+sequenceDiagram
+    participant User as 대표이사(User)
+    participant AI as 안티그래비티(AI)
+    participant Engine as 렌더링 엔진
+    
+    User->>AI: "용문동처럼 통합 보고서 만들어줘"
+    AI-->>User: 1. 기본 정보는 무엇인가요?
+    User->>AI: "종로구 창신동, 기획본부 의뢰"
+    AI-->>User: 2. 토지 분석 (면적, 공시지가)?
+    User->>AI: "VWorld 자동 연계해 줘"
+    AI-->>User: 3. 비교할 사업방식은?
+    User->>AI: "재개발 vs 도심복합"
+    AI-->>User: 4. 평형 배분 전략은?
+    User->>AI: "A안(수익성 극대화)"
+    AI-->>User: 5. 대상지 구역계(DXF)를 올려주세요.
+    User->>AI: [DXF 파일 업로드]
+    
+    Note over AI,Engine: Zero-Click 백그라운드 구동
+    AI->>Engine: build_pdf.py 기동 (세대수 산출)
+    Engine-->>User: 3초 후 10장짜리 마스터 보고서(PDF) 출력 완료!
+</pre>
+</div>
+</div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼 1] 일일 동향 및 주간회의록 가이드 (상)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+이 튜토리얼은 <strong>'일일동향보고서/SKILL.md'</strong> 규칙에 기반하여, 매일 쏟아지는 수많은 법규 변경과 부동산 뉴스를 전사 표준 규격(8+2 체계)으로 완벽하게 자동 편찬하는 방법을 다룹니다.
+</p>
+
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 0. 사전 준비 및 보안 모드 설정</h3>
+<div class="term-box" style="background:#fff3e0; border-color:#ff9800; margin-bottom: 20px;">
+<strong>[환경 구성]</strong> 렌더링된 리포트는 반드시 <code>생성 자료/YYYY-MM-DD/일일_동향보고서</code> 위치에 저장됩니다.<br>
+<strong>[해시화(블라인드) 원칙]</strong> 🔒 전사 보안 규정에 따라, 민감한 내부 정보나 입찰 현황은 <strong>반드시 가명 처리([A구역], [B사])</strong>하여 보고서를 렌더링해야 합니다.
+</div>
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 1. 불가역 확장 원칙 (Ratchet Rule)</h3>
+<div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+한 번이라도 보고서에 포함된 조사 항목은 영원히 표준에 유지됩니다. (삭제 불가)<br>
+AI에게 <strong>"일일 보고서 만들어줘"</strong>라고 지시하면, AI는 즉시 체크리스트(SSOT)를 읽고 9개 핵심 구역, 4개 소규모정비 구역, 9대 법규, 7대 인접지 등 수십 개의 키워드를 빠짐없이 동시 웹 검색합니다.
+</div>
+
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 2. 8개 핵심 섹션 파싱 및 생성</h3>
+<div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+<div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 일일 동향 기동 프롬프트 예시</div>
+<code style="font-family:monospace; line-height:1.5;">
+"오늘자 전사 일일 동향 보고서를 만들어 줘.<br>
+특히 변경된 법령은 조항 번호를 포함해 '변경 전 → 변경 후' 포맷으로 병기하고,<br>
+경제/사회 파트(건설공사비 지수 등)를 꼭 3페이지 분량으로 채워 줘."
+</code>
+</div>
+
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 일일 동향 렌더링 파이프라인</h3>
+<pre class="mermaid" style="background:transparent;">
+graph TD
+    A[AI 에이전트 기동] --> B{SSOT 체크리스트 확인}
+    B --> C[9대 핵심 구역 검색]
+    B --> D[4대 소규모 정비 검색]
+    B --> E[9대 법규 변경사항 추적]
+    C --> F((데이터 파싱 및 해시화))
+    D --> F
+    E --> F
+    F --> G[HTML 모듈 생성]
+    G --> H[build_pdf.py 구동]
+    H --> I[최종 PDF 렌더링]
+    style A fill:var(--primary),stroke:var(--primary),stroke-width:2px,color:#fff
+    style H fill:var(--ink),stroke:var(--ink),stroke-width:2px,color:#fff
+    style I fill:#4caf50,stroke:#388e3c,stroke-width:2px,color:#fff
+</pre>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼 1] 일일 동향 및 주간회의록 가이드 (하)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+일일 동향 보고서가 성공적으로 쌓이면, 이를 바탕으로 매주 월요일 진행되는 <strong>주간회의록</strong>을 자동 연동하여 작성할 수 있습니다.
+</p>
+<h3 class="display-md" style="margin-top:20px; color:#1e88e5;">Step 3. 주간회의록 연동 및 중복 금지 로직</h3>
+<div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-bottom: 20px;">
+<strong style="color:#f57c00;">[핵심 규칙] 섹션 6 (본부별 주간 현황) 통합</strong><br>
+일일 동향 보고서의 <strong>조건부 섹션 6</strong>에 주간회의록이 파싱되어 통합됩니다. 단, 입찰/수주 현황 등은 섹션 5에 별도로 존재하므로, 섹션 6에는 <strong>순수 업무 내용만</strong>을 기재하여 중복을 원천 차단합니다.
+</div>
+
+<div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+<div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 주간회의록 연동 프롬프트 예시</div>
+<code style="font-family:monospace; line-height:1.5;">
+"이번 주 누적된 일일 동향 리포트와 지난주 주간회의_자료 폴더를 읽어줘.<br>
+중복되는 입찰 정보를 제외하고, 순수 업무 진척도만을 파싱해서<br>
+동향 보고서 섹션 6에 삽입한 '종합 주간회의록' 모듈을 렌더링해 줘."
+</code>
+</div>
+
+<div style="margin-top:40px;">
+<h3 class="display-md" style="margin-bottom:15px;">📊 [흐름도] 주간회의록 자동 연동 및 중복 필터링 로직</h3>
+<pre class="mermaid" style="background:transparent;">
+flowchart LR
+    A[(월~금 일일 동향)] --> C{주간 데이터 취합}
+    B[(기존 주간회의_자료)] --> C
+    C --> D{중복 필터링}
+    D -- 입찰/수주 정보 --> E[섹션 5에 분리 유지]
+    D -- 순수 업무 진척도 --> F[섹션 6 주간회의록 모듈화]
+    F --> G[최종 주간 통합보고서 렌더링]
+    style F fill:var(--primary),stroke:var(--primary),stroke-width:2px,color:#fff
+    style G fill:#4caf50,stroke:#388e3c,stroke-width:2px,color:#fff
+</pre>
+</div>
+</div>
+<div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (1/3)</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            이 튜토리얼은 신규 담당자가 처음 자리에 앉아 <strong>'용문동 통합보고서'</strong>를 A부터 Z까지 완벽하게 뽑아내는 모든 과정을 추적합니다. 사전 준비물부터 지번 추출, 복잡한 용적률 산정 로직, 그리고 최종 PDF 렌더링까지 순차적으로 따라해 보십시오.
+        </p>
+
+        <h3 class="display-md" style="margin-top:40px; color:#1e88e5;">Step 1. 사전 준비 및 파이프라인 기동</h3>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            <strong style="color:#424242;">1) 사전 준비물 세팅</strong><br>
+            • <strong>도면 확보:</strong> 대상 구역의 폐합된 폴리라인이 담긴 DXF 도면 (예: <code>용문동_구역계.dxf</code>)<br>
+            • <strong>워크스페이스 헌법:</strong> 에이전트가 작동할 수 있도록 <code>.agents/AGENTS.md</code>와 지식베이스, 스킬 폴더가 동기화된 워크스페이스 환경<br>
+            • <strong>인증 키:</strong> VWorld Open API 접근을 위한 시스템 환경 변수(API Key) 세팅
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 AI 기동 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "첨부된 용문동 DXF 도면을 바탕으로, '도시계획-검토보고서' 스킬을 로드해서 사업성 검토를 시작해 줘."
+            </code>
+        </div>
+
+        <h3 class="display-md" style="margin-top:40px; color:#1e88e5;">Step 2. 지적 현황 분석 및 지번 전수 추출</h3>
+        <p class="body-text" style="margin-bottom:15px;">
+            도면이 주어지면, AI는 가장 먼저 도면의 좌표를 읽어 실제 토지(지적) 데이터와 매핑하는 작업을 수행합니다.
+        </p>
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:var(--hairline); margin-bottom: 20px;">
+            <strong style="color:#424242;">1) 좌표 변환 및 API 매핑 (Fuzzy Matching)</strong><br>
+            AI는 내부적으로 <code>CoordMapper</code>를 기동하여 DXF의 로컬 좌표계를 <strong>Web Mercator(EPSG:3857)</strong>로 완벽하게 변환합니다. 변환된 폴리곤 좌표를 VWorld 지적도 API에 던져, 구역 선에 단 1픽셀이라도 걸치는 모든 필지의 지번, 지목, 대지면적 데이터를 전수(全數) 추출해 냅니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px; ">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 지번 추출 지시 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "도면 좌표를 VWorld API에 연동해서 용문동 구역 내 포함된 전체 필지 지번, 지목, 면적 조서를 빠짐없이 추출해 줘."
+            </code>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (2/3)</h3>
+<h3 class="display-md" style="margin-top:30px; color:#1e88e5;">Step 3. 용적률 및 임대주택 산정 근거 도출 (Legal Calculation)</h3>
+        <p class="body-text" style="margin-bottom:20px;">
+            이 단계는 통합보고서의 핵심이자 실무자들이 가장 치명적인 오류를 범하기 쉬운 구간입니다. 추출된 지적 데이터를 바탕으로 <strong>서울시 조례</strong>를 해석하고, <strong>[사업성 보정계수]</strong>와 <strong>[친환경 인센티브]</strong>가 임대주택 건립 의무량에 미치는 파급 효과를 완벽히 이해해야 합니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#e53935; margin-bottom: 20px;">
+            <strong style="color:#d32f2f; font-size:16px;">🔥 [핵심] 기부채납 vs 매입형 임대 분리 산정 로직</strong><br><br>
+            
+            <strong>1) 친환경 인센티브 배분</strong><br>
+            상한 용적률로 도달하기 전 '허용 용적률' 구간에서 친환경 인센티브 포인트를 얼마나 획득하고 배분하느냐에 따라 전체 용적률 파이와 의무 임대 비율이 연쇄적으로 변동합니다.<br><br>
+
+            <strong>2) 종상향 기부채납 임대 (보정 불가 / 고정값 ❌)</strong><br>
+            용도지역이 1종에서 2종, 혹은 2종에서 3종으로 종상향 될 때 늘어나는 용적률의 절반(50%)을 시에 기부채납(임대주택)해야 합니다. 이 부분은 <strong>법적 고정값</strong>으로, 아무리 대지 가격이 낮아도 '사업성 보정계수'에 의한 할인을 일절 받지 못합니다.<br><br>
+
+            <strong>3) 매입형 임대 (보정계수 반비례 연동 / 할인 ✅)</strong><br>
+            기준/허용 용적률에서 상한 용적률로 가기 위해 늘어나는 부분에 대한 매입형 임대 건립 의무량은 <strong>[사업성 보정계수]</strong>의 적용을 받습니다. 즉, 지가가 낮은 강북/도봉 같은 지역(보정계수 2.0 등)에서는 이 요구 비율이 반비례하여 대폭 할인되므로 사업성이 극대화되는 효과가 나타납니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 용적률 및 임대 산출 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "서울시 조례를 기준으로 대상지의 최대 상한 용적률을 산출해 줘.<br>
+            단, <strong>친환경 인센티브</strong> 배분율과 <strong>사업성 보정계수(예: 1.5)</strong>를 적용하여,<br>
+            보정 할인이 안 되는 <strong>종상향 기부채납 세대수</strong>와,<br>
+            계수에 따라 할인되는 <strong>매입형 임대 세대수</strong>를 명확히 분리해서 표로 정리해."
+            </code>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>[실전 튜토리얼] 용문동 통합보고서 마스터 가이드 (3/3)</h3>
+<h3 class="display-md" style="margin-top:30px; color:#1e88e5;">Step 4. 동적 모듈화 렌더링 및 최종 출력 (PDF Rendering)</h3>
+        <p class="body-text" style="margin-bottom:20px;">
+            AI가 모든 검토를 마치면 산출된 지번 표, 보정계수가 반영된 용적률 산출 표, 그리고 Mermaid로 그려진 파이프라인 흐름도 등 수많은 결과물이 쏟아집니다. 이 데이터를 최종 보고서로 묶어내는 마지막 단계입니다.
+        </p>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#f57c00; margin-bottom: 20px;">
+            <strong style="color:#f57c00; font-size:16px;">💡 [핵심] 왜 '동적 모듈화' 렌더링을 거쳐야 하는가?</strong><br><br>
+            
+            초창기 시스템에서는 AI가 결과물을 하나의 거대한 텍스트(Markdown)로 찍어내려 했습니다. 하지만 수십 개의 필지 조서와 거대한 표가 들어가자, <strong>글자가 잘리거나(Truncation), PDF 변환 시 페이지 여백이 깨지고 다이어그램(Mermaid) 렌더링이 실패</strong>하는 치명적 한계가 발생했습니다.<br><br>
+            
+            이를 극복하기 위해, 우리는 <strong>각 분석 결과를 별도의 작은 HTML 모듈(레고 블록)로 분리</strong>한 뒤, 백그라운드에서 <code>build_document.py</code> 엔진과 <strong>Headless Chrome(동적 브라우저)</strong>을 기동하여 자바스크립트 기반의 다이어그램까지 완벽하게 스크린샷 찍듯 PDF로 구워내는 방식을 채택했습니다.
+        </div>
+        
+        <div class="code-box" style="background:var(--ink); color:#fff; padding:15px;  margin-bottom:40px;">
+            <div style="color:#4caf50; margin-bottom:8px; font-size:12px;">// 🤖 렌더링 기동 프롬프트 예시</div>
+            <code style="font-family:monospace; line-height:1.5;">
+            "모든 지번 추출과 용적률 산정 검토가 끝났어.<br>
+            이제 <strong>'모듈형-문서렌더링-엔진'</strong> 스킬을 기동해서 지금까지의 결과물을<br>
+            모듈로 조립한 뒤, <code>용문동_통합보고서_최종.pdf</code> 로 렌더링해서 출력해 줘."
+            </code>
+        </div>
+
+        <div class="term-box" style="background:var(--canvas-parchment); border-color:#43a047; margin-top:20px;">
+            <strong style="color:#388e3c; font-size:14px;">✅ 튜토리얼 완료</strong><br>
+            이 4단계 프롬프트 시퀀스를 정확히 이해하면, <strong>어떤 신규 사업지가 주어지더라도 에이전트를 이용해 하루 만에 완벽한 법적 타당성 검토 보고서를 자동으로 뽑아낼 수 있습니다.</strong>
+        </div>
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span></span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>원클릭 마스터 보고서 렌더링</h3>
+<p class="body-text" style="margin-bottom:30px;">
+            파이프라인의 종착역입니다. 쪼개져 있는 HTML 조각과 데이터들을 모아, 경영진과 발주처에 제출할 '압도적 디자인의 마스터 PDF'를 뽑아내는 과정입니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#1e88e5;">1. 의사결정의 핵심: KPI 카드 디자인</h3>
+        <div class="term-box" style="background:#ffffff; border-font-weight:bold;">
+            바쁜 경영진은 20장짜리 보고서의 줄글을 모두 읽을 시간이 없습니다. 따라서 보고서의 맨 앞장(Executive Summary)에는 <strong>'KPI 카드(Key Performance Indicator)'</strong>를 전면 배치해야 합니다.<br><br>
+            총 대지면적, 예상 용적률, 최고 층수, 예상 세대수 등 프로젝트의 성패를 가르는 4가지 핵심 숫자만을 큼직한 상자 UI로 띄워, 보고서를 펼치자마자 3초 만에 사업성을 판단할 수 있게 돕는 것이 우리 보고서의 가장 강력한 디자인 무기입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">2. 쪼개진 모듈의 병합 (build_document.py)</h3>
+        <div class="grid-2" style="margin-bottom:20px;">
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">AI 문맥 한계 우회 기술</strong><br>
+                    안티그래비티나 Gemini 모델에게 한 번에 20장짜리 책을 통째로 짜라고 하면 기억력의 한계로 에러가 납니다. 따라서 우리는 표지(000), 1장(001), 2장(002)을 <strong>각각 독립된 HTML로 쪼개서 작업(모듈화)</strong>합니다.
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="term-box" style="background:#ffffff; border-color:var(--hairline); height:100%;">
+                    <strong style="font-weight:bold; font-size:16px;">파이썬 병합 엔진</strong><br>
+                    작업이 끝난 후, <code>build_document.py</code>를 실행하면 쪼개진 20개의 HTML 파일이 순서대로 조립되어 거대한 하나의 완성된 <code>마스터_최종.html</code>로 태어납니다.
+                </div>
+            </div>
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#1e88e5;">3. Headless Chrome PDF 출력</h3>
+        <div class="term-box" style="background:#ffffff; border-color:var(--hairline); margin-bottom: 20px;">
+            최종 HTML이 만들어지면 브라우저를 열어 "인쇄 -> PDF로 저장"을 누를 필요가 없습니다. <br>
+            터미널에서 <code>Google Chrome --headless --print-to-pdf</code> 명령어를 백그라운드 작업(Task)으로 실행시키면, 컴퓨터 안에 보이지 않는 크롬 브라우저가 뜨고 애플 스타일(Apple Design) CSS가 완벽히 적용된 초고화질 PDF 파일이 스르륵 떨어집니다. 이 모든 과정이 <strong>단 한 번의 원클릭(One-Click)</strong>으로 이루어집니다.
+        </div>
+
+    </div>
+    <div class="page-footer"><span>(주)진양엔지니어링 건축사 사무소</span><span>06</span>
+<h3 class='display-md' style='margin-top:40px; font-weight:bold;'>통합보고서 작성 및 AI 활용 (창신10구역 사례)</h3>
+<div class="grid-2">
+<div class="grid-column">
+<div class="term-box" style="border-color:#1e88e5; background:#fff;">
+<strong style="color:#1e88e5; font-size:15px;">1. 공동주택성능요구서 및 평가서 (시공사 선정 핵심)</strong><br/><br/>
+                        창신10구역의 보고서 작성 시, 단순 개요 도출에 그치지 않고 AI를 통해 입찰 전 필수 도서를 역추출했습니다.<br/>
+                        - <strong>작성 시기:</strong> 사업시행인가 전, 특히 시공자 선정 입찰 지침서 작성 시.<br/>
+                        - <strong>필요 이유:</strong> 시공사가 내장재, 단열, 층간소음, 친환경 자재 성능을 입찰 내역에 명확히 반영(공사비 근거)하게 하여 추후 공사비 증액 분쟁을 막기 위함입니다.<br/>
+                        - <strong>AI 프롬프트 사례:</strong> <em>"시공사 입찰 시 조합이 절대 누락하면 안 되는 법정 도서와 그 이유를 전문가 시각에서 정리해."</em>
+</div>
+</div>
+<div class="grid-column">
+<div class="term-box" style="border-color:#d93025; background:#fff;">
+<strong style="color:#d93025; font-size:15px;">2. 한양도성 세계문화유산 등재 등 특수 리스크</strong><br/><br/>
+                        도심 사업지의 가장 큰 맹점은 문화재청 앙각(경관) 규제입니다.<br/>
+                        - <strong>우리의 선제 조치:</strong> 창신10구역 북측 한양도성에 의한 최고 높이 제한 및 건축위원회/문화재위원회 공동 심의 가능성을 보고서 전면에 경고함.<br/>
+                        - <strong>AI 활용법:</strong> 구역계 데이터만 주면 AI는 알지 못합니다. <em>"해당 PNU 주변 500m 내 세계문화유산, 역사문화환경 보존지역 여부를 국가법령과 결합해 분석해줘"</em>라고 지시하여 리스크를 끄집어냅니다.
+                    </div>
+</div>
+</div>
+<div class="term-box" style="margin-top:20px; border-color:#000; background:#fff;">
+<strong style="color:#000; font-size:15px;">3. 통합 보고서(PDF) 생성 및 출력 렌더링 방법</strong><br/><br/>
+                모든 분석이 완료되면, 산출된 데이터 세트(JSON)와 인쇄 레이아웃(Jinja2 HTML)을 결합합니다.<br/>
+                이후 `Chrome Headless` 명령어를 백그라운드 구동하여 CSS `@page` 규칙이 적용된 완벽한 A4 규격의 보고서를 1초 만에 PDF로 렌더링해 냅니다.
+            </div>
+</div>
+<div class="page-footer"><span>제20장. 통합보고서 및 AI 응용 사례</span><span>19</span>
+
+    </div>
+</div>
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>

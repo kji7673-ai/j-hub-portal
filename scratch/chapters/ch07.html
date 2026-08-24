@@ -1,0 +1,39 @@
+<div class="page">
+<div class="content-area" style="flex: 1; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; margin-bottom: 24px;">
+<div class="page tile-dark">
+    <div class="content-wrap">
+        <h2 class="display-lg hairline-bottom">시스템 유지보수 및 에러 대처법</h2>
+        <p class="body-text" style="margin-bottom:30px; color:var(--body-muted);">
+            파이프라인이 멈추거나 예상치 못한 결과가 나왔을 때, 당황하지 않고 원인을 찾아내는 가장 핵심적인 체크리스트입니다.
+        </p>
+
+        <h3 class="display-md" style="margin-top:20px; color:#2997ff;">1. 공공 API 서버 장애 (VWorld 타임아웃)</h3>
+        <div class="term-box" style="background:var(--surface-tile-2); border-color:#2997ff;">
+            <strong>증상:</strong> 파이썬 스크립트 실행 중 `requests.exceptions.Timeout` 에러가 발생하거나, 삽도가 하얗게 비어 나옵니다.<br><br>
+            <strong>대처법:</strong> 국토부 VWorld 서버 점검 시간일 확률이 90%입니다. 이럴 때는 강제로 스크립트를 재실행하지 말고, 인터넷 창에 `map.vworld.kr`을 쳐서 사이트가 정상적으로 열리는지 먼저 확인하십시오. 사이트가 다운되었다면 서버 복구를 기다리는 것이 유일한 해결책입니다.
+        </div>
+
+        <h3 class="display-md" style="margin-top:30px; color:#2997ff;">2. 용적률 산출 오류 (CSV 누락)</h3>
+        <div class="term-box" style="background:var(--surface-tile-2); border-color:#2997ff; margin-bottom: 20px;">
+            <strong>증상:</strong> 건축 개요표에 대지면적이나 용적률이 터무니없이 작게 산출됩니다.<br><br>
+            <strong>대처법:</strong> 가장 먼저 `data.csv` 파일을 여십시오. 특정 지번의 면적 값이 '0'이거나 아예 비어있는 칸이 있는지 확인해야 합니다. 지번 분할/합병으로 인해 최신 지적도와 API 데이터가 불일치할 때 발생하는 현상입니다. 비어있는 값을 토지이음(eum.go.kr)에서 수동으로 찾아 기입해주면 시스템은 정상 연산합니다.
+        </div>
+        
+        <h3 class="display-md" style="margin-top:30px; color:#ff5252;">3. 단일 진실 공급원 (SSOT) 훼손 금지</h3>
+        <div class="term-box" style="background:#331515; border-color:#ff5252;">
+            <strong style="color:#ff5252; font-size:16px;">AGENTS.md는 절대 법전입니다.</strong><br>
+            직원들이 각자의 채팅방에서 새로운 업무 꿀팁이나 스크립트 수정 사항을 알아냈을 때, 이를 혼자만 알고 넘어가는 것은 우리 시스템의 암(Cancer)입니다.<br><br>
+            새로운 지식을 얻었다면 무조건 워크스페이스의 <strong>`AGENTS.md` (혹은 지식베이스 파일)</strong>에 적어두십시오. 이 절대 법전이 훼손되거나 파편화되면, 직원마다 AI가 내놓는 보고서의 퀄리티가 달라지는 치명적인 사고가 발생합니다.
+        </div>
+
+    </div>
+    <div class="page-footer" style="border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);"><span>(주)진양엔지니어링 건축사 사무소</span><span>07</span></div>
+</div>
+
+</div>
+<div class="comments-area" style="display: flex; gap: 24px; height: 280px;">
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">✏️ 수정 요청사항</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; font-size: 14px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">💡 경영진 인사이트</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--ink);"></p></div>
+<div class="comment-box" style="flex: 1; background: var(--canvas); border: 1px solid var(--hairline); border-radius: 18px; padding: 24px; overflow: hidden;"><div class="box-title" style="font-family: 'SF Pro Display', system-ui, sans-serif; font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 12px; letter-spacing: -0.374px;">🎨 스케치 도면</div><p style="font-family: 'SF Pro Text', system-ui, sans-serif; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--body-muted); text-align: center; margin-top: 40px;">(스케치 없음)</p></div>
+</div>
+</div>
