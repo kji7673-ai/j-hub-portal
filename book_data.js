@@ -2268,7 +2268,7 @@ const bookData = {
     },
     {
         "type": "interlude",
-        "title": "[부록] J-Hub 플랫폼 비즈니스 로드맵 및 시스템 아키텍처",
+        "title": "[부록] J-Hub 플랫폼 마스터플랜 원본 (SRD)",
         "image": "static/images/15.jpg",
         "part": "부록"
     }
