@@ -1675,8 +1675,12 @@
             const savedChapter = localStorage.getItem('JJournal_savedChapter');
             const savedColumn = localStorage.getItem('JJournal_savedColumn');
             if (savedChapter !== null && savedColumn !== null) {
-                currentChapter = parseInt(savedChapter, 10);
-                currentColumn = parseInt(savedColumn, 10);
+                const parsedChap = parseInt(savedChapter, 10);
+                const parsedCol = parseInt(savedColumn, 10);
+                if(!isNaN(parsedChap) && !isNaN(parsedCol)) {
+                    currentChapter = parsedChap;
+                    currentColumn = parsedCol;
+                }
             }
             updateBookmarkButton();
         });
