@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>J-Hub Book Studio (210x210 E-Book)</title>
+    <style>
+        /* Apple Design System / Enterprise Elegance */
+        :root {
+            --primary: #0066cc;
+            --ink: #1d1d1f;
+            --canvas: #ffffff;
+            --canvas-parchment: #f5f5f7;
+            --hairline: #e0e0e0;
+            --font-display: "SF Pro Display", system-ui, -apple-system, sans-serif;
+            --font-body: "SF Pro Text", system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--canvas-parchment);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: var(--font-body);
+            color: var(--ink);
+            overflow: hidden; /* Prevent body scroll */
+        }
+
+        /* 210x210 Aspect Ratio Container */
+        .book-container {
+            width: 100%;
+            max-width: 90vh; /* Responsive sizing for tablets */
+            aspect-ratio: 1 / 1; /* Square format for 210x210 */
+            background-color: #fcfcfd; /* Warm paper color */
+            box-shadow: 
+                inset 20px 0 30px -10px rgba(0,0,0,0.05), /* Subtle book spine shadow on the left */
+                0 15px 40px rgba(0,0,0,0.12); /* Outer elevation */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 4px 12px 12px 4px; /* Slightly rounded on the right edge like a book */
+        }
+
+        /* Pagination Layout */
+        
+
+        .page-content.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Typography */
+        h1.book-title {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 5cqw, 40px);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .cover-content {
+            margin: auto; /* Center everything vertically and horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        
+
+        p.body-text {
+            font-size: clamp(14px, 2.5cqw, 15px);
+            line-height: 1.8; /* Relaxed book leading */
+            margin-bottom: 20px; /* Space between paragraphs */
+            text-align: justify;
+            word-break: keep-all; /* Prevent word breaking in Korean */
+            color: var(--ink);
+            letter-spacing: -0.01em;
+        }
+        
+        .page-content p.body-text:first-of-type::first-letter {
+            font-size: 2.2em;
+            font-weight: bold;
+            line-height: 1;
+            float: left;
+            margin-right: 6px;
+            margin-top: 2px;
+            color: var(--primary);
+        }
+        .image-container {
+            width: 40%; /* Occupies about 1/4 of the page when floated */
+            float: right;
+            margin: 5px 0 20px 24px;
+            border-radius: 8px;
+            background: transparent;
+            /* Removed overflow: hidden to prevent clipping shadows */
+        }
+
+        /* Alternate image placement (left/right) based on page number */
+        .page-content:nth-child(even) .image-container {
+            float: left;
+            margin: 5px 24px 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 18px; /* Apple rounded.lg */
+            box-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0; /* Apple's single signature drop-shadow */
+            background-color: var(--canvas);
+            display: block;
+        }
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 3%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            z-index: 10;
+        }
+
+        .page-number {
+            font-size: 12px;
+            color: #999;
+            font-family: monospace;
+        }
+
+        .nav-btn {
+            background: rgba(210, 210, 215, 0.64);
+            border: none;
+            font-size: 20px;
+            color: var(--ink);
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.2s;
+        }
+        .nav-btn:hover {
+            background: rgba(210, 210, 215, 0.8);
+        }
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        /* Edit Overlay */
+        .edit-toolbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        /* File Upload */
+        input[type="file"] {
+            display: none;
+        }
+    
+        /* Secret Room UI */
+        .secret-modal {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;
+        }
+        .secret-modal-content {
+            background: #fff; padding: 30px; border-radius: 18px; width: 300px; text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .secret-modal input {
+            width: 100%; padding: 10px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; text-align: center;
+            font-size: 20px; letter-spacing: 5px;
+        }
+        
+        .secret-panel {
+            position: fixed; bottom: -100%; left: 0; right: 0; height: 70vh;
+            background: rgba(250, 250, 252, 0.95); backdrop-filter: blur(20px);
+            border-top-left-radius: 24px; border-top-right-radius: 24px;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.15); z-index: 900;
+            transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex; flex-direction: column; padding: 30px 8%;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .secret-panel.open { bottom: 0; }
+        
+        .panel-header {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+        }
+        .panel-title { font-family: 'SF Pro Display', sans-serif; font-weight: 600; font-size: 20px; color: #1d1d1f; }
+        .close-panel { background: none; border: none; font-size: 24px; cursor: pointer; color: #1d1d1f; }
+        
+        .panel-body { display: flex; gap: 20px; flex: 1; min-height: 0; }
+        .panel-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+        .panel-label { font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 5px; }
+        .panel-textarea {
+            flex: 1; border: 1px solid #d2d2d7; border-radius: 12px; padding: 15px;
+            font-family: 'SF Pro Text', sans-serif; font-size: 15px; line-height: 1.5;
+            resize: none; background: #fff;
+        }
+        .feedback-box {
+            flex: 1; border: 1px solid #d2d2d7; border-radius: 12px; padding: 15px;
+            background: #f5f5f7; font-family: 'SF Pro Text', sans-serif; font-size: 14px;
+            overflow-y: auto; line-height: 1.5; color: #1d1d1f;
+        }
+        .panel-footer { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+        
+        .btn-redteam { background: #000; color: #fff; border: none; padding: 12px 24px; border-radius: 999px; cursor: pointer; font-weight: 600; }
+        .btn-save { background: #0066cc; color: #fff; border: none; padding: 12px 24px; border-radius: 999px; cursor: pointer; font-weight: 600; }
+
+    
+        /* -- Custom Scrollbar for pages -- */
+        .page-content {
+            flex: 1;
+            padding: 10% 12% 15% 12%; /* Increased bottom padding to avoid controls overlap */
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .page-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .page-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .page-content::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* -- Cover Design (Dark Mode) -- */
+        .page-content.bg-dark {
+            background-color: var(--surface-tile-1, #272729);
+            color: var(--canvas, #ffffff);
+        }
+        .page-content.bg-dark h1.book-title,
+        .page-content.bg-dark p {
+            color: var(--canvas, #ffffff) !important;
+        }
+
+        /* -- Chapter Title Redesign -- */
+        h2.chapter-title {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 4cqw, 28px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            color: var(--ink);
+            border-left: 4px solid var(--primary);
+            padding-left: 14px;
+            line-height: 1.3;
+        }
+
+        /* -- Table Redesign -- */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 14px;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .custom-table th, .custom-table td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--hairline);
+        }
+        .custom-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+
+    
+        .floating-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #333;
+            font-family: inherit;
+            transition: all 0.2s;
+            backdrop-filter: blur(5px);
+        }
+        .floating-btn:hover { background: #f0f0f0; }
+        
+        .bookmark-modal, .feedback-modal {
+            display: none;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.5); z-index: 1000;
+            justify-content: center; align-items: center;
+        }
+        .modal-content-box {
+            background: #fff; width: 400px; max-width: 90%;
+            border-radius: 12px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .modal-content-box h3 { margin-top: 0; }
+        .bookmark-list-item {
+            padding: 10px; border-bottom: 1px solid #eee; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .bookmark-list-item:hover { background: #f9f9f9; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Editor Tools (For Studio) -->
+    <div class="edit-toolbar">
+        <button class="btn" onclick="openSecretPanel()">원고 수정 / 비판 요청</button>
+    </div>
+
+
+    <!-- Secret Room UI -->
+    <div class="secret-modal" id="secret-modal">
+        <div class="secret-modal-content">
+            <h3 style="margin-bottom:10px;">비밀 집필실</h3>
+            <p style="font-size:12px; color:#666;">접근 코드를 입력하세요</p>
+            <input type="password" id="secret-pw" maxlength="6">
+            <button class="btn" onclick="checkSecretPassword()">입장</button>
+        </div>
+    </div>
+    
+    <div class="secret-panel" id="secret-panel">
+        <div class="panel-header">
+            <div class="panel-title">Red Team 집필 스튜디오</div>
+            <button class="close-panel" onclick="closeSecretPanel()">×</button>
+        </div>
+        <div class="panel-body">
+            <div class="panel-col" style="flex: 0.8;">
+                <div class="panel-label">현재 페이지 원고 (AI가 재작성 시 자동 반영됩니다)</div>
+                <textarea id="panel-original-text" class="panel-textarea"></textarea>
+                
+                <div class="panel-label" style="margin-top:15px;">이미지 컨트롤</div>
+                <div style="display:flex; gap:10px; align-items:center;">
+                    <select id="panel-image-layout" style="padding:8px; border-radius:8px; border:1px solid #ccc; font-family:'SF Pro Text';">
+                        <option value="text_only">텍스트만 (이미지 없음)</option>
+                        <option value="image_top">상단 스케치 (35% 크기)</option>
+                        <option value="image_full">전체 화면 (글씨 없음)</option>
+                    </select>
+                    <label for="panel-image-upload" class="btn btn-outline" style="margin:0;">새 이미지 업로드</label>
+                    <input type="file" id="panel-image-upload" accept="image/*" style="display:none;">
+                </div>
+            </div>
+            
+            <div class="panel-col" style="flex: 1.2;">
+                <div class="panel-label">AI 레드팀 티키타카 (수정 논의)</div>
+                <div id="chat-history" class="feedback-box" style="flex:1; display:flex; flex-direction:column; gap:10px;">
+                    <div style="text-align:center; color:#888;">AI 레드팀과 대화를 시작하세요.</div>
+                </div>
+                
+                <div style="display:flex; gap:10px; margin-top:10px;">
+                    <textarea id="chat-input" class="panel-textarea" style="height:60px;" placeholder="어떻게 고치면 좋을지 편하게 적어주세요."></textarea>
+                    <button class="btn-redteam" onclick="sendChatMessage()" style="border-radius:12px; padding:0 20px;">전송</button>
+                </div>
+                
+                <div class="panel-footer" style="margin-top:10px;">
+                    <button class="btn-save" onclick="applyFinalRevision()" style="width:100%;">AI 최종 원고 자동 재작성 및 저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-container" id="book-container">
+        <!-- Pages will be injected here by JS -->
+        
+        <div class="controls">
+            <button class="nav-btn" id="prev-btn" onclick="prevPage()">←</button>
+            <div class="page-number" id="page-num">1 / 10</div>
+            <button class="nav-btn" id="next-btn" onclick="nextPage()">→</button>
+        </div>
+    </div>
+
+    <script src="book_data.js"></script>
+    <script>
+        // Restore saved page or default to 0
+        let currentPage = 0;
+        const savedPage = localStorage.getItem('JJournal_savedPage');
+        if (savedPage !== null) {
+            currentPage = parseInt(savedPage, 10);
+            // Ensure it's within valid range just in case
+            if (isNaN(currentPage) || currentPage < 0) currentPage = 0;
+        }
+
+        function renderBook() {
+            const container = document.getElementById('book-container');
+            // Remove existing pages
+            document.querySelectorAll('.page-content').forEach(p => p.remove());
+
+            bookData.pages.forEach((page, index) => {
+                const pageEl = document.createElement('div');
+                pageEl.className = 'page-content' + (index === currentPage ? ' active' : '');
+                
+                let contentHTML = '';
+                
+                if (page.type === 'cover') {
+                    pageEl.className += ' bg-dark';
+                    contentHTML += `<div class="cover-content">`;
+                    contentHTML += `<h1 class="book-title" style="text-align:center;">${page.title}</h1>`;
+                    if(page.subtitle) contentHTML += `<p style="text-align:center; color:#a0a0a0; font-weight: 300;">${page.subtitle}</p>`;
+                    contentHTML += `</div>`;
+                } 
+                else if (page.type === 'image_top') {
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                                contentHTML += p;
+                            } else {
+                                contentHTML += `<p class="body-text">${p}</p>`;
+                            }
+                        });
+                    }
+                }
+                else if (page.type === 'image_full') {
+                    pageEl.style.padding = '0';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; border-radius:0; z-index:0; background:transparent;"><img src="${page.image}" alt="full_image" style="width:100%; height:100%; object-fit:cover; border-radius:0; box-shadow:none; max-width:none;"></div>`;
+                    }
+                    contentHTML += `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background: rgba(255,255,255,0.4); padding: 40px; box-sizing:border-box;">`;
+                    if(page.title) contentHTML += `<h1 class="book-title" style="text-align:center; color:#1d1d1f; font-size:48px; margin-bottom:20px; text-shadow: 0 2px 15px rgba(255,255,255,0.9); font-weight:700;">${page.title}</h1>`;
+                    if(page.subtitle) contentHTML += `<p style="text-align:center; color:#333; font-size:24px; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9);">${page.subtitle}</p>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            contentHTML += `<p class="body-text" style="color:#1d1d1f; font-weight:600; text-shadow: 0 1px 10px rgba(255,255,255,0.9); text-align:center; font-size:18px;">${p}</p>`;
+                        });
+                    }
+                    contentHTML += `</div>`;
+                }
+                else if (page.type === 'text_only') {
+                    if(page.title) contentHTML += `<h2 class="chapter-title">${page.title}</h2>`;
+                    if(page.text) {
+                        const paragraphs = page.text.split('\n\n');
+                        paragraphs.forEach(p => {
+                            if (p.trim().startsWith('<table') || p.trim().startsWith('<div class="custom-table"')) {
+                                contentHTML += p;
+                            } else {
+                                contentHTML += `<p class="body-text">${p}</p>`;
+                            }
+                        });
+                    }
+                }
+
+                pageEl.innerHTML = contentHTML;
+                pageEl.addEventListener('scroll', () => {
+                    if (index === currentPage) {
+                        localStorage.setItem('JJournal_savedScrollTop', pageEl.scrollTop);
+                    }
+                });
+
+                container.insertBefore(pageEl, container.querySelector('.controls'));
+                
+                // Restore scroll position if it's the current page
+                if (index === currentPage) {
+                    const savedScroll = localStorage.getItem('JJournal_savedScrollTop');
+                    if (savedScroll !== null) {
+                        // Use setTimeout to ensure DOM is ready before setting scrollTop
+                        setTimeout(() => {
+                            pageEl.scrollTop = parseInt(savedScroll, 10);
+                        }, 50);
+                    }
+                }
+            });
+
+            updateControls();
+        }
+
+        function updateControls() {
+            document.getElementById('prev-btn').disabled = currentPage === 0;
+            document.getElementById('next-btn').disabled = currentPage === bookData.pages.length - 1;
+            document.getElementById('page-num').innerText = `${currentPage + 1} / ${bookData.pages.length}`;
+            
+            document.querySelectorAll('.page-content').forEach((p, idx) => {
+                if(idx === currentPage) p.classList.add('active');
+                else p.classList.remove('active');
+            });
+            
+            // Save current page
+            localStorage.setItem('JJournal_savedPage', currentPage);
+            if(typeof updateBookmarkButton === "function") updateBookmarkButton();
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                localStorage.setItem('JJournal_savedScrollTop', 0);
+                const activeEl = document.querySelectorAll('.page-content')[currentPage];
+                if (activeEl) activeEl.scrollTop = 0;
+                updateControls();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < bookData.pages.length - 1) {
+                currentPage++;
+                localStorage.setItem('JJournal_savedScrollTop', 0);
+                const activeEl = document.querySelectorAll('.page-content')[currentPage];
+                if (activeEl) activeEl.scrollTop = 0;
+                updateControls();
+            }
+        }
+
+        
+        // Secret Room Logic
+        let clickCount = 0;
+        let clickTimer;
+        
+        // Listen for clicks on the book container (but specifically we want to target top header area or just globally handle 3 clicks fast)
+        document.body.addEventListener('click', function(e) {
+            // Only trigger if clicking on empty space or the container itself to avoid interfering with buttons
+            if(e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
+            clickCount++;
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => { clickCount = 0; }, 500);
+            
+            if (clickCount >= 3) {
+                clickCount = 0;
+                document.getElementById('secret-modal').style.display = 'flex';
+                document.getElementById('secret-pw').focus();
+            }
+        });
+
+        function checkSecretPassword() {
+            const pw = document.getElementById('secret-pw').value;
+            if (pw === '937610') {
+                document.getElementById('secret-modal').style.display = 'none';
+                document.getElementById('secret-pw').value = '';
+                openSecretPanel();
+            } else {
+                alert('코드가 일치하지 않습니다.');
+                document.getElementById('secret-modal').style.display = 'none';
+            }
+        }
+
+        function openSecretPanel() {
+            const panel = document.getElementById('secret-panel');
+            panel.classList.add('open');
+            
+            // Load current page text
+            const activePage = bookData.pages[currentPage];
+            let contentText = activePage.text || '';
+            if (!contentText && activePage.title) {
+                contentText = activePage.title + (activePage.subtitle ? '\n' + activePage.subtitle : '');
+            }
+            document.getElementById('panel-original-text').value = contentText;
+            document.getElementById('panel-image-layout').value = activePage.type;
+            
+            // Reset chat
+            currentChatHistory = [];
+            document.getElementById('chat-history').innerHTML = '<div style="text-align:center; color:#888;">AI 레드팀과 대화를 시작하세요.</div>';
+            document.getElementById('chat-input').value = '';
+        }
+        
+        function closeSecretPanel() {
+            document.getElementById('secret-panel').classList.remove('open');
+        }
+
+        let currentChatHistory = [];
+        
+        function appendChatMessage(role, content) {
+            const historyBox = document.getElementById('chat-history');
+            const msgDiv = document.createElement('div');
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px';
+            msgDiv.style.maxWidth = '85%';
+            msgDiv.style.fontSize = '14px';
+            msgDiv.style.lineHeight = '1.5';
+            
+            if (role === 'user') {
+                msgDiv.style.background = '#0066cc';
+                msgDiv.style.color = '#fff';
+                msgDiv.style.alignSelf = 'flex-end';
+                msgDiv.style.borderBottomRightRadius = '4px';
+            } else {
+                msgDiv.style.background = '#e5e5ea';
+                msgDiv.style.color = '#1d1d1f';
+                msgDiv.style.alignSelf = 'flex-start';
+                msgDiv.style.borderBottomLeftRadius = '4px';
+            }
+            msgDiv.innerHTML = content.replace(/\n/g, '<br>');
+            
+            // Remove empty placeholder if first message
+            if (historyBox.children.length === 1 && historyBox.children[0].innerText.includes('시작하세요')) {
+                historyBox.innerHTML = '';
+            }
+            
+            historyBox.appendChild(msgDiv);
+            historyBox.scrollTop = historyBox.scrollHeight;
+            
+            if (role !== 'system') {
+                currentChatHistory.push({ role: role, content: content });
+            }
+        }
+
+        async function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const originalText = document.getElementById('panel-original-text').value;
+            const msg = input.value.trim();
+            
+            if (!msg) return;
+            
+            input.value = '';
+            appendChatMessage('user', msg);
+            appendChatMessage('system', '<i>답변 생성 중...</i>');
+            
+            try {
+                const response = await fetch('/api/redteam_chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        original_text: originalText, 
+                        chat_history: currentChatHistory.slice(0, -1), // Exclude the one just added temporarily
+                        message: msg 
+                    })
+                });
+                const result = await response.json();
+                
+                // Remove the 'system' loading message
+                const historyBox = document.getElementById('chat-history');
+                historyBox.removeChild(historyBox.lastChild);
+                
+                appendChatMessage('model', result.feedback);
+            } catch (e) {
+                const historyBox = document.getElementById('chat-history');
+                historyBox.removeChild(historyBox.lastChild);
+                appendChatMessage('system', '<span style="color:red;">서버 통신 오류가 발생했습니다.</span>');
+            }
+        }
+
+        async function applyFinalRevision() {
+            if(!confirm('AI가 대화 내역과 앞뒤 문맥을 고려하여 최종 원고를 덮어씁니다. 진행하시겠습니까?')) return;
+            
+            const originalText = document.getElementById('panel-original-text').value;
+            const prevText = currentPage > 0 ? bookData.pages[currentPage-1].text : '';
+            const nextText = currentPage < bookData.pages.length - 1 ? bookData.pages[currentPage+1].text : '';
+            
+            const saveBtn = document.querySelector('.btn-save');
+            const oldSaveText = saveBtn.innerText;
+            saveBtn.innerText = 'AI가 재작성 중...';
+            saveBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/apply_revision', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        page_index: currentPage, 
+                        original_text: originalText,
+                        chat_history: currentChatHistory,
+                        prev_text: prevText || '',
+                        next_text: nextText || ''
+                    })
+                });
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    // Update local object and re-render
+                    bookData.pages[currentPage].text = result.revised_text;
+                    document.getElementById('panel-original-text').value = result.revised_text;
+                    renderBook();
+                    alert('AI가 앞뒤 문맥에 맞게 최종 원고를 성공적으로 재작성했습니다.');
+                } else {
+                    alert('저장 실패: ' + result.message);
+                }
+            } catch (e) {
+                alert('오류 발생: 서버와 통신할 수 없습니다.');
+            }
+            
+            saveBtn.innerText = oldSaveText;
+            saveBtn.disabled = false;
+        }
+        
+        // Setup image upload in panel
+        document.getElementById('panel-image-upload').addEventListener('change', async function(e) {
+            if(e.target.files && e.target.files[0]) {
+                const file = e.target.files[0];
+                const layout = document.getElementById('panel-image-layout').value;
+                const reader = new FileReader();
+                
+                const uploadLabel = document.querySelector('label[for="panel-image-upload"]');
+                const originalLabel = uploadLabel.innerText;
+                uploadLabel.innerText = "업로드 중...";
+                
+                reader.onload = async function(e) {
+                    const base64Data = e.target.result;
+                    
+                    try {
+                        const response = await fetch('/api/upload_image', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                page_index: currentPage,
+                                image_data: base64Data,
+                                image_layout: layout
+                            })
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.status === 'success') {
+                            const activePage = bookData.pages[currentPage];
+                            activePage.image = result.image_url;
+                            activePage.type = layout;
+                            
+                            renderBook();
+                            uploadLabel.innerText = originalLabel;
+                        } else {
+                            alert("업로드 실패: " + result.message);
+                            uploadLabel.innerText = originalLabel;
+                        }
+                    } catch (error) {
+                        alert("서버 통신 오류: " + error.message);
+                        uploadLabel.innerText = originalLabel;
+                    }
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Handle Layout Change without upload
+        document.getElementById('panel-image-layout').addEventListener('change', async function(e) {
+            const layout = e.target.value;
+            const activePage = bookData.pages[currentPage];
+            if(activePage.type !== layout) {
+                // If we need to just save the type change (requires backend endpoint, but for now we just change it locally. To save permanently, we'd need a save_layout API. Let's just alert.)
+                alert("레이아웃만 변경하는 기능은 새 이미지를 업로드할 때 함께 반영되거나, 원고 수정 시 반영됩니다.");
+                activePage.type = layout;
+                renderBook();
+            }
+        });
+
+        // Init
+        window.onload = renderBook;
+    
+        // Bookmark Features
+        let bookmarks = JSON.parse(localStorage.getItem('JJournal_bookmarks') || '[]');
+
+        function toggleBookmark() {
+            const idx = bookmarks.indexOf(currentPage);
+            if (idx === -1) {
+                bookmarks.push(currentPage);
+                bookmarks.sort((a,b) => a - b);
+                alert('현재 페이지를 책갈피에 추가했습니다.');
+            } else {
+                bookmarks.splice(idx, 1);
+                alert('현재 페이지의 책갈피를 해제했습니다.');
+            }
+            localStorage.setItem('JJournal_bookmarks', JSON.stringify(bookmarks));
+            updateBookmarkButton();
+        }
+
+        function updateBookmarkButton() {
+            const btn = document.getElementById('bookmark-toggle-btn');
+            if(btn) {
+                if(bookmarks.includes(currentPage)) {
+                    btn.innerText = '🔖 책갈피 해제';
+                    btn.style.background = '#e6f2ff';
+                } else {
+                    btn.innerText = '🔖 책갈피 추가';
+                    btn.style.background = 'rgba(255, 255, 255, 0.9)';
+                }
+            }
+        }
+
+        function openBookmarkList() {
+            const container = document.getElementById('bookmark-list-container');
+            container.innerHTML = '';
+            if(bookmarks.length === 0) {
+                container.innerHTML = '<p style="color:#999; text-align:center; padding:20px 0;">추가된 책갈피가 없습니다.</p>';
+            } else {
+                bookmarks.forEach(pageIndex => {
+                    const title = bookData.pages[pageIndex].title || `페이지 ${pageIndex + 1}`;
+                    const div = document.createElement('div');
+                    div.className = 'bookmark-list-item';
+                    div.innerHTML = `<span>${title}</span> <span>이동 ➔</span>`;
+                    div.onclick = () => {
+                        currentPage = pageIndex;
+                        localStorage.setItem('JJournal_savedScrollTop', 0);
+                        const activeEl = document.querySelectorAll('.page-content')[currentPage];
+                        if (activeEl) activeEl.scrollTop = 0;
+                        updateControls();
+                        document.getElementById('bookmark-modal').style.display = 'none';
+                    };
+                    container.appendChild(div);
+                });
+            }
+            document.getElementById('bookmark-modal').style.display = 'flex';
+        }
+
+        // Feedback Feature
+        function openFeedbackModal() {
+            document.getElementById('feedback-text').value = '';
+            document.getElementById('feedback-modal').style.display = 'flex';
+        }
+
+        function sendFeedbackEmail() {
+            const text = document.getElementById('feedback-text').value;
+            if(!text.trim()) {
+                alert('내용을 입력해주세요.');
+                return;
+            }
+            const subject = encodeURIComponent('[독자 소감] 기획서는 곧 건축가의 얼굴이다');
+            const body = encodeURIComponent(text);
+            const mailtoLink = `mailto:kji7673@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+            document.getElementById('feedback-modal').style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>

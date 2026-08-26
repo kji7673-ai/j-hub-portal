@@ -1322,8 +1322,8 @@
             document.getElementById('prev-btn').disabled = (currentChapter === 0 && currentColumn === 0);
             document.getElementById('next-btn').disabled = (currentChapter === totalChapters - 1 && currentColumn === maxCols - 1);
             document.getElementById('page-num').innerText = `[${currentChapter + 1}/${totalChapters}] ${currentColumn + 1} / ${maxCols}`;
-        }
             if(typeof saveProgress === 'function') saveProgress();
+        }
 
         function prevPage() {
             if (currentColumn > 0) {
