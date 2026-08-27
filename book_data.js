@@ -310,12 +310,6 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/3.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
         "image": "static/images/6.jpg",
         "text": "",
         "partCategory": "2부: 증언과 성찰"
@@ -1984,50 +1978,7 @@ const bookData = {
     },
     {
         "type": "image_full",
-        "image": "static/images/user_07.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_06.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_05.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_04.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_03.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_02.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_01.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/3.jpg",
-        "text": "",
+        "image": "static/images/mentor_legacy.jpg",
         "partCategory": "2부: 증언과 성찰"
     },
     {
