@@ -789,7 +789,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=82"></script>
+    <script src="book_data.js?v=1787795011815"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1703,11 +1703,41 @@
         function populateTOC() {
             if(!tocList) return;
             tocList.innerHTML = '';
+            
+            let currentCategory = null;
+
             bookData.pages.forEach((page, index) => {
-                if (page.title && page.title.trim() !== "") {
+                if (page.title && page.title.trim() !== "" && !page.title.includes("(계속)")) {
+                    let cat = page.partCategory || "서문 및 개요";
+                    if (cat !== currentCategory) {
+                        currentCategory = cat;
+                        const catHeader = document.createElement('div');
+                        catHeader.className = 'toc-category-header';
+                        catHeader.textContent = currentCategory;
+                        catHeader.style.fontWeight = 'bold';
+                        catHeader.style.marginTop = '20px';
+                        catHeader.style.marginBottom = '10px';
+                        catHeader.style.color = '#111';
+                        catHeader.style.borderBottom = '2px solid #eaeaea';
+                        catHeader.style.paddingBottom = '5px';
+                        catHeader.style.fontSize = '1.1em';
+                        tocList.appendChild(catHeader);
+                    }
+
                     const item = document.createElement('div');
                     item.className = 'toc-item';
                     item.textContent = page.title;
+                    item.style.paddingLeft = '15px';
+                    item.style.paddingTop = '8px';
+                    item.style.paddingBottom = '8px';
+                    item.style.cursor = 'pointer';
+                    item.style.fontSize = '0.95em';
+                    item.style.color = '#444';
+                    
+                    // Add hover effect
+                    item.onmouseover = () => { item.style.color = '#0071e3'; item.style.backgroundColor = '#f5f5f7'; };
+                    item.onmouseout = () => { item.style.color = '#444'; item.style.backgroundColor = 'transparent'; };
+                    
                     item.addEventListener('click', () => {
                         currentChapter = index;
                         currentColumn = 0;
