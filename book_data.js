@@ -1916,12 +1916,6 @@ const bookData = {
         "partCategory": "2부: 증언과 성찰"
     },
     {
-        "type": "image_full",
-        "image": "static/images/user_10.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
         "part": "4부: 증언과 성찰",
         "partTitle": "[Theme 4] 미완의 일상",
         "title": "86. 작아진 남자",
@@ -1933,18 +1927,6 @@ const bookData = {
         "partTitle": "[Theme 4] 미완의 일상",
         "title": "87. 난 슬픔과 기쁨에 반응이 둔한편이다",
         "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>어떤이는 침착하다라고 말하지만,<br>사실 몸과 맘이 둔하여 슬픔과 기쁨에<br>바로 반응하지 못하기때문이다<br>둔하다는것은 어떤 순간에는 좋을때도 있으나,<br>보통의 경우는 외톨이에 이상한 인간이 되기 싶다<br>이미 지나간 것들이 슬픔과 후회로 찾아오기에<br>다른이는 현재의 시간인데<br>나에게는 한박자씩 늦는 과거의 시간이 현재인것이다<br>현재 기쁨의 순간에 찾아온 과거의 슬픔<br>어디에 중심을 둘지 모르는<br>과거를 사는 둔한 자의 괴로움이 있다",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_09.jpg",
-        "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "type": "image_full",
-        "image": "static/images/user_08.jpg",
-        "text": "",
         "partCategory": "2부: 증언과 성찰"
     },
     {
