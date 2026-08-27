@@ -1751,23 +1751,9 @@ const bookData = {
         "partCategory": "2부: 증언과 성찰"
     },
     {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "62. 주머니 속에서 진동이 온다.",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>윙~ 윙~<br>손을 넣어봤는데 아무것도 없다.<br>아무 것도 없는데, 진동이 온다.<br>혹시나 싶어 윗 옷을 가만히 올려보니<br>배에서 진동이 시작되고 있다.<br>뭐지? 하는데, 배에 통화 버튼이 나타난다.<br>꾹 눌러본다.<br>여보세요?<br>여보세요?<br>배 속 깊은  곳에서 소리가 들려온다.<br>\" 그 그 그만 좀 먹어라 이 놈아 숨차고, 힘들어 죽겠다. \"<br>어… 네~",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
         "type": "image_full",
         "image": "static/images/user_21.jpg",
         "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "63. 지하철 내앞 방구쟁이가",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>내옆에 앉았다<br>나도 속이 좋지않아<br>내가 한번하면<br>내옆 방구쟁이도 한번<br>객차안은<br>방구쟁이 방구로 가득찬다<br>3분에<br>한번씩 문이 열릴때마다<br>희석되었다<br>짙어졌다한다<br>내옆 방구쟁이 언제까지 따라하나싶어<br>계속 꾸룩 뿡 꾸룩 뿡한다<br>내옆 방구쟁이<br>이제 그만쫌하지 하는 눈빛을<br>내게 준다<br>너도 그만 좀 해라<br>방구쟁이야",
         "partCategory": "2부: 증언과 성찰"
     },
     {
@@ -1819,13 +1805,6 @@ const bookData = {
         "partCategory": "2부: 증언과 성찰"
     },
     {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "69. 결로",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>집안에 결로로인해 벽지가 얼룩졌다<br>누수인지 결로인지 묻는 아내에게<br>이건 결로로인한 문제라고 설명했다<br>가만히 듣던 아내가 되받아 치는 말을 요약하면,<br>그렇게 잘 알면 공사할때 미리 예방조치를 하지그랬냐고하는데 사실 할 말이 없다<br>그냥 속으로 이야기했다<br>결로는 외부 내부의 소통부재로 인해 생기는 건데<br>이는 인간이나 자연세계나 동일해<br>결로는 아픔을 표현하는거야<br>맞아 눈물흘리는거지<br>눈물흘림으로 표현하는거야<br>이런 아픔은 치료가 필요해 우리의 의무이지 암~<br>바람 찬 외부와 따뜻한 내부는 소통이 필요해<br>사회 계층간에 격차가 심해져 생기는 문제를 당신도 알쟎아?<br>온도차를 줄일 필요가 있어?<br>집이나 이 사회나 말이야<br>아무튼,<br>공사할때 좀더 확실하게 확인했어야 했는데..<br>다 나의 잘못이다",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
         "type": "image_full",
         "image": "static/images/user_18.jpg",
         "text": "",
@@ -1843,14 +1822,6 @@ const bookData = {
         "partTitle": "[Theme 4] 미완의 일상",
         "title": "71. 감정 쪼개기",
         "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>슬프다 아프다의 감정에<br>칼을 댄다<br>아픈건 몸이 아플때<br>슬픈건 맘이 아플때<br>근데 이건 슬프지만,<br>슬픈게 아니다 그냥 서글픈 것이지<br>잠시 관계속에서 짓눌린거다<br>이런 것을 슬프다라고 생각하지말자<br>칼을 대어 도려내자<br>해체하여 형체를 없애자<br>사실이란 덩어리만 남아있도록<br>그렇게 감정에 칼을 대자",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "72. 아름다운 왕비",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>거울아 거울아<br>이 세상에서 누가 제일 예쁘니?<br>'지금은 왕비님이지만<br>몇 년뒤면 백설공주가 제일 예쁠겁니다'<br>그 말을 듣는순간<br>왕비는 마녀가 되었다<br>왜 그랬을까?<br>매일 진실의 거울을 보며<br>자신의 존재성을 인정받았을 때<br>그녀는 하루 하루를 만족하며 살려했던<br>보통의 아름다운 여인이였을 것이다<br>그런 그녀가<br>매일 인정받던 자신의 존재성이<br>갑자기 부인되자<br>그녀는 마녀가 된것이다<br>나르시시즘<br>자신을 사랑하는 맘<br>누구나<br>자신을 사랑케하는 숨겨진 믿음을<br>가지고 산다<br>근데  어떤 누군가가 그 믿음을 깰려한다면<br>그 때는 자신을 보호하기위해<br>상대를 죽이고 싶어하는 악마가 된다<br>자신의 존재를 위해서...<br>동화 속 왕비님!<br>진실의 거울이 당신이 제일 예쁘지 않다하더라도<br>그 말에 정신을 잃지마시고 그냥 넘기세요<br>그냥 거울이다 생각하시고<br>물론 저도 잘 안되어<br>매번 사고를 칩니다만<br>그냥 웃어야지요<br>매번 마녀나 마왕으로 변하다보면<br>정말 나라는 존재는 없어지지않겠어요<br>힘냅시다<br>그리고 나라는 존재성은 누군가에 의해서<br>인정받으면 좋지만 그 반대의 경우라면<br>어쩔 수 없죠<br>저놈도 그냥 거울이구나 생각하거나<br>뭐 그럴수도 있지 하던지<br>사실 어떻게 해야될 지<br>저도 잘 모르겠습니다<br>그냥 힘냅시다",
-        "image": "static/images/user_sketch_4.jpg",
         "partCategory": "2부: 증언과 성찰"
     },
     {
@@ -1884,22 +1855,8 @@ const bookData = {
     {
         "part": "4부: 증언과 성찰",
         "partTitle": "[Theme 4] 미완의 일상",
-        "title": "76. 너",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>그거외에 할게 없어<br>화내는거지<br>좀 기다려<br>그거외에 다른것이 생길때 까지<br>없는게 티나쟎아",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
         "title": "77. 당신의 세상은 어떤가요?",
         "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>당신 곁에서<br>당신의 눈으로 세상을 바라보게해주세요<br>내가 느끼지못하는 기쁨과 슬픔을<br>당신을 통해느낄 때 우리 서로 사랑하는것이겠지요?<br>당신의 세상은 어떤가요?<br>그속에 기쁨만이 있지는않겠지만<br>우리 서로의 시선으로 바라보면<br>그때 우린 우리가 되겠지요<br>오늘도 힘내어요<br>그렇게 찐하게 살아가라고<br>오늘 하루가 있지않겠어요<br>오늘도 힘내어요",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "78. 화",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>월 다음 화니깐<br>매번 오는것인데<br>어떻게 표현하느냐의 문제인데<br>왜이리 밖에 표현이 안되는지<br>나도 좀 세련되게 하고픈데<br>와이리 안되는지 모르겠다<br>니는 아직도 생속이다라고 말하는<br>어머니가 생각난다<br>비도 오는데 진짜로",
         "partCategory": "2부: 증언과 성찰"
     },
     {
@@ -1933,13 +1890,6 @@ const bookData = {
         "type": "image_full",
         "image": "static/images/user_14.jpg",
         "text": "",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "81. 무얼 드리시겠어요?",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>어떤게 있지요?<br>어린 딸 역할 놀이에 오늘은 손님이 되었다<br>어제까지만해도 멍멍이였는데<br>주문한 음식이 나왔다<br>야~ 끝내준다",
         "partCategory": "2부: 증언과 성찰"
     },
     {
@@ -2023,13 +1973,6 @@ const bookData = {
         "partCategory": "2부: 증언과 성찰"
     },
     {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "89. 난 지금 점프중이다",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>짧은 시간<br>1차 미팅       D-1.5일<br>결과물 제출 D - 6일<br>좌우 눈 가리개하고<br>보고 듣고 생각하는 것까지<br>지금은 조절중이다<br>난 지금 생각의 점프를<br>시도한다<br>현시점의 출밤점에서<br>수 없이 많은 미래의 시점으로<br>왔다갔다하고 있다",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
         "type": "image_full",
         "image": "static/images/user_08.jpg",
         "text": "",
@@ -2055,14 +1998,6 @@ const bookData = {
         "partTitle": "[Theme 4] 미완의 일상",
         "title": "92. 초침하나",
         "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>초침 하나가 옮겨질때 마다<br>목에 걸린 가시마냥 날 아프게 하는 것이 있다<br>초침 바늘 끝은 무수한 시간의 상처를 드러내고,<br>그 상처마다 느껴지는<br>이미 지난간 것이라 생각 한것들이<br>현실의 아픔이 되어 나타난다<br>불퉁한 아들 얼굴 보고 있으니,<br>이 아이 얼굴을 이렇게 만들어간게<br>바로 나구나 하는 생각이 든다<br>차마 아이에게 뭐라 할 수 없었다<br>차라리 나를 때리고, 나를 꺾어 낮추어 주시길<br>기도할 뿐<br>너는 언젠가 앞선 아빠를 닮아가다,<br>자신의 모습이 잘못되었음을 깨닫게 되었을 때,<br>그 때 나는<br>이미 늙어 있을 나는<br>너에게 너무나 미안할 것 같구나<br>아빠는<br>널 사랑하는데...<br>사랑은 그저 주는 건만이<br>전부가 아님을 깨닫게 된다<br>오히려 나를 다듬어가는 것이<br>너를 사랑하는 또 다른 길임을<br>알아가는구나",
-        "partCategory": "2부: 증언과 성찰"
-    },
-    {
-        "part": "4부: 증언과 성찰",
-        "partTitle": "[Theme 4] 미완의 일상",
-        "title": "93. 화 내일 현상제출이다",
-        "text": "<div style=\"background-color: var(--surface-pearl, #fafafc); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; border-left: 3px solid var(--primary, #0066cc); font-size: 0.9em; color: var(--ink-muted-80, #333333); font-weight: 600; display: inline-block;\">\n    <svg style=\"vertical-align: middle; margin-right: 6px; margin-top: -2px;\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>\n    [연결된 철학: 2부 3장 '인간다움의 회복' / 증언: 현장 건축가의 고뇌]\n    </div><br>근데 웃는다<br>드디어<br>미쳤다<br>다음엔 솔 파도 쳐야지",
-        "image": "static/images/08.jpg",
         "partCategory": "2부: 증언과 성찰"
     },
     {
