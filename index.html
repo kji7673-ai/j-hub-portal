@@ -155,11 +155,8 @@
             overflow: hidden; 
         }
         .page-inner {
-            /* Fix for vertical overflow: column-width doesn't accept percentages! */
-             
-             
-            height: 100%;
             width: 100%;
+            min-height: 100%;
             transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             padding-bottom: 120px; /* Spacer for bottom nav controls */
         }
@@ -913,7 +910,7 @@
                 
                 if (page.type === 'cover') {
                     pageEl.style.padding = '0';
-                    pageEl.style.position = 'relative';
+                    /* removed position: relative to prevent height collapse */ pageEl.style.height = '100%';
                     if(page.image) {
                         contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; z-index:0; background:#ffffff; display:flex; justify-content:center; align-items:center; padding: 0; box-sizing: border-box;"><img src="${page.image}" alt="cover_image" style="width:100%; height:100%; object-fit:cover;"></div>`;
                     } else {
