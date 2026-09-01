@@ -1545,8 +1545,16 @@
             }
         }
         
+        let _windowWidth = window.innerWidth;
+        let _resizeTimer;
         window.addEventListener('resize', () => {
-            updateControls();
+            clearTimeout(_resizeTimer);
+            _resizeTimer = setTimeout(() => {
+                if (window.innerWidth !== _windowWidth) {
+                    _windowWidth = window.innerWidth;
+                    updateControls();
+                }
+            }, 100);
         });
 
         // Edge Click and Swipe Navigation
