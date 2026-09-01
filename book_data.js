@@ -20,7 +20,9 @@ const bookData = {
         {
             "type": "interlude",
             "title": "1부. 설계의 본질 – 공유결합",
-            "partCategory": "1부: 설계의 본질 - 공유결합"
+            "partCategory": "1부: 설계의 본질 - 공유결합",
+            "image": "static/images/12.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -48,7 +50,9 @@ const bookData = {
         {
             "type": "interlude",
             "title": "2부. 현장의 목소리, 공유결합의 증거",
-            "partCategory": "2부: 증언과 성찰"
+            "partCategory": "2부: 증언과 성찰",
+            "image": "static/images/14.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
@@ -62,7 +66,9 @@ const bookData = {
         {
             "type": "cover",
             "title": "◆ 테마 1: 내가 무엇인가",
-            "partCategory": "2부: 증언과 성찰"
+            "partCategory": "2부: 증언과 성찰",
+            "image": "static/images/22.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -275,7 +281,9 @@ const bookData = {
         {
             "type": "cover",
             "title": "◆ 테마 2: 상대를 아는 것",
-            "partCategory": "2부: 증언과 성찰"
+            "partCategory": "2부: 증언과 성찰",
+            "image": "static/images/23.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -490,7 +498,9 @@ const bookData = {
         {
             "type": "cover",
             "title": "◆ 테마 3: 현장의 맥락 읽기",
-            "partCategory": "2부: 증언과 성찰"
+            "partCategory": "2부: 증언과 성찰",
+            "image": "static/images/24.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -696,7 +706,9 @@ const bookData = {
         {
             "type": "cover",
             "title": "◆ 테마 4: 공유결합의 순간들",
-            "partCategory": "2부: 증언과 성찰"
+            "partCategory": "2부: 증언과 성찰",
+            "image": "static/images/25.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -935,7 +947,9 @@ const bookData = {
         {
             "type": "interlude",
             "title": "3부. 공유결합을 가능하게 하는 시스템",
-            "partCategory": "3부: 공유결합을 가능하게 하는 시스템"
+            "partCategory": "3부: 공유결합을 가능하게 하는 시스템",
+            "image": "static/images/60.jpg",
+            "text": ""
         },
         {
             "type": "text",
@@ -995,7 +1009,9 @@ const bookData = {
         {
             "type": "interlude",
             "title": "부록. 기술 상세 및 원문",
-            "partCategory": "부록"
+            "partCategory": "부록",
+            "image": "static/images/61.jpg",
+            "text": ""
         },
         {
             "type": "image_top",
