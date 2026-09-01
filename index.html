@@ -55,7 +55,7 @@
         /* 210x210 Aspect Ratio Container */
         .book-container {
             width: 100%;
-            max-width: 90vh; /* Responsive sizing for tablets */
+            max-width: min(90vh, 800px); /* Responsive sizing for tablets */
             aspect-ratio: 1 / 1; /* Square format for 210x210 */
             background-color: #ffffff; /* Warm paper color */
             
@@ -581,6 +581,59 @@
                 margin: 0 0 20px 0;
             }
         }
+
+        /* ===== Mobile Responsive Adjustments ===== */
+        @media (max-width: 768px) {
+            .book-container {
+                max-width: 100vw !important;
+                aspect-ratio: auto !important;
+                height: 100dvh !important;
+                border-radius: 0 !important;
+            }
+            .page-content {
+                padding: 15% 6% 25% 6% !important; /* more padding bottom for nav */
+            }
+            p.body-text {
+                font-size: 16px !important;
+                line-height: 1.7 !important;
+            }
+            .page-content.philosophy-mode p.body-text {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+            }
+            /* When landscape on mobile */
+            @media (orientation: landscape) {
+                .book-container {
+                    height: 100dvh !important;
+                }
+                .page-content {
+                    padding: 5% 5% 15% 5% !important;
+                    column-count: 2;
+                    column-gap: 40px;
+                }
+                .page-text-flow {
+                    column-count: 2 !important;
+                }
+                p.body-text {
+                    font-size: 15px !important;
+                }
+            }
+        }
+        
+        /* Adjust for landscape orientation in general (tablets) */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .book-container {
+                max-width: 100vw !important;
+                aspect-ratio: auto !important;
+                height: 100dvh !important;
+            }
+            .page-content {
+                padding: 5% 8% 15% 8% !important;
+                column-count: 2;
+                column-gap: 40px;
+            }
+        }
+
 </style>
 </head>
 <body>
