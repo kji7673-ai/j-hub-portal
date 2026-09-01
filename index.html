@@ -877,6 +877,7 @@
         const COLUMN_GAP = 40;
 
         function renderBook() {
+            try {
             const container = document.getElementById('book-container');
             // Remove existing pages
             document.querySelectorAll('.page-content').forEach(p => p.remove());
@@ -1452,6 +1453,10 @@
 
                 container.insertBefore(pageEl, container.querySelector('.controls'));
             });
+            } catch (error) {
+                alert("렌더링 오류 발생: " + error.message);
+                console.error(error);
+            }
 
             updateControls();
 
@@ -1491,6 +1496,7 @@
         }
 
         function updateControls() {
+            try {
             const pageEls = document.querySelectorAll('.page-content');
             
             pageEls.forEach((p, idx) => {
@@ -1520,6 +1526,10 @@
             document.getElementById('next-btn').disabled = (currentChapter === totalChapters - 1 && currentColumn === maxCols - 1);
             document.getElementById('page-num').innerText = `[${currentChapter + 1}/${totalChapters}] ${currentColumn + 1} / ${maxCols}`;
             if(typeof saveProgress === 'function') saveProgress();
+            } catch (error) {
+                alert("컨트롤 업데이트 오류: " + error.message);
+                console.error(error);
+            }
         }
 
         function prevPage() {
@@ -1907,6 +1917,7 @@
         
         // Restore progress on load
         window.addEventListener('DOMContentLoaded', () => {
+    try {
             const savedChapter = localStorage.getItem('JJournal_savedChapter');
             const savedColumn = localStorage.getItem('JJournal_savedColumn');
             if (savedChapter !== null && savedColumn !== null) {
