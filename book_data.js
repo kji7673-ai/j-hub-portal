@@ -9,6 +9,9 @@ const bookData = {
             "partCategory": "프롤로그"
         },
         {
+            "type": "author_profile"
+        },
+        {
             "type": "image_top",
             "title": "프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기",
             "subtitle": "",
