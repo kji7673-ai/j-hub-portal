@@ -4,7 +4,7 @@ const bookData = {
             "type": "image_full",
             "title": "불완전한 선택: AI 시대 건축가의 성찰",
             "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-            "image": "static/images/65.jpg",
+            "image": "static/images/1.jpg",
             "text": "",
             "partCategory": "프롤로그"
         },
