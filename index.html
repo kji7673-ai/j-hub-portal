@@ -1924,7 +1924,7 @@
                 const parsedChap = parseInt(savedChapter, 10);
                 const parsedCol = parseInt(savedColumn, 10);
                 if(!isNaN(parsedChap) && !isNaN(parsedCol)) {
-                    currentChapter = parsedChap;
+                    currentChapter = Math.max(0, Math.min(parsedChap, bookData.pages.length - 1));
                     currentColumn = parsedCol;
                 }
             }
