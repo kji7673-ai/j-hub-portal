@@ -901,6 +901,8 @@
                 
                 // Default fallback for legacy book_data.js structure
                 page.type = page.type || 'image_top';
+                if (page.type === 'text') page.type = 'text_only';
+                if (page.type === 'interlude') page.type = 'cover';
                 page.image = page.image || page.bgImage;
                 
                 if (page.image && !page.image.startsWith('http') && !page.image.startsWith('static/images/')) {
