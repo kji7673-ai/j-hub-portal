@@ -1,0 +1,16 @@
+19:16:02.401814 exec-cmd.c:145          trace: resolved executable path from Darwin stack: /Library/Developer/CommandLineTools/usr/bin/git
+19:16:02.402222 exec-cmd.c:267          trace: resolved executable dir: /Library/Developer/CommandLineTools/usr/bin
+19:16:02.404366 trace.c:316             setup: git_dir: .git
+19:16:02.404381 trace.c:317             setup: git_common_dir: .git
+19:16:02.404391 trace.c:318             setup: worktree: /Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼
+19:16:02.404397 trace.c:319             setup: cwd: /Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼
+19:16:02.404407 trace.c:320             setup: prefix: (null)
+19:16:02.404486 chdir-notify.c:70       setup: chdir from '/Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼' to '/Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼'
+19:16:02.404497 git.c:476               trace: built-in: git commit --no-verify --no-gpg-sign -m test
+19:16:02.414499 read-cache.c:2360       performance: 0.000961000 s:  read cache .git/index
+19:16:02.417281 preload-index.c:172     performance: 0.002755000 s:  preload index
+19:16:02.418975 preload-index.c:172     performance: 0.001518000 s:   preload index
+19:24:24.818422 read-cache.c:1600       performance: 502.400962000 s:  refresh index
+19:24:24.852221 cache-tree.c:497        performance: 0.032946000 s:  cache_tree_update
+fatal: unable to write new index file
+19:24:24.853433 trace.c:416             performance: 502.450714000 s: git command: /Library/Developer/CommandLineTools/usr/bin/git commit --no-verify --no-gpg-sign -m test

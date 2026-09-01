@@ -1,0 +1,302 @@
+[0] Part: undefined | Title: 도면 위에 머무는 시간 | Type: image_full
+[1] Part: undefined | Title: undefined | Type: author_profile
+[2] Part: undefined | Title: undefined | Type: image_full
+[3] Part: undefined | Title: 프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기 | Type: image_top
+[4] Part: 1부: 시스템편 | Title: 1장. 우리는 왜 설계하지 못하는가? (인지적 과부하의 시대) | Type: image_full
+[5] Part: undefined | Title: undefined | Type: image_full
+[6] Part: 1부: 시스템편 | Title: 2장. 엑셀과 서류에 짓눌린 건축가들 | Type: image_top
+[7] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: [통찰] 기획서는 곧 건축가의 얼굴이다 | Type: image_top
+[8] Part: undefined | Title: undefined | Type: image_full
+[9] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[10] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[11] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[12] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[13] Part: 1부: 시스템편 | Title: 3장. AI라는 환각의 숲을 지나다 (기술의 배신과 레드팀) | Type: image_full
+[14] Part: 1부: 시스템편 | Title: 4장. "어디서 이렇게 불완전한 데이터를 가져왔어?" | Type: image_top
+[15] Part: undefined | Title: undefined | Type: image_full
+[16] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[17] Part: undefined | Title: undefined | Type: image_full
+[18] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[19] Part: undefined | Title: undefined | Type: image_full
+[20] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[21] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[22] Part: undefined | Title: undefined | Type: image_full
+[23] Part: 1부: 시스템편 | Title: 5장. 철근 누락과 4번의 QC: AI는 왜 '객관적 거울'이어야 하는가 | Type: text_only
+[24] Part: 1부: 시스템편 | Title: 막간극(Interlude). [AI의 시선] 나는 어떻게 이 고집불통 건축가에게 길들여졌는가 | Type: image_top
+[25] Part: 1부: 시스템편 | Title: 6장. 아키 시냅스(Archisynapse): 반론과 연결의 신경망 | Type: image_top
+[26] Part: 1부: 시스템편 | Title: 7장. 통찰력을 시스템화하다 (J-Hub 프로젝트) | Type: image_full
+[27] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[28] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[29] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[30] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[31] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[32] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[33] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[34] Part: undefined | Title: undefined | Type: image_full
+[35] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[36] Part: undefined | Title: undefined | Type: image_full
+[37] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[38] Part: undefined | Title: undefined | Type: image_full
+[39] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[40] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[41] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[42] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[43] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[44] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[45] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[46] Part: 1부: 시스템편 | Title: [막간] 재개발의 최전선: 욕망의 용광로에서 건축가는 무슨 생각을 하는가? | Type: image_top
+[47] Part: 1부: 시스템편 | Title: 8장. [Case 1] 정비 사업 통합 보고서 마법사: 신뢰를 증명하는 숫자의 위력 | Type: image_top
+[48] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: [코멘터리] 숫자가 철학이 되는 순간 | Type: image_top
+[49] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[50] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[51] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[52] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[53] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[54] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[55] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[56] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[57] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[58] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[59] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[60] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[61] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: image_full
+[62] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[63] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[64] Part: undefined | Title: undefined | Type: image_full
+[65] Part: 1부: 시스템편 | Title: 💡 [Universal Insight] 당신의 업계에도 '신통기획' 같은 딜레마가 있는가? | Type: image_top
+[66] Part: undefined | Title: undefined | Type: image_full
+[67] Part: 1부: 시스템편 | Title: 💡 [실무 적용 팁] 타당성 검토 프롬프트 구조화 | Type: text_only
+[68] Part: undefined | Title: undefined | Type: image_full
+[69] Part: 1부: 시스템편 | Title: 9장. [Case 2] 진양 교육 플랫폼 (J-Edu): 회사를 보물창고로 만들다 | Type: image_top
+[70] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[71] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[72] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[73] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[74] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[75] Part: undefined | Title: undefined | Type: image_full
+[76] Part: 1부: 시스템편 | Title: 💡 [실무 적용 팁] 지식 베이스(RAG) 구축 노하우 | Type: text_only
+[77] Part: undefined | Title: undefined | Type: image_full
+[78] Part: 1부: 시스템편 | Title: 10장. [Case 3] 궁극의 디지털 관제탑, '진양 허브(J-Hub)'와 모바일 저널 | Type: image_top
+[79] Part: undefined | Title: undefined | Type: image_full
+[80] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[81] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[82] Part: undefined | Title: undefined | Type: image_full
+[83] Part: 1부: 시스템편 | Title: [막간] 반란과 타협의 시간 | Type: image_top
+[84] Part: undefined | Title: undefined | Type: image_full
+[85] Part: 1부: 시스템편 | Title: 💡 [실무 적용 팁] 회의록 자동화와 노이즈 필터링 | Type: text_only
+[86] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: [통찰] AI와 대화하는 법: 진흙을 빚어내듯 | Type: image_top
+[87] Part: undefined | Title: undefined | Type: image_full
+[88] Part: 1부: 시스템편 | Title: 11장. 엔터프라이즈 엘레강스 (Enterprise Elegance) | Type: cover
+[89] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[90] Part: undefined | Title: undefined | Type: image_full
+[91] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[92] Part: undefined | Title: undefined | Type: image_full
+[93] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title: undefined | Type: text_only
+[94] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[95] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[96] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[97] Part: 1부: 시스템편 (진양 J-Hub 도입 사례) | Title:  | Type: image_top
+[98] Part: undefined | Title: undefined | Type: image_full
+[99] Part: 1부: 시스템편 | Title: 12장. 5060 경영진을 설득한 단 하나의 무기, '아름다움' | Type: image_top
+[100] Part: undefined | Title: undefined | Type: image_full
+[101] Part: 1부: 시스템편 | Title: 13장. 사진과 여백, 그리고 보이지 않는 기술 | Type: image_top
+[102] Part: undefined | Title: undefined | Type: image_full
+[103] Part: 1부: 시스템편 | Title: [막간] 결국 시스템은 회사의 철학을 닮는다 | Type: image_top
+[104] Part: undefined | Title: undefined | Type: image_full
+[105] Part: 1부: 시스템편 | Title: [막간] 수정의 딜레마: 완벽해 보일수록 위험하다 | Type: image_top
+[106] Part: undefined | Title: undefined | Type: image_full
+[107] Part: 1부: 시스템편 | Title: 액션 1: 사람의 개입을 완전히 배제한 '데이터 파이프라인' 구축 | Type: text_only
+[108] Part: undefined | Title: undefined | Type: image_full
+[109] Part: 1부: 시스템편 | Title: 액션 2: 오류를 맹신하지 않는 '레드팀(Red Team)' 감찰 체계 | Type: text_only
+[110] Part: undefined | Title: undefined | Type: image_full
+[111] Part: 1부: 시스템편 | Title: 액션 3: 파편화된 실패를 영구적 자산으로, 'J-Edu 숏폼' | Type: text_only
+[112] Part: undefined | Title: undefined | Type: image_full
+[113] Part: 2부: 철학편 | Title: 1장. 내가 생각하는 디자인 1: 존중과 순응 | Type: text_only
+[114] Part: undefined | Title: undefined | Type: image_full
+[115] Part: 2부: 철학편 | Title: 2장. 내가 생각하는 디자인 2: 포용과 사이 공간 | Type: text_only
+[116] Part: 2부: 철학편 | Title: 3장. 시지프스의 언덕과 인간다움의 회복 | Type: text_only
+[117] Part: undefined | Title: undefined | Type: image_full
+[118] Part: 3장: 철학 | Title: 제3장. 건축의 철학 - 50년 쟁이의 원칙 | Type: image_full
+[119] Part: 3부: 증언과 성찰 | Title: 제5장. 26년 현장의 기록: 삭제할 수 없는 85개의 조각들 | Type: image_top
+[120] Part: 3부: 증언과 성찰 | Title: 01. 주변에 순응하라 | Type: image_top
+[121] Part: 3부: 증언과 성찰 | Title: 15. 단순화와 포용력 | Type: image_top
+[122] Part: 현장 에피소드 | Title: 제4장. 완벽한 시스템이 놓친 것들 (Y구역 현장 기록) | Type: image_full
+[123] Part: 현장 에피소드 | Title: [Y구역 현장 기록 1] 서류 완벽주의의 함정: 타당성 검토의 배신 | Type: image_top
+[124] Part: 현장 에피소드 | Title: [Y구역 현장 기록 2] AI가 읽지 못하는 지역 맥락: 달동네의 바람길 | Type: image_top
+[125] Part: 현장 에피소드 | Title: [Y구역 현장 기록 3] 완벽한 보고서의 패배: 심의와 설득의 기술 | Type: image_top
+[126] Part: 3부: 증언과 성찰 | Title: 선택(Choice)이 곧 건축이다 | Type: image_top
+[127] Part: undefined | Title: undefined | Type: image_full
+[128] Part: 3부: 증언과 성찰 | Title: 기술이 지워진 자리에 남은 것 (비워냄의 미학) | Type: image_top
+[129] Part: 3부: 증언과 성찰 | Title: 물방울, 그리고 시지프스의 언덕 | Type: undefined
+[130] Part: undefined | Title: undefined | Type: image_full
+[131] Part: undefined | Title: undefined | Type: image_full
+[132] Part: 3부: 증언과 성찰 | Title: 02. 찢어진 운동화 | Type: text_only
+[133] Part: undefined | Title: undefined | Type: image_full
+[134] Part: 3부: 증언과 성찰 | Title: 03. 용역원실에서 '노동 쉼터'로 | Type: undefined
+[135] Part: undefined | Title: undefined | Type: image_full
+[136] Part: 3부: 증언과 성찰 | Title: 04. 심의전 자문받겠다해서 | Type: undefined
+[137] Part: 3부: 증언과 성찰 | Title: 05. 설계를 하다보면 페이퍼 아키텍쳐라는... | Type: undefined
+[138] Part: undefined | Title: undefined | Type: image_full
+[139] Part: 3부: 증언과 성찰 | Title: 06. 오늘 건축 심의가 있는 날이다. | Type: undefined
+[140] Part: undefined | Title: undefined | Type: image_full
+[141] Part: 3부: 증언과 성찰 | Title: 뇌물이 괴물이 된다 | Type: undefined
+[142] Part: 3부: 증언과 성찰 | Title: 08. 단두리 | Type: undefined
+[143] Part: undefined | Title: undefined | Type: image_full
+[144] Part: 3부: 증언과 성찰 | Title: 09. '조은 슈퍼' | Type: undefined
+[145] Part: 3부: 증언과 성찰 | Title: 10. 건축 설계 | Type: undefined
+[146] Part: 3부: 증언과 성찰 | Title: 11. 가장 작은 생존 신고, "힘내자" | Type: image_top
+[147] Part: undefined | Title: undefined | Type: image_full
+[148] Part: 3부: 증언과 성찰 | Title: 12. 맥락 속의 완벽함 (Harmony, Not Perfection) | Type: image_top
+[149] Part: 3부: 증언과 성찰 | Title: 13. 방향성과 중심성 | Type: image_top
+[150] Part: undefined | Title: undefined | Type: image_full
+[151] Part: 3부: 증언과 성찰 | Title: 14. 스케일과 대비 | Type: image_top
+[152] Part: undefined | Title: undefined | Type: image_full
+[153] Part: undefined | Title: undefined | Type: image_full
+[154] Part: 3부: 증언과 성찰 | Title: 16. 공유 결합: 지속 가능한 도시 디자인 | Type: image_top
+[155] Part: undefined | Title: undefined | Type: image_full
+[156] Part: 3부: 증언과 성찰 | Title: 17. 다정함: 인격적 성숙이 곧 디자인이다 | Type: image_top
+[157] Part: undefined | Title: undefined | Type: image_full
+[158] Part: 3부: 증언과 성찰 | Title: 18. 삼켜낸 말과 술 한 잔 | Type: text_only
+[159] Part: undefined | Title: undefined | Type: image_full
+[160] Part: 3부: 증언과 성찰 | Title: 19. 100년의 기억을 덮는다는 것의 무게 | Type: text_only
+[161] Part: undefined | Title: undefined | Type: image_full
+[162] Part: 3부: 증언과 성찰 | Title: 20. 화려한 조감도 뒤에 가려진 씁쓸한 현실 | Type: image_top
+[163] Part: undefined | Title: undefined | Type: image_full
+[164] Part: 3부: 증언과 성찰 | Title: 21. 페이퍼 아키텍트의 불안과 진짜 설계의 무게 | Type: image_top
+[165] Part: undefined | Title: undefined | Type: image_full
+[166] Part: 3부: 증언과 성찰 | Title: 22. 현상설계를 진행하며 | Type: image_top
+[167] Part: undefined | Title: undefined | Type: image_full
+[168] Part: 3부: 증언과 성찰 | Title: 23. 무제 | Type: image_top
+[169] Part: undefined | Title: undefined | Type: image_full
+[170] Part: 3부: 증언과 성찰 | Title: 24. 논리와 감정 사이, 건축가의 '싫어요' | Type: undefined
+[171] Part: undefined | Title: undefined | Type: image_full
+[172] Part: 3부: 증언과 성찰 | Title: 25. 마음을 짓는 일: 공동체 주택 설계 | Type: undefined
+[173] Part: undefined | Title: undefined | Type: image_full
+[174] Part: 3부: 증언과 성찰 | Title: 26. 새벽의 방문객, 공존에 대하여 | Type: undefined
+[175] Part: undefined | Title: undefined | Type: image_full
+[176] Part: 3부: 증언과 성찰 | Title: 27. 고상하다는 것은 부끄러워한다는 것이며, | Type: undefined
+[177] Part: undefined | Title: undefined | Type: image_full
+[178] Part: 3부: 증언과 성찰 | Title: 28. 사람을 이용할 때 | Type: undefined
+[179] Part: undefined | Title: undefined | Type: image_full
+[180] Part: 3부: 증언과 성찰 | Title: 29. 가끔 | Type: undefined
+[181] Part: undefined | Title: undefined | Type: image_full
+[182] Part: 3부: 증언과 성찰 | Title: 30. 우리가 이렇게 살아갑니다 | Type: undefined
+[183] Part: undefined | Title: undefined | Type: image_full
+[184] Part: 3부: 증언과 성찰 | Title: 31. 타인의 시선을 공유한다는것은 | Type: undefined
+[185] Part: undefined | Title: undefined | Type: image_full
+[186] Part: 3부: 증언과 성찰 | Title: 32. 외로움 | Type: undefined
+[187] Part: undefined | Title: undefined | Type: image_full
+[188] Part: 3부: 증언과 성찰 | Title: 33. 어제 만난 그 사람을... | Type: undefined
+[189] Part: undefined | Title: undefined | Type: image_full
+[190] Part: 3부: 증언과 성찰 | Title: 34. 거름종이 마법이 있다 | Type: undefined
+[191] Part: undefined | Title: undefined | Type: image_full
+[192] Part: 3부: 증언과 성찰 | Title: 35. 오늘은 우리집 소파에서 또... | Type: undefined
+[193] Part: undefined | Title: undefined | Type: image_full
+[194] Part: 3부: 증언과 성찰 | Title: 36. 에너지의 소진으로 | Type: undefined
+[195] Part: undefined | Title: undefined | Type: image_full
+[196] Part: 3부: 증언과 성찰 | Title: 37. 혹시 다중 우주론이라고아세요? | Type: undefined
+[197] Part: 3부: 증언과 성찰 | Title: 38. 천국은 | Type: undefined
+[198] Part: 3부: 증언과 성찰 | Title: 39. 수박으로 시대의 흐름을 판별하는 | Type: undefined
+[199] Part: undefined | Title: undefined | Type: image_full
+[200] Part: 3부: 증언과 성찰 | Title: 40. 그렇게 하실 것 같습니다. | Type: undefined
+[201] Part: undefined | Title: undefined | Type: image_full
+[202] Part: 3부: 증언과 성찰 | Title: 41. 맘이 | Type: undefined
+[203] Part: 3부: 증언과 성찰 | Title: 42. 요즘 잠을 잘 수가 없다 | Type: undefined
+[204] Part: undefined | Title: undefined | Type: image_full
+[205] Part: 3부: 증언과 성찰 | Title: 43. 내 자신은 | Type: undefined
+[206] Part: 3부: 증언과 성찰 | Title: 44. 필연의 신은 누구인가요 | Type: undefined
+[207] Part: undefined | Title: undefined | Type: image_full
+[208] Part: 3부: 증언과 성찰 | Title: 45. 하지말아야 될것이 있는것에 익숙해져버렸다 | Type: undefined
+[209] Part: undefined | Title: undefined | Type: image_full
+[210] Part: 3부: 증언과 성찰 | Title: 46. 난 약한 사람입니다 | Type: undefined
+[211] Part: 3부: 증언과 성찰 | Title: 47. 나랑 같이 놀든이가 | Type: undefined
+[212] Part: 3부: 증언과 성찰 | Title: 48. 가끔 나에게 실망을 했다는 사람들을 본다 | Type: undefined
+[213] Part: undefined | Title: undefined | Type: image_full
+[214] Part: 3부: 증언과 성찰 | Title: 49. 생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라 | Type: image_top
+[215] Part: undefined | Title: undefined | Type: image_full
+[216] Part: 3부: 증언과 성찰 | Title: 50. 만들고 있는 것인가, 만들어져 가는 것인가 | Type: image_top
+[217] Part: undefined | Title: undefined | Type: image_full
+[218] Part: 3부: 증언과 성찰 | Title: 51. 흔들리는 오뚝이 | Type: text_only
+[219] Part: undefined | Title: undefined | Type: image_full
+[220] Part: 3부: 증언과 성찰 | Title: 52. 구겨진 도면 | Type: undefined
+[221] Part: 3부: 증언과 성찰 | Title: 53. 설계하는 일에서 좋은 점은 | Type: undefined
+[222] Part: undefined | Title: undefined | Type: image_full
+[223] Part: 3부: 증언과 성찰 | Title: 54. 우리 이렇게 오늘도 | Type: undefined
+[224] Part: undefined | Title: undefined | Type: image_full
+[225] Part: 3부: 증언과 성찰 | Title: 55. 연필로 설계를 할때 | Type: undefined
+[226] Part: undefined | Title: undefined | Type: image_full
+[227] Part: 3부: 증언과 성찰 | Title: 56. 선 긋기와 인생: 전체로 볼 때 직선이면 족하다 | Type: image_top
+[228] Part: undefined | Title: undefined | Type: image_full
+[229] Part: 3부: 증언과 성찰 | Title: 57. 사이 공간(Void)의 힘 | Type: image_top
+[230] Part: 3부: 증언과 성찰 | Title: 58. 무제 | Type: image_full
+[231] Part: 3부: 증언과 성찰 | Title: 59. 무제 | Type: image_full
+[232] Part: 3부: 증언과 성찰 | Title: 60. 말과 마음의 사이 | Type: undefined
+[233] Part: 3부: 증언과 성찰 | Title: 61. 어느 외계인의 지구 관찰 보고서 | Type: undefined
+[234] Part: undefined | Title: undefined | Type: image_full
+[235] Part: 3부: 증언과 성찰 | Title: 62. 주머니 속에서 진동이 온다. | Type: undefined
+[236] Part: undefined | Title: undefined | Type: image_full
+[237] Part: 3부: 증언과 성찰 | Title: 63. 지하철 내앞 방구쟁이가 | Type: undefined
+[238] Part: 3부: 증언과 성찰 | Title: 64. 우리가 그렇게 오늘을 | Type: undefined
+[239] Part: undefined | Title: undefined | Type: image_full
+[240] Part: 3부: 증언과 성찰 | Title: 65. 설이 왔습니다. | Type: undefined
+[241] Part: 3부: 증언과 성찰 | Title: 66. 오늘을 의지해살아갑니다 | Type: undefined
+[242] Part: 3부: 증언과 성찰 | Title: 67. 졸음이 옵니다 | Type: undefined
+[243] Part: undefined | Title: undefined | Type: image_full
+[244] Part: 3부: 증언과 성찰 | Title: 68. 오늘을 살아라는 | Type: undefined
+[245] Part: 3부: 증언과 성찰 | Title: 69. 결로 | Type: undefined
+[246] Part: undefined | Title: undefined | Type: image_full
+[247] Part: 3부: 증언과 성찰 | Title: 70. 귀를 통해 마음으로들어간 것이 | Type: undefined
+[248] Part: 3부: 증언과 성찰 | Title: 71. 감정 쪼개기 | Type: undefined
+[249] Part: 3부: 증언과 성찰 | Title: 72. 아름다운 왕비 | Type: undefined
+[250] Part: 3부: 증언과 성찰 | Title: 73. 있을뿐 | Type: undefined
+[251] Part: undefined | Title: undefined | Type: image_full
+[252] Part: 3부: 증언과 성찰 | Title: 74. 모두들 | Type: undefined
+[253] Part: 3부: 증언과 성찰 | Title: 75. 침묵이란 | Type: undefined
+[254] Part: 3부: 증언과 성찰 | Title: 76. 너 | Type: undefined
+[255] Part: 3부: 증언과 성찰 | Title: 77. 당신의 세상은 어떤가요? | Type: undefined
+[256] Part: 3부: 증언과 성찰 | Title: 78. 화 | Type: undefined
+[257] Part: undefined | Title: undefined | Type: image_full
+[258] Part: 3부: 증언과 성찰 | Title: 79. 만지작거리고 바스락거린다. | Type: undefined
+[259] Part: undefined | Title: undefined | Type: image_full
+[260] Part: 3부: 증언과 성찰 | Title: 80. 십원짜리 | Type: undefined
+[261] Part: undefined | Title: undefined | Type: image_full
+[262] Part: 3부: 증언과 성찰 | Title: 81. 무얼 드리시겠어요? | Type: undefined
+[263] Part: undefined | Title: undefined | Type: image_full
+[264] Part: 3부: 증언과 성찰 | Title: 82. 천천히 | Type: undefined
+[265] Part: undefined | Title: undefined | Type: image_full
+[266] Part: 3부: 증언과 성찰 | Title: 83. 북서향 집이다 | Type: undefined
+[267] Part: undefined | Title: undefined | Type: image_full
+[268] Part: 3부: 증언과 성찰 | Title: 84. 거짓이 진실을 만났을 때 | Type: undefined
+[269] Part: 3부: 증언과 성찰 | Title: 85. 다닥 다닥 붙은 집들 | Type: undefined
+[270] Part: undefined | Title: undefined | Type: image_full
+[271] Part: 3부: 증언과 성찰 | Title: 86. 작아진 남자 | Type: undefined
+[272] Part: 3부: 증언과 성찰 | Title: 87. 난 슬픔과 기쁨에 반응이 둔한편이다 | Type: undefined
+[273] Part: undefined | Title: undefined | Type: image_full
+[274] Part: 3부: 증언과 성찰 | Title: 88. 과거의 기억을 현재의 목적에 맞추어 이용한다 | Type: undefined
+[275] Part: 3부: 증언과 성찰 | Title: 89. 난 지금 점프중이다 | Type: undefined
+[276] Part: undefined | Title: undefined | Type: image_full
+[277] Part: 3부: 증언과 성찰 | Title: 90. 죽음이후에 | Type: undefined
+[278] Part: 3부: 증언과 성찰 | Title: 91. 선을 | Type: undefined
+[279] Part: 3부: 증언과 성찰 | Title: 92. 초침하나 | Type: undefined
+[280] Part: 3부: 증언과 성찰 | Title: 93. 화 내일 현상제출이다 | Type: undefined
+[281] Part: 3부: 증언과 성찰 | Title: 94. 인간의 삶이 나무와 같다 했던가 | Type: undefined
+[282] Part: undefined | Title: undefined | Type: image_full
+[283] Part: 부록 | Title: 부록: J-Hub를 지어 올린 마스터 프롬프트 5선 | Type: image_top
+[284] Part: undefined | Title: undefined | Type: image_full
+[285] Part: 4부: 비전과 확장 | Title: 4부. 비전과 확장 — 프롭테크가 바꾸는 정비사업의 미래 | Type: interlude
+[286] Part: 4부: 비전과 확장 | Title: 제1장. '깜깜이' 정비사업의 종언과 플랫폼의 등장 | Type: text_only
+[287] Part: 4부: 비전과 확장 | Title: 제2장. 서울시 정비사업 유형별 완벽 가이드 | Type: text_only
+[288] Part: 4부: 비전과 확장 | Title: 제3장. 협력사 에코시스템과 정비사업의 팀플레이 | Type: text_only
+[289] Part: 4부: 비전과 확장 | Title: 제4장. 리스크 관리와 법률 쟁점: 지뢰밭을 건너는 법 | Type: text_only
+[290] Part: 4부: 비전과 확장 | Title: 제5장. [실행 플랜] 정비사업 통합 플랫폼 로드맵 | Type: text_only
+[291] Part: 부록 | Title: [부록] J-Hub 실무 가이드 (Appendix) | Type: cover
+[292] Part: undefined | Title: undefined | Type: image_full
+[293] Part: 부록 | Title: [부록] 자가 진단 체크리스트 | Type: text_only
+[294] Part: undefined | Title: undefined | Type: image_full
+[295] Part: 부록 | Title: QR코드: Y구역 전체 보고서 원문 | Type: text
+[296] Part: undefined | Title: undefined | Type: image_full
+[297] Part: undefined | Title: 쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유 | Type: image_top
+[298] Part: undefined | Title: undefined | Type: image_full
+[299] Part: 에필로그 | Title: 마치는 글: 쟁이들에게 보내는 위로 | Type: text_only
+[300] Part: undefined | Title: undefined | Type: image_full
+[301] Part: 에필로그 | Title: 에필로그: 26년의 경험, AI의 뇌, 그리고 건축의 미래 | Type: image_top

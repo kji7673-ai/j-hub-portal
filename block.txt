@@ -1,0 +1,541 @@
+                if (page.type === 'cover') {
+                    pageEl.style.padding = '0';
+                    pageEl.style.position = 'relative';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; z-index:0; background:#ffffff; display:flex; justify-content:center; align-items:center; padding: 0; box-sizing: border-box;"><img src="${page.image}" alt="cover_image" style="width:100%; height:100%; object-fit:cover;"></div>`;
+                    } else {
+                        pageEl.className += ' bg-dark';
+                    }
+                    contentHTML += `<div class="text-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing: border-box;">`;
+
+                    
+                    let rawTitle = page.title;
+                    let part = "";
+                    let mainTitle = rawTitle;
+                    let subtitle = page.subtitle || "";
+                    
+                    // 1. Extract Subtitle from parentheses
+                    if (!subtitle) {
+                        const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                        if (subMatch) {
+                            mainTitle = subMatch[1].trim();
+                            subtitle = subMatch[2].trim();
+                        }
+                    }
+                    
+                    // 2. Extract Part / Theme
+                    const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?:\s*|에필로그:\s*))(.+)$/);
+                    if (partMatch) {
+                        part = partMatch[1].trim();
+                        mainTitle = partMatch[2].trim();
+                    }
+                    
+                    contentHTML += `<div class="cover-content" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 10% 8%;">`;
+                    
+                    if (part) {
+                        contentHTML += `<p style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: 14px; font-weight: 600; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.1em; margin-bottom: 16px; text-transform: uppercase;">${part}</p>`;
+                    }
+                    
+                    contentHTML += `<h1 class="book-title" style="font-family: var(--font-display, 'SF Pro Display', sans-serif); font-size: clamp(28px, 6vw, 44px); font-weight: 700; color: #ffffff; margin: 0 0 24px 0; line-height: 1.25; letter-spacing: -0.02em; word-break: keep-all;">${mainTitle}</h1>`;
+                    
+                    if (subtitle) {
+                        contentHTML += `<p style="font-family: var(--font-body, 'SF Pro Text', sans-serif); font-size: 18px; font-weight: 300; color: #a0a0a0; margin: 0; word-break: keep-all; line-height: 1.5;">${subtitle}</p>`;
+                    }
+                    
+                    // Decorative line
+                    contentHTML += `<div style="width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin-top: 40px;"></div>`;
+                    contentHTML += `</div></div>`;
+                }
+
+                else if (page.type === 'author_profile') {
+                    contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
+                    contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
+                    contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
+                    
+
+                    contentHTML += `</div>`;
+                    contentHTML += `</div>`;
+                }
+ 
+                else if (page.type === 'image_top') {
+                    pageEl.className += ' page-text-flow page-layout';
+                    let extraImgStyle = "";
+                    if (page.part === "Part 8") {
+                        if (page.text && page.text.length < 200) {
+                            extraImgStyle = "max-width: 900px; width: 100%; margin-bottom: 50px;";
+                        } else if (page.text && page.text.length < 400) {
+                            extraImgStyle = "max-width: 800px; width: 90%; margin-bottom: 45px;";
+                        } else {
+                            extraImgStyle = "max-width: 700px; width: 80%; margin-bottom: 40px;";
+                        }
+                    }
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}" style="${extraImgStyle}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
+                    if(page.text) {
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
+                        const paragraphs = formattedText.split('\n\n');
+                        paragraphs.forEach(p => {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
+                                contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
+                            } else {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9; margin-bottom: 15px;">${htmlP}</p>`;
+                            }
+                        });
+                    }
+                    contentHTML = `<div class="page-inner">${contentHTML}</div>`;
+                }
+                else if (page.type === 'image_full') {
+                    pageEl.style.padding = '0';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; padding:0; z-index:0; background:#ffffff;">
+                            <img src="${page.image}" alt="full_image" style="width:100%; height:100%; object-fit:cover; ">
+                        </div>`;
+                    }
+                    if(page.title || page.subtitle || page.text) {
+                        let rawTitle = page.title || "";
+                        let part = "";
+                        let mainTitle = rawTitle;
+                        let subtitle = page.subtitle || "";
+
+                        if (!subtitle) {
+                            const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                            if (subMatch) {
+                                mainTitle = subMatch[1].trim();
+                                subtitle = subMatch[2].trim();
+                            }
+                        }
+                        
+                        const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?\s*|에필로그:\s*|부록:\s*|에피소드.*?:\s*))(.+)$/);
+                        if (partMatch) {
+                            part = partMatch[1].trim();
+                            mainTitle = partMatch[2].trim();
+                        }
+                        
+                        // Parse part into number and category (e.g. 1부, 시스템편)
+                        let partNumber = "";
+                        let partCategory = "";
+                        if (part) {
+                            const subPartMatch = part.match(/^(\d+부)\.?\s*\[(.*?)\]$/);
+                            if (subPartMatch) {
+                                partNumber = subPartMatch[1];
+                                partCategory = subPartMatch[2];
+                            } else {
+                                partNumber = part;
+                            }
+                        }
+
+                        // Create the glassmorphism panel
+                        contentHTML += `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`;
+                        
+                        // Only add the glassmorphism panel if there is text
+                        if (part || mainTitle || subtitle) {
+                            contentHTML += `<div style="padding: 50px 40px; display:flex; flex-direction:column; align-items:center; text-align:center; max-width: 80%; display:flex; flex-direction:column; align-items:center; text-align:center;">`;
+                            
+                            if (partNumber || partCategory) {
+                                contentHTML += `<div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 24px;">`;
+                                if (partNumber) {
+                                    contentHTML += `<div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.15em; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7); text-transform: uppercase; margin-bottom: ${partCategory ? '12px' : '0'};">${partNumber}</div>`;
+                                }
+                                if (partNumber && partCategory) {
+                                    contentHTML += `<div style="width: 2px; height: 24px; background: rgba(0, 102, 204, 0.3); margin-bottom: 12px;"></div>`;
+                                }
+                                if (partCategory) {
+                                    contentHTML += `<div style="padding: 6px 16px; background: var(--primary); color: #ffffff; border-radius: 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">${partCategory}</div>`;
+                                }
+                                contentHTML += `</div>`;
+                            }
+                            
+                            if(mainTitle) {
+                                contentHTML += `<h1 class="book-title" style="color:#ffffff; font-size:clamp(32px, 5vw, 48px); margin-bottom:16px; font-weight:800; letter-spacing: -0.03em; line-height: 1.2; word-break: keep-all; text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.4);">${mainTitle}</h1>`;
+                            }
+                            
+                            if(subtitle) {
+                                contentHTML += `<p style="color:rgba(255,255,255,0.9); font-size:clamp(18px, 2.5vw, 24px); font-weight:500; word-break: keep-all; margin:0; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7);">${subtitle}</p>`;
+                            }
+                            
+                            contentHTML += `</div>`;
+                        }
+                        // close the outer wrapper ONLY if there was no text.
+                        // Wait! The previous code didn't have an outer wrapper.
+                        // My code adds a flex wrapper for alignment, then the panel.
+                        // But wait, the outer wrapper `contentHTML += \`<div style="position:relative...` MUST be closed!
+                        // Oh! The old code didn't close it before `if(page.text)`!
+                        // The old code closed it after `page.text` processing.
+                        // So I should not close the outer wrapper here. I should just let it remain open.
+                        // My outer wrapper is: `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`
+                        
+                        if(page.text) {
+                            let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: #1d1d1f;">$1</strong>');
+                            const paragraphs = formattedText.split('\n\n');
+                            paragraphs.forEach(p => {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="color: #333; font-weight: 500; text-align:center; font-size: 18px; line-height: 1.8; max-width: 600px; margin: 0 auto 15px auto; text-shadow: 0 1px 5px rgba(255,255,255,0.8);">${htmlP}</p>`;
+                            });
+                        }
+                        contentHTML += `</div>`;
+                    }
+                }
+                else if (page.type === 'author_profile') {
+                    contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
+                    contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
+                    contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
+                    
+
+                    contentHTML += `</div>`;
+                    contentHTML += `</div>`;
+                }
+ 
+                else if (page.type === 'image_top') {
+                    pageEl.className += ' page-text-flow page-layout';
+                    let extraImgStyle = "";
+                    if (page.part === "Part 8") {
+                        if (page.text && page.text.length < 200) {
+                            extraImgStyle = "max-width: 900px; width: 100%; margin-bottom: 50px;";
+                        } else if (page.text && page.text.length < 400) {
+                            extraImgStyle = "max-width: 800px; width: 90%; margin-bottom: 45px;";
+                        } else {
+                            extraImgStyle = "max-width: 700px; width: 80%; margin-bottom: 40px;";
+                        }
+                    }
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}" style="${extraImgStyle}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
+                    if(page.text) {
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
+                        const paragraphs = formattedText.split('\n\n');
+                        paragraphs.forEach(p => {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
+                                contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
+                            } else {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9; margin-bottom: 15px;">${htmlP}</p>`;
+                            }
+                        });
+                    }
+                    contentHTML = `<div class="page-inner">${contentHTML}</div>`;
+                }
+                else if (page.type === 'image_full') {
+                    pageEl.style.padding = '0';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; border-radius:0; z-index:0; background:#ffffff; display:flex; justify-content:center; align-items:center; padding: 40px; box-sizing: border-box;"><img src="${page.image}" alt="full_image" style="max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; border-radius:0; box-shadow: none;"></div>`;
+                    }
+                    if(page.title || page.subtitle || page.text) {
+                        let rawTitle = page.title || "";
+                        let part = "";
+                        let mainTitle = rawTitle;
+                        let subtitle = page.subtitle || "";
+
+                        if (!subtitle) {
+                            const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                            if (subMatch) {
+                                mainTitle = subMatch[1].trim();
+                                subtitle = subMatch[2].trim();
+                            }
+                        }
+                        
+                        const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?\s*|에필로그:\s*|부록:\s*|에피소드.*?:\s*))(.+)$/);
+                        if (partMatch) {
+                            part = partMatch[1].trim();
+                            mainTitle = partMatch[2].trim();
+                        }
+                        
+                        // Parse part into number and category (e.g. 1부, 시스템편)
+                        let partNumber = "";
+                        let partCategory = "";
+                        if (part) {
+                            const subPartMatch = part.match(/^(\d+부)\.?\s*\[(.*?)\]$/);
+                            if (subPartMatch) {
+                                partNumber = subPartMatch[1];
+                                partCategory = subPartMatch[2];
+                            } else {
+                                partNumber = part;
+                            }
+                        }
+
+                        // Create the glassmorphism panel
+                        contentHTML += `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`;
+                        
+                        // Only add the glassmorphism panel if there is text
+                        if (part || mainTitle || subtitle) {
+                            contentHTML += `<div style="padding: 50px 40px; display:flex; flex-direction:column; align-items:center; text-align:center; max-width: 80%; display:flex; flex-direction:column; align-items:center; text-align:center;">`;
+                            
+                            if (partNumber || partCategory) {
+                                contentHTML += `<div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 24px;">`;
+                                if (partNumber) {
+                                    contentHTML += `<div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.15em; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7); text-transform: uppercase; margin-bottom: ${partCategory ? '12px' : '0'};">${partNumber}</div>`;
+                                }
+                                if (partNumber && partCategory) {
+                                    contentHTML += `<div style="width: 2px; height: 24px; background: rgba(0, 102, 204, 0.3); margin-bottom: 12px;"></div>`;
+                                }
+                                if (partCategory) {
+                                    contentHTML += `<div style="padding: 6px 16px; background: var(--primary); color: #ffffff; border-radius: 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">${partCategory}</div>`;
+                                }
+                                contentHTML += `</div>`;
+                            }
+                            
+                            if(mainTitle) {
+                                contentHTML += `<h1 class="book-title" style="color:#ffffff; font-size:clamp(32px, 5vw, 48px); margin-bottom:16px; font-weight:800; letter-spacing: -0.03em; line-height: 1.2; word-break: keep-all; text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.4);">${mainTitle}</h1>`;
+                            }
+                            
+                            if(subtitle) {
+                                contentHTML += `<p style="color:rgba(255,255,255,0.9); font-size:clamp(18px, 2.5vw, 24px); font-weight:500; word-break: keep-all; margin:0; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7);">${subtitle}</p>`;
+                            }
+                            
+                            contentHTML += `</div>`;
+                        }
+                        // close the outer wrapper ONLY if there was no text.
+                        // Wait! The previous code didn't have an outer wrapper.
+                        // My code adds a flex wrapper for alignment, then the panel.
+                        // But wait, the outer wrapper `contentHTML += \`<div style="position:relative...` MUST be closed!
+                        // Oh! The old code didn't close it before `if(page.text)`!
+                        // The old code closed it after `page.text` processing.
+                        // So I should not close the outer wrapper here. I should just let it remain open.
+                        // My outer wrapper is: `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`
+                        
+                        if(page.text) {
+                            let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: #1d1d1f;">$1</strong>');
+                            const paragraphs = formattedText.split('\n\n');
+                            paragraphs.forEach(p => {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="color: #333; font-weight: 500; text-align:center; font-size: 18px; line-height: 1.8; max-width: 600px; margin: 0 auto 15px auto; text-shadow: 0 1px 5px rgba(255,255,255,0.8);">${htmlP}</p>`;
+                            });
+                        }
+                        contentHTML += `</div>`;
+                    }
+                }
+                else if (page.type === 'author_profile') {
+                    contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
+                    contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
+                    contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
+                    
+
+                    contentHTML += `</div>`;
+                    contentHTML += `</div>`;
+                }
+ 
+                else if (page.type === 'image_top') {
+                    pageEl.className += ' page-text-flow';
+                    if (page.text && page.text.length < 350) {
+                        pageEl.className += ' layout-short';
+                    } else {
+                        pageEl.className += ' layout-long';
+                    }
+                    let extraImgStyle = "";
+                    if (page.part === "Part 8") {
+                        if (page.text && page.text.length < 200) {
+                            extraImgStyle = "max-width: 900px; width: 100%; margin-bottom: 50px;";
+                        } else if (page.text && page.text.length < 400) {
+                            extraImgStyle = "max-width: 800px; width: 90%; margin-bottom: 45px;";
+                        } else {
+                            extraImgStyle = "max-width: 700px; width: 80%; margin-bottom: 40px;";
+                        }
+                    }
+                    if(page.image) contentHTML += `<div class="image-container" id="img-container-${index}" style="${extraImgStyle}"><img src="${page.image}" alt="sketch"></div>`;
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
+                    if(page.text) {
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
+                        const paragraphs = formattedText.split('\n\n');
+                        paragraphs.forEach(p => {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
+                                contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
+                            } else {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9;">${htmlP}</p>`;
+                            }
+                        });
+                    }
+                    contentHTML = `<div class="page-inner">${contentHTML}</div>`;
+                }
+                else if (page.type === 'image_full') {
+                    pageEl.style.padding = '0';
+                    if(page.image) {
+                        contentHTML += `<div class="image-container" style="position:absolute; top:0; left:0; width:100%; height:100%; margin:0; border-radius:0; z-index:0; background:#ffffff; display:flex; justify-content:center; align-items:center; padding: 20px; box-sizing: border-box;"><img src="${page.image}" alt="full_image" style="max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; border-radius:0; box-shadow: none;"></div>`;
+                    }
+                    if(page.title || page.subtitle || page.text) {
+                        let rawTitle = page.title || "";
+                        let part = "";
+                        let mainTitle = rawTitle;
+                        let subtitle = page.subtitle || "";
+
+                        if (!subtitle) {
+                            const subMatch = rawTitle.match(/(.*?)\s*\((.*?)\)$/);
+                            if (subMatch) {
+                                mainTitle = subMatch[1].trim();
+                                subtitle = subMatch[2].trim();
+                            }
+                        }
+                        
+                        const partMatch = mainTitle.match(/^((?:\d+부\.\s*\[.*?\]|\[.*?\]|막간극.*?\s*|에필로그:\s*|부록:\s*|에피소드.*?:\s*))(.+)$/);
+                        if (partMatch) {
+                            part = partMatch[1].trim();
+                            mainTitle = partMatch[2].trim();
+                        }
+                        
+                        // Parse part into number and category (e.g. 1부, 시스템편)
+                        let partNumber = "";
+                        let partCategory = "";
+                        if (part) {
+                            const subPartMatch = part.match(/^(\d+부)\.?\s*\[(.*?)\]$/);
+                            if (subPartMatch) {
+                                partNumber = subPartMatch[1];
+                                partCategory = subPartMatch[2];
+                            } else {
+                                partNumber = part;
+                            }
+                        }
+
+                        // Create the glassmorphism panel
+                        contentHTML += `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`;
+                        
+                        // Only add the glassmorphism panel if there is text
+                        if (part || mainTitle || subtitle) {
+                            contentHTML += `<div style="padding: 50px 40px; display:flex; flex-direction:column; align-items:center; text-align:center; max-width: 80%; display:flex; flex-direction:column; align-items:center; text-align:center;">`;
+                            
+                            if (partNumber || partCategory) {
+                                contentHTML += `<div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 24px;">`;
+                                if (partNumber) {
+                                    contentHTML += `<div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--primary-on-dark, #2997ff); letter-spacing: 0.15em; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7); text-transform: uppercase; margin-bottom: ${partCategory ? '12px' : '0'};">${partNumber}</div>`;
+                                }
+                                if (partNumber && partCategory) {
+                                    contentHTML += `<div style="width: 2px; height: 24px; background: rgba(0, 102, 204, 0.3); margin-bottom: 12px;"></div>`;
+                                }
+                                if (partCategory) {
+                                    contentHTML += `<div style="padding: 6px 16px; background: var(--primary); color: #ffffff; border-radius: 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(0,102,204,0.3);">${partCategory}</div>`;
+                                }
+                                contentHTML += `</div>`;
+                            }
+                            
+                            if(mainTitle) {
+                                contentHTML += `<h1 class="book-title" style="color:#ffffff; font-size:clamp(32px, 5vw, 48px); margin-bottom:16px; font-weight:800; letter-spacing: -0.03em; line-height: 1.2; word-break: keep-all; text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 4px 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.4);">${mainTitle}</h1>`;
+                            }
+                            
+                            if(subtitle) {
+                                contentHTML += `<p style="color:rgba(255,255,255,0.9); font-size:clamp(18px, 2.5vw, 24px); font-weight:500; word-break: keep-all; margin:0; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 15px rgba(0,0,0,0.7);">${subtitle}</p>`;
+                            }
+                            
+                            contentHTML += `</div>`;
+                        }
+                        // close the outer wrapper ONLY if there was no text.
+                        // Wait! The previous code didn't have an outer wrapper.
+                        // My code adds a flex wrapper for alignment, then the panel.
+                        // But wait, the outer wrapper `contentHTML += \`<div style="position:relative...` MUST be closed!
+                        // Oh! The old code didn't close it before `if(page.text)`!
+                        // The old code closed it after `page.text` processing.
+                        // So I should not close the outer wrapper here. I should just let it remain open.
+                        // My outer wrapper is: `<div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 20px; box-sizing:border-box;">`
+                        
+                        if(page.text) {
+                            let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
+                            const paragraphs = formattedText.split('\n\n');
+                            paragraphs.forEach(p => {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="color:#1d1d1f; font-weight:600; text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 4px 12px rgba(0,0,0,0.7); color:#ffffff; text-align:center; font-size:18px; line-height: 1.9;">${htmlP}</p>`;
+                            });
+                        }
+                        contentHTML += `</div>`;
+                    }
+                }
+
+                else if (page.type === 'author_profile') {
+                    contentHTML += `<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 40px;">`;
+                    contentHTML += `<h2 class="chapter-title" style="margin-bottom: 30px; font-size: 32px; color: var(--primary);">저자 소개</h2>`;
+                    contentHTML += `<div style="background: var(--canvas-parchment, #ffffff); border-radius: 0; padding: 40px; box-shadow: none; border: none; width: 80%; max-width: 600px; display:flex; flex-direction:column; align-items:center;">`;
+                    contentHTML += `<h3 style="font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 10px; margin-top: 0;">김중일 건축사</h3>`;
+                    contentHTML += `<p style="font-size: 16px; color: var(--ink-muted-80); margin-bottom: 25px; margin-top: 0;">(주)진양엔지니어링건축사사무소 대표이사</p>`;
+                    
+                    contentHTML += `<ul class="author-list">`;
+                    contentHTML += `<li>현(現) 서울시 건축심의위원</li>`;
+                    contentHTML += `<li>현(現) 빈집 및 소규모 주택 정비 사업 소위원회 위원</li>`;
+                    contentHTML += `<li>현(現) 강동구, 양천구 건축심의위원</li>`;
+                    contentHTML += `<li>현(現) 강북구, 구로구 특정구역 모아타운 MP(Master Planner) 위원</li>`;
+                    contentHTML += `</ul>`;
+                    
+                    contentHTML += `<p class="author-desc" style="border-top: 1px solid var(--hairline); padding-top: 20px; margin-bottom: 0;">"정책의 최전선에서 관(서울시)의 기조를 조율하며, 정비사업의 미래를 가장 뼈저리게 목도하고 있는 건축가의 진심 어린 조언이자 따뜻한 혁신의 기록."</p>`;
+                    contentHTML += `</div>`;
+                    contentHTML += `</div>`;
+                }
+
+                else if (page.type === 'text_only') {
+                    pageEl.className += ' page-text-flow page-layout';
+                    if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
+                    if(page.text) {
+                        let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
+                        const paragraphs = formattedText.split('\n\n');
+                        paragraphs.forEach(p => {
+                            const trimmed = p.trim();
+                            if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
+                                contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                                let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                                bqText = bqText.replace(/\n/g, '<br>');
+                                contentHTML += `<blockquote class="pull-quote">${bqText}</blockquote>`;
+                            } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                                contentHTML += `<p class="subheading">${trimmed}</p>`;
+                            } else {
+                                let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                                htmlP = htmlP.replace(/\n/g, '<br>');
+                                contentHTML += `<p class="body-text" style="line-height: 1.9; margin-bottom: 15px;">${htmlP}</p>`;
+                            }
+                        });
+                    }
+                    contentHTML = `<div class="page-inner">${contentHTML}</div>`;
+                }
+                pageEl.innerHTML = contentHTML;
+
+                // Inject scroll indicator
+                pageEl.innerHTML += `<div class="scroll-indicator" id="scroll-ind-${index}">↓ 아래로 스크롤해서 계속 읽기</div>`;
+                
+                // Add scroll event listener to the page to hide indicator
+                const pageContentDiv = pageEl.querySelector('.page-content');
+                if(pageContentDiv) {
+                    pageContentDiv.addEventListener('scroll', function() {
+                        const ind = pageEl.querySelector('.scroll-indicator');
+                        if(ind) {
+                            // If scrolled down even a little, fade it out
+                            if(this.scrollTop > 20) {
+                                ind.style.opacity = '0';
+                            } else {
+                                ind.style.opacity = '1';
+                            }
+                        }
+                    });
+                }
+

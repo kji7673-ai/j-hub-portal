@@ -48,7 +48,7 @@ const bookData = {
             "type": "interlude",
             "title": "1부. 설계의 본질 – 공유결합",
             "partCategory": "1부: 설계의 본질 - 공유결합",
-            "image": "static/images/12.jpg",
+            "image": "static/images/sculpture_03.jpg",
             "text": ""
         },
         {
@@ -96,7 +96,7 @@ const bookData = {
             "type": "interlude",
             "title": "2부. 현장의 목소리, 공유결합의 증거",
             "partCategory": "2부: 증언과 성찰",
-            "image": "static/images/14.jpg",
+            "image": "static/images/sculpture_04.jpg",
             "text": ""
         },
         {
@@ -1151,7 +1151,7 @@ const bookData = {
             "title": "오늘을 살아라는",
             "text": "오늘을 느껴라로<br>언땅언하늘에<br>벌거숭이되어<br>벗겨진 피부와<br>피흐르는 혈관<br>너와 나사이를<br>그렇게 느껴<br>오늘을 느껴<br>그렇게 벗겨진 채로<br>언땅언하늘 그속에<br>오늘을 느껴<br>그렇게 오늘<br>오늘을 느끼며 살아<br>바람에 쓸리며<br>햇빛에 마르며<br>오늘을 살아<br>오늘을 느껴",
             "partCategory": "2부: 증언과 성찰",
-            "image": "static/images/14.jpg",
+            "image": "static/images/sculpture_04.jpg",
             "type": "image_top"
         },
         {
@@ -1209,7 +1209,7 @@ const bookData = {
             "type": "interlude",
             "title": "3부. 공유결합을 가능하게 하는 시스템",
             "partCategory": "3부: 공유결합을 가능하게 하는 시스템",
-            "image": "static/images/60.jpg",
+            "image": "static/images/sculpture_05.jpg",
             "text": ""
         },
         {
@@ -1313,7 +1313,7 @@ const bookData = {
             "type": "image_top",
             "title": "챕터 C. 건축가의 존엄을 지키는 법",
             "image": "static/images/64.jpg",
-            "text": "<h3 style=\"color:var(--primary);\">기술 뒤에서 인간으로 서기</h3>\n\n기술 시대에 건축가란 무엇일까요.\n\n과거에는 도면을 그리는 사람이었고, 지금은 기술과 판단을 함께 다루는 사람이며, 앞으로는 기술이 내놓는 답을 비판적으로 살필 줄 아는 사람이어야 한다고 생각합니다.\n\n![현장 스케치](static/images/12.jpg)\n\n소박하지만, 스스로 다짐하는 다섯 가지 원칙을 적어둡니다.\n\n<div style=\"background:#f5f5f7; padding:20px; border-radius:11px; font-size:14px; line-height:1.8;\">\n<strong>첫째, 기술이 제안해도 의심하겠습니다.</strong><br>\n플랫폼이 \"오류 0%\"라고 보고해도, \"그런데 이것이 정의로운가?\"라고 한 번 더 묻겠습니다.\n\n<strong>둘째, 효율보다 정의를 먼저 생각하겠습니다.</strong><br>\n3개월이 더 걸리더라도 모든 분이 충분히 이해하고 동의하는 과정을 택하겠습니다.\n\n<strong>셋째, 투명성에도 해석이 필요하다는 것을 잊지 않겠습니다.</strong><br>\n같은 데이터라도 누가, 어떻게, 언제 공개하느냐에 따라 의미가 달라집니다.",
+            "text": "<h3 style=\"color:var(--primary);\">기술 뒤에서 인간으로 서기</h3>\n\n기술 시대에 건축가란 무엇일까요.\n\n과거에는 도면을 그리는 사람이었고, 지금은 기술과 판단을 함께 다루는 사람이며, 앞으로는 기술이 내놓는 답을 비판적으로 살필 줄 아는 사람이어야 한다고 생각합니다.\n\n![현장 스케치](static/images/sculpture_03.jpg)\n\n소박하지만, 스스로 다짐하는 다섯 가지 원칙을 적어둡니다.\n\n<div style=\"background:#f5f5f7; padding:20px; border-radius:11px; font-size:14px; line-height:1.8;\">\n<strong>첫째, 기술이 제안해도 의심하겠습니다.</strong><br>\n플랫폼이 \"오류 0%\"라고 보고해도, \"그런데 이것이 정의로운가?\"라고 한 번 더 묻겠습니다.\n\n<strong>둘째, 효율보다 정의를 먼저 생각하겠습니다.</strong><br>\n3개월이 더 걸리더라도 모든 분이 충분히 이해하고 동의하는 과정을 택하겠습니다.\n\n<strong>셋째, 투명성에도 해석이 필요하다는 것을 잊지 않겠습니다.</strong><br>\n같은 데이터라도 누가, 어떻게, 언제 공개하느냐에 따라 의미가 달라집니다.",
             "partCategory": "3부: 공유결합을 가능하게 하는 시스템"
         },
         {
@@ -1334,7 +1334,7 @@ const bookData = {
             "type": "interlude",
             "title": "부록. 기술 상세 및 원문",
             "partCategory": "부록",
-            "image": "static/images/61.jpg",
+            "image": "static/images/sculpture_06.jpg",
             "text": ""
         },
         {
