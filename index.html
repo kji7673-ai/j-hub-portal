@@ -956,6 +956,7 @@
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
                     if(page.text) {
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt=".replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
                         const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
                             const trimmed = p.trim();
@@ -1096,6 +1097,7 @@
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
                     if(page.text) {
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt=".replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
                         const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
                             const trimmed = p.trim();
@@ -1239,6 +1241,7 @@
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:10px;">${page.title}</h2>`;
                     if(page.text) {
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt=".replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
                         const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
                             const trimmed = p.trim();
@@ -1339,6 +1342,7 @@
                         
                         if(page.text) {
                             let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt=".replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
                             const paragraphs = formattedText.split('\n\n');
                             paragraphs.forEach(p => {
                                 let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
@@ -1374,6 +1378,7 @@
                     if(page.title) contentHTML += `<h2 class="chapter-title" style="margin-bottom:20px;">${page.title}</h2>`;
                     if(page.text) {
                         let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt=".replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
                         const paragraphs = formattedText.split('\n\n');
                         paragraphs.forEach(p => {
                             const trimmed = p.trim();
