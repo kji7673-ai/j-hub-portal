@@ -1391,15 +1391,6 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "QR코드: Y구역 전체 보고서 원문",
-            "text": "스마트폰으로 스캔하여 전체 보고서를 확인하세요. (QR 코드 이미지 예정)",
-            "part": "부록",
-            "partTitle": "J-Hub 실무 가이드 (Appendix)",
-            "partCategory": "부록",
-            "image": "static/images/25.jpg"
-        },
-        {
-            "type": "image_top",
             "title": "마치는 글: 쟁이들에게 보내는 위로",
             "text": "<div style=\"display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center; padding: 40px;\">\n    <div style=\"font-size: 20px; line-height: 1.8; color: var(--ink); font-weight: 300; word-break: keep-all;\">\n        \"기계의 차가운 효율성 앞에서 두려움에 떨고 있는<br>이 시대의 모든 '쟁이'들에게.<br><br><span style=\"font-weight: 600; color: var(--primary);\">기계의 완벽함을 통제하는 진정한 힘은<br>역설적으로 인간의 불완전함(맹점과 상처)에서 나온다는 것을<br>증명해 낸 서늘하고도 따뜻한 위로.</span>\"\n    </div>\n</div>",
             "image": "static/images/sketch_rebar_1786665980290.jpg",
