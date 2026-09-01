@@ -1917,7 +1917,6 @@
         
         // Restore progress on load
         window.addEventListener('DOMContentLoaded', () => {
-    try {
             const savedChapter = localStorage.getItem('JJournal_savedChapter');
             const savedColumn = localStorage.getItem('JJournal_savedColumn');
             if (savedChapter !== null && savedColumn !== null) {
