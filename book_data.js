@@ -407,7 +407,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "거짓이 진실을 만났을 때",
-            "text": "자신이 거짓인지 모른 상태에서,<br>진실을 만남으로 자신의 거짓됨을 알게된 경우<br>자신이 거짓인지 알고 있는 상태에서,<br>진실을 만남으로 자신의 거짓됨이 알려질 경우<br>스스로는 알겠지. 자신이 살아 온 삶이<br>후 한번 불어버리면 날아갈 만큼 가볍다는 것을",
+            "text": "자신이 거짓인지 모른 상태에서, <br>진실을 만남으로 자신의 거짓됨을 알게된 경우 <br><br>자신이 거짓인지 알고 있는 상태에서, <br>진실을 만남으로 자신의 거짓됨이 알려질 경우 <br><br>스스로는 알겠지. <br><br>자신이 살아 온 삶이 후 한번 불어버리면 <br>날아갈 만큼 가볍다는 것을<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\">하루를 조금은 무겁게 살아가자<br>쉽게 날아가버리는 하루의 삶이 되지 않도록</div>",
             "partCategory": "2부: 증언과 성찰",
             "image": "static/images/user_39.jpg",
             "type": "image_top"
