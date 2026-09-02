@@ -1,27 +1,16 @@
 const fs = require('fs');
-const bookDataPath = 'book_data.js';
 
-let content = fs.readFileSync(bookDataPath, 'utf8');
-const match = content.match(/^([\s\S]*?const bookData = )(\{[\s\S]*?\});/);
-const data = eval('(' + match[2] + ')');
+let code = fs.readFileSync('book_data.js', 'utf8');
+let dataCode = code.replace(/const bookData =|var bookData =/g, 'global.bookData =');
+eval(dataCode);
 
-data.pages.forEach(p => {
-    if (p.partCategory === '프롤로그' && p.title && p.title.includes('완벽한 시스템이 아닌')) {
-        p.text = p.text.replace(
-            /1부 \[실전편\][\s\S]*?바랍니다\./,
-            "1부 [플랫폼의 탄생] 은 쏟아지는 업무의 과부하 속에서 살아남기 위해 발버둥 치며 만들어낸 소박한 '도구'에 대한 이야기입니다. 행정적 늪에 빠져 허우적대는 실무자나 낡은 시스템의 한계를 느끼는 분들께, 정비사업의 투명성과 6가지 길을 안내하는 작은 돌파구가 되기를 바랍니다."
-        );
-        p.text = p.text.replace(
-            /2부 \[증언과 성찰편\][\s\S]*?남겨두었습니다\./,
-            "2부 [불완전함 속에서 완전함을 찾다] 는 그렇게 얻어낸 귀중한 시간 동안 다시 도면 앞에 앉아 고민했던 '건축의 본질'과, 26년 현장의 쟁이로서 느꼈던 솔직한 감정의 파편들입니다. 완벽한 데이터 앞에서도 결국 기꺼이 '불완전한 선택'을 감내한 날것의 일기 85편을 4가지 테마로 엮었습니다."
-        );
-        p.text = p.text.replace(
-            /3부 \[미래 비전편\][\s\S]*?담았습니다\./,
-            "3부 [불완전한 선택의 용기] 는 이 모든 현장의 고뇌를 딛고 바라본 다가올 10년의 풍경입니다. 기술이 지배할 새로운 시장 속에서도 결코 기계에 넘겨줄 수 없는 건축가의 존엄과 윤리, 그리고 책임감에 대한 묵직한 성찰을 담았습니다."
-        );
+bookData.pages.forEach(p => {
+    if (p.title === '프롤로그: 건축 외에는 아무것도 모르는 바보의 이야기') {
+        p.text = p.text.replace(/안녕하세요\. 도면 위에서.*?전해주고 싶은 이야기입니다\./gs, 
+            "도면 위의 완벽하고 매끄러운 선들이, 현장의 거친 흙먼지와 부딪혀 여지없이 깨지고 부서지는 것을 지난 26년간 뼈저리게 지켜보았습니다.\n\n이 책은 화려한 건축물의 조감도 뒤에 가려진, 상처투성이 현장에 대한 솔직한 고백입니다. 동시에 모든 것을 숫자로 치환해 버리는 차가운 데이터의 시대 앞에서, 끝끝내 도면을 쥔 '사람의 온기'를 지켜내려는 한 건축가의 치열한 철학적 투쟁기이기도 합니다.\n\n결핍을 가진 인간과 공간, 그리고 기술이 어떻게 서로를 내어주며 완벽한 하나로 연결될 수 있는가. 저는 그 답을 **'공유결합'**이라 부르기로 했습니다. 화려한 성공담이나 기술서가 아닙니다. 이것은 불완전한 우리가 서로를 포용하며 세상을 짓는 방식에 관한 이야기입니다.");
     }
 });
 
-const newContent = match[1] + JSON.stringify(data, null, 4) + ";\n";
-fs.writeFileSync(bookDataPath, newContent, 'utf8');
-console.log("Prologue updated.");
+const outCode = `var bookData = ${JSON.stringify(bookData, null, 4)};\n\nif (typeof module !== 'undefined' && module.exports) {\n    module.exports = bookData;\n}\n`;
+fs.writeFileSync('book_data.js', outCode, 'utf8');
+
