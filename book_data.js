@@ -2,8 +2,8 @@ var bookData = {
     "pages": [
         {
             "type": "image_full",
-            "title": "기계 99%, 인간 1%: 신뢰를 짓는 일",
-            "subtitle": "도면 위의 공유결합: 26년 현장의 기록",
+            "title": "도면 위의 공유결합",
+            "subtitle": "숫자의 무게, 인간의 여백",
             "image": "static/images/1.jpg",
             "text": "",
             "partCategory": "프롤로그"
