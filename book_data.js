@@ -658,7 +658,7 @@ var bookData = {
         {
             "type": "text",
             "title": "",
-            "text": "성경에 '우는 자들과 함께 울고, 웃는 자들과 함께 웃으라'는 말이 있다. 주변에 순응하되, 당신 자신이 그 주변 자체가 되어서는 안 된다. 순응했을 때는 홀로 떨어져 있을 때보다 자신의 존재감 확보를 위해 더 노력해야 한다. 함께 있을 때는 인력이 작용하여 서로를 끌어당기고 위계를 잡으려 하는 것이 자연 법칙이기 때문이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\" class=\"handwriting\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</h4>\n데이터에 최적화된 생성형 AI는 언제나 가장 화려하고 주변을 압도하는 랜드마크를 렌더링해 냅니다. 기계의 알고리즘에는 '겸손'이라는 변수가 없기 때문입니다. 하지만 좋은 건축은 때로는 주변 풍경에 스스로 머리를 숙이고 기꺼이 배경으로 물러설 줄 알아야 합니다. 최고의 효율과 디자인을 포기하면서까지 기꺼이 낮아지기를 택하는 것. 그것은 연산이 아닌, 세상을 향한 연민과 윤리의 결과물입니다.\n</div></div>",
+            "text": "성경에 '우는 자들과 함께 울고, 웃는 자들과 함께 웃으라'는 말이 있다. 주변에 순응하되, 당신 자신이 그 주변 자체가 되어서는 안 된다. 순응했을 때는 홀로 떨어져 있을 때보다 자신의 존재감 확보를 위해 더 노력해야 한다. 함께 있을 때는 인력이 작용하여 서로를 끌어당기고 위계를 잡으려 하는 것이 자연 법칙이기 때문이다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\"><b>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</b><br><br>데이터에 최적화된 생성형 AI는 언제나 가장 화려하고 주변을 압도하는 랜드마크를 렌더링해 냅니다. 기계의 알고리즘에는 '겸손'이라는 변수가 없기 때문입니다. 하지만 좋은 건축은 때로는 주변 풍경에 스스로 머리를 숙이고 기꺼이 배경으로 물러설 줄 알아야 합니다. 최고의 효율과 디자인을 포기하면서까지 기꺼이 낮아지기를 택하는 것. 그것은 연산이 아닌, 세상을 향한 연민과 윤리의 결과물입니다.</div>",
             "image": "static/images/user_06.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
@@ -690,7 +690,7 @@ var bookData = {
         {
             "type": "text",
             "title": "",
-            "text": "입면을 디자인할 때도 적절한 분절(Articulation)이 필요하다. 이때 빈 공간만큼 요소들을 긴장감 있게 연결해주는 것은 없다. 한옥에 깊게 드리워지는 그늘(허공부)은 지붕과 기둥을 돋보이게 한다. 허리가 없는 배꼽티가 오히려 허리를 가장 강렬하게 강조하는 것과 같다.\n결혼 전 닿을 듯 닿지 못하는 아슬아슬한 거리에서 엄청난 사랑의 인력이 발생하듯, 안주하게 해서는 안 된다. 팽팽한 사이 공간을 남겨두어야 한다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\" class=\"handwriting\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</h4>\n프롬프트에 아무리 정교한 지시를 내려도, AI는 '비움'을 설계하는 것을 가장 어려워합니다. 기계는 화면의 모든 픽셀과 공간을 유용한 데이터로 가득 채우려 강박적으로 작동하기 때문입니다. 하지만 우리는 알고 있습니다. 아무것도 없는 텅 빈 곳에서 비로소 바람이 길을 찾고 햇살이 머문다는 것을. 계산된 효율을 잠시 멈추고 빈 곳을 남겨두는 여유, 그것이 숨 쉬는 건축을 만듭니다.\n</div></div>",
+            "text": "입면을 디자인할 때도 적절한 분절(Articulation)이 필요하다. 이때 빈 공간만큼 요소들을 긴장감 있게 연결해주는 것은 없다. 한옥에 깊게 드리워지는 그늘(허공부)은 지붕과 기둥을 돋보이게 한다. 허리가 없는 배꼽티가 오히려 허리를 가장 강렬하게 강조하는 것과 같다.\n결혼 전 닿을 듯 닿지 못하는 아슬아슬한 거리에서 엄청난 사랑의 인력이 발생하듯, 안주하게 해서는 안 된다. 팽팽한 사이 공간을 남겨두어야 한다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\"><b>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</b><br><br>프롬프트에 아무리 정교한 지시를 내려도, AI는 '비움'을 설계하는 것을 가장 어려워합니다. 기계는 화면의 모든 픽셀과 공간을 유용한 데이터로 가득 채우려 강박적으로 작동하기 때문입니다. 하지만 우리는 알고 있습니다. 아무것도 없는 텅 빈 곳에서 비로소 바람이 길을 찾고 햇살이 머문다는 것을. 계산된 효율을 잠시 멈추고 빈 곳을 남겨두는 여유, 그것이 숨 쉬는 건축을 만듭니다.</div>",
             "image": "static/images/user_07.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
@@ -803,7 +803,7 @@ var bookData = {
         {
             "type": "text",
             "title": "",
-            "text": "---<br><br><div class=\"handwriting\" style=\"margin-top: 10px;\"><b>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</b><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다.<br>처음 계획(만들려던 것)과 AI의 시뮬레이션(만들어지는 것) 사이의 불일치를 만났을 때, 우리는 선택해야 합니다:<br>① 내 의도에 AI를 맞춘다 (기계를 도구로 본다)<br>② AI의 제안을 수용한다 (기계를 파트너로 본다)<br>③ 그 사이에서 새로운 가능성을 찾는다 (공창造)<br><br>진정한 혁신과 디자인은 ③의 유연함에서 나옵니다.</div>",
+            "text": "<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\"><b>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</b><br><br>우리가 아키 시냅스와 협업할 때도 마찬가지입니다.<br>처음 계획(만들려던 것)과 AI의 시뮬레이션(만들어지는 것) 사이의 불일치를 만났을 때, 우리는 선택해야 합니다:<br>① 내 의도에 AI를 맞춘다 (기계를 도구로 본다)<br>② AI의 제안을 수용한다 (기계를 파트너로 본다)<br>③ 그 사이에서 새로운 가능성을 찾는다 (공창造)<br><br>진정한 혁신과 디자인은 ③의 유연함에서 나옵니다.</div>",
             "image": "static/images/sculpture_06.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
@@ -1045,7 +1045,7 @@ var bookData = {
         {
             "type": "text",
             "title": "",
-            "text": "우리가 넘어야 할 산이자, 디자인에서 AI가 나아가야 할 궁극적인 미래는 명확하다. 건축가가 펜으로 러프하게 스케치를 던지거나 특정 구역의 의도를 텍스트로 지정했을 때, AI가 우리의 '손과 발'이 되어 단 몇 분 만에 수십 개의 고품질 수많은 설계 대안(Alts)을 쏟아내는 시스템이다.<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--primary);\" class=\"handwriting\">\n<h4 style=\"margin-top: 0; color: var(--primary); font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</h4>\n우리가 아키 시냅스(Archisynapse)와 협업할 때도 마찬가지입니다. AI는 수만 개의 데이터를 연산하여 단 하나의 오차도 없는 '완벽한 기하학'을 도출합니다. 하지만 현장의 거친 흙바닥과 옆 건물의 비뚤어진 담장까지 계산하지는 못합니다. 완벽한 도면을 기꺼이 구기고 주변의 무질서함과 조화시키는 '불완전한 선택'. 기계는 할 수 없는, 그것이 바로 인간 건축가만의 특권입니다.\n</div></div>",
+            "text": "우리가 넘어야 할 산이자, 디자인에서 AI가 나아가야 할 궁극적인 미래는 명확하다. 건축가가 펜으로 러프하게 스케치를 던지거나 특정 구역의 의도를 텍스트로 지정했을 때, AI가 우리의 '손과 발'이 되어 단 몇 분 만에 수십 개의 고품질 수많은 설계 대안(Alts)을 쏟아내는 시스템이다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\"><b>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</b><br><br>우리가 아키 시냅스(Archisynapse)와 협업할 때도 마찬가지입니다. AI는 수만 개의 데이터를 연산하여 단 하나의 오차도 없는 '완벽한 기하학'을 도출합니다. 하지만 현장의 거친 흙바닥과 옆 건물의 비뚤어진 담장까지 계산하지는 못합니다. 완벽한 도면을 기꺼이 구기고 주변의 무질서함과 조화시키는 '불완전한 선택'. 기계는 할 수 없는, 그것이 바로 인간 건축가만의 특권입니다.</div>",
             "image": "static/images/127.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "시스템 너머의 본질",
