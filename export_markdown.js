@@ -4,7 +4,7 @@ let code = fs.readFileSync('book_data.js', 'utf8');
 let dataCode = code.replace(/const bookData =|var bookData =/g, 'global.bookData =');
 eval(dataCode);
 
-let md = "# 불완전한 선택: AI 시대 건축가의 성찰\n\n";
+let md = "# 공유결합: 26년 건축 쟁이의 현장 기록\n\n";
 
 bookData.pages.forEach((p, idx) => {
     if (p.title) {
