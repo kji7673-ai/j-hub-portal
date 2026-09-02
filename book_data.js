@@ -33,7 +33,7 @@ var bookData = {
             "type": "interlude",
             "title": "1부. 설계의 본질 – 공유결합",
             "partCategory": "1부. 설계의 본질 – 공유결합",
-            "image": "static/images/76.jpg",
+            "image": "static/images/covalent_bond_sketch.jpg",
             "text": ""
         },
         {
