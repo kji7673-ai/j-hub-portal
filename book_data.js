@@ -33,7 +33,7 @@ var bookData = {
             "type": "interlude",
             "title": "1부. 설계의 본질 – 공유결합",
             "partCategory": "1부. 설계의 본질 – 공유결합",
-            "image": "static/images/covalent_bond_bridge.jpg",
+            "image": "static/images/interlude_part1_handdrawn.jpg",
             "text": ""
         },
         {
@@ -168,7 +168,7 @@ var bookData = {
             "type": "interlude",
             "title": "2부. 현장의 목소리, 공유결합의 증거",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
-            "image": "static/images/interlude_part2.jpg",
+            "image": "static/images/interlude_part2_handdrawn.jpg",
             "text": ""
         },
         {
@@ -1180,7 +1180,7 @@ var bookData = {
             "title": "부록 A. J-Hub 기술 개요",
             "text": "J-Hub는 화려한 실리콘밸리의 클라우드 플랫폼이 아닙니다. 철저히 건축 현장의 생리에 맞게 진화한, 가볍고도 단단한 '로컬 보안 시스템'입니다.\n\n<b>1. MkDocs 기반의 텍스트 로컬 서버</b>\n보안이 생명인 재개발 도면과 조합원 원가 데이터는 외부망에 올릴 수 없습니다. J-Hub는 사내망(포트 8000번)에서만 구동되는 정적 사이트 생성기(MkDocs)를 기반으로 하여 완벽한 보안을 유지합니다.\n\n<b>2. Python과 LLM API의 결합</b>\n수백 페이지의 지자체 조례안과 건축법 시행령을 파이썬(Python) 크롤러가 수집하고, 이를 챗GPT(LLM) API에 통과시켜 단 3초 만에 리스크를 요약합니다. AI는 법규를 읽고, 건축가는 그 법규 사이의 행간을 읽어냅니다.\n\n<b>3. 투 트랙(Two-Track) 권한 설계</b>\n조합원에게는 3D 시뮬레이션과 진행 타임라인만 100% 투명하게 보여주고, 미확정 원가 내역이나 민감한 공문은 최고 관리자만 접근하도록 '정보의 댐'을 코딩했습니다. 기술이 아닌 철학이 만든 아키텍처입니다.",
             "partCategory": "부록",
-            "image": "static/images/interlude_appendix_a.jpg"
+            "image": "static/images/interlude_appxa_handdrawn.jpg"
         },
         {
             "type": "text",
@@ -1193,14 +1193,14 @@ var bookData = {
             "title": "부록 B. 자기 조직 진단 체크리스트",
             "text": "당신의 조직은 AI 시대를 맞이할 준비가 되었습니까? 아래 5가지 질문에 답해 보십시오.\n\n1. <b>[기록의 한계]</b> 우리는 중요한 의사결정의 근거를 시스템이 아닌 담당자의 '기억'이나 '개인 수첩'에 의존하고 있는가?\n2. <b>[투명성의 공포]</b> 클라이언트나 조합원에게 우리의 중간 작업 과정이나 원가 내역을 공개하는 것을 두려워하는가?\n3. <b>[기계에 대한 태도]</b> 우리 조직은 AI를 단순히 '문서 작업을 빨리 끝내주는 도구'로만 소비하고 있는가?\n4. <b>[실패의 자산화]</b> 프로젝트에서 발생한 크고 작은 실수와 에러가 담당자의 문책으로 끝나지 않고, 다음 프로젝트를 위한 '경고등(시스템)'으로 축적되고 있는가?\n5. <b>[공유결합의 유무]</b> 기술이 도출해 낸 효율적인 숫자를 거스르고서라도, 사람을 위해 기꺼이 비효율을 선택할 철학과 용기가 있는가?",
             "partCategory": "부록",
-            "image": "static/images/interlude_appendix_b.jpg"
+            "image": "static/images/interlude_appxb_handdrawn.jpg"
         },
         {
             "type": "interlude",
             "title": "부록 C. 생각을 명확히 하는 법 (마스터 프롬프트)",
             "text": "이 프롬프트들은 'AI를 능숙하게 부리는 테크닉'이 아닙니다. 완벽한 기계 앞에서 **'당신 자신의 사고를 정리하고, 무엇을 지시할지 철학적 기준을 세우는 도구'**입니다. 기계에게 질문하기 전에, 먼저 우리 스스로에게 질문하기 위해 이 프롬프트들을 사용하십시오.\n\n<h3 style=\"margin-top: 40px; margin-bottom: 15px; font-size: 20px; font-weight: 700;\">프롬프트 01. 공간의 감정선</h3>\n<blockquote class=\"pull-quote\" style=\"margin-bottom: 20px;\">\"이 공간에서 가장 소외될 수 있는 사용자는 누구이며, 그들이 이 문을 열었을 때 가장 먼저 느껴야 할 감정은 무엇인가?\"</blockquote>\n<ul style=\"margin-bottom: 20px; padding-left: 20px; line-height: 1.8;\">\n<li><strong>AI의 응답:</strong> 사용자의 동선, 시야각, 채광량 데이터를 계산하여 최적의 물리적 치수를 도출합니다.</li>\n<li><strong>당신의 몫:</strong> 그 치수 위에 '안도감'과 '따뜻함'이라는 질감을 부여하는 결정.</li>\n</ul>\n<div style=\"background-color: #f5f5f7; padding: 20px; border-radius: 8px; font-size: 14px; margin-bottom: 40px;\">\n<strong>[실무 적용 사례]</strong> 서초구 하이엔드 주거 프로젝트 초기 기획 회의에서, AI는 수익성 1순위 타겟인 '3040 고소득층'의 동선을 최적화했습니다. 하지만 이 프롬프트를 던진 후, 우리는 수익성에 잡히지 않는 '휠체어를 탄 노년층'이 로비에 들어섰을 때 느낄 위축감을 발견했습니다. 결국 메인 램프의 경사도를 낮추고 벤치를 배치하는 쪽으로 도면이 수정되었습니다.\n</div>\n\n<h3 style=\"margin-top: 40px; margin-bottom: 15px; font-size: 20px; font-weight: 700;\">프롬프트 02. 유산과 기억</h3>\n<blockquote class=\"pull-quote\" style=\"margin-bottom: 20px;\">\"숫자로 환산할 수 없는 100년 전의 기억 중, 미래 세대에게 100년 후까지 남겨주어야 할 단 하나의 유산은 무엇인가?\"</blockquote>\n<ul style=\"margin-bottom: 20px; padding-left: 20px; line-height: 1.8;\">\n<li><strong>AI의 응답:</strong> 보존 시 발생하는 용적률 손실과 분양 수익 저하 리스크를 퍼센트(%)로 경고합니다.</li>\n<li><strong>당신의 몫:</strong> 그 재무적 손실을 감수하고서라도 지켜내야 할 '문화적 프리미엄'을 조합원에게 설득하는 일.</li>\n</ul>\n<div style=\"background-color: #f5f5f7; padding: 20px; border-radius: 8px; font-size: 14px; margin-bottom: 40px;\">\n<strong>[실무 적용 사례]</strong> 강북 재개발 단지 설계 시, AI는 한옥 터를 밀어버리면 분양 수익이 30% 증가한다고 보고했습니다. 그러나 우리는 이 프롬프트에 답하기 위해 한옥 터의 주춧돌을 보존한 덮개 공원을 설계했습니다. 당장 수익은 줄었지만, 완공 후 이 공원은 단지의 시그니처 랜드마크가 되어 오히려 전체 아파트 가치를 프리미엄급으로 끌어올렸습니다.\n</div>\n\n<h3 style=\"margin-top: 40px; margin-bottom: 15px; font-size: 20px; font-weight: 700;\">프롬프트 03. 대립의 중재</h3>\n<blockquote class=\"pull-quote\" style=\"margin-bottom: 20px;\">\"조합원의 극대화된 욕망(수익)과 도시가 요구하는 공공성(기부채납)이 충돌할 때, 양측이 모두 동의할 수 있는 제3의 경계선은 어디인가?\"</blockquote>\n<ul style=\"margin-bottom: 20px; padding-left: 20px; line-height: 1.8;\">\n<li><strong>AI의 응답:</strong> 법적 허용 범위 내에서 수익과 공공성이 교차하는 100개의 수학적 시나리오를 나열합니다.</li>\n<li><strong>당신의 몫:</strong> 그 100개의 시나리오 중, 현실의 욕망과 타협할 수 있는 단 하나의 '정의(Justice)'를 골라내는 일.</li>\n</ul>\n<div style=\"background-color: #f5f5f7; padding: 20px; border-radius: 8px; font-size: 14px; margin-bottom: 40px;\">\n<strong>[실무 적용 사례]</strong> 인허가청은 15% 기부채납을 요구했고, 조합은 5%를 주장하며 사업이 6개월간 멈췄을 때였습니다. J-Hub에 시나리오를 돌린 후, 우리는 기부채납 비율을 10%로 맞추되 그 공간을 단순한 공원이 아닌 '지하 공영 주차장 + 상부 문화센터'로 입체화하는 대안(제3의 경계선)을 찾았습니다. AI의 시뮬레이션 덕분에 인허가청과 조합 모두 명분을 챙기며 극적인 합의를 이뤄냈습니다.\n</div>",
             "partCategory": "부록",
-            "image": "static/images/interlude_appendix_c.jpg"
+            "image": "static/images/interlude_appxc_handdrawn.jpg"
         }
     ]
 };
