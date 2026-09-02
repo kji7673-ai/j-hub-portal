@@ -286,7 +286,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "당신의 세상은 어떤가요?",
-            "text": "당신 곁에서<br>당신의 눈으로 세상을 바라보게해주세요<br>내가 느끼지못하는 기쁨과 슬픔을<br>당신을 통해느낄 때 우리 서로 사랑하는것이겠지요?<br>당신의 세상은 어떤가요?<br>그속에 기쁨만이 있지는않겠지만<br>우리 서로의 시선으로 바라보면<br>그때 우린 우리가 되겠지요<br>오늘도 힘내어요<br>그렇게 찐하게 살아가라고<br>오늘 하루가 있지않겠어요<br>오늘도 힘내어요",
+            "text": "당신은 어떤 세상에 있나요?<br>당신 곁에서 <br>당신의 눈으로 세상을 바라보면 좋겠습니다. <br><br>내가 느끼지못하는 기쁨과 슬픔을 <br>당신을 통해느낄 때 <br><br>우리 서로를 이해할 수 있겠지요? <br><br>당신의 세상은 어떤가요? <br>그 속에 기쁨만이 있지는않겠지만, <br>우리 서로의 시선을 갖고 바라본다면 <br><br>그때 비로소<br>우린 <br>우리가 되겠지요 <br><br>오늘 하루 당신의 시선으로 <br>세상을 바라보는 하루 되었으면 합니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #0066cc;\">나를 이해하기위해서라도, 타인을 이해하기 위해서라도 나의 생각과 관념에서 벗어날 필요가 있는것 같습니다.</div>",
             "partCategory": "2부: 증언과 성찰",
             "image": "static/images/91.jpg",
             "type": "image_top"
