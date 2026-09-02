@@ -868,7 +868,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=20241045"></script>
+    <script src="book_data.js?v=20241046"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -992,6 +992,8 @@
                             const trimmed = p.trim();
                             if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
                                 contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('<h') || trimmed.startsWith('<ul') || trimmed.startsWith('<ol') || trimmed.startsWith('<div')) {
+                                contentHTML += trimmed;
                             } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
                                 let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
                                 bqText = bqText.replace(/\n/g, '<br>');
@@ -1018,6 +1020,8 @@
                             const trimmed = p.trim();
                             if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
                                 contentHTML += `<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">${p}</div>`;
+                            } else if (trimmed.startsWith('<h') || trimmed.startsWith('<ul') || trimmed.startsWith('<ol') || trimmed.startsWith('<div')) {
+                                contentHTML += trimmed;
                             } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
                                 let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
                                 bqText = bqText.replace(/\n/g, '<br>');
