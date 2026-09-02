@@ -210,6 +210,7 @@
                 }
             }
             updateBookmarkButton();
+            setTimeout(() => updateControls(), 100);
         }
 function getChapterMaxColumns(chapterIndex) {
             const pageEls = document.querySelectorAll('.page-content');
@@ -650,12 +651,14 @@ function getChapterMaxColumns(chapterIndex) {
                 }
             }
             updateBookmarkButton();
+            setTimeout(() => updateControls(), 100);
         });
 
         function saveProgress() {
             localStorage.setItem('JJournal_savedChapter', currentChapter);
             localStorage.setItem('JJournal_savedColumn', currentColumn);
             updateBookmarkButton();
+            setTimeout(() => updateControls(), 100);
         }
 
         
@@ -686,6 +689,7 @@ function getChapterMaxColumns(chapterIndex) {
             }
             localStorage.setItem('JJournal_bookmarks_v2', JSON.stringify(bookmarks));
             updateBookmarkButton();
+            setTimeout(() => updateControls(), 100);
         }
 
         function updateBookmarkButton() {
