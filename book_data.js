@@ -179,6 +179,11 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 1-1] 거울 앞의 건축가",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>도면을 그릴 때 우리는 종종 전지전능한 창조주의 착각에 빠집니다.</p><p style='margin-bottom:20px; line-height:1.9;'>하지만 선을 하나 그을 때마다 가장 먼저 베이는 것은 우리 자신의 얄팍한 밑천입니다. 당신은 스스로의 한계를 어디까지 인정할 수 있습니까?</p>"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "외로움",
@@ -233,6 +238,11 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 1-2] 고독이라는 연료",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>현장에서 칭찬받는 순간보다, 모두가 떠난 밤 빈 사무실에서 도면과 마주할 때 진짜 성장이 일어납니다.</p><p style='margin-bottom:20px; line-height:1.9;'>이 고독을 견디지 못하면 건축은 한낱 기술로 전락하고 맙니다.</p>"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "난 슬픔과 기쁨에 반응이 둔한편이다",
@@ -285,6 +295,11 @@ var bookData = {
             "partCategory": "2부: 증언과 성찰",
             "image": "static/images/user_18.jpg",
             "type": "image_top"
+        },
+        {
+            "type": "text_only",
+            "title": "[성찰 1-3] 가면을 벗는 시간",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>'전문가'라는 완장. 그것은 때로 우리의 가장 큰 약점을 가리는 방패가 됩니다.</p><p style='margin-bottom:20px; line-height:1.9;'>그 방패를 내려놓고 '모르겠다'고 말할 수 있는 용기. 나의 취약함을 인정하는 그 순간이 바로 진짜 실력의 시작점입니다.</p>"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -394,6 +409,11 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 2-1] 보이지 않는 욕망 읽기",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>건축주가 말하는 '좋은 공간'의 이면에는 차마 말하지 못한 결핍과 불안이 숨어 있습니다.</p><p style='margin-bottom:20px; line-height:1.9;'>우리는 그저 귀로 듣는 자가 아니라, 상대의 그 굳게 닫힌 마음을 해독해 내는 자가 되어야 합니다.</p>"
+        },
+        {
             "type": "image_top",
             "title": "선 긋기와 인생: 전체로 볼 때 직선이면 족하다",
             "text": "인생의 목표에 너무 정조준하며 일직선으로만 가겠다고 살진 않았으면 좋겠다. 약간은 운을 바라며 설렁설렁, 흔들흔들 앞으로만 나아가면 된다. \n일직선이라는 똑바름이 목표가 되다 보면 정말 엉뚱한 방향으로 가기도 한다.\n\n선 긋기도 가까이서 보면 흔들흔들인데, 전체로 볼 때 직선인 게 좋다. 조금은 흔들흔들해도 괜찮다. 순간순간 흔들려도 괜찮다. 포기만 하지 않는다면, 중심을 잡고 있다면 괜찮다.",
@@ -448,6 +468,11 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 2-2] 적이 아닌 파트너",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>시공사의 억지스러운 핑계도, 인허가권자의 깐깐한 잣대도 결국 무사히 건물을 세우기 위한 '다른 방식의 책임감'일 때가 많습니다.</p><p style='margin-bottom:20px; line-height:1.9;'>그들의 입장에 1분만 서보는 순간, 갈등은 놀랍게도 해법으로 바뀝니다.</p>"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "'조은 슈퍼'",
@@ -500,6 +525,11 @@ var bookData = {
             "partCategory": "2부: 증언과 성찰",
             "image": "static/images/sketch_essay_drinks_1786666913149.jpg",
             "type": "image_top"
+        },
+        {
+            "type": "text_only",
+            "title": "[성찰 2-3] 감정의 흡수재",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>수많은 이해관계자들의 뾰족한 짜증과 막연한 불안을 온몸으로 받아내는 감정 노동.</p><p style='margin-bottom:20px; line-height:1.9;'>이것이야말로 AI와 로봇이 수백 년이 지나도 절대 흉내 낼 수 없는, 인간 건축가만의 가장 고귀하고도 지난한 업무입니다.</p>"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -608,6 +638,11 @@ var bookData = {
             "partCategory": "2부: 증언과 성찰"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 3-1] 땅이 들려주는 이야기",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>모니터 속 3D 모델의 대지는 완벽하게 평평하고 깨끗합니다. 하지만 현실의 땅은 수십 년의 상처와 기억을 품고 있습니다.</p><p style='margin-bottom:20px; line-height:1.9;'>대지가 품고 있는 이 고유한 지층을 무시한 설계는 땅에 대한 폭력에 가깝습니다.</p>"
+        },
+        {
             "type": "text",
             "title": "",
             "text": "빛이 쏟아지는 주차장, 100년의 기억을 품은 덮개 공원. 이런 복합적인 입체 공간은 결코 한 명의 설계자가 펜 끝으로 감당할 수 있는 성질의 것이 아니다. 공적인 손길이 세심하게 닿아야 하고, 설계자에게 충분한 설계비가 부여되어야 하며, 아이디어를 숙성시킬 절대적인 시간과 에너지가 투여되어야 한다. 구조, 설비, 조명, 조경 등 각 분야의 최고 전문가들이 한자리에 모여 머리를 맞대고 치열하게 고민해야만 비로소 풀 수 있는 문제다.\n\n그 복잡한 실타래 속에서 전문가들을 지휘하고 공간의 철학을 잃지 않도록 중심을 잡아주는 '코디네이터(Coordinator)'. 그것이 진짜 건축가가 해야 할 역할이다. 하지만 당장 우리에게 모여 있는 척박한 인력과 인프라만으로는 이 거대한 생태계를 조율해 내기에 현실적인 한계를 마주하곤 한다.",
@@ -662,6 +697,11 @@ var bookData = {
             "partCategory": "2부: 증언과 성찰"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 3-2] 변수라는 스승",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>우리는 내 마음대로 통제할 수 없는 '돌발 변수'를 만났을 때 비로소 진정한 창의성을 발휘합니다.</p><p style='margin-bottom:20px; line-height:1.9;'>갑작스러운 비바람, 지하에서 튀어나온 암반, 분노한 이웃의 민원… 이 골치 아픈 불청객들이 사실은 건물을 더 단단하게 만들어 주는 숨은 스승들입니다.</p>"
+        },
+        {
             "type": "cover",
             "title": "내가 생각하는 디자인이란?",
             "partCategory": "2부: 증언과 성찰",
@@ -711,6 +751,11 @@ var bookData = {
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "2부: 증언과 성찰"
+        },
+        {
+            "type": "text_only",
+            "title": "[성찰 3-3] 머리와 손끝의 시차",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>에어컨 나오는 사무실에서의 완벽한 기하학이 뙤약볕 아래 현장 반장님의 투박한 손끝에서 번역되는 과정.</p><p style='margin-bottom:20px; line-height:1.9;'>그 사이에서 필연적으로 발생하는 오차와 삐걱거림을, 오히려 유연하고 아름다운 변주곡으로 만들어내는 것이 현장의 진짜 묘미입니다.</p>"
         },
         {
             "type": "text",
@@ -765,6 +810,11 @@ var bookData = {
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "2부: 증언과 성찰"
+        },
+        {
+            "type": "text_only",
+            "title": "[성찰 3-4] 타협의 미학",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>모든 것을 내가 처음 기획한 대로 완벽하게 짓는 것은 현실에서 불가능합니다.</p><p style='margin-bottom:20px; line-height:1.9;'>덜 중요한 것을 기꺼이 과감하게 내어주고, 가장 중요한 본질 하나만큼은 끝까지 목숨 걸고 지켜내는 것. 그것이 현장이 우리에게 요구하는 타협의 미학입니다.</p>"
         },
         {
             "type": "text",
@@ -954,6 +1004,11 @@ var bookData = {
             "partCategory": "2부: 증언과 성찰"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 4-1] 사람과 시스템의 결합",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>우리가 도입한 AI와 시스템은 차갑고 오차 없이 정확하지만, 그것을 다루는 우리의 손은 여전히 따뜻하고 흔들리며 불완전합니다.</p><p style='margin-bottom:20px; line-height:1.9;'>그 차가운 논리와 뜨거운 인간성이 부딪치며 서로를 보완할 때, 현장에서는 비로소 기적이 일어납니다.</p>"
+        },
+        {
             "type": "image_top",
             "title": "페이퍼 아키텍트의 불안과 진짜 설계의 무게",
             "image": "static/images/63.jpg",
@@ -1008,6 +1063,11 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "text_only",
+            "title": "[성찰 4-2] 미완성이 주는 희망",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>완벽하지 않은 사람들이 모여, 흙먼지를 뒤집어쓰고 끊임없이 부딪히고 깨지며 무언가를 끝내 빚어내는 과정.</p><p style='margin-bottom:20px; line-height:1.9;'>그 처절하고도 숭고한 미완성의 몸부림이야말로, 우리가 이 고된 건축의 길을 떠나지 못하고 사랑할 수밖에 없는 이유입니다.</p>"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "설계를 하다보면 페이퍼 아키텍쳐라는...",
@@ -1060,6 +1120,11 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "2부: 증언과 성찰"
+        },
+        {
+            "type": "text_only",
+            "title": "[성찰 4-3] 여백을 채우는 힘",
+            "text": "<p style='margin-bottom:20px; line-height:1.9;'>나의 부족한 1%를 저 밉상인 상대방의 1%가 채워주고, 도면의 실수를 현장의 반장님이 웃으며 덮어줄 때.</p><p style='margin-bottom:20px; line-height:1.9;'>우리는 이것을 '공유결합'이라 부르고, 마음속으로는 '연대'라고 읽습니다. 결국 남는 것은 건물보다도, 함께 비를 맞았던 사람입니다.</p>"
         },
         {
             "part": "4부: 증언과 성찰",
