@@ -1,68 +1,13 @@
 const fs = require('fs');
-const indexPath = 'index.html';
+let html = fs.readFileSync('index.html', 'utf8');
 
-let content = fs.readFileSync(indexPath, 'utf8');
+// Fix .page-text-flow overflow: hidden;
+html = html.replace(/\.page-text-flow\s*\{\s*display:\s*block;\s*overflow:\s*hidden;\s*\}/, '.page-text-flow { display: block; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }');
 
-// Replace the max-width and aspect-ratio logic
-let cssAdd = `
-        /* ===== Mobile Responsive Adjustments ===== */
-        @media (max-width: 768px) {
-            .book-container {
-                max-width: 100vw !important;
-                aspect-ratio: auto !important;
-                height: 100dvh !important;
-                border-radius: 0 !important;
-            }
-            .page-content {
-                padding: 15% 6% 25% 6% !important; /* more padding bottom for nav */
-            }
-            p.body-text {
-                font-size: 16px !important;
-                line-height: 1.7 !important;
-            }
-            .page-content.philosophy-mode p.body-text {
-                font-size: 16px !important;
-                line-height: 1.8 !important;
-            }
-            /* When landscape on mobile */
-            @media (orientation: landscape) {
-                .book-container {
-                    height: 100dvh !important;
-                }
-                .page-content {
-                    padding: 5% 5% 15% 5% !important;
-                    column-count: 2;
-                    column-gap: 40px;
-                }
-                .page-text-flow {
-                    column-count: 2 !important;
-                }
-                p.body-text {
-                    font-size: 15px !important;
-                }
-            }
-        }
-        
-        /* Adjust for landscape orientation in general (tablets) */
-        @media (max-height: 500px) and (orientation: landscape) {
-            .book-container {
-                max-width: 100vw !important;
-                aspect-ratio: auto !important;
-                height: 100dvh !important;
-            }
-            .page-content {
-                padding: 5% 8% 15% 8% !important;
-                column-count: 2;
-                column-gap: 40px;
-            }
-        }
-`;
+// Make sure .page-content can scroll
+html = html.replace(/\.page-content\s*\{\s*overflow-y:\s*auto;\s*overflow-x:\s*hidden;\s*\}/, '.page-content { overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }');
 
-// Insert before </style> in the head
-content = content.replace(/(<\/style>\s*<\/head>)/i, cssAdd + "\n$1");
+// Force version bump again
+html = html.replace(/v=20241100/g, 'v=20241101');
 
-// Also make the default book-container a bit more readable on desktop
-content = content.replace(/max-width: 90vh;/g, 'max-width: min(90vh, 800px);');
-
-fs.writeFileSync(indexPath, content, 'utf8');
-console.log("CSS injected.");
+fs.writeFileSync('index.html', html, 'utf8');

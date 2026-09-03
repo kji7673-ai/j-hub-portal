@@ -242,7 +242,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "title": "구겨진 도면",
-            "text": "이리저리 <br>움직여 본다.<br>바스락거리며<br>움직임 따라<br>간지럽히는 소리를 내고,<br>손안에 거미줄 치듯 <br>작은 상처로 <br>말을 걸지만.<br>여리디여린 너는<br>원래 그랬던 것처럼,<br>이리저리 희롱당한 것을 <br>오히려 자랑하듯 <br>수없이 반짝이는<br>조각을 자랑하듯. <br>그렇게 <br>그렇게 구겨져 <br>결국엔 버려지는구나.",
+            "text": "<p style=\"text-align: center; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px;\">\n손안에서<br>\n이리저리 움직여 본다.<br><br>\n\n바스락거리며<br>\n내 손의 움직임 따라<br>\n나를 간지럽히며, 내는 소리,<br>\n내 손안에 거미줄 치듯 작은 상처로 내게 말을 걸지만.<br><br>\n\n여리디여린 너는 원래 그랬던 것처럼,<br>\n이리저리 희롱당한 것을 오히려 자랑하듯<br><br>\n\n수없이 반짝이는 조각을 자랑하듯.<br>\n그렇게 그렇게 구겨져<br><br>\n\n결국엔 버려지는구나.\n</p>\n\n<blockquote>\n<strong>[저자의 메모]</strong><br>\n사실 이 글은, 어느 날 손안에 남은 얇은 사탕 포장지를 이리저리 쥐었다 폈다 하며 썼던 글입니다. 구겨지고 상처 입으면서도 반짝이는 그 종이 쪼가리가, 어쩌면 나란 사람과 참 닮아있구나 싶어 씁쓸함을 삼켰던 기억이 납니다.\n</blockquote>",
             "image": "static/images/sketch_breakdown_1786666491945.jpg",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
             "type": "image_top"
