@@ -865,7 +865,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241109"></script>
+    <script src="book_data.js?v=20241110"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -897,7 +897,7 @@
                         currentChapter = index;
                         currentColumn = 0;
                         renderCurrentChapter();
-                        document.getElementById('toc-modal').style.display = 'none';
+                        closeTOC();
                     };
                     tocList.appendChild(li);
                 }
@@ -1075,10 +1075,16 @@
         }
         
         function openTOC() {
-            document.getElementById('toc-modal').style.display = 'flex';
+            const modal = document.querySelector('.toc-modal');
+            const overlay = document.querySelector('.toc-overlay');
+            if(modal) modal.classList.add('active');
+            if(overlay) overlay.classList.add('active');
         }
         function closeTOC() {
-            document.getElementById('toc-modal').style.display = 'none';
+            const modal = document.querySelector('.toc-modal');
+            const overlay = document.querySelector('.toc-overlay');
+            if(modal) modal.classList.remove('active');
+            if(overlay) overlay.classList.remove('active');
         }
 
 
