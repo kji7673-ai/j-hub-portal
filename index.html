@@ -865,7 +865,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241115"></script>
+    <script src="book_data.js?v=20241116"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -938,6 +938,39 @@
                 contentHTML += '</div>';
                 pageEl.innerHTML = contentHTML;
             }
+            
+            else if (page.type === 'poem') {
+                pageEl.className += ' page-poem';
+                let contentHTML = '';
+                if (page.image) {
+                    contentHTML += `<img src="${page.image}" class="poem-image-bg" alt="poem background">`;
+                }
+                contentHTML += `<div class="poem-content">`;
+                if (page.title) contentHTML += `<h2>${page.title}</h2>`;
+
+                let mainText = page.text || "";
+                let noteText = '';
+                if (mainText.includes('<blockquote>')) {
+                    const bqStart = mainText.indexOf('<blockquote>');
+                    const bqEnd = mainText.indexOf('</blockquote>') + 13;
+                    noteText = mainText.substring(bqStart + 12, bqEnd - 13);
+                    mainText = mainText.substring(0, bqStart) + mainText.substring(bqEnd);
+                }
+
+                // Strip our old manual inline styles
+                mainText = mainText.replace(/<div[^>]*>/gi, '').replace(/<\/div>/gi, '');
+                mainText = mainText.replace(/<p[^>]*>/gi, '').replace(/<\/p>/gi, '');
+                mainText = mainText.trim();
+
+                contentHTML += `<div>${mainText}</div>`;
+
+                if (noteText) {
+                    contentHTML += `<blockquote class="poem-note">${noteText.trim()}</blockquote>`;
+                }
+                contentHTML += `</div>`;
+                pageEl.innerHTML = contentHTML;
+            }
+
             else {
                 pageEl.className += ' page-text-flow page-layout';
                 if(page.image) contentHTML += '<div class="image-container" id="img-container-'+currentChapter+'" style="max-width: 800px; width: 90%; margin-bottom: 45px;"><img src="'+page.image+'" alt="sketch"></div>';
