@@ -10,7 +10,8 @@ var bookData = {
         {
             "type": "author_profile",
             "image": "static/images/sketch_philosophy_1786665818552.jpg",
-            "text": ""
+            "text": "(주)진양엔지니어링건축사사무소 대표이사",
+            "title": "김중일 건축사"
         },
         {
             "type": "image_top",
