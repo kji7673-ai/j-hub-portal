@@ -976,9 +976,6 @@
                     let fontSize = isLongText ? '1.05em' : '1.2em';
                     let textAlign = isLongText ? 'left' : 'center';
                     let pStyle = 'font-size:' + fontSize + '; font-weight:400; color:#444; max-width:600px; line-height:1.8; text-align:' + textAlign + '; white-space: pre-wrap; word-break: keep-all;';
-                    // We also convert 
- to <br> safely just in case white-space isn't enough, but pre-wrap is usually fine.
-                    // Actually, let's just use a div with pre-wrap
                     contentHTML += '<div style="' + pStyle + '">' + pText + '</div>';
                 }
                 contentHTML += '</div>';
