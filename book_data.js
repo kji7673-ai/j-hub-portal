@@ -577,7 +577,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "난 둔한 사람입니다",
-            "text": "전 둔한 사람입니다.<br>어떤 이는<br>침착하다고 말하지만,<br><br>사실 몸도 마음도 둔하여<br>슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>보통의 경우는<br>이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>이미 지나간 것들이<br>지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>다른 이는 현재의 시간인데<br>나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>현재 기쁨의 순간에<br>찾아온 과거의 슬픔에<br><br>난 어느 시점에 나의 중심을 둘지 몰라<br><br>그냥 멍하니 있습니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\"제발, 이상한 인간만은 되지 말자.\"<br><br>겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠다.</div><br><div style=\"margin-top: 40px;\"><br> <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 한 박자 늦게 걷는 사람</h4><br> <img src=\"static/images/dull_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br> <img src=\"static/images/dull_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br></div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n전 둔한 사람입니다.<br>\n어떤 이는<br>\n침착하다고 말하지만,<br><br>\n사실 몸도 마음도 둔하여<br>\n슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>\n둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>\n보통의 경우는<br>\n이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>\n이미 지나간 것들이<br>\n지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>\n다른 이는 현재의 시간인데<br>\n나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>\n현재 기쁨의 순간에<br>\n찾아온 과거의 슬픔에<br><br>\n난 어느 시점에 나의 중심을 둘지 몰라<br><br>\n그냥 멍하니 있습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n<strong>\"제발, 이상한 인간만은 되지 말자.\"</strong><br><br>\n겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠다.\n</blockquote>\n<div style=\"margin-top: 60px; text-align: center;\">\n<h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f;\">[조형물] 한 박자 늦게 걷는 사람</h4>\n<img src=\"static/images/dull_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n<img src=\"static/images/dull_2.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/sketches/113.jpg",
             "type": "poem"
@@ -613,7 +613,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "거짓이 진실을 만났을 때",
-            "text": "자신이 거짓인지 모른 상태에서, <br>진실을 만남으로 자신의 거짓됨을 알게된 경우 <br><br>자신이 거짓인지 알고 있는 상태에서, <br>진실을 만남으로 자신의 거짓됨이 알려질 경우 <br><br>스스로는 알겠지. <br><br>자신이 살아 온 삶이 후 한번 불어버리면 <br>날아갈 만큼 가볍다는 것을<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">하루를 조금은 무겁게 살아가자<br>쉽게 날아가버리는 하루의 삶이 되지 않도록</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n하루를 조금은 무겁게 살아가자.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/user_39.jpg",
             "type": "image_top"
@@ -622,7 +622,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "십원짜리",
-            "text": "어릴 적에 십원짜리 동전을 보면 맘이 편해졌다<br>앞면에 10이라는 숫자와 뒷면의 다보탑<br>특히 다보탑의 안정적인 비례감이 편안함을 준다<br>동전의 둥그란 테두리 안에 자리잡은 모습을 볼때면,<br>내가 그 안 있는듯한 느낌을 받았다<br>나는 십원짜리 동전이 좋고,<br>내가 십원짜리가 되어본적도있다<br>나의 첫 배역이 십원짜리였다<br>교도소에서 사용되는 은어로<br>십년 복역자를 가리킨다<br>십원짜리<br>그들의 언어로는 잘 살아봐야<br>백원밖에 안되는 껌값인생이란 말이다<br>너나 나나 별거없다는 것인데~<br>그말을 인정하고 싶지가 않네<br>그래도 뭔가가 있지싶은데<br>그것이 뭘까?<br>오늘도 찾아보다 안되면 만들어보자",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어릴 적에 십원짜리 동전을 보면 맘이 편해졌다.<br>\n앞면에 10이라는 숫자와 뒷면의 다보탑<br>\n특히 다보탑의 안정적인 비례감이 편안함을 준다.<br>\n동전의 둥그런 테두리 안에 자리잡은 모습을 볼 때면,<br>\n내가 그 안 있는 듯한 느낌을 받았다.<br><br>\n나는 십원짜리 동전이 좋고,<br>\n내가 십원짜리가 되어본 적도 있다.<br><br>\n나의 첫 배역이 십원짜리였다.<br>\n교도소에서 사용되는 은어로<br>\n십년 복역자를 가리킨다.<br><br>\n십원짜리.<br>\n그들의 언어로는 잘 살아봐야<br>\n백원밖에 안되는 껌값 인생이란 말이다.<br><br>\n너나 나나 별거 없다는 것인데~<br>\n그 말을 인정하고 싶지가 않네.<br><br>\n그래도 뭔가가 있지 싶은데<br>\n그것이 뭘까?<br><br>\n오늘도 찾아보다 안 되면 만들어보자.\n</p>\n</div>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/sketches/12.jpg",
             "type": "poem"
@@ -631,7 +631,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "선을",
-            "text": "그리며 살아간다<br>흰 종이위에<br>한 선을 그었다<br>애초에 긋지않았다면<br>모르겠지만<br>이미 종이 위 선은 그려졌고<br>이제 바라는것은<br>그 선이 서로를 묶는<br>울타리가 되거나<br>서로를 연결하는 선이 되었으면 좋겠다<br>혹 구분짓는<br>선이 되더라도<br>혹 어긋나는<br>선이 생기더라도<br>회피하지말고<br>그 위에 더 여러번<br>또 다른 선을 그려가며<br>그렇게 다듬어갔으면 좋겠다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그리며 살아간다<br>\n흰 종이 위에<br>\n한 선을 그었다.<br><br>\n애초에 긋지 않았다면<br>\n모르겠지만<br>\n이미 종이 위 선은 그려졌고<br><br>\n이제 바라는 것은<br>\n그 선이 서로를 묶는<br>\n울타리가 되거나<br>\n서로를 연결하는 선이 되었으면 좋겠다.<br><br>\n혹 구분 짓는<br>\n선이 되더라도<br>\n혹 어긋나는<br>\n선이 생기더라도<br><br>\n회피하지 말고<br>\n그 위에 더 여러 번<br>\n또 다른 선을 그려가며<br>\n그렇게 다듬어갔으면 좋겠다.\n</p>\n</div>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/user_66.jpg",
             "type": "image_top"
@@ -640,7 +640,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "말과 마음의 사이",
-            "text": "'어!' 하면 '아!' 하고 아는 사이.<br>말이 아닌 마음을 알아채 버립니다.<br>그래서 말이 더 어려워집니다.<br>말을 하기 앞서 마음이 먼저 앞서야 합니다.<br>말을 들어도, 말을 해도<br>느낌이 없을 때가 있습니다.<br>혼란스럽습니다.<br>말이 먼저인지,<br>마음이 먼저인지.",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n'어!' 하면 '아!' 하고 아는 사이.<br><br>\n말이 아닌 마음을 알아채 버립니다.<br>\n그래서 말이 더 어려워집니다.<br><br>\n말을 하기 앞서 마음이 먼저 앞서야 합니다.<br><br>\n말을 들어도, 말을 해도<br>\n느낌이 없을 때가 있습니다.<br><br>\n혼란스럽습니다.<br>\n말이 먼저인지,<br>\n마음이 먼저인지.\n</p>\n</div>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/user_25.jpg",
             "type": "poem"
