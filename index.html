@@ -777,7 +777,7 @@
 
 
     <!-- TOC Floating Button -->
-    <button class="icon-btn toc-btn" title="목차 보기" style="position:fixed; top:20px; right:20px; z-index:1500; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border:1px solid #e0e0e0; border-radius:50%; width:48px; height:48px; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; display:flex; justify-content:center; align-items:center; transition:all 0.2s;">
+    <button class="icon-btn toc-btn" onclick="openTOC()" title="목차 보기" style="position:fixed; top:20px; right:20px; z-index:1500; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border:1px solid #e0e0e0; border-radius:50%; width:48px; height:48px; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; display:flex; justify-content:center; align-items:center; transition:all 0.2s;">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
 
@@ -854,7 +854,7 @@
     <div class="toc-modal">
         <div class="toc-header">
             <h2>목차</h2>
-            <button class="icon-btn close-toc-btn">
+            <button class="icon-btn close-toc-btn" onclick="closeTOC()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
         </div>
@@ -862,10 +862,10 @@
             <!-- Dynamically populated -->
         </div>
     </div>
-    <div class="toc-overlay"></div>
+    <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241108"></script>
+    <script src="book_data.js?v=20241109"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
