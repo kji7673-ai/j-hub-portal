@@ -163,10 +163,10 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "난 약한 사람입니다",
-            "text": "작은 바람에도 부르르 떨고 휘청입니다<br>덩치는 큰 놈이<br>지 몸 생각도 않고 온 몸을 떨고 있습니다<br><br>시간 따라 이 바람도 지나가길 기대하며<br><br>그렇게 휘청입니다.<br><br>어쩌면 좋습니까?<br><br>작은 지지대라도 있으면 이러지 않을까 싶지만,<br><br>작은 산들바람인데 태풍 맞은 것처럼 휘청이니<br><br>내가 이상한가 봅니다<br><br>조금만 더 자연스레 받아들이면 좋았을 텐데<br><br>이젠 그냥 이게 원래 나구나 싶어,<br>더 속으로 움츠러듭니다<br><br>이런저런 핑계로<br>오늘의 날 감싸지만<br>결국은<br>내가 자라지 못했기에 작은 바람에도 죽을 듯 온 몸을 휘청이나 봅니다<br><br>그런가 봅니다.",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n난 약한 사람입니다<br><br>\n난 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n내가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은<br>\n내가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
             "image": "static/images/user_sketch_6.jpg",
             "partCategory": "1부. 설계의 본질 – 공유결합",
-            "type": "image_top"
+            "type": "poem"
         },
         {
             "type": "bridge",
