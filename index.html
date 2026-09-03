@@ -964,11 +964,23 @@
                 let bgStyle = page.image ? 'background: url('+page.image+') center center / cover no-repeat;' : 'background: #f5f5f7;';
                 
                 contentHTML += `<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 10% 8%; ${bgStyle}">`;
+                let isLongText = pText.length > 150;
+                let overlayAlpha = isLongText ? '0.90' : '0.7';
                 if((page.type === 'cover' || page.type === 'author_profile' || page.type === 'interlude') && page.image) {
-                    contentHTML += '<div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.7); z-index:-1;"></div>';
+                    contentHTML += '<div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,' + overlayAlpha + '); z-index:-1;"></div>';
                 }
+                
                 contentHTML += '<h1 style="font-size:2.5em; font-weight:800; margin-bottom:20px; letter-spacing:-0.5px; line-height:1.2;">' + rawTitle + '</h1>';
-                if(pText) contentHTML += '<p style="font-size:1.2em; font-weight:400; color:#555; max-width:80%; line-height:1.6;">' + pText + '</p>';
+                
+                if(pText) {
+                    let fontSize = isLongText ? '1.05em' : '1.2em';
+                    let textAlign = isLongText ? 'left' : 'center';
+                    let pStyle = 'font-size:' + fontSize + '; font-weight:400; color:#444; max-width:600px; line-height:1.8; text-align:' + textAlign + '; white-space: pre-wrap; word-break: keep-all;';
+                    // We also convert 
+ to <br> safely just in case white-space isn't enough, but pre-wrap is usually fine.
+                    // Actually, let's just use a div with pre-wrap
+                    contentHTML += '<div style="' + pStyle + '">' + pText + '</div>';
+                }
                 contentHTML += '</div>';
                 pageEl.innerHTML = contentHTML;
             }
