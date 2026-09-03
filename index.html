@@ -657,7 +657,72 @@
             60% { transform: translateY(-5px) translateX(-50%); }
         }
 
-</style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+        .page-poem {
+            background-color: #fcfbf9 !important; /* Warm analog paper */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 80px 20px;
+            font-family: 'Nanum Myeongjo', 'Batang', serif !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-poem .poem-image-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 600px;
+            opacity: 0.15 !important; /* Faded watermark */
+            z-index: 0;
+            pointer-events: none;
+            filter: grayscale(100%) contrast(120%);
+        }
+        .page-poem .poem-content {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            line-height: 2.6 !important;
+            font-size: 1.15em;
+            color: #2c2c2c;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            word-break: keep-all;
+        }
+        .page-poem h2 {
+            font-family: 'Nanum Myeongjo', serif !important;
+            text-align: center !important;
+            font-size: 1.6em !important;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 50px !important;
+            letter-spacing: 1px;
+            border-left: none !important; /* Remove the weird vertical bar */
+            padding-left: 0 !important;
+        }
+        .page-poem blockquote.poem-note {
+            margin-top: 80px !important;
+            padding: 30px !important;
+            border: none !important;
+            border-top: 1px solid rgba(0,0,0,0.1) !important;
+            background: transparent !important;
+            font-size: 0.85em !important;
+            color: #888 !important;
+            text-align: left !important;
+            line-height: 1.8 !important;
+            font-family: 'SF Pro Text', -apple-system, sans-serif !important;
+            font-style: normal !important;
+            border-radius: 0 !important;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -865,7 +930,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241116"></script>
+    <script src="book_data.js?v=20241117"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
