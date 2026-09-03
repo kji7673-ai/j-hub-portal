@@ -487,7 +487,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "그렇게 하실 것 같습니다.",
-            "text": "그렇게 하실 것 같습니다. <br><br>계속 아파하실 것 같습니다 <br>그렇게 <br><br>계속 사랑하실 것 같습니다 <br>그렇게 <br><br>계속 살아가실 것 같습니다 <br><br>과연 그럴까 <br>당신은 고정된 사람아닐 것 같습니다 <br><br>다르게 살아가실 수 있습니다 <br>그렇게",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그렇게 하실 것 같습니다.<br><br>\n계속 아파하실 것 같습니다<br>\n그렇게<br><br>\n계속 사랑하실 것 같습니다<br>\n그렇게<br><br>\n계속 살아가실 것 같습니다<br><br>\n과연 그럴까<br>\n당신은 고정된 사람이 아닐 것 같습니다.<br><br>\n다르게 살아가실 수 있습니다.<br>\n그렇게\n</p>\n</div>",
             "image": "static/images/sketches/107.jpg",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "type": "image_top"
@@ -496,7 +496,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "사람을 이용할 때",
-            "text": "가장 효과적인 방법은<br>공포심이야<br>그래서<br>종교가 지옥을 만들었지~<br>-로빈훗 영화 대사중에서<br>: 권력을 잡기위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달한다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취한다.<br>별것없는 땅에 선을<br>하나 긋는다.<br>처음엔 선은 선일뿐이였는데,<br>그 선이 경계가 되고, 내 영역 남의 영역으로<br>구분되어, 서로 치고받고 싸운다<br>내 맘에 생기는 선들도<br>매일같이 지우고 지워야한다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋는다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸운다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 한다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달한다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취한다.\n</blockquote>",
             "image": "static/images/sketches/108.jpg",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "type": "poem"
@@ -505,7 +505,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "타인의 시선을 공유한다는것은",
-            "text": "타인의 기쁨을 함께할 수 있어 좋지만,<br>기쁨 만큼이나 아픔도 함께하게된다<br>함께한시간과 함께할 시간속에<br>서로에게 겹쳐지는 부분이 있다<br>이를 두려워 홀로있어서는 안된다<br>우린 나눔으로 더 안정화되어야한다<br>분자의 결합처럼<br>그렇게 살아가고싶다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 된다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있다.<br><br>\n이를 두려워 홀로 있어서는 안 된다.<br>\n우린 나눔으로 더 안정화되어야 한다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶다.\n</p>\n</div>",
             "partCategory": "2부. 생각하고, 표현하고, 교감하다",
             "image": "static/images/sketches/109.jpg",
             "type": "image_top"
