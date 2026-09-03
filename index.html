@@ -865,7 +865,7 @@
     <div class="toc-overlay"></div>
 
 
-    <script src="book_data.js?v=20241107"></script>
+    <script src="book_data.js?v=20241108"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1066,6 +1066,21 @@
         }
 
         window.onload = renderBook;
+
+        let bookmarks = JSON.parse(localStorage.getItem('JJournal_bookmarks_v2') || '[]');
+        
+        function saveProgress() {
+            localStorage.setItem('JJournal_savedChapter', currentChapter);
+            localStorage.setItem('JJournal_savedColumn', currentColumn);
+        }
+        
+        function openTOC() {
+            document.getElementById('toc-modal').style.display = 'flex';
+        }
+        function closeTOC() {
+            document.getElementById('toc-modal').style.display = 'none';
+        }
+
 
         function openBookmarkList() {
             const container = document.getElementById('bookmark-list-container');
