@@ -126,11 +126,11 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "뇌물이 괴물이 된다",
-            "text": "뇌물의 ㄴ을 시계방향으로 180 돌리면<br>괴물이 된다<br>일단, 받으면 시간의 흐름에 곧<br>괴물이 된다<br>괴물이 될것들을<br>조심하자\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">신뢰란, 당장의 달콤한 이익과 타협하지 않는 단호함에서 출발합니다. 뇌물은 관계를 갉아먹는 독이지만, 진실된 협력은 서로를 살리는 '공유결합'의 기초가 됩니다. 현장에서 만나는 유혹들을 단호히 쳐낼 때 비로소 우리는 건물의 토대를 제대로 세울 수 있습니다.</div>",
+            "title": "뇌물은 괴물이 되어 돌아온다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 된다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아온다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</div>",
             "image": "static/images/user_02.jpg",
             "partCategory": "1부. 설계의 본질 – 공유결합",
-            "type": "image_top"
+            "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
