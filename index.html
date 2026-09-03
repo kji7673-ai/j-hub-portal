@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241154"></script>
+    <script src="book_data.js?v=20241155"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -985,6 +985,7 @@
                 if (page.title) contentHTML += `<h2 style="font-family: 'Nanum Myeongjo', serif !important; text-align: center; font-size: 1.6em; font-weight: 700; color: #1a1a1a; margin-bottom: 50px; letter-spacing: 1px; border-left: none !important; padding: 0;">${page.title}</h2>`;
 
                 let mainText = page.text || "";
+                mainText = mainText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
                 let noteText = '';
                 if (mainText.includes('<blockquote>')) {
                     const bqStart = mainText.indexOf('<blockquote>');
