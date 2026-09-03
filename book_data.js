@@ -248,6 +248,12 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "title": "만지작거리고 바스락거린다",
+            "partCategory": "제 2 부. 현장의 목소리 - 조율의 기술",
+            "type": "text",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 난 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐진다.<br><br>\n\n그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>\n\n난 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>\n\n이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 한다.<br><br>\n\n텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 내 손에 남아 나를 간지럽히며,<br>\n작은 상처를 만들어간다.<br><br>\n\n습관처럼<br>\n엄지와 검지를 서로 비벼본다.<br><br>\n\n서로가 서로를 어루만지고, 느끼며 좋아한다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,<br><br>\n\n그렇게 붙어있다 생각한 것은, 그것은 착각이네요.<br>\n엄지와 검지 사이 어느새 그 사이에<br><br>\n\n내가 버린 것들이 얇고도 투명한 막을 만들어 놓고,<br><br>\n\n서로를 부빈다 생각한 것은<br>\n서로가 아닌,<br>\n내가 만들어낸 조각난 나의 조각보.<br><br>\n\n현실은 우리를 공기도 물도 통하지 않는<br><br>\n\n서로가 다른 공간에 있음을 알리고,<br>\n함께 있다고 생각한 우리의 과거를 깨트린다.<br><br>\n\n언제나 만지작거리면 바스락거리는<br>\n그 소리와 그 감촉은<br><br>\n\n그것은 얇고도 투명한<br>\n나의 포장지, 나의 조각보.\n</p>\n</div>"
+        },
+        {
             "title": "양팔에 낀 토시",
             "partCategory": "제 2 부. 현장의 목소리 - 조율의 기술",
             "type": "text",
