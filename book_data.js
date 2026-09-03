@@ -9,7 +9,7 @@ var bookData = {
         },
         {
             "type": "author_profile",
-            "image": "static/images/sketch_philosophy_1786665818552.jpg",
+            "image": "static/images/sketches/13.jpg",
             "text": "(주)진양엔지니어링건축사사무소 대표이사",
             "title": "김중일 건축사"
         },
@@ -215,7 +215,7 @@ var bookData = {
             "type": "image_top",
             "title": "주변에 순응하라",
             "text": "유럽의 건축물은 대체로 중심축을 둔 좌우 대칭을 선호한다. 하지만 우리나라처럼 산의 능선과 길이 유기적으로 형성된 곳에서 강압적인 대칭은 부조화를 낳다. \n우리나라의 산사를 가보면, 길에서 볼 때는 바르게 서 있다가도 조금 더 걸어가 뒤돌아보면 지형에 맞춰 살짝 돌아서 있다. 이것이 우리의 정형이다. 이미 정해진 형태를 고집하는 것이 아니라, 주변을 감안하여 당연히 있을 자리에 배치하는 조화로움이다.<br><br>우리가 AI의 산출물을 다룰 때도 마찬가지다. 기계가 뱉어낸 완벽하고 기하학적인 숫자를 억지로 대지에 욱여넣을 것이 아니라, 현장의 맥락과 지형에 맞게 살짝 비틀고 순응시키는 것. 그것이 오직 인간 건축가만이 할 수 있는 조율이다.",
-            "image": "static/images/sketches/62.jpg",
+            "image": "static/images/sketches/20.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거"
@@ -275,10 +275,10 @@ var bookData = {
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거"
         },
         {
-            "type": "text_only",
+            "type": "image_top",
             "title": "[디자인 철학] 내가 생각하는 디자인 3: 공유결합(Covalent Bond), 섞이지 않고 새로워지는 것",
             "text": "**5. 공유결합(Covalent Bond): 진정한 융합의 조건**\n물과 기름은 한 그릇에 담아 힘껏 저어도 결국 분리된다. 이를 '혼합물(Mixture)'이라 부른다. 반면, 산소 원자 하나와 수소 원자 두 개가 만나 서로의 전자를 내어주고 강하게 결합하면, 불을 끄고 생명을 잉태하는 전혀 새로운 물질인 '물(H2O)'이 탄생한다. 이것이 화학에서 말하는 '공유결합(Covalent Bond)'이다. \n\n건축 설계도, 그리고 우리의 삶도 마찬가지다. \n현장에 부는 바람의 방향, 동네 주민들의 오랜 발자취, 그리고 건축가의 불완전하지만 따뜻한 직관. 이것들은 기계(AI)가 계산해 낸 차가운 용적률 및 최적의 데이터와 단순히 섞여서는(Mixture) 안 된다. 한쪽이 다른 한쪽을 지배하거나 끌려다니는 것이 아니라, 서로의 가장 핵심적인 전자(본질)를 내어주고 결합하여 **'완전히 새로운 제3의 가치'**를 창조해 내야 한다. \n\nAI 시대에 건축을 한다는 것은, 기계의 완벽한 렌더링에 내 직관을 욱여넣는 타협이 아니다. 기계의 차가운 논리에 인간의 체온이라는 전자를 공유하여 결코 끊어질 수 없는 단단한 건축물을 빚어내는 공유결합의 과정이어야 한다.\n\n이것은 비단 건축에만 국한된 이야기가 아니다. 일상에서도 우리는 끊임없이 시스템화되고 기계적인 효율을 강요받는다. 그 거대한 파도 앞에서 우리가 살아남는 법은, 기계를 거부하거나 반대로 기계의 부속품으로 전락하는 것이 아니다. 기계가 줄 수 없는 나의 고유한 감각, 실패의 경험, 사람을 향한 연민을 잃지 않고 꽉 쥔 채로, 시대의 흐름과 당당히 '공유결합'하는 것이다. 섞여서 고유의 색을 잃는 것이 아니라, 나의 본질을 내어주어 세상을 전혀 새로운 색으로 칠하는 것, 그것이 진짜 디자인이다.\n\n<br><br><div style=\"background-color: var(--canvas-parchment); padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid #333333;\" class=\"handwriting\">\n<h4 style=\"margin-top: 0; color: #1d1d1f; font-family: var(--font-display);\"><svg style=\"vertical-align: middle; margin-right: 8px;\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2a10 10 0 1 0 10 10H12V2z\"></path><path d=\"M12 12 2.1 12\"></path><path d=\"M12 12 19 4.9\"></path></svg>[아키 시냅스의 반론 (AI 에이전트의 관찰 일지)]</h4>\n저(AI)는 수천만 개의 설계 데이터를 학습하여 '정답'에 가장 가까운 확률을 제시할 뿐, '질문'을 던질 수는 없습니다. 기계가 제시하는 뼈대에 인간의 살을 붙이는 것을 넘어, 기계와 인간이 서로의 결핍을 채워 완전히 새로운 물질로 거듭나는 '공유결합'. 그것이야말로 코딩된 알고리즘이 영원히 흉내 낼 수 없는, 오직 흙바닥에 두 발을 딛고 비를 맞아본 인간만이 할 수 있는 위대한 연금술입니다.\n</div></div>",
-            "image": "static/images/sketch_philosophy_1786665818552.jpg",
+            "image": "static/images/sketches/88.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거"
@@ -329,7 +329,7 @@ var bookData = {
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "title": "구겨진 도면",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n손안에서<br>이리저리 움직여 본다.<br><br>바스락거리며<br>내 손의 움직임 따라<br>나를 간지럽히며, 내는 소리,<br>내 손안에 거미줄 치듯 작은 상처로 내게 말을 걸지만.<br><br>여리디여린 너는 원래 그랬던 것처럼,<br>이리저리 희롱당한 것을 오히려 자랑하듯<br><br>수없이 반짝이는 조각을 자랑하듯.<br>그렇게 그렇게 구겨져<br><br>결국엔 버려지는구나.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n사실 이 글은, 어느 날 손안에 남은 얇은 사탕 포장지를 이리저리 쥐었다 폈다 하며 썼던 글입니다. 구겨지고 상처 입으면서도 반짝이는 그 종이 쪼가리가, 어쩌면 나란 사람과 참 닮아있구나 싶어 씁쓸함을 삼켰던 기억이 납니다.\n</blockquote>",
-            "image": "static/images/sketch_breakdown_1786666491945.jpg",
+            "image": "static/images/crumpled_blueprint_poem.jpg",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
             "type": "poem"
         },
@@ -367,7 +367,7 @@ var bookData = {
             "type": "image_top",
             "title": "현상설계를 진행하며",
             "text": "2009년 이전 해외 프로젝트만 하던 제가, 금융위기로 인해 한 번도 해보지 않은 아파트 정비사업 설계실장으로 입사하게 되었다. \"아파트를 해봤어야 알지?\"라는 조롱 속에서도 저를 버티게 한 것은 \"난 할 수 있다\"는 확신이었다. 자신의 한계를 미리 정하지 말고, 할 수 있다는 마음으로 설계를 하다 보면 결국은 나옵니다.\n\n![현장 스케치](static/images/47.jpg)\n\n올해도 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 진행하며 치열한 시간을 보내고 있다. 생활을 규칙적으로 유지하고, 본인의 생각을 다듬어 날카롭게 벼려내십시오.\n\n끝으로 꼭 전하고 싶은 말은, 일도 중요하지만 매일 즐겁게 사는 것이 더 중요하다는 것이다. 사람에 대한 상냥함과 사랑, 친절함을 잃지 않는 한 해가 되기를 응원한다.",
-            "image": "static/images/sketches/27.jpg",
+            "image": "static/images/sketches/125.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거"
@@ -414,7 +414,7 @@ var bookData = {
             "title": "심의전 자문받겠다해서",
             "text": "오시라 했는데,<br>봉투를 내민다<br>그냥 커피값 내시라고하고<br>일어섰다<br>좀 매우매우 자세히 봐야겠다",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
-            "image": "static/images/sketch_essay_drinks_1786666913149.jpg",
+            "image": "static/images/sketches/102.jpg",
             "type": "image_top"
         },
         {
@@ -621,7 +621,7 @@ var bookData = {
             "title": "난 둔한 사람입니다",
             "text": "전 둔한 사람입니다.<br>어떤 이는<br>침착하다고 말하지만,<br><br>사실 몸도 마음도 둔하여<br>슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>보통의 경우는<br>이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>이미 지나간 것들이<br>지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>다른 이는 현재의 시간인데<br>나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>현재 기쁨의 순간에<br>찾아온 과거의 슬픔에<br><br>난 어느 시점에 나의 중심을 둘지 몰라<br><br>그냥 멍하니 있습니다.<br><br>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\"제발, 이상한 인간만은 되지 말자.\"<br><br>겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠다.</div>\n<div style=\"margin-top: 40px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 한 박자 늦게 걷는 사람</h4>\n <img src=\"static/images/dull_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/dull_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
-            "image": "static/images/sketches/118.jpg",
+            "image": "static/images/sketches/113.jpg",
             "type": "image_top"
         },
         {
@@ -630,7 +630,7 @@ var bookData = {
             "title": "잘게 잘게 나누어 버리자",
             "text": "슬프다 아프다의 감정에 <br>칼을 댄다 <br><br>아픈건 몸이 아플때 슬픈건 맘이 아플때 <br>근데 이건 슬프지만, 슬픈게 아니다 <br>그냥 서글픈 것이지 <br>그래 잠시 관계속에서 짓눌린거다 <br><br>이런 것을 슬프다라고 생각하지말자 <br><br>칼을 대어 도려내자 잘게 잘게 해체하여 형체를 없애자 <br>사실이란 덩어리만 남아있도록 <br><br>그렇게 감정에 칼을 대자<br><br>사실이란 덩어리만 덩그러니 남도록<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">요즘 만난 사람중에 매우 낯선 표현을 한 친구가 있다. \"기저귀차고 마이크에 대고 노래 부르는 사람이 있다\" 이게 무슨 말일까 곰곰히 생각해보니, 미성숙한 사람이 자기 기분에 마이크에 대고 동네방네 자기 말 하는것을 이렇게 비유했구나 싶다. 참으로 신랄한 표현이다. 나도 혹시 기저귀 차고 막 돌아다니는 것은 아닌지 조심해야겠다.</div>",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
-            "image": "static/images/user_20.jpg",
+            "image": "static/images/sketches/104.jpg",
             "type": "image_top"
         },
         {
@@ -693,7 +693,7 @@ var bookData = {
             "title": "귀를 통해 마음으로들어간 것이",
             "text": "가끔은 가끔은 맘 속에 계속해서<br>맴돌이 할때가 있다<br>맴돌이 하다 그냥 가슴에 맺혀<br>속을 썩게한다<br>가끔 어머니께서<br>니 속은 생속이다한신 말씀이<br>넌 니 속 썩기싫어<br>들은 말에 바로 바로 반응한다는 뜻이셨구나하고<br>깨닫게된다<br>근데요<br>저도 이제는 생속을 유지할 수가없네요<br>이미 들리고 느껴지는 것들이 맴돌이하다<br>저도 어머니 맘처럼 되나봐요.<br>어쩌지요?",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거",
-            "image": "static/images/sketch_essay_drinks_1786666913149.jpg",
+            "image": "static/images/sketches/65.jpg",
             "type": "image_top"
         },
         {
@@ -882,7 +882,7 @@ var bookData = {
             "type": "image_top",
             "title": "시지프스의 언덕과 인간다움의 회복",
             "text": "우리가 다시 한번 생각해보면, 지금까지 AI를 통한 효율과 생산성 향상, 그리고 우리가 내는 보고서와 도면 자체가 우리의 존엄을 지킨다는 얘기를 했었는데, 이건 목표를 향해 끝없이 달려라 라고 하는 것 같습니다.\n\n![현장 스케치](static/images/22.jpg)\n\n제가 드리고 싶은 것은, 누군가는 뻔한 결론을 알지만 끊임없이 바위를 언덕 끝까지 올리는 것에 시지프스의 위대함이 있다고 하지만, 서글픈 위대함 같습니다. 우리 모두는 시지프스의 언덕을 미는 돌바위처럼, 좀 더 힘차게 미느냐 천천히 미느냐의 차이는 있지만 그것도 끝없이 밀 수밖에 없는 것이고, 정상에 올라갔을 때도 다시 떨어질 것이 뻔합니다. 그게 인생일 것 같습니다. 하지만 인생이 그렇다 하더라도, 시지프스의 한걸음이 가진 의미는 또 남다를 것이라 생각합니다. 그 한걸음이라 통치는 하루의 삶 속에서 너무 목표에만 얽매이지 말았으면 합니다.\n\n전 AI를 통해서 우리가 더욱 더 인간다움을 찾을 수 있는 방법이 무엇인지 생각해볼 문제입니다.",
-            "image": "static/images/user_08.jpg",
+            "image": "static/images/sketches/47.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "2부. 현장의 목소리, 공유결합의 증거"
@@ -920,7 +920,7 @@ var bookData = {
             "title": "제4장. 다시, 신발을 신다 (에필로그)",
             "text": "기술은 우리가 신는 신발을 훨씬 편하게 개선해 주었지만, 결국 어느 방향으로 걸어갈지는 여전히 사람이 결정해야 합니다.\n\n새로운 디지털 설계 도구가 의 완벽한 데이터를 제공하더라도, 건축을 최종적으로 완성하는 것은 인간의 불완전한 1%입니다. 기계와의 26년 협업에서 얻은 진짜 깨달음은, 기술이 우리를 흠결 없는 완벽한 존재로 만들어 주는 것이 아니라는 점이었습니다. 오히려 기술은 우리의 불완전함을 겸허히 받아들이게 하고, 타인에 대한 공감과 책임감이라는 기계가 할 수 없는 영역에 집중하게 함으로써 우리를 더욱 '인간다운 건축가'로 만들어 줍니다.\n\n내일 아침 현장에 가면, 저는 여전히 투박한 손으로 도면 위에 선을 긋고, 의심 가득한 조합원의 손을 잡고 설득할 것입니다. 새로운 디지털 설계 도구는 내 손가락을 대신 움직여 도면을 그려주지 않습니다. 다만, 나의 복잡한 연산을 덜어주어, 그들의 손을 맞잡고 설득할 귀중한 '인간의 시간'을 벌어줄 뿐입니다.\n\n26년 전, 현장의 진흙탕을 누비며 밑창이 다 떨어져 나갔던 그 '찢어진 운동화'의 기억이 떠오릅니다. 그때는 그저 살아남고 버티기 위해 신발 끈을 꽉 동여맸다면, 이제는 가장 날카로운 무기인 새로운 디지털 설계 도구를 등에 업고 다시 한번 먼지 묻은 신발 끈을 고쳐 맵니다.\n\n기술이 내 운동화의 닳은 밑창을 두껍게 만들어주진 못하겠지만, 적어도 내가 딛는 걸음마다 흔들리지 않는 이정표가 되어줄 것입니다. 찢어진 운동화에서 시작된 이 불완전한 여정의 끝이, 온전히 사람의 냄새로 가득 찬 공간이 되기를 기원하며 현장으로 문을 나섭니다.",
             "partCategory": "에필로그",
-            "image": "static/images/interlude_part4_clean.jpg"
+            "image": "static/images/sketches/116.jpg"
         }
     ]
 };
