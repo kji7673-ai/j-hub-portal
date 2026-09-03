@@ -1,6 +1,18 @@
 var bookData = {
     "pages": [
         {
+            "type": "image_full",
+            "title": "도면 위에 머무는 시간",
+            "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
+            "image": "static/images/1.jpg",
+            "text": ""
+        },
+        {
+            "type": "author_profile",
+            "image": "static/images/sketch_philosophy_1786665818552.jpg",
+            "text": ""
+        },
+        {
             "type": "image_top",
             "title": "프롤로그: 건축 외에는 아무것도 모르는 바보의 이야기",
             "subtitle": "",

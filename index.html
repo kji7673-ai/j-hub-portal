@@ -658,7 +658,7 @@
         }
 
 
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+        
 
         .page-poem {
             background-color: #fcfbf9 !important; /* Warm analog paper */
@@ -723,6 +723,7 @@
         }
 
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -930,7 +931,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20241118"></script>
+    <script src="book_data.js?v=20241120"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1006,12 +1007,14 @@
             
             else if (page.type === 'poem') {
                 pageEl.className += ' page-poem';
+                pageEl.style.cssText = 'background-color: #fcfbf9 !important; display: flex !important; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 120px 20px; font-family: "Nanum Myeongjo", "Batang", serif !important; position: relative; overflow-x: hidden;';
+                
                 let contentHTML = '';
                 if (page.image) {
-                    contentHTML += `<img src="${page.image}" class="poem-image-bg" alt="poem background">`;
+                    contentHTML += `<img src="${page.image}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 500px; opacity: 0.12 !important; z-index: 0; pointer-events: none; filter: grayscale(100%) contrast(120%);" alt="poem background">`;
                 }
-                contentHTML += `<div class="poem-content">`;
-                if (page.title) contentHTML += `<h2>${page.title}</h2>`;
+                contentHTML += `<div style="position: relative; z-index: 1; text-align: left; line-height: 1.9 !important; font-size: 1.15em; color: #2c2c2c; max-width: 500px; width: 100%; margin: 0 auto; word-break: keep-all;">`;
+                if (page.title) contentHTML += `<h2 style="font-family: 'Nanum Myeongjo', serif !important; text-align: center; font-size: 1.6em; font-weight: 700; color: #1a1a1a; margin-bottom: 50px; letter-spacing: 1px; border-left: none !important; padding: 0;">${page.title}</h2>`;
 
                 let mainText = page.text || "";
                 let noteText = '';
@@ -1030,7 +1033,7 @@
                 contentHTML += `<div>${mainText}</div>`;
 
                 if (noteText) {
-                    contentHTML += `<blockquote class="poem-note">${noteText.trim()}</blockquote>`;
+                    contentHTML += `<blockquote style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: left; line-height: 1.8; font-family: 'SF Pro Text', -apple-system, sans-serif; font-style: normal;">${noteText.trim()}</blockquote>`;
                 }
                 contentHTML += `</div>`;
                 pageEl.innerHTML = contentHTML;
