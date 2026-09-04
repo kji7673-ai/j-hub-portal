@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242043"></script>
+    <script src="book_data.js?v=20242044"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -984,7 +984,11 @@
 
                 // Inline top image
                 if (page.image) {
-                    contentHTML += '<img src="' + page.image + '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; margin-bottom: 40px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block;">';
+                    contentHTML += '<div style="margin-bottom: 40px; text-align: center;"><img src="' + page.image + '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block;">';
+                    if (page.caption) {
+                        contentHTML += '<p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">' + page.caption + '</p>';
+                    }
+                    contentHTML += '</div>';
                 }
 
                 if(page.title) {
@@ -999,7 +1003,7 @@
             
             pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote style="margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: \'SF Pro Text\', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">');
 
-            pText = pText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; margin: 32px auto; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">');
+            pText = pText.replace(/!\[(.*?)\]\((.*?)\)/g, '<div style="margin: 40px auto; text-align: center;"><img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>');
 
             if (!isSpecialPage) {
                 const paragraphs = pText.split('\n\n');
@@ -1046,7 +1050,28 @@
             window.scrollTo({ top: 0, behavior: 'instant' });
         }
 
-                function renderBook() {
+                
+        // Mobile Swipe Support
+        let touchstartX = 0;
+        let touchendX = 0;
+        
+        function checkDirection() {
+            if (touchendX < touchstartX - 50) nextPage();
+            if (touchendX > touchstartX + 50) prevPage();
+        }
+
+        document.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        document.addEventListener('touchend', e => {
+            // Prevent swipe if user is interacting with a horizontally scrollable element (like a table)
+            if (e.target.closest('.table-wrapper')) return;
+            touchendX = e.changedTouches[0].screenX;
+            checkDirection();
+        }, {passive: true});
+
+        function renderBook() {
             renderTOC();
             
             // Restore position if possible
