@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242035"></script>
+    <script src="book_data.js?v=20242036"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -960,7 +960,7 @@
             }
 
             
-            let isCentered = (page.type === 'cover' || page.type === 'interlude' || page.type === 'image_full' || pText.length < 200);
+            let isCentered = (page.type === 'cover' || page.type === 'interlude' || page.type === 'image_full' || (page.text || "").length < 200);
             let flexAlign = isCentered ? 'center' : 'flex-start';
             let paddingTop = isCentered ? '10%' : '120px';
 
