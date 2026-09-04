@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242033"></script>
+    <script src="book_data.js?v=20242034"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -952,8 +952,9 @@
             
             let bgHTML = '';
             if (page.image) {
-                bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / cover no-repeat;"></div>';
-                bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255, 0.65);"></div>';
+                bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -3; background: #fcfbf9;"></div>';
+                bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / contain no-repeat;"></div>';
+                bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255, 0.5);"></div>';
             } else {
                 bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
             }
@@ -966,12 +967,12 @@
             let contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + flexAlign + '; align-items:center; min-height:100%; padding: ' + paddingTop + ' 5% 120px 5%; box-sizing: border-box;">';
 
             if(page.title) {
-                contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 2px 10px rgba(255,255,255,0.9), 0 -2px 10px rgba(255,255,255,0.9);">' + page.title + '</h1>';
+                contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' + page.title + '</h1>';
             }
 
             let textAlign = (page.type === 'poem' || page.type === 'cover' || page.type === 'interlude' || page.type === 'author_profile') ? 'center' : 'left';
             
-            contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${textAlign}; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 1px 8px rgba(255,255,255,0.9), 0 -1px 8px rgba(255,255,255,0.9); font-weight: 500;">`;
+            contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${textAlign}; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
             
             let pText = page.text || "";
             pText = pText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
