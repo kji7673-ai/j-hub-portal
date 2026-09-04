@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242040"></script>
+    <script src="book_data.js?v=20242041"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1024,7 +1024,7 @@
                 contentHTML += pText;
             }
 
-            contentHTML += '</div></div>';
+            contentHTML += '<div style="height: 150px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
             pageEl.innerHTML = contentHTML;
             container.insertBefore(pageEl, navControlsEl);
 
