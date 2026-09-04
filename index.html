@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242030"></script>
+    <script src="book_data.js?v=20242032"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -969,7 +969,7 @@
             pText = pText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             
             // Update hardcoded blockquotes to frosted glass
-            pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote style="background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; font-size: 1.0em; color: #444; line-height: 1.7; border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-top: 40px; margin-bottom: 24px; text-align: left; font-weight: 500;">');
+            pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote style="margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: \'SF Pro Text\', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">');
 
             pText = pText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; margin: 32px auto; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">');
 
@@ -986,7 +986,7 @@
                     } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
                         let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
                         bqText = bqText.replace(/\n/g, '<br>');
-                        processedText += '<blockquote style="background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; font-size: 1.0em; color: #444; line-height: 1.7; border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-bottom: 24px; text-align: left; font-weight: 500;">' + bqText + '</blockquote>';
+                        processedText += '<blockquote style="margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: \'SF Pro Text\', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">' + bqText + '</blockquote>';
                     } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
                         processedText += '<p style="font-size: 1.15em; font-weight: 600; margin-top: 30px; margin-bottom: 15px; color: #1d1d1f;">' + trimmed + '</p>';
                     } else {
