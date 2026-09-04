@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242023"></script>
+    <script src="book_data.js?v=20242024"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -940,10 +940,7 @@
 
         function renderCurrentChapter() {
             const container = document.getElementById('book-container');
-            // Keep the controls div intact
             const controls = document.querySelector('.controls');
-            
-            // Remove all existing page-content
             document.querySelectorAll('.page-content').forEach(p => p.remove());
 
             const page = bookData.pages[currentChapter];
@@ -953,123 +950,59 @@
             pageEl.className = 'page-content active';
             pageEl.id = 'page-' + currentChapter;
             
-            let contentHTML = '';
+            let bgStyle = page.image ? 'background: url('+page.image+') center center / cover no-repeat fixed;' : 'background: #fcfbf9;';
+            let contentHTML = `<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 10% 5%; box-sizing: border-box; ${bgStyle}">`;
             
-            if (page.type === 'cover' || page.type === 'interlude' || page.type === 'image_full' || page.type === 'author_profile') {
-                pageEl.style.backgroundColor = '#ffffff';
-                pageEl.style.color = '#1d1d1f';
-                pageEl.style.padding = '0';
-                let rawTitle = page.title || "";
-                let pText = page.text || "";
-                let bgStyle = page.image ? 'background: url('+page.image+') center center / cover no-repeat;' : 'background: #f5f5f7;';
-                
-                contentHTML += `<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; text-align:center; padding: 10% 8%; ${bgStyle}">`;
-                let isLongText = pText.length > 150;
-                let overlayAlpha = isLongText ? '0.90' : '0.7';
-                if((page.type === 'cover' || page.type === 'author_profile' || page.type === 'interlude') && page.image) {
-                    contentHTML += '<div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,' + overlayAlpha + '); z-index:-1;"></div>';
-                }
-                
-                contentHTML += '<h1 style="font-size:2.5em; font-weight:800; margin-bottom:20px; letter-spacing:-0.5px; line-height:1.2;">' + rawTitle + '</h1>';
-                
-                if(pText) {
-                    let fontSize = isLongText ? '1.05em' : '1.2em';
-                    let textAlign = isLongText ? 'left' : 'center';
-                    let pStyle = 'font-size:' + fontSize + '; font-weight:400; color:#444; max-width:600px; line-height:1.8; text-align:' + textAlign + '; white-space: pre-wrap; word-break: keep-all;';
-                    contentHTML += '<div style="' + pStyle + '">' + pText + '</div>';
-                }
-                contentHTML += '</div>';
-                pageEl.innerHTML = contentHTML;
-            }
-            
-            else if (page.type === 'poem') {
-                pageEl.className += ' page-poem';
-                pageEl.style.cssText = 'background-color: #fcfbf9 !important; padding: 120px 20px 150px 20px; font-family: \"Nanum Myeongjo\", \"Batang\", serif !important;';
-                
-                let contentHTML = '';
-                if (page.image) {
-                    contentHTML += `<img src="${page.image}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 500px; opacity: 0.12 !important; z-index: 0; pointer-events: none; filter: grayscale(100%) contrast(120%);" alt="poem background">`;
-                }
-                contentHTML += `<div style="position: relative; z-index: 1; text-align: left; line-height: 1.9 !important; font-size: 1.15em; color: #2c2c2c; max-width: 500px; width: 100%; margin: 0 auto; word-break: keep-all;">`;
-                if (page.title) contentHTML += `<h2 style="font-family: 'Nanum Myeongjo', serif !important; text-align: center; font-size: 1.6em; font-weight: 700; color: #1a1a1a; margin-bottom: 50px; letter-spacing: 1px; border-left: none !important; padding: 0;">${page.title}</h2>`;
-
-                let mainText = page.text || "";
-                mainText = mainText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-                let noteText = '';
-                if (mainText.includes('<blockquote>')) {
-                    const bqStart = mainText.indexOf('<blockquote>');
-                    const bqEnd = mainText.indexOf('</blockquote>') + 13;
-                    noteText = mainText.substring(bqStart + 12, bqEnd - 13);
-                    mainText = mainText.substring(0, bqStart) + mainText.substring(bqEnd);
-                }
-
-                // Strip our old manual inline styles
-                mainText = mainText.replace(/<div[^>]*>/gi, '').replace(/<\/div>/gi, '');
-                mainText = mainText.replace(/<p[^>]*>/gi, '').replace(/<\/p>/gi, '');
-                mainText = mainText.trim();
-
-                contentHTML += `<div>${mainText}</div>`;
-
-                if (noteText) {
-                    contentHTML += `<div style="margin-top: 40px; padding: 20px; background-color: #f5f5f7; border-radius: 8px; color: #555555; font-size: 14px; line-height: 1.6; border-left: 3px solid #999999; font-family: 'SF Pro Text', -apple-system, sans-serif; text-align: left;">${noteText.trim()}</div>`;
-                }
-                contentHTML += `</div>`;
-                pageEl.innerHTML = contentHTML;
+            if(page.image) {
+                contentHTML += '<div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255, 0.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index:-1;"></div>';
             }
 
-            else {
-                pageEl.className += ' page-text-flow page-layout';
-                if(page.image) contentHTML += '<div class="image-container" id="img-container-'+currentChapter+'" style="max-width: 800px; width: 90%; margin-bottom: 45px;"><img src="'+page.image+'" alt="sketch"></div>';
-                if(page.title) contentHTML += '<h2 class="chapter-title" style="margin-bottom:20px;">' + page.title + '</h2>';
-                if(page.text) {
-                    let formattedText = page.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                    formattedText = formattedText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 24px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">');
-                    const paragraphs = formattedText.split('\n\n');
-                    paragraphs.forEach(p => {
-                        const trimmed = p.trim();
-                        if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
-                            contentHTML += '<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">' + p + '</div>';
-                        } else if (trimmed.startsWith('<h') || trimmed.startsWith('<ul') || trimmed.startsWith('<ol') || trimmed.startsWith('<div')) {
-                            contentHTML += trimmed;
-                        } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
-                            let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
-                            bqText = bqText.replace(/\n/g, '<br>');
-                            contentHTML += '<blockquote class="pull-quote">' + bqText + '</blockquote>';
-                        } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
-                            contentHTML += '<p class="subheading">' + trimmed + '</p>';
-                        } else {
-                            let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
-                            htmlP = htmlP.replace(/\n/g, '<br>');
-                            contentHTML += '<p class="body-text" style="line-height: 1.9; margin-bottom: 15px;">' + htmlP + '</p>';
-                        }
-                    });
-                }
-                pageEl.innerHTML = '<div class="page-inner">' + contentHTML + '</div>';
+            if(page.title) {
+                contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' + page.title + '</h1>';
             }
-            
-            // Insert before controls
-            container.insertBefore(pageEl, controls);
-            
-            // Reset scroll position to top whenever a new chapter is loaded
-            pageEl.scrollTop = 0;
 
-            updateControls();
-        }
-
-        function renderBook() {
-            renderTOC();
+            let textAlign = (page.type === 'poem' || page.type === 'cover' || page.type === 'interlude' || page.type === 'author_profile') ? 'center' : 'left';
             
-            // Restore position if possible
-            const savedChapter = localStorage.getItem('JJournal_savedChapter');
-            if (savedChapter !== null) {
-                const parsedChap = parseInt(savedChapter, 10);
-                if(!isNaN(parsedChap)) {
-                    currentChapter = Math.max(0, Math.min(parsedChap, bookData.pages.length - 1));
-                }
+            contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${textAlign}; line-height: 1.9; font-size: 1.1em; color: #333; word-break: keep-all; display: flex; flex-direction: column;">`;
+            
+            let pText = page.text || "";
+            pText = pText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Update hardcoded blockquotes to frosted glass
+            pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote style="background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; font-size: 1.0em; color: #444; line-height: 1.7; border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-top: 40px; margin-bottom: 24px; text-align: left; font-weight: 500;">');
+
+            pText = pText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; margin: 32px auto; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">');
+
+            if (page.type !== 'poem' && page.type !== 'cover' && page.type !== 'interlude' && page.type !== 'author_profile') {
+                const paragraphs = pText.split('\n\n');
+                let processedText = '';
+                paragraphs.forEach(p => {
+                    const trimmed = p.trim();
+                    if (!trimmed) return;
+                    if (trimmed.startsWith('<table') || trimmed.startsWith('<div class="custom-table"')) {
+                        processedText += '<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">' + p + '</div>';
+                    } else if (trimmed.startsWith('<h') || trimmed.startsWith('<ul') || trimmed.startsWith('<ol') || trimmed.startsWith('<div') || trimmed.startsWith('<blockquote') || trimmed.startsWith('<img')) {
+                        processedText += trimmed;
+                    } else if (trimmed.startsWith('&gt;') || trimmed.startsWith('>')) {
+                        let bqText = trimmed.replace(/^&gt;\s?/gm, '').replace(/^>\s?/gm, '');
+                        bqText = bqText.replace(/\n/g, '<br>');
+                        processedText += '<blockquote style="background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 12px; padding: 24px; font-size: 1.0em; color: #444; line-height: 1.7; border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-bottom: 24px; text-align: left; font-weight: 500;">' + bqText + '</blockquote>';
+                    } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
+                        processedText += '<p style="font-size: 1.15em; font-weight: 600; margin-top: 30px; margin-bottom: 15px; color: #1d1d1f;">' + trimmed + '</p>';
+                    } else {
+                        let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
+                        htmlP = htmlP.replace(/\n/g, '<br>');
+                        processedText += '<p style="margin-bottom: 24px;">' + htmlP + '</p>';
+                    }
+                });
+                contentHTML += processedText;
+            } else {
+                contentHTML += pText.replace(/\n/g, '<br>');
             }
-            
-            renderCurrentChapter();
-            updateBookmarkButton();
+
+            contentHTML += '</div></div>';
+            pageEl.innerHTML = contentHTML;
+            container.appendChild(pageEl);
         }
 
         function updateControls() {
