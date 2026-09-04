@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242039"></script>
+    <script src="book_data.js?v=20242040"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -966,7 +966,7 @@
                     bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
                 }
                 
-                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100%; padding: 10% 5% 15% 5%; box-sizing: border-box;">';
+                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100%; padding: 10% 5% 200px 5%; box-sizing: border-box;">';
 
                 if(page.title) {
                     contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' + page.title + '</h1>';
@@ -978,7 +978,7 @@
                 // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
                 bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
                 
-                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 100px 5% 120px 5%; box-sizing: border-box;">';
+                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 100px 5% 200px 5%; box-sizing: border-box;">';
 
                 // Inline top image
                 if (page.image) {
