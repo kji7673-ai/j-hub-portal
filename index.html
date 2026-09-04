@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242026"></script>
+    <script src="book_data.js?v=20242027"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1004,7 +1004,6 @@
             pageEl.innerHTML = contentHTML;
             
             // Insert before controls
-            const controls = document.querySelector('.controls');
             container.insertBefore(pageEl, controls);
             
             window.scrollTo(0, 0);
