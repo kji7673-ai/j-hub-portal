@@ -879,7 +879,7 @@
         
         <div class="controls">
             <button class="nav-btn" id="prev-btn" onclick="prevPage()">←</button>
-            <div class="page-number" id="page-num">1 / 10</div>
+            <div class="page-number" id="page-num"></div>
             <button class="nav-btn" id="next-btn" onclick="nextPage()">→</button>
         </div>
     </div>
@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242041"></script>
+    <script src="book_data.js?v=20242042"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1039,6 +1039,7 @@
                 document.getElementById('next-btn').style.visibility = 'visible';
             }
             
+            updateControls();
             updateBookmarkButton();
             window.scrollTo({ top: 0, behavior: 'instant' });
         }
