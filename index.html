@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242027"></script>
+    <script src="book_data.js?v=20242028"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -940,7 +940,7 @@
 
         function renderCurrentChapter() {
             const container = document.getElementById('book-container');
-            const controls = document.querySelector('.controls');
+            const navControlsEl = document.querySelector('.controls');
             document.querySelectorAll('.page-content').forEach(p => p.remove());
 
             const page = bookData.pages[currentChapter];
@@ -1004,7 +1004,7 @@
             pageEl.innerHTML = contentHTML;
             
             // Insert before controls
-            container.insertBefore(pageEl, controls);
+            container.insertBefore(pageEl, navControlsEl);
             
             window.scrollTo(0, 0);
             updateControls();
