@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242024"></script>
+    <script src="book_data.js?v=20242025"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -1003,6 +1003,22 @@
             contentHTML += '</div></div>';
             pageEl.innerHTML = contentHTML;
             container.appendChild(pageEl);
+        }
+
+                function renderBook() {
+            renderTOC();
+            
+            // Restore position if possible
+            const savedChapter = localStorage.getItem('JJournal_savedChapter');
+            if (savedChapter !== null) {
+                const parsedChap = parseInt(savedChapter, 10);
+                if(!isNaN(parsedChap)) {
+                    currentChapter = Math.max(0, Math.min(parsedChap, bookData.pages.length - 1));
+                }
+            }
+            
+            renderCurrentChapter();
+            updateBookmarkButton();
         }
 
         function updateControls() {
