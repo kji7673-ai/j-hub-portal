@@ -899,7 +899,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242038"></script>
+    <script src="book_data.js?v=20242039"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -950,39 +950,56 @@
             pageEl.className = 'page-content active';
             pageEl.id = 'page-' + currentChapter;
             
+            // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
+            let isSpecialPage = (page.type === 'cover' || page.type === 'interlude' || page.type === 'image_full' || page.type === 'poem' || page.type === 'author_profile' || (page.text || "").length < 200);
+
             let bgHTML = '';
-            if (page.image) {
-                bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -3; background: #fcfbf9;"></div>';
-                bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / contain no-repeat;"></div>';
-                bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255, 0.75);"></div>';
+            let contentHTML = '';
+            
+            if (isSpecialPage) {
+                // SPECIAL PAGE: Full background image with white overlay
+                if (page.image) {
+                    bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -3; background: #fcfbf9;"></div>';
+                    bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / contain no-repeat;"></div>';
+                    bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255, 0.75);"></div>';
+                } else {
+                    bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
+                }
+                
+                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100%; padding: 10% 5% 15% 5%; box-sizing: border-box;">';
+
+                if(page.title) {
+                    contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' + page.title + '</h1>';
+                }
+                
+                contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
+                
             } else {
+                // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
                 bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
+                
+                contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 100px 5% 120px 5%; box-sizing: border-box;">';
+
+                // Inline top image
+                if (page.image) {
+                    contentHTML += '<img src="' + page.image + '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; margin-bottom: 40px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block;">';
+                }
+
+                if(page.title) {
+                    contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:40px; letter-spacing:-0.5px; line-height:1.4; text-align:left; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' + page.title + '</h1>';
+                }
+                
+                contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; line-height: 1.9; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; font-weight: 400;">`;
             }
 
-            
-            let isCentered = (page.type === 'cover' || page.type === 'interlude' || page.type === 'image_full' || (page.text || "").length < 200);
-            let flexAlign = isCentered ? 'center' : 'flex-start';
-            let paddingTop = isCentered ? '10%' : '120px';
-
-            let contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + flexAlign + '; align-items:center; min-height:100%; padding: ' + paddingTop + ' 5% 120px 5%; box-sizing: border-box;">';
-
-            if(page.title) {
-                contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' + page.title + '</h1>';
-            }
-
-            let textAlign = (page.type === 'poem' || page.type === 'cover' || page.type === 'interlude' || page.type === 'author_profile') ? 'center' : 'left';
-            
-            contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${textAlign}; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
-            
             let pText = page.text || "";
             pText = pText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             
-            // Update hardcoded blockquotes to frosted glass
             pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote style="margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: \'SF Pro Text\', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">');
 
             pText = pText.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; margin: 32px auto; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">');
 
-            if (page.type !== 'poem' && page.type !== 'cover' && page.type !== 'interlude' && page.type !== 'author_profile') {
+            if (!isSpecialPage) {
                 const paragraphs = pText.split('\n\n');
                 let processedText = '';
                 paragraphs.forEach(p => {
@@ -997,26 +1014,33 @@
                         bqText = bqText.replace(/\n/g, '<br>');
                         processedText += '<blockquote style="margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: \'SF Pro Text\', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">' + bqText + '</blockquote>';
                     } else if (trimmed.startsWith('<strong') && trimmed.endsWith('</strong>') && trimmed.indexOf('<strong', 1) === -1) {
-                        processedText += '<p style="font-size: 1.15em; font-weight: 600; margin-top: 30px; margin-bottom: 15px; color: #1d1d1f;">' + trimmed + '</p>';
+                        processedText += '<p style="margin-bottom: 24px; font-weight: 600; color: #111;">' + trimmed + '</p>';
                     } else {
-                        let htmlP = p.replace(/\n(?=\d+\.\s)/g, '<br><br>');
-                        htmlP = htmlP.replace(/\n/g, '<br>');
-                        processedText += '<p style="margin-bottom: 24px;">' + htmlP + '</p>';
+                        processedText += '<p style="margin-bottom: 24px;">' + trimmed + '</p>';
                     }
                 });
                 contentHTML += processedText;
             } else {
-                contentHTML += pText.replace(/\n/g, '<br>');
+                contentHTML += pText;
             }
 
             contentHTML += '</div></div>';
             pageEl.innerHTML = contentHTML;
-            
-            // Insert before controls
             container.insertBefore(pageEl, navControlsEl);
+
+            if(currentChapter === 0) {
+                document.getElementById('prev-btn').style.visibility = 'hidden';
+            } else {
+                document.getElementById('prev-btn').style.visibility = 'visible';
+            }
+            if(currentChapter === bookData.pages.length - 1) {
+                document.getElementById('next-btn').style.visibility = 'hidden';
+            } else {
+                document.getElementById('next-btn').style.visibility = 'visible';
+            }
             
-            window.scrollTo(0, 0);
-            updateControls();
+            updateBookmarkButton();
+            window.scrollTo({ top: 0, behavior: 'instant' });
         }
 
                 function renderBook() {
