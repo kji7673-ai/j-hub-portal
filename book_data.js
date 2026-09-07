@@ -5,7 +5,7 @@ var bookData = {
             "title": "도면 위의 공유결합",
             "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
             "image": "static/images/bond_4.jpg",
-            "text": "\n<div style=\"margin-top: 20px;\">\n    <h2 style=\"font-size: 1.2em; color: #444; margin-bottom: 40px; font-weight: 500; word-break: keep-all; line-height: 1.6; letter-spacing: -0.3px;\">건축가의 도면 위에서 피어난,<br>차갑고도 뜨거운 사람의 기록</h2>\n    <p style=\"font-size: 1.1em; color: #111; font-weight: 700; margin: 0; letter-spacing: 1px;\">김중일 지음</p>\n</div>\n"
+            "text": ""
         },
         {
             "type": "author_profile",
