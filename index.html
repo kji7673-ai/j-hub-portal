@@ -913,7 +913,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242101"></script>
+    <script src="book_data.js?v=20242102"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -974,7 +974,7 @@
                 // SPECIAL PAGE: Full background image with white overlay
                 if (page.image) {
                     bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -3; background: #fcfbf9;"></div>';
-                    bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / contain no-repeat;"></div>';
+                    bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url(\'' + page.image + '\') center center / cover no-repeat;"></div>';
                     bgHTML += '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255, 0.75);"></div>';
                 } else {
                     bgHTML = '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
