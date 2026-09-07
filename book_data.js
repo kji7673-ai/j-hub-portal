@@ -9,8 +9,8 @@ var bookData = {
         },
         {
             "type": "author_profile",
-            "image": "static/images/author_profile.jpg",
-            "text": "(주)진양엔지니어링건축사사무소 대표이사<br><br>26년째 도면 위에서 선을 긋고, 얽히고설킨 정비사업 현장에서 수많은 사람과 부대끼며 살고 있는 평범한 '건축 쟁이'입니다. 젊은 시절엔 대단한 문화를 만들겠다는 낭만적인 꿈도 있었지만, 26년이 지난 지금은 오히려 건축이 무엇인지도 잘 모르는 상태가 된 것 같습니다.<br><br>비록 정답은 여전히 모르지만, 그래도 이제는 '이것이 나의 기준이다'라고 조심스레 말해야 할 것 같아, 오늘도 도면 앞에서 홀로 머리를 싸매는 바보입니다.",
+            "image": "static/images/sketches/13.jpg",
+            "text": "\n<div style=\"text-align: center; margin-bottom: 24px;\">\n    <img src=\"static/images/author_profile.jpg\" style=\"width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: center 20%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 3px solid #ffffff; display: inline-block;\">\n</div>\n<div style=\"text-align: center; margin-bottom: 32px;\">\n    <h2 style=\"font-size: 1.8em; font-weight: 700; color: #1d1d1f; margin-bottom: 4px;\">김중일</h2>\n    <p style=\"font-size: 1em; color: #555; margin: 0;\">(주)진양엔지니어링건축사사무소 대표이사</p>\n</div>\n<p style=\"font-size: 1.15em; line-height: 1.8; color: #222; word-break: keep-all; margin-bottom: 24px; text-align: left;\">\n26년째 도면 위에서 선을 긋고, 얽히고설킨 정비사업 현장에서 수많은 사람과 부대끼며 살고 있는 평범한 '건축 쟁이'입니다. 젊은 시절엔 대단한 문화를 만들겠다는 낭만적인 꿈도 있었지만, 26년이 지난 지금은 오히려 건축이 무엇인지도 잘 모르는 상태가 된 것 같습니다.\n</p>\n<p style=\"font-size: 1.15em; line-height: 1.8; color: #222; word-break: keep-all; margin: 0; text-align: left;\">\n비록 정답은 여전히 모르지만, 그래도 이제는 '이것이 나의 기준이다'라고 조심스레 말해야 할 것 같아, 오늘도 도면 앞에서 홀로 머리를 싸매는 바보입니다.\n</p>\n",
             "title": "김중일 건축사"
         },
         {
