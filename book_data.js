@@ -311,7 +311,7 @@ var bookData = {
         {
             "type": "interlude",
             "title": "3단계: 관계 속의 공유결합",
-            "text": "수많은 이기심과 엇갈림 속에서도,<br>결국 서로를 껴안아야만 완성되는 우리의 관계.",
+            "text": "<div style=\"text-align: center; margin: 40px auto;\">\n  <p style=\"font-size: 1.25em; line-height: 1.8; color: #1d1d1f; margin-bottom: 32px; letter-spacing: -0.3px;\">\n    수많은 이기심과 엇갈림 속에서도,<br>\n    결국 서로를 껴안아야만 완성되는 우리의 관계.\n  </p>\n\n  <div style=\"display: flex; flex-direction: column; gap: 16px; align-items: center; margin-top: 40px;\">\n    <img src=\"static/images/bond_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;\">\n    <span style=\"font-size: 13px; color: #888; display: block; margin-top: 4px; margin-bottom: 24px;\">[서로를 마주하지만 닿지 못한 엇갈림의 시간]</span>\n\n    <img src=\"static/images/bond_2.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;\">\n    \n    <img src=\"static/images/bond_3.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;\">\n    \n    <img src=\"static/images/bond_4.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;\">\n    <span style=\"font-size: 13px; color: #888; display: block; margin-top: 4px; margin-bottom: 24px;\">[부족함을 내어주고 서로를 껴안아 비로소 완성된, 관계의 공유결합]</span>\n  </div>\n</div>",
             "partCategory": "2부. 삶의 뼈대: 현장의 공유결합",
             "image": "static/images/sketches/32.jpg"
         },
