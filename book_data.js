@@ -58,7 +58,7 @@ var bookData = {
             "type": "text",
             "title": "흔들리지 않기 위한 나만의 무게 중심",
             "partCategory": "제1막: 이상과 현실의 충돌",
-            "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">과학의 세계를 상상해 보십시오. 수소(H) 원자 두 개와 산소(O) 원자 하나가 모여 H₂O, 즉 '물'이 됩니다. 서로가 가진 전자를 내어주고 교환하며 가장 안정화된 상태로 결합하는 것, 그것이 바로 공유결합입니다. 이 과정에서 폭발성 강한 수소와 불을 태우는 산소는 각자의 이질적인 뾰족함을 잃고, 세상의 갈증을 해소하는 전혀 새로운 생명수로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'공유결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 공유결합의 첫 번째 조건입니다.</p>",
+            "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '공유결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'공유결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 공유결합의 첫 번째 조건입니다.</p>",
             "image": "static/images/update_page_8.jpg"
         },
         {
@@ -347,7 +347,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "십원짜리",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어릴 적에 십원짜리 동전을 보면 맘이 편해졌다.<br>\n앞면에 10이라는 숫자와 뒷면의 다보탑<br>\n특히 다보탑의 안정적인 비례감이 편안함을 준다.<br>\n동전의 둥그런 테두리 안에 자리잡은 모습을 볼 때면,<br>\n내가 그 안 있는 듯한 느낌을 받았다.<br><br>\n나는 십원짜리 동전이 좋고,<br>\n내가 십원짜리가 되어본 적도 있다.<br><br>\n나의 첫 배역이 십원짜리였다.<br>\n교도소에서 사용되는 은어로<br>\n십년 복역자를 가리킨다.<br><br>\n십원짜리.<br>\n그들의 언어로는 잘 살아봐야<br>\n백원밖에 안되는 껌값 인생이란 말이다.<br><br>\n너나 나나 별거 없다는 것인데~<br>\n그 말을 인정하고 싶지가 않네.<br><br>\n그래도 뭔가가 있지 싶은데<br>\n그것이 뭘까?<br><br>\n오늘도 찾아보다 안 되면 만들어보자.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어릴 적에 십원짜리 동전을 보면 맘이 편해집니다.<br>\n앞면에 10이라는 숫자와 뒷면의 다보탑<br>\n특히 다보탑의 안정적인 비례감이 편안함을 줍니다.<br>\n동전의 둥그런 테두리 안에 자리잡은 모습을 볼 때면,<br>\n내가 그 안 있는 듯한 느낌을 받습니다.<br><br>\n저는 십원짜리 동전이 좋고,<br>\n제가 십원짜리가 되어본 적도 있습니다.<br><br>\n저의 첫 배역이 십원짜리였습니다.<br>\n교도소에서 사용되는 은어로<br>\n십년 복역자를 가리킵니다.<br><br>\n십원짜리.<br>\n그들의 언어로는 잘 살아봐야<br>\n백원밖에 안되는 껌값 인생이란 말입니다.<br><br>\n너나 나나 별거 없다는 것인데~<br>\n그 말을 인정하고 싶지가 않네.<br><br>\n그래도 뭔가가 있지 싶은데<br>\n그것이 뭘까?<br><br>\n오늘도 찾아보다 안 되면 만들어보자.\n</p>\n</div>",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/sketches/12.jpg",
             "type": "poem"
@@ -398,7 +398,7 @@ var bookData = {
         {
             "type": "image_top",
             "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "우리는 설계안이나 우리의 삶, 또는 인간관계에 있어서 주도적으로 만들고 있는 것일까요? 아니면 만들어져 가는 것일까요?\n\n요즘 취미로 무언가를 만들면서 느끼는 점은, 기본적인 생각과 의도는 처음 가지고 시작하지만 그 결과물에 있어서는 '원래 있어야 할 모습'에 맞게 자연스럽게 만들어져 간다는 것이다. 우리가 하는 계획도, 인생도, 본인의 의도와 다르게 진행된다고 해서 틀린 것이 아닙니다. 어쩌면 그 상황과 환경에 가장 적합하게 만들어져 가는 과정일 수 있다. 중요한 것은 변화되어 가더라도 본인 마음의 중심을 놓지 않는 것이다.",
+            "text": "우리는 설계안이나 우리의 삶, 또는 인간관계에 있어서 주도적으로 만들고 있는 것일까요? 아니면 만들어져 가는 것일까요?\n\n요즘 취미로 무언가를 만들면서 느끼는 점은, 기본적인 생각과 의도는 처음 가지고 시작하지만 그 결과물에 있어서는 '원래 있어야 할 모습'에 맞게 자연스럽게 만들어져 간다는 것이다. 우리가 하는 계획도, 인생도, 본인의 의도와 다르게 진행된다고 해서 틀린 것이 아닙니다. 어쩌면 그 상황과 환경에 가장 적합하게 만들어져 가는 과정일 수 있습니다. 중요한 것은 변화되어 가더라도 본인 마음의 중심을 놓지 않는 것입니다.",
             "image": "static/images/sketches/117.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
@@ -468,7 +468,7 @@ var bookData = {
             "type": "cover",
             "image": "static/images/sketches/33.jpg",
             "title": "제3막: 사람을 알아가는 시간",
-            "text": "상처받고 닳아가는 버팀의 시간 끝에서, 나는 타인의 슬픔을 읽고 사람의 온기를 짓는 방법을 배워간다.<br><br>진짜 공유결합은 도면이 아니라 결국 사람 사이에 있었다.",
+            "text": "상처받고 닳아가는 버팀의 시간 끝에서, 나는 타인의 슬픔을 읽고 사람의 온기를 짓는 방법을 배워갑니다.<br><br>진짜 공유결합은 도면이 아니라 결국 사람 사이에 있었습니다.",
             "partCategory": "제3막: 사람을 알아가는 시간"
         },
         {
@@ -484,7 +484,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "뇌물은 괴물이 되어 돌아온다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 된다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아온다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n\n\n<blockquote>LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 됩니다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아옵니다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n\n\n<blockquote>LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</blockquote>",
             "image": "static/images/user_02.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
@@ -511,7 +511,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "'조은 슈퍼'",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있다.<br><br>\n난 화곡동 언덕에 살고 있다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있다<br>\n그 옆에 의자도 있다.<br><br>\n낮과 밤에 잠시 모였다 흩어진다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아간다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어간다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있다.<br><br>\n난 화곡동 언덕에 살고 있습니다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있습니다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있습니다<br>\n그 옆에 의자도 있습니다.<br><br>\n낮과 밤에 잠시 모였다 흩어집니다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있습니다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아간다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있습니다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어갑니다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/116.jpg",
             "type": "poem"
@@ -538,7 +538,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "에너지의 소진으로",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있습니다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/update_page_52.jpg",
             "type": "image_top"
@@ -629,7 +629,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "사람을 이용할 때",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋는다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸운다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 한다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달한다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취한다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋는다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸웁니다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 합니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달합니다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취합니다.\n</blockquote>",
             "image": "static/images/sketches/108.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
@@ -683,7 +683,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "고상하다는 것은",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것이다.<br><br>\n마을 버스 정류장에 거울이 달려 있다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바삐 손을 움직이며, 함께하는 부부의 모습을 가만히 본다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 본다.<br><br>\n오늘 하루가<br>\n고맙다.<br>\n그리고 감사한 일이다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠다. 현재 내 눈에 보이는 것, 내가 만나는 사람과 풍경에 감정을 담자. 그러면 될 것 같다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바삐 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 내 눈에 보이는 것, 내가 만나는 사람과 풍경에 감정을 담자. 그러면 될 것 같습니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_18.jpg",
             "type": "poem"
@@ -701,7 +701,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "타인의 시선을 공유한다는것은",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 된다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있다.<br><br>\n이를 두려워 홀로 있어서는 안 된다.<br>\n우린 나눔으로 더 안정화되어야 한다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶다.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/109.jpg",
             "type": "image_top"
