@@ -243,7 +243,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "금기에 익숙해진다는 것",
-            "text": "그래서 하지않아 칭찬받는것에 익숙해져버렸다<br>힘들어도 참고 인내하는것이 칭찬받는 일이고<br>내 행동의 의미보다는 타인의 시선속에서 나를 찾기 시작했다<br>칭찬받지못하는 삶이란 잘못된 것일까?<br>칭찬이란 말은 나와 타자의 동등한 관계에서 나오는 말일까?<br>타인의 시선에 메이지 말자<br>미움받을 용기를 가져보자",
+            "text": "그래서 하지않아 칭찬받는것에 익숙해져 버렸습니다<br>힘들어도 참고 인내하는것이 칭찬받는 일이고<br>내 행동의 의미보다는 타인의 시선속에서 나를 찾기 시작했다<br>칭찬받지못하는 삶이란 잘못된 것일까?<br>칭찬이란 말은 나와 타자의 동등한 관계에서 나오는 말일까?<br>타인의 시선에 메이지 말자<br>미움받을 용기를 가져보자",
             "partCategory": "제1막: 이상과 현실의 충돌",
             "image": "static/images/update_page_63.jpg",
             "type": "image_top"
@@ -284,7 +284,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "외로움",
-            "text": "외롭지요?<br>외로움을 메우기위해<br>무언가로 채우지만<br>쉽지않네요<br>채우기위해 무언가를 집어넣지만<br>그로인해 그 깊이만 더 깊어집니다<br>채우다 채웁니다<br>문득 제가 채운 자리의 바닥이 보이지않는<br>깊은 어둠이 되어버렸을때,<br>그 깊은 깊이속에 갇혀버렸음을<br>알게됩니다<br>이제는 어쩌나 하고<br>바닥에 주저앉아 가만히 있다보면<br>바닥은 올라가고<br>어느새 제가 다시 빠질정도는 아니네하고<br>깨닫게 됩니다<br>외로울 땐<br>지나가길 기다려야 되나봅니다<br>꼭 외로움이 아닌 슬픔과 화남도<br>지나가길 기다려야 되나봅니다\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">어찌 외로움뿐이겠는가. 허기짐을 메우기 위해 끊임없이 무언가를 욱여넣는 것이나, 부족함을 채우기 위해 자꾸만 무언가를 덧붙이는 행위는 결국 근본적인 위로가 되지 못합니다. 설계도 마찬가집니다. 무언가를 계속 덧칠하는 순간 본질적인 아름다움과는 멀어지고, '이것이다'라고 강압적으로 지시하는 순간 사람들은 오히려 시선을 거둡니다. 반대로 최대한 간결하게 비워낼수록 공간은 더 많은 것을 포용할 수 있게 됩니다.<br><br>아래의 조형물들은 제가 직접 빚어 만든 것들입니다. 가슴에 사랑을 품고 있는 형태지만, 정작 그 가슴통은 텅 비어 있습니다. 억지로 무언가를 꽉 채워 넣지 않고 텅 비워두었기에, 오히려 더 크고 따뜻하게 누군가를 품어 안을 수 있지 않을까 하는 생각에서였습니다.</div>\n<div style=\"margin-top: 40px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 비어 있기에 품을 수 있는</h4>\n <img src=\"static/images/sculpture_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n",
+            "text": "외롭지요?<br>외로움을 메우기 위해<br>무언가로 채우지만<br>쉽지 않네요<br>채우기 위해 무언가를 집어넣지만<br>그로 인해 그 깊이만 더 깊어집니다<br>채우다 채웁니다<br>문득 제가 채운 자리의 바닥이 보이지않는<br>깊은 어둠이 되어버렸을때,<br>그 깊은 깊이속에 갇혀버렸음을<br>알게됩니다<br>이제는 어쩌나 하고<br>바닥에 주저앉아 가만히 있다보면<br>바닥은 올라가고<br>어느새 제가 다시 빠질정도는 아니네하고<br>깨닫게 됩니다<br>외로울 땐<br>지나가길 기다려야 되나봅니다<br>꼭 외로움이 아닌 슬픔과 화남도<br>지나가길 기다려야 되나봅니다\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">어찌 외로움뿐이겠는가. 허기짐을 메우기 위해 끊임없이 무언가를 욱여넣는 것이나, 부족함을 채우기 위해 자꾸만 무언가를 덧붙이는 행위는 결국 근본적인 위로가 되지 못합니다. 설계도 마찬가집니다. 무언가를 계속 덧칠하는 순간 본질적인 아름다움과는 멀어지고, '이것이다'라고 강압적으로 지시하는 순간 사람들은 오히려 시선을 거둡니다. 반대로 최대한 간결하게 비워낼수록 공간은 더 많은 것을 포용할 수 있게 됩니다.<br><br>아래의 조형물들은 제가 직접 빚어 만든 것들입니다. 가슴에 사랑을 품고 있는 형태지만, 정작 그 가슴통은 텅 비어 있습니다. 억지로 무언가를 꽉 채워 넣지 않고 텅 비워두었기에, 오히려 더 크고 따뜻하게 누군가를 품어 안을 수 있지 않을까 하는 생각에서였습니다.</div>\n<div style=\"margin-top: 40px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 비어 있기에 품을 수 있는</h4>\n <img src=\"static/images/sculpture_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/user_04.jpg",
             "type": "image_top"
@@ -372,7 +372,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "title": "설계하는 일에서 좋은 점은",
-            "text": "생각의 부딪침이 많다는 것이다.<br>부딪침<br>깨짐<br>이를 통한 생각의 확장<br>언제나 조심해야할 것은<br>생각의 부딪침을 자연스럽게 받아들여야한다는 것이다<br>어떤 때는 통과되기도 또는 털어버릴 때도 있겠지만, 적어도 고정된 생각을 무기로 만들어 이리 저리 흔들어대는 행동은 하지말아야한다<br>오늘도 부딪침 깨짐 그리고 확장 거리두기를 기대한다",
+            "text": "생각의 부딪침이 많다는 것입니다.<br>부딪침,<br>깨짐,<br>이를 통한 생각의 확장.<br><br>언제나 조심해야 할 것은<br>생각의 부딪침을 자연스럽게 받아들여야 한다는 것입니다.<br>어떤 때는 통과되기도, 또는 털어버릴 때도 있겠지만,<br>적어도 고정된 생각을 무기로 만들어 이리저리 흔들어대는 행동은 하지 말아야 합니다.<br><br>오늘도 부딪침, 깨짐, 그리고 확장과 거리두기를 기대합니다.",
             "image": "static/images/update_page_41.jpg",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "type": "image_top"
@@ -407,8 +407,8 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "잘게 잘게 나누어 버리자",
-            "text": "슬프다 아프다의 감정에 <br>칼을 댄다 <br><br>아픈건 몸이 아플때 슬픈건 맘이 아플때 <br>근데 이건 슬프지만, 슬픈게 아닙니다 <br>그냥 서글픈 것이지 <br>그래 잠시 관계속에서 짓눌린거다 <br><br>이런 것을 슬프다라고 생각하지말자 <br><br>칼을 대어 도려내자 잘게 잘게 해체하여 형체를 없애자 <br>사실이란 덩어리만 남아있도록 <br><br>그렇게 감정에 칼을 대자<br><br>사실이란 덩어리만 덩그러니 남도록<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">요즘 만난 사람중에 매우 낯선 표현을 한 친구가 있습니다. \"기저귀차고 마이크에 대고 노래 부르는 사람이 있다\" 이게 무슨 말일까 곰곰히 생각해보니, 미성숙한 사람이 자기 기분에 마이크에 대고 동네방네 자기 말 하는것을 이렇게 비유했구나 싶습니다. 참으로 신랄한 표현입니다. 나도 혹시 기저귀 차고 막 돌아다니는 것은 아닌지 조심해야겠습니다.</div>",
+            "title": "잘게 잘게 나누어 버리기",
+            "text": "슬프다 아프다의 감정에 <br>칼을 댑니다 <br><br>아픈건 몸이 아플때 슬픈건 맘이 아플때 <br>근데 이건 슬프지만, 슬픈 게 아닙니다 <br>그냥 서글픈 것이지요 <br>그래 잠시 관계속에서 짓눌린 것입니다 <br><br>이런 것을 슬프다라고 생각하지 말아야겠습니다 <br><br>칼을 대어 도려내자 잘게 잘게 해체하여 형체를 없애야 합니다 <br>사실이란 덩어리만 남아있도록 <br><br>그렇게 감정에 칼을 대봅니다<br><br>사실이란 덩어리만 덩그러니 남도록<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">요즘 만난 사람중에 매우 낯선 표현을 한 친구가 있습니다. \"기저귀차고 마이크에 대고 노래 부르는 사람이 있다\" 이게 무슨 말일까 곰곰히 생각해보니, 미성숙한 사람이 자기 기분에 마이크에 대고 동네방네 자기 말 하는것을 이렇게 비유했구나 싶습니다. 참으로 신랄한 표현입니다. 나도 혹시 기저귀 차고 막 돌아다니는 것은 아닌지 조심해야겠습니다.</div>",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/sketches/104.jpg",
             "type": "poem"
@@ -426,7 +426,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "선을",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그리며 살아간다<br>\n흰 종이 위에<br>\n한 선을 그었다.<br><br>\n애초에 긋지 않았다면<br>\n모르겠지만<br>\n이미 종이 위 선은 그려졌고<br><br>\n이제 바라는 것은<br>\n그 선이 서로를 묶는<br>\n울타리가 되거나<br>\n서로를 연결하는 선이 되었으면 좋겠다.<br><br>\n혹 구분 짓는<br>\n선이 되더라도<br>\n혹 어긋나는<br>\n선이 생기더라도<br><br>\n회피하지 말고<br>\n그 위에 더 여러 번<br>\n또 다른 선을 그려가며<br>\n그렇게 다듬어갔으면 좋겠다.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그리며 살아갑니다<br>\n흰 종이 위에<br>\n한 선을 그었습니다.<br><br>\n애초에 긋지 않았다면<br>\n모르겠지만<br>\n이미 종이 위 선은 그려졌고<br><br>\n이제 바라는 것은<br>\n그 선이 서로를 묶는<br>\n울타리가 되거나<br>\n서로의 마음을 엮어내는 선이 되었으면 좋겠습니다.<br><br>\n혹 구분 짓는<br>\n선이 되더라도<br>\n혹 어긋나는<br>\n선이 생기더라도<br><br>\n회피하지 말고<br>\n그 위에 더 여러 번<br>\n또 다른 선을 그려가며<br>\n그렇게 다듬어갔으면 좋겠습니다.\n</p>\n</div>",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/update_page_74.jpg",
             "type": "image_top"
@@ -435,7 +435,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "오늘을 산다는 것",
-            "text": "오늘을 느껴라로<br>언땅언하늘에<br>벌거숭이되어<br>벗겨진 피부와<br>피흐르는 혈관<br>너와 나사이를<br>그렇게 느껴<br>오늘을 느껴<br>그렇게 벗겨진 채로<br>언땅언하늘 그속에<br>오늘을 느껴<br>그렇게 오늘<br>오늘을 느끼며 살아<br>바람에 쓸리며<br>햇빛에 마르며<br>오늘을 살아<br>오늘을 느껴",
+            "text": "오늘을 느껴라로<br>언 땅, 언 하늘에<br>벌거숭이 되어<br>벗겨진 피부와<br>피흐르는 혈관<br>너와 나 사이를<br>그렇게 느껴<br>오늘을 느껴<br>그렇게 벗겨진 채로<br>언 땅, 언 하늘 그 속에<br>오늘을 느껴<br>그렇게 오늘<br>오늘을 느끼며 살아<br>바람에 쓸리며<br>햇빛에 마르며<br>오늘을 살아<br>오늘을 느껴",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/sketches/126.jpg",
             "type": "poem"
@@ -511,7 +511,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "'조은 슈퍼'",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있다.<br><br>\n난 화곡동 언덕에 살고 있습니다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있습니다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있습니다<br>\n그 옆에 의자도 있습니다.<br><br>\n낮과 밤에 잠시 모였다 흩어집니다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있습니다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아간다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있습니다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어갑니다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있습니다.<br><br>\n난 화곡동 언덕에 살고 있습니다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있습니다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있습니다<br>\n그 옆에 의자도 있습니다.<br><br>\n낮과 밤에 잠시 모였다 흩어집니다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있습니다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아갑니다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있습니다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있습니다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어갑니다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/116.jpg",
             "type": "poem"
@@ -546,8 +546,8 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "죽음이후에",
-            "text": "난 신을 만나보겠지<br>죄라는 틀속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는신을 볼지<br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br>사실 누가 알겠는가?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br>사실 누가 알겠는가?<br>그러니 믿음이 미신으로 또 맹신으로 되지는<br>말아야 겠다<br>사실 모르지 않는가?<br>아는가?<br>그럼 왜 그 모양이지?",
+            "title": "죽음 이후에",
+            "text": "난 신을 만나보겠지요.<br>죄라는 틀 속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는 신을 볼지<br><br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br><br>사실 누가 알겠습니까?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br><br>사실 누가 알겠습니까?<br>그러니 믿음이 미신으로, 또 맹신으로 되지는<br>말아야겠습니다.<br><br>사실 모르지 않습니까?<br>아십니까?<br>그럼 왜 그 모양이지요?",
             "image": "static/images/sketches/124.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
@@ -556,7 +556,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "오늘을 의지해살아갑니다",
-            "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다<br>내맘은 실에 메인 풍선같아<br>언젠가 저 하늘로 날아가 버릴것 같습니다<br>오늘이라는 실에 메여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다<br>오늘을 의지해살아갑니다<br>아픈이들도 너무많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아갈려합니다<br>지금은 나에게 주어진 시간에 충실해야합니다<br>어떤것은 헤헤거리며<br>어떤것은 잊어버리고<br>그렇게 하지않으면<br>무한히 넓어져가는 것에<br>제가 견디기 어렵습니다",
+            "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다.<br><br>내 맘은 실에 매인 풍선 같아<br>언젠가 저 하늘로 날아가 버릴 것 같습니다.<br><br>오늘이라는 실에 매여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다.<br><br>오늘을 의지해 살아갑니다.<br><br>아픈 이들도 너무 많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아가려 합니다.<br><br>지금은 저에게 주어진 시간에 충실해야 합니다.<br><br>어떤 것은 헤헤거리며<br>어떤 것은 잊어버리고<br>그렇게 하지 않으면<br>무한히 넓어져 가는 것에<br>제가 견디기 어렵습니다.",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/13.jpg",
             "type": "poem"
@@ -565,7 +565,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "침묵이란",
-            "text": "말을 하지않음이 아니라<br>말을 듣고있다는 것이다<br>우리<br>귀는 골라 듣지못한다<br>그래서<br>우린 골라 들어야한다",
+            "text": "말을 하지 않음이 아니라<br>말을 듣고 있다는 것입니다.<br><br>우리의<br>귀는 골라 듣지 못합니다.<br><br>그래서<br>우린 골라 들어야 합니다.",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/120.jpg",
             "type": "poem"
@@ -629,7 +629,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "사람을 이용할 때",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋는다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸웁니다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 합니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달합니다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취합니다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋습니다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸웁니다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 합니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달합니다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취합니다.\n</blockquote>",
             "image": "static/images/sketches/108.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
@@ -638,7 +638,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "거짓이 진실을 만났을 때",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n하루를 조금은 무겁게 살아가자.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지요.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n하루를 조금은 무겁게 살아가야겠습니다.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_39.jpg",
             "type": "image_top"
@@ -656,7 +656,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "우리가 그렇게 오늘을",
-            "text": "어제의 감정과 말에<br>오늘을 산다는것은 힘이듭니다<br>주문을 외우듯 만일 오늘 하루밖에<br>살지 못한다면 어제에 메일 필요가 없다라고<br>속으로 되뇌이지만 소용이 없습니다<br>사물은 공간에서 사라지지만<br>기억은 시간에서 사라진다했던가요?<br>그저 그렇게 흐미해질때까지 또다시 시간을<br>흘러보내고 또 흘러보내며 살아가는것이<br>우리 삶인가요?<br>혹 이미 저만큼 지나간 흐름에<br>우리 자신마저 흘려보냈다면 어쩌지요?<br>하루를 현재의<br>시간속에 산다는 것은<br>흘러내고<br>견디고<br>맞이하고<br>우리는 그렇게 오늘을 살아야되나봅니다",
+            "text": "어제의 감정과 말에<br>오늘을 산다는 것은 힘이 듭니다.<br><br>주문을 외우듯 만일 오늘 하루밖에<br>살지 못한다면 어제에 매일 필요가 없다고<br>속으로 되뇌이지만 소용이 없습니다.<br><br>사물은 공간에서 사라지지만<br>기억은 시간에서 사라진다 했던가요?<br><br>그저 그렇게 흐미해질 때까지 또다시 시간을<br>흘러보내고 또 흘러보내며 살아가는 것이<br>우리 삶인가요?<br><br>혹 이미 저만큼 지나간 흐름에<br>우리 자신마저 흘려보냈다면 어쩌지요?<br><br>하루를 현재의<br>시간 속에 산다는 것은<br>흘러내고<br>견디고<br>맞이하고<br>우리는 그렇게 오늘을 살아야 되나 봅니다.",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_sketch_3.jpg",
             "type": "poem"
@@ -665,7 +665,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "졸음이 옵니다",
-            "text": "이제 잘 시간입니다<br>저는 누우면 바로 잠이듭니다<br>깨어있는 이순간이나<br>깨어난 시간에서<br>지나온것들 속에 잊어야할것을<br>온전히 잊었으면좋겠습니다<br>어제의 기억으로 상대를<br>대하지않았으면좋겠습니다<br>오늘을 산다는것은<br>어제의 눈으로 나의<br>일상을 보지않는것이 중요합니다<br>익숙해짐으로 스쳐지나갈 소중한것들이<br>많이 있습니다<br>오늘은 시간 공간적으로 내가 온전히 나일수있는<br>영역을 만들어줍니다<br>오늘을 새롭게 느끼며 살아가야겠습니다",
+            "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>깨어난 시간에서<br>지나온 것들 속에 잊어야 할 것을<br>온전히 잊었으면 좋겠습니다.<br><br>어제의 기억으로 상대를<br>대하지 않았으면 좋겠습니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 나의<br>일상을 보지 않는 것이 중요합니다.<br><br>익숙해짐으로 스쳐 지나갈 소중한 것들이<br>많이 있습니다.<br><br>오늘은 시간, 공간적으로 내가 온전히 나일 수 있는<br>영역을 만들어 줍니다.<br><br>오늘을 새롭게 느끼며 살아가야겠습니다.",
             "image": "static/images/sketches/125.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
@@ -683,7 +683,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "고상하다는 것은",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바삐 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 내 눈에 보이는 것, 내가 만나는 사람과 풍경에 감정을 담자. 그러면 될 것 같습니다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바삐 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 내 눈에 보이는 것, 내가 만나는 사람과 풍경에 감정을 담아야겠습니다. 그러면 될 것 같습니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_18.jpg",
             "type": "poem"
@@ -719,7 +719,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "거름종이 마법이 있다",
-            "text": "보통의 거름종이는<br>오염된 물을거르거나,<br>커피를 내릴때 사용하는데,<br>이 거름종이 마법은 사람에게 적용된다<br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 한다<br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료마법이라고한다<br>자신의 감정과 상태가 몇마디로 정리되다보니<br>좀더 객관적으로 판단하게되고 사실을 사실로 받아들이게된다고한다<br>말과 침묵<br>그렇게<br>이런 마법이 필요할 때가 있다",
+            "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료 마법이라고 합니다.<br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니<br>좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/11.jpg",
             "type": "image_top"
@@ -727,8 +727,8 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "귀를 통해 마음으로들어간 것이",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 40px; display: inline-block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 한다<br><br>\n\n가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 된다<br><br>\n\n근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌지요?\n</p>\n</div>\n\n<div style=\"margin: 20px auto 40px auto; text-align: center;\">\n  <img src=\"static/images/art_wait_sketch.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;\">\n</div>\n\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;\">\n    <img src=\"static/images/art_wait_grey.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <img src=\"static/images/art_wait_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <img src=\"static/images/art_wait_glow.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이내 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>",
+            "title": "귀를 통해 마음으로 들어간 것이",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 40px; display: inline-block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있습니다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 합니다<br><br>\n\n가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 됩니다<br><br>\n\n근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다 보니<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌지요?\n</p>\n</div>\n\n<div style=\"margin: 20px auto 40px auto; text-align: center;\">\n  <img src=\"static/images/art_wait_sketch.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;\">\n</div>\n\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;\">\n    <img src=\"static/images/art_wait_grey.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <img src=\"static/images/art_wait_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <img src=\"static/images/art_wait_glow.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n    <span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이내 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/65.jpg",
             "type": "poem"
@@ -737,7 +737,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "모두들",
-            "text": "자신이 좋아하는<br>미끼를 문다<br>상대가<br>좋아하는 미끼는<br>무얼까<br>이런 생각으로<br>상대를 대하는게<br>맞겠지? 맞는가?",
+            "text": "자신이 좋아하는<br>미끼를 문다<br>상대가<br>좋아하는 미끼는<br>무얼까<br>이런 생각으로<br>상대를 대하는게<br>맞겠지요? 맞는 건가요?",
             "image": "static/images/sketches/128.jpg",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
