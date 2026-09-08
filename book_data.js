@@ -444,7 +444,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "있을 뿐",
-            "text": "웬지 책임과 삶에대한 회피가 느껴진다<br>의미 찾음의 회피 또는 무관심<br>그저라는 말을 덧붙이면 더욱 그 의미가 강해진다<br>그저 살고있을뿐입니다<br>그저 보고있을뿐입니다<br>그저. 있을뿐입니다<br>그저. 있을뿐입니다<br>이래선 살아있는게 아니다",
+            "text": "'있을 뿐'이란 말을 붙이면,<br><br>왠지 책임과 삶에 대한 회피가 느껴집니다.<br>의미 찾음의 회피,<br>또는<br>무관심.<br><br>여기에 <br>'그저'라는 말을 덧붙이면 <br>더욱 그 의미가 강해집니다.<br><br>그저 살고 있을 뿐입니다.<br>그저 보고 있을 뿐입니다.<br>그저 있을 뿐입니다.<br><br>그저 있을 뿐입니다.<br>이래선 살아 있는 게 아니란 생각이 듭니다.<br><br>오늘 하루는 '그저' 또는 '있을 뿐'이란 <br>말도, 생각조차도 하지 않게<br>그렇게 살아가려 합니다.<br><br><blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">조금은 더, 제가 하고 있는 일과 이 삶에 마음을 담아야겠습니다.<br>오늘이 어제와 같다면, 아니 어제와 똑같이 살아간다면, 어제와 오늘과 내일이 같아져 결국 정지한 것입니다.<br>살아 숨 쉬는 것이 아니라, '그저 있을 뿐'이 됩니다.</blockquote>",
             "partCategory": "제2막: 버티는 시간, 고독한 선 긋기",
             "image": "static/images/sketches/127.jpg",
             "type": "poem"
