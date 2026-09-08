@@ -491,24 +491,6 @@ var bookData = {
         },
         {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "침묵이란",
-            "text": "말을 하지않음이 아니라<br>말을 듣고있다는 것이다<br>우리<br>귀는 골라 듣지못한다<br>그래서<br>우린 골라 들어야한다",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "image": "static/images/sketches/120.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "'조은 슈퍼'",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있다.<br><br>\n난 화곡동 언덕에 살고 있다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있다<br>\n그 옆에 의자도 있다.<br><br>\n낮과 밤에 잠시 모였다 흩어진다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아간다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어간다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "image": "static/images/sketches/116.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "용역원실에서 '노동 쉼터'로",
             "text": "지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.<br>어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.<br>'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.<br>올해 제 분야는 '경관'이었습니다. 누군가 지적하겠지... 계속 기다렸습니다. <br>심의가 끝나갑니다. '굳이 말을 해야 할까? 그냥 넘어갈까? 내가 왜 심의위원을 하고 있지...'<br>이런저런 생각을 하다가, 끝내 마이크를 잡았습니다.<br>\"제가 경관 분야이긴 합니다만, 건축 부분에 대해 한 말씀 드리겠습니다. <br>지하 2층에 배치된 '용역원실', 어떤 지자체 인권위원회에서는 이를 '노동 쉼터'로 명칭을 변경할 것을 권고하고 있습니다. <br>단순히 실명을 변경하는 것만으로도 이 공간이 어떠해야 하는지를 말해주기 때문입니다. <br>노동 쉼터가, 지하 2층 주차장 구석에 자연 채광과 환기가 전혀 안 되는 공간에 있어야 합니까?<br>권고드리건대, 1층 공개공지에 면하게 배치를 하여, 이분들이 잠시나마 쉴 수 있는 작은 공간이라도 마련되기를 부탁드립니다.\"<br>용역원실이 아닌 '노동 쉼터'로 실명을 바꾸어 봅시다. <br>건축 안에서 사람을 지우지 않는 것. 그것이 진짜 설계입니다.\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n건축사는 아무래도 건축 의뢰인의 입장에서 설계를 하다 보니, 건축사로서 응당 해야 할 공적 역할을 다하지 못할 때가 있습니다.<br><br>\n이럴 경우, 심의 위원들이 그 역할을 대신 채워주어야 합니다. 도면이 법적인 기준에 맞는지 점검하는 것을 넘어, 공공의 영역에서 필요한 의견을 내주어야 하는 것이죠.<br><br>\n건축 심의란 결국 이 사회의 다양한 요소들이 어긋나지 않고 서로 맺어지게 돕는, '꼭 필요한 공유결합'을 만들어내는 과정이어야 합니다.\n</blockquote>",
@@ -527,11 +509,47 @@ var bookData = {
         },
         {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "당신의 세상은 어떤가요?",
-            "text": "당신은 어떤 세상에 있나요?<br>당신 곁에서 <br>당신의 눈으로 세상을 바라보면 좋겠습니다. <br><br>내가 느끼지못하는 기쁨과 슬픔을 <br>당신을 통해느낄 때 <br><br>우리 서로를 이해할 수 있겠지요? <br><br>당신의 세상은 어떤가요? <br>그 속에 기쁨만이 있지는않겠지만, <br>우리 서로의 시선을 갖고 바라본다면 <br><br>그때 비로소<br>우린 <br>우리가 되겠지요 <br><br>오늘 하루 당신의 시선으로 <br>세상을 바라보는 하루 되었으면 합니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">나를 이해하기위해서라도, 타인을 이해하기 위해서라도 나의 생각과 관념에서 벗어날 필요가 있는것 같습니다.</div>",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "'조은 슈퍼'",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있다.<br><br>\n난 화곡동 언덕에 살고 있다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있다<br>\n그 옆에 의자도 있다.<br><br>\n낮과 밤에 잠시 모였다 흩어진다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아간다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어간다.\n</p>\n</div>\n\n\n\n<blockquote>기억이 깃든 장소가 하나둘 사라지는 것을 볼 때마다 건축사로서 묘한 책임감을 느낍니다. 새로운 구조물을 세우는 일은 필연적으로 옛것을 허무는 과정이지만, 우리는 공간 속에 사람들의 따뜻한 기억과 새로운 삶이 조화롭게 스며들 수 있도록 설계해야 합니다. 과거의 흔적과 미래의 삶이 서로 온기를 나누는 것, 이것 역시 공간이 이루어내는 공유결합인데 말입니다.<br><br>아이러니하게도 저는 정비사업 전문가입니다. 즉, 재개발 사업지를 보면 사라져 갈 것에 마음이 많이 쓰입니다. 가끔은 사라지기 전 현재 동네의 모습을 모형으로 만들고, 사진으로 남겨서 새로 지어질 아파트 벽면에 장식을 하면 어떨까 생각해 봅니다. 사라질 것을 남겨놓는 것, 이 또한 의미가 있을 것 같습니다.</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
-            "image": "static/images/sketches/119-1.jpg",
+            "image": "static/images/sketches/116.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "말과 마음의 사이",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n'어!' 하면 '아!' 하고 아는 사이.<br><br>\n말이 아닌 마음을 알아채 버립니다.<br>\n그래서 말이 더 어려워집니다.<br><br>\n말을 하기 앞서 마음이 먼저 앞서야 합니다.<br><br>\n말을 들어도, 말을 해도<br>\n느낌이 없을 때가 있습니다.<br><br>\n혼란스럽습니다.<br>\n말이 먼저인지,<br>\n마음이 먼저인지.\n</p>\n</div>",
+            "partCategory": "제3막: 사람을 알아가는 시간",
+            "image": "static/images/user_25.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "어제 만난 그 사람을...",
+            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어제 만난 그 사람을 오늘 다시 만나게 되었습니다.<br><br>\n그에게 난 생각을 읽는 사람의 고충과 거름종이 마법의 존재를 알게 되었지요.<br>\n오늘은 그가 말하길 그곳 그들의 세상에는 말하는 나무가 있다고 합니다.<br>\n말한다는 것을 제외하고는 그곳의 나무는 이곳의 나무와 같다고 합니다.<br>\n물론 전체 나무가 다 말하는 나무는 아니라고 합니다.<br><br>\n아무튼, 나무들에게 있어서는 주변의 나무들과의 대화가 몹시 중요하다고 하네요.<br>\n왜냐하면, 그들의 대화는 그저 시간을 보내기위해 말을 하는 것이 아닌,<br>\n서로가 서로를 자라게 하기위해 대화를 한다고 합니다.<br><br>\n일단, 나무들은 최대한 귀를 기울여 상대의 말을 듣고, 묻고<br>그렇게 그들의 이야기는 끝이 없이 이어진다고 합니다.<br>\n그래서 그 곳에서는 나무가 지혜로움을 상징한다고 하네요.<br>\n그 곳에 있는 모든 사람들이 나무들의 언어를 이해할 수는 없다합니다.<br><br>\n그들의 언어를 이해하기위해선 엄청난 집중력과 인내심이 필요하기에<br>나무의 언어를 듣는 것은 소수의 사람만이 가능하다고 합니다.<br>\n대부분의 사람들이 보기엔 바람결에 나뭇잎이 흔들리는 것처럼 보이지만,<br>사실 나무들의 웃고 떠들며 나누는 대화 때문에 생긴 움직이라는 것을<br>그들은 알고 있다고 하네요.<br>\n그런 움직임이 있는 숲에서 사람들은 그들의 속삭임을 들으며,<br>휴식을 취한다고 합니다.<br><br>\n나무의 속삭임과 웃음에 숲 전체가 바람에 물결치는 것처럼<br>반짝이는 모습이 정말 좋다고 합니다.<br>\n\"와 정말 보고 싶어요\"라고 내가 말하자, 그는<br>\n\"그래요 언젠가 당신이 이 곳에 올 수도 있겠고,<br>당신의 세상에서 지금 당신이 보고 싶어하는 그 것을 볼 수도 있을 거예요\"<br>라고 했습니다.<br><br>\n저는 문득 지금 이 사람과 나누는 이 대화도<br>그곳 나무들 간의 대화 같다는 생각이 들었습니다.<br><br>\n그의 이야기를 좀더 하면,<br>그 곳의 모든 나무가 서로가 서로를 자라게 하지는 않는다고 합니다.<br>\n그 곳에서도 상대방에 대한 승리를 목적으로 대화를 나누는 나무가 있는데,<br>이런 나무는 주로 혼자 외롭게 있다고 합니다.<br>\n서로를 자라게 하지 못하니 숲을 이루지 못한다고 합니다.<br><br>\n홀로 멋있게 자라지만, 언제나 홀로 말하는<br>그러다가 시간이 흘러 나무의 언어를 잊어버려<br>정말 이 세상의 나무와 같이 말하지 못하는 나무가 되어버린다고 하네요.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"난 홀로 있다 대화하는 법을 잃어버린 나무가 되면 안될 텐데 말입니다.\"\n</blockquote>",
+            "image": "static/images/sketches/106.jpg",
+            "partCategory": "제3막: 사람을 알아가는 시간",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "에너지의 소진으로",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
+            "partCategory": "제3막: 사람을 알아가는 시간",
+            "image": "static/images/update_page_52.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "죽음이후에",
+            "text": "난 신을 만나보겠지<br>죄라는 틀속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는신을 볼지<br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br>사실 누가 알겠는가?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br>사실 누가 알겠는가?<br>그러니 믿음이 미신으로 또 맹신으로 되지는<br>말아야 겠다<br>사실 모르지 않는가?<br>아는가?<br>그럼 왜 그 모양이지?",
+            "image": "static/images/sketches/124.jpg",
+            "partCategory": "제3막: 사람을 알아가는 시간",
             "type": "poem"
         },
         {
@@ -541,6 +559,24 @@ var bookData = {
             "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다<br>내맘은 실에 메인 풍선같아<br>언젠가 저 하늘로 날아가 버릴것 같습니다<br>오늘이라는 실에 메여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다<br>오늘을 의지해살아갑니다<br>아픈이들도 너무많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아갈려합니다<br>지금은 나에게 주어진 시간에 충실해야합니다<br>어떤것은 헤헤거리며<br>어떤것은 잊어버리고<br>그렇게 하지않으면<br>무한히 넓어져가는 것에<br>제가 견디기 어렵습니다",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/sketches/13.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "침묵이란",
+            "text": "말을 하지않음이 아니라<br>말을 듣고있다는 것이다<br>우리<br>귀는 골라 듣지못한다<br>그래서<br>우린 골라 들어야한다",
+            "partCategory": "제3막: 사람을 알아가는 시간",
+            "image": "static/images/sketches/120.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "당신의 세상은 어떤가요?",
+            "text": "당신은 어떤 세상에 있나요?<br>당신 곁에서 <br>당신의 눈으로 세상을 바라보면 좋겠습니다. <br><br>내가 느끼지못하는 기쁨과 슬픔을 <br>당신을 통해느낄 때 <br><br>우리 서로를 이해할 수 있겠지요? <br><br>당신의 세상은 어떤가요? <br>그 속에 기쁨만이 있지는않겠지만, <br>우리 서로의 시선을 갖고 바라본다면 <br><br>그때 비로소<br>우린 <br>우리가 되겠지요 <br><br>오늘 하루 당신의 시선으로 <br>세상을 바라보는 하루 되었으면 합니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">나를 이해하기위해서라도, 타인을 이해하기 위해서라도 나의 생각과 관념에서 벗어날 필요가 있는것 같습니다.</div>",
+            "partCategory": "제3막: 사람을 알아가는 시간",
+            "image": "static/images/sketches/119-1.jpg",
             "type": "poem"
         },
         {
@@ -592,15 +628,6 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "어제 만난 그 사람을...",
-            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어제 만난 그 사람을 오늘 다시 만나게 되었습니다.<br><br>\n그에게 난 생각을 읽는 사람의 고충과 거름종이 마법의 존재를 알게 되었지요.<br>\n오늘은 그가 말하길 그곳 그들의 세상에는 말하는 나무가 있다고 합니다.<br>\n말한다는 것을 제외하고는 그곳의 나무는 이곳의 나무와 같다고 합니다.<br>\n물론 전체 나무가 다 말하는 나무는 아니라고 합니다.<br><br>\n아무튼, 나무들에게 있어서는 주변의 나무들과의 대화가 몹시 중요하다고 하네요.<br>\n왜냐하면, 그들의 대화는 그저 시간을 보내기위해 말을 하는 것이 아닌,<br>\n서로가 서로를 자라게 하기위해 대화를 한다고 합니다.<br><br>\n일단, 나무들은 최대한 귀를 기울여 상대의 말을 듣고, 묻고<br>그렇게 그들의 이야기는 끝이 없이 이어진다고 합니다.<br>\n그래서 그 곳에서는 나무가 지혜로움을 상징한다고 하네요.<br>\n그 곳에 있는 모든 사람들이 나무들의 언어를 이해할 수는 없다합니다.<br><br>\n그들의 언어를 이해하기위해선 엄청난 집중력과 인내심이 필요하기에<br>나무의 언어를 듣는 것은 소수의 사람만이 가능하다고 합니다.<br>\n대부분의 사람들이 보기엔 바람결에 나뭇잎이 흔들리는 것처럼 보이지만,<br>사실 나무들의 웃고 떠들며 나누는 대화 때문에 생긴 움직이라는 것을<br>그들은 알고 있다고 하네요.<br>\n그런 움직임이 있는 숲에서 사람들은 그들의 속삭임을 들으며,<br>휴식을 취한다고 합니다.<br><br>\n나무의 속삭임과 웃음에 숲 전체가 바람에 물결치는 것처럼<br>반짝이는 모습이 정말 좋다고 합니다.<br>\n\"와 정말 보고 싶어요\"라고 내가 말하자, 그는<br>\n\"그래요 언젠가 당신이 이 곳에 올 수도 있겠고,<br>당신의 세상에서 지금 당신이 보고 싶어하는 그 것을 볼 수도 있을 거예요\"<br>라고 했습니다.<br><br>\n저는 문득 지금 이 사람과 나누는 이 대화도<br>그곳 나무들 간의 대화 같다는 생각이 들었습니다.<br><br>\n그의 이야기를 좀더 하면,<br>그 곳의 모든 나무가 서로가 서로를 자라게 하지는 않는다고 합니다.<br>\n그 곳에서도 상대방에 대한 승리를 목적으로 대화를 나누는 나무가 있는데,<br>이런 나무는 주로 혼자 외롭게 있다고 합니다.<br>\n서로를 자라게 하지 못하니 숲을 이루지 못한다고 합니다.<br><br>\n홀로 멋있게 자라지만, 언제나 홀로 말하는<br>그러다가 시간이 흘러 나무의 언어를 잊어버려<br>정말 이 세상의 나무와 같이 말하지 못하는 나무가 되어버린다고 하네요.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"난 홀로 있다 대화하는 법을 잃어버린 나무가 되면 안될 텐데 말입니다.\"\n</blockquote>",
-            "image": "static/images/sketches/106.jpg",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "사람을 이용할 때",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋는다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸운다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 한다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달한다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취한다.\n</blockquote>",
             "image": "static/images/sketches/108.jpg",
@@ -615,33 +642,6 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_39.jpg",
             "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "말과 마음의 사이",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n'어!' 하면 '아!' 하고 아는 사이.<br><br>\n말이 아닌 마음을 알아채 버립니다.<br>\n그래서 말이 더 어려워집니다.<br><br>\n말을 하기 앞서 마음이 먼저 앞서야 합니다.<br><br>\n말을 들어도, 말을 해도<br>\n느낌이 없을 때가 있습니다.<br><br>\n혼란스럽습니다.<br>\n말이 먼저인지,<br>\n마음이 먼저인지.\n</p>\n</div>",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "image": "static/images/user_25.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "에너지의 소진으로",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "image": "static/images/update_page_52.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "죽음이후에",
-            "text": "난 신을 만나보겠지<br>죄라는 틀속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는신을 볼지<br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br>사실 누가 알겠는가?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br>사실 누가 알겠는가?<br>그러니 믿음이 미신으로 또 맹신으로 되지는<br>말아야 겠다<br>사실 모르지 않는가?<br>아는가?<br>그럼 왜 그 모양이지?",
-            "image": "static/images/sketches/124.jpg",
-            "partCategory": "제3막: 사람을 알아가는 시간",
-            "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -746,7 +746,7 @@ var bookData = {
             "type": "cover",
             "image": "static/images/sketches/20.jpg",
             "title": "에필로그: 도면 위의 공유결합",
-            "text": "26년. 도면 위에서 숱한 선을 그었고, 현장의 진흙탕에서 무수한 사람을 만났습니다.<br><br>처음엔 \"훌륭한 건축\"을 꿈꿨습니다. 위대한 작품, 기념비적인 건물 말입니다. 하지만 지금 깨닫는 것은, 그 모든 것이 결국 사람 사이의 신뢰에서 비롯된다는 것입니다.<br><br>공유결합이란 거창한 이론이 아니었습니다. 세상을 바라볼 나만의 확고한 기준을 세우되, 나의 불완전함을 인정하고 타인의 불완전함을 품으며, 그 둘이 함께 \"조금 나은 무언가\"를 만들어가는 과정 자체였습니다.<br><br>그 융합의 과정 속에서도 타인과의 건강한 거리를 유지하여, 끝내 훼손되지 않을 나만의 개성과 존엄을 지켜가는 것. 그것이 제가 깨달은 공유결합의 진짜 의미입니다.<br><br>이 책을 읽을 후배 건축사들에게 전하고 싶습니다. 당신의 도면이 누군가의 집이 될 것입니다. 그 무거운 책임감 앞에서 흔들리는 것은 약함이 아니라 성숙의 신호입니다.<br><br>그리고 건축과 무관한 독자분들에게 말씀드리고 싶습니다. 우리가 사는 이 세상도 건축과 같습니다. 개인의 영역 안에서 단단하게 서면서도, 밥벌이의 고단함 앞에서는 기꺼이 타인의 온기를 나눌 수 있는 사람이 되길 바랍니다.<br><br>그것이 제가 도면 위에서, 그리고 이 세상 속에서 꿈꾸는 가장 완벽한 공유결합입니다.",
+            "text": "26년. 도면 위에서 숱한 선을 그었고, 현장의 진흙탕에서 무수한 사람을 만났습니다.<br><br>처음엔 \"훌륭한 건축\"을 꿈꿨습니다. 위대한 작품, 기념비적인 건물 말입니다. 하지만 지금 깨닫는 것은, 그 모든 것이 결국 사람 사이의 신뢰에서 비롯된다는 것입니다.<br><br>공유결합이란 거창한 이론이 아니었습니다. 세상을 바라볼 나만의 확고한 기준을 세우되, 나의 불완전함을 인정하고 타인의 불완전함을 품으며, 그 둘이 함께 \"조금 나은 무언가\"를 만들어가는 과정 자체였습니다.<br><br>그 융합의 과정 속에서도 타인과의 건강한 거리를 유지하여, 끝내 훼손되지 않을 나만의 개성과 존엄을 지켜가는 것. 그것이 제가 깨달은 공유결합의 진짜 의미입니다.<br><br>이 책을 읽을 후배 건축사들에게 전하고 싶습니다. 당신의 도면이 누군가의 집이 될 것입니다. 그 무거운 책임감 앞에서 흔들리는 것은 약함이 아니라 성숙의 신호입니다.<br><br>그리고 건축과 무관한 독자분들에게 말씀드리고 싶습니다. 우리가 사는 이 세상도 건축과 같습니다. 개인의 영역 안에서 단단하게 서면서도, 밥벌이의 고단함 앞에서는 기꺼이 타인의 온기를 나눌 수 있는 사람이 되길 바랍니다.<br><br>그것이 제가 도면 위에서, 그리고 이 세상 속에서 꿈꾸는 가장 완벽한 공유결합입니다.<br><br>이 책을 읽는 누군가가, 내일 누군가를 대할 때 '저 사람의 불완전함도 내 불완전함처럼 소중한 것 아닐까'라고 생각해 준다면, 저의 26년은 헛되지 않을 것 같습니다. 도면 위에 그었던 모든 선들이, 결국 사람과 사람을 연결하는 선이 되길 바랍니다.",
             "partCategory": "에필로그"
         }
     ]
