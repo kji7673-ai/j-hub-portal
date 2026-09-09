@@ -520,7 +520,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "말과 마음의 사이",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n'어!' 하면 '아!' 하고 아는 사이.<br><br>\n말이 아닌 마음을 알아채 버립니다.<br>\n그래서 말이 더 어려워집니다.<br><br>\n말을 하기 앞서 마음이 먼저 앞서야 합니다.<br><br>\n말을 들어도, 말을 해도<br>\n느낌이 없을 때가 있습니다.<br><br>\n혼란스럽습니다.<br>\n말이 먼저인지,<br>\n마음이 먼저인지.\n</p>\n</div>",
+            "text": "굳이 입 밖으로 내어 말하지 않아도,<br>\n내 마음과 의도가 고스란히 전달될 것이라 믿었습니다.<br>\n설계도 마찬가지라 생각했는데, 그게 아니었습니다.<br>\n<br>\n건축에 필요한 말이 많아진다는 것은,<br>\n결국 '말이 필요한 건축'이 되었다는 것은<br>\n좋은 디자인은 아니라고 생각했습니다.<br>\n<br>\n왜 이해를 못하지?<br>\n<br>\n그건, 공간을 불러일으키지 못한<br>\n디자인이란 뜻입니다.<br>\n<br>\n공감 즉, 이해를 할 수 있게 디자인이 되어야 합니다.<br>\n말만으로만 설명되는 건축이 아닌,<br>\n각자가 느끼는 것을 말로 표현했을 때,<br>\n공감되는 디자인이 되어야 합니다.<br>\n<br>\n물론, 말이란 수단이 아닌<br>\n다른 것으로도 충분히 이해할 수 있는 건축이 되어야 합니다.<br>\n말은 필요하지만, 말만으로 설명되는 건축은 아직 부족하다는 것입니다.<br>\n<br>\n<blockquote>\n사람 사이의 관계는 그렇지 않은 것 같습니다.<br>\n<br>\n나의 진심과 의도는 말을 하지 않아도 전달될 것이라 봤는데,<br>\n그건 아닌 것 같습니다.<br>\n말과 더불어 나의 행동, 일관된 태도, 그리고 지난한 <strong>'시간의 흐름'</strong>이 겹겹이 쌓여야만 비로소 상대에게 가닿을 수 있습니다.<br>\n사람과의 관계에서는<br>\n내 머릿속의 생각과 마음은 결코 쉽게 전달되지 않습니다.<br>\n끝없이 증명하고 노력해야만 합니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 시간",
             "image": "static/images/user_25.jpg",
             "type": "poem"
