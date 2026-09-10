@@ -1,6 +1,11 @@
 var bookData = {
     "pages": [
         {
+            "title": "도면 위의 공유결합",
+            "image": "static/images/cover_sculpture.jpg",
+            "text": "<p style='text-align:center; color:#7a7a7a; margin-top:20px;'>건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>"
+        },
+        {
             "partCategory": "저자 소개",
             "title": "김중일",
             "text": "서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 치열한 순간들에 대한 감사의 기록입니다."
@@ -699,13 +704,6 @@ var bookData = {
             "image": "static/images/sketches/20.jpg",
             "title": "에필로그: 도면 위의 공유결합",
             "text": "제1막에서 이론을 다루고,<br>제2막에서 개인의 독립을 강조했으며,<br>제3막에서 관계의 깊이를 탐색한 끝에,<br>제4막에서 우리는 비로소 '공동체'에 다다랐습니다.<br><br>도면 위의 선들이 결국 하고 싶은 말은 이것입니다.<br><br>\"당신은 혼자가 아닙니다.<br>이 공간은 당신의 삶을 잇는 선이 되고,<br>이 건물은 우리가 함께 만드는 공유결합입니다.<br>누군가는 이 선을 따라 누군가를 만나고,<br>누군가는 이 공간에서 자신의 의미를 찾을 것입니다.\"<br><br>그렇기에 도면 위의 모든 선은<br>단순한 구조가 아니라,<br>사람과 사람을 잇는 관계의 기록이며,<br>우리가 남기는 작은 희망입니다.",
-            "partCategory": ""
-        },
-        {
-            "type": "author_profile",
-            "image": "static/images/sketches/13.jpg",
-            "text": "<div style=\"text-align: center; margin-bottom: 24px;\">\n <img src=\"static/images/author_profile.jpg\" style=\"width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: center 20%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 3px solid #ffffff; display: inline-block;\">\n</div>\n<div style=\"text-align: center; margin-bottom: 40px;\">\n <p style=\"font-size: 1.05em; color: #555; margin: 0; font-weight: 500;\">(주)진양엔지니어링건축사사무소 대표이사</p>\n</div>\n<p style=\"font-size: 1.15em; line-height: 1.8; color: #333; word-break: keep-all; margin-bottom: 24px; text-align: left;\">\n26년째 도면 위에서 선을 긋고, 얽히고설킨 정비사업 현장에서 수많은 사람과 부대끼며 살고 있는 평범한 '건축 쟁이'입니다. 젊은 시절엔 대단한 문화를 만들겠다는 낭만적인 꿈도 있었지만, 26년이 지난 지금은 오히려 건축이 무엇인지도 잘 모르는 상태가 된 것 같습니다.\n</p>\n<p style=\"font-size: 1.15em; line-height: 1. 오늘도 공간과 사람에 대한 고민을 안고 도면을 그리는 평범한 건축사입니다.\n</p>",
-            "title": "김중일 건축사",
             "partCategory": ""
         }
     ]
