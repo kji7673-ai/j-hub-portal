@@ -1,9 +1,9 @@
 var bookData = {
     "pages": [
         {
-            "title": "도면 위의 공유결합",
+            "title": "",
             "image": "",
-            "text": "\n    <div style=\"position: relative; width: 100%; height: 70vh; border-radius: 12px; overflow: hidden; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background-color: #f5f5f7;\">\n        <!-- 배경 이미지 (상단 2% 기준 고정, 하단 책상 완전 크롭) -->\n        <img src=\"static/images/cover_sculpture.jpg\" style=\"position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position: center 2%; filter: contrast(1.25) brightness(1.05);\">\n        \n        <!-- 하단 텍스트 (하얀색 그림자만 은은하게 주어 가독성 확보, 그라데이션 박스 없음) -->\n        <div style=\"position: absolute; bottom: 8%; left: 0; width: 100%; text-align: center; z-index: 2; text-shadow: 0px 2px 15px rgba(255,255,255,1), 0px 0px 8px rgba(255,255,255,0.9), 0px 0px 3px rgba(255,255,255,0.8);\">\n            <h1 style=\"font-size: 2.8em; font-weight: 800; color: #1d1d1f; margin: 0 0 10px 0; letter-spacing: -0.04em; line-height: 1.1;\">도면 위의<br>공유결합</h1>\n            <p style=\"font-size: 1.1em; font-weight: 600; color: #333; margin: 0; letter-spacing: -0.02em;\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>\n        </div>\n    </div>\n    "
+            "text": "\n    <div style=\"position: relative; width: 100%; height: 70vh; border-radius: 12px; overflow: hidden; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background-color: #f5f5f7;\">\n        <!-- 배경 이미지 -->\n        <img src=\"static/images/cover_sculpture.jpg\" style=\"position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position: center 2%; filter: contrast(1.25) brightness(1.05);\">\n        \n        <!-- 텍스트 영역 (크기 축소) -->\n        <div style=\"position: absolute; bottom: 8%; left: 0; width: 100%; text-align: center; z-index: 2; text-shadow: 0px 2px 15px rgba(255,255,255,1), 0px 0px 8px rgba(255,255,255,0.9), 0px 0px 3px rgba(255,255,255,0.8);\">\n            <h1 style=\"font-size: 2.1em; font-weight: 800; color: #1d1d1f; margin: 0 0 10px 0; letter-spacing: -0.04em; line-height: 1.1;\">도면 위의<br>공유결합</h1>\n            <p style=\"font-size: 0.95em; font-weight: 600; color: #333; margin: 0; letter-spacing: -0.02em;\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>\n        </div>\n    </div>\n    "
         },
         {
             "partCategory": "저자 소개",
