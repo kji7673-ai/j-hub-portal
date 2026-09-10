@@ -3,7 +3,7 @@ var bookData = {
         {
             "title": "도면 위의 공유결합",
             "image": "static/images/cover_sculpture.jpg",
-            "text": "<style>\n        img[src*=\"cover_sculpture\"] {\n            width: 100% !important;\n            height: 75vh !important;\n            object-fit: cover !important;\n            object-position: center 10% !important;\n            filter: contrast(1.25) brightness(1.05) !important;\n            border-radius: 12px;\n        }\n    </style>"
+            "text": "<style>\n        img[src*=\"cover_sculpture\"] {\n            width: 100% !important;\n            height: 60vh !important; /* 위아래 스크롤이 생기지 않도록 높이 고정 */\n            object-fit: cover !important;\n            object-position: center 2% !important; /* 얼굴이 있는 상단을 기준점으로 고정, 하단은 과감히 자름 */\n            filter: contrast(1.25) brightness(1.05) !important;\n            border-radius: 12px;\n            margin: 0 auto !important;\n            display: block !important;\n        }\n        /* 혹시 뷰어 자체 컨테이너에 스크롤이 있다면 숨김 처리 */\n        .swiper-slide-active { overflow: hidden !important; }\n    </style>"
         },
         {
             "partCategory": "저자 소개",
