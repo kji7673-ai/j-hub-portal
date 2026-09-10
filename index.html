@@ -1240,7 +1240,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242223"></script>
+    <script src="book_data.js?v=20242224"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -1482,17 +1482,28 @@
 
       // Mobile Swipe Support
       let touchstartX = 0;
+      let touchstartY = 0;
       let touchendX = 0;
+      let touchendY = 0;
 
       function checkDirection() {
-        if (touchendX < touchstartX - 50) nextPage();
-        if (touchendX > touchstartX + 50) prevPage();
+        let deltaX = touchendX - touchstartX;
+        let deltaY = touchendY - touchstartY;
+
+        // 세로로 더 많이 스크롤했다면 스와이프를 무시
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+          return;
+        }
+
+        if (deltaX < -50) nextPage();
+        if (deltaX > 50) prevPage();
       }
 
       document.addEventListener(
         "touchstart",
         (e) => {
           touchstartX = e.changedTouches[0].screenX;
+          touchstartY = e.changedTouches[0].screenY;
         },
         { passive: true },
       );
@@ -1500,9 +1511,9 @@
       document.addEventListener(
         "touchend",
         (e) => {
-          // Prevent swipe if user is interacting with a horizontally scrollable element (like a table)
-          if (e.target.closest(".table-wrapper")) return;
+          if (e.target.closest("td, th, table, pre, code")) return;
           touchendX = e.changedTouches[0].screenX;
+          touchendY = e.changedTouches[0].screenY;
           checkDirection();
         },
         { passive: true },
