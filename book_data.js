@@ -495,30 +495,12 @@ var bookData = {
         },
         {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "오늘을 의지해살아갑니다",
-            "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다.<br><br>내 맘은 실에 매인 풍선 같아<br>언젠가 저 하늘로 날아가 버릴 것 같습니다.<br><br>오늘이라는 실에 매여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다.<br><br>오늘을 의지해 살아갑니다.<br><br>아픈 이들도 너무 많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아가려 합니다.<br><br>지금은 저에게 주어진 시간에 충실해야 합니다.<br><br>어떤 것은 헤헤거리며<br>어떤 것은 잊어버리고<br>그렇게 하지 않으면<br>무한히 넓어져 가는 것에<br>제가 견디기 어렵습니다.",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/13.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "title": "우리 이렇게 오늘도",
             "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n나라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n나는 새로운 내가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우린 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n나라는 개체의 독립성은 나를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 나를 위하는 것이란 것을<br><br>\n나를 통한 나라는 존재는 더욱더 옅어지고<br>\n당신을 통한 나의 존재는 더욱 뚜렷해지기를.<br><br>\n살아간다는 것이 무엇일까요?<br><br>\n오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br><br>\n내가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"나라는 존재의 본질은 나를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/user_18.jpg",
             "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "우리가 그렇게 오늘을",
-            "text": "어제의 감정과 말에<br>오늘을 산다는 것은 힘이 듭니다.<br><br>주문을 외우듯 만일 오늘 하루밖에<br>살지 못한다면 어제에 매일 필요가 없다고<br>속으로 되뇌이지만 소용이 없습니다.<br><br>사물은 공간에서 사라지지만<br>기억은 시간에서 사라진다 했던가요?<br><br>그저 그렇게 흐미해질 때까지 또다시 시간을<br>흘러보내고 또 흘러보내며 살아가는 것이<br>우리 삶인가요?<br><br>혹 이미 저만큼 지나간 흐름에<br>우리 자신마저 흘려보냈다면 어쩌지요?<br><br>하루를 현재의<br>시간 속에 산다는 것은<br>흘러내고<br>견디고<br>맞이하고<br>우리는 그렇게 오늘을 살아야 되나 봅니다.",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/user_sketch_3.jpg",
-            "type": "poem"
         },
         {
             "type": "image_top",
