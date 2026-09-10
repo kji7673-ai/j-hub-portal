@@ -913,7 +913,7 @@
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
 
-    <script src="book_data.js?v=20242211"></script>
+    <script src="book_data.js?v=20242212"></script>
     <script>
         let currentChapter = 0;
         let currentColumn = 0;
@@ -987,10 +987,22 @@
                 }
                 
                 contentHTML = bgHTML + '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 15vh 5% 200px 5%; box-sizing: border-box;">';
-                contentHTML += '<div style="margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;">';
+
+                let textContainerStyle = 'margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;';
+                if (page.type === 'cover') {
+                    textContainerStyle = 'margin: auto 0 0 0; padding-bottom: 8%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;';
+                }
+                contentHTML += '<div style="' + textContainerStyle + '">';
+        
 
                 if(page.title) {
+
+                if (page.type === 'cover') {
+                    contentHTML += '<h1 style="font-size:2.4em; font-weight:800; margin-bottom:10px; letter-spacing:-0.5px; line-height:1.2; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,0.9), 0 0 5px rgba(255,255,255,0.8);">' + page.title + '</h1>';
+                } else {
                     contentHTML += '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' + page.title + '</h1>';
+                }
+        
                 }
                 
                 contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
