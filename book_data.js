@@ -41,27 +41,27 @@ var bookData = {
             "image": "static/images/update_page_9.jpg"
         },
         {
-            "type": "cover",
-            "title": "도면 위의 공유결합",
-            "subtitle": "기계가 닿을 수 없는 건축의 작은 여백에 대하여",
-            "image": "static/images/bond_4.jpg",
-            "text": "",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "type": "image_full",
-            "title": "도면 위의 공유결합",
-            "subtitle": "숫자의 무게, 인간의 여백",
-            "image": "static/images/sketches/06.jpg",
-            "text": "",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
             "type": "text",
             "title": "단단한 결합을 위한 세 가지 기둥",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "설계는 단지 도면 위에 선을 그리는 행위가 아닙니다.<br>진짜 설계는 다음의 세 가지 요소에서 출발합니다.<br><br>관계 속에서 흔들리지 않는 <strong>'나만의 기준'</strong>을 세우고 본질의 무게를 다지는 것.<br>때로는 나를 철저히 비워냄으로써, 서로 다른 이들의 투박한 언어조차 둥글게 이해하고 껴안을 수 있는 <strong>'여유'</strong>를 갖는 것.<br>그리고 거대한 욕망이 격돌하는 <strong>'진짜 현장(회의 테이블)의 이면'</strong>을 꿰뚫어 보는 것.<br><br>자신의 기준, 타인을 향한 여유, 현장을 보는 시선.<br>이 세 가지 요소가 하나로 맞물릴 때, 비로소 어떠한 외풍에도 흔들리지 않는 가장 단단한 신뢰, 즉 '공유결합'이 완성됩니다.",
             "image": "static/images/update_page_7.jpg"
+        },
+        {
+            "type": "image_top",
+            "title": "서로의 결핍을 채우는 가장 따뜻한 결합",
+            "text": "**공유결합(Covalent Bond): 진정한 융합의 조건**\n물과 기름은 한 그릇에 담아 힘껏 저어도 결국 분리됩니다. 이를 '혼합물(Mixture)'이라 부릅니다. 반면, 산소 원자 하나와 수소 원자 두 개가 만나 서로의 전자를 내어주고 강하게 결합하면, 불을 끄고 생명을 잉태하는 전혀 새로운 물질인 '물(H2O)'이 탄생합니다. 이것이 화학에서 말하는 '공유결합(Covalent Bond)'입니다.\n\n<div style=\"text-align:center; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1d1d1f\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 내어주어 제3의 생명 창조</text> </svg> </div> \n\n건축 설계도, 그리고 우리의 삶도 마찬가집니다. \n현장에 부는 바람의 방향, 동네 주민들의 오랜 발자취, 그리고 건축가의 불완전하지만 따뜻한 직관. 이것들은 기계(AI)가 계산해 낸 차가운 용적률 및 최적의 데이터와 단순히 섞여서는(Mixture) 안 됩니다. 한쪽이 다른 한쪽을 지배하거나 끌려다니는 것이 아니라, 서로의 가장 핵심적인 전자(본질)를 내어주고 결합하여 **'완전히 새로운 제3의 가치'**를 창조해 내야 합니다. \n\nAI 시대에 건축을 한다는 것은, 기계의 완벽한 렌더링에 내 직관을 욱여넣는 타협이 아닙니다. 기계의 차가운 논리에 인간의 체온이라는 전자를 공유하여 결코 끊어질 수 없는 단단한 건축물을 빚어내는 공유결합의 과정이어야 합니다.\n\n이것은 비단 건축에만 국한된 이야기가 아닙니다. 일상에서도 우리는 끊임없이 시스템화되고 기계적인 효율을 강요받습니다. 그 거대한 파도 앞에서 우리가 살아남는 법은, 기계를 거부하거나 반대로 기계의 부속품으로 전락하는 것이 아닙니다. 기계가 줄 수 없는 저의 고유한 감각, 실패의 경험, 사람을 향한 연민을 잃지 않고 꽉 쥔 채로, 시대의 흐름과 당당히 '공유결합'하는 것입니다. 섞여서 고유의 색을 잃는 것이 아니라, 저의 본질을 내어주어 세상을 전혀 새로운 색으로 칠하는 것, 그것이 진짜 디자인입니다.",
+            "image": "static/images/update_page_31.jpg",
+            "part": "2부: 철학편",
+            "partTitle": "시스템 너머의 본질",
+            "partCategory": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "type": "text",
+            "title": "신뢰가 만들어지는 현장",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "text": "<p style=\"margin-bottom: 24px;\">나, 상대, 그리고 현장.<br>이 세 가지 불완전한 요소들이 만나 비로소 하나의 완전한 결합을 이루어냅니다.<br>이것이 바로 <strong>'공유결합의 순간'</strong>입니다.</p><p style=\"margin-bottom: 24px;\">나와 타인, 그리고 현장이 부딪히며 만들어내는 에너지는 폭발적입니다. 이 결합을 묶어주는 유일한 접착제는 다름 아닌 <strong>'신뢰'</strong>입니다.<br>기계적인 계약 관계나 차가운 데이터 교환으로는 절대 만들어낼 수 없는 사람과 사람 사이의 끈끈한 연대. 신뢰가 싹트고 인간과 시스템이 결합하여 서로의 약점을 덮어줄 때, 비로소 도면은 생명을 얻고 건물이 됩니다.</p><p style=\"margin-bottom: 24px;\">이 마지막 테마에서는 앞선 모든 질문과 고민들이 어떻게 실제 현장에서 아름다운 결실(혹은 뼈아픈 교훈)로 맺어지는지 보여주는 생생한 이야기들입니다.</p><p>시스템 너머의 본질, 기계가 결코 대체할 수 없는 인간 건축가만의 고귀한 역할이 바로 이 결합을 지휘하는 데 있음을 확인하시게 될 것입니다.</p>",
+            "image": "static/images/update_page_32.jpg"
         },
         {
             "type": "bridge",
@@ -80,129 +80,19 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론"
         },
         {
-            "type": "image_top",
-            "title": "틀: 무질서를 담는 그릇",
-            "text": "**바탕의 포용력**\n동등한 것들을 무질서하게 배치하여 변화감을 주고 싶다면, 그 바탕이 변화를 수용할 수 있을 만큼 포용력이 있어야 합니다. 바탕을 단순화하고 색을 차분하게 눌러주어야 합니다.\n요즘 건축물 중에 창문의 위치가 수직/수평을 벗어나 자유롭게 흩어지거나 다양한 모양을 띠는 경우가 있습니다. 이를 성공시키려면 바탕 벽면이 일반 벽면보다 단색이어야 하고, 면의 성격이 아주 강해야 합니다. 창문의 모양보다, 그것을 품어낼 '벽면'을 어떻게 할지 더 치열하게 고민해야 합니다.\n\n영화 <악마는 프라다를 입는다>를 보십시오. 그 세련됨의 정점은 평범함이 굳건히 받쳐주고 있기에 가능합니다. \n조직도 마찬가지입니다. 재능 많은 부하직원들이 능력을 맘껏 발휘하게 하려면, 윗사람은 무색 무미 무취의 넓은 바탕이 되어 그들을 포용해야 합니다. 삼국지에서 관우, 장비, 제갈량이 돋보이는 것은 그들을 품을 수 있는 유비의 텅 빈 캔버스가 있었기 때문입니다. 손오공의 재롱도 결국 부처님 손바닥 위라는 바탕 안에서만 유효한 것입니다.\n\n이러한 포용력은 다가오는 기술의 시대에도 똑같이 적용됩니다. AI라는 거대한 데이터의 바다(단순하고 무색무취한 바탕) 위에서 비로소 설계자의 따뜻한 시선과 생각(관우와 장비의 개성)이 자유롭게 뛰어놀 수 있습니다. 기계의 거대한 바탕을 넉넉히 품어낼 때, 우리의 인간적인 직관은 비로소 가장 예리하게 빛날 수 있을 것입니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">도면 위에서 '포용력 있는 바탕'을 디자인하는 일은 차라리 쉽습니다. 하지만 이를 인간관계와 조직에 적용하기란 참으로 어려운 영역입니다. 나이를 먹고 연륜이 쌓여도, 뒤로 한 걸음 물러나 바탕이 되어주기보다는 여전히 나 자신이 돋보이고 싶은 것이 인간의 솔직한 본성이기 때문입니다.<br><br>그럼에도 직급이 올라가고 나이가 든다는 것은, 후배들에게 '네가 나보다 낫다', '참 잘했다'고 진심으로 박수 쳐 줄 수 있어야 함을 의미합니다. 웬만한 허물은 눈 한 번 꾹 감고 넓은 그릇으로 포용할 줄 알아야 합니다. 하지만 부끄럽게도, 기꺼이 텅 빈 바탕을 내어주는 이 일은 저 역시 아직 한참 부족하며 매일매일 훈련해야 하는 과제입니다.</div>",
-            "image": "static/images/update_page_26.jpg",
-            "part": "2부: 철학편",
-            "partTitle": "시스템 너머의 본질",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "type": "image_top",
-            "title": "서로의 결핍을 채우는 가장 따뜻한 결합",
-            "text": "**공유결합(Covalent Bond): 진정한 융합의 조건**\n물과 기름은 한 그릇에 담아 힘껏 저어도 결국 분리됩니다. 이를 '혼합물(Mixture)'이라 부릅니다. 반면, 산소 원자 하나와 수소 원자 두 개가 만나 서로의 전자를 내어주고 강하게 결합하면, 불을 끄고 생명을 잉태하는 전혀 새로운 물질인 '물(H2O)'이 탄생합니다. 이것이 화학에서 말하는 '공유결합(Covalent Bond)'입니다.\n\n<div style=\"text-align:center; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1d1d1f\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 내어주어 제3의 생명 창조</text> </svg> </div> \n\n건축 설계도, 그리고 우리의 삶도 마찬가집니다. \n현장에 부는 바람의 방향, 동네 주민들의 오랜 발자취, 그리고 건축가의 불완전하지만 따뜻한 직관. 이것들은 기계(AI)가 계산해 낸 차가운 용적률 및 최적의 데이터와 단순히 섞여서는(Mixture) 안 됩니다. 한쪽이 다른 한쪽을 지배하거나 끌려다니는 것이 아니라, 서로의 가장 핵심적인 전자(본질)를 내어주고 결합하여 **'완전히 새로운 제3의 가치'**를 창조해 내야 합니다. \n\nAI 시대에 건축을 한다는 것은, 기계의 완벽한 렌더링에 내 직관을 욱여넣는 타협이 아닙니다. 기계의 차가운 논리에 인간의 체온이라는 전자를 공유하여 결코 끊어질 수 없는 단단한 건축물을 빚어내는 공유결합의 과정이어야 합니다.\n\n이것은 비단 건축에만 국한된 이야기가 아닙니다. 일상에서도 우리는 끊임없이 시스템화되고 기계적인 효율을 강요받습니다. 그 거대한 파도 앞에서 우리가 살아남는 법은, 기계를 거부하거나 반대로 기계의 부속품으로 전락하는 것이 아닙니다. 기계가 줄 수 없는 저의 고유한 감각, 실패의 경험, 사람을 향한 연민을 잃지 않고 꽉 쥔 채로, 시대의 흐름과 당당히 '공유결합'하는 것입니다. 섞여서 고유의 색을 잃는 것이 아니라, 저의 본질을 내어주어 세상을 전혀 새로운 색으로 칠하는 것, 그것이 진짜 디자인입니다.",
-            "image": "static/images/update_page_31.jpg",
-            "part": "2부: 철학편",
-            "partTitle": "시스템 너머의 본질",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "type": "poem",
-            "title": "100년의 기억을 덮는다는 것의 무게",
-            "text": "**100년의 삶을 지워버릴 수는 없었다**<br><br>어떤 프로젝트는 도면을 그리기 전에 가슴부터 묵직해질 때가 있습니다. 대전의 어느 정비사업장이 그랬습니다.<br><br>그 사업지 한가운데에는 100년의 역사를 품은 낡은 시장이 숨 쉬고 있었습니다. 거미줄처럼 얽힌 골목길, 매일 아침 좌판을 까는 상인들의 주름진 손, 그리고 그 시장을 오가며 삶의 희로애락을 나눴을 사람들의 시간들. 단순히 재개발이라는 이름 아래 굴착기으로 밀어버리기엔, 그곳은 누군가의 '삶의 일부분' 그 자체였습니다.<br><br>건축이 공간을 새로 창조하는 일이라지만, 100년의 기억을 아무런 흔적 없이 지워버리는 설계자가 될 수는 없었습니다. 저는 이 시장의 공간과 기억을 현대적인 개발과 공존시킬 방법을 치열하게 고민했습니다.<br><br>그렇게 탄생한 스케치가 바로 **'상부 덮개 공원과 하부 시장'**의 입체적 결합이었습니다.<br><br><img src=\"static/images/daejeon_sketch_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_sketch_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_section.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 거대한 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 거대한 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br><img src=\"static/images/daejeon_wireframe.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_cg.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[하부 시장의 삶을 보존하고 상부를 공원으로 덮어 올린 복합 구조물 최종 렌더링]</span><br><br>**스케치 너머에 도사린 무거운 질문들**<br><br>하지만 도면에서 펜을 떼는 순간, 진짜 현실의 벽이 숨통을 조여왔습니다.<br><br>'상부를 공원으로 덮는 이 막대한 공사비를 조합이 기꺼이 감당할 것인가?'<br>'3년이 넘는 공사 기간 동안, 하루 벌어 하루 먹고사는 상인들은 어디로 가서 생존해야 하는가?'<br>'현행법상 이 전례 없는 복합 구조물을 지자체가 인허가해 줄 것인가?'<br><br>종이 위에서 100년의 기억을 보존하는 선을 긋는 것은 건축가의 아름다운 낭만이었지만, 그것을 실체로 만들어내기 위해서는 낭만을 넘어선 끝없는 조율이 필요했습니다. 자본의 이윤을 설득하고, 행정의 경직성을 깨뜨리며, 무엇보다 상인들의 3년 치 생존 대책을 함께 껴안지 않는 한 저의 스케치는 그저 위선적인 그림 쪼가리에 불과했습니다.<br><br>건축은 선으로 낭만을 그리는 일이 아닙니다. 100년의 기억을 덮으려면, 그 기억의 무게만큼이나 무거운 현실의 고통을 짊어질 각오가 되어 있어야 합니다. 대전의 그 낡은 시장 골목에서, 저는 도면 위에 그은 선 한 줄이 얼마나 무서운 책임감을 요구하는지 깊이 배웠습니다.",
-            "image": "static/images/sketches/89.jpg",
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "외로움",
-            "text": "외롭지요?<br>외로움을 메우기 위해<br>무언가로 채우지만<br>쉽지 않네요<br>채우기 위해 무언가를 집어넣지만<br>그로 인해 그 깊이만 더 깊어집니다<br>채우다 채웁니다<br>문득 제가 채운 자리의 바닥이 보이지않는<br>깊은 어둠이 되어버렸을때,<br>그 깊은 깊이속에 갇혀버렸음을<br>알게됩니다<br>이제는 어쩌나 하고<br>바닥에 주저앉아 가만히 있다보면<br>바닥은 올라가고<br>어느새 제가 다시 빠질정도는 아니네하고<br>깨닫게 됩니다<br>외로울 땐<br>지나가길 기다려야 되나봅니다<br>꼭 외로움이 아닌 슬픔과 화남도<br>지나가길 기다려야 되나봅니다\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">어찌 외로움뿐이겠는가. 허기짐을 메우기 위해 끊임없이 무언가를 욱여넣는 것이나, 부족함을 채우기 위해 자꾸만 무언가를 덧붙이는 행위는 결국 근본적인 위로가 되지 못합니다. 설계도 마찬가집니다. 무언가를 계속 덧칠하는 순간 본질적인 아름다움과는 멀어지고, '이것이다'라고 강압적으로 지시하는 순간 사람들은 오히려 시선을 거둡니다. 반대로 최대한 간결하게 비워낼수록 공간은 더 많은 것을 포용할 수 있게 됩니다.<br><br>아래의 조형물들은 제가 직접 빚어 만든 것들입니다. 가슴에 사랑을 품고 있는 형태지만, 정작 그 가슴통은 텅 비어 있습니다. 억지로 무언가를 꽉 채워 넣지 않고 텅 비워두었기에, 오히려 더 크고 따뜻하게 누군가를 품어 안을 수 있지 않을까 하는 생각에서였습니다.</div>\n<div style=\"margin-top: 40px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 비어 있기에 품을 수 있는</h4>\n <img src=\"static/images/sculpture_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "image": "static/images/user_04.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "가끔",
-            "text": "가만히 벽지의 무늬를 바라보다보면<br>그 무늬속에 숨어있던 얼굴들이 나타난다<br>웃기도하고 나에게 무엇가를 말하는것도 같다<br>분명한 언어가 아닌 느낌으로 이야기를 만들어 간다<br>돌이나 나무 그 것들 속에서 미소짓는<br>얼굴들을 발견할때면 나도 웃게된다<br>나만이 아는 친구를 만난 것처럼<br>어느날은 공사장의<br>굴착기이 힘들어<br>축 늘어진 강아지 같이 보일때도 있다<br>하나의 형상은 하나의 이미지로만 보이지않는다<br>가만히 들여다보면, 대부분은 내가 보고 싶은 대로<br>보는것 같다<br>오늘도 고정된 이미지를 만들지 말고,<br>그렇게 보지않도록 노력하며 하루를 살아보자\n<div style=\"margin-top: 60px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[스케치] 서울에서 찾아낸 얼굴들</h4>\n <img src=\"static/images/face_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n<br>\n<blockquote>\n무심한 사물 속에서 종종 사람의 모습을 찾곤 합니다.<br>\n아무런 의미가 없다고 여겼던 평범한 바탕 위에서 문득 누군가의 얼굴을 찾아내어, 가만히 속으로 인사를 건네기도 하지요.<br>\n<br>\n건축물의 배치나 디자인된 공간은 결코 죽어 있는 것이 아닙니다. 우리가 빚어낸 디자인과 공간은, 살아 숨 쉬는 우리 사람들과 끊임없이 교감하며 서로 영향을 주고받기 때문입니다.\n</blockquote>",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "image": "static/images/sketches/20.jpg",
-            "type": "image_top"
-        },
-        {
-            "type": "image_top",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "우리는 건축 설계안이나 우리의 삶,<br>\n나아가 인간관계에 이르기까지, 이 모든 것을 주도적으로 '만들고 있는' 것일까요?<br>\n아니면 어떠한 흐름 속에서 '만들어져 가는' 것일까요?<br>\n<br>\n<img src=\"static/images/sketch_making_1.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<img src=\"static/images/sketch_making_3.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n요즘 무언가를 만들며 깨닫는 것이 있습니다.<br>\n분명 처음에는 저만의 확고한 생각과 의도를 가지고 시작하지만,<br>\n결과물에 이르러서는 마치 <strong>'원래 있어야 할 모습'</strong>을 찾아가듯 아주 자연스럽게 만들어져 간다는 것입니다.<br>\n<br>\n<img src=\"static/images/sketch_making_2.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n우리가 치밀하게 세운 계획도, 인생도,<br>\n처음의 의도와 조금 다르게 흘러간다고 해서 결코 틀린 것이 아닙니다.<br>\n어쩌면 그것은 지금 주어진 상황과 환경에 가장 적합한 모습으로 '만들어져 가는' 과정일지도 모릅니다.<br>\n<br>\n<img src=\"static/images/sketch_making_4.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n가장 중요한 것은, 결과가 내 의도와 다르게 변화해 가더라도<br>\n그 안에서 <strong>내 마음의 중심</strong>을 결코 놓지 않는 것입니다.<br>\n<br>\n<img src=\"static/images/sketch_making_5.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n<blockquote>\n내 생각과 다르게 진행된다고 해서 틀린 것이 아닙니다.<br>\n비록 흔들거리더라도, 다시 방향을 잡고 나아가면 됩니다.<br>\n다 괜찮습니다.\n</blockquote>",
-            "image": "static/images/sketches/117.jpg",
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "용역원실에서 '노동 쉼터'로",
-            "text": "지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.<br>어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.<br>'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.<br>올해 제 분야는 '경관'이었습니다. 누군가 지적하겠지... 계속 기다렸습니다. <br>심의가 끝나갑니다. '굳이 말을 해야 할까? 그냥 넘어갈까? 내가 왜 심의위원을 하고 있지...'<br>이런저런 생각을 하다가, 끝내 마이크를 잡았습니다.<br>\"제가 경관 분야이긴 합니다만, 건축 부분에 대해 한 말씀 드리겠습니다. <br>지하 2층에 배치된 '용역원실', 어떤 지자체 인권위원회에서는 이를 '노동 쉼터'로 명칭을 변경할 것을 권고하고 있습니다. <br>단순히 실명을 변경하는 것만으로도 이 공간이 어떠해야 하는지를 말해주기 때문입니다. <br>노동 쉼터가, 지하 2층 주차장 구석에 자연 채광과 환기가 전혀 안 되는 공간에 있어야 합니까?<br>권고드리건대, 1층 공개공지에 면하게 배치를 하여, 이분들이 잠시나마 쉴 수 있는 작은 공간이라도 마련되기를 부탁드립니다.\"<br>용역원실이 아닌 '노동 쉼터'로 실명을 바꾸어 봅시다. <br>건축 안에서 사람을 지우지 않는 것. 그것이 진짜 설계입니다.\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n건축사는 아무래도 건축 의뢰인의 입장에서 설계를 하다 보니, 건축사로서 응당 해야 할 공적 역할을 다하지 못할 때가 있습니다.<br><br>\n이럴 경우, 심의 위원들이 그 역할을 대신 채워주어야 합니다. 도면이 법적인 기준에 맞는지 점검하는 것을 넘어, 공공의 영역에서 필요한 의견을 내주어야 하는 것이죠.<br><br>\n건축 심의란 결국 이 사회의 다양한 요소들이 어긋나지 않고 서로 맺어지게 돕는, '꼭 필요한 공유결합'을 만들어내는 과정이어야 합니다.\n</blockquote>",
-            "image": "static/images/sketches/66.jpg",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "type": "image_top"
-        },
-        {
-            "type": "text",
-            "title": "신뢰가 만들어지는 현장",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "text": "<p style=\"margin-bottom: 24px;\">나, 상대, 그리고 현장.<br>이 세 가지 불완전한 요소들이 만나 비로소 하나의 완전한 결합을 이루어냅니다.<br>이것이 바로 <strong>'공유결합의 순간'</strong>입니다.</p><p style=\"margin-bottom: 24px;\">나와 타인, 그리고 현장이 부딪히며 만들어내는 에너지는 폭발적입니다. 이 결합을 묶어주는 유일한 접착제는 다름 아닌 <strong>'신뢰'</strong>입니다.<br>기계적인 계약 관계나 차가운 데이터 교환으로는 절대 만들어낼 수 없는 사람과 사람 사이의 끈끈한 연대. 신뢰가 싹트고 인간과 시스템이 결합하여 서로의 약점을 덮어줄 때, 비로소 도면은 생명을 얻고 건물이 됩니다.</p><p style=\"margin-bottom: 24px;\">이 마지막 테마에서는 앞선 모든 질문과 고민들이 어떻게 실제 현장에서 아름다운 결실(혹은 뼈아픈 교훈)로 맺어지는지 보여주는 생생한 이야기들입니다.</p><p>시스템 너머의 본질, 기계가 결코 대체할 수 없는 인간 건축가만의 고귀한 역할이 바로 이 결합을 지휘하는 데 있음을 확인하시게 될 것입니다.</p>",
-            "image": "static/images/update_page_32.jpg"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "title": "설계하는 일에서 좋은 점은",
-            "text": "생각의 부딪침이 많다는 것입니다.<br>부딪침,<br>깨짐,<br>이를 통한 생각의 확장.<br><br>언제나 조심해야 할 것은<br>생각의 부딪침을 자연스럽게 받아들여야 한다는 것입니다.<br>어떤 때는 통과되기도, 또는 털어버릴 때도 있겠지만,<br>적어도 고정된 생각을 무기로 만들어 이리저리 흔들어대는 행동은 하지 말아야 합니다.<br><br>오늘도 부딪침, 깨짐, 그리고 확장과 거리두기를 기대합니다.",
-            "image": "static/images/update_page_41.jpg",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "논리와 감정 사이, 건축가의 '싫어요'",
-            "text": "\"이거냐, 저거냐.\"<br>세상은 늘 선택을 요구합니다. 그 질문 앞에서 저는 속으로 \"싫어요\"라고 답하곤 합니다. <br>논리가 필요한 순간에 감정으로 버티고 서는 셈입니다.<br>사업을 하시는 분들에게 건축설계란 논리와 숫자를 다루는 일로 보이겠지요.<br>반면 실제로 그 공간에 머무는 거주자에게 건축설계는 감정과 느낌을 다루는 일로 다가갈 것입니다.<br>설계를 업으로 삼은 이들 중 누군가는 이를 철저히 '직업'으로 대하지만, <br>어떤 이들에게 건축설계는 직업을 넘어 '자기 자신' 그 자체가 되기도 합니다.<br>설계를 자기 자신으로 느끼는 건축가는 스스로의 마음에 들 때까지 펜을 놓지 못합니다.<br>하루 24시간, 온통 그 생각만 하도록 훈련된 사람들입니다. <br>솔직히 말해, 이런 사람들은 영리하게 먹고살기 참 어렵습니다.<br>저 역시, 차가운 논리가 우선되어야 할 순간에도 감정적인 '싫어요'가 불쑥 튀어나오려 할 때가 많습니다.<br>삶의 많은 부분을 그저 둥글게 넘기며 살아왔지만, <br>설계라는 이 한 부분마저 타협하고 놓아버리면 정말로 밑바닥으로 떨어져 죽을 것만 같은 두려움 때문일지도 모릅니다.<br>그래서 가끔은 억지를 부립니다. <br>아무런 생각이 담기지 않은 텅 빈 도면을 보기가 싫습니다.<br>영혼 없이 오가는 기계적인 말들을 듣기가 싫습니다. <br>조금 미련해 보일지라도, 저는 공간에 사람의 체온과 생각이 담기기를 고집하고 싶습니다.",
-            "image": "static/images/user_22.jpg",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "거름종이 마법이 있다",
-            "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료 마법이라고 합니다.<br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니<br>좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "image": "static/images/sketches/11.jpg",
-            "type": "image_top"
-        },
-        {
-            "type": "text",
-            "title": "도면 밖의 무대, 현장",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "text": "자신의 기준을 세우고, 비워냄과 무거워짐을 이해했다고 해서 모든 일이 술술 풀릴까요? 결코 그렇지 않습니다.<br><br>우리가 매일매일 새로운 아침을 맞이하는 이유는, 어쩌면 어제와는 다른 상황 속에서 다시 한번 부딪히고 배워보라는 새로운 기회가 주어지는 것 아닐까요. 실패했다면 과거에 매이지 말고 온전히 '현재'에 집중하라고 말입니다. 삶을 현재로 살지 못하고, 과거의 실패나 과거의 영광된 기억만이 현재를 채우는 순간… 그것이 곧 살아있으나 죽은 상태일지도 모릅니다.<br><br>제게 '삶의 공유결합'이란, 결국 제가 건축 설계를 하며 매일매일 겪어낸 치열한 현재의 기록들입니다. 하지만 이게 건축가만의 유별난 이야기일까요. 사람 사는 게 다 비슷하겠지요. 어찌 되었든, 저의 '진짜 현장'은 시멘트와 철근이 있는 공사장이 아니라, 수많은 욕망이 얽혀있는 사람들과의 관계 속이었습니다.<br><br>도면 위의 완벽했던 과거를 고집하는 대신, 저는 매일 아침 불완전한 사람들을 마주하는 이 현재를 살아가기로 했습니다.<br><br>→ 그래서 질문은 다시 한번 확장됩니다.<br><br><em>\"도면을 넘어, 이 거대한 욕망과 제도가 격돌하는 '진짜 현장(회의 테이블)'의 이면을 우리는 어떻게 직시하고 껴안을 것인가?\"</em>",
-            "image": "static/images/update_page_11.jpg"
-        },
-        {
-            "type": "text",
-            "title": "현장이라는 무대",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "text": "<p style=\"margin-bottom: 24px;\">수소와 산소의 결합이 일어나는 궁극적인 무대, 그것은 눈에 보이는 물리적 대지가 아닙니다. 그것은 정치와 정책, 그리고 끝없는 욕망이 뒤엉킨 거대한 '이해관계의 테이블'입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">예를 들어 보겠습니다. 사업을 시행하는 조합 입장에서는 정치권에서 쏟아내는 새로운 부동산 정책에 솔깃해질 수밖에 없습니다. <i>\"우리 지역이 2종 일반주거지역이라 재개발하면 3종밖에 안 되는데, 도심복합사업을 하면 400%, 성장거점형을 하면 최대 1,500%까지 용적률을 받을 수 있대!\"</i> 이런 이야기가 돌면, 추진하는 입장에서는 당장 그 헛된 희망을 이루어주겠다고 속삭이는 설계사를 우선적으로 찾기 마련입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">하지만 인허가권을 쥔 지자체의 입장은 어떨까요? 그분들은 기본 정책의 유지와 지역의 균형 발전, 도시 전체의 맥락을 보고 판단해야 하는 사람들입니다. 특정 단지에만 1,500%를 무턱대고 허락할 리가 없습니다. 결코 쉽지 않은 길입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">이때 건축가의 진짜 실력이 드러납니다. 설계자는 단순히 눈앞의 제도를 쫓아가거나 달콤한 말로 포장하는 사람이 아니라, <strong>그 제도의 '이면'을 볼 줄 알아야 하며, 그것을 추진하는 사람들에게 냉정하고 투명하게 설명할 수 있어야 합니다.</strong></p>\n\n<p>조합의 절박함, 지자체의 책임감, 시공사의 이윤 추구. 각기 다른 역할을 가진 이들의 이해관계를 깊이 이해하고 조율하지 못하면, 결국 회의 테이블에서는 서로 욕만 하다가 사업은 한 발짝도 나아가지 못합니다. 진짜 현장의 이면을 읽어내는 것, 그것이 현장이라는 무대를 다루는 공유결합의 세 번째 원칙입니다.</p>",
-            "image": "static/images/sketches/53.jpg"
-        },
-        {
-            "type": "image_top",
-            "title": "계획안, 신뢰의 기록",
-            "image": "static/images/sketches/54.jpg",
-            "text": "수많은 이들의 말과 글, 복잡한 욕망의 덩어리를 하나의 결과물로 묶어내는 행위. 그것이 바로 '계획안'입니다.<br><br>계획안이란, 결코 화려하게 치장된 프레젠테이션이나 누군가를 현혹하기 위한 수단이 아닙니다. 그것은 우리가 함께 도출해 낸 <strong>'최선의 약속'</strong>입니다.<br><br>각자의 입장에서 바라는 것들을 치열하게 조율하고, 최선을 다해 그분들의 목소리를 대변하되, 냉정한 현실 가능성과 건축사로서의 공적 책임을 더하여 주민들 앞에 내놓는 단단한 약속인 것입니다.<br><br>그렇기에 우리가 도면 위에 긋는 선 하나하나는 단순한 잉크 자국이 될 수 없습니다. 이 거친 현장에서 쏟아진 수많은 요구와 갈등을 끝내 조율해 내겠다는 굳은 의지이자, 신뢰의 기록입니다.<br><br>이 약속의 기록이 굳건하게 버텨줄 때, 현장의 수많은 사람들은 비로소 하나의 목표를 향해 나아가는 '공유결합'의 상태에 이르게 됩니다.",
-            "part": "1부: 시스템편 (디지털 플랫폼 모델)",
-            "partCategory": "제1막: 공유결합 디자인 방법론"
-        },
-        {
             "type": "poem",
             "title": "땅과 사람이 하는 말에 귀 기울이는 법",
             "image": "static/images/sketches/24.jpg",
             "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n제가 생각하는 디자인은 거창한 것이 아닙니다.<br>사물과 사람을 존중하고, 본능을 이해하며, 그 사이의 관계를 엮어내는 일입니다.<br><br>단순화 시킨다: 영역성의 존중<br><br>개체의 특성을 인정하고 그 개체 간에 질서를 부여하여 통합화합니다. <br>단, 각 개체의 영역성을 굳건히 인정해야 합니다. <br>벽에 필요에 의해 생긴 창문도 그 성격을 분명히 하기 위해선 고유의 영역이 필요합니다. <br>각 디자인 요소들에게 물어보고 그들을 존중해야 합니다. <br><br>너무 작은 요소라 하여 소홀히 해선 안 됩니다. <br>만약 개체성을 잃을 것 같다면 큰 흐름 속에 포함시키되, <br>좀 더 강한 특성(색, 모양, 재질 등)을 부여해야 합니다. <br><br>아이폰의 옆면을 보면 은색 테두리에 딱 필요한 만큼의 여백이 선형을 이루고 있습니다. <br>은색 테두리가 아름다운 것은 바탕 여백이 있기 때문입니다. <br>적당한 테두리 간격의 아슬아슬함이 쾌감을 일으킵니다. <br>은하가 아름다운 것은 우주의 어두움이 있기 때문입니다. <br><br>디자인은 자신의 감각을 믿는 사람이 아닌, <br>사람을 알고 작은 사물이라도 존중할 줄 아는 사람이 해야 합니다.\n</p>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">디자인은 단순히 타고난 감각으로만 하는 것이 아닙니다. 사람을 깊이 이해하고, 아주 작은 사물이나 주변 환경조차도 존중하고 배려할 줄 아는 태도에서 출발합니다.<br><br>디자인에 웬 '존중'이냐며 고개를 갸우뚱하실지도 모르겠습니다. 하지만 한 폭의 그림을 그릴 때를 떠올려 보십시오. 화가는 자신이 돋보이게 하고 싶은 주제를 위해 상하좌우의 무게감을 다르게 주고, 선의 방향을 조율하며, 캔버스를 채움과 비움으로 다채롭게 구성합니다. 저는 이러한 치밀한 구도의 과정을 사물에 대한 '배려' 혹은 '존중'이라고 부릅니다. 어쩌면 '조화로움'이라는 단어가 더 익숙하실 수도 있겠습니다.<br><br>건축 공간에서 건물을 배치하는 일도 이와 같습니다. 각각의 건물과 사물을 거대한 틀 안에서 서로 '존중받아야 할 대상'으로 대우해야 합니다. 각자의 자리를 내어주고 조율하며 조화롭게 배치하는 과정, 그것이 바로 제가 생각하는 공간에서의 진짜 존중입니다.</blockquote>\n</div>",
+            "part": "2부: 철학편",
+            "partTitle": "시스템 너머의 본질",
+            "partCategory": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "type": "image_top",
+            "title": "틀: 무질서를 담는 그릇",
+            "text": "**바탕의 포용력**\n동등한 것들을 무질서하게 배치하여 변화감을 주고 싶다면, 그 바탕이 변화를 수용할 수 있을 만큼 포용력이 있어야 합니다. 바탕을 단순화하고 색을 차분하게 눌러주어야 합니다.\n요즘 건축물 중에 창문의 위치가 수직/수평을 벗어나 자유롭게 흩어지거나 다양한 모양을 띠는 경우가 있습니다. 이를 성공시키려면 바탕 벽면이 일반 벽면보다 단색이어야 하고, 면의 성격이 아주 강해야 합니다. 창문의 모양보다, 그것을 품어낼 '벽면'을 어떻게 할지 더 치열하게 고민해야 합니다.\n\n영화 <악마는 프라다를 입는다>를 보십시오. 그 세련됨의 정점은 평범함이 굳건히 받쳐주고 있기에 가능합니다. \n조직도 마찬가지입니다. 재능 많은 부하직원들이 능력을 맘껏 발휘하게 하려면, 윗사람은 무색 무미 무취의 넓은 바탕이 되어 그들을 포용해야 합니다. 삼국지에서 관우, 장비, 제갈량이 돋보이는 것은 그들을 품을 수 있는 유비의 텅 빈 캔버스가 있었기 때문입니다. 손오공의 재롱도 결국 부처님 손바닥 위라는 바탕 안에서만 유효한 것입니다.\n\n이러한 포용력은 다가오는 기술의 시대에도 똑같이 적용됩니다. AI라는 거대한 데이터의 바다(단순하고 무색무취한 바탕) 위에서 비로소 설계자의 따뜻한 시선과 생각(관우와 장비의 개성)이 자유롭게 뛰어놀 수 있습니다. 기계의 거대한 바탕을 넉넉히 품어낼 때, 우리의 인간적인 직관은 비로소 가장 예리하게 빛날 수 있을 것입니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">도면 위에서 '포용력 있는 바탕'을 디자인하는 일은 차라리 쉽습니다. 하지만 이를 인간관계와 조직에 적용하기란 참으로 어려운 영역입니다. 나이를 먹고 연륜이 쌓여도, 뒤로 한 걸음 물러나 바탕이 되어주기보다는 여전히 나 자신이 돋보이고 싶은 것이 인간의 솔직한 본성이기 때문입니다.<br><br>그럼에도 직급이 올라가고 나이가 든다는 것은, 후배들에게 '네가 나보다 낫다', '참 잘했다'고 진심으로 박수 쳐 줄 수 있어야 함을 의미합니다. 웬만한 허물은 눈 한 번 꾹 감고 넓은 그릇으로 포용할 줄 알아야 합니다. 하지만 부끄럽게도, 기꺼이 텅 빈 바탕을 내어주는 이 일은 저 역시 아직 한참 부족하며 매일매일 훈련해야 하는 과제입니다.</div>",
+            "image": "static/images/update_page_26.jpg",
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론"
@@ -235,6 +125,44 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론"
         },
         {
+            "title": "다정한 디자인",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "type": "poem",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n디자인은 어디서 나오는 것일까요?<br>감각이나 방대한 지식에서 나오는 것일까요?<br><br>내가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.<br><br>타인에 대한 배려와 관심,<br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다.<br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민,<br>그리고 바람과 조망에 대한 깊은 공감이 있을 때<br>진짜 설계가 나옵니다.<br>거창한 논리보다 먼저 다정한 사람이 되시길 바랍니다.<br><br>다정한 디자인\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고... 그때 그 말에 참 부끄러웠습니다.\n</blockquote>",
+            "image": "static/images/sketches/94.jpg"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "title": "설계하는 일에서 좋은 점은",
+            "text": "생각의 부딪침이 많다는 것입니다.<br>부딪침,<br>깨짐,<br>이를 통한 생각의 확장.<br><br>언제나 조심해야 할 것은<br>생각의 부딪침을 자연스럽게 받아들여야 한다는 것입니다.<br>어떤 때는 통과되기도, 또는 털어버릴 때도 있겠지만,<br>적어도 고정된 생각을 무기로 만들어 이리저리 흔들어대는 행동은 하지 말아야 합니다.<br><br>오늘도 부딪침, 깨짐, 그리고 확장과 거리두기를 기대합니다.",
+            "image": "static/images/update_page_41.jpg",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "type": "image_top"
+        },
+        {
+            "type": "text",
+            "title": "도면 밖의 무대, 현장",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "text": "자신의 기준을 세우고, 비워냄과 무거워짐을 이해했다고 해서 모든 일이 술술 풀릴까요? 결코 그렇지 않습니다.<br><br>우리가 매일매일 새로운 아침을 맞이하는 이유는, 어쩌면 어제와는 다른 상황 속에서 다시 한번 부딪히고 배워보라는 새로운 기회가 주어지는 것 아닐까요. 실패했다면 과거에 매이지 말고 온전히 '현재'에 집중하라고 말입니다. 삶을 현재로 살지 못하고, 과거의 실패나 과거의 영광된 기억만이 현재를 채우는 순간… 그것이 곧 살아있으나 죽은 상태일지도 모릅니다.<br><br>제게 '삶의 공유결합'이란, 결국 제가 건축 설계를 하며 매일매일 겪어낸 치열한 현재의 기록들입니다. 하지만 이게 건축가만의 유별난 이야기일까요. 사람 사는 게 다 비슷하겠지요. 어찌 되었든, 저의 '진짜 현장'은 시멘트와 철근이 있는 공사장이 아니라, 수많은 욕망이 얽혀있는 사람들과의 관계 속이었습니다.<br><br>도면 위의 완벽했던 과거를 고집하는 대신, 저는 매일 아침 불완전한 사람들을 마주하는 이 현재를 살아가기로 했습니다.<br><br>→ 그래서 질문은 다시 한번 확장됩니다.<br><br><em>\"도면을 넘어, 이 거대한 욕망과 제도가 격돌하는 '진짜 현장(회의 테이블)'의 이면을 우리는 어떻게 직시하고 껴안을 것인가?\"</em>",
+            "image": "static/images/update_page_11.jpg"
+        },
+        {
+            "type": "text",
+            "title": "현장이라는 무대",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "text": "<p style=\"margin-bottom: 24px;\">수소와 산소의 결합이 일어나는 궁극적인 무대, 그것은 눈에 보이는 물리적 대지가 아닙니다. 그것은 정치와 정책, 그리고 끝없는 욕망이 뒤엉킨 거대한 '이해관계의 테이블'입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">예를 들어 보겠습니다. 사업을 시행하는 조합 입장에서는 정치권에서 쏟아내는 새로운 부동산 정책에 솔깃해질 수밖에 없습니다. <i>\"우리 지역이 2종 일반주거지역이라 재개발하면 3종밖에 안 되는데, 도심복합사업을 하면 400%, 성장거점형을 하면 최대 1,500%까지 용적률을 받을 수 있대!\"</i> 이런 이야기가 돌면, 추진하는 입장에서는 당장 그 헛된 희망을 이루어주겠다고 속삭이는 설계사를 우선적으로 찾기 마련입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">하지만 인허가권을 쥔 지자체의 입장은 어떨까요? 그분들은 기본 정책의 유지와 지역의 균형 발전, 도시 전체의 맥락을 보고 판단해야 하는 사람들입니다. 특정 단지에만 1,500%를 무턱대고 허락할 리가 없습니다. 결코 쉽지 않은 길입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">이때 건축가의 진짜 실력이 드러납니다. 설계자는 단순히 눈앞의 제도를 쫓아가거나 달콤한 말로 포장하는 사람이 아니라, <strong>그 제도의 '이면'을 볼 줄 알아야 하며, 그것을 추진하는 사람들에게 냉정하고 투명하게 설명할 수 있어야 합니다.</strong></p>\n\n<p>조합의 절박함, 지자체의 책임감, 시공사의 이윤 추구. 각기 다른 역할을 가진 이들의 이해관계를 깊이 이해하고 조율하지 못하면, 결국 회의 테이블에서는 서로 욕만 하다가 사업은 한 발짝도 나아가지 못합니다. 진짜 현장의 이면을 읽어내는 것, 그것이 현장이라는 무대를 다루는 공유결합의 세 번째 원칙입니다.</p>",
+            "image": "static/images/sketches/53.jpg"
+        },
+        {
+            "type": "image_top",
+            "title": "계획안, 신뢰의 기록",
+            "image": "static/images/sketches/54.jpg",
+            "text": "수많은 이들의 말과 글, 복잡한 욕망의 덩어리를 하나의 결과물로 묶어내는 행위. 그것이 바로 '계획안'입니다.<br><br>계획안이란, 결코 화려하게 치장된 프레젠테이션이나 누군가를 현혹하기 위한 수단이 아닙니다. 그것은 우리가 함께 도출해 낸 <strong>'최선의 약속'</strong>입니다.<br><br>각자의 입장에서 바라는 것들을 치열하게 조율하고, 최선을 다해 그분들의 목소리를 대변하되, 냉정한 현실 가능성과 건축사로서의 공적 책임을 더하여 주민들 앞에 내놓는 단단한 약속인 것입니다.<br><br>그렇기에 우리가 도면 위에 긋는 선 하나하나는 단순한 잉크 자국이 될 수 없습니다. 이 거친 현장에서 쏟아진 수많은 요구와 갈등을 끝내 조율해 내겠다는 굳은 의지이자, 신뢰의 기록입니다.<br><br>이 약속의 기록이 굳건하게 버텨줄 때, 현장의 수많은 사람들은 비로소 하나의 목표를 향해 나아가는 '공유결합'의 상태에 이르게 됩니다.",
+            "part": "1부: 시스템편 (디지털 플랫폼 모델)",
+            "partCategory": "제1막: 공유결합 디자인 방법론"
+        },
+        {
             "type": "image_top",
             "title": "공유결합: 사람을 향한 건축, 서계동 현상설계의 기억",
             "text": "지속가능한 건축의 원리는 \"공유결합\"으로 설명할 수 있습니다. 각자 부족한 것을 내어주고 서로를 단단히 묶어 가장 안정적인 상태를 이루는 과정. 건축설계의 본질, 현장의 난제를 푸는 방법, 그리고 사람을 신뢰하는 방법의 핵심이 바로 이 공유결합에 있다고 저는 믿습니다.\n\n첫째는 건축사로서 흔들리지 않는 중심(기준)을 세우는 것, 둘째는 각기 다른 사람들의 투박한 언어를 둥글게 이해하고 담아내는 것, 그리고 셋째는 눈앞의 대지뿐만 아니라 얽히고설킨 이해관계의 이면(회의 테이블)까지 꿰뚫어 보는 것입니다. 이 세 가지 공유결합의 요소가 만나 서로의 결핍을 채울 때, 건축은 비로소 단순한 구조물을 넘어 생명력을 얻게 됩니다.\n\n올해 용산구 서계동 재개발 사업지의 현상설계를 진행했습니다. 눈발이 날리는 초겨울이었습니다. 직원들과 함께 답사한 그곳은 지형의 단차가 유독 심하고 골목이 비좁은 동네였습니다.\n\n진눈깨비 날리던 그날, 직원들과 함께 차가 다닐 수도 없는 비좁은 골목과 가파른 계단을 올랐습니다. 길이 조금만 미끄러워도, 아니면 아차 하는 순간 큰 사고가 날 수 있겠다는 아찔한 생각이 들었습니다.\n\n현장을 둘러보고 인근에서 함께 식사하며 우리는 자연스럽게 서로의 느낌을 나누었습니다. '이렇게 단차가 심한 지형에서 수십 년간 불편을 겪으셨을 분들을 위해 제로 레벨(Zero Level), 즉 평탄한 지형을 최대한 만들어 보자.' 그렇게 우리의 진심을 모아 '서경연화'라는 이름으로 계획안을 제출했습니다.<br><br><img src=\"static/images/seogye_sketch_1.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[서계동 현상설계 초기 스케치 - 험난한 지형을 어떻게 극복할 것인가에 대한 고민]</span>\n\n우리는 아파트 데크 설계를 통해 최대한 단지를 평지화했습니다. 피할 수 없이 단차가 나는 부분은 각 레벨의 데크를 겹겹이 쌓아 내밀어 계단식 조경을 만들고, 엘리베이터와 상가, 커뮤니티 시설을 배치했습니다. 지금까지 이 현장에 계신 분들이 평생 매일같이 느꼈을 '계단의 힘듦'을 '쉼과 여유의 공간'으로 변화시키기를 간절히 원했습니다. 정말 누구나 한 번쯤은 와보고 싶은 공간을 품은 아파트를 그분들께 선물해 드리고 싶었습니다.<br><br><img src=\"static/images/seogye_sketch_2.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[단차를 극복하기 위한 데크 설계와 단면 아이디어 스케치]</span>\n\n함께 작업하던 CG 담당자의 말을 빌리자면, 저희 진양건축이 설계에 얼마나 진심인지는 렌더링을 켜는 순간 알 수 있다며 '정말 이 곳에 살고 싶다'고 말하더군요. 입에 발린 칭찬일 수도 있겠지만, 적어도 우리 회사가 공간을 대하는 태도와 디자인에 담는 진심만큼은 온전히 전해졌다고 믿습니다.\n\n결과적으로 우리는 그 현상설계에서 떨어졌습니다. 하지만 함께 밤을 새우며 그 공간을 고민했던 직원들의 마음은 패배감에 젖지 않았습니다. \"정말 좋았다고, 우리 안이 가장 사람을 향해 있었고 정말 훌륭했다\"라고 서로를 다독이는 직원들의 목소리를 들으며 저는 참으로 기분이 좋았습니다. 직원들은 기존 메이저 업체들의 삭막한 설계에 비해, 사람을 먼저 생각한 우리가 훨씬 더 나았다는 굳건한 자부심을 가졌습니다.\n\n우리의 계획안에서 '공유결합'은 거창한 구호가 아니었습니다. 주민들의 편의성과 심한 단차가 가진 지형적 약점이 어떻게 서로를 보완할 수 있을지 치열하게 고민한 실체적인 결과물이었습니다. \n\n단차가 지는 구간의 데크를 조금씩 내밀어 사람들이 머물고 쉴 수 있는 계단식 조경 공간을 만들었고, 지형상 지하지만 외부로는 활짝 열려 있는 테라스형 상가와 커뮤니티 시설을 계획했습니다. 동시에 이를 통해 확보된 용적률을 최대치로 끌어올려 조합의 사업성을 견인할 분양 세대를 촘촘하게 구성했습니다.<br><br><img src=\"static/images/seogye_wireframe.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/seogye_cg_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/seogye_cg_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[서계동 현상설계 최종 CG - 지형의 약점을 명소로 뒤바꾸는 '공유결합'의 실체]</span>\n\n\n오랜 세월 주민들에게 불편함의 상징이었던 가파른 단차를 오히려 이 아파트만의 독보적인 명소로 뒤바꾸는 것. 서울에 사는 누구나 한 번쯤 찾아와 사진을 찍고 싶어 하는 매력적인 장소로 만드는 것. 지형의 약점, 주민의 쉼, 그리고 조합의 수익이라는 서로 다른 가치들을 하나의 공간 구조로 단단하게 묶어내는 이러한 설계 방향이 바로 제가 믿는 '공유결합'의 실체입니다. \n\n비록 수주라는 결과로 이어지진 못했을지라도, 우리는 그 눈 내리는 용산의 언덕에서 건축의 진짜 본질과 단단하게 결합해 있었습니다.",
@@ -253,6 +181,24 @@ var bookData = {
             "image": "static/images/update_page_42.jpg"
         },
         {
+            "type": "poem",
+            "title": "100년의 기억을 덮는다는 것의 무게",
+            "text": "**100년의 삶을 지워버릴 수는 없었다**<br><br>어떤 프로젝트는 도면을 그리기 전에 가슴부터 묵직해질 때가 있습니다. 대전의 어느 정비사업장이 그랬습니다.<br><br>그 사업지 한가운데에는 100년의 역사를 품은 낡은 시장이 숨 쉬고 있었습니다. 거미줄처럼 얽힌 골목길, 매일 아침 좌판을 까는 상인들의 주름진 손, 그리고 그 시장을 오가며 삶의 희로애락을 나눴을 사람들의 시간들. 단순히 재개발이라는 이름 아래 굴착기으로 밀어버리기엔, 그곳은 누군가의 '삶의 일부분' 그 자체였습니다.<br><br>건축이 공간을 새로 창조하는 일이라지만, 100년의 기억을 아무런 흔적 없이 지워버리는 설계자가 될 수는 없었습니다. 저는 이 시장의 공간과 기억을 현대적인 개발과 공존시킬 방법을 치열하게 고민했습니다.<br><br>그렇게 탄생한 스케치가 바로 **'상부 덮개 공원과 하부 시장'**의 입체적 결합이었습니다.<br><br><img src=\"static/images/daejeon_sketch_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_sketch_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_section.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 거대한 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 거대한 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br><img src=\"static/images/daejeon_wireframe.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/daejeon_cg.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[하부 시장의 삶을 보존하고 상부를 공원으로 덮어 올린 복합 구조물 최종 렌더링]</span><br><br>**스케치 너머에 도사린 무거운 질문들**<br><br>하지만 도면에서 펜을 떼는 순간, 진짜 현실의 벽이 숨통을 조여왔습니다.<br><br>'상부를 공원으로 덮는 이 막대한 공사비를 조합이 기꺼이 감당할 것인가?'<br>'3년이 넘는 공사 기간 동안, 하루 벌어 하루 먹고사는 상인들은 어디로 가서 생존해야 하는가?'<br>'현행법상 이 전례 없는 복합 구조물을 지자체가 인허가해 줄 것인가?'<br><br>종이 위에서 100년의 기억을 보존하는 선을 긋는 것은 건축가의 아름다운 낭만이었지만, 그것을 실체로 만들어내기 위해서는 낭만을 넘어선 끝없는 조율이 필요했습니다. 자본의 이윤을 설득하고, 행정의 경직성을 깨뜨리며, 무엇보다 상인들의 3년 치 생존 대책을 함께 껴안지 않는 한 저의 스케치는 그저 위선적인 그림 쪼가리에 불과했습니다.<br><br>건축은 선으로 낭만을 그리는 일이 아닙니다. 100년의 기억을 덮으려면, 그 기억의 무게만큼이나 무거운 현실의 고통을 짊어질 각오가 되어 있어야 합니다. 대전의 그 낡은 시장 골목에서, 저는 도면 위에 그은 선 한 줄이 얼마나 무서운 책임감을 요구하는지 깊이 배웠습니다.",
+            "image": "static/images/sketches/89.jpg",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "partCategory": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "용역원실에서 '노동 쉼터'로",
+            "text": "지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.<br>어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.<br>'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.<br>올해 제 분야는 '경관'이었습니다. 누군가 지적하겠지... 계속 기다렸습니다. <br>심의가 끝나갑니다. '굳이 말을 해야 할까? 그냥 넘어갈까? 내가 왜 심의위원을 하고 있지...'<br>이런저런 생각을 하다가, 끝내 마이크를 잡았습니다.<br>\"제가 경관 분야이긴 합니다만, 건축 부분에 대해 한 말씀 드리겠습니다. <br>지하 2층에 배치된 '용역원실', 어떤 지자체 인권위원회에서는 이를 '노동 쉼터'로 명칭을 변경할 것을 권고하고 있습니다. <br>단순히 실명을 변경하는 것만으로도 이 공간이 어떠해야 하는지를 말해주기 때문입니다. <br>노동 쉼터가, 지하 2층 주차장 구석에 자연 채광과 환기가 전혀 안 되는 공간에 있어야 합니까?<br>권고드리건대, 1층 공개공지에 면하게 배치를 하여, 이분들이 잠시나마 쉴 수 있는 작은 공간이라도 마련되기를 부탁드립니다.\"<br>용역원실이 아닌 '노동 쉼터'로 실명을 바꾸어 봅시다. <br>건축 안에서 사람을 지우지 않는 것. 그것이 진짜 설계입니다.\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n건축사는 아무래도 건축 의뢰인의 입장에서 설계를 하다 보니, 건축사로서 응당 해야 할 공적 역할을 다하지 못할 때가 있습니다.<br><br>\n이럴 경우, 심의 위원들이 그 역할을 대신 채워주어야 합니다. 도면이 법적인 기준에 맞는지 점검하는 것을 넘어, 공공의 영역에서 필요한 의견을 내주어야 하는 것이죠.<br><br>\n건축 심의란 결국 이 사회의 다양한 요소들이 어긋나지 않고 서로 맺어지게 돕는, '꼭 필요한 공유결합'을 만들어내는 과정이어야 합니다.\n</blockquote>",
+            "image": "static/images/sketches/66.jpg",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "type": "image_top"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "건축 설계",
@@ -262,11 +208,49 @@ var bookData = {
             "type": "image_top"
         },
         {
-            "title": "다정한 디자인",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "논리와 감정 사이, 건축가의 '싫어요'",
+            "text": "\"이거냐, 저거냐.\"<br>세상은 늘 선택을 요구합니다. 그 질문 앞에서 저는 속으로 \"싫어요\"라고 답하곤 합니다. <br>논리가 필요한 순간에 감정으로 버티고 서는 셈입니다.<br>사업을 하시는 분들에게 건축설계란 논리와 숫자를 다루는 일로 보이겠지요.<br>반면 실제로 그 공간에 머무는 거주자에게 건축설계는 감정과 느낌을 다루는 일로 다가갈 것입니다.<br>설계를 업으로 삼은 이들 중 누군가는 이를 철저히 '직업'으로 대하지만, <br>어떤 이들에게 건축설계는 직업을 넘어 '자기 자신' 그 자체가 되기도 합니다.<br>설계를 자기 자신으로 느끼는 건축가는 스스로의 마음에 들 때까지 펜을 놓지 못합니다.<br>하루 24시간, 온통 그 생각만 하도록 훈련된 사람들입니다. <br>솔직히 말해, 이런 사람들은 영리하게 먹고살기 참 어렵습니다.<br>저 역시, 차가운 논리가 우선되어야 할 순간에도 감정적인 '싫어요'가 불쑥 튀어나오려 할 때가 많습니다.<br>삶의 많은 부분을 그저 둥글게 넘기며 살아왔지만, <br>설계라는 이 한 부분마저 타협하고 놓아버리면 정말로 밑바닥으로 떨어져 죽을 것만 같은 두려움 때문일지도 모릅니다.<br>그래서 가끔은 억지를 부립니다. <br>아무런 생각이 담기지 않은 텅 빈 도면을 보기가 싫습니다.<br>영혼 없이 오가는 기계적인 말들을 듣기가 싫습니다. <br>조금 미련해 보일지라도, 저는 공간에 사람의 체온과 생각이 담기기를 고집하고 싶습니다.",
+            "image": "static/images/user_22.jpg",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "type": "poem",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n디자인은 어디서 나오는 것일까요?<br>감각이나 방대한 지식에서 나오는 것일까요?<br><br>내가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.<br><br>타인에 대한 배려와 관심,<br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다.<br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민,<br>그리고 바람과 조망에 대한 깊은 공감이 있을 때<br>진짜 설계가 나옵니다.<br>거창한 논리보다 먼저 다정한 사람이 되시길 바랍니다.<br><br>다정한 디자인\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고... 그때 그 말에 참 부끄러웠습니다.\n</blockquote>",
-            "image": "static/images/sketches/94.jpg"
+            "type": "poem"
+        },
+        {
+            "type": "image_top",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "우리는 건축 설계안이나 우리의 삶,<br>\n나아가 인간관계에 이르기까지, 이 모든 것을 주도적으로 '만들고 있는' 것일까요?<br>\n아니면 어떠한 흐름 속에서 '만들어져 가는' 것일까요?<br>\n<br>\n<img src=\"static/images/sketch_making_1.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<img src=\"static/images/sketch_making_3.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n요즘 무언가를 만들며 깨닫는 것이 있습니다.<br>\n분명 처음에는 저만의 확고한 생각과 의도를 가지고 시작하지만,<br>\n결과물에 이르러서는 마치 <strong>'원래 있어야 할 모습'</strong>을 찾아가듯 아주 자연스럽게 만들어져 간다는 것입니다.<br>\n<br>\n<img src=\"static/images/sketch_making_2.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n우리가 치밀하게 세운 계획도, 인생도,<br>\n처음의 의도와 조금 다르게 흘러간다고 해서 결코 틀린 것이 아닙니다.<br>\n어쩌면 그것은 지금 주어진 상황과 환경에 가장 적합한 모습으로 '만들어져 가는' 과정일지도 모릅니다.<br>\n<br>\n<img src=\"static/images/sketch_making_4.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n가장 중요한 것은, 결과가 내 의도와 다르게 변화해 가더라도<br>\n그 안에서 <strong>내 마음의 중심</strong>을 결코 놓지 않는 것입니다.<br>\n<br>\n<img src=\"static/images/sketch_making_5.jpg\" style=\"max-width:100%; border-radius:12px; margin: 24px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);\"><br>\n<br>\n<blockquote>\n내 생각과 다르게 진행된다고 해서 틀린 것이 아닙니다.<br>\n비록 흔들거리더라도, 다시 방향을 잡고 나아가면 됩니다.<br>\n다 괜찮습니다.\n</blockquote>",
+            "image": "static/images/sketches/117.jpg",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "거름종이 마법이 있다",
+            "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료 마법이라고 합니다.<br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니<br>좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "image": "static/images/sketches/11.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "외로움",
+            "text": "외롭지요?<br>외로움을 메우기 위해<br>무언가로 채우지만<br>쉽지 않네요<br>채우기 위해 무언가를 집어넣지만<br>그로 인해 그 깊이만 더 깊어집니다<br>채우다 채웁니다<br>문득 제가 채운 자리의 바닥이 보이지않는<br>깊은 어둠이 되어버렸을때,<br>그 깊은 깊이속에 갇혀버렸음을<br>알게됩니다<br>이제는 어쩌나 하고<br>바닥에 주저앉아 가만히 있다보면<br>바닥은 올라가고<br>어느새 제가 다시 빠질정도는 아니네하고<br>깨닫게 됩니다<br>외로울 땐<br>지나가길 기다려야 되나봅니다<br>꼭 외로움이 아닌 슬픔과 화남도<br>지나가길 기다려야 되나봅니다\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">어찌 외로움뿐이겠는가. 허기짐을 메우기 위해 끊임없이 무언가를 욱여넣는 것이나, 부족함을 채우기 위해 자꾸만 무언가를 덧붙이는 행위는 결국 근본적인 위로가 되지 못합니다. 설계도 마찬가집니다. 무언가를 계속 덧칠하는 순간 본질적인 아름다움과는 멀어지고, '이것이다'라고 강압적으로 지시하는 순간 사람들은 오히려 시선을 거둡니다. 반대로 최대한 간결하게 비워낼수록 공간은 더 많은 것을 포용할 수 있게 됩니다.<br><br>아래의 조형물들은 제가 직접 빚어 만든 것들입니다. 가슴에 사랑을 품고 있는 형태지만, 정작 그 가슴통은 텅 비어 있습니다. 억지로 무언가를 꽉 채워 넣지 않고 텅 비워두었기에, 오히려 더 크고 따뜻하게 누군가를 품어 안을 수 있지 않을까 하는 생각에서였습니다.</div>\n<div style=\"margin-top: 40px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[조형물] 비어 있기에 품을 수 있는</h4>\n <img src=\"static/images/sculpture_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/sculpture_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/user_04.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "가끔",
+            "text": "가만히 벽지의 무늬를 바라보다보면<br>그 무늬속에 숨어있던 얼굴들이 나타난다<br>웃기도하고 나에게 무엇가를 말하는것도 같다<br>분명한 언어가 아닌 느낌으로 이야기를 만들어 간다<br>돌이나 나무 그 것들 속에서 미소짓는<br>얼굴들을 발견할때면 나도 웃게된다<br>나만이 아는 친구를 만난 것처럼<br>어느날은 공사장의<br>굴착기이 힘들어<br>축 늘어진 강아지 같이 보일때도 있다<br>하나의 형상은 하나의 이미지로만 보이지않는다<br>가만히 들여다보면, 대부분은 내가 보고 싶은 대로<br>보는것 같다<br>오늘도 고정된 이미지를 만들지 말고,<br>그렇게 보지않도록 노력하며 하루를 살아보자\n<div style=\"margin-top: 60px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[스케치] 서울에서 찾아낸 얼굴들</h4>\n <img src=\"static/images/face_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n<br>\n<blockquote>\n무심한 사물 속에서 종종 사람의 모습을 찾곤 합니다.<br>\n아무런 의미가 없다고 여겼던 평범한 바탕 위에서 문득 누군가의 얼굴을 찾아내어, 가만히 속으로 인사를 건네기도 하지요.<br>\n<br>\n건축물의 배치나 디자인된 공간은 결코 죽어 있는 것이 아닙니다. 우리가 빚어낸 디자인과 공간은, 살아 숨 쉬는 우리 사람들과 끊임없이 교감하며 서로 영향을 주고받기 때문입니다.\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/20.jpg",
+            "type": "image_top"
         },
         {
             "type": "cover",
