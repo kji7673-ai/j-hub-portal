@@ -528,15 +528,6 @@ var bookData = {
             "type": "poem"
         },
         {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "그렇게 하실 것 같습니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그렇게 하실 것 같습니다.<br><br>\n계속 아파하실 것 같습니다<br>\n그렇게<br><br>\n계속 사랑하실 것 같습니다<br>\n그렇게<br><br>\n계속 살아가실 것 같습니다<br><br>\n과연 그럴까<br>\n당신은 고정된 사람이 아닐 것 같습니다.<br><br>\n다르게 살아가실 수 있습니다.<br>\n그렇게\n</p>\n</div>",
-            "image": "static/images/sketches/107.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "image_top"
-        },
-        {
             "type": "text",
             "title": "흔들리지 않기 위한 나만의 무게 중심",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
