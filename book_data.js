@@ -3,7 +3,7 @@ var bookData = {
         {
             "title": "도면 위의 공유결합",
             "image": "static/images/cover_sculpture.jpg",
-            "text": "<style> img[src=\"static/images/cover_sculpture.jpg\"] { filter: contrast(1.25) brightness(1.05) saturate(1.1) drop-shadow(0px 10px 20px rgba(0,0,0,0.15)); } </style><p style='text-align:center; color:#7a7a7a; margin-top:20px;'>건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>"
+            "text": "\n    <div style=\"position:absolute; bottom:8%; left:0; width:100%; text-align:center; z-index:10; padding:40px 20px; box-sizing:border-box; background: linear-gradient(to top, rgba(245,245,247,1) 0%, rgba(245,245,247,0.7) 50%, rgba(245,245,247,0) 100%);\">\n        <h1 style=\"font-size:2.8em; font-weight:800; color:#1d1d1f; margin:0 0 10px 0; letter-spacing:-0.03em;\">도면 위의 공유결합</h1>\n        <p style=\"font-size:1.2em; color:#555; font-weight:600; margin:0;\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>\n    </div>"
         },
         {
             "partCategory": "저자 소개",
