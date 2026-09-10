@@ -235,6 +235,92 @@ var bookData = {
             "type": "image_top"
         },
         {
+            "type": "cover",
+            "image": "static/images/sketches/11.jpg",
+            "title": "여는 글: 제2막: 나라는 개체의 독립과 생존",
+            "text": "건강한 공유결합의 절대적인 전제 조건이 있습니다.<br>\n결합하는 각 원자가, 먼저 스스로 온전하고 독립적이어야 한다는 것입니다.<br>\n<br>\n불안정한 원자끼리 만나면 결합이 아니라 붕괴가 일어납니다.<br>\n사람도 마찬가지입니다.<br>\n<br>\n타인과 진정한 관계를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단해져야 합니다.<br>\n<br>\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n쪼개지고 부서지면서도 결국 자기 자신의 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "혹시 무겁지 않나요?",
+            "text": "서울 올라와<br>지금까지 언덕 위에 집을 얻어 살아왔습니다.<br>언덕 위 집은 꿈에 그리던 그런 집이 아닙니다.<br>집으로 올라가는 길이 가팔라 천천히 걷게 됩니다.<br><br>천천히 걸으며<br>저 밑에서의 먼지를 털어냅니다.<br>그렇게 집으로 갑니다.<br><br>가끔은 언덕길 가로등에<br>길게 늘어진 제 그림자가<br>유난히 무거워 보일 때가 있습니다.<br><br>잠시 쉬어 가라 하는 것도 같습니다.<br>내 그림자가 이토록 무거워질 때,<br>그럴 땐 저는 어떻게 해야 할까요?",
+            "image": "static/images/user_43.jpg",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem"
+        },
+        {
+            "type": "image_top",
+            "title": "찢어진 운동화",
+            "text": "자신의 아파트를 설계하는 사람에게 대뜸 반말부터 던지는 저 무지함은 대체 뭘까?<br><br>그런 무례함에 아직도 속절없이 휘둘리는 내 모습이 한없이 작아 보였습니다. <br>일단 무너진 마음을 추스를 시간이 필요했기에, <br>대충 핑계를 대고 서둘러 그 자리를 빠져나왔습니다. <br><br>도면 위에서 요소들이 충돌할 때 '간격'을 벌려야 하듯, <br>사람 사이에도 감정이 날카롭게 부딪힐 땐 적당한 거리와 여백이 필요하니까요.<br><br>그렇게 도망치듯 나와 걷던 중, <br>문득 내 눈에 들어온 것은 앞코가 찢어진 낡은 프로스펙스 운동화였습니다.<br><br>1부에서 이야기했듯, 사람들은 거대한 바탕보다 숨기고 싶은 '작은 흠결'에 유독 날카롭게 시선을 꽂기 마련입니다. <br>어쩌면 그 사람의 눈에는 제가 밤새워 그려간 도면이라는 거대한 바탕보다, 발끝에 놓인 후줄근하고 찢어진 운동화라는 작은 흠결이 먼저 보였을지도 모릅니다. <br>그 찢어진 틈새가 부끄러워지는 순간, 이 낡은 운동화가 곧 초라한 내 모습 같아 당장이라도 벗어 던지고 싶었습니다.<br><br>'상대가 나를 존중할 수 있도록 옷차림을 단정히 갖추는 것 또한 내 몫이었을 텐데. 내 실수구나.' <br>속으로 자책해 보았습니다. 하지만 이 또한 내 마음을 달래기 위한 구차한 핑계일지도 모릅니다. <br>그저 '다 이 낡은 신발 때문이야'라며 상처받은 마음을 애써 위로하고 싶었던 것일 테니까요.<br><br>여전히 작은 무례함에도 목소리가 떨리는 약한 사람이지만, <br>누군가 내 흠결을 보고 툭툭 건드린다 해도 <br>더 이상 쉽게 흔들리지 않도록 내 안의 바탕을 단단하게 키워야겠습니다. <br><br>다시 글을 쓰고, 다시 스케치를 하자. <br>찢어진 운동화를 신고도 당당할 수 있는, 그런 단단한 건축쟁이가 되자고 굳게 다짐해 봅니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">우스운 이야기지만, 현재의 저는 애써 운동화를 탓하던 과거의 그 모습에서 조금도 더 강해지지 않은 것 같습니다. 서울시 건축심의위원이라는 번듯한 직함을 달고 회의 자리에서 내 의견을 이야기할 때조차, 여전히 목소리가 미세하게 떨리는 나 자신을 발견할 때면 '너는 참 어쩔 수 없구나' 하며 쓴웃음을 짓게 됩니다.<br><br>하지만 어쩌면 다행인지도 모릅니다. 그때나 지금이나 저는 무장한 듯 완벽하고 빈틈없는 전문가로 보이기보다는, 여전히 치열하게 생각하고, 진심으로 스케치하고, 묵묵히 글을 쓰며, 사람의 마음과 감정을 소중히 다룰 줄 아는 그런 사람으로 남고 싶으니까.</div>\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">건축이란 화려한 조감도나 흙먼지 날리는 현장 속에서만 완성되는 것이 아닙니다. 진짜 건축 설계는 사람과 사람의 '만남'에서 시작되며, 그 만남을 어떻게 좋은 관계로 엮어 가느냐에 달려 있습니다.<br><br>일찍이 강남순 교수님으로부터 배운 가르침이 있습니다. 사람의 얼굴은 그 자체만으로도 각자의 다름과 개별성이 주는 고귀함이 있으며, 누군가와 시간을 보낼 때는 마치 데이트를 하듯, 춤을 추듯 해야 한다는 것입니다. 서로를 향해 다정하게 궁금해하되, 결코 함부로 침범하지 않는 '적당한 거리'를 유지하며 스텝을 맞추는 춤 말입니다.<br><br>건축에서의 '공유결합' 역시 현장에만 있는 것이 아닙니다. 사람과 사람의 만남, 그 조심스럽고도 치열한 춤의 과정 끝에 우리가 테이블 위에 조용히 올려놓는 '계획안'이야말로 진정한 공유결합의 결과물이어야 합니다. 제 낡은 운동화는 단지 거친 현장을 누빈 흔적이 아니라, 사람의 마음을 향해 부단히 스텝을 밟아온 치열한 춤의 흔적일지도 모릅니다.</div>",
+            "image": "static/images/sketches/52.jpg",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "type": "image_top",
+            "title": "삼켜낸 말과 술 한 잔",
+            "text": "**침 꿀꺽 삼킨다**\n\n아들에게 말해준 적이 있습니다.\n회사 일을 하다 보면 사회적 위계를 무기 삼아 사람을 대하는 경우를 무수히 겪는다고.\n그때마다 목구멍까지 욱하고 올라오는 것들이 있습니다.\n그래서 오늘도 되뇌입니다. 침 꿀꺽. 침 꿀꺽 삼킵니다.\n\n하고 싶은 말도, 내뱉어질 말도 삼켜버립니다. \n내 안에 담아두어 생속이 아닌 문드러진 속이 되더라도, 어차피 삼키면 언젠가 소화되어 나갑니다. \n침 꿀꺽 삼킵니다.\n\n**술 한 잔**\n세상 일 중에 술잔에 담지 못할 것이 있을까?\n한 잔에 40도라 정신을 바짝 차려야겠지만, 내 잔에 담긴 것이 그 정도 독기는 되어야지.\n이 잔에 담긴 것은 이것저것 많아도, 내 몸의 구불구불하고 긴 시간을 지나면 결국 하나가 되어 나옵니다. 그 과정에 아픔도, 정신 잃음도 있다는 것이 어찌 이리 설계와 같은지.\n\n내 앞 술잔 하나 놓고, 세상 일 중에 이 작은 잔에 담지 못할 것은 없습니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">세상 일 중에 이 술잔에 담지 못할 것이 무엇이 있을까. 꾹꾹 눌러 담아 탁 털어 넣어버리곤 하지만, 저는 여전히 이따금씩 술에 취해 정신을 잃고 맙니다.<br><br>나이 쉰이 훌쩍 넘고 그 긴 세월을 겪었으면서도, 저는 아직도 정신을 못 차린 것입니다. 어쩌면 영원히 못 차릴지도 모르겠습니다.<br><br>영원히 철들지 못하고 또다시 사람에 치여 술잔을 기울일지언정, 굳이 핏대를 세우며 이기려 들기보다는 그저 미련한 척 허허 웃으며 무던하게 털어버리는 것이 나을 때가 많습니다. 목구멍까지 차오르는 수많은 억울함도 독한 술과 함께 꿀꺽 삼켜내고 나면, 얽히고설켰던 마음도 어느새 스르르 소화되고 마니까요. 어쩌면 이다지도 바보같이 비워내고 털어내는 '무던한 미련함'이야말로, 복잡한 설계 현장뿐만 아니라 팍팍한 우리 삶의 매 순간을 둥글게 둥글게 굴러가게 해주는 진짜 지혜일지도 모르겠습니다.</div>",
+            "image": "static/images/sketches/02.jpg",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "십원짜리",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어릴 적에 십원짜리 동전을 보면 맘이 편해집니다.<br>\n앞면에 10이라는 숫자와 뒷면의 다보탑<br>\n특히 다보탑의 안정적인 비례감이 편안함을 줍니다.<br>\n동전의 둥그런 테두리 안에 자리잡은 모습을 볼 때면,<br>\n내가 그 안 있는 듯한 느낌을 받습니다.<br><br>\n저는 십원짜리 동전이 좋고,<br>\n제가 십원짜리가 되어본 적도 있습니다.<br><br>\n저의 첫 배역이 십원짜리였습니다.<br>\n교도소에서 사용되는 은어로<br>\n십년 복역자를 가리킵니다.<br><br>\n십원짜리.<br>\n그들의 언어로는 잘 살아봐야<br>\n백원밖에 안되는 껌값 인생이란 말입니다.<br><br>\n너나 나나 별거 없다는 것인데~<br>\n그 말을 인정하고 싶지가 않네.<br><br>\n그래도 뭔가가 있지 싶은데<br>\n그것이 뭘까?<br><br>\n오늘도 찾아보다 안 되면 만들어보자.\n</p>\n</div>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/12.jpg",
+            "type": "poem"
+        },
+        {
+            "title": "양팔에 낀 토시",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n지금 사람들은 이해하기 어렵겠지만,<br>연필로 설계할 때면 팔뚝이 흑연으로 인해 새카맣게 되곤 해서<br>양팔에 토시를 낍니다.<br><br>어느 날<br>회사 임원 분 중에 한 분이<br>넌<br>그 토시를 벗지 않는 한<br><br>평생 남들 설계만 해줄 거라며,<br>빨리 그놈의 토시부터 벗어 버리란 이야기를 했었습니다.<br><br>아마도 설계만이 아닌 기획과 영업 능력을 키우란 말이겠지요.<br>근데, 전 아직도 토시를 벗기에는 모르는 게 너무 많습니다.<br>예전 첫 직장에서 화장실 하나로 일주일을 밤새 고민하던 그 시절이 그립습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n전 아직도 설계를 하고 싶습니다. 회의 테이블 위에서의 차가운 숫자 놀음이 아닌... 흑연이 묻어나는 진짜 설계를 말입니다.\n</blockquote>",
+            "image": "static/images/sketches/03.jpg"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "오늘을 산다는 것",
+            "text": "오늘을 산다는 것, 그것은 참으로 큰 용기가 필요한 일입니다.<br>\n오늘을 살아낸다는 것은 결국 과거의 결과를 고스란히 맞이한다는 뜻이기 때문입니다.<br>\n<br>\n때로는 언 땅, 언 하늘 아래에서 벗겨진 살갗의 고통을<br>\n그대로 받아내야만 할 때가 있습니다.<br>\n<br>\n그래도 어쩔 수 없습니다.<br>\n오늘을 맞이한다는 것에는 그토록 아픈 용기가 필요합니다.<br>\n<br>\n오늘을 산다는 것.<br>\n오늘을 직시한다는 것은 이처럼 뼈아픈 용기가 필요합니다.<br>\n하지만 바로 그곳에서, 다시 시작해야 할 때가 있습니다.<br>\n<br>\n<blockquote>\n제게 '오늘을 산다는 것'은 곧 '과거에 내가 했던 디자인(결과물)을 마주하는 것'과 같습니다.<br>\n<br>\n오랜 시간 동안 제게 건축은 낭만이 아니라 '생존' 그 자체와 얽혀 있었습니다.<br>\n그것은 아마도, 서울에 처음 올라왔을 때 제 삶이 팍팍한 생존에 가까웠고, 그 생존에 유일하게 의미를 부여해 준 것이 바로 '건축'이었기 때문일 겁니다.<br>\n<br>\n아직까지도 \"이건 내가 했다\"라고 자랑스레 내세울 만한 대단한 것은 없지만, 그래도 저는 건축을 하는 사람입니다.<br>\n그래서 아직도 내 결과물이 나를 몹시 아프게 찌르기도 하고, 견디기 버겁기도 합니다.<br>\n<br>\n결과가 부끄러워서 아프고, 그저 힘들어서 힘이 듭니다.\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/126.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "난 약한 사람입니다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n난 약한 사람입니다<br><br>\n난 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n내가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은<br>\n내가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
+            "image": "static/images/user_sketch_6.jpg",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "난 둔한 사람입니다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n전 둔한 사람입니다.<br>\n어떤 이는<br>\n침착하다고 말하지만,<br><br>\n사실 몸도 마음도 둔하여<br>\n슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>\n둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>\n보통의 경우는<br>\n이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>\n이미 지나간 것들이<br>\n지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>\n다른 이는 현재의 시간인데<br>\n나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>\n현재 기쁨의 순간에<br>\n찾아온 과거의 슬픔에<br><br>\n난 어느 시점에 나의 중심을 둘지 몰라<br><br>\n그냥 멍하니 있습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n<strong>\"제발, 이상한 인간만은 되지 말자.\"</strong><br><br>\n겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠다.\n</blockquote>\n<div style=\"margin-top: 60px; text-align: center;\">\n<h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f;\">[조형물] 한 박자 늦게 걷는 사람</h4>\n<img src=\"static/images/dull_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n<img src=\"static/images/dull_2.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/update_page_68.jpg",
+            "type": "poem"
+        },
+        {
+            "type": "image_top",
+            "title": "오뚝이",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n흔들릴지언정 넘어지지 않는,<br><br>\n그래서<br>\n재미 삼아 툭툭 건드려도 상관없는<br><br>\n난<br>\n중심 잡힌 오뚝이인 줄 알았습니다.<br><br>\n근데 이젠, 작은 입김에도 휘청이며 중심 잡기 위해<br>\n몹시도 흔들거리는, 아파서 흔들거리는 제가 되었습니다.<br><br>\n세월의 흐름 속에<br>\n내 안에 가라앉은 침잠된 무게가 중심추 되어,<br><br>\n이젠<br>\n웬만한 바람이 불어도<br>\n비록 흔들거릴지언정 넘어지지는 않는<br>\n난 오뚝이인데,<br>\n그래 그렇지.<br><br>\n내 속에 침잠된 그 묵직함이<br>\n오늘의 저를 지켜줍니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n<strong>오늘도 사랑한다로 시작합니다</strong><br><br>\n오늘 하루, 난 또 다른 모습으로 뭍의 삶을 살아갑니다. 태초의 쉼터인 물로 돌아가기 전까지 모두가 그렇게 살아갑니다. 특별할 것 없습니다. 매 맞는 말의 모습에서 메시아를 보았던 니체처럼, 언젠가 나도 이 고달픈 쟁이 삶의 끝에서 희열의 본질을 마주하겠지. 오늘도 저는 '사랑한다'는 말로 하루를 시작합니다. 그리고 하루의 마지막엔, '나는 사랑했다'로 끝을 맺고 싶습니다.\n</blockquote>",
+            "image": "static/images/sketches/26.jpg",
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "외로움",
@@ -246,50 +332,36 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "가끔",
-            "text": "가만히 벽지의 무늬를 바라보다보면<br>그 무늬속에 숨어있던 얼굴들이 나타난다<br>웃기도하고 나에게 무엇가를 말하는것도 같다<br>분명한 언어가 아닌 느낌으로 이야기를 만들어 간다<br>돌이나 나무 그 것들 속에서 미소짓는<br>얼굴들을 발견할때면 나도 웃게된다<br>나만이 아는 친구를 만난 것처럼<br>어느날은 공사장의<br>굴착기이 힘들어<br>축 늘어진 강아지 같이 보일때도 있다<br>하나의 형상은 하나의 이미지로만 보이지않는다<br>가만히 들여다보면, 대부분은 내가 보고 싶은 대로<br>보는것 같다<br>오늘도 고정된 이미지를 만들지 말고,<br>그렇게 보지않도록 노력하며 하루를 살아보자\n<div style=\"margin-top: 60px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[스케치] 서울에서 찾아낸 얼굴들</h4>\n <img src=\"static/images/face_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n<br>\n<blockquote>\n무심한 사물 속에서 종종 사람의 모습을 찾곤 합니다.<br>\n아무런 의미가 없다고 여겼던 평범한 바탕 위에서 문득 누군가의 얼굴을 찾아내어, 가만히 속으로 인사를 건네기도 하지요.<br>\n<br>\n건축물의 배치나 디자인된 공간은 결코 죽어 있는 것이 아닙니다. 우리가 빚어낸 디자인과 공간은, 살아 숨 쉬는 우리 사람들과 끊임없이 교감하며 서로 영향을 주고받기 때문입니다.\n</blockquote>",
+            "title": "요즘 잠을 잘 수가 없다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n요즘 난 잠을 잘 수가 없습니다.<br><br>눈을 감으면,<br>저의 모든 감각 기관이 더욱 예민해집니다.<br>어느 날은 자고 있는 상태에서도<br>내 옆에 기어가는 벌레를 인지하고 잡은 적도 있습니다.<br><br>심지어<br><br>난 눈을 뜨고 잡니다.<br>자고 있는 나에게 말을 붙이면 대답을 합니다.<br><br>군에서는 선임들이 내 머리카락만 건드려도<br>관등성명을 댄다고 모두들 신기해했지만,<br>사실 난 자면서도 그들의 모든 일거수일투족을<br>인지하고 있었습니다.<br><br>저의 이 능력은 사실 지네에게 물렸을 때 생긴 능력입니다.<br><br>거미에 물렸다면 스파이더맨이 될 수도 있었는데 아깝습니다.<br>아무튼, 난 지네맨이 되었습니다.<br><br>지네가 가진 예민한 촉각을 제가 가지게 된 것입니다.<br>몹시 예민합니다.<br>이런 능력을 가진 후 몇 가지 단점도 생겼습니다.<br><br>첫째는, 밤에 예민하다 보니 낮에 몹시 둔하다는 것입니다.<br>말도 행동도 느리고, 쉽게 다른 사람의 말을 알아듣지도 못하게 되었습니다.<br><br>둘째, 너무 많은 정보가 내게 쏟아져 들어옵니다. 주변의 모든 정보가.<br>그래서, 난 더 둔해집니다.<br>화를 낼 일도 한참 나중에 되어서야<br>'아! 그때 화를 냈어야 했는데' 하고 후회하곤 합니다.<br><br>결국 난 몹시 예민하지만, 몹시도 둔한 사람이 되었습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n아직도 전 어떨 땐 너무 둔하고, 또 어떨 땐 너무 예민하게 신경이 곤두서서 나도 모르게 손발이 떨릴 때가 있습니다. 긴장해서 말마저 더듬거릴 때면, 저는 속으로 중얼거립니다.<br><br>\n'그래, 나는 지네맨이었지. 아니면 지구에 불시착한 외계인이거나.'<br><br>\n그렇게 나 스스로를 세뇌하며 버텨냅니다. 참 하루하루가 고단하고 쉽지 않습니다. 어쩌면 나만 이 이상한 능력이 있지는 않을 것 같습니다.<br><br>\n다른 사람들도 겉으로는 무표정해 보이지만, 속으로는 상처받지 않기 위해 온갖 더듬이를 세운 채 하루를 간신히 버텨내는 또 다른 지네맨들이 아닐까 싶습니다.<br><br>\n둔감함이라는 갑옷을 입고 살아가는 세상의 모든 이상 능력 소유자들에게 연대의 위로를 건네봅니다.\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/20.jpg",
-            "type": "image_top"
-        },
-        {
-            "type": "cover",
-            "image": "static/images/sketches/11.jpg",
-            "title": "여는 글: 제2막: 나라는 개체의 독립과 생존",
-            "text": "건강한 공유결합의 절대적인 전제 조건이 있습니다.<br>\n결합하는 각 원자가, 먼저 스스로 온전하고 독립적이어야 한다는 것입니다.<br>\n<br>\n불안정한 원자끼리 만나면 결합이 아니라 붕괴가 일어납니다.<br>\n사람도 마찬가지입니다.<br>\n<br>\n타인과 진정한 관계를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단해져야 합니다.<br>\n<br>\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n쪼개지고 부서지면서도 결국 자기 자신의 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존"
-        },
-        {
-            "type": "text",
-            "title": "흔들리지 않기 위한 나만의 무게 중심",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '공유결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'공유결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 공유결합의 첫 번째 조건입니다.</p>",
-            "image": "static/images/update_page_8.jpg"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "페이퍼 아키텍처의 유혹",
-            "text": "설계를 하다보면 페이퍼 아키텍쳐라는 것이 있다<br>건축 설계가 시공까지 가지 않은 순수계획안 상태를 의미하기도 하지만,<br>보통은 디테일이나 현실감이 부족한 것을 말할 때 이 단어를 사용한다<br><br>삶에서 말과 삶의 실체가 일치하지 않을 때,<br>흔히 입만 살았다고 하는 것과 비슷하다<br><br>설계나 삶이나 좀 더 생각하고, 무엇이 진실에 가까운지 잘 돌아봐야 한다<br><br>내가 옳다고 생각하는 것, 그리고 그렇게 이해되리라 생각하는 것은<br>자신만의 소설을 쓰는 것이다<br>설계를 할 때도 같다<br><br>자신의 생각이 그대로 읽혀지리라는 것은 소설 쓰는 것이다<br>허구일 수 있다, 자신의 머릿속에서만 존재하는.<br><br>첫 직장의 소장님이 자주 하시던 잔소리였다<br><strong style=\"color: #0066cc;\">\"소설 쓰지 마라. 그리고 그게 진실인지 파악해라.\"</strong>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/10.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "다닥다닥 붙은 집들",
-            "text": "바라 봄이 없는 집에서<br>보여지기마저 두려워 가리고 가린다<br>내 소리 남이 들을까<br>남의 소리 차단하고<br>거저 서로가 없는 듯 있는듯<br>죽은척 살아가기를 바란다<br>너무 가까이 살기에<br>서로에게 멀어지기 위해 닫고 닫아<br>상대와 내가 멀리 떨어진 것처럼 그렇게<br>상대와 내가 없는 것처럼 그렇게<br>혹시 옆에 누가살고 있는지 알고 있나요?",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketch_100year_market_1.jpg",
+            "image": "static/images/sketches/101.jpg",
             "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "난 약한 사람입니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n난 약한 사람입니다<br><br>\n난 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n내가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은<br>\n내가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
-            "image": "static/images/user_sketch_6.jpg",
+            "title": "에너지의 소진으로",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있습니다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/update_page_52.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "졸음이 옵니다",
+            "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>깨어난 시간에서<br>지나온 것들 속에 잊어야 할 것을<br>온전히 잊었으면 좋겠습니다.<br><br>어제의 기억으로 상대를<br>대하지 않았으면 좋겠습니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 나의<br>일상을 보지 않는 것이 중요합니다.<br><br>익숙해짐으로 스쳐 지나갈 소중한 것들이<br>많이 있습니다.<br><br>오늘은 시간, 공간적으로 내가 온전히 나일 수 있는<br>영역을 만들어 줍니다.<br><br>오늘을 새롭게 느끼며 살아가야겠습니다.",
+            "image": "static/images/sketches/125.jpg",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "죽음 이후에",
+            "text": "난 신을 만나보겠지요.<br>죄라는 틀 속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는 신을 볼지<br><br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br><br>사실 누가 알겠습니까?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br><br>사실 누가 알겠습니까?<br>그러니 믿음이 미신으로, 또 맹신으로 되지는<br>말아야겠습니다.<br><br>사실 모르지 않습니까?<br>아십니까?<br>그럼 왜 그 모양이지요?",
+            "image": "static/images/sketches/124.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem"
         },
@@ -305,45 +377,63 @@ var bookData = {
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "난 둔한 사람입니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n전 둔한 사람입니다.<br>\n어떤 이는<br>\n침착하다고 말하지만,<br><br>\n사실 몸도 마음도 둔하여<br>\n슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>\n둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>\n보통의 경우는<br>\n이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>\n이미 지나간 것들이<br>\n지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>\n다른 이는 현재의 시간인데<br>\n나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>\n현재 기쁨의 순간에<br>\n찾아온 과거의 슬픔에<br><br>\n난 어느 시점에 나의 중심을 둘지 몰라<br><br>\n그냥 멍하니 있습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n<strong>\"제발, 이상한 인간만은 되지 말자.\"</strong><br><br>\n겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠다.\n</blockquote>\n<div style=\"margin-top: 60px; text-align: center;\">\n<h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f;\">[조형물] 한 박자 늦게 걷는 사람</h4>\n<img src=\"static/images/dull_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n<img src=\"static/images/dull_2.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>",
+            "title": "침묵이란",
+            "text": "침묵이란,<br>\n내가 할 말을 조금 더 차분하게 건네기 위해 잠시 시간을 두는 일입니다.<br>\n하지만 이 시간이 너무 길어지면, 때로는 걷잡을 수 없는 오해가 생겨나기도 합니다.<br>\n<br>\n그러므로 진정한 침묵은 입을 닫는 것에 그치는 것이 아니라,<br>\n오롯이 듣기 위해 말보다 귀를 더 활짝 열어둔 상태여야 합니다.<br>\n<br>\n입을 다문 채 귀마저 닫아버린다면,<br>\n그때부터 침묵은 그저 철저한 <strong>'외면'</strong>이 되고 맙니다.<br>\n<br>\n<blockquote>\n사실, 저는 이 부분을 참 못합니다.<br>\n상대를 온전히 이해하기 위해서는 먼저 귀를 열고 들어야 하는데 말입니다.<br>\n<br>\n업무에서도, 개인의 삶에서도 우리는 결코 관계를 '회피'해서는 안 됩니다.<br>\n'공유결합'이 이루어지기 위해서는 나의 본질을 단단히 지키면서도, 기꺼이 상대와 맞닿으려는 <strong>'접촉'</strong>이 필수적입니다. 부딪히고 닿지 않으면 결코 결합은 일어나지 않으니까요.<br>\n<br>\n이 당연한 이치를 잊은 채, 그저 귀를 닫아버리고 회피할 때가 지금도 제게 일어납니다. 스스로를 반성합니다.\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/update_page_68.jpg",
+            "image": "static/images/sketches/120.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "가끔",
+            "text": "가만히 벽지의 무늬를 바라보다보면<br>그 무늬속에 숨어있던 얼굴들이 나타난다<br>웃기도하고 나에게 무엇가를 말하는것도 같다<br>분명한 언어가 아닌 느낌으로 이야기를 만들어 간다<br>돌이나 나무 그 것들 속에서 미소짓는<br>얼굴들을 발견할때면 나도 웃게된다<br>나만이 아는 친구를 만난 것처럼<br>어느날은 공사장의<br>굴착기이 힘들어<br>축 늘어진 강아지 같이 보일때도 있다<br>하나의 형상은 하나의 이미지로만 보이지않는다<br>가만히 들여다보면, 대부분은 내가 보고 싶은 대로<br>보는것 같다<br>오늘도 고정된 이미지를 만들지 말고,<br>그렇게 보지않도록 노력하며 하루를 살아보자\n<div style=\"margin-top: 60px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[스케치] 서울에서 찾아낸 얼굴들</h4>\n <img src=\"static/images/face_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n<br>\n<blockquote>\n무심한 사물 속에서 종종 사람의 모습을 찾곤 합니다.<br>\n아무런 의미가 없다고 여겼던 평범한 바탕 위에서 문득 누군가의 얼굴을 찾아내어, 가만히 속으로 인사를 건네기도 하지요.<br>\n<br>\n건축물의 배치나 디자인된 공간은 결코 죽어 있는 것이 아닙니다. 우리가 빚어낸 디자인과 공간은, 살아 숨 쉬는 우리 사람들과 끊임없이 교감하며 서로 영향을 주고받기 때문입니다.\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/20.jpg",
+            "type": "image_top"
+        },
+        {
+            "title": "만지작거리고 바스락거린다",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 난 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br><br>\n\n그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>\n\n난 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>\n\n이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>\n\n텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 내 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>\n\n습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>\n\n서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,<br><br>\n\n그렇게 붙어있다 생각한 것은, 그것은 착각이네요.<br>\n엄지와 검지 사이 어느새 그 사이에<br><br>\n\n제가 버린 것들이 얇고도 투명한 막을 만들어 놓고,<br><br>\n\n서로를 부빈다 생각한 것은<br>\n서로가 아닌,<br>\n제가 만들어낸 조각난 저의 조각보.<br><br>\n\n현실은 우리를 공기도 물도 통하지 않는<br><br>\n\n서로가 다른 공간에 있음을 알리고,<br>\n함께 있다고 생각한 우리의 과거를 깨트립니다.<br><br>\n\n언제나 만지작거리면 바스락거리는<br>\n그 소리와 그 감촉은<br><br>\n\n그것은 얇고도 투명한<br>\n저의 포장지, 저의 조각보.\n</p>\n</div>",
+            "image": "static/images/crumpled_wrapper.jpg"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "title": "구겨진 도면",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\"><br><p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\"><br>손안에서<br>이리저리 움직여 본다.<br><br>바스락거리며<br>내 손의 움직임 따라<br>나를 간지럽히며, 내는 소리,<br>내 손안에 거미줄 치듯 작은 상처로 내게 말을 걸지만.<br><br>여리디여린 너는 원래 그랬던 것처럼,<br>이리저리 희롱당한 것을 오히려 자랑하듯<br><br>수없이 반짝이는 조각을 자랑하듯.<br>그렇게 그렇게 구겨져<br><br>결국엔 버려지는구나.<br></p><br></div><br><br><blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\"><br>사실 이 글은, 어느 날 손안에 남은 얇은 사탕 포장지를 이리저리 쥐었다 폈다 하며 썼던 글입니다. 구겨지고 상처 입으면서도 반짝이는 그 종이 쪼가리가, 어쩌면 나란 사람과 참 닮아있구나 싶어 씁쓸함을 삼켰던 기억이 납니다.<br></blockquote>",
+            "image": "static/images/crumpled_blueprint_poem.jpg",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "십원짜리",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n어릴 적에 십원짜리 동전을 보면 맘이 편해집니다.<br>\n앞면에 10이라는 숫자와 뒷면의 다보탑<br>\n특히 다보탑의 안정적인 비례감이 편안함을 줍니다.<br>\n동전의 둥그런 테두리 안에 자리잡은 모습을 볼 때면,<br>\n내가 그 안 있는 듯한 느낌을 받습니다.<br><br>\n저는 십원짜리 동전이 좋고,<br>\n제가 십원짜리가 되어본 적도 있습니다.<br><br>\n저의 첫 배역이 십원짜리였습니다.<br>\n교도소에서 사용되는 은어로<br>\n십년 복역자를 가리킵니다.<br><br>\n십원짜리.<br>\n그들의 언어로는 잘 살아봐야<br>\n백원밖에 안되는 껌값 인생이란 말입니다.<br><br>\n너나 나나 별거 없다는 것인데~<br>\n그 말을 인정하고 싶지가 않네.<br><br>\n그래도 뭔가가 있지 싶은데<br>\n그것이 뭘까?<br><br>\n오늘도 찾아보다 안 되면 만들어보자.\n</p>\n</div>",
+            "title": "잘게 잘게 나누어 버리기",
+            "text": "슬프다 아프다의 감정에 <br>칼을 댑니다 <br><br>아픈건 몸이 아플때 슬픈건 맘이 아플때 <br>근데 이건 슬프지만, 슬픈 게 아닙니다 <br>그냥 서글픈 것이지요 <br>그래 잠시 관계속에서 짓눌린 것입니다 <br><br>이런 것을 슬프다라고 생각하지 말아야겠습니다 <br><br>칼을 대어 도려내자 잘게 잘게 해체하여 형체를 없애야 합니다 <br>사실이란 덩어리만 남아있도록 <br><br>그렇게 감정에 칼을 대봅니다<br><br>사실이란 덩어리만 덩그러니 남도록<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">요즘 만난 사람중에 매우 낯선 표현을 한 친구가 있습니다. \"기저귀차고 마이크에 대고 노래 부르는 사람이 있다\" 이게 무슨 말일까 곰곰히 생각해보니, 미성숙한 사람이 자기 기분에 마이크에 대고 동네방네 자기 말 하는것을 이렇게 비유했구나 싶습니다. 참으로 신랄한 표현입니다. 나도 혹시 기저귀 차고 막 돌아다니는 것은 아닌지 조심해야겠습니다.</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/12.jpg",
+            "image": "static/images/sketches/104.jpg",
             "type": "poem"
         },
         {
-            "type": "image_top",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n난 붓을 놓을 수가 없습니다.<br><br>\n내 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n난 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'내가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
-            "image": "static/images/update_page_34.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "있을 뿐",
+            "text": "'있을 뿐'이란 말을 붙이면,<br><br>왠지 책임과 삶에 대한 회피가 느껴집니다.<br>의미 찾음의 회피,<br>또는<br>무관심.<br><br>여기에 <br>'그저'라는 말을 덧붙이면 <br>더욱 그 의미가 강해집니다.<br><br>그저 살고 있을 뿐입니다.<br>그저 보고 있을 뿐입니다.<br>그저 있을 뿐입니다.<br><br>그저 있을 뿐입니다.<br>이래선 살아 있는 게 아니란 생각이 듭니다.<br><br>오늘 하루는 '그저' 또는 '있을 뿐'이란 <br>말도, 생각조차도 하지 않게<br>그렇게 살아가려 합니다.<br><br><blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">조금은 더, 제가 하고 있는 일과 이 삶에 마음을 담아야겠습니다.<br>오늘이 어제와 같다면, 아니 어제와 똑같이 살아간다면, 어제와 오늘과 내일이 같아져 결국 정지한 것입니다.<br>살아 숨 쉬는 것이 아니라, '그저 있을 뿐'이 됩니다.</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/127.jpg",
+            "type": "poem"
         },
         {
-            "type": "image_top",
-            "title": "오뚝이",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n흔들릴지언정 넘어지지 않는,<br><br>\n그래서<br>\n재미 삼아 툭툭 건드려도 상관없는<br><br>\n난<br>\n중심 잡힌 오뚝이인 줄 알았습니다.<br><br>\n근데 이젠, 작은 입김에도 휘청이며 중심 잡기 위해<br>\n몹시도 흔들거리는, 아파서 흔들거리는 제가 되었습니다.<br><br>\n세월의 흐름 속에<br>\n내 안에 가라앉은 침잠된 무게가 중심추 되어,<br><br>\n이젠<br>\n웬만한 바람이 불어도<br>\n비록 흔들거릴지언정 넘어지지는 않는<br>\n난 오뚝이인데,<br>\n그래 그렇지.<br><br>\n내 속에 침잠된 그 묵직함이<br>\n오늘의 저를 지켜줍니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n<strong>오늘도 사랑한다로 시작합니다</strong><br><br>\n오늘 하루, 난 또 다른 모습으로 뭍의 삶을 살아갑니다. 태초의 쉼터인 물로 돌아가기 전까지 모두가 그렇게 살아갑니다. 특별할 것 없습니다. 매 맞는 말의 모습에서 메시아를 보았던 니체처럼, 언젠가 나도 이 고달픈 쟁이 삶의 끝에서 희열의 본질을 마주하겠지. 오늘도 저는 '사랑한다'는 말로 하루를 시작합니다. 그리고 하루의 마지막엔, '나는 사랑했다'로 끝을 맺고 싶습니다.\n</blockquote>",
-            "image": "static/images/sketches/26.jpg",
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존"
-        },
-        {
-            "type": "image_top",
-            "title": "가장 작은 생존 신고, \"힘내자\"",
-            "text": "가끔 힘들 때가 있을 텐데, 제 스스로에게 하는 생존 신고를 하나 알려드릴까 합니다.\n'힘내자'란 말이 처음 사회생활을 할 때는 나에게 하는 격려의 말로 시작되었다가, 어느 순간에는 '그래 한번 해보자'라는 응원의 말로, 지금에 와서는 '지금까지 고생했다, 수고했다'는 위로로 스스로에게 들려집니다.\n\n누구에게 보여줄 것도, 누구에게 들려줄 것도 아닌 나만 아는 가장 작은 생존 신고.\n힘내자. 그 한 줄로 오늘도 다시 시작합니다. 모두 힘내어요.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">참 이상한 일입니다. 현재의 저는 오히려 예전보다 더 잦은 빈도로 스스로에게 '힘내자'라고 되뇌고 있습니다.<br><br>나이가 들고 경력이 쌓이면 이 자기 암시에서 조금은 자유로워질 줄 알았건만, 도대체 왜 아직도 스스로를 세뇌하듯 '힘내자'는 말을 중얼거리지 않으면 안 되는 걸까. 요즘은 유독 가슴 한구석이 무겁습니다. 그래도 어쩌겠는가. 내일의 낯선 도면을 또 마주하기 위해, 저는 오늘도 억척스럽게 힘을 내어야만 합니다.</div>",
-            "image": "static/images/sketches/05.jpg",
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "당신의 세상은 어떤가요?",
+            "text": "당신은 어떤 세상에 있나요?<br>당신 곁에서 <br>당신의 눈으로 세상을 바라보면 좋겠습니다. <br><br>내가 느끼지못하는 기쁨과 슬픔을 <br>당신을 통해느낄 때 <br><br>우리 서로를 이해할 수 있겠지요? <br><br>당신의 세상은 어떤가요? <br>그 속에 기쁨만이 있지는않겠지만, <br>우리 서로의 시선을 갖고 바라본다면 <br><br>그때 비로소<br>우린 <br>우리가 되겠지요 <br><br>오늘 하루 당신의 시선으로 <br>세상을 바라보는 하루 되었으면 합니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">나를 이해하기위해서라도, 타인을 이해하기 위해서라도 나의 생각과 관념에서 벗어날 필요가 있는것 같습니다.</div>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/119-1.jpg",
+            "type": "poem"
         },
         {
             "type": "image_top",
@@ -364,150 +454,19 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존"
         },
         {
+            "type": "image_top",
+            "title": "가장 작은 생존 신고, \"힘내자\"",
+            "text": "가끔 힘들 때가 있을 텐데, 제 스스로에게 하는 생존 신고를 하나 알려드릴까 합니다.\n'힘내자'란 말이 처음 사회생활을 할 때는 나에게 하는 격려의 말로 시작되었다가, 어느 순간에는 '그래 한번 해보자'라는 응원의 말로, 지금에 와서는 '지금까지 고생했다, 수고했다'는 위로로 스스로에게 들려집니다.\n\n누구에게 보여줄 것도, 누구에게 들려줄 것도 아닌 나만 아는 가장 작은 생존 신고.\n힘내자. 그 한 줄로 오늘도 다시 시작합니다. 모두 힘내어요.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">참 이상한 일입니다. 현재의 저는 오히려 예전보다 더 잦은 빈도로 스스로에게 '힘내자'라고 되뇌고 있습니다.<br><br>나이가 들고 경력이 쌓이면 이 자기 암시에서 조금은 자유로워질 줄 알았건만, 도대체 왜 아직도 스스로를 세뇌하듯 '힘내자'는 말을 중얼거리지 않으면 안 되는 걸까. 요즘은 유독 가슴 한구석이 무겁습니다. 그래도 어쩌겠는가. 내일의 낯선 도면을 또 마주하기 위해, 저는 오늘도 억척스럽게 힘을 내어야만 합니다.</div>",
+            "image": "static/images/sketches/05.jpg",
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "오늘을 산다는 것",
-            "text": "오늘을 산다는 것, 그것은 참으로 큰 용기가 필요한 일입니다.<br>\n오늘을 살아낸다는 것은 결국 과거의 결과를 고스란히 맞이한다는 뜻이기 때문입니다.<br>\n<br>\n때로는 언 땅, 언 하늘 아래에서 벗겨진 살갗의 고통을<br>\n그대로 받아내야만 할 때가 있습니다.<br>\n<br>\n그래도 어쩔 수 없습니다.<br>\n오늘을 맞이한다는 것에는 그토록 아픈 용기가 필요합니다.<br>\n<br>\n오늘을 산다는 것.<br>\n오늘을 직시한다는 것은 이처럼 뼈아픈 용기가 필요합니다.<br>\n하지만 바로 그곳에서, 다시 시작해야 할 때가 있습니다.<br>\n<br>\n<blockquote>\n제게 '오늘을 산다는 것'은 곧 '과거에 내가 했던 디자인(결과물)을 마주하는 것'과 같습니다.<br>\n<br>\n오랜 시간 동안 제게 건축은 낭만이 아니라 '생존' 그 자체와 얽혀 있었습니다.<br>\n그것은 아마도, 서울에 처음 올라왔을 때 제 삶이 팍팍한 생존에 가까웠고, 그 생존에 유일하게 의미를 부여해 준 것이 바로 '건축'이었기 때문일 겁니다.<br>\n<br>\n아직까지도 \"이건 내가 했다\"라고 자랑스레 내세울 만한 대단한 것은 없지만, 그래도 저는 건축을 하는 사람입니다.<br>\n그래서 아직도 내 결과물이 나를 몹시 아프게 찌르기도 하고, 견디기 버겁기도 합니다.<br>\n<br>\n결과가 부끄러워서 아프고, 그저 힘들어서 힘이 듭니다.\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/126.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "있을 뿐",
-            "text": "'있을 뿐'이란 말을 붙이면,<br><br>왠지 책임과 삶에 대한 회피가 느껴집니다.<br>의미 찾음의 회피,<br>또는<br>무관심.<br><br>여기에 <br>'그저'라는 말을 덧붙이면 <br>더욱 그 의미가 강해집니다.<br><br>그저 살고 있을 뿐입니다.<br>그저 보고 있을 뿐입니다.<br>그저 있을 뿐입니다.<br><br>그저 있을 뿐입니다.<br>이래선 살아 있는 게 아니란 생각이 듭니다.<br><br>오늘 하루는 '그저' 또는 '있을 뿐'이란 <br>말도, 생각조차도 하지 않게<br>그렇게 살아가려 합니다.<br><br><blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">조금은 더, 제가 하고 있는 일과 이 삶에 마음을 담아야겠습니다.<br>오늘이 어제와 같다면, 아니 어제와 똑같이 살아간다면, 어제와 오늘과 내일이 같아져 결국 정지한 것입니다.<br>살아 숨 쉬는 것이 아니라, '그저 있을 뿐'이 됩니다.</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/127.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "혹시 무겁지 않나요?",
-            "text": "서울 올라와<br>지금까지 언덕 위에 집을 얻어 살아왔습니다.<br>언덕 위 집은 꿈에 그리던 그런 집이 아닙니다.<br>집으로 올라가는 길이 가팔라 천천히 걷게 됩니다.<br><br>천천히 걸으며<br>저 밑에서의 먼지를 털어냅니다.<br>그렇게 집으로 갑니다.<br><br>가끔은 언덕길 가로등에<br>길게 늘어진 제 그림자가<br>유난히 무거워 보일 때가 있습니다.<br><br>잠시 쉬어 가라 하는 것도 같습니다.<br>내 그림자가 이토록 무거워질 때,<br>그럴 땐 저는 어떻게 해야 할까요?",
-            "image": "static/images/user_43.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem"
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존"
         },
         {
             "type": "text",
             "title": "현장으로의 귀환",
             "text": "도면 위에서의 고독한 성찰도 좋지만, 결국 건축사는 문을 열고 나가 현장 사람들을 만나야만 살아남을 수 있습니다.<br><br>그렇다면 이제 제가 만난 '사람들' 이야기를 해볼까 합니다.<br><br>1막에서 이론으로 세웠던 완벽한 '공유결합'이 실제 사람과 사람 사이에서 어떻게 작동하는지, 그리고 때로는 얼마나 쉽게 깨져버리는지를 말입니다.<br><br>상처받고 닳아가는 버팀의 시간 끝에서, 저는 사람의 온기를 짓는 방법을 현장의 흙먼지 속에서 배워갔습니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "뇌물은 괴물이 되어 돌아온다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 됩니다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아옵니다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n\n\n<blockquote>LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</blockquote>",
-            "image": "static/images/user_02.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "에너지의 소진으로",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있습니다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n저는 오늘 하루를 온전한 '현재'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 '오늘'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/update_page_52.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "죽음 이후에",
-            "text": "난 신을 만나보겠지요.<br>죄라는 틀 속에서 심판자의 신을 볼지<br>아니면 나를 나로서 봐주는 신을 볼지<br><br>과거에 종속된 미래의 천국일지<br>아니면 새로운 시작의 천국일지<br><br>사실 누가 알겠습니까?<br>각자의 믿음대로 이루어지기를 바라고<br>또 바라지만<br><br>사실 누가 알겠습니까?<br>그러니 믿음이 미신으로, 또 맹신으로 되지는<br>말아야겠습니다.<br><br>사실 모르지 않습니까?<br>아십니까?<br>그럼 왜 그 모양이지요?",
-            "image": "static/images/sketches/124.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "오늘을 의지해살아갑니다",
-            "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다.<br><br>내 맘은 실에 매인 풍선 같아<br>언젠가 저 하늘로 날아가 버릴 것 같습니다.<br><br>오늘이라는 실에 매여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다.<br><br>오늘을 의지해 살아갑니다.<br><br>아픈 이들도 너무 많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아가려 합니다.<br><br>지금은 저에게 주어진 시간에 충실해야 합니다.<br><br>어떤 것은 헤헤거리며<br>어떤 것은 잊어버리고<br>그렇게 하지 않으면<br>무한히 넓어져 가는 것에<br>제가 견디기 어렵습니다.",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/13.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "침묵이란",
-            "text": "침묵이란,<br>\n내가 할 말을 조금 더 차분하게 건네기 위해 잠시 시간을 두는 일입니다.<br>\n하지만 이 시간이 너무 길어지면, 때로는 걷잡을 수 없는 오해가 생겨나기도 합니다.<br>\n<br>\n그러므로 진정한 침묵은 입을 닫는 것에 그치는 것이 아니라,<br>\n오롯이 듣기 위해 말보다 귀를 더 활짝 열어둔 상태여야 합니다.<br>\n<br>\n입을 다문 채 귀마저 닫아버린다면,<br>\n그때부터 침묵은 그저 철저한 <strong>'외면'</strong>이 되고 맙니다.<br>\n<br>\n<blockquote>\n사실, 저는 이 부분을 참 못합니다.<br>\n상대를 온전히 이해하기 위해서는 먼저 귀를 열고 들어야 하는데 말입니다.<br>\n<br>\n업무에서도, 개인의 삶에서도 우리는 결코 관계를 '회피'해서는 안 됩니다.<br>\n'공유결합'이 이루어지기 위해서는 나의 본질을 단단히 지키면서도, 기꺼이 상대와 맞닿으려는 <strong>'접촉'</strong>이 필수적입니다. 부딪히고 닿지 않으면 결코 결합은 일어나지 않으니까요.<br>\n<br>\n이 당연한 이치를 잊은 채, 그저 귀를 닫아버리고 회피할 때가 지금도 제게 일어납니다. 스스로를 반성합니다.\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/120.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "당신의 세상은 어떤가요?",
-            "text": "당신은 어떤 세상에 있나요?<br>당신 곁에서 <br>당신의 눈으로 세상을 바라보면 좋겠습니다. <br><br>내가 느끼지못하는 기쁨과 슬픔을 <br>당신을 통해느낄 때 <br><br>우리 서로를 이해할 수 있겠지요? <br><br>당신의 세상은 어떤가요? <br>그 속에 기쁨만이 있지는않겠지만, <br>우리 서로의 시선을 갖고 바라본다면 <br><br>그때 비로소<br>우린 <br>우리가 되겠지요 <br><br>오늘 하루 당신의 시선으로 <br>세상을 바라보는 하루 되었으면 합니다.<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">나를 이해하기위해서라도, 타인을 이해하기 위해서라도 나의 생각과 관념에서 벗어날 필요가 있는것 같습니다.</div>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/119-1.jpg",
-            "type": "poem"
-        },
-        {
-            "type": "poem",
-            "title": "현장에서 배워야 할 것들",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 내가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 나는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도<br>내가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아<br>다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br>제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 공유결합이지 않을까요?<br><br>현장의 공유결합.\n</p>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">하지만 타인과 진정한 '공유결합'을 이루기 위해서는, 먼저 나라는 사람부터 중심이 단단하게 잡힌 '독립된 원소'가 되어야 합니다. 궤도를 지탱하는 튼튼한 중심이 서 있어야 비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다.<br><br>그리고 또 하나 잊지 말아야 할 것이 있습니다. 수많은 사람과 결합하며 살아가더라도, 인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. 스스로 흔들림 없이 홀로 설 수 있는 사람만이 비로소 타인과 굳건하게 결합할 수 있습니다.</blockquote>\n</div>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/41.jpg"
-        },
-        {
-            "title": "만지작거리고 바스락거린다",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 난 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br><br>\n\n그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>\n\n난 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>\n\n이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>\n\n텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 내 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>\n\n습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>\n\n서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,<br><br>\n\n그렇게 붙어있다 생각한 것은, 그것은 착각이네요.<br>\n엄지와 검지 사이 어느새 그 사이에<br><br>\n\n제가 버린 것들이 얇고도 투명한 막을 만들어 놓고,<br><br>\n\n서로를 부빈다 생각한 것은<br>\n서로가 아닌,<br>\n제가 만들어낸 조각난 저의 조각보.<br><br>\n\n현실은 우리를 공기도 물도 통하지 않는<br><br>\n\n서로가 다른 공간에 있음을 알리고,<br>\n함께 있다고 생각한 우리의 과거를 깨트립니다.<br><br>\n\n언제나 만지작거리면 바스락거리는<br>\n그 소리와 그 감촉은<br><br>\n\n그것은 얇고도 투명한<br>\n저의 포장지, 저의 조각보.\n</p>\n</div>",
-            "image": "static/images/crumpled_wrapper.jpg"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "거짓이 진실을 만났을 때",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지요.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n하루를 조금은 무겁게 살아가야겠습니다.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/user_39.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "title": "우리 이렇게 오늘도",
-            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n나라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n나는 새로운 내가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우린 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n나라는 개체의 독립성은 나를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 나를 위하는 것이란 것을<br><br>\n나를 통한 나라는 존재는 더욱더 옅어지고<br>\n당신을 통한 나의 존재는 더욱 뚜렷해지기를.<br><br>\n살아간다는 것이 무엇일까요?<br><br>\n오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br><br>\n내가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"나라는 존재의 본질은 나를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/user_18.jpg",
-            "type": "image_top"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "우리가 그렇게 오늘을",
-            "text": "어제의 감정과 말에<br>오늘을 산다는 것은 힘이 듭니다.<br><br>주문을 외우듯 만일 오늘 하루밖에<br>살지 못한다면 어제에 매일 필요가 없다고<br>속으로 되뇌이지만 소용이 없습니다.<br><br>사물은 공간에서 사라지지만<br>기억은 시간에서 사라진다 했던가요?<br><br>그저 그렇게 흐미해질 때까지 또다시 시간을<br>흘러보내고 또 흘러보내며 살아가는 것이<br>우리 삶인가요?<br><br>혹 이미 저만큼 지나간 흐름에<br>우리 자신마저 흘려보냈다면 어쩌지요?<br><br>하루를 현재의<br>시간 속에 산다는 것은<br>흘러내고<br>견디고<br>맞이하고<br>우리는 그렇게 오늘을 살아야 되나 봅니다.",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/user_sketch_3.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "졸음이 옵니다",
-            "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>깨어난 시간에서<br>지나온 것들 속에 잊어야 할 것을<br>온전히 잊었으면 좋겠습니다.<br><br>어제의 기억으로 상대를<br>대하지 않았으면 좋겠습니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 나의<br>일상을 보지 않는 것이 중요합니다.<br><br>익숙해짐으로 스쳐 지나갈 소중한 것들이<br>많이 있습니다.<br><br>오늘은 시간, 공간적으로 내가 온전히 나일 수 있는<br>영역을 만들어 줍니다.<br><br>오늘을 새롭게 느끼며 살아가야겠습니다.",
-            "image": "static/images/sketches/125.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "타인의 시선을 공유한다는 것",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/109.jpg",
-            "type": "image_top"
         },
         {
             "type": "poem",
@@ -529,46 +488,30 @@ var bookData = {
         },
         {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "익숙해진다는 것",
-            "text": "타인의 시선에 익숙해져 버렸습니다.<br>\n타인의 시선 속의 내가 되어 버렸습니다.<br>\n<br>\n나의 맘과는 상관없이<br>\n그저 모난 소리 듣기 싫어, 힘들어도 참고 인내하는 것에<br>\n<br>\n내 행동의 의미보다는<br>\n타인의 시선 속에서 나를 찾기 시작했습니다.<br>\n<br>\n눈치껏 살아가는 게 좋은 것이겠죠?<br>\n상대에게 좋은 말 듣는 삶이 좋은 것이겠죠?<br>\n<br>\n나를 인정해주는 말들이 그물처럼 느껴집니다.<br>\n<br>\n인정해준다는 것은<br>\n<br>\n나와 타자의 동등한 관계에서 나오는 말일까요?<br>\n내가 나를 인정해 줄 수 있을 때 그게 더 좋을 것 같습니다.<br>\n<br>\n<blockquote>\n진정한 관계성이 이루어지려면, 동등한 개인 즉, 본인 자신에 대해 무겁게 해야 합니다.<br>\n그래야 상대에게 딸려가지 않는 관계가 형성될 수 있습니다.\n</blockquote>",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "거짓이 진실을 만났을 때",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지요.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n하루를 조금은 무겁게 살아가야겠습니다.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/update_page_63.jpg",
+            "image": "static/images/user_39.jpg",
             "type": "image_top"
         },
         {
-            "title": "양팔에 낀 토시",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "type": "poem",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n지금 사람들은 이해하기 어렵겠지만,<br>연필로 설계할 때면 팔뚝이 흑연으로 인해 새카맣게 되곤 해서<br>양팔에 토시를 낍니다.<br><br>어느 날<br>회사 임원 분 중에 한 분이<br>넌<br>그 토시를 벗지 않는 한<br><br>평생 남들 설계만 해줄 거라며,<br>빨리 그놈의 토시부터 벗어 버리란 이야기를 했었습니다.<br><br>아마도 설계만이 아닌 기획과 영업 능력을 키우란 말이겠지요.<br>근데, 전 아직도 토시를 벗기에는 모르는 게 너무 많습니다.<br>예전 첫 직장에서 화장실 하나로 일주일을 밤새 고민하던 그 시절이 그립습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n전 아직도 설계를 하고 싶습니다. 회의 테이블 위에서의 차가운 숫자 놀음이 아닌... 흑연이 묻어나는 진짜 설계를 말입니다.\n</blockquote>",
-            "image": "static/images/sketches/03.jpg"
-        },
-        {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "title": "구겨진 도면",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\"><br><p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\"><br>손안에서<br>이리저리 움직여 본다.<br><br>바스락거리며<br>내 손의 움직임 따라<br>나를 간지럽히며, 내는 소리,<br>내 손안에 거미줄 치듯 작은 상처로 내게 말을 걸지만.<br><br>여리디여린 너는 원래 그랬던 것처럼,<br>이리저리 희롱당한 것을 오히려 자랑하듯<br><br>수없이 반짝이는 조각을 자랑하듯.<br>그렇게 그렇게 구겨져<br><br>결국엔 버려지는구나.<br></p><br></div><br><br><blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\"><br>사실 이 글은, 어느 날 손안에 남은 얇은 사탕 포장지를 이리저리 쥐었다 폈다 하며 썼던 글입니다. 구겨지고 상처 입으면서도 반짝이는 그 종이 쪼가리가, 어쩌면 나란 사람과 참 닮아있구나 싶어 씁쓸함을 삼켰던 기억이 납니다.<br></blockquote>",
-            "image": "static/images/crumpled_blueprint_poem.jpg",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "뇌물은 괴물이 되어 돌아온다",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 됩니다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아옵니다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n\n\n<blockquote>LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</blockquote>",
+            "image": "static/images/user_02.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "요즘 잠을 잘 수가 없다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n요즘 난 잠을 잘 수가 없습니다.<br><br>눈을 감으면,<br>저의 모든 감각 기관이 더욱 예민해집니다.<br>어느 날은 자고 있는 상태에서도<br>내 옆에 기어가는 벌레를 인지하고 잡은 적도 있습니다.<br><br>심지어<br><br>난 눈을 뜨고 잡니다.<br>자고 있는 나에게 말을 붙이면 대답을 합니다.<br><br>군에서는 선임들이 내 머리카락만 건드려도<br>관등성명을 댄다고 모두들 신기해했지만,<br>사실 난 자면서도 그들의 모든 일거수일투족을<br>인지하고 있었습니다.<br><br>저의 이 능력은 사실 지네에게 물렸을 때 생긴 능력입니다.<br><br>거미에 물렸다면 스파이더맨이 될 수도 있었는데 아깝습니다.<br>아무튼, 난 지네맨이 되었습니다.<br><br>지네가 가진 예민한 촉각을 제가 가지게 된 것입니다.<br>몹시 예민합니다.<br>이런 능력을 가진 후 몇 가지 단점도 생겼습니다.<br><br>첫째는, 밤에 예민하다 보니 낮에 몹시 둔하다는 것입니다.<br>말도 행동도 느리고, 쉽게 다른 사람의 말을 알아듣지도 못하게 되었습니다.<br><br>둘째, 너무 많은 정보가 내게 쏟아져 들어옵니다. 주변의 모든 정보가.<br>그래서, 난 더 둔해집니다.<br>화를 낼 일도 한참 나중에 되어서야<br>'아! 그때 화를 냈어야 했는데' 하고 후회하곤 합니다.<br><br>결국 난 몹시 예민하지만, 몹시도 둔한 사람이 되었습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n아직도 전 어떨 땐 너무 둔하고, 또 어떨 땐 너무 예민하게 신경이 곤두서서 나도 모르게 손발이 떨릴 때가 있습니다. 긴장해서 말마저 더듬거릴 때면, 저는 속으로 중얼거립니다.<br><br>\n'그래, 나는 지네맨이었지. 아니면 지구에 불시착한 외계인이거나.'<br><br>\n그렇게 나 스스로를 세뇌하며 버텨냅니다. 참 하루하루가 고단하고 쉽지 않습니다. 어쩌면 나만 이 이상한 능력이 있지는 않을 것 같습니다.<br><br>\n다른 사람들도 겉으로는 무표정해 보이지만, 속으로는 상처받지 않기 위해 온갖 더듬이를 세운 채 하루를 간신히 버텨내는 또 다른 지네맨들이 아닐까 싶습니다.<br><br>\n둔감함이라는 갑옷을 입고 살아가는 세상의 모든 이상 능력 소유자들에게 연대의 위로를 건네봅니다.\n</blockquote>",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "페이퍼 아키텍처의 유혹",
+            "text": "설계를 하다보면 페이퍼 아키텍쳐라는 것이 있다<br>건축 설계가 시공까지 가지 않은 순수계획안 상태를 의미하기도 하지만,<br>보통은 디테일이나 현실감이 부족한 것을 말할 때 이 단어를 사용한다<br><br>삶에서 말과 삶의 실체가 일치하지 않을 때,<br>흔히 입만 살았다고 하는 것과 비슷하다<br><br>설계나 삶이나 좀 더 생각하고, 무엇이 진실에 가까운지 잘 돌아봐야 한다<br><br>내가 옳다고 생각하는 것, 그리고 그렇게 이해되리라 생각하는 것은<br>자신만의 소설을 쓰는 것이다<br>설계를 할 때도 같다<br><br>자신의 생각이 그대로 읽혀지리라는 것은 소설 쓰는 것이다<br>허구일 수 있다, 자신의 머릿속에서만 존재하는.<br><br>첫 직장의 소장님이 자주 하시던 잔소리였다<br><strong style=\"color: #0066cc;\">\"소설 쓰지 마라. 그리고 그게 진실인지 파악해라.\"</strong>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/101.jpg",
-            "type": "poem"
-        },
-        {
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 4] 미완의 일상",
-            "title": "잘게 잘게 나누어 버리기",
-            "text": "슬프다 아프다의 감정에 <br>칼을 댑니다 <br><br>아픈건 몸이 아플때 슬픈건 맘이 아플때 <br>근데 이건 슬프지만, 슬픈 게 아닙니다 <br>그냥 서글픈 것이지요 <br>그래 잠시 관계속에서 짓눌린 것입니다 <br><br>이런 것을 슬프다라고 생각하지 말아야겠습니다 <br><br>칼을 대어 도려내자 잘게 잘게 해체하여 형체를 없애야 합니다 <br>사실이란 덩어리만 남아있도록 <br><br>그렇게 감정에 칼을 대봅니다<br><br>사실이란 덩어리만 덩그러니 남도록<br><br><div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">요즘 만난 사람중에 매우 낯선 표현을 한 친구가 있습니다. \"기저귀차고 마이크에 대고 노래 부르는 사람이 있다\" 이게 무슨 말일까 곰곰히 생각해보니, 미성숙한 사람이 자기 기분에 마이크에 대고 동네방네 자기 말 하는것을 이렇게 비유했구나 싶습니다. 참으로 신랄한 표현입니다. 나도 혹시 기저귀 차고 막 돌아다니는 것은 아닌지 조심해야겠습니다.</div>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/104.jpg",
-            "type": "poem"
+            "image": "static/images/sketches/10.jpg",
+            "type": "image_top"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -581,12 +524,37 @@ var bookData = {
         },
         {
             "type": "image_top",
-            "title": "찢어진 운동화",
-            "text": "자신의 아파트를 설계하는 사람에게 대뜸 반말부터 던지는 저 무지함은 대체 뭘까?<br><br>그런 무례함에 아직도 속절없이 휘둘리는 내 모습이 한없이 작아 보였습니다. <br>일단 무너진 마음을 추스를 시간이 필요했기에, <br>대충 핑계를 대고 서둘러 그 자리를 빠져나왔습니다. <br><br>도면 위에서 요소들이 충돌할 때 '간격'을 벌려야 하듯, <br>사람 사이에도 감정이 날카롭게 부딪힐 땐 적당한 거리와 여백이 필요하니까요.<br><br>그렇게 도망치듯 나와 걷던 중, <br>문득 내 눈에 들어온 것은 앞코가 찢어진 낡은 프로스펙스 운동화였습니다.<br><br>1부에서 이야기했듯, 사람들은 거대한 바탕보다 숨기고 싶은 '작은 흠결'에 유독 날카롭게 시선을 꽂기 마련입니다. <br>어쩌면 그 사람의 눈에는 제가 밤새워 그려간 도면이라는 거대한 바탕보다, 발끝에 놓인 후줄근하고 찢어진 운동화라는 작은 흠결이 먼저 보였을지도 모릅니다. <br>그 찢어진 틈새가 부끄러워지는 순간, 이 낡은 운동화가 곧 초라한 내 모습 같아 당장이라도 벗어 던지고 싶었습니다.<br><br>'상대가 나를 존중할 수 있도록 옷차림을 단정히 갖추는 것 또한 내 몫이었을 텐데. 내 실수구나.' <br>속으로 자책해 보았습니다. 하지만 이 또한 내 마음을 달래기 위한 구차한 핑계일지도 모릅니다. <br>그저 '다 이 낡은 신발 때문이야'라며 상처받은 마음을 애써 위로하고 싶었던 것일 테니까요.<br><br>여전히 작은 무례함에도 목소리가 떨리는 약한 사람이지만, <br>누군가 내 흠결을 보고 툭툭 건드린다 해도 <br>더 이상 쉽게 흔들리지 않도록 내 안의 바탕을 단단하게 키워야겠습니다. <br><br>다시 글을 쓰고, 다시 스케치를 하자. <br>찢어진 운동화를 신고도 당당할 수 있는, 그런 단단한 건축쟁이가 되자고 굳게 다짐해 봅니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">우스운 이야기지만, 현재의 저는 애써 운동화를 탓하던 과거의 그 모습에서 조금도 더 강해지지 않은 것 같습니다. 서울시 건축심의위원이라는 번듯한 직함을 달고 회의 자리에서 내 의견을 이야기할 때조차, 여전히 목소리가 미세하게 떨리는 나 자신을 발견할 때면 '너는 참 어쩔 수 없구나' 하며 쓴웃음을 짓게 됩니다.<br><br>하지만 어쩌면 다행인지도 모릅니다. 그때나 지금이나 저는 무장한 듯 완벽하고 빈틈없는 전문가로 보이기보다는, 여전히 치열하게 생각하고, 진심으로 스케치하고, 묵묵히 글을 쓰며, 사람의 마음과 감정을 소중히 다룰 줄 아는 그런 사람으로 남고 싶으니까.</div>\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">건축이란 화려한 조감도나 흙먼지 날리는 현장 속에서만 완성되는 것이 아닙니다. 진짜 건축 설계는 사람과 사람의 '만남'에서 시작되며, 그 만남을 어떻게 좋은 관계로 엮어 가느냐에 달려 있습니다.<br><br>일찍이 강남순 교수님으로부터 배운 가르침이 있습니다. 사람의 얼굴은 그 자체만으로도 각자의 다름과 개별성이 주는 고귀함이 있으며, 누군가와 시간을 보낼 때는 마치 데이트를 하듯, 춤을 추듯 해야 한다는 것입니다. 서로를 향해 다정하게 궁금해하되, 결코 함부로 침범하지 않는 '적당한 거리'를 유지하며 스텝을 맞추는 춤 말입니다.<br><br>건축에서의 '공유결합' 역시 현장에만 있는 것이 아닙니다. 사람과 사람의 만남, 그 조심스럽고도 치열한 춤의 과정 끝에 우리가 테이블 위에 조용히 올려놓는 '계획안'이야말로 진정한 공유결합의 결과물이어야 합니다. 제 낡은 운동화는 단지 거친 현장을 누빈 흔적이 아니라, 사람의 마음을 향해 부단히 스텝을 밟아온 치열한 춤의 흔적일지도 모릅니다.</div>",
-            "image": "static/images/sketches/52.jpg",
-            "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n난 붓을 놓을 수가 없습니다.<br><br>\n내 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n난 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'내가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
+            "image": "static/images/update_page_34.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "오늘을 의지해살아갑니다",
+            "text": "오늘은 잠들기 전까지의 시간이고<br>오늘의 공간이 한정되어 좋습니다.<br><br>내 맘은 실에 매인 풍선 같아<br>언젠가 저 하늘로 날아가 버릴 것 같습니다.<br><br>오늘이라는 실에 매여 이리저리 부는 바람에<br>헤헤거리며 살아갑니다.<br><br>오늘을 의지해 살아갑니다.<br><br>아픈 이들도 너무 많고<br>답답한 현실도 너무 많아<br>오늘의 범위에 한정하여 살아가려 합니다.<br><br>지금은 저에게 주어진 시간에 충실해야 합니다.<br><br>어떤 것은 헤헤거리며<br>어떤 것은 잊어버리고<br>그렇게 하지 않으면<br>무한히 넓어져 가는 것에<br>제가 견디기 어렵습니다.",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/13.jpg",
+            "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "title": "우리 이렇게 오늘도",
+            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n나라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n나는 새로운 내가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우린 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n나라는 개체의 독립성은 나를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 나를 위하는 것이란 것을<br><br>\n나를 통한 나라는 존재는 더욱더 옅어지고<br>\n당신을 통한 나의 존재는 더욱 뚜렷해지기를.<br><br>\n살아간다는 것이 무엇일까요?<br><br>\n오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br><br>\n내가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"나라는 존재의 본질은 나를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/user_18.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "우리가 그렇게 오늘을",
+            "text": "어제의 감정과 말에<br>오늘을 산다는 것은 힘이 듭니다.<br><br>주문을 외우듯 만일 오늘 하루밖에<br>살지 못한다면 어제에 매일 필요가 없다고<br>속으로 되뇌이지만 소용이 없습니다.<br><br>사물은 공간에서 사라지지만<br>기억은 시간에서 사라진다 했던가요?<br><br>그저 그렇게 흐미해질 때까지 또다시 시간을<br>흘러보내고 또 흘러보내며 살아가는 것이<br>우리 삶인가요?<br><br>혹 이미 저만큼 지나간 흐름에<br>우리 자신마저 흘려보냈다면 어쩌지요?<br><br>하루를 현재의<br>시간 속에 산다는 것은<br>흘러내고<br>견디고<br>맞이하고<br>우리는 그렇게 오늘을 살아야 되나 봅니다.",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/user_sketch_3.jpg",
+            "type": "poem"
         },
         {
             "type": "image_top",
@@ -598,13 +566,20 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존"
         },
         {
-            "type": "image_top",
-            "title": "삼켜낸 말과 술 한 잔",
-            "text": "**침 꿀꺽 삼킨다**\n\n아들에게 말해준 적이 있습니다.\n회사 일을 하다 보면 사회적 위계를 무기 삼아 사람을 대하는 경우를 무수히 겪는다고.\n그때마다 목구멍까지 욱하고 올라오는 것들이 있습니다.\n그래서 오늘도 되뇌입니다. 침 꿀꺽. 침 꿀꺽 삼킵니다.\n\n하고 싶은 말도, 내뱉어질 말도 삼켜버립니다. \n내 안에 담아두어 생속이 아닌 문드러진 속이 되더라도, 어차피 삼키면 언젠가 소화되어 나갑니다. \n침 꿀꺽 삼킵니다.\n\n**술 한 잔**\n세상 일 중에 술잔에 담지 못할 것이 있을까?\n한 잔에 40도라 정신을 바짝 차려야겠지만, 내 잔에 담긴 것이 그 정도 독기는 되어야지.\n이 잔에 담긴 것은 이것저것 많아도, 내 몸의 구불구불하고 긴 시간을 지나면 결국 하나가 되어 나옵니다. 그 과정에 아픔도, 정신 잃음도 있다는 것이 어찌 이리 설계와 같은지.\n\n내 앞 술잔 하나 놓고, 세상 일 중에 이 작은 잔에 담지 못할 것은 없습니다.\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">세상 일 중에 이 술잔에 담지 못할 것이 무엇이 있을까. 꾹꾹 눌러 담아 탁 털어 넣어버리곤 하지만, 저는 여전히 이따금씩 술에 취해 정신을 잃고 맙니다.<br><br>나이 쉰이 훌쩍 넘고 그 긴 세월을 겪었으면서도, 저는 아직도 정신을 못 차린 것입니다. 어쩌면 영원히 못 차릴지도 모르겠습니다.<br><br>영원히 철들지 못하고 또다시 사람에 치여 술잔을 기울일지언정, 굳이 핏대를 세우며 이기려 들기보다는 그저 미련한 척 허허 웃으며 무던하게 털어버리는 것이 나을 때가 많습니다. 목구멍까지 차오르는 수많은 억울함도 독한 술과 함께 꿀꺽 삼켜내고 나면, 얽히고설켰던 마음도 어느새 스르르 소화되고 마니까요. 어쩌면 이다지도 바보같이 비워내고 털어내는 '무던한 미련함'이야말로, 복잡한 설계 현장뿐만 아니라 팍팍한 우리 삶의 매 순간을 둥글게 둥글게 굴러가게 해주는 진짜 지혜일지도 모르겠습니다.</div>",
-            "image": "static/images/sketches/02.jpg",
+            "type": "poem",
+            "title": "현장에서 배워야 할 것들",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 내가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 나는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도<br>내가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아<br>다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br>제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 공유결합이지 않을까요?<br><br>현장의 공유결합.\n</p>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">하지만 타인과 진정한 '공유결합'을 이루기 위해서는, 먼저 나라는 사람부터 중심이 단단하게 잡힌 '독립된 원소'가 되어야 합니다. 궤도를 지탱하는 튼튼한 중심이 서 있어야 비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다.<br><br>그리고 또 하나 잊지 말아야 할 것이 있습니다. 수많은 사람과 결합하며 살아가더라도, 인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. 스스로 흔들림 없이 홀로 설 수 있는 사람만이 비로소 타인과 굳건하게 결합할 수 있습니다.</blockquote>\n</div>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketches/41.jpg"
+        },
+        {
             "part": "4부: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존"
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "다닥다닥 붙은 집들",
+            "text": "바라 봄이 없는 집에서<br>보여지기마저 두려워 가리고 가린다<br>내 소리 남이 들을까<br>남의 소리 차단하고<br>거저 서로가 없는 듯 있는듯<br>죽은척 살아가기를 바란다<br>너무 가까이 살기에<br>서로에게 멀어지기 위해 닫고 닫아<br>상대와 내가 멀리 떨어진 것처럼 그렇게<br>상대와 내가 없는 것처럼 그렇게<br>혹시 옆에 누가살고 있는지 알고 있나요?",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": "static/images/sketch_100year_market_1.jpg",
+            "type": "poem"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -614,6 +589,13 @@ var bookData = {
             "image": "static/images/sketches/107.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "image_top"
+        },
+        {
+            "type": "text",
+            "title": "흔들리지 않기 위한 나만의 무게 중심",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '공유결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'공유결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 공유결합의 첫 번째 조건입니다.</p>",
+            "image": "static/images/update_page_8.jpg"
         },
         {
             "type": "cover",
@@ -733,6 +715,24 @@ var bookData = {
             "text": "읽기와 듣기는 전적으로 주관적인 영역입니다.<br>\n내 안에서 조용히 일어나는 일이기에 타인에 의해 방해받지 않습니다.<br>\n반면, 말하기는 내 안에서는 주관적인 것이지만,<br>\n입 밖으로 나오는 순간 철저히 <strong>'상대의 주관'</strong>으로 넘어가 버립니다.<br>\n<br>\n내가 아무리 나의 진심을 다해 말하고 쓴다 해도,<br>\n그것을 듣고 읽는 이는 결국 자기만의 주관과 잣대로 해석하게 됩니다.<br>\n그러니 애초에 사람과 사람 사이에서 완벽한 일치점을 찾는다는 것은 불가능한 일일지도 모릅니다.<br>\n<br>\n개인의 사고가 주관적이고 자기중심적인 것은 너무나 당연합니다.<br>\n그렇기에 타인의 진심을 제대로 읽어내기 위해서는 필사적인 노력이 필요합니다.<br>\n얼굴을 마주해야 하고, 온전히 상대에게 집중하는 대화의 시간이 필요합니다.<br>\n누군가를 함부로 판단하는 것은 그토록 조심스러운 일이며,<br>\n동시에 우리의 대화는 기꺼이 서로에게 '즐거운 데이트'가 되도록 애써야 합니다.<br>\n<br>\n프랑스의 철학자 시몬 베유(Simone Weil)는 이렇게 말했습니다.<br>\n<blockquote>\n\"내가 상대를 읽는 방식대로 상대도 나를 읽어주기를 강요하는 것은, 상대를 노예로 대하는 것이다.<br>\n내가 나를 인식하는 방식대로 상대도 나를 인식해 주기를 바라는 것은, 스스로를 정복자로 여기는 폭력이다.\"\n</blockquote>\n<br>\n도면과 설계안으로 끊임없이 타인에게 말을 건네고 설득해야만 하는 우리는,<br>\n결국 타인과의 쉼 없는 대화 속에서 나의 주장과 생각이 지금 어디쯤 서 있는지 끝없이 되물어야 합니다.<br>\n<br>\n완벽한 일치가 불가능함을 인정하고,<br>\n그 간극을 좁히기 위해 기꺼이 수고스러움을 감내하는 것.<br>\n어쩌면 그것이 진정한 '공유결합'의 과정일 것입니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "타인의 시선을 공유한다는 것",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "image": "static/images/sketches/109.jpg",
+            "type": "image_top"
+        },
+        {
+            "part": "4부: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "익숙해진다는 것",
+            "text": "타인의 시선에 익숙해져 버렸습니다.<br>\n타인의 시선 속의 내가 되어 버렸습니다.<br>\n<br>\n나의 맘과는 상관없이<br>\n그저 모난 소리 듣기 싫어, 힘들어도 참고 인내하는 것에<br>\n<br>\n내 행동의 의미보다는<br>\n타인의 시선 속에서 나를 찾기 시작했습니다.<br>\n<br>\n눈치껏 살아가는 게 좋은 것이겠죠?<br>\n상대에게 좋은 말 듣는 삶이 좋은 것이겠죠?<br>\n<br>\n나를 인정해주는 말들이 그물처럼 느껴집니다.<br>\n<br>\n인정해준다는 것은<br>\n<br>\n나와 타자의 동등한 관계에서 나오는 말일까요?<br>\n내가 나를 인정해 줄 수 있을 때 그게 더 좋을 것 같습니다.<br>\n<br>\n<blockquote>\n진정한 관계성이 이루어지려면, 동등한 개인 즉, 본인 자신에 대해 무겁게 해야 합니다.<br>\n그래야 상대에게 딸려가지 않는 관계가 형성될 수 있습니다.\n</blockquote>",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "image": "static/images/update_page_63.jpg",
+            "type": "image_top"
         },
         {
             "type": "cover",
