@@ -444,7 +444,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242269"></script>
+    <script src="book_data.js?v=20242270"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -698,17 +698,35 @@
       let touchendX = 0;
       let touchendY = 0;
 
+      // 모바일 가장자리 터치(Edge Tap)를 위한 변수
+      let touchStartTime = 0;
+
       function checkDirection() {
         let deltaX = touchendX - touchstartX;
         let deltaY = touchendY - touchstartY;
+        let touchDuration = Date.now() - touchStartTime;
 
-        // 세로로 더 많이 스크롤했다면 스와이프를 무시
-        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // [문제 해결 1] 터치(Tap)인지 스와이프(Swipe)인지 구분
+        if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10 && touchDuration < 300) {
+          // 화면 가장자리 터치 인식 (왼쪽 25% 이전, 오른쪽 25% 다음)
+          let screenWidth = window.innerWidth;
+          if (touchendX < screenWidth * 0.25) {
+             prevPage();
+          } else if (touchendX > screenWidth * 0.75) {
+             nextPage();
+          }
           return;
         }
 
-        if (deltaX < -50) nextPage();
-        if (deltaX > 50) prevPage();
+        // [문제 해결 2] 스크롤 오작동 방지
+        // 위아래로 40px 이상 움직였거나, 세로 이동량이 가로 이동량의 절반보다 크면 스와이프 무시
+        if (Math.abs(deltaY) > 40 || Math.abs(deltaY) > Math.abs(deltaX) * 0.5) {
+          return; 
+        }
+
+        // 의도적인 가로 스와이프 감도 개선 (너무 예민하지 않게 60px 이상 밀었을 때 작동)
+        if (deltaX < -60) nextPage();
+        if (deltaX > 60) prevPage();
       }
 
       document.addEventListener(
@@ -716,6 +734,7 @@
         (e) => {
           touchstartX = e.changedTouches[0].screenX;
           touchstartY = e.changedTouches[0].screenY;
+          touchStartTime = Date.now();
         },
         { passive: true },
       );
