@@ -314,7 +314,7 @@ var bookData = {
       title: "나라는 존재",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;">\n내 자신은<br>\n내가 나를 스스로를 더럽히지 않는 한,<br><br>\n절대, 타인에 의해 더럽혀지지는 않습니다.<br><br>\n화가 날 때마다<br>\n난 절대, 타인에 의해 더럽혀지지 않습니다.<br>\n내 스스로 저를 더럽히지 않는 한<br>\n그렇게 난 매번 중얼거립니다.<br><br>\n근데, 더럽혀진 것은 씻으면 되는데,<br>\n그게, 상처가 되어 남습니다.<br>\n그게, 나로 하여금 오늘을 집중하지 못하게 하고,<br>\n오늘의 저의 모습이기도 합니다.\n</p>\n</div>\n\n<div style="margin: 20px auto 40px auto; text-align: center;">\n <img src="static/images/art_sketch_1.png" style="width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;">\n <img src="static/images/art_sketch_2.png" style="width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;">\n그래, 귀로든 입으로든 들어오는 것으로 내가 더럽혀지지는 않습니다.<br>\n그냥 \'그렇구나\' 하고 보내버리고, 내 속에 고여 맴돌게만 두지 않으면 그만입니다.<br><br>\n하지만 참 이상하게도, 어떤 상처는 씻겨 내려가지 않고 아주 오래 남습니다. 예전 대학교 졸업할 때, 한 선배가 선물한 책에 적어준 글귀가 떠오릅니다. "처마에 떨어진 물 한 방울같이 작은 오해가, 우리 사이를 천길 낭떠러지처럼 갈라놓았다"는 말. 지금의 나 역시 그 \'물 한 방울\' 같은 사소한 앙금으로 누군가와 멀어진 채 후회 속을 걷고 있는지 모릅니다. 참 별거 아닌 일인데도 지독하게도 오래 품고 삽니다.<br><br>\n그런데 어떨 때는, 이 알량하고 뾰족한 상처마저 둥글게 깎아버리고 모든 것에 무던해지면 \'나\'라는 존재 자체가 뭉개질 것만 같아 모질게 부여잡고 있을 때가 있습니다. 누구나 가슴속에 절대 아물게 두고 싶지 않은 상처 하나쯤은 독하게 품고 살지 않는가. 그것이 때로는, 부서질 것 같은 자아를 지탱하는 가장 인간적인 고집이 되기도 합니다.\n</blockquote>\n\n<div style="margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;">\n <img src="static/images/art_sculpture_1.jpg" style="width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n <img src="static/images/art_sculpture_2.jpg" style="width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n <img src="static/images/art_sculpture_face.jpg" style="width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n <span style="font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;">[부서질 것 같은 자아를 지탱하려는 고집, 그리고 엉켜있는 내면의 상처들]</span>\n</div>',
       partCategory: "제2막: 나라는 개체의 독립과 생존",
-      image: "static/images/update_page_54.jpg",
+      image: "static/images/gallery_frame_1.jpg",
       type: "image_top",
     },
     {
@@ -444,7 +444,7 @@ var bookData = {
       title: "선을",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n그리며 살아갑니다<br>\n흰 종이 위에<br>\n한 선을 그었습니다.<br><br>\n애초에 긋지 않았다면<br>\n모르겠지만<br>\n이미 종이 위 선은 그려졌고<br><br>\n이제 바라는 것은<br>\n그 선이 서로를 묶는<br>\n울타리가 되거나<br>\n서로의 마음을 엮어내는 선이 되었으면 좋겠습니다.<br><br>\n혹 구분 짓는<br>\n선이 되더라도<br>\n혹 어긋나는<br>\n선이 생기더라도<br><br>\n회피하지 말고<br>\n그 위에 더 여러 번<br>\n또 다른 선을 그려가며<br>\n그렇게 다듬어갔으면 좋겠습니다.\n</p>\n</div>',
       partCategory: "제2막: 나라는 개체의 독립과 생존",
-      image: "static/images/update_page_74.jpg",
+      image: "static/images/gallery_frame_3.jpg",
       type: "image_top",
     },
     {
@@ -466,7 +466,7 @@ var bookData = {
     {
       type: "image_top",
       title: "현장의 기록",
-      image: "static/images/update_page_33.jpg",
+      image: "static/images/gallery_frame_4.jpg",
       text: "이곳에 담긴 수십 편의 조각들은 제가 치열한 현장을 뒹굴며 끄적여온 날것의 기록입니다.<br><br>이 거칠고 솔직한 기록들에는 머릿속 이상과 현실 사이의 모순이 있고, 똑같은 고민이 무의식적으로 반복되는 흔적이 있으며, 때로는 깊은 혼란과 무기력함마저 묻어 있습니다.<br><br>앞서 '결합'이라는 거창한 원칙을 이야기했지만, 사실 제 삶이 처음부터 그 원칙대로 완벽하게 맞물려 돌아갔던 것은 아닙니다. 도면 위에서는 완벽한 결합의 기준을 맞추려 그토록 치열하게 애쓰면서도, 현장에서 마주하는 사람들과의 실제 결합은 여전히 제게 풀기 어려운 숙제입니다.<br><br>그래서, 저는 여전히 불안하고 여전히 부족한 사람입니다.<br><br>중복과 모순, 황홀함과 분노가 얽혀있는 이 조각들은 지난 오랜 세월 제가 숱하게 넘어지고 버티며 써 내려온 생채기 같은 흔적들입니다. 이 작고 투박한 흔적들이, 각자의 자리에서 고단한 밥벌이를 버텨내고 계신 분들의 마음에도 작은 공명을 일으키기를 바랍니다.",
       part: "4부: 증언과 성찰",
       partTitle: "현장의 기록",
@@ -493,7 +493,7 @@ var bookData = {
       title: "흔들리지 않기 위한 나만의 무게 중심",
       partCategory: "제2막: 나라는 개체의 독립과 생존",
       text: "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 결합의 첫 번째 조건입니다.</p>",
-      image: "static/images/update_page_8.jpg",
+      image: "static/images/gallery_frame_5.jpg",
     },
     {
       type: "cover",
