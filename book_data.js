@@ -3,16 +3,14 @@ var bookData = {
         {
             "title": "도면 위의 공유결합",
             "image": "static/images/cover_sculpture.jpg",
-            "text": "<p style=\"text-align:center; font-size:1.1em; color:#333; margin-top:-20px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
-            "type": "cover",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "text": "<p style=\"text-align:center; font-size:1.1em; color:#333; margin-top:24px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
+            "type": "cover"
         },
         {
             "partCategory": "저자 소개",
             "title": "김중일",
             "text": "서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 치열한 순간들에 대한 감사의 기록입니다.",
-            "image": "static/images/gallery_batch10_frame1.jpg",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "image": "static/images/gallery_batch10_frame1.jpg"
         },
         {
             "type": "image_top",
@@ -39,7 +37,7 @@ var bookData = {
             "partTitle": "건축이라는 세계",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch10_frame2.jpg",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "text",
@@ -47,7 +45,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "가장 사적인 관계에서 발견한 '공유결합'의 온기는, 이제 저의 작업실을 넘어 도면을 들고 만나는 치열한 현장으로 확장되어야 했습니다.<br><br>그렇다면 이제 나의 도면이 닿아야 할 그 '상대'들은 과연 어떤 분들일까요?<br><br>여기서 우리가 절대 오해하면 안 되는 것이 있습니다. 설계자가 현장에서 만나는 시공사, 관공서, 조합의 수많은 사람들을 그들이 속한 '이익 집단'이라는 꼬리표 하나로 묶어 쉽게 치부해 버려서는 안 된다는 점입니다.<br><br>소통은 서로를 알아가는 것에서 시작됩니다. 내가 부족한 것을 상대가 채워주고, 상대가 모르는 것을 내가 짚어주며, 서로를 단순한 이용 대상이 아닌 '귀중한 존재'로 대할 때 비로소 진정한 공유결합이 일어납니다.<br><br>건축가는 그저 흔들리지 않는 중심을 잡아주는 사람입니다. 그리고 그분들의 눈에 보이지 않는 이상과 목표를 '보이도록' 만들어 주는 사람입니다.<br><br>한때, 현장에서 만난 분들이 제게 \"대표님, 그림 좀 잘 그려주세요\"라고 부탁할 때면, 속으로 '내가 화가도 아니고 웬 그림을 그려달라고 하나'라며 뾰족하게 날을 세우던 시절이 있었습니다.<br><br>하지만 지금은 다릅니다. 그 투박한 말속에 담긴 진심을 압니다. <strong>\"우리의 보이지 않는 실체와 바람을 제발 구체화해 주세요\"</strong>라는 간절한 마음을, 그저 그분들의 가장 편안하고 일상적인 언어로 표현했을 뿐이라는 것을 말입니다.<br><br>언젠가 한 회의 석상에서 누군가 이런 말을 한 적이 있습니다.<br>\"생각하시는 바를 그냥 편하게 펼쳐 놓으십시오. 제가 잘 담아내겠습니다.\"<br><br>이 얼마나 멋진 태도입니까? 상대의 언어가 거칠든 곱든, 뾰족하든 투박하든, 건축사인 제가 그것을 둥글게 잘 담아내기만 하면 되는 것이었습니다.<br><br>그들의 투박한 언어를 둥글게 이해하고, 거친 생각들조차 온전히 내 그릇에 담아 그들을 귀중한 존재로 껴안는 것. 그것이 바로 상대를 이해하는 진짜 방식이며, 현장을 향한 공유결합의 두 번째 발걸음입니다.",
             "image": "static/images/gallery_batch10_frame3.jpg",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "text",
@@ -55,7 +53,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "설계는 단지 도면 위에 선을 그리는 행위가 아닙니다.<br>진짜 설계는 다음의 세 가지 요소에서 출발합니다.<br><br>관계 속에서 흔들리지 않는 <strong>'나만의 기준'</strong>을 세우고 본질의 무게를 다지는 것.<br>때로는 나를 철저히 비워냄으로써, 서로 다른 이들의 투박한 언어조차 둥글게 이해하고 껴안을 수 있는 <strong>'여유'</strong>를 갖는 것.<br>그리고 거대한 욕망이 격돌하는 <strong>'진짜 현장(회의 테이블)의 이면'</strong>을 꿰뚫어 보는 것.<br><br>자신의 기준, 타인을 향한 여유, 현장을 보는 시선.<br>이 세 가지 요소가 하나로 맞물릴 때, 비로소 어떠한 외풍에도 흔들리지 않는 가장 단단한 신뢰, 즉 '공유결합'이 완성됩니다.",
             "image": "static/images/gallery_batch10_sculpture1.jpg",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -65,7 +63,7 @@ var bookData = {
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "bridge",
@@ -73,7 +71,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch11_relief.jpg",
             "text": "다음에 이어질 제가 생각하는 디자인의 개념들을 보면, 얼핏 의아하실 수도 있습니다. '존중, 순응, 귀 기울임' 같은 단어들은 일반적으로 말하는 현란한 디자인 기법처럼 들리지 않기 때문입니다.<br><br>맞습니다. 사람과의 부대낌 속에서 이 깨달음을 얻은 것인지, 아니면 수많은 건축 설계를 거치며 자연스레 배운 것인지 저조차도 그 순서를 잘 모르겠습니다. 하지만 분명한 것은, 이 개념들이 사람을 대할 때나 공간을 빚어낼 때 저에게 언제나 동일한 원칙으로 적용된다는 사실입니다.<br><br>어쩌면 이것은 비단 건축 설계만이 아니라, 우리가 세상을 살아가며 맺는 모든 '관계'에 똑같이 적용되는 본질일지도 모르겠습니다.<br><br>오랜 기간 수많은 사람, 그리고 수많은 땅과 공유결합하며 제 안에 남겨진 이 흔적들을 통해, '아, 이 친구는 이런 마음으로 설계하고 살아가는 사람이구나' 하고 조금이나마 끄덕여 주신다면 더 바랄 것이 없겠습니다.",
-            "caption": "《무제》, 질감 부조 (Textured Relief)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -83,7 +81,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "poem",
@@ -93,7 +91,7 @@ var bookData = {
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《스케치》, 펜 드로잉 (Pen Drawing)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -103,7 +101,7 @@ var bookData = {
             "part": "2부: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《스케치》, 펜 드로잉 (Pen Drawing)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -113,7 +111,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -123,7 +121,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -133,7 +131,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "title": "다정한 디자인",
@@ -141,7 +139,7 @@ var bookData = {
             "type": "poem",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n디자인은 어디서 나오는 것일까요?<br>감각이나 방대한 지식에서 나오는 것일까요?<br><br>내가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.<br><br>타인에 대한 배려와 관심,<br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다.<br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민,<br>그리고 바람과 조망에 대한 깊은 공감이 있을 때<br>진짜 설계가 나옵니다.<br>거창한 논리보다 먼저 다정한 사람이 되시길 바랍니다.<br><br>다정한 디자인\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고... 그때 그 말에 참 부끄러웠습니다.\n</blockquote>",
             "image": "static/images/gallery_batch12_sculpture4.jpg",
-            "caption": "《무제》, 철사 조형물 (Wire Sculpture)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "text",
@@ -149,7 +147,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "타인을 향한 '다정한 마음'을 품고 나만의 단단한 기준을 세웠다고 해서 모든 설계가 술술 풀릴까요? 결코 그렇지 않습니다. 마음을 다듬은 건축가가 도면을 들고 나서는 곳은, 어쩌면 다정함과는 거리가 먼 치열한 현실이기 때문입니다.<br><br>우리가 매일매일 새로운 아침을 맞이하는 이유는, 어쩌면 어제와는 다른 상황 속에서 다시 한번 부딪히고 배워보라는 새로운 기회가 주어지는 것 아닐까요. 실패했다면 과거에 매이지 말고 온전히 '현재'에 집중하라고 말입니다. 삶을 현재로 살지 못하고, 과거의 실패나 과거의 영광된 기억만이 현재를 채우는 순간… 그것이 곧 살아있으나 죽은 상태일지도 모릅니다.<br><br>제게 '삶의 공유결합'이란, 결국 제가 건축 설계를 하며 매일매일 겪어낸 치열한 현재의 기록들입니다. 하지만 이게 건축가만의 유별난 이야기일까요. 사람 사는 게 다 비슷하겠지요. 어찌 되었든, 저의 '진짜 현장'은 시멘트와 철근이 있는 공사장이 아니라, 수많은 욕망이 얽혀있는 사람들과의 관계 속이었습니다.<br><br>도면 위의 완벽했던 과거를 고집하는 대신, 저는 매일 아침 불완전한 사람들을 마주하는 이 현재를 살아가기로 했습니다.<br><br>→ 그래서 질문은 다시 한번 확장됩니다.<br><br><em>\"도면을 넘어, 이 거대한 욕망과 제도가 격돌하는 '진짜 현장(회의 테이블)'의 이면을 우리는 어떻게 직시하고 껴안을 것인가?\"</em>",
             "image": "static/images/gallery_batch3_face.jpg",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "text",
@@ -157,7 +155,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "<p style=\"margin-bottom: 24px;\">그 거대한 욕망이 격돌하는 '진짜 현장'이란 과연 어디일까요? 수소와 산소가 만나 폭발적인 결합을 일으키는 궁극적인 무대는, 단순히 눈에 보이는 물리적 대지나 공사판이 아닙니다. 그것은 정치와 정책, 그리고 끝없는 욕망이 뒤엉킨 거대한 '이해관계의 테이블'입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">예를 들어 보겠습니다. 사업을 시행하는 조합 입장에서는 정치권에서 쏟아내는 새로운 부동산 정책에 솔깃해질 수밖에 없습니다. <i>\"우리 지역이 2종 일반주거지역이라 재개발하면 3종밖에 안 되는데, 도심복합사업을 하면 400%, 성장거점형을 하면 최대 1,500%까지 용적률을 받을 수 있대!\"</i> 이런 이야기가 돌면, 추진하는 입장에서는 당장 그 헛된 희망을 이루어주겠다고 속삭이는 설계사를 우선적으로 찾기 마련입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">하지만 인허가권을 쥔 지자체의 입장은 어떨까요? 그분들은 기본 정책의 유지와 지역의 균형 발전, 도시 전체의 맥락을 보고 판단해야 하는 사람들입니다. 특정 단지에만 1,500%를 무턱대고 허락할 리가 없습니다. 결코 쉽지 않은 길입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">이때 건축가의 진짜 실력이 드러납니다. 설계자는 단순히 눈앞의 제도를 쫓아가거나 달콤한 말로 포장하는 사람이 아니라, <strong>그 제도의 '이면'을 볼 줄 알아야 하며, 그것을 추진하는 사람들에게 냉정하고 투명하게 설명할 수 있어야 합니다.</strong></p>\n\n<p>조합의 절박함, 지자체의 책임감, 시공사의 이윤 추구. 각기 다른 역할을 가진 이들의 이해관계를 깊이 이해하고 조율하지 못하면, 결국 회의 테이블에서는 서로 욕만 하다가 사업은 한 발짝도 나아가지 못합니다. 진짜 현장의 이면을 읽어내는 것, 그것이 현장이라는 무대를 다루는 공유결합의 세 번째 원칙입니다.</p>",
             "image": "static/images/gallery_batch3_reaching.jpg",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -166,7 +164,7 @@ var bookData = {
             "text": "그 치열한 현장이라는 무대 위에서 얽히고설킨 수많은 이들의 요구사항들. 그 복잡한 욕망의 덩어리를 묵묵히 조율하여 마침내 눈에 보이는 하나의 결과물로 묶어내는 행위. 그것이 바로 건축가의 '계획안'입니다.<br><br>계획안이란, 결코 화려하게 치장된 프레젠테이션이나 누군가를 현혹하기 위한 수단이 아닙니다. 그것은 우리가 함께 도출해 낸 <strong>'최선의 약속'</strong>입니다.<br><br>각자의 입장에서 바라는 것들을 치열하게 조율하고, 최선을 다해 그분들의 목소리를 대변하되, 냉정한 현실 가능성과 건축사로서의 공적 책임을 더하여 주민들 앞에 내놓는 단단한 약속인 것입니다.<br><br>그렇기에 우리가 도면 위에 긋는 선 하나하나는 단순한 잉크 자국이 될 수 없습니다. 이 거친 현장에서 쏟아진 수많은 요구와 갈등을 끝내 조율해 내겠다는 굳은 의지이자, 신뢰의 기록입니다.<br><br>이 약속의 기록이 굳건하게 버텨줄 때, 현장의 수많은 사람들은 비로소 하나의 목표를 향해 나아가는 '공유결합'의 상태에 이르게 됩니다.",
             "part": "1부: 시스템편 (디지털 플랫폼 모델)",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -176,7 +174,7 @@ var bookData = {
             "image": "static/images/gallery_batch4_bighands.jpg",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -186,7 +184,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch4_flat.jpg",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -196,7 +194,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "image": "static/images/act2_white.jpg",
@@ -213,7 +211,7 @@ var bookData = {
             "image": "static/images/gallery_batch4_heart.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -223,7 +221,7 @@ var bookData = {
             "image": "static/images/gallery_batch4_leaning.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -233,7 +231,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -243,7 +241,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -253,7 +251,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch5_falling1.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "title": "양팔에 낀 토시",
@@ -261,7 +259,7 @@ var bookData = {
             "type": "poem",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n지금 사람들은 이해하기 어렵겠지만,<br>연필로 설계할 때면 팔뚝이 흑연으로 인해 새카맣게 되곤 해서<br>양팔에 토시를 낍니다.<br><br>어느 날<br>회사 임원 분 중에 한 분이<br>넌<br>그 토시를 벗지 않는 한<br><br>평생 남들 설계만 해줄 거라며,<br>빨리 그놈의 토시부터 벗어 버리란 이야기를 했었습니다.<br><br>아마도 설계만이 아닌 기획과 영업 능력을 키우란 말이겠지요.<br>근데, 전 아직도 토시를 벗기에는 모르는 게 너무 많습니다.<br>예전 첫 직장에서 화장실 하나로 일주일을 밤새 고민하던 그 시절이 그립습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n전 아직도 설계를 하고 싶습니다. 회의 테이블 위에서의 차가운 숫자 놀음이 아닌... 흑연이 묻어나는 진짜 설계를 말입니다.\n</blockquote>",
             "image": "static/images/gallery_batch5_falling2.jpg",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -271,7 +269,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch5_hunched.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -281,7 +279,7 @@ var bookData = {
             "image": "static/images/gallery_batch5_running.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -291,7 +289,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_brown.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -301,7 +299,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -311,7 +309,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_white1.jpg",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -321,7 +319,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/sketches/101.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -331,7 +329,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_white2.jpg",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -341,7 +339,7 @@ var bookData = {
             "image": "static/images/gallery_batch6_carry_mass1.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -351,7 +349,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_carry_mass2.jpg",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -361,7 +359,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/sketches/20.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "title": "만지작거리고 바스락거린다",
@@ -379,7 +377,7 @@ var bookData = {
             "image": "static/images/gallery_batch7_clay1.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -389,7 +387,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_clay2.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -399,7 +397,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_wire_dance.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -409,7 +407,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_wire_duo.jpg",
             "type": "poem",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -419,7 +417,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "poem",
@@ -429,7 +427,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -439,7 +437,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "text",
@@ -447,7 +445,7 @@ var bookData = {
             "text": "도면 위에서의 고독한 성찰도 좋지만, 결국 건축사는 문을 열고 나가 현장 사람들을 만나야만 살아남을 수 있습니다.<br><br>그렇다면 이제 제가 만난 '사람들' 이야기를 해볼까 합니다.<br><br>1막에서 이론으로 세웠던 완벽한 '결합'이 실제 사람과 사람 사이에서 어떻게 작동하는지, 그리고 때로는 얼마나 쉽게 깨져버리는지를 말입니다.<br><br>상처받고 닳아가는 버팀의 시간 끝에서, 저는 사람의 온기를 짓는 방법을 현장의 흙먼지 속에서 배워갔습니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch8_frame4.jpg",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "poem",
@@ -457,7 +455,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -467,7 +465,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch2.jpg",
             "type": "image_top",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -477,7 +475,7 @@ var bookData = {
             "image": "static/images/gallery_batch9_arch3.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -487,7 +485,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch4.jpg",
             "type": "image_top",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -497,7 +495,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch5.jpg",
             "type": "image_top",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -505,7 +503,7 @@ var bookData = {
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n난 붓을 놓을 수가 없습니다.<br><br>\n내 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n난 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'내가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
             "image": "static/images/gallery_batch9_arch1.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -525,7 +523,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "현장의 기록",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "poem",
@@ -533,7 +531,7 @@ var bookData = {
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 내가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 나는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도<br>내가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아<br>다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br>제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?<br><br>현장의 결합.\n</p>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">하지만 타인과 진정한 '결합'을 이루기 위해서는, 먼저 나라는 사람부터 중심이 단단하게 잡힌 '독립된 원소'가 되어야 합니다. 궤도를 지탱하는 튼튼한 중심이 서 있어야 비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다.<br><br>그리고 또 하나 잊지 말아야 할 것이 있습니다. 수많은 사람과 결합하며 살아가더라도, 인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. 스스로 흔들림 없이 홀로 설 수 있는 사람만이 비로소 타인과 굳건하게 결합할 수 있습니다.</blockquote>\n</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/sketches/41.jpg",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -543,7 +541,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/sketch_100year_market_1.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "text",
@@ -551,7 +549,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 결합의 첫 번째 조건입니다.</p>",
             "image": "static/images/gallery_batch10_frame2.jpg",
-            "caption": "《무제》, 혼합 매체 (Mixed Media)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "image": "static/images/act3_white.jpg",
@@ -568,7 +566,7 @@ var bookData = {
             "image": "static/images/sketches/128.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -578,7 +576,7 @@ var bookData = {
             "image": "static/images/gallery_batch9_arch2.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -588,7 +586,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/user_sculpture_3.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -598,7 +596,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/user_sculpture_2.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -608,7 +606,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/sketches/109.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -618,7 +616,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch6_bowl_white1.jpg",
             "type": "image_top",
-            "caption": "《무제》, 혼합 매체, 2024"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -628,7 +626,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/sketches/65.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -638,7 +636,7 @@ var bookData = {
             "image": "static/images/sketches/108.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -656,7 +654,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "text": "나를 비우고 나면, 그 빈자리에 누군가를 채울 수 있는 여유가 생깁니다. 이것이 결합의 두 번째 조건, 바로 <strong>\"받아들일 수 있는 여유\"</strong>입니다.<br><br>건축은 결국 다른 사람의 삶을 온전히 껴안는 법을 배우는 과정입니다. 내가 그은 선 하나가 누군가에게는 평생의 전 재산이 걸린 집이 되고, 누군가가 매일 아침 눈을 뜨는 방이 되기 때문입니다. 조합원들의 불안한 눈빛, 시공사의 차가운 계산기, 인허가권자의 굳은 표정… 이 모든 '상대'들을 온전히 껴안지 못하면 건축은 탁상공론에 머물고 맙니다.<br><br>상대를 받아들일 수 있는 여유란, 온전히 상대에게만 맞추며 끌려가라는 것이 아닙니다.<br>내가 가진 본질의 무게가 묵직할수록 상대를 끌어당길 수 있으며, 기꺼이 수용하려는 그 여유가 결국 사람들을 내 곁으로 모이게 만듭니다.<br><br>건축 디자인이나 우리의 삶이나 참 비슷합니다.<br>다만, 도면 위의 디자인은 몇 번이고 지우개로 지우고 다시 그릴 수 있지만, 삶은 온전히 그 실패의 기록들을 안고 살아가야 한다는 점이 다를 뿐입니다.<br><br>결합은 본질적으로 '나 자신'에서부터 시작합니다.<br>스스로 단단한 기준을 세우고, 내면의 무게를 묵직하게 하거나 때로는 텅 비워냄으로써, 상황과 상대방에게 흔들리지 않아야만 비로소 안정적인 결합이 가능해집니다.",
             "image": "static/images/act3_sculpture_2.jpg",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "type": "image_top",
@@ -666,7 +664,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -696,7 +694,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/sketches/113.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -706,7 +704,7 @@ var bookData = {
             "image": "static/images/act3_sculpture_3.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "title": "읽기와 듣기, 그리고 말하기",
@@ -729,7 +727,7 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": "static/images/act4_sculpture_1.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -739,7 +737,7 @@ var bookData = {
             "image": "static/images/gallery_batch9_arch3.jpg",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "type": "image_top",
-            "caption": "《공간 구상》, 건축 스케치 (Architectural Draft)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "type": "image_top",
@@ -769,7 +767,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
         {
             "part": "4부: 증언과 성찰",
@@ -779,7 +777,7 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": "static/images/sketches/91.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)"
+            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
             "title": "[임시 전시] 도면 조형물 (위치 결정용)",
