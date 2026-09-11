@@ -584,7 +584,7 @@ var bookData = {
             "title": "거름종이 마법이 있다",
             "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료 마법이라고 합니다.<br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니<br>좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/gallery_custom_4.jpg",
+            "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
             "type": "image_top",
             "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
