@@ -357,7 +357,7 @@ var bookData = {
             "title": "가끔",
             "text": "가만히 벽지의 무늬를 바라보다보면<br>그 무늬속에 숨어있던 얼굴들이 나타난다<br>웃기도하고 나에게 무엇가를 말하는것도 같다<br>분명한 언어가 아닌 느낌으로 이야기를 만들어 간다<br>돌이나 나무 그 것들 속에서 미소짓는<br>얼굴들을 발견할때면 나도 웃게된다<br>나만이 아는 친구를 만난 것처럼<br>어느날은 공사장의<br>굴착기이 힘들어<br>축 늘어진 강아지 같이 보일때도 있다<br>하나의 형상은 하나의 이미지로만 보이지않는다<br>가만히 들여다보면, 대부분은 내가 보고 싶은 대로<br>보는것 같다<br>오늘도 고정된 이미지를 만들지 말고,<br>그렇게 보지않도록 노력하며 하루를 살아보자\n<div style=\"margin-top: 60px;\">\n <h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f; text-align: center;\">[스케치] 서울에서 찾아낸 얼굴들</h4>\n <img src=\"static/images/face_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_3.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_4.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/face_5.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n</div>\n<br>\n<blockquote>\n무심한 사물 속에서 종종 사람의 모습을 찾곤 합니다.<br>\n아무런 의미가 없다고 여겼던 평범한 바탕 위에서 문득 누군가의 얼굴을 찾아내어, 가만히 속으로 인사를 건네기도 하지요.<br>\n<br>\n건축물의 배치나 디자인된 공간은 결코 죽어 있는 것이 아닙니다. 우리가 빚어낸 디자인과 공간은, 살아 숨 쉬는 우리 사람들과 끊임없이 교감하며 서로 영향을 주고받기 때문입니다.\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/20.jpg",
+            "image": "static/images/gallery_batch4_leaning_1789095654604.jpg",
             "type": "image_top",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -366,7 +366,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 난 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br><br>\n\n그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>\n\n난 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>\n\n이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>\n\n텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 내 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>\n\n습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>\n\n서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,<br><br>\n\n그렇게 붙어있다 생각한 것은, 그것은 착각이네요.<br>\n엄지와 검지 사이 어느새 그 사이에<br><br>\n\n제가 버린 것들이 얇고도 투명한 막을 만들어 놓고,<br><br>\n\n서로를 부빈다 생각한 것은<br>\n서로가 아닌,<br>\n제가 만들어낸 조각난 저의 조각보.<br><br>\n\n현실은 우리를 공기도 물도 통하지 않는<br><br>\n\n서로가 다른 공간에 있음을 알리고,<br>\n함께 있다고 생각한 우리의 과거를 깨트립니다.<br><br>\n\n언제나 만지작거리면 바스락거리는<br>\n그 소리와 그 감촉은<br><br>\n\n그것은 얇고도 투명한<br>\n저의 포장지, 저의 조각보.\n</p>\n</div>",
-            "image": "static/images/crumpled_wrapper.jpg",
+            "image": "static/images/gallery_batch13_wire2_1789124561183.jpg",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
         },
         {
