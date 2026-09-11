@@ -467,7 +467,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242273"></script>
+    <script src="book_data.js?v=20242274"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -524,11 +524,7 @@
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
         let isSpecialPage =
           page.type === "cover" ||
-          page.type === "interlude" ||
-          page.type === "image_full" ||
-          page.type === "poem" ||
-          page.type === "author_profile" ||
-          (page.text || "").length < 200;
+          page.type === "author_profile";
 
         let bgHTML = "";
         let contentHTML = "";
@@ -613,9 +609,9 @@
               '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block;">';
             if (page.caption) {
               contentHTML +=
-                '<p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">' +
+                '<div class="image-caption">' +
                 page.caption +
-                "</p>";
+                "</div>";
             }
             contentHTML += "</div>";
           }
