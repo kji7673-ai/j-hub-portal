@@ -49,6 +49,17 @@
     <script src="app.js"></script>
   </head>
   <body>
+
+    <div id="cover-page">
+      <div class="cover-prologue">
+        내 머릿속의 거칠고 부끄러운 감정들을,<br>
+        용기 내어 갤러리의 조각상들처럼 꺼내어 전시해 본다.
+      </div>
+      <button class="cover-btn" onclick="document.getElementById('cover-page').style.opacity = '0'; setTimeout(() => document.getElementById('cover-page').style.display = 'none', 800);">
+        전시 관람 시작하기
+      </button>
+    </div>
+
     <!-- Bottom Floating Navigation Bar -->
     <style>
       .bottom-nav {
@@ -456,7 +467,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242272"></script>
+    <script src="book_data.js?v=20242273"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
