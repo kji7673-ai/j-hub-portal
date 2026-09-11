@@ -756,7 +756,7 @@ var bookData = {
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
-            "image": "static/images/update_page_42.jpg",
+            "image": "static/images/gallery_batch17_sculpture1_1789125773271.jpg",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
         },
         {
