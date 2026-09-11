@@ -444,7 +444,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242233"></script>
+    <script src="book_data.js?v=20242234"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -515,6 +515,10 @@
           if (page.image) {
             let overlayCSS = "background: rgba(255,255,255, 0.75);";
             let bgPosition = "center center";
+
+            if (page.title && page.title.includes("여는 글: 제1막")) {
+              bgPosition = "center top"; // 머리 안 잘리게 상단 고정
+            }
             if (page.type === "cover") {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
               bgPosition = "center 2%"; // 조각상 머리 상단 고정 (하단 책상 크롭)
