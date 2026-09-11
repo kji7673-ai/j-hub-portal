@@ -126,7 +126,7 @@ var bookData = {
       partCategory: "제1막: 공유결합 디자인 방법론",
       type: "poem",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;">\n디자인은 어디서 나오는 것일까요?<br>감각이나 방대한 지식에서 나오는 것일까요?<br><br>내가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.<br><br>타인에 대한 배려와 관심,<br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다.<br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민,<br>그리고 바람과 조망에 대한 깊은 공감이 있을 때<br>진짜 설계가 나옵니다.<br>거창한 논리보다 먼저 다정한 사람이 되시길 바랍니다.<br><br>다정한 디자인\n</p>\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;">\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고... 그때 그 말에 참 부끄러웠습니다.\n</blockquote>',
-      image: "static/images/gallery_custom_4.jpg",
+      image: "static/images/gallery_batch8_frame1.jpg",
     },
     {
       type: "text",
@@ -260,7 +260,7 @@ var bookData = {
       title: "난 둔한 사람입니다",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n전 둔한 사람입니다.<br>\n어떤 이는<br>\n침착하다고 말하지만,<br><br>\n사실 몸도 마음도 둔하여<br>\n슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>\n둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>\n보통의 경우는<br>\n이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>\n이미 지나간 것들이<br>\n지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>\n다른 이는 현재의 시간인데<br>\n나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>\n현재 기쁨의 순간에<br>\n찾아온 과거의 슬픔에<br><br>\n난 어느 시점에 나의 중심을 둘지 몰라<br><br>\n그냥 멍하니 있습니다.\n</p>\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;">\n<strong>"제발, 이상한 인간만은 되지 말자."</strong><br><br>\n겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓인다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 \'감정의 시차 부적응자\'들이 세상엔 또 얼마나 많을까. 부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 \'이상한 사람\'으로 여기며 자책하지 않았으면 좋겠다.\n</blockquote>\n<div style="margin-top: 60px; text-align: center;">\n<h4 style="font-size: 16px; font-weight: 600; margin-bottom: 24px; color: #1d1d1f;">[조형물] 한 박자 늦게 걷는 사람</h4>\n<img src="static/images/dull_1.jpg" style="width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n<img src="static/images/dull_2.jpg" style="width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">\n</div>',
       partCategory: "제2막: 나라는 개체의 독립과 생존",
-      image: "static/images/gallery_batch3_face.jpg",
+      image: "static/images/gallery_batch8_frame2.jpg",
       type: "poem",
     },
     {
@@ -296,7 +296,7 @@ var bookData = {
       title: "에너지의 소진으로",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있습니다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;">\n저는 오늘 하루를 온전한 \'현재\'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 \'오늘\'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>',
       partCategory: "제2막: 나라는 개체의 독립과 생존",
-      image: "static/images/gallery_batch4_leaning.jpg",
+      image: "static/images/gallery_batch8_frame3.jpg",
       type: "image_top",
     },
     {
@@ -373,7 +373,7 @@ var bookData = {
       type: "image_top",
       title: "생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라",
       text: '생각은 누구나 합니다. 하지만 이를 잘 해내기 위해서 지켜야 할 원칙이 있습니다. \n첫째, 진짜 사실인지 확인하십시오. 설계를 하다 보면, 제가 설정한 기준이나 아이디어에 대해 끊임없이 의심해 볼 필요가 있습니다. 제가 만든 디자인이 정말 좋은 것인지, 단순히 내 생각일 뿐인지 스스로에게 물어봐야 합니다.\n\n"사실", "진짜", "변하지 않는 것" 등을 잘 구분해야 합니다. 선배가 말했기 때문에 사실입니다? 이건 아니겠지요. 누가 이야기하더라도 본인 스스로 수긍이 되어야 합니다. 당신이 지금 하고 있는 설계가 진정한 \'사실\'에 기반하고 있나요? 디자인은 감각이라기보다는 생각의 힘입니다.',
-      image: "static/images/gallery_new_1.jpg",
+      image: "static/images/gallery_batch8_frame4.jpg",
       part: "4부: 증언과 성찰",
       partTitle: "[Theme 3] 설계의 본질에 대한 고민",
       partCategory: "제2막: 나라는 개체의 독립과 생존",
