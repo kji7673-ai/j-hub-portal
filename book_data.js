@@ -501,7 +501,7 @@ var bookData = {
             "type": "image_top",
             "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n난 붓을 놓을 수가 없습니다.<br><br>\n내 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n난 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'내가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
-            "image": "static/images/gallery_batch9_arch1.jpg",
+            "image": "static/images/gallery_new_4.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -511,14 +511,14 @@ var bookData = {
             "title": "우리 이렇게 오늘도",
             "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n나라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n나는 새로운 내가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우린 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n나라는 개체의 독립성은 나를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 나를 위하는 것이란 것을<br><br>\n나를 통한 나라는 존재는 더욱더 옅어지고<br>\n당신을 통한 나의 존재는 더욱 뚜렷해지기를.<br><br>\n살아간다는 것이 무엇일까요?<br><br>\n오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br><br>\n내가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"나라는 존재의 본질은 나를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/user_18.jpg",
+            "image": "static/images/gallery_new_3.jpg",
             "type": "image_top",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
         },
         {
             "type": "image_top",
             "title": "현장의 기록",
-            "image": "static/images/gallery_batch10_frame1.jpg",
+            "image": "static/images/gallery_new_2.jpg",
             "text": "이곳에 담긴 수십 편의 조각들은 제가 치열한 현장을 뒹굴며 끄적여온 날것의 기록입니다.<br><br>이 거칠고 솔직한 기록들에는 머릿속 이상과 현실 사이의 모순이 있고, 똑같은 고민이 무의식적으로 반복되는 흔적이 있으며, 때로는 깊은 혼란과 무기력함마저 묻어 있습니다.<br><br>앞서 '결합'이라는 거창한 원칙을 이야기했지만, 사실 제 삶이 처음부터 그 원칙대로 완벽하게 맞물려 돌아갔던 것은 아닙니다. 도면 위에서는 완벽한 결합의 기준을 맞추려 그토록 치열하게 애쓰면서도, 현장에서 마주하는 사람들과의 실제 결합은 여전히 제게 풀기 어려운 숙제입니다.<br><br>그래서, 저는 여전히 불안하고 여전히 부족한 사람입니다.<br><br>중복과 모순, 황홀함과 분노가 얽혀있는 이 조각들은 지난 오랜 세월 제가 숱하게 넘어지고 버티며 써 내려온 생채기 같은 흔적들입니다. 이 작고 투박한 흔적들이, 각자의 자리에서 고단한 밥벌이를 버텨내고 계신 분들의 마음에도 작은 공명을 일으키기를 바랍니다.",
             "part": "4부: 증언과 성찰",
             "partTitle": "현장의 기록",
@@ -530,7 +530,7 @@ var bookData = {
             "title": "현장에서 배워야 할 것들",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 내가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 나는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도<br>내가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아<br>다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br>제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?<br><br>현장의 결합.\n</p>\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">하지만 타인과 진정한 '결합'을 이루기 위해서는, 먼저 나라는 사람부터 중심이 단단하게 잡힌 '독립된 원소'가 되어야 합니다. 궤도를 지탱하는 튼튼한 중심이 서 있어야 비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다.<br><br>그리고 또 하나 잊지 말아야 할 것이 있습니다. 수많은 사람과 결합하며 살아가더라도, 인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. 스스로 흔들림 없이 홀로 설 수 있는 사람만이 비로소 타인과 굳건하게 결합할 수 있습니다.</blockquote>\n</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketches/41.jpg",
+            "image": "static/images/gallery_new_1.jpg",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
@@ -539,7 +539,7 @@ var bookData = {
             "title": "다닥다닥 붙은 집들",
             "text": "바라 봄이 없는 집에서<br>보여지기마저 두려워 가리고 가린다<br>내 소리 남이 들을까<br>남의 소리 차단하고<br>거저 서로가 없는 듯 있는듯<br>죽은척 살아가기를 바란다<br>너무 가까이 살기에<br>서로에게 멀어지기 위해 닫고 닫아<br>상대와 내가 멀리 떨어진 것처럼 그렇게<br>상대와 내가 없는 것처럼 그렇게<br>혹시 옆에 누가살고 있는지 알고 있나요?",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": "static/images/sketch_100year_market_1.jpg",
+            "image": "static/images/gallery_frame_5.jpg",
             "type": "poem",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -548,7 +548,7 @@ var bookData = {
             "title": "흔들리지 않기 위한 나만의 무게 중심",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 나를 찾는 사색이 아니라, <strong>'나의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리가 말하는 '결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 치열한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">설계자의 역할은 이 거대한 화학반응이 일어날 수 있도록 중심을 잡아주는 '그릇'과도 같습니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원소들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 결합의 첫 번째 조건입니다.</p>",
-            "image": "static/images/gallery_batch10_frame2.jpg",
+            "image": "static/images/gallery_frame_4.jpg",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
         {
@@ -563,7 +563,7 @@ var bookData = {
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "모두들",
             "text": "모두들,<br>\n자신을 좋아해 주는 사람을 좋아합니다.<br>\n<br>\n그래서 누군가를 대할 때면 자연스레<br>\n'이 사람은 무엇을 좋아할까?'를 먼저 생각하게 됩니다.<br>\n<br>\n그런데 가끔은,<br>\n이런 셈법으로 사람을 대하는 것이 맞는지 회의감이 들 때가 있습니다.<br>\n<br>\n너무 <strong>'머리'</strong>로만 사람을 대하는 것 같아서요.<br>\n<br>\n<blockquote>\n제게 설계나 계획안을 의뢰하는 분이 생기면, 저는 반드시 그분들을 직접 대면하기를 원합니다. 일이 그저 '일'로만 끝나버리면 그다음은 없고, 심지어 당장의 일조차 제대로 풀리지 않기 때문입니다.<br>\n<br>\n제가 주로 하는 정비사업(재개발·재건축)은 한 번 시작하면 최소 5년, 길게는 10년을 훌쩍 넘겨 얼굴을 맞대야 비로소 끝이 나는 일입니다.<br>\n<br>\n그 긴 세월 동안, 상대가 듣기 좋아하는 말만 골라 하고 적당히 분위기만 맞추는 얄팍한 관계는 결코 오래갈 수 없습니다. 결국 사람을 '머리'가 아닌 <strong>'가슴'</strong>으로 대하는 진실됨이 있어야만 이 지난한 일을 끝까지 해낼 수 있습니다.\n</blockquote><br><br>타인과 관계를 맺으며 겪게 되는 이런 미안함과 머뭇거림은, 이어지는 여러 단상과 시들을 통해 투박하게 기록되어 있습니다. 사람의 마음을 '머리'로만 이해하려다 실패하고, 다시 '가슴'으로 다가가려 애쓰며 남겨둔 관계의 흔적들을 지금부터 조금씩 꺼내어 봅니다.",
-            "image": "static/images/sketches/128.jpg",
+            "image": "static/images/gallery_frame_3.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
@@ -573,7 +573,7 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "논리와 감정 사이, 건축가의 '싫어요'",
             "text": "\"이거냐, 저거냐.\"<br>세상은 늘 선택을 요구합니다. 그 질문 앞에서 저는 속으로 \"싫어요\"라고 답하곤 합니다. <br>논리가 필요한 순간에 감정으로 버티고 서는 셈입니다.<br>사업을 하시는 분들에게 건축설계란 논리와 숫자를 다루는 일로 보이겠지요.<br>반면 실제로 그 공간에 머무는 거주자에게 건축설계는 감정과 느낌을 다루는 일로 다가갈 것입니다.<br>설계를 업으로 삼은 이들 중 누군가는 이를 철저히 '직업'으로 대하지만, <br>어떤 이들에게 건축설계는 직업을 넘어 '자기 자신' 그 자체가 되기도 합니다.<br>설계를 자기 자신으로 느끼는 건축가는 스스로의 마음에 들 때까지 펜을 놓지 못합니다.<br>하루 24시간, 온통 그 생각만 하도록 훈련된 사람들입니다. <br>솔직히 말해, 이런 사람들은 영리하게 먹고살기 참 어렵습니다.<br>저 역시, 차가운 논리가 우선되어야 할 순간에도 감정적인 '싫어요'가 불쑥 튀어나오려 할 때가 많습니다.<br>삶의 많은 부분을 그저 둥글게 넘기며 살아왔지만, <br>설계라는 이 한 부분마저 타협하고 놓아버리면 정말로 밑바닥으로 떨어져 죽을 것만 같은 두려움 때문일지도 모릅니다.<br>그래서 가끔은 억지를 부립니다. <br>아무런 생각이 담기지 않은 텅 빈 도면을 보기가 싫습니다.<br>영혼 없이 오가는 기계적인 말들을 듣기가 싫습니다. <br>조금 미련해 보일지라도, 저는 공간에 사람의 마음과 생각이 담기기를 고집하고 싶습니다.",
-            "image": "static/images/gallery_batch9_arch2.jpg",
+            "image": "static/images/gallery_frame_1.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
@@ -584,7 +584,7 @@ var bookData = {
             "title": "거름종이 마법이 있다",
             "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 이 마법은 듣는 사람을 위한 마법이 아닌<br>말하는 사람을 위한 치료 마법이라고 합니다.<br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니<br>좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/user_sculpture_3.jpg",
+            "image": "static/images/gallery_custom_4.jpg",
             "type": "image_top",
             "caption": "오리지널 입체 조형물 (Original Sculpture)"
         },
@@ -614,7 +614,7 @@ var bookData = {
             "title": "익숙해진다는 것",
             "text": "타인의 시선에 익숙해져 버렸습니다.<br>\n타인의 시선 속의 내가 되어 버렸습니다.<br>\n<br>\n나의 맘과는 상관없이<br>\n그저 모난 소리 듣기 싫어, 힘들어도 참고 인내하는 것에<br>\n<br>\n내 행동의 의미보다는<br>\n타인의 시선 속에서 나를 찾기 시작했습니다.<br>\n<br>\n눈치껏 살아가는 게 좋은 것이겠죠?<br>\n상대에게 좋은 말 듣는 삶이 좋은 것이겠죠?<br>\n<br>\n나를 인정해주는 말들이 그물처럼 느껴집니다.<br>\n<br>\n인정해준다는 것은<br>\n<br>\n나와 타자의 동등한 관계에서 나오는 말일까요?<br>\n내가 나를 인정해 줄 수 있을 때 그게 더 좋을 것 같습니다.<br>\n<br>\n<blockquote>\n진정한 관계성이 이루어지려면, 동등한 개인 즉, 본인 자신에 대해 무겁게 해야 합니다.<br>\n그래야 상대에게 딸려가지 않는 관계가 형성될 수 있습니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/gallery_batch6_bowl_white1.jpg",
+            "image": "static/images/gallery_custom_3.jpg",
             "type": "image_top",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -624,7 +624,7 @@ var bookData = {
             "title": "귀를 통해 마음으로 들어간 것이",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 40px; display: inline-block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있습니다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 합니다<br><br>\n\n가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 됩니다<br><br>\n\n근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다 보니<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌지요?\n</p>\n</div>\n\n<div style=\"margin: 20px auto 40px auto; text-align: center;\">\n <img src=\"static/images/art_wait_sketch.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;\">\n</div>\n\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;\">\n <img src=\"static/images/art_wait_grey.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_glow.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이내 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/sketches/65.jpg",
+            "image": "static/images/gallery_custom_2.jpg",
             "type": "poem",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -633,7 +633,7 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "사람을 이용할 때",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋습니다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 내 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸웁니다.<br><br>\n내 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 합니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달합니다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취합니다.\n</blockquote>",
-            "image": "static/images/sketches/108.jpg",
+            "image": "static/images/gallery_custom_1.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
@@ -644,7 +644,7 @@ var bookData = {
             "title": "고상하다는 것은",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바삐 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 내 눈에 보이는 것, 내가 만나는 사람과 풍경에 감정을 담아야겠습니다. 그러면 될 것 같습니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/user_18.jpg",
+            "image": "static/images/gallery_batch9_arch5_1789097544862.jpg",
             "type": "poem",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
         },
@@ -672,7 +672,7 @@ var bookData = {
             "title": "말과 마음의 사이",
             "text": "건축에 필요한 말이 많아진다는 것은,<br>\n결국 '말이 필요한 건축'이 되었다는 것은<br>\n<br>\n좋은 디자인은 아니라고 생각했습니다.<br>\n<br>\n왜 이해를 못하지?<br>\n<br>\n그건, 상대의 잘못이 아닙니다.<br>\n공명과 공감을 불러일으키지 못한 것은<br>\n디자이너의 실력 부족입니다.<br>\n<br>\n공감 즉, 공명을 할 수 있는 디자인이 되어야 합니다.<br>\n말만으로 설명되는 건축이 아닌,<br>\n<br>\n함께 공감되는 디자인이 되어야 합니다.<br>\n<br>\n때로는 말은 필요할 수도 있지만,<br>\n말로만 설명되는 건축은 아직 부족하다는 것입니다.<br>\n<br>\n<blockquote>\n사람 사이의 관계는 그렇지 않은 것 같습니다.<br>\n나의 진심과 의도는 말을 하지 않아도 전달될 것이라 봤는데,<br>\n<br>\n그건 아닌 것 같습니다.<br>\n<br>\n말과 더불어 나의 행동, 일관된 태도,<br>\n그리고 지난한 <strong>'시간의 흐름'</strong>이 겹겹이 쌓여야만 비로소 상대에게 가닿을 수 있습니다.<br>\n<br>\n사람과의 관계에서는<br>\n내 머릿속의 생각과 마음은 결코 쉽게 전달되지 않습니다.<br>\n<br>\n끝없이 증명하고 노력해야만 합니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/user_25.jpg",
+            "image": "static/images/gallery_batch9_arch4_1789097533576.jpg",
             "type": "poem",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
         },
@@ -681,7 +681,7 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "우리가 이렇게 살아갑니다",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n우리가 이렇게 살아갑니다<br><br>\n우린 이렇게 살아가고 있습니다.<br><br>\n차가운 콘크리트를 사이에 두고<br>\n좌우 아래위로 붙어있는 아파트<br><br>\n최소의 이격거리가 최대의 이격거리가 되어<br>\n서로 따닥따닥 붙어있는 다세대 빌라<br><br>\n우리가 살고 있는 집들은 거의가 공동주택입니다.<br>\n공동주택입니다. 즉 함께하는 주거의 틀은 이미 되어있습니다.<br><br>\n하지만,<br>\n우리는 바라봄을 위한 떨어짐이 없기에<br>\n보여지길 두려워 가리고 또 가립니다.<br><br>\n내 소리 남이 들을까<br>\n남의 소리 차단하고<br><br>\n서로가 없는 듯 있는 듯<br>\n죽은 척 살아가기를 바랍니다.<br><br>\n너무 가까이 살기에<br>\n서로에게 멀어지기 위해<br>\n닫고 닫아<br><br>\n상대와 내가 멀리 떨어진 것처럼<br>\n그렇게 상대와 내가 없는 것처럼<br>\n그렇게 우리는 이렇게 살아가고 있습니다.\n</p>\n</div>\n\n<blockquote>적당히 떨어져 있어야 하는데, 우리는 너무 빽빽하게 붙어 있다 보니 외려 문을 굳게 닫고 살아갑니다. 옆 동 사람과는 쉽게 친해져도 바로 벽 하나를 맞댄 옆 호 사람과는 눈조차 마주치기 어려운 것이 우리의 현실입니다.<br><br>설계하는 사람들 중 간혹 개인의 '절대적인 자기 영역'에 대한 이해가 부족한 경우를 봅니다. 그들은 사람들이 모이기를 기대하며 예쁜 공용 공간을 널찍하게 그려 넣지만, 실상 그곳은 언제나 텅 비어 있습니다. 좁은 복도에서 이웃과 마주치면 반갑게 인사할 것이라 상상하지만, 사람들은 고개를 푹 숙인 채 그저 그 뻘쭘한 찰나가 빨리 지나가기만을 서로를 온전히 바라보기 위해서는 역설적이게도 최소한의 '떨어짐(거리)'이 필요합니다.<br>건물과 건물 사이에 숨을 쉴 골목이 필요하듯, 사람 사이에도 바람이 통할 한 뼘의 거리가 있어야 비로소 서로를 밀어내지 않고 곁에 머물 수 있으니까요.</blockquote>",
-            "image": "static/images/55jpg.jpg",
+            "image": "static/images/gallery_batch9_arch3_1789097518731.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": "오리지널 스케치 노트 (Original Sketch Note)"
@@ -692,7 +692,7 @@ var bookData = {
             "title": "오늘은 우리집 소파에서 또...",
             "text": "오늘은 우리집 소파에서 또 다른 사람을 만났습니다.<br>자신을 다른 사람의 생각을 볼 수 있는 사람이라고 소개를 합니다.<br>“안 믿는 군요?”<br>“믿어요. 혹시 어떻게 다른 사람의 생각을 보는지 말해 줄 수 있나요?”<br>요즘 하도 많은 이들을 만나다 보니 나도 익숙해졌나 봅니다.<br>그렇게 우리의 대화는 시작이 되었습니다.<br>그 사람에겐 상대방을 볼 때 생각이 그림처럼 그려져 무엇을 생각하는지 알 수 있다고 했습니다.<br>의외로 분명한 그림을 가지고 있는 사람보다는 초점이 맞지 않는 그림이나 영상처럼 흐릿해서 전체적인 윤곽만 가진 사람들이 더 많다고 합니다.<br>거의 대다수가 흐릿한 이미지를 가지고 말을 하는데, 말을 하며, 그 이미지가 점차 선명해진다고 합니다.<br>아주 강렬한 색상의 그림이 만들어졌다가, 곧 다시 흐릿해지는 사람도 있고, 맘 속의 그림이 계속해서 만들어 가는 사람도 있다고 합니다.<br>“그렇게 다른 사람의 생각을 볼 수 있다면, 입에서 나오는 말과 생각이 불일치할 경우 어떤 것을 믿나요?”하고 제가 물었습니다. 그 사람이 답하기를,<br>“저도 사실 이러한 능력이 처음 생겼을 때는 혼란스러웠어요. 생각과 다른 말을 하는 이들을 멀리하게 되었고, 그 말을 믿지 못하게 되었지요. 사람들이 무서웠고, 또 우스워 보이기도 했습니다. 사람을 사귈 수가 없었습니다.” 하고, 잠시 저를 바라봅니다. 다시 말을 이어갑니다.<br>“근데, 시간이 지나보니 깨닫는 게 있었어요. 말을 하는 그 순간에는 맘속의 생각과 같거나 다른 말을 하더라도, 입에서 나온 말과 일치되는 그림을 그려가는 사람이 있고, 전혀 다른 그림을 계속 그려가는 사람이 있다는 것을 알게 되었지요. 그리고 보통은 앞서 말씀드린 것처럼 초점이 맞지 않던 이미지가 또렷해져가는 과정 중에 있어서 진실의 여부는 지금 순간의 말보다는 그 사람이 향후 그려가는 그림에 있다는 것을 알게 되었어요. 그리고 모든 생각이 행동으로 나타나는 것은 아니거든요. “하고, 또 다시 저를 바라보다, 말을 합니다.<br>“근데, 혹시 당신 배고픈 가요? 나랑 대화하면서도 당신은 피자 햄버거 핫도그 등등이 계속 그려지는 군요?”<br>음……\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">예전에 쓴 글들을 보면 '참 엉뚱한 상상도 많이 했구나' 싶어 피식 웃음이 납니다.<br><br>신약성경 마태복음을 보면 두 아들 이야기가 나옵니다. 포도원에 가서 일하라는 아버지의 말에 앞에서는 '네' 하고 대답만 해놓고 가지 않은 아들과, 처음엔 '싫다'며 퉁명스럽게 굴었지만 뉘우치고 결국 밭으로 나간 아들의 이야깁니다. 특히 나처럼 수많은 조합원과 주민들을 만나 정비사업을 이끌어가는 사람들은 매 순간 수많은 '약속'과 '말'을 내뱉게 됩니다. 그럴 때마다 혀끝에서 맴도는 가벼운 말보다, 내 생각과 입 밖으로 낸 말, 그리고 앞으로 저의 '행동'이 기어코 일치하기를 간절히 바라며 조심스럽게 하루하루를 걷습니다. 세상은 갈수록 화려하고 현란한 말들로 넘쳐납니다. 하지만 결국 닫힌 사람의 마음을 열고 무언가를 굳건히 세우는 것은, 투박할지언정 묵묵히 땀 흘려 약속을 증명해 내는 조용한 뒷모습입니다. 오늘 하루, 우리가 허공에 흩뿌린 말들이 부디 땅에 단단히 뿌리내릴 수 있기를.</div>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/sketches/113.jpg",
+            "image": "static/images/gallery_batch9_arch2_1789097505174.jpg",
             "type": "image_top",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
@@ -734,7 +734,7 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "마음을 짓는 일: 공동체 주택 설계",
             "text": "교회에서 오랜 인연을 맺어온 형, 누나들의 공동체 주택 설계를 기획하고 상상하며 적어 내려갔던 상념입니다.<br>\n<br>\n50대에서 70대에 이르는 분들이 뜻을 모아 한 지붕 아래 집을 짓기로 했습니다. 하지만 서로가 마음속 깊은 이야기를 사전에 충분히 나누지 못하면, 결국 입주 후에 서로 눈치를 보며 \"어? 원래 이거였나?\", \"음... 뭐, 대충 맞추며 살지 뭐\" 하며 타협하게 될까 봐 건축가로서 깊은 고민에 빠졌습니다.<br>\n<br>\n공동체 주택이란 각자가 품어온 삶의 기대가 모이는 교집합이어야 합니다.<br>\n그 무거운 책임감을 풀기 위해, 저는 그분들의 일상을 하나하나 조용히 상상해 보았습니다.<br>\n음악을 좋아하는 분과는 공간이 품어낼 '소리'에 대해, 미술을 좋아하는 분과는 시선이 머무는 '보여지는 것'에 대해, 책을 좋아하는 분에게는 공간의 '무게감'을, 술 먹고 놀기 좋아하는 분에게는 '재미난 공간'을, 사진을 좋아하는 분에게는 창틀이 만들어내는 '프레임'을, 이야기를 좋아하는 분에게는 오가며 필연적이고도 우연하게 마주칠 수밖에 없는 '만남의 공간'을 찾아드리고 싶었습니다.<br>\n<br>\n건강을 챙기시는 분을 위해서는 억지로라도 걷게 만드는 동선을, 스트레스가 많은 분에게는 자신만의 '힐링 공간'을, 식물과 동물을 아끼는 분들과는 '배려와 돌봄'에 대해 이야기하면 어떨까요? 그리고 힘들 때면 머리만 쏙 내밀었다가 다시 숨을 수 있는, 각자만의 '작은 동굴'에 대해서도요.<br>\n<br>\n이 모든 상상과 기대가 테이블 위에서 활발하게 오갔으면 좋았겠지만, 현실의 벽 앞에서 결코 쉬운 일은 아니었습니다. 비록 제가 끝까지 이 설계를 담당하지는 못했지만, 그래도 함께 모여 공간을 상상하던 그 논의의 시간들만큼은 참으로 즐거웠습니다.<br>\n<br>\n상상해 봅니다.<br>\n좁은 진입로를 따라 들어서면 우뚝 솟은 형, 누나들의 집이 보입니다.<br>\n걸음을 옮길 때마다 다른 모습이 펼쳐집니다. 여기서는 이상한 형의 집이, 저기서는 요상한 누나의 집이 튀어나오는 식입니다. 부분부분 포인트를 준 벽의 색상과 다채로운 처마 지붕이 마치 \"우리 8가족이 모여 여기 산다\"고 왁자지껄하게 말해주는 듯합니다.<br>\n<br>\n밖에서 볼 때는 우뚝 솟아 거대해 보이지만, 막상 안으로 들어서면 숨겨진 아기자기한 공간들과 대비되며 색다른 모습이 나타납니다. 밖은 크고 안은 작은 그 대비가 마치 형들의 일상을 닮은 것 같아 실없는 웃음이 납니다.<br>\n1층 진입부를 향해 계단을 오르면 덩그러니 놓인 작은 건물이 나타납니다. 전면은 투명한 유리지만 출입문 하나만은 묵직하고 온기가 느껴지는 통나무 문입니다. 그 문에는 '사랑방'이라는 푯말, 그 아래엔 \"여성분들은 1층 출입구를 이용해 주세요\"라고 짓궂게 적혀 있습니다. 결국 층을 나누어 그토록 염원하던 '남성 전용 공간'을 기어코 만들어 내셨구나 싶습니다.<br>\n멀리서 보면 독립된 작은 건물처럼 보일 그 사랑방이, 동네 이웃들도 가볍게 들러 이야기를 나눌 수 있는 다정한 만남의 공간이 되기를 바라봅니다.<br>\n<br>\n<blockquote>\n그런데, 공동체 주택을 설계할 때는 역설적으로 '언젠가 헤어질 때'를 반드시 대비해야 합니다.<br>\n<br>\n초기 구성원들 개인의 뾰족한 취향에만 100% 맞추어진 집이 되면 절대 안 됩니다. 처음 모인 분들은 \"서로 모든 것을 양보하며 함께 살면 마냥 행복할 것\"이라 낭만적으로 생각하지만, 막상 부대끼며 살다 보면 현실에서는 정말 별의별 일들이 다 생기기 때문입니다.<br>\n<br>\n누군가는 떠나고, 새로운 누군가가 그 자리에 들어올 수 있어야 합니다. 그러기 위해서는 공동체 주택이라 할지라도 '개인의 철저한 독립성'이 보장되어야 하며, 주변의 일반 주거와 비교해도 손색없는 '보편적인 주거 품질'을 갖추어야만 합니다. 그래야만 사람이 바뀌어도 공간이 살아남아, 계속해서 새로운 공동체를 품어낼 수 있습니다.\n</blockquote><br><br>전혀 다른 삶의 방식을 가진 가족들이 하나의 지붕 아래 모여 살기 위해서는, 역설적으로 서로의 경계를 명확히 지켜주는 <strong>'단단한 틀(건축적 뼈대)'</strong>이 필수적이었습니다. 각 세대의 고유한 개성(색상)이 충돌하지 않도록 건축가가 몬드리안의 검정 선처럼 안정된 제도의 테두리를 그어주었을 때, 그들은 비로소 진정한 의미의 공동체로 결합할 수 있었습니다.",
-            "image": "static/images/gallery_batch9_arch3.jpg",
+            "image": "static/images/gallery_batch9_arch1_1789097489769.jpg",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "type": "image_top",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
@@ -743,7 +743,7 @@ var bookData = {
             "type": "image_top",
             "title": "서계동 현상설계",
             "text": "지속가능한 건축의 원리는 \"공유결합\"으로 설명할 수 있습니다. 각자 부족한 것을 내어주고 서로를 단단히 묶어 가장 안정적인 상태를 이루는 과정. 건축설계의 본질, 현장의 난제를 푸는 방법, 그리고 사람을 신뢰하는 방법의 핵심이 바로 이 공유결합에 있다고 저는 믿습니다.\n\n첫째는 건축사로서 흔들리지 않는 중심(기준)을 세우는 것, 둘째는 각기 다른 사람들의 투박한 언어를 둥글게 이해하고 담아내는 것, 그리고 셋째는 눈앞의 대지뿐만 아니라 얽히고설킨 이해관계의 이면(회의 테이블)까지 꿰뚫어 보는 것입니다. 이 세 가지 공유결합의 요소가 만나 서로의 결핍을 채울 때, 건축은 비로소 단순한 구조물을 넘어 생명력을 얻게 됩니다.\n\n올해 용산구 서계동 재개발 사업지의 현상설계를 진행했습니다. 눈발이 날리는 초겨울이었습니다. 직원들과 함께 답사한 그곳은 지형의 단차가 유독 심하고 골목이 비좁은 동네였습니다.\n\n진눈깨비 날리던 그날, 직원들과 함께 차가 다닐 수도 없는 비좁은 골목과 가파른 계단을 올랐습니다. 길이 조금만 미끄러워도, 아니면 아차 하는 순간 큰 사고가 날 수 있겠다는 아찔한 생각이 들었습니다.\n\n현장을 둘러보고 인근에서 함께 식사하며 우리는 자연스럽게 서로의 느낌을 나누었습니다. '이렇게 단차가 심한 지형에서 수십 년간 불편을 겪으셨을 분들을 위해 제로 레벨(Zero Level), 즉 평탄한 지형을 최대한 만들어 보자.' 그렇게 우리의 진심을 모아 '서경연화'라는 이름으로 계획안을 제출했습니다.<br><br><img src=\"static/images/seogye_sketch_1.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[서계동 현상설계 초기 스케치 - 험난한 지형을 어떻게 극복할 것인가에 대한 고민]</span>\n\n우리는 아파트 데크 설계를 통해 최대한 단지를 평지화했습니다. 피할 수 없이 단차가 나는 부분은 각 레벨의 데크를 겹겹이 쌓아 내밀어 계단식 조경을 만들고, 엘리베이터와 상가, 커뮤니티 시설을 배치했습니다. 지금까지 이 현장에 계신 분들이 평생 매일같이 느꼈을 '계단의 힘듦'을 '쉼과 여유의 공간'으로 변화시키기를 간절히 원했습니다. 정말 누구나 한 번쯤은 와보고 싶은 공간을 품은 아파트를 그분들께 선물해 드리고 싶었습니다.<br><br><img src=\"static/images/seogye_sketch_2.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\">[단차를 극복하기 위한 데크 설계와 단면 아이디어 스케치]</span>\n\n함께 작업하던 CG 담당자의 말을 빌리자면, 저희 진양건축이 설계에 얼마나 진심인지는 렌더링을 켜는 순간 알 수 있다며 '정말 이 곳에 살고 싶다'고 말하더군요. 입에 발린 칭찬일 수도 있겠지만, 적어도 우리 회사가 공간을 대하는 태도와 디자인에 담는 진심만큼은 온전히 전해졌다고 믿습니다.\n\n결과적으로 우리는 그 현상설계에서 떨어졌습니다. 하지만 함께 밤을 새우며 그 공간을 고민했던 직원들의 마음은 패배감에 젖지 않았습니다. \"정말 좋았다고, 우리 안이 가장 사람을 향해 있었고 정말 훌륭했다\"라고 서로를 다독이는 직원들의 목소리를 들으며 저는 참으로 기분이 좋았습니다. 직원들은 기존 메이저 업체들의 삭막한 설계에 비해, 사람을 먼저 생각한 우리가 훨씬 더 나았다는 굳건한 자부심을 가졌습니다.\n\n우리의 계획안에서 '공유결합'은 거창한 구호가 아니었습니다. 주민들의 편의성과 심한 단차가 가진 지형적 약점이 어떻게 서로를 보완할 수 있을지 치열하게 고민한 실체적인 결과물이었습니다. \n\n단차가 지는 구간의 데크를 조금씩 내밀어 사람들이 머물고 쉴 수 있는 계단식 조경 공간을 만들었고, 지형상 지하지만 외부로는 활짝 열려 있는 테라스형 상가와 커뮤니티 시설을 계획했습니다. 동시에 이를 통해 확보된 용적률을 최대치로 끌어올려 조합의 사업성을 견인할 분양 세대를 촘촘하게 구성했습니다.<br><br><img src=\"static/images/seogye_wireframe.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/seogye_cg_1.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><img src=\"static/images/seogye_cg_2.jpg\" style=\"width: 100%; border-radius: 12px; margin-bottom: 8px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\"><br><span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-bottom: 24px;\"></span>\n\n\n오랜 세월 주민들에게 불편함의 상징이었던 가파른 단차를 오히려 이 아파트만의 독보적인 명소로 뒤바꾸는 것. 서울에 사는 누구나 한 번쯤 찾아와 사진을 찍고 싶어 하는 매력적인 장소로 만드는 것. 지형의 약점, 주민의 쉼, 그리고 조합의 수익이라는 서로 다른 가치들을 하나의 공간 구조로 단단하게 묶어내는 이러한 설계 방향이 바로 제가 믿는 '공유결합'의 실체입니다. \n\n비록 수주라는 결과로 이어지진 못했을지라도, 우리는 그 눈 내리는 용산의 언덕에서 건축의 진짜 본질과 단단하게 결합해 있었습니다.<br><br>가파른 지형을 밀어버리는 대신 그 굴곡에 순응하는 길을 선택했습니다. 땅이 가진 본래의 제약과 새롭게 들어설 공간의 요구사항을 하나의 프레임으로 묶어내는 작업. 그것은 땅과 건축, 그리고 사람이 서로의 영역을 존중하며 맺어가는 가장 거대한 형태의 공유결합이었습니다.",
-            "image": "static/images/yongsan_terrace.jpg",
+            "image": "static/images/gallery_batch8_frame4_1789097230227.jpg",
             "part": "4부: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
@@ -781,7 +781,7 @@ var bookData = {
         },
         {
             "type": "epilogue",
-            "image": "static/images/01.jpg",
+            "image": "static/images/gallery_batch8_frame3_1789097217559.jpg",
             "title": "에필로그: 도면 위의 공유결합",
             "text": "공유결합.<br>어쩌면 이 단어 하나를 제 삶과 건축에 대입하기 위해 그동안 수많은 도면을 그렸는지도 모르겠습니다.<br><br>돌이켜보면 설계란 늘 차가운 선과 기호로 시작하지만, 도면 밖으로 나가는 순간부터는 온전히 '사람의 일'이 되었습니다. 전혀 다른 환경의 건축주, 이익이 얽힌 조합원들, 그리고 제도를 앞세우는 관청까지. 처음에는 그 다름이 저를 가로막는 벽이라고 생각했습니다. 하지만 제 고집을 조금 덜어내고 그들의 이야기에 귀 기울였을 때, 서로 다른 원자들이 각자의 본질을 잃지 않으면서도 단단히 묶이는 '공유결합'을 현장에서 경험했습니다.<br><br>하지만 제가 말씀드리고 싶은 공유결합은, 단순히 원만한 처세술이나 관계의 기술을 뜻하는 흔한 자기계발 이론이 아닙니다.<br><br>제가 진정으로 바라는 것은 건축 설계와 제도를 통해 우리 사회의 물리적 환경을 제대로 엮어내는 것입니다. 각각의 건물과 주변 환경, 지역과 지역, 그리고 그 사이를 잇는 가로(거리) 환경이 마치 <strong>'피에트 몬드리안(Piet Mondrian)의 그림 속 검정색 테두리'</strong> 같은 역할을 하기를 원합니다.<br><br>몬드리안의 그림에서 굵고 단단한 검은 선들이 프레임이 되어줄 때, 그 안의 빨강, 노랑, 파랑의 색상들이 비로소 각자의 고유한 개성을 완벽하게 뽐낼 수 있듯이 말입니다.<br><br>건축과 제도가 우리 사회를 지탱하는 튼튼한 테두리가 되어줄 때, 각 요소들은 고유의 개성을 잃지 않고 조화롭게 묶일 수 있습니다. 그리고 그 안정된 틀 속에서 사람들의 관계는 더 깊어지고, 우리는 다 함께 공유되는 행복을 누릴 수 있을 것입니다.<br><br>화곡동의 오래된 골목에서, 서계동의 비탈진 언덕에서, 그리고 유성시장의 회의 테이블에서 제가 실천하고자 했던 것도 결국 그것이었습니다.<br><br>이제 저는 다시 비어있는 하얀 도면 앞에 섭니다.<br>그리고 여러분께 묻고 싶습니다.<br><br>당신이 발 딛고 서 있는 그곳에서, 당신은 오늘 어떤 '선'을 긋고, 어떤 '공유결합'을 만들어가고 계십니까?",
             "partCategory": "",
