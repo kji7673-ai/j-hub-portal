@@ -1,14 +1,17 @@
-const fs = require('fs');
+const fs = require("fs");
 
-let code = fs.readFileSync('book_data.js', 'utf8');
-let dataCode = code.replace(/const bookData =|var bookData =/g, 'global.bookData =');
+let code = fs.readFileSync("book_data.js", "utf8");
+let dataCode = code.replace(
+  /const bookData =|var bookData =/g,
+  "global.bookData =",
+);
 eval(dataCode);
 
 let found = false;
-bookData.pages.forEach(p => {
-    if (p.title && p.title.includes('다정한 디자인')) {
-        found = true;
-        p.text = `<p style="text-align: center; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px;">
+bookData.pages.forEach((p) => {
+  if (p.title && p.title.includes("다정한 디자인")) {
+    found = true;
+    p.text = `<p style="text-align: center; line-height: 2.2; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px;">
 디자인은 어디서 나오는 것일까요?<br>
 감각이나 방대한 지식에서 나오는 것일까요?<br><br>
 
@@ -27,13 +30,13 @@ bookData.pages.forEach(p => {
 <blockquote>
 예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 먼저 넓히라고... 그때 그 말에 얼굴이 붉어지며 참 부끄러웠던 기억이 납니다.
 </blockquote>`;
-    }
+  }
 });
 
 // If not found, log it so I can insert it newly
 if (!found) {
-    console.log("NOT FOUND: '다정한 디자인'");
+  console.log("NOT FOUND: '다정한 디자인'");
 }
 
 const outCode = `var bookData = ${JSON.stringify(bookData, null, 4)};\n\nif (typeof module !== 'undefined' && module.exports) {\n    module.exports = bookData;\n}\n`;
-fs.writeFileSync('book_data.js', outCode, 'utf8');
+fs.writeFileSync("book_data.js", outCode, "utf8");

@@ -1,31 +1,34 @@
-const fs = require('fs');
+const fs = require("fs");
 
-let code = fs.readFileSync('book_data.js', 'utf8');
-let dataCode = code.replace(/const bookData =|var bookData =/g, 'global.bookData =');
+let code = fs.readFileSync("book_data.js", "utf8");
+let dataCode = code.replace(
+  /const bookData =|var bookData =/g,
+  "global.bookData =",
+);
 eval(dataCode);
 
 // 1. Terminology unification
-bookData.pages.forEach(p => {
-    if (p.title) {
-        p.title = p.title.replace(/공유 결합/g, '공유결합');
-        p.title = p.title.replace(/JHub/gi, 'J-Hub');
-        p.title = p.title.replace(/J - Hub/gi, 'J-Hub');
-    }
-    if (p.text) {
-        p.text = p.text.replace(/공유 결합/g, '공유결합');
-        p.text = p.text.replace(/JHub/gi, 'J-Hub');
-        p.text = p.text.replace(/J - Hub/gi, 'J-Hub');
-        
-        // Minor formatting: remove multiple spaces
-        // p.text = p.text.replace(/ {2,}/g, ' '); 
-    }
+bookData.pages.forEach((p) => {
+  if (p.title) {
+    p.title = p.title.replace(/공유 결합/g, "공유결합");
+    p.title = p.title.replace(/JHub/gi, "J-Hub");
+    p.title = p.title.replace(/J - Hub/gi, "J-Hub");
+  }
+  if (p.text) {
+    p.text = p.text.replace(/공유 결합/g, "공유결합");
+    p.text = p.text.replace(/JHub/gi, "J-Hub");
+    p.text = p.text.replace(/J - Hub/gi, "J-Hub");
+
+    // Minor formatting: remove multiple spaces
+    // p.text = p.text.replace(/ {2,}/g, ' ');
+  }
 });
 
 // 3. Expand Master Prompts
-bookData.pages.forEach(p => {
-    if (p.title === "부록 C. 생각을 명확히 하는 법 (마스터 프롬프트)") {
-        if (!p.text.includes("4. [형태와 매스(Mass) 최적화 프롬프트]")) {
-            p.text += `\n\n<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #1d1d1f; border-bottom: 2px solid #0066cc; padding-bottom: 8px;">4. [형태와 매스(Mass) 최적화 프롬프트]</h4>
+bookData.pages.forEach((p) => {
+  if (p.title === "부록 C. 생각을 명확히 하는 법 (마스터 프롬프트)") {
+    if (!p.text.includes("4. [형태와 매스(Mass) 최적화 프롬프트]")) {
+      p.text += `\n\n<h4 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #1d1d1f; border-bottom: 2px solid #0066cc; padding-bottom: 8px;">4. [형태와 매스(Mass) 최적화 프롬프트]</h4>
 <p style="margin-bottom: 24px;">주변의 도시 맥락과 일조권, 사선 제한 등의 법적 한계선을 입력하여 최적의 건축적 볼륨을 찾아낼 때 사용합니다.</p>
 <div style="margin-bottom: 32px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; font-family: monospace; font-size: 14px; line-height: 1.6; color: #333; overflow-x: auto;">
 <strong>[입력창]</strong><br>
@@ -55,31 +58,30 @@ bookData.pages.forEach(p => {
 서향 빛을 차단하기 위한 루버(Louver) 디자인 아이디어와,<br>
 단지 내 미세먼지를 저감하고 바람길을 유도할 수 있는 조경/식재 배치 전략을 제시해 줘."
 </div>`;
-        }
     }
+  }
 });
 
 // Write updated data
 const outCode = `var bookData = ${JSON.stringify(bookData, null, 4)};\n\nif (typeof module !== 'undefined' && module.exports) {\n    module.exports = bookData;\n}\n`;
-fs.writeFileSync('book_data.js', outCode, 'utf8');
+fs.writeFileSync("book_data.js", outCode, "utf8");
 
 // 2. Check images referenced in text
 const imageRegex = /!\[.*?\]\((.*?)\)/g;
 let imagesFound = [];
-bookData.pages.forEach(p => {
-    if (p.text) {
-        let match;
-        while ((match = imageRegex.exec(p.text)) !== null) {
-            imagesFound.push(match[1]);
-        }
+bookData.pages.forEach((p) => {
+  if (p.text) {
+    let match;
+    while ((match = imageRegex.exec(p.text)) !== null) {
+      imagesFound.push(match[1]);
     }
+  }
 });
 console.log("Referenced Markdown Images:");
-imagesFound.forEach(img => {
-    if (!fs.existsSync(img)) {
-        console.log(`MISSING: ${img}`);
-    } else {
-        console.log(`EXISTS: ${img}`);
-    }
+imagesFound.forEach((img) => {
+  if (!fs.existsSync(img)) {
+    console.log(`MISSING: ${img}`);
+  } else {
+    console.log(`EXISTS: ${img}`);
+  }
 });
-

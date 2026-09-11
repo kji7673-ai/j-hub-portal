@@ -1,12 +1,15 @@
-const fs = require('fs');
+const fs = require("fs");
 
-let code = fs.readFileSync('book_data.js', 'utf8');
-let dataCode = code.replace(/const bookData =|var bookData =/g, 'global.bookData =');
+let code = fs.readFileSync("book_data.js", "utf8");
+let dataCode = code.replace(
+  /const bookData =|var bookData =/g,
+  "global.bookData =",
+);
 eval(dataCode);
 
-bookData.pages.forEach(p => {
-    if (p.title === '질문의 확장: "그렇다면 상대는 어떤가?"') {
-        p.text = `<p style="margin-bottom: 24px;">이해관계가 얽히고설킨 흙먼지 날리는 현장에서, 중심을 잡고 공유결합을 이끌어낼 '조율자'로서의 기준을 세웠습니다.</p>
+bookData.pages.forEach((p) => {
+  if (p.title === '질문의 확장: "그렇다면 상대는 어떤가?"') {
+    p.text = `<p style="margin-bottom: 24px;">이해관계가 얽히고설킨 흙먼지 날리는 현장에서, 중심을 잡고 공유결합을 이끌어낼 '조율자'로서의 기준을 세웠습니다.</p>
 
 <p style="margin-bottom: 24px;">→ 그렇다면 다음 질문은 자연스럽게 이어집니다.</p>
 
@@ -26,9 +29,8 @@ bookData.pages.forEach(p => {
 <p style="margin-bottom: 24px;">이 얼마나 멋진 태도입니까? 상대의 언어가 거칠든 곱든, 뾰족하든 투박하든, 조율자인 제가 그것을 둥글게 잘 담아내기만 하면 되는 것이었습니다.</p>
 
 <p>그들의 언어를 둥글게 이해하고, 거친 생각들조차 온전히 그릇에 담아 귀중한 존재로 껴안는 것. 그것이 바로 상대를 이해하는 진정한 방식이며, 현장을 향한 공유결합의 두 번째 발걸음입니다.</p>`;
-    }
+  }
 });
 
 const outCode = `var bookData = ${JSON.stringify(bookData, null, 4)};\n\nif (typeof module !== 'undefined' && module.exports) {\n    module.exports = bookData;\n}\n`;
-fs.writeFileSync('book_data.js', outCode, 'utf8');
-
+fs.writeFileSync("book_data.js", outCode, "utf8");

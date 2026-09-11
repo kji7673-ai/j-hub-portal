@@ -1,0 +1,536 @@
+[
+  {
+    "index": 0,
+    "title": "도면 위에 머무는 시간",
+    "image_name": "essay_0_도면_위에_머무는_시간",
+    "prompt": "Title: 도면 위에 머무는 시간. Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 2,
+    "title": "프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기",
+    "image_name": "essay_2_프롤로그__완벽한_시스템이_",
+    "prompt": "Title: 프롤로그: 완벽한 시스템이 아닌, 불완전한 쟁이의 생존기. Context: 안녕하세요. 도면 위에서, 그리고 거친 현장에서 26년째 구르고 있는 평범한 건축 쟁이입니다.  처음 이 기록을 엮기로 마음먹었을 때, 참 많은 망설임이 있었습니다. 시중에는 이미 AI와 혁신을 다루는 훌륭한 전문가들의 책이 차고 넘치기 때문입니다. 하지만 용기를 내어... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 3,
+    "title": "1장. 우리는 왜 설계하지 못하는가? (인지적 과부하의 시대)",
+    "image_name": "essay_3_1장__우리는_왜_설계하지_",
+    "prompt": "Title: 1장. 우리는 왜 설계하지 못하는가? (인지적 과부하의 시대). Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 5,
+    "title": "[통찰] 기획서는 곧 건축가의 얼굴이다",
+    "image_name": "essay_5__통찰__기획서는_곧_건축가",
+    "prompt": "Title: [통찰] 기획서는 곧 건축가의 얼굴이다. Context: 수백억 원의 자산이 걸린 테이블 앞에서, 얕은 미소나 호감은 아무런 힘을 쓰지 못했다. 그곳에서 나를 지켜주는 유일한 무기는 굳건한 신뢰와 한 치의 오차도 없는 데이터뿐이었다.  밤을 새워 출력한 단 한 장의 기획서, 그것은 클라이언트의 눈에 비친 '건축가 김중일'의... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 10,
+    "title": "3장. AI라는 환각의 숲을 지나다 (기술의 배신과 레드팀)",
+    "image_name": "essay_10_3장__AI라는_환각의_숲을",
+    "prompt": "Title: 3장. AI라는 환각의 숲을 지나다 (기술의 배신과 레드팀). Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 16,
+    "title": "5장. 철근 누락과 4번의 QC: AI는 왜 '객관적 거울'이어야 하는가",
+    "image_name": "essay_16_5장__철근_누락과_4번의_",
+    "prompt": "Title: 5장. 철근 누락과 4번의 QC: AI는 왜 '객관적 거울'이어야 하는가. Context: 2023년 봄, 대한민국을 충격에 빠뜨린 인천 검단신도시 아파트 지하 주차장 붕괴 사고가 발생했다. 기둥이 하중을 버티게 해주는 '전단보강근(기둥이 천장판을 뚫고 나가는 것을 막아주는 '인대' 역할의 핵심 철근)'이 설계와 시공 전 과정에서 누락되었고, 콘크리트는 설계... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 17,
+    "title": "막간극(Interlude). [AI의 시선] 나는 어떻게 이 고집불통 건축가에게 길들여졌는가",
+    "image_name": "essay_17_막간극_Interlude__",
+    "prompt": "Title: 막간극(Interlude). [AI의 시선] 나는 어떻게 이 고집불통 건축가에게 길들여졌는가. Context: *(이 장은 아키 시냅스의 구축을 함께한 AI 에이전트의 1인칭 시점으로 재구성된 기록이다.)*  [첫 만남, 그리고 황당한 요구] 처음 이 건축가(CEO)를 만났을 때, 내 알고리즘은 가벼운 오류를 일으킬 뻔했다. 그는 코딩의 '코'자도 모르는 전형적인 문과형, 예술... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 18,
+    "title": "6장. 아키 시냅스(Archisynapse): 반론과 연결의 신경망",
+    "image_name": "essay_18_6장__아키_시냅스_Arch",
+    "prompt": "Title: 6장. 아키 시냅스(Archisynapse): 반론과 연결의 신경망. Context: [토요일 밤의 레드팀, 그리고 통제권의 역설]  진양 허브(J-Hub)의 프로토타입을 테스트하던 어느 토요일 밤이었다. 현장을 둘러보던 중 갑자기 머릿속에 기막힌 동선 배치 아이디어가 떠올랐다. 당장 모바일로 접속해 서버에 저장된 메인 도면 데이터를 끌어와 시뮬레이션을... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 19,
+    "title": "7장. 통찰력을 시스템화하다 (J-Hub 프로젝트)",
+    "image_name": "essay_19_7장__통찰력을_시스템화하다",
+    "prompt": "Title: 7장. 통찰력을 시스템화하다 (J-Hub 프로젝트). Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 36,
+    "title": "[막간] 재개발의 최전선: 욕망의 용광로에서 건축가는 무슨 생각을 하는가?",
+    "image_name": "essay_36__막간__재개발의_최전선__",
+    "prompt": "Title: [막간] 재개발의 최전선: 욕망의 용광로에서 건축가는 무슨 생각을 하는가?. Context: 대한민국에서 '재개발/재건축'이라는 단어는 단순한 건축 행위를 넘어선다. 그것은 수천 명의 조합원, 수백억 원의 자산, 그리고 평생의 보금자리를 향한 다양한 삶의 기대와 현실이 교차하는 복잡한 무대다. 일반 대중의 눈에 비친 건축가는 그저 예쁜 조감도를 그리는 사람일지... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 37,
+    "title": "8장. [Case 1] 정비 사업 통합 보고서 마법사: 신뢰를 증명하는 숫자의 위력",
+    "image_name": "essay_37_8장___Case_1__정비",
+    "prompt": "Title: 8장. [Case 1] 정비 사업 통합 보고서 마법사: 신뢰를 증명하는 숫자의 위력. Context: [종이 한 장짜리 타당성 검토의 비애]  과거 정비사업 업계에서 '사업 타당성 검토 보고서'란 참으로 옹색한 물건이었다. 수백억, 수천억 원의 자산이 오가는 사업의 운명을 결정짓는 문서임에도 불구하고, 대다수의 설계사무소가 들고 가는 보고서는 고작 종이 한 장짜리 '설... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 38,
+    "title": "[코멘터리] 숫자가 철학이 되는 순간",
+    "image_name": "essay_38__코멘터리__숫자가_철학이_",
+    "prompt": "Title: [코멘터리] 숫자가 철학이 되는 순간. Context: 다음 장부터 이어지는 12장의 는 과거라면 2명의 베테랑이 2주간 밤을 새워야 했을 분량이다. 진양의 J-Hub는 이 방대한 116필지 전수조사와 3가지 사업 방식 비교 분석을 단 48시간 만에 뽑아냈다.  \"이거 기계가 대충 찍어낸 가짜 숫자 아냐?\"라던 디벨로퍼의... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 54,
+    "title": "💡 [Universal Insight] 당신의 업계에도 '신통기획' 같은 딜레마가 있는가?",
+    "image_name": "essay_54____Universal_In",
+    "prompt": "Title: 💡 [Universal Insight] 당신의 업계에도 '신통기획' 같은 딜레마가 있는가?. Context: 우리가 건축 현장에서 겪은 '무료 기획설계의 딜레마'는 비단 건축 업계만의 이야기가 아니다. 마케팅, 컨설팅, IT 개발, 디자인 등 모든 지식 서비스 산업에는 고객이 '빠르고 저렴한(또는 무료인) 초기 시안'을 요구하는 병목 구간이 존재한다. 이 초기 결과물이 훗날의... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 55,
+    "title": "💡 [실무 적용 팁] 타당성 검토 프롬프트 구조화",
+    "image_name": "essay_55____실무_적용_팁__타당성",
+    "prompt": "Title: 💡 [실무 적용 팁] 타당성 검토 프롬프트 구조화. Context: AI에게 건축 법규나 사업성을 검토시킬 때는 '역할 부여 → 제약 조건 → 출력 형식'의 3단계를 명확히 하세요.  - **역할:** \"당신은 20년 차 대한민국 건축사입니다.\" - **조건:** \"건축법 제00조에 의거하여 일조권 사선을 우선 검토하세요.\" - **형... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 56,
+    "title": "9장. [Case 2] 진양 교육 플랫폼 (J-Edu): 회사를 보물창고로 만들다",
+    "image_name": "essay_56_9장___Case_2__진양",
+    "prompt": "Title: 9장. [Case 2] 진양 교육 플랫폼 (J-Edu): 회사를 보물창고로 만들다. Context: [철이 철을 날카롭게 하듯, 사람이 조직을 빛나게 한다]  3년 전 겨울, 회사에서 가장 아끼던 5년 차 대리가 퇴사 면담을 요청해 왔다. 가슴이 철렁 내려앉았다. 그가 회사를 떠나는 것은 단순히 젊은 인력 한 명이 나가는 것이 아니었다. 수없이 야근하며 겪은 까다로운... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 62,
+    "title": "💡 [실무 적용 팁] 지식 베이스(RAG) 구축 노하우",
+    "image_name": "essay_62____실무_적용_팁__지식_",
+    "prompt": "Title: 💡 [실무 적용 팁] 지식 베이스(RAG) 구축 노하우. Context: 회사 내부의 가이드라인이나 매뉴얼을 AI에 연결할 때는 단순히 문서를 통째로 넣는 것보다 '조항별로 쪼개어 메타데이터를 태깅'하는 것이 좋습니다.  예: `[태그: 심의, 서울시, 2024년]`  이렇게 구조화된 지식 베이스를 구축하면 AI가 훨씬 더 정확하고 일관된... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 63,
+    "title": "10장. [Case 3] 궁극의 디지털 관제탑, '진양 허브(J-Hub)'와 모바일 저널",
+    "image_name": "essay_63_10장___Case_3__궁",
+    "prompt": "Title: 10장. [Case 3] 궁극의 디지털 관제탑, '진양 허브(J-Hub)'와 모바일 저널. Context: [\"소통이 힘이다\": 30명을 넘어선 조직의 딜레마]  2016년 내가 본부장으로 처음 이 회사에 합류했을 때, 회사의 직원은 20~30명 남짓이었다. 그때는 직원 한 명 한 명의 성향부터 지금 당장 모니터에 어떤 도면을 띄워놓고 있는지까지 모든 것을 손바닥 보듯 파악... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 66,
+    "title": "[막간] 반란과 타협의 시간",
+    "image_name": "essay_66__막간__반란과_타협의_시간",
+    "prompt": "Title: [막간] 반란과 타협의 시간. Context: \"주판알을 믿지, 기계를 어떻게 믿습니까?\" 시스템의 뼈대가 갖춰졌다고 해서 현장의 혁신이 곧바로 일어난 것은 아니었다. 수십 년간 도면과 주판알을 튕기며 회사의 기틀을 다져온 시니어 임원들의 우려와 반발은 상상을 초월했다. \"대표님, AI가 계산한 사선을 맹신했다가... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 67,
+    "title": "💡 [실무 적용 팁] 회의록 자동화와 노이즈 필터링",
+    "image_name": "essay_67____실무_적용_팁__회의록",
+    "prompt": "Title: 💡 [실무 적용 팁] 회의록 자동화와 노이즈 필터링. Context: 현장 회의나 발주처 미팅을 녹음하여 STT(음성 텍스트 변환)로 변환할 때, 잡담이나 무의미한 대화가 섞이기 마련입니다.  이때 J-Journal과 같은 플랫폼에서는 **\"건축적 결론, 설계 변경 사항, 책임자, 기한\"**만 추출하라는 프롬프트를 함께 주입하면, 수십... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 68,
+    "title": "[통찰] AI와 대화하는 법: 진흙을 빚어내듯",
+    "image_name": "essay_68__통찰__AI와_대화하는_법",
+    "prompt": "Title: [통찰] AI와 대화하는 법: 진흙을 빚어내듯. Context: 프로젝트를 진행하며 나는 아주 묘한 깨달음을 얻었다. AI와는 말이 분명히 통하는데, 또 지독하게 통하지 않을 때가 있다. 기계와 대화하기 위해서는 상상 이상의 스킬이 필요했다.  설계하는 사람들은 평면도를 볼 때, 단면과 입면, 그리고 보이지 않는 건축 토목 구조까지... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 69,
+    "title": "11장. 엔터프라이즈 엘레강스 (Enterprise Elegance)",
+    "image_name": "essay_69_11장__엔터프라이즈_엘레강",
+    "prompt": "Title: 11장. 엔터프라이즈 엘레강스 (Enterprise Elegance). Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 77,
+    "title": "12장. 5060 경영진을 설득한 단 하나의 무기, '아름다움'",
+    "image_name": "essay_77_12장__5060_경영진을_",
+    "prompt": "Title: 12장. 5060 경영진을 설득한 단 하나의 무기, '아름다움'. Context: [훌륭한 기술은 왜 버림받는가] 프로젝트 중반, 나는 진양 허브(J-Hub)의 첫 프로토타입을 들고 임원진 회의실로 들어섰다. 우리 회사의 심장부를 책임지는 5060 시니어 경영진들이 긴장된 표정으로 스크린을 주시하고 있었다. 우리는 아키 시냅스(Archisynapse... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 78,
+    "title": "13장. 사진과 여백, 그리고 보이지 않는 기술",
+    "image_name": "essay_78_13장__사진과_여백__그리",
+    "prompt": "Title: 13장. 사진과 여백, 그리고 보이지 않는 기술. Context: [미술관을 거니는 경험] 진양 허브의 화면을 여는 것은 잘 설계된 갤러리에 들어서는 것과 같다. 첫 화면은 깊이 있는 여백과 함께, 해당 사업지(Site)를 조망하는 한 장의 강렬한 대지 이미지로 시작된다. 마치 핀조명이 떨어지는 전시장의 작품처럼, 사용자의 시선은 가... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 79,
+    "title": "[막간] 결국 시스템은 회사의 철학을 닮는다",
+    "image_name": "essay_79__막간__결국_시스템은_회사",
+    "prompt": "Title: [막간] 결국 시스템은 회사의 철학을 닮는다. Context: 10일간의 치열한 사투 끝에 마침내 시스템이 돌아가기 시작했다.   그런데 모니터에 떠오른 그 완성된 시스템을 가만히 들여다보니 묘한 기시감이 들었다. 화면의 레이아웃, 데이터를 처리하고 분류하는 방식, 심지어 오류를 걸러내는 타이밍까지... 그것은 단순히 코딩된 프로... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 80,
+    "title": "[막간] 수정의 딜레마: 완벽해 보일수록 위험하다",
+    "image_name": "essay_80__막간__수정의_딜레마__완",
+    "prompt": "Title: [막간] 수정의 딜레마: 완벽해 보일수록 위험하다. Context: [수정의 딜레마: 완벽해 보일수록 위험하다]  AI를 업무에 도입하며 내가 뼈저리게 느낀 가장 큰 함정은 바로 '포장된 완벽함'이다.  처음 AI가 내놓은 기획서나 검토 보고서를 보았을 때, 나는 그 유려한 문장과 그럴싸한 구성에 감탄했다.  마치 최고의 엘리트 비서가... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 81,
+    "title": "액션 1: 사람의 개입을 완전히 배제한 '데이터 파이프라인' 구축",
+    "image_name": "essay_81_액션_1__사람의_개입을_완",
+    "prompt": "Title: 액션 1: 사람의 개입을 완전히 배제한 '데이터 파이프라인' 구축. Context: 단순한 엑셀 정리나 수동적인 문서 취합의 시대는 끝났습니다. 기계가 스스로 지식을 물어오고 가공하는 **'자동화된 사내 포털(J-Hub)'**을 구축하여, 인간의 단순 노동 개입을 완전히 배제해야 합니다. 무거운 상용 서버를 도입할 필요도 없습니다. 크론(Cron) 스... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 82,
+    "title": "액션 2: 오류를 맹신하지 않는 '레드팀(Red Team)' 감찰 체계",
+    "image_name": "essay_82_액션_2__오류를_맹신하지_",
+    "prompt": "Title: 액션 2: 오류를 맹신하지 않는 '레드팀(Red Team)' 감찰 체계. Context: AI가 도출한 조화로운 법적 검토나 공간 뼈대를 무비판적으로 수용하는 것은 건축가로서의 직무 유기입니다. 기계가 뱉어낸 '효율성'이라는 달콤한 독사과를 검증하기 위해, 조직 내에서 가장 비판적이고 깐깐한 시각을 가진 **'레드팀(Red Team, 조직의 맹점이나 오류를... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 83,
+    "title": "액션 3: 파편화된 실패를 영구적 자산으로, 'J-Edu 숏폼'",
+    "image_name": "essay_83_액션_3__파편화된_실패를_",
+    "prompt": "Title: 액션 3: 파편화된 실패를 영구적 자산으로, 'J-Edu 숏폼'. Context: 에이스 직원 한 명의 퇴사로 그가 겪었던 뼈아픈 인허가 실패와 땀방울이 증발해선 안 됩니다. 방대하고 지루한 매뉴얼 대신, 누구나 3분 만에 읽고 현장에 적용할 수 있는 **'숏폼(Short-form) 교육 플랫폼(J-Edu)'**을 통해 현장의 암묵지(매뉴얼이나 텍스... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 84,
+    "title": "1장. 내가 생각하는 디자인 1: 존중과 순응",
+    "image_name": "essay_84_1장__내가_생각하는_디자인",
+    "prompt": "Title: 1장. 내가 생각하는 디자인 1: 존중과 순응. Context: 내가 생각하는 디자인은 거창한 것이 아니다. 사물과 사람을 존중하고, 본능을 이해하며, 그 사이의 관계를 엮어내는 일이다.   **1. 단순화 시킨다: 영역성의 존중** 개체의 특성을 인정하고 그 개체 간에 질서를 부여하여 통합화한다. 단, 각 개체의 영역성을 굳건히... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 85,
+    "title": "2장. 내가 생각하는 디자인 2: 포용과 사이 공간",
+    "image_name": "essay_85_2장__내가_생각하는_디자인",
+    "prompt": "Title: 2장. 내가 생각하는 디자인 2: 포용과 사이 공간. Context: **3. 바탕의 포용력** 동등한 것들을 무질서하게 배치하여 변화감을 주고 싶다면, 그 바탕이 변화를 수용할 수 있을 만큼 포용력이 있어야 한다. 바탕을 단순화하고 색을 차분하게 눌러주어야 한다. 요즘 건축물 중에 창문의 위치가 수직/수평을 벗어나 자유롭게 흩어지거나... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 86,
+    "title": "3장. 시지프스의 언덕과 인간다움의 회복",
+    "image_name": "essay_86_3장__시지프스의_언덕과_인",
+    "prompt": "Title: 3장. 시지프스의 언덕과 인간다움의 회복. Context: 우리가 다시 한번 생각해보면, 지금까지 AI를 통한 효율과 생산성 향상, 그리고 우리가 내는 보고서와 도면 자체가 우리의 존엄을 지킨다는 얘기를 했었는데, 이건 목표를 향해 끝없이 달려라 라고 하는 것 같습니다.  제가 드리고 싶은 것은, 누군가는 뻔한 결론을 알지만... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 87,
+    "title": "3부 서문",
+    "image_name": "essay_87_3부_서문",
+    "prompt": "Title: 3부 서문. Context: \"이 기록들의 톤이 일관되지 않은 이유는, 내가 설계사에서 경영자로, 다시 철학자로 변해가는 과정 자체가 일관되지 않았기 때문입니다. 그 혼란과 초현실성을 지우는 것은 이 여정의 가장 중요한 부분을 제거하는 것입니다. AI와 함께 일하게 된 이유도, 결국 이 혼란 속... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 88,
+    "title": "선택(Choice)이 곧 건축이다",
+    "image_name": "essay_88_선택_Choice_이_곧_건",
+    "prompt": "Title: 선택(Choice)이 곧 건축이다. Context: 토요일 이른 아침, 텅 빈 현장으로 출근하는 차 안에서 나는 문득 거대한 질문과 마주했다.  그동안 우리는 J-Hub를 통해 데이터를 장악하고, 수백억짜리 타당성 검토를 순식간에 끝내며, 회사를 파멸시킬 법적 리스크를 단단하게 통제하는 시스템을 구축했다. '관리'와 '... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 89,
+    "title": "기술이 지워진 자리에 남은 것 (비워냄의 미학)",
+    "image_name": "essay_89_기술이_지워진_자리에_남은_",
+    "prompt": "Title: 기술이 지워진 자리에 남은 것 (비워냄의 미학). Context: 시스템의 껍데기를 부수고 갤러리를 짓듯, 우리는 UI에서도 건축을 하듯 '비워냄의 미학'을 추구했다. 칙칙한 엑셀 뷰어를 걷어내고, 복잡한 기계의 작동음(파라미터)을 무대 뒤로 완전히 숨겼다. 화면에는 오직 결과물과 도면만이 핀조명을 받듯 고요하게 떠올랐다. 복잡함을... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 90,
+    "title": "물방울, 그리고 시지프스의 언덕",
+    "image_name": "essay_90_물방울__그리고_시지프스의_",
+    "prompt": "Title: 물방울, 그리고 시지프스의 언덕. Context: 한 방울의 물방울 안에 내 삶이 담깁니다.나를 감싸고 있는 나 자신이 그 둥근 표면 위에 투영되지요.그 담겨진 삶의 무게 때문일까요.물방울은 눈물마냥 한 방울, 한 방울 떨어져 내립니다.떨어지는 방울이 바닥에 부딪혀 깨어질 때면,지금까지 지탱해 온 삶이 한낱 환상이었던... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 95,
+    "title": "03. 용역원실에서 '노동 쉼터'로",
+    "image_name": "essay_95_03__용역원실에서__노동_",
+    "prompt": "Title: 03. 용역원실에서 '노동 쉼터'로. Context: 지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.올해 제 분야는 '경관'이... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 102,
+    "title": "07. 뇌물",
+    "image_name": "essay_102_07__뇌물",
+    "prompt": "Title: 07. 뇌물. Context: ㄴ을 시계방향으로 180 돌리면괴물이 된다일단, 받으면 시간의 흐름에 곧괴물이 된다괴물이 될것들을조심하자... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 109,
+    "title": "11. 가장 작은 생존 신고, \"힘내자\"",
+    "image_name": "essay_109_11__가장_작은_생존_신고",
+    "prompt": "Title: 11. 가장 작은 생존 신고, \"힘내자\". Context: 가끔 힘들 때가 있을 텐데, 제 스스로에게 하는 생존 신고를 하나 알려드릴까 한다. '힘내자'란 말이 처음 사회생활을 할 때는 나에게 하는 격려의 말로 시작되었다가, 어느 순간에는 '그래 한번 해보자'라는 응원의 말로, 지금에 와서는 '지금까지 고생했다, 수고했다'는... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 110,
+    "title": "12. 맥락 속의 완벽함 (Harmony, Not Perfection)",
+    "image_name": "essay_110_12__맥락_속의_완벽함__",
+    "prompt": "Title: 12. 맥락 속의 완벽함 (Harmony, Not Perfection). Context: 우리가 CG 업체에서 받은 이미지가 마음에 들지 않는 이유를 생각해 봅시다. 좋은 참고 이미지를 찾아 \"이 분위기로 만들어 달라\"고 요청해도 항상 성공하지 못하는 이유는, 건축의 아름다움이 형태나 색감만으로는 완성되지 않기 때문이다.  우리가 한국 미를 말할 때 \"자연... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 111,
+    "title": "13. 방향성과 중심성",
+    "image_name": "essay_111_13__방향성과_중심성",
+    "prompt": "Title: 13. 방향성과 중심성. Context: \"하나가 다른 하나의 배경이 되어주지 못하고 서로 충돌할 때는, 명확한 방향성을 만들거나 확실한 중심을 세워야 한다.\"  모든 요소가 주인공이 되려 하면 디자인은 소란스러워집니다. 안경, 귀걸이, 입술 화장이 모두 요란하면 그 스타일은 저급해 보이기 십상이다. 주변 맥... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 112,
+    "title": "14. 스케일과 대비",
+    "image_name": "essay_112_14__스케일과_대비",
+    "prompt": "Title: 14. 스케일과 대비. Context: \"두 개의 방향성은 큰 것에 있고, 우리의 눈을 사로잡는 힘은 작은 것에 있다.\"  어설픈 중간 크기는 지루함을 낳다. 큰 것은 더 과감하게 키워 전체적인 분위기와 방향을 이끌어가게 하고, 작은 것은 더 작고 정교하게 만들어 시선을 사로잡는 포인트로 삼아야 한다. 매력... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 113,
+    "title": "15. 단순화와 포용력",
+    "image_name": "essay_113_15__단순화와_포용력",
+    "prompt": "Title: 15. 단순화와 포용력. Context: 어떤 개체를 존중하려면, 때로는 그것을 품어주는 넉넉한 바탕이 필요한다. \"악마는 프라다를 입는다\"는 말처럼, 세련된 프라다의 디자인은 평범함 속에 빛나는 비범함이다. 이 세련됨이 존재하려면 반드시 평범함이 곁에 있어야 한다.  재능이 많은 부하직원들이 능력을 마음껏... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 114,
+    "title": "16. 공유 결합: 지속 가능한 도시 디자인",
+    "image_name": "essay_114_16__공유_결합__지속_가",
+    "prompt": "Title: 16. 공유 결합: 지속 가능한 도시 디자인. Context: 지속가능한 건축의 원리는 \"공유 결합\"으로 설명할 수 있다. 도시 디자인에서 서로 다른 성격의 건물군을 묶어주는 것은 바로 \"길\"이다. 지속가능하다는 것은 서로를 안정시키는 관계 형성을 의미한다. 건축물도, 사람 간의 관계도 서로를 배려하고 존중할 때 더 큰 안정성을... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 115,
+    "title": "17. 다정함: 인격적 성숙이 곧 디자인이다",
+    "image_name": "essay_115_17__다정함__인격적_성숙",
+    "prompt": "Title: 17. 다정함: 인격적 성숙이 곧 디자인이다. Context: 디자인은 감각이나 방대한 지식에서 나오는 것일까요? 내가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.  타인에 대한 배려와 관심, 다정함이 있는 사람이라면 그것이 자연스레 공간에 묻어납니다. 건물을 청소하는 분, 택배 기사님, 기존 지역 주민, 그리고 바람... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 118,
+    "title": "19. 100년의 기억을 덮는다는 것의 무게",
+    "image_name": "essay_118_19__100년의_기억을_덮",
+    "prompt": "Title: 19. 100년의 기억을 덮는다는 것의 무게. Context: **100년의 삶을 지워버릴 수는 없었다**  어떤 프로젝트는 도면을 그리기 전에 가슴부터 묵직해질 때가 있다. 대전의 어느 정비사업장이 그랬다.   그 사업지 한가운데에는 100년의 역사를 품은 낡은 시장이 숨 쉬고 있었다. 거미줄처럼 얽힌 골목길, 매일 아침 좌판을... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 119,
+    "title": "20. 화려한 조감도 뒤에 가려진 씁쓸한 현실",
+    "image_name": "essay_119_20__화려한_조감도_뒤에_",
+    "prompt": "Title: 20. 화려한 조감도 뒤에 가려진 씁쓸한 현실. Context: **책임지지 않는 도면과 수억 원의 렌더링**  최근 서울의 정비사업에서 설계자를 선정하는 방식을 지켜보고 있으면, 오랜 시간 도면을 그려온 쟁이로서 입맛이 씁쓸해질 때가 많다.   통상적으로 설계자 선정은 '적격 심사'와 '설계 공모' 방식으로 나뉜다. 그런데 요즘... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 120,
+    "title": "21. 페이퍼 아키텍트의 불안과 진짜 설계의 무게",
+    "image_name": "essay_120_21__페이퍼_아키텍트의_불",
+    "prompt": "Title: 21. 페이퍼 아키텍트의 불안과 진짜 설계의 무게. Context: **반쪽짜리 경력자가 되어버린 7년 차의 비애**  종종 경력직 면접을 진행하다 보면 지원자들의 성향이 크게 세 가지 유형으로 나뉘는 것을 보게 된다.   첫 번째는 계획(디자인)과 실시설계를 두루 경험해 본 보기 드문 실력자들이다. 두 번째는 오직 실시설계 도면만 묵... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 121,
+    "title": "22. 현상설계를 진행하며",
+    "image_name": "essay_121_22__현상설계를_진행하며",
+    "prompt": "Title: 22. 현상설계를 진행하며. Context: 2009년 이전 해외 프로젝트만 하던 제가, 금융위기로 인해 한 번도 해보지 않은 아파트 정비사업 설계실장으로 입사하게 되었다. \"아파트를 해봤어야 알지?\"라는 조롱 속에서도 저를 버티게 한 것은 \"난 할 수 있다\"는 확신이었다. 자신의 한계를 미리 정하지 말고, 할... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 122,
+    "title": "23. 무제",
+    "image_name": "essay_122_23__무제",
+    "prompt": "Title: 23. 무제. Context: 결국 AI는 우리의 '생각'을 지배하거나 대체하는 것이 아니다. 우리가 어떻게 생각하는지를 가장 빠르게 실현해 주는 조화로운 도구일 뿐이다.  기계가 99%의 노동(수십 개의 대안 생성)을 대신해 줄 때, 건축가는 비로소 남겨진 1%의 '여백'에 오롯이 서게 된다. 수... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 123,
+    "title": "24. 논리와 감정 사이, 건축가의 '싫어요'",
+    "image_name": "essay_123_24__논리와_감정_사이__",
+    "prompt": "Title: 24. 논리와 감정 사이, 건축가의 '싫어요'. Context: \"이거냐, 저거냐.\"세상은 늘 선택을 요구합니다. 그 질문 앞에서 저는 속으로 \"싫어요\"라고 답하곤 합니다. 논리가 필요한 순간에 감정으로 버티고 서는 셈입니다.사업을 하시는 분들에게 건축설계란 논리와 숫자를 다루는 일로 보이겠지요.반면 실제로 그 공간에 머무는 거주자... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 124,
+    "title": "25. 마음을 짓는 일: 공동체 주택 설계",
+    "image_name": "essay_124_25__마음을_짓는_일__공",
+    "prompt": "Title: 25. 마음을 짓는 일: 공동체 주택 설계. Context: 교회에서 인연을 맺어온 형, 누나들의 공동체 주택을 설계하며 적어 내려간 상념입니다.50대에서 70대에 이르는 분들이 뜻을 모아 한 지붕 아래 집을 짓습니다.하지만 서로가 마음속 깊은 이야기를 충분히 나누지 못하면, 결국 서로 눈치를 보며 \"어? 원래 이거였나?\", \"... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 125,
+    "title": "26. 새벽의 방문객, 공존에 대하여",
+    "image_name": "essay_125_26__새벽의_방문객__공존",
+    "prompt": "Title: 26. 새벽의 방문객, 공존에 대하여. Context: 잠깐 쉬어 가는 저의 유치한 잡설입니다.새벽에 바퀴벌레 한 마리를 만났습니다.겁도 없이 제 머리를 더듬이로 툭툭 건드리더라고요.참 어이없고 황당한 상황이라 헛웃음이 나왔습니다.\"야 뭐냐. 손가락으로 툭 찍어 눌러버린다?\" 했더니,고놈의 바퀴벌레가 받아치는 듯했습니다.\"... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 128,
+    "title": "28. 사람을 이용할 때",
+    "image_name": "essay_128_28__사람을_이용할_때",
+    "prompt": "Title: 28. 사람을 이용할 때. Context: 가장 효과적인 방법은공포심이야그래서종교가 지옥을 만들었지~-로빈훗 영화 대사중에서: 권력을 잡기위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달한다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취한다.별것없는 땅에 선을하나 긋는다.처음엔 선은 선일뿐... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 131,
+    "title": "30. 우리가 이렇게 살아갑니다",
+    "image_name": "essay_131_30__우리가_이렇게_살아갑",
+    "prompt": "Title: 30. 우리가 이렇게 살아갑니다. Context: 차가운 콘크리트를사이에 두고 죄우 아래위로붙어있는 아파트최소의 이격거리가최대의 이격거리가 되어붙어있는 다세대 빌라우리가 살고있는 집들은 거의가공동주택입니다즉 함께하는 삶의 기본이 이미 되어있습니다하지만,우리는바라봄을 위한 떨어짐이 없기에보여지길 두려워 가리고 가립니다내... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 137,
+    "title": "33. 어제 만난 그 사람을...",
+    "image_name": "essay_137_33__어제_만난_그_사람을",
+    "prompt": "Title: 33. 어제 만난 그 사람을.... Context: 어제 만난 그 사람을 오늘 다시 만나게 되었습니다.그에게 난 생각을 읽는 사람의 고충과 거름종이 마법의 존재를 알게 되었지요.오늘은 그가 말하길 그곳 그들의 세상에는 말하는 나무가 있다고 합니다. 말한다는 것을 제외하고는 그곳의 나무는 이곳의 나무와 같다고 합니다.... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 144,
+    "title": "37. 혹시 다중 우주론이라고아세요?",
+    "image_name": "essay_144_37__혹시_다중_우주론이라",
+    "prompt": "Title: 37. 혹시 다중 우주론이라고아세요?. Context: 여러 갈래의 우주가 동시에 존재하고, 나와같은 사람이 다른 우주에 있다는 것이지요?근데 아무래도 제가 그 다중우주의 겹침을 경험한것 같아요.그저께 쇼파에 앉아있는데, 내 옆에서 나를 보는 또 다른 나를 보게 된거예요.뭐 ~ 일단, 이상하긴해도 인사는 했습니다. 안녕!혹... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 149,
+    "title": "40. 그렇게 하실 것 같습니다.",
+    "image_name": "essay_149_40__그렇게_하실_것_같습",
+    "prompt": "Title: 40. 그렇게 하실 것 같습니다.. Context: 계속 아파하실 것 같습니다그렇게계속 사랑하실 것 같습니다그렇게계속 살아가실 것 같습니다과연 그럴까당신은고정된 사람아닐 것 같습니다다르게살아가실 수 있습니다그렇게... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 156,
+    "title": "44. 필연의 신은 누구인가요",
+    "image_name": "essay_156_44__필연의_신은_누구인가",
+    "prompt": "Title: 44. 필연의 신은 누구인가요. Context: 세얼굴을 가진 운명의 신과 모든것을 잊을 수없는 복수의 신복수의 여신을 설명하는 모든것을 잊을 수 없다는 말...잊을 수없는 아픔을 매 순간 기억하는 것은 복수를 위한 잊을수없음인가? 결코 해소될수 없는 아픔을 말하는것인가?세상살다보면 잊을수없는 아픔을 잊으라하는 경우... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 159,
+    "title": "46. 난 약한 사람입니다",
+    "image_name": "essay_159_46__난_약한_사람입니다",
+    "prompt": "Title: 46. 난 약한 사람입니다. Context: 작은바람에도 부르르 떨고 휘청입니다덩치는 큰 놈이 지 몸 생각도 않고온 몸을 떨고있습니다시간따라 이 바람도 지나가길 기대하며그렇게 휘청입니다.어쩌면 좋습니까?작은 지지대라도있으면 이러지 않을까 싶지만작은 산들바람인데 태풍맞은것 처럼 휘청이니내가 이상한가봅니다조금만 더... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 164,
+    "title": "49. 생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라",
+    "image_name": "essay_164_49__생각의_힘__고정관념",
+    "prompt": "Title: 49. 생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라. Context: 생각은 누구나 한다. 하지만 이를 잘 해내기 위해서 지켜야 할 원칙이 있다.  첫째, 진짜 사실인지 확인하십시오. 설계를 하다 보면, 내가 설정한 기준이나 아이디어에 대해 끊임없이 의심해 볼 필요가 있다. 내가 만든 디자인이 정말 좋은 것인지, 단순히 내 생각일 뿐인지... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 165,
+    "title": "50. 만들고 있는 것인가, 만들어져 가는 것인가",
+    "image_name": "essay_165_50__만들고_있는_것인가_",
+    "prompt": "Title: 50. 만들고 있는 것인가, 만들어져 가는 것인가. Context: 우리는 설계안이나 우리의 삶, 또는 인간관계에 있어서 주도적으로 만들고 있는 것일까요? 아니면 만들어져 가는 것일까요?  요즘 취미로 무언가를 만들면서 느끼는 점은, 기본적인 생각과 의도는 처음 가지고 시작하지만 그 결과물에 있어서는 '원래 있어야 할 모습'에 맞게 자... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 166,
+    "title": "51. 흔들리는 오뚝이",
+    "image_name": "essay_166_51__흔들리는_오뚝이",
+    "prompt": "Title: 51. 흔들리는 오뚝이. Context: **유령과 오뚝이**  흔들릴지언정 넘어지지 않는, 재미 삼아 툭툭 건드려도 상관없는 중심 잡힌 오뚝이인 줄 알았다. 근데 이젠, 작은 입김에도 휘청이며 중심 잡기 위해 몹시도 흔들거리는, 아파서 흔들거리는 내가 되었다.  쉽게도 흔들리는구나.  하지만 내 속에 가라앉... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 167,
+    "title": "52. 구겨진 도면",
+    "image_name": "essay_167_52__구겨진_도면",
+    "prompt": "Title: 52. 구겨진 도면. Context: 이리저리 움직여 본다.바스락거리며움직임 따라간지럽히는 소리를 내고,손안에 거미줄 치듯 작은 상처로 말을 걸지만.여리디여린 너는원래 그랬던 것처럼,이리저리 희롱당한 것을 오히려 자랑하듯 수없이 반짝이는조각을 자랑하듯. 그렇게 그렇게 구겨져 결국엔 버려지는구나.... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 168,
+    "title": "53. 설계하는 일에서 좋은 점은",
+    "image_name": "essay_168_53__설계하는_일에서_좋은",
+    "prompt": "Title: 53. 설계하는 일에서 좋은 점은. Context: 생각의 부딪침이 많다는 것이다.부딪침깨짐이를 통한 생각의 확장언제나 조심해야할 것은생각의 부딪침을 자연스럽게 받아들여야한다는 것이다어떤 때는 통과되기도 또는 털어버릴 때도 있겠지만, 적어도 고정된 생각을 무기로 만들어 이리 저리 흔들어대는 행동은 하지말아야한다오늘도 부... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 173,
+    "title": "56. 선 긋기와 인생: 전체로 볼 때 직선이면 족하다",
+    "image_name": "essay_173_56__선_긋기와_인생__전",
+    "prompt": "Title: 56. 선 긋기와 인생: 전체로 볼 때 직선이면 족하다. Context: 인생의 목표에 너무 정조준하며 일직선으로만 가겠다고 살진 않았으면 좋겠다. 약간은 운을 바라며 설렁설렁, 흔들흔들 앞으로만 나아가면 된다.  일직선이라는 똑바름이 목표가 되다 보면 정말 엉뚱한 방향으로 가기도 한다.  선 긋기도 가까이서 보면 흔들흔들인데, 전체로 볼... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 174,
+    "title": "57. 사이 공간(Void)의 힘",
+    "image_name": "essay_174_57__사이_공간_Void_",
+    "prompt": "Title: 57. 사이 공간(Void)의 힘. Context: 디자인은 단순히 보기 좋은 것을 만드는 작업이 아닙니다. 관계를 설정하고, 에너지를 조율하는 고도의 심리전이다.  \"떨어져 생긴 사이 공간은, 역설적으로 떨어진 것을 연결하고 개체의 속성을 유지하며 전체를 하나로 보이게 한다.\" 인간의 뇌는 파편화된 정보를 통합하려는... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 175,
+    "title": "58. 무제",
+    "image_name": "essay_175_58__무제",
+    "prompt": "Title: 58. 무제. Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 191,
+    "title": "67. 졸음이 옵니다",
+    "image_name": "essay_191_67__졸음이_옵니다",
+    "prompt": "Title: 67. 졸음이 옵니다. Context: 이제 잘 시간입니다저는 누우면 바로 잠이듭니다깨어있는 이순간이나깨어난 시간에서지나온것들 속에 잊어야할것을온전히 잊었으면좋겠습니다어제의 기억으로 상대를대하지않았으면좋겠습니다오늘을 산다는것은어제의 눈으로 나의일상을 보지않는것이 중요합니다익숙해짐으로 스쳐지나갈 소중한것들이많... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 200,
+    "title": "72. 아름다운 왕비",
+    "image_name": "essay_200_72__아름다운_왕비",
+    "prompt": "Title: 72. 아름다운 왕비. Context: 거울아 거울아이 세상에서 누가 제일 예쁘니?'지금은 왕비님이지만몇 년뒤면 백설공주가 제일 예쁠겁니다'그 말을 듣는순간왕비는 마녀가 되었다왜 그랬을까?매일 진실의 거울을 보며자신의 존재성을 인정받았을 때그녀는 하루 하루를 만족하며 살려했던보통의 아름다운 여인이였을 것이다... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 203,
+    "title": "74. 모두들",
+    "image_name": "essay_203_74__모두들",
+    "prompt": "Title: 74. 모두들. Context: 자신이 좋아하는미끼를 문다상대가좋아하는 미끼는무얼까이런 생각으로상대를 대하는게맞겠지? 맞는가?... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 212,
+    "title": "79. 만지작거리고 바스락거린다.",
+    "image_name": "essay_212_79__만지작거리고_바스락거",
+    "prompt": "Title: 79. 만지작거리고 바스락거린다.. Context: 먹고난 포장지를만지작 거리면 바스락거리고,조금씩 만들어진 조각난 면들이 만나,날카로운 선들을 새롭게 만들어가고,만들어진 선들은 이전 것 위에 겹쳐진다.그렇게 만들어진 조각난 포장지, 조각보는손 안에서 뭉쳐졌다 펼쳐졌다하며더욱 더 많은 조각들로 나뉘어지고,난더이상 바스락... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 215,
+    "title": "81. 무얼 드리시겠어요?",
+    "image_name": "essay_215_81__무얼_드리시겠어요_",
+    "prompt": "Title: 81. 무얼 드리시겠어요?. Context: 어떤게 있지요?어린 딸 역할 놀이에 오늘은 손님이 되었다어제까지만해도 멍멍이였는데주문한 음식이 나왔다야~ 끝내준다... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 216,
+    "title": "82. 천천히",
+    "image_name": "essay_216_82__천천히",
+    "prompt": "Title: 82. 천천히. Context: 서울 올라와서 거의언덕위에 집을 얻어 살아왔다언덕위 집으로 올라가는 길이 가팔라천천히 간다천천히 가며밑에서의 먼지를 떨어낸다집으로 간다... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 217,
+    "title": "83. 북서향 집이다",
+    "image_name": "essay_217_83__북서향_집이다",
+    "prompt": "Title: 83. 북서향 집이다. Context: 이 집에서는 직접적인햇살을 느낄 시간은 짧지만,나름 좋기는아침에는 하얗게 밝아지고저녁에는 붉게 물들어가는순간들을 옆에서 바라볼 수 있다는 것이다그리고 풍경의밝아옴으로 아침을 맞이하는 시간 속이 공간에서는나의 움직임과 머릿 속 생각들로만날 느낄 수 있다는 것이... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 218,
+    "title": "84. 거짓이 진실을 만났을 때",
+    "image_name": "essay_218_84__거짓이_진실을_만났을",
+    "prompt": "Title: 84. 거짓이 진실을 만났을 때. Context: 자신이 거짓인지 모른 상태에서,진실을 만남으로 자신의 거짓됨을 알게된 경우자신이 거짓인지 알고 있는 상태에서,진실을 만남으로 자신의 거짓됨이 알려질 경우스스로는 알겠지. 자신이 살아 온 삶이후 한번 불어버리면 날아갈 만큼 가볍다는 것을... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 219,
+    "title": "85. 다닥 다닥 붙은 집들",
+    "image_name": "essay_219_85__다닥_다닥_붙은_집들",
+    "prompt": "Title: 85. 다닥 다닥 붙은 집들. Context: 바라 봄이 없는 집에서보여지기마저 두려워 가리고 가린다내 소리 남이 들을까남의 소리 차단하고거저 서로가 없는 듯 있는듯죽은척 살아가기를 바란다너무 가까이 살기에서로에게 멀어지기 위해 닫고 닫아상대와 내가 멀리 떨어진 것처럼 그렇게상대와 내가 없는 것처럼 그렇게혹시 옆에... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 220,
+    "title": "86. 작아진 남자",
+    "image_name": "essay_220_86__작아진_남자",
+    "prompt": "Title: 86. 작아진 남자. Context: 내가 언제부터 이렇게 작아졌는지는 모르겠다아마잠을 자고 일어날때마다내 몸이 조금씩 작아진것 같다집에서 돼지라 불릴만큼 식탐이 많은데,왜 작아지는지 이상한일이다아무튼,작아진 나는 다시 크기위해 먹고 또 먹고그리고 자고 또 자고 일어나면 작아져있다이런 미칠 노릇이다이건 병... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 221,
+    "title": "87. 난 슬픔과 기쁨에 반응이 둔한편이다",
+    "image_name": "essay_221_87__난_슬픔과_기쁨에_반",
+    "prompt": "Title: 87. 난 슬픔과 기쁨에 반응이 둔한편이다. Context: 어떤이는 침착하다라고 말하지만,사실 몸과 맘이 둔하여 슬픔과 기쁨에바로 반응하지 못하기때문이다둔하다는것은 어떤 순간에는 좋을때도 있으나,보통의 경우는 외톨이에 이상한 인간이 되기 싶다이미 지나간 것들이 슬픔과 후회로 찾아오기에다른이는 현재의 시간인데나에게는 한박자씩 늦... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 222,
+    "title": "88. 과거의 기억을 현재의 목적에 맞추어 이용한다",
+    "image_name": "essay_222_88__과거의_기억을_현재의",
+    "prompt": "Title: 88. 과거의 기억을 현재의 목적에 맞추어 이용한다. Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 223,
+    "title": "89. 난 지금 점프중이다",
+    "image_name": "essay_223_89__난_지금_점프중이다",
+    "prompt": "Title: 89. 난 지금 점프중이다. Context: 짧은 시간1차 미팅       D-1.5일결과물 제출 D - 6일좌우 눈 가리개하고보고 듣고 생각하는 것까지지금은 조절중이다난 지금 생각의 점프를시도한다현시점의 출밤점에서수 없이 많은 미래의 시점으로왔다갔다하고 있다... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 224,
+    "title": "90. 죽음이후에",
+    "image_name": "essay_224_90__죽음이후에",
+    "prompt": "Title: 90. 죽음이후에. Context: 난 신을 만나보겠지죄라는 틀속에서 심판자의 신을 볼지아니면 나를 나로서 봐주는신을 볼지과거에 종속된 미래의 천국일지아니면 새로운 시작의 천국일지사실 누가 알겠는가?각자의 믿음대로 이루어지기를 바라고또 바라지만사실 누가 알겠는가?그러니 믿음이 미신으로 또 맹신으로 되지는... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 229,
+    "title": "93. 화 내일 현상제출이다",
+    "image_name": "essay_229_93__화_내일_현상제출이다",
+    "prompt": "Title: 93. 화 내일 현상제출이다. Context: 근데 웃는다드디어미쳤다다음엔 솔 파도 쳐야지... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 232,
+    "title": "부록: J-Hub를 지어 올린 마스터 프롬프트 5선",
+    "image_name": "essay_232_부록__J_Hub를_지어_올",
+    "prompt": "Title: 부록: J-Hub를 지어 올린 마스터 프롬프트 5선. Context: 코드를 모르는 비개발자 경영자가 AI를 시스템 구축의 파트너로 삼기 위해 가장 중요한 것은 '프롬프트(지시문)'의 질이다. 화려한 미사여구보다, 마치 전문 직원에게 업무를 지시하듯 정확하고 건조하게 요구하는 것이 핵심이다.  아래는 실제로 진양엔지니어링의 J-Hub와... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 233,
+    "title": "[부록] J-Hub 실무 가이드 (Appendix)",
+    "image_name": "essay_233__부록__J_Hub_실무_가",
+    "prompt": "Title: [부록] J-Hub 실무 가이드 (Appendix). Context: ... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 234,
+    "title": "[부록] 자가 진단 체크리스트",
+    "image_name": "essay_234__부록__자가_진단_체크리스",
+    "prompt": "Title: [부록] 자가 진단 체크리스트. Context: 이 책의 철학을 건축사사무소뿐만 아니라 법률, 의료, 회계, 기획 등 모든 지식 서비스 조직에 적용하기 위한 5가지 핵심 체크리스트이다. 이 워크북을 통해 스스로 진단해 보라. 우리 조직은 AI의 블랙박스에 잡아먹히고 있는가, 아니면 AI를 지휘하고 있는가?... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 235,
+    "title": "QR코드: Y구역 전체 보고서 원문",
+    "image_name": "essay_235_QR코드__Y구역_전체_보고",
+    "prompt": "Title: QR코드: Y구역 전체 보고서 원문. Context: 스마트폰으로 스캔하여 전체 보고서를 확인하세요. (QR 코드 이미지 예정)... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 236,
+    "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+    "image_name": "essay_236_쟁이의_마음__두려움을_넘어",
+    "prompt": "Title: 쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유. Context: 아직까지도 저에겐 언제나처럼 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차한다. 신입도 마찬가지겠지요. 자신의 실력과 능력이 시... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 237,
+    "title": "마치는 글: 쟁이들에게 보내는 위로",
+    "image_name": "essay_237_마치는_글__쟁이들에게_보내",
+    "prompt": "Title: 마치는 글: 쟁이들에게 보내는 위로. Context: \"기계의 차가운 효율성 앞에서 두려움에 떨고 있는이 시대의 모든 '쟁이'들에게.기계의 완벽함을 통제하는 진정한 힘은역설적으로 인간의 불완전함(맹점과 상처)에서 나온다는 것을증명해 낸 서늘하고도 따뜻한 위로.\"... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  },
+  {
+    "index": 238,
+    "title": "에필로그: 26년의 경험, AI의 뇌, 그리고 건축의 미래",
+    "image_name": "essay_238_에필로그__26년의_경험__",
+    "prompt": "Title: 에필로그: 26년의 경험, AI의 뇌, 그리고 건축의 미래. Context: [다시, 트레이싱 페이퍼 위에서] 2001년, 처음 설계 업무를 시작했던 26년 전 젊은 시절의 나는 늦은 밤 사무실에 홀로 앉아 제도판 위를 서성이고 있었다. 노란색 트레이싱 페이퍼 위로 로트링(Rotring) 펜을 쥔 손이 미세하게 떨렸다. 그 시절 내가 꿈꿨던 것... Line-art style illustration, minimalist, thin straight and curved lines, with important focal parts depicted in thick black lines. Black and white architectural sketching style. Create a conceptual illustration representing the core theme of the text."
+  }
+]

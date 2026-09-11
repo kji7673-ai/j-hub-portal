@@ -1,14 +1,18 @@
-const fs = require('fs');
-const bookDataPath = 'book_data.js';
+const fs = require("fs");
+const bookDataPath = "book_data.js";
 
-let content = fs.readFileSync(bookDataPath, 'utf8');
+let content = fs.readFileSync(bookDataPath, "utf8");
 const match = content.match(/^([\s\S]*?const bookData = )(\{[\s\S]*?\});/);
-const data = eval('(' + match[2] + ')');
+const data = eval("(" + match[2] + ")");
 
-data.pages.forEach(p => {
-    // 1. Update Prologue to reflect the true purpose
-    if (p.partCategory === '프롤로그' && p.title && p.title.includes('완벽한 시스템이 아닌')) {
-        p.text = `<p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 24px;">안녕하세요. 도면 위에서, 그리고 거친 현장에서 26년째 구르고 있는 평범한 건축 쟁이입니다.</p>
+data.pages.forEach((p) => {
+  // 1. Update Prologue to reflect the true purpose
+  if (
+    p.partCategory === "프롤로그" &&
+    p.title &&
+    p.title.includes("완벽한 시스템이 아닌")
+  ) {
+    p.text = `<p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 24px;">안녕하세요. 도면 위에서, 그리고 거친 현장에서 26년째 구르고 있는 평범한 건축 쟁이입니다.</p>
 
 <p style="margin-bottom: 24px;">처음 이 기록을 엮기로 마음먹었을 때, 참 많은 망설임이 있었습니다. 시중에는 이미 AI와 혁신을 다루는 훌륭한 전문가들의 책이 차고 넘치기 때문입니다. 하지만 용기를 내어 이 부끄러운 기록을 세상에 꺼내놓는 이유는 기술서나 시스템 개발기를 쓰기 위함이 결코 아닙니다.</p>
 
@@ -29,24 +33,27 @@ data.pages.forEach(p => {
 <p style="margin-bottom: 24px;">단 한 분에게라도, 이 부족하고 투박한 기록이 무거운 일상을 버텨내는 작은 위로이자 내일을 그릴 수 있는 실용적인 도구가 되기를 진심으로 바랍니다.</p>
 
 <p style="font-weight: 600; text-align: right; margin-top: 40px; font-size: 1.1em; color: var(--primary);">도면 위에 머무는 우리의 시간이 다시 온전히 우리의 것이 되기를 기원하며.</p>`;
-    }
-    
-    // 2. Rewrite "기획서가 무기다"
-    if (p.title && p.title.includes('편견을 넘기 위한 가장 강력한 무기, 기획서')) {
-        p.title = "[통찰] 기획서는 무기가 아니다, 신뢰의 기록이다";
-        p.text = `흔히들 치열한 수주전에서 살아남기 위해 "기획서가 무기다"라고 말하곤 합니다. 하지만 저는 이 말에 동의하지 않습니다. 기획서는 누군가를 찌르거나 방어하기 위한 무기일 수 없습니다.
+  }
+
+  // 2. Rewrite "기획서가 무기다"
+  if (
+    p.title &&
+    p.title.includes("편견을 넘기 위한 가장 강력한 무기, 기획서")
+  ) {
+    p.title = "[통찰] 기획서는 무기가 아니다, 신뢰의 기록이다";
+    p.text = `흔히들 치열한 수주전에서 살아남기 위해 "기획서가 무기다"라고 말하곤 합니다. 하지만 저는 이 말에 동의하지 않습니다. 기획서는 누군가를 찌르거나 방어하기 위한 무기일 수 없습니다.
 
 사람에 대한 믿음이 우선이고, 이 믿음의 바탕이 될 수 있는 실력이 바로 건축설계 도면이자 기획서입니다. 기획서는 오직 '사실'을 바탕으로 할 때만 굳건한 신뢰를 얻을 수 있습니다.
 
 그때그때 상황에 맞추어 당장 보기 좋은 결과만을 포장해 내는 것은 결코 좋은 기획서나 도면이 아닙니다. 진정한 기획서는 현장의 돌발 변수를 꿰뚫어 보고, 실측과 시공성을 철저히 감안한 설계가 바탕이 되어야 합니다. 공간에 대한 깊은 이해가 담겨 있어야 비로소 좋은 도면입니다.
 
 사람의 삶이 온전히 담길 수 있는 치열한 숫자와 수치가 존재할 때, 그것은 단순한 종이 뭉치를 넘어 살아 숨 쉬는 '신뢰의 기록'이 됩니다. 제가 AI와 데이터를 도입한 이유도 기획서를 더 날카로운 무기로 벼리기 위함이 아니라, 사람의 삶을 담아낼 그 숫자들을 더 투명하고 정확한 신뢰의 기반으로 만들기 위해서였습니다.`;
-    }
+  }
 
-    // 3. Update "공유 결합"
-    if (p.title && p.title === '공유 결합: 지속 가능한 도시 디자인') {
-        p.title = "공유 결합: 사람을 향한 건축, 용산 현장의 기억";
-        p.text = `지속가능한 건축의 원리는 화학의 "공유 결합(Covalent Bond)"으로 설명할 수 있습니다. 각자 부족한 전자를 내어주고 서로를 단단히 묶어 안정화되는 과정. 건축설계의 본질, 현장의 난제를 푸는 방법, 그리고 사람을 신뢰하는 방법의 핵심이 바로 이 공유 결합에 있다고 저는 믿습니다.
+  // 3. Update "공유 결합"
+  if (p.title && p.title === "공유 결합: 지속 가능한 도시 디자인") {
+    p.title = "공유 결합: 사람을 향한 건축, 용산 현장의 기억";
+    p.text = `지속가능한 건축의 원리는 화학의 "공유 결합(Covalent Bond)"으로 설명할 수 있습니다. 각자 부족한 전자를 내어주고 서로를 단단히 묶어 안정화되는 과정. 건축설계의 본질, 현장의 난제를 푸는 방법, 그리고 사람을 신뢰하는 방법의 핵심이 바로 이 공유 결합에 있다고 저는 믿습니다.
 
 첫째는 내게 무엇이 있는지 아는 것, 둘째는 상대방이 무엇을 필요로 하는지 아는 것, 그리고 셋째는 우리가 발붙일 주변과 계획 부지에 대한 깊은 이해를 갖추는 것입니다. 이 세 가지 요소가 만나 서로의 부족함을 채울 때 건축은 생명력을 얻습니다.
 
@@ -65,9 +72,9 @@ data.pages.forEach(p => {
 
 이것이 바로 정비사업을 하면서 제가 실천하고자 했던 '공유 결합'입니다.
 우리의 기술과 설계가 그 땅의 아픔, 그곳에 사는 사람들의 고단함과 결합하여 만들어내는 따뜻한 쉼의 공간. 비록 수주라는 결과로 이어지진 못했을지라도, 우리는 그 눈 내리는 용산의 언덕에서 건축의 진짜 본질과 단단하게 결합해 있었습니다.`;
-    }
+  }
 });
 
 const newContent = match[1] + JSON.stringify(data, null, 4) + ";\n";
-fs.writeFileSync(bookDataPath, newContent, 'utf8');
+fs.writeFileSync(bookDataPath, newContent, "utf8");
 console.log("Core philosophy updated.");
