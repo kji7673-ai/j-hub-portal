@@ -604,7 +604,7 @@ var bookData = {
             "title": "타인의 시선을 공유한다는 것",
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "image": "static/images/sketches/109.jpg",
+            "image": "static/images/gallery_batch8_frame1_1789097190360.jpg",
             "type": "image_top",
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)"
         },
