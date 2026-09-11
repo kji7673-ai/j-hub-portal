@@ -444,7 +444,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242236"></script>
+    <script src="book_data.js?v=20242237"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -505,6 +505,7 @@
           page.type === "image_full" ||
           page.type === "poem" ||
           page.type === "author_profile" ||
+          page.title.includes("에필로그") ||
           (page.text || "").length < 200;
 
         let bgHTML = "";
