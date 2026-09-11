@@ -296,7 +296,7 @@ var bookData = {
       title: "에너지의 소진으로",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n사람의 죽음을 이해하는 사람도 있고,<br>\n평생 먹는 음식의 량이나 숨쉬기의 횟수가 정해져 있어 그 한계가 왔을 때<br>\n죽음에 이른다는 사람이 있습니다.<br><br>\n제가 생각하기엔<br>\n자기 인식을 한 이후<br>\n본인의 과거 사건과 시간 또는 그 어떠한 것에 매여,<br><br>\n현실의 시간에 살지 못할 때<br>\n오늘을 살아갈 힘을 잃게 되었을 때<br><br>\n그때가 죽음이지 않을까?\n</p>\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;">\n저는 오늘 하루를 온전한 \'현재\'로 살아가고 있는 것일까, 아니면 과거의 회상 속에 머물러 살아가고 있는 것일까. 어쩌면 미래의 죽음을 앞둔 제가 잠시 떠올린 찰나의 기억 속 한 장면은 아닐까.<br><br>\n멍하니 내 손가락을 꾹꾹 눌러봅니다. 살결의 통각이 전해집니다. 그래, 환영이 아닌 현실의 삶이구나. 단순한 슬픔을 넘어, 삶이라는 것 자체가 유독 애달프게 다가오는 요즘입니다. 하지만 이 애달픔은 결코 허무함이 아닙니다. 끝이 있음을 감각하는 그 순간, 오늘 무심코 마신 커피 한 잔, 스쳐 지나가는 바람, 그리고 내 곁을 지키는 사람들의 온기가 비로소 선명하게 다가옵니다. 죽음을 곁눈질하며 걷는 일은, 역설적이게도 \'오늘\'라는 현실을 가장 눈부시게 살아내기 위한 유일한 방법일지도 모릅니다.\n</blockquote>',
       partCategory: "제2막: 나라는 개체의 독립과 생존",
-      image: "static/images/update_page_52.jpg",
+      image: "static/images/gallery_batch4_leaning.jpg",
       type: "image_top",
     },
     {
