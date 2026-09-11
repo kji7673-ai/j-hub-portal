@@ -702,6 +702,13 @@ var bookData = {
       type: "poem",
     },
     {
+      title: "[임시 전시] 도면 조형물 (위치 결정용)",
+      partCategory: "제4막: 궁극의 공유결합",
+      type: "poem",
+      image: "static/images/blueprint_exhibit.jpg",
+      text: "이 이미지를 4막의 어느 위치에 배치할지 결정하기 위한 임시 뷰어입니다.<br><br>빛을 받아 생명력을 얻는 도면 조형물의 모습이 이 책의 어디에 가장 잘 어울릴지 편하게 둘러보시고 말씀해 주십시오.",
+    },
+    {
       type: "epilogue",
       image: "static/images/epilogue_bg.jpg",
       title: "에필로그: 도면 위의 공유결합",
