@@ -267,7 +267,7 @@ var bookData = {
       type: "image_top",
       title: "오뚝이",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n흔들릴지언정 넘어지지 않는,<br><br>\n그래서<br>\n재미 삼아 툭툭 건드려도 상관없는<br><br>\n난<br>\n중심 잡힌 오뚝이인 줄 알았습니다.<br><br>\n근데 이젠, 작은 입김에도 휘청이며 중심 잡기 위해<br>\n몹시도 흔들거리는, 아파서 흔들거리는 제가 되었습니다.<br><br>\n세월의 흐름 속에<br>\n내 안에 가라앉은 침잠된 무게가 중심추 되어,<br><br>\n이젠<br>\n웬만한 바람이 불어도<br>\n비록 흔들거릴지언정 넘어지지는 않는<br>\n난 오뚝이인데,<br>\n그래 그렇지.<br><br>\n내 속에 침잠된 그 묵직함이<br>\n오늘의 저를 지켜줍니다.\n</p>\n</div>\n\n<blockquote style="background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;">\n<strong>오늘도 사랑한다로 시작합니다</strong><br><br>\n오늘 하루, 난 또 다른 모습으로 뭍의 삶을 살아갑니다. 태초의 쉼터인 물로 돌아가기 전까지 모두가 그렇게 살아갑니다. 특별할 것 없습니다. 매 맞는 말의 모습에서 메시아를 보았던 니체처럼, 언젠가 나도 이 고달픈 쟁이 삶의 끝에서 희열의 본질을 마주하겠지. 오늘도 저는 \'사랑한다\'는 말로 하루를 시작합니다. 그리고 하루의 마지막엔, \'나는 사랑했다\'로 끝을 맺고 싶습니다.\n</blockquote>',
-      image: "static/images/act2_sculpture_2.jpg",
+      image: "static/images/sketches/26.jpg",
       part: "4부: 증언과 성찰",
       partTitle: "[Theme 3] 설계의 본질에 대한 고민",
       partCategory: "제2막: 나라는 개체의 독립과 생존",
@@ -544,7 +544,7 @@ var bookData = {
       title: "타인의 시선을 공유한다는 것",
       text: '<div style="text-align: center; max-width: 500px; margin: 0 auto;">\n<p style="text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;">\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>',
       partCategory: "제3막: 사람을 알아가는 관계성",
-      image: "static/images/act3_sculpture_1.jpg",
+      image: "static/images/sketches/109.jpg",
       type: "image_top",
     },
     {
@@ -681,7 +681,7 @@ var bookData = {
       part: "4부: 증언과 성찰",
       partTitle: "[Theme 2] 인간관계의 무게",
       partCategory: "제4막: 공동체로의 통합, 마음을 짓는 일",
-      image: "static/images/act4_sculpture_2.jpg",
+      image: "static/images/update_page_42.jpg",
     },
     {
       type: "poem",
