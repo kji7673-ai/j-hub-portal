@@ -444,7 +444,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242232"></script>
+    <script src="book_data.js?v=20242233"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -538,13 +538,14 @@
 
           contentHTML =
             bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 15vh 5% 200px 5%; box-sizing: border-box;">';
+            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 15vh 5% 8vh 5%; box-sizing: border-box;">';
 
           let textContainerStyle =
             "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
           if (page.type === "cover") {
             textContainerStyle =
-              "margin: auto 0 0 0; padding-bottom: 8%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;";
+              "margin: auto 0 0 0; padding-bottom: 2%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;";
+            ("margin: auto 0 0 0; padding-bottom: 8%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;");
           }
           contentHTML += '<div style="' + textContainerStyle + '">';
 
