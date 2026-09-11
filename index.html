@@ -97,7 +97,19 @@
         stroke-linecap: round;
         stroke-linejoin: round;
       }
-    </style>
+    
+      .image-caption {
+        font-family: "SF Pro Text", system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.43;
+        letter-spacing: -0.224px;
+        color: #7a7a7a;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 32px;
+      }
+</style>
 
     <div class="bottom-nav">
       <button onclick="toggleBookmark()" id="bookmark-toggle-btn">
@@ -444,7 +456,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242270"></script>
+    <script src="book_data.js?v=20242271"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
