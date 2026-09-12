@@ -458,7 +458,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242312"></script>
+    <script src="book_data.js?v=20242313"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -852,7 +852,7 @@
           alert("현재 페이지의 책갈피를 해제했습니다.");
         }
         localStorage.setItem(
-          "JJournal_bookmarks_v2",
+          "JJournal_bookmarks_v3",
           JSON.stringify(bookmarks),
         );
         updateBookmarkButton();
@@ -879,7 +879,7 @@
       window.onload = renderBook;
 
       let bookmarks = JSON.parse(
-        localStorage.getItem("JJournal_bookmarks_v2") || "[]",
+        localStorage.getItem("JJournal_bookmarks_v3") || "[]",
       );
 
       function saveProgress() {
