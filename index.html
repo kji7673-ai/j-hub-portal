@@ -68,7 +68,7 @@
     </style>
 
   </head>
-  <body class="ui-active" style="overflow-x: hidden;">
+  <body style="overflow-x: hidden;">
     <!-- Progress Bar -->
     <div id="progress-bar-container"><div id="progress-bar"></div></div>
 
@@ -163,14 +163,7 @@
         </svg>
         
       </button>
-      <button onclick="openFeedbackModal()">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
-          ></path>
-        </svg>
-        
-      </button>
+      
     </div>
 
     <!-- Modals -->
@@ -472,7 +465,11 @@
     <!-- TOC Modal -->
     <div class="toc-modal">
       <div class="toc-header">
-        <h2>목차</h2>
+        <h2>메뉴</h2>
+        <button style="margin-left: 15px; padding: 6px 12px; background: #0066cc; color: #fff; border: none; border-radius: 16px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px;" onclick="closeTOC(); openFeedbackModal();">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+          댓글(소감) 남기기
+        </button>
         <button class="icon-btn close-toc-btn" onclick="closeTOC()">
           <svg
             viewBox="0 0 24 24"
@@ -491,7 +488,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242366"></script>
+    <script src="book_data.js?v=20242367"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
