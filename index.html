@@ -462,7 +462,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242345"></script>
+    <script src="book_data.js?v=20242346"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -625,7 +625,7 @@ let currentChapter = 0;
           if (isImgOnly) {
               topPadding = '5vh';
               bottomPadding = '5vh';
-              justifyContent = 'center';
+              justifyContent = 'flex-start';
           } else if (isCont) {
               topPadding = '40px';
           }
@@ -637,7 +637,7 @@ let currentChapter = 0;
             bgHTML +
             '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + justifyContent + '; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% ' + bottomPadding + ' 5%; box-sizing: border-box;">';
           contentHTML +=
-            '<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: ' + (isImgOnly ? 'center' : 'flex-start') + ';">';
+            '<div style="margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: ' + (isImgOnly ? 'center' : 'flex-start') + ';">';
 
           // Inline top image (skip for continuation pages)
           if (page.image && !isCont) {
@@ -730,8 +730,8 @@ let currentChapter = 0;
         }
 
         contentHTML +=
-          '</div><div style="height: 70px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
-        contentHTML += `<div style="height: 18vh; width: 100%; flex-shrink: 0; pointer-events: none;"></div>`;
+          '</div><div style="height: 20vh; width: 100%; flex-shrink: 0; clear: both; pointer-events: none;"></div></div></div>';
+        
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);
 
