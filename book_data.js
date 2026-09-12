@@ -175,7 +175,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "분자: 원자간의 공유결합",
             "text": "",
             "image": "static/images/gallery_batch10_sculpture2.jpg",
             "part": "제2막: 철학편",
@@ -187,7 +187,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "분자: 원자간의 공유결합",
             "text": "**공유결합(Covalent Bond): 진정한 융합의 조건**\n물과 기름은 한 그릇에 담아 힘껏 저어도 결국 분리됩니다. 이를 '혼합물(Mixture)'이라 부릅니다. 반면, 산소 원자 하나와 수소 원자 두 개가 만나 서로의 전자를 내어주고 강하게 결합하면, 불을 끄고 생명을 잉태하는 전혀 새로운 물질인 '물(H2O)'이 탄생합니다. 이것이 화학에서 말하는 '공유결합(Covalent Bond)'입니다.\n<div style=\"text-align: left; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.<br><br>w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"var(--ink, #1d1d1f)\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 내어주어 제3의 생명 창조</text> </svg> </p></div>",
             "image": null,
             "part": "제2막: 철학편",
