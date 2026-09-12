@@ -57,6 +57,7 @@ body {
 
 /* Pagination Layout */
 .page-content {
+  background-color: #fcfbf9;
   position: absolute;
   top: 0;
   left: 0;
@@ -452,6 +453,7 @@ input[type="file"] {
 
 /* -- Prevent Vertical Scroll (Strict Pagination) -- */
 .page-content {
+  background-color: #fcfbf9;
   overflow-y: auto; /* Enable smart scroll for overflow */
   -webkit-overflow-scrolling: touch;
 
@@ -679,6 +681,7 @@ h2.chapter-title {
     border-radius: 0 !important;
   }
   .page-content {
+  background-color: #fcfbf9;
     padding: 15% 6% 25% 6% !important; /* more padding bottom for nav */
   }
   p.body-text {
@@ -696,6 +699,7 @@ h2.chapter-title {
       height: 100% !important;
     }
     .page-content {
+  background-color: #fcfbf9;
       padding: 5% 5% 15% 5% !important;
     }
     .page-text-flow {
@@ -716,6 +720,7 @@ h2.chapter-title {
     height: 100% !important;
   }
   .page-content {
+  background-color: #fcfbf9;
     padding: 5% 8% 15% 8% !important;
   }
 }
@@ -945,6 +950,7 @@ img {
 
 /* 스크롤 강제 활성화 보증 */
 .page-content {
+  background-color: #fcfbf9;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch !important;
   overscroll-behavior-y: contain !important; /* 부모(바디)로 스크롤 전이 차단 */
@@ -952,6 +958,7 @@ img {
 
 /* 모바일 브라우저 절대 좌표 스크롤 먹통 버그 완벽 해결 */
 .page-content {
+  background-color: #fcfbf9;
   position: absolute !important;
   top: 0 !important;
   bottom: 0 !important;
