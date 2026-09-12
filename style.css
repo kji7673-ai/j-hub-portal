@@ -1144,7 +1144,7 @@ h2.chapter-title {
   .highlight-text,
   .custom-quote,
   .custom-quote strong,
-  blockquote {
+  .editorial-quote, blockquote {
     color: #f5f5f7 !important;
   }
   /* Footnote boxes in dark mode */
@@ -1171,4 +1171,103 @@ h2.chapter-title {
   .page-content.philosophy-mode p.body-text:first-of-type::first-letter {
     color: #f5f5f7 !important;
   }
+}
+
+/* --- Semantic Refactoring Classes --- */
+.page-text-wrapper {
+  max-width: 600px; 
+  width: 100%; 
+  margin: 0; 
+  text-align: left; 
+  line-height: 1.6; 
+  font-size: 1.1em; 
+  word-break: keep-all; 
+  letter-spacing: -0.03em; 
+  display: flex; 
+  flex-direction: column; 
+  font-weight: 400;
+}
+
+.image-layout-container {
+  display: flex; 
+  flex-direction: column; 
+  gap: 24px; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  padding-top: 30px; 
+  padding-bottom: 30px;
+}
+
+.image-rounded-bordered {
+  width: 100%; 
+  max-width: 500px; 
+  max-height: 65vh; 
+  object-fit: contain; 
+  border-radius: 12px; 
+  border: 1px solid var(--hairline, #e0e0e0); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.image-rounded-bordered-sm {
+  width: 100%; 
+  max-width: 500px; 
+  max-height: 38vh; 
+  object-fit: contain; 
+  border-radius: 12px; 
+  border: 1px solid var(--hairline, #e0e0e0); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.image-caption {
+  font-size: 13px; 
+  color: #888; 
+  display: block; 
+  text-align: left; 
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
+.footnote-box {
+  background-color: var(--footnote-bg); 
+  padding: 24px; 
+  border-radius: 12px; 
+  margin: 20px 0; 
+  font-size: 0.95em; 
+  line-height: 1.8; 
+  border-left: 4px solid var(--hairline, #d2d2d7);
+}
+
+.sketch-title {
+  font-size: 16px; 
+  font-weight: 600; 
+  margin-bottom: 24px; 
+  color: var(--ink); 
+  text-align: left;
+}
+
+.editorial-quote {
+  margin-top: 40px; 
+  margin-bottom: 24px; 
+  padding: 20px 24px; 
+  background-color: var(--quote-bg, rgba(245, 245, 247, 0.95)); 
+  border-radius: 8px; 
+  color: var(--text-muted, #555); 
+  font-size: 14.5px; 
+  line-height: 1.6; 
+  border-left: 3px solid #999999; 
+  font-family: 'SF Pro Text', -apple-system, sans-serif; 
+  text-align: left; 
+  font-weight: 400; 
+  text-shadow: none; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.body-paragraph {
+  margin-bottom: 24px;
+}
+
+.table-wrapper {
+  width: 100%; 
+  overflow-x: auto; 
+  padding-bottom: 10px;
 }
