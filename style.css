@@ -947,3 +947,21 @@ img {
   -webkit-overflow-scrolling: touch !important;
   overscroll-behavior-y: contain !important; /* 부모(바디)로 스크롤 전이 차단 */
 }
+
+/* 모바일 브라우저 절대 좌표 스크롤 먹통 버그 완벽 해결 */
+.page-content {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  width: 100vw !important;
+  overflow-y: scroll !important; /* 모바일 강제 스크롤 */
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+  z-index: 10 !important;
+}
+
+.cover-content {
+  min-height: 101% !important; /* 내용이 적어도 스크롤바가 활성화되도록 유도하여 버그 방지 */
+}
