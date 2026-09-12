@@ -471,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242358"></script>
+    <script src="book_data.js?v=20242359"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -594,9 +594,7 @@ let currentChapter = 0;
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
-        let isSpecialPage =
-          page.type === "cover" ||
-          page.type === "author_profile";
+        let isSpecialPage = page.type === "cover";
 
         let bgHTML = "";
         let contentHTML = "";
@@ -686,10 +684,14 @@ let currentChapter = 0;
 
           // Inline top image (skip for continuation pages)
           if (page.image && !isCont) {
+            let imgStyle = 'max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;';
+            if (page.type === "author_profile") {
+                imgStyle = 'width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;';
+            }
             contentHTML +=
-              '<div style="margin-bottom: ' + (isImgOnly ? '0' : '40px') + '; text-align: center; width: 100%;"><img src="' +
+              '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: center; width: 100%;"><img src="' +
               page.image +
-              '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;">';
+              '" alt="Chapter Image" style="' + imgStyle + '">';
             if (page.caption) {
               contentHTML +=
                 '<div class="image-caption">' +
@@ -702,12 +704,12 @@ let currentChapter = 0;
           // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
           if (page.title && !isCont && !isImgOnly) {
             contentHTML +=
-              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:40px; letter-spacing:-0.5px; line-height:1.4; text-align:left; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
+              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:30px; letter-spacing:-0.5px; line-height:1.4; text-align:' + (page.type === "author_profile" ? 'center' : 'left') + '; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
               page.title +
               "</h1>";
           }
 
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
+          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${page.type === 'author_profile' ? 'center' : 'left'}; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
         }
 
         let pText = page.text || "";
