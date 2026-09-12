@@ -1130,6 +1130,28 @@ h2.chapter-title {
     background-color: #121212 !important;
     color: #f5f5f7 !important;
   }
+  /* Explicitly override classes that have hardcoded black text */
+  p.body-text, 
+  .page-text, 
+  h2.chapter-title, 
+  .part-category, 
+  .cover-title,
+  .cover-subtitle,
+  .highlight-text,
+  .custom-quote,
+  .custom-quote strong,
+  blockquote {
+    color: #f5f5f7 !important;
+  }
+  /* Footnote boxes in dark mode */
+  .footnote-box {
+    background-color: #272729 !important;
+    border: 1px solid #333 !important;
+    color: #d2d2d7 !important;
+  }
+  .footnote-box strong {
+    color: #f5f5f7 !important;
+  }
   .bottom-nav {
     background: rgba(18, 18, 18, 0.85) !important;
     border-top: 1px solid #333 !important;
@@ -1139,6 +1161,10 @@ h2.chapter-title {
   }
   .modal-content-box {
     background: #1e1e1e !important;
+    color: #f5f5f7 !important;
+  }
+  /* Fix philosophy-mode drop caps */
+  .page-content.philosophy-mode p.body-text:first-of-type::first-letter {
     color: #f5f5f7 !important;
   }
 }
