@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242387" />
+    <link rel="stylesheet" href="style.css?v=20242388" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -179,7 +179,7 @@
       }
       @media (max-width: 768px) {
         .cover-text-container {
-          width: 55%;
+          width: 50%;
         }
         .cover-title { font-size: 1.6em; }
         .cover-subtitle { font-size: 0.9em; }
@@ -612,7 +612,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242387"></script>
+    <script src="book_data.js?v=20242388"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -795,9 +795,9 @@ let currentChapter = 0;
 
           if (page.title) {
             if (page.type === "author_profile") {
-              // 저자 이름 (표지 대제목과 동일한 레터링 스타일)
+              // 저자 이름 (실제 갤러리 캡션처럼 작고 정갈하게 비례 맞춤)
               contentHTML +=
-                '<h1 class="cover-title" style="font-size: 2.2em;">' +
+                '<h1 class="cover-title" style="font-size: 1.5em; margin-bottom: 16px; font-weight: 700;">' +
                 page.title +
                 "</h1>";
             } else if (page.type === "cover") {
@@ -829,7 +829,9 @@ let currentChapter = 0;
             }
           }
 
-          if (page.type === "author_profile" || page.type === "cover") {
+          if (page.type === "author_profile") {
+            contentHTML += `<div class="cover-subtitle" style="font-size: 0.95em; font-weight: 500; color: #222;">`;
+          } else if (page.type === "cover") {
             contentHTML += `<div class="cover-subtitle">`;
           } else {
             contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;">`;
