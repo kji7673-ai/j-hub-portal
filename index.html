@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242415" />
+    <link rel="stylesheet" href="style.css?v=20242416" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -286,6 +286,7 @@
         background: #f0f0f0 !important;
       }
       .bookmark-modal,
+      .resume-modal,
       .feedback-modal {
         display: none;
         position: fixed;
@@ -332,6 +333,35 @@
       }
     </style>
 
+    
+    <!-- Resume Reading Modal -->
+    <div
+      id="resume-modal"
+      class="resume-modal"
+      style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 10000; align-items: center; justify-content: center;"
+    >
+      <div class="modal-content-box" style="background: #1d1d1f; border: 1px solid #333; padding: 40px; border-radius: 18px; max-width: 400px; width: 90%; text-align: center;">
+        <h3 style="color: #fff; font-size: 21px; margin-bottom: 12px; font-weight: 600;">이어보기</h3>
+        <p style="color: #aaa; font-size: 15px; margin-bottom: 30px; line-height: 1.5;" id="resume-text">
+          마지막으로 읽으신 페이지부터<br>이어서 보시겠습니까?
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button
+            style="background: #333; color: #fff; border: none; padding: 12px 24px; border-radius: 24px; font-size: 15px; cursor: pointer; flex: 1;"
+            onclick="startFromBeginning()"
+          >
+            처음부터
+          </button>
+          <button
+            style="background: #0066cc; color: #fff; border: none; padding: 12px 24px; border-radius: 24px; font-size: 15px; font-weight: 600; cursor: pointer; flex: 1;"
+            onclick="resumeReading()"
+          >
+            이어보기
+          </button>
+        </div>
+      </div>
+    </div>
+    
     <div
       id="bookmark-modal"
       class="bookmark-modal"
@@ -601,7 +631,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242415"></script>
+    <script src="book_data.js?v=20242416"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -737,8 +767,8 @@ let currentChapter = 0;
           
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242415";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242415";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242416";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242416";
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
@@ -1008,6 +1038,13 @@ let currentChapter = 0;
         }
 
         updateControls();
+        
+        // Deep Linking: Update URL Hash without jumping (using replaceState to avoid cluttering browser history)
+        if (currentChapter > 0) {
+          history.replaceState(null, null, '#page-' + (currentChapter + 1));
+        } else {
+          history.replaceState(null, null, window.location.pathname);
+        }
         updateBookmarkButton();
         window.scrollTo({ top: 0, behavior: "instant" });
       }
@@ -1081,18 +1118,36 @@ let currentChapter = 0;
       function renderBook() {
         renderTOC();
 
-        // Restore position if possible
-        const savedChapter = localStorage.getItem("JJournal_savedChapter");
-        if (savedChapter !== null) {
-          const parsedChap = parseInt(savedChapter, 10);
-          if (!isNaN(parsedChap)) {
-            currentChapter = Math.max(
-              0,
-              Math.min(parsedChap, bookData.pages.length - 1),
-            );
+        // URL Deep Linking: Check hash first
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#page-')) {
+          const pageNum = parseInt(hash.replace('#page-', ''), 10);
+          if (!isNaN(pageNum) && pageNum > 0 && pageNum <= bookData.pages.length) {
+            currentChapter = pageNum - 1;
+            renderCurrentChapter('fade');
+            return;
           }
         }
 
+        // Restore position from localStorage
+        const savedChapter = localStorage.getItem("JJournal_savedChapter");
+        if (savedChapter !== null) {
+          const parsedChap = parseInt(savedChapter, 10);
+          if (!isNaN(parsedChap) && parsedChap > 0 && parsedChap < bookData.pages.length) {
+            // Setup global var for resume
+            window.pendingResumeChapter = parsedChap;
+            const pageTitle = bookData.pages[parsedChap].title || "본문";
+            document.getElementById('resume-text').innerHTML = `마지막으로 읽으신 <strong>[${parsedChap + 1}p. ${pageTitle}]</strong>부터<br>이어서 보시겠습니까?`;
+            document.getElementById('resume-modal').style.display = 'flex';
+            
+            // Render page 1 in background just in case
+            currentChapter = 0;
+            renderCurrentChapter('fade');
+            return;
+          }
+        }
+
+        // Default start from beginning
         renderCurrentChapter('fade');
         updateBookmarkButton();
       }
@@ -1230,6 +1285,21 @@ let currentChapter = 0;
           });
         }
         document.getElementById("bookmark-modal").style.display = "flex";
+      }
+
+      
+      function startFromBeginning() {
+        document.getElementById('resume-modal').style.display = 'none';
+        currentChapter = 0;
+        renderCurrentChapter('fade');
+      }
+      
+      function resumeReading() {
+        document.getElementById('resume-modal').style.display = 'none';
+        if (typeof window.pendingResumeChapter !== 'undefined') {
+          currentChapter = window.pendingResumeChapter;
+        }
+        renderCurrentChapter('fade');
       }
 
       function openFeedbackModal() {
