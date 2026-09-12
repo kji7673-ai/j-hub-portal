@@ -471,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242356"></script>
+    <script src="book_data.js?v=20242357"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -490,6 +490,16 @@
         setTimeout(() => toast.classList.remove("show"), 2000);
       }
       // ----------------------------
+
+      function toggleAccordion(groupId, headerEl) {
+        const content = document.getElementById(groupId);
+        if (!content) return;
+        const isHidden = content.style.display === "none";
+        content.style.display = isHidden ? "block" : "none";
+        const icon = headerEl.querySelector('.accordion-icon');
+        if (icon) icon.innerText = isHidden ? "▲" : "▼";
+      }
+
 let currentChapter = 0;
       let currentColumn = 0;
       const COLUMN_GAP = 40;
@@ -499,7 +509,8 @@ let currentChapter = 0;
         if (!tocList) return;
         tocList.innerHTML = "";
         let currentCategory = null;
-        let currentGroupContent = null; // 아이템들이 추가될 부모 컨테이너 참조용
+        let currentGroupContent = null;
+        let groupCounter = 0;
 
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
@@ -520,6 +531,8 @@ let currentChapter = 0;
             let cat = page.partCategory || "프롤로그";
             if (cat !== currentCategory) {
               currentCategory = cat;
+              groupCounter++;
+              const groupId = "toc-group-" + groupCounter;
               
               const group = document.createElement("div");
               group.className = "toc-group";
@@ -535,24 +548,18 @@ let currentChapter = 0;
               catHeader.style.borderBottom = "1px solid #eee";
               catHeader.style.paddingBottom = "8px";
               
-              catHeader.innerHTML = '<span style="font-weight: 700;">' + cat + '</span>' + 
-                                    '<span class="accordion-icon" style="font-size: 12px; color: #999;">▼</span>';
+              catHeader.innerHTML = '<span style="font-weight: 700; pointer-events: none;">' + cat + '</span>' + 
+                                    '<span class="accordion-icon" style="font-size: 12px; color: #999; pointer-events: none;">▼</span>';
               
-              // 여기가 핵심 수정 포인트입니다! (각 그룹마다 독립적인 로컬 변수로 바인딩)
+              catHeader.setAttribute("onclick", "toggleAccordion('" + groupId + "', this)");
+
               const groupContent = document.createElement("div");
+              groupContent.id = groupId;
               groupContent.className = "toc-group-content";
               groupContent.style.display = "none"; 
               groupContent.style.paddingTop = "5px";
               
-              // 다음 아이템들이 이 컨테이너에 들어가도록 외부 변수에 갱신
               currentGroupContent = groupContent; 
-
-              // 독립된 로컬 변수(groupContent)를 바라보도록 클로저 수정
-              catHeader.onclick = () => {
-                const isHidden = groupContent.style.display === "none";
-                groupContent.style.display = isHidden ? "block" : "none";
-                catHeader.querySelector('.accordion-icon').innerText = isHidden ? "▲" : "▼";
-              };
 
               group.appendChild(catHeader);
               group.appendChild(groupContent);
@@ -561,14 +568,13 @@ let currentChapter = 0;
 
             const li = document.createElement("div");
             li.className = "toc-item";
-            li.innerHTML = '<span class="toc-title">' + page.title + "</span>";
+            li.innerHTML = '<span class="toc-title" style="pointer-events: none;">' + page.title + "</span>";
             li.onclick = () => {
               currentChapter = index;
               currentColumn = 0;
               renderCurrentChapter();
               closeTOC();
             };
-            // 정상적으로 현재 카테고리의 껍데기 안에 들어갑니다.
             currentGroupContent.appendChild(li);
           }
         });
