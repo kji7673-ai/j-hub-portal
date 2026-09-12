@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242382" />
+    <link rel="stylesheet" href="style.css?v=20242383" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -139,7 +139,56 @@
         padding: 0 16px;
         user-select: none;
       }
-    </style>
+    
+      .cover-text-container {
+        margin: auto 0 auto auto;
+        padding-right: 5%;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: right;
+      }
+      .cover-title {
+        font-size: 2.6em;
+        font-weight: 800;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        word-break: keep-all;
+        color: rgba(40, 40, 42, 0.85);
+        mix-blend-mode: multiply;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.7), -1px -1px 2px rgba(0,0,0,0.15);
+      }
+      .cover-subtitle {
+        line-height: 1.6;
+        font-size: 1.1em;
+        font-weight: 600;
+        word-break: keep-all;
+        color: rgba(50, 50, 50, 0.8);
+        mix-blend-mode: multiply;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.6), -1px -1px 1px rgba(0,0,0,0.1);
+      }
+      .cover-kicker {
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(0, 102, 204, 0.85);
+        margin-bottom: 12px;
+        letter-spacing: 0.05em;
+        mix-blend-mode: multiply;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .cover-text-container {
+          width: 55%;
+        }
+        .cover-title { font-size: 1.6em; }
+        .cover-subtitle { font-size: 0.9em; }
+        .cover-kicker { font-size: 14px; }
+      }
+\n    </style>
 
 
 
@@ -566,7 +615,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242382"></script>
+    <script src="book_data.js?v=20242383"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -736,10 +785,9 @@ let currentChapter = 0;
             "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
           if (page.type === "cover") {
             // 화면 전체를 기준으로 우측 하단 정렬 (최대 가로폭 해제)
-            textContainerStyle =
-              "margin: auto 0 auto auto; padding-right: 0%; width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; text-align: right;";
+            textContainerStyle = "";
           }
-          contentHTML += '<div style="' + textContainerStyle + '">';
+          contentHTML += '<div class="' + (page.type === "cover" ? "cover-text-container" : "") + '" style="' + textContainerStyle + '">';
 
           if (page.title) {
             if (page.type === "cover") {
@@ -755,12 +803,12 @@ let currentChapter = 0;
 
               let titleHTML = '';
               if (kicker) {
-                titleHTML += '<span style="display:block; font-size: 18px; font-weight: 700; color: #0066cc; margin-bottom: 12px; letter-spacing: 0.05em; text-shadow: none;">' + kicker + '</span>';
+                titleHTML += '<span class="cover-kicker">' + kicker + '</span>';
               }
               titleHTML += mainTitle;
 
               contentHTML +=
-                '<h1 style="font-size:2.6em; font-weight:800; margin-bottom:12px; letter-spacing:-0.5px; line-height:1.2; text-align:right; max-width: 100%; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: none;">' +
+                '<h1 class="cover-title">' +
                 titleHTML +
                 "</h1>";
             } else {
@@ -771,7 +819,7 @@ let currentChapter = 0;
             }
           }
 
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;">`;
+          contentHTML += `<div class="${page.type === 'cover' ? 'cover-subtitle' : ''}" style="${page.type === 'cover' ? '' : 'max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;'}">`;
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
