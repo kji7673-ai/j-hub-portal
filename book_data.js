@@ -1044,7 +1044,7 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "난 약한 사람입니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n저는 약한 사람입니다<br><br>\n저는 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n제가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n저는 약한 사람입니다<br><br>\n저는 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n제가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은</div>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
@@ -1056,7 +1056,7 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "난 약한 사람입니다",
-            "text": "제가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
+            "text": "<div style=\"background-color: #f5f5f7; padding: 24px; border-radius: 12px; margin: 20px 0; line-height: 1.8; color: #333333; border-left: 4px solid #d2d2d7;\">제가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
@@ -1761,7 +1761,7 @@ var bookData = {
         {
             "type": "image_top",
             "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,</div>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
@@ -1771,7 +1771,7 @@ var bookData = {
         {
             "type": "image_top",
             "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>",
+            "text": "<div style=\"background-color: #f5f5f7; padding: 24px; border-radius: 12px; margin: 20px 0; line-height: 1.8; color: #333333; border-left: 4px solid #d2d2d7;\">아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
@@ -1859,7 +1859,7 @@ var bookData = {
         {
             "type": "poem",
             "title": "현장에서 배워야 할 것들",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 제가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 저는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도 제가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아 다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 제가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 저는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도 제가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아 다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "caption": null,
@@ -1869,7 +1869,7 @@ var bookData = {
         {
             "type": "poem",
             "title": "현장에서 배워야 할 것들",
-            "text": "제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?</div></p>",
+            "text": "<div style=\"background-color: #f5f5f7; padding: 24px; border-radius: 12px; margin: 20px 0; line-height: 1.8; color: #333333; border-left: 4px solid #d2d2d7;\">제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?</div></p>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "caption": null,
