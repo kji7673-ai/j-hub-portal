@@ -1044,13 +1044,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "난 약한 사람입니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n저는 약한 사람입니다<br><br>\n저는 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.<br><br>\n어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n제가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은<br>\n제가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n저는 약한 사람입니다<br><br>\n저는 약한 사람입니다.<br>\n덩치 큰 약한 사람입니다.<br><br>\n작은 바람에도 부르르 떨고 휘청입니다.<br>\n덩치는 큰 놈이<br>\n지 몸 생각도 않고 온몸을 떨고 있습니다.<br><br>\n시간 따라 이 바람도 지나가길 기대하며<br>\n그렇게 휘청입니다.",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "난 약한 사람입니다",
+            "text": "어쩌면 좋습니까?<br><br>\n작은 지지대라도 있으면 이러지 않을까 싶지만,<br>\n작은 산들바람에도 태풍 맞은 것처럼 휘청이니<br><br>\n제가 이상한가 봅니다.<br><br>\n조금만 더 자연스레 받아들이면 좋았을 텐데<br>\n이젠 그냥 이게 원래 나구나 싶어,<br>\n더욱 속으로 움츠러듭니다.<br><br>\n이런저런 핑계로<br>\n오늘의 날 감싸지만<br>\n결국은<br>\n제가 자라지 못했기에<br>\n작은 바람에도 죽을 듯 온몸을 휘청이나 봅니다.<br><br>\n그런가 봅니다.\n</p>\n</div>\n\n<blockquote>우리 회사 근처에 '문정골 사랑방'이라고 있습니다.<br>오늘은 그곳에서 한잔해야겠습니다.</blockquote>",
+            "image": null,
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1173,13 +1185,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "요즘 잠을 잘 수가 없다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n요즘 저는 잠을 잘 수가 없습니다.<br><br>눈을 감으면,<br>저의 모든 감각 기관이 더욱 예민해집니다.<br>어느 날은 자고 있는 상태에서도 제 옆에 기어가는 벌레를 인지하고 잡은 적도 있습니다.<br><br>심지어<br>지는 눈을 뜨고 잡니다.<br>자고 있는 제게 말을 붙이면 대답을 합니다.<br><br>군에서는 선임들이 제 머리카락만 건드려도 관등성명을 댄다고 모두들 신기해했지만,<br>사실 저는 자면서도 그들의 모든 일거수일투족을<br>인지하고 있었습니다.<br><br>저의 이 능력은 사실 지네에게 물렸을 때 생긴 능력입니다.<br><br>거미에 물렸다면 스파이더맨이 될 수도 있었는데 아깝습니다.<br>아무튼, 저는 지네맨이 되었습니다.<br><br>지네가 가진 예민한 촉각을 제가 가지게 된 것입니다.<br>몹시 예민합니다.<br>이런 능력을 가진 후 몇 가지 단점도 생겼습니다.</div></p>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n요즘 저는 잠을 잘 수가 없습니다.<br><br>눈을 감으면,<br>저의 모든 감각 기관이 더욱 예민해집니다.<br>어느 날은 자고 있는 상태에서도 제 옆에 기어가는 벌레를 인지하고 잡은 적도 있습니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "요즘 잠을 잘 수가 없다",
+            "text": "심지어<br>지는 눈을 뜨고 잡니다.<br>자고 있는 제게 말을 붙이면 대답을 합니다.<br><br>군에서는 선임들이 제 머리카락만 건드려도 관등성명을 댄다고 모두들 신기해했지만,<br>사실 저는 자면서도 그들의 모든 일거수일투족을<br>인지하고 있었습니다.<br><br>저의 이 능력은 사실 지네에게 물렸을 때 생긴 능력입니다.<br><br>거미에 물렸다면 스파이더맨이 될 수도 있었는데 아깝습니다.<br>아무튼, 저는 지네맨이 되었습니다.<br><br>지네가 가진 예민한 촉각을 제가 가지게 된 것입니다.<br>몹시 예민합니다.<br>이런 능력을 가진 후 몇 가지 단점도 생겼습니다.</div></p>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": null,
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1254,13 +1278,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "어제의 눈으로 사람을 보지 않기를",
-            "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>내일 아침 깨어날 시간엔,<br>지나온 것들 속에 잊어야 할 것은<br>온전히 잊었으면 좋겠습니다.<br><br>사람을 대할 때 참 무섭고도 힘든 것은,<br>저도 모르게 '과거의 기억'으로 상대를 단정 짓고 본다는 것입니다.<br>어쩌면 당연한 일인지도 모릅니다. <br>하지만 막상 제가 누군가에게 과거의 잣대로만 비춰질 때면<br>\"오늘은 새로우니 다르게 봐주세요\" 하고 억울해하는 것이<br>또 이기적인 사람의 마음인가 봅니다.<br><br>그래서 다짐해 봅니다.<br>사람을 대할 때는 어제의 선입견을 덮어두고,<br>늘 처음 만나는 사람처럼 반가운 마음으로 마주하겠다고 말입니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 저의 일상과 사람을 보지 않는 것입니다.<br>익숙해짐으로 스쳐 지나갈 소중한 것들이 참 많이 있습니다.<br><br>오늘도 잠이 듭니다.<br>내일은 사람도, 공간도, 그리고 나 자신도 <br>매일 새롭게 느끼며 살아가야겠습니다.",
+            "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>내일 아침 깨어날 시간엔,<br>지나온 것들 속에 잊어야 할 것은<br>온전히 잊었으면 좋겠습니다.<br><br>사람을 대할 때 참 무섭고도 힘든 것은,<br>저도 모르게 '과거의 기억'으로 상대를 단정 짓고 본다는 것입니다.<br>어쩌면 당연한 일인지도 모릅니다. <br>하지만 막상 제가 누군가에게 과거의 잣대로만 비춰질 때면<br>\"오늘은 새로우니 다르게 봐주세요\" 하고 억울해하는 것이<br>또 이기적인 사람의 마음인가 봅니다.",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "어제의 눈으로 사람을 보지 않기를",
+            "text": "그래서 다짐해 봅니다.<br>사람을 대할 때는 어제의 선입견을 덮어두고,<br>늘 처음 만나는 사람처럼 반가운 마음으로 마주하겠다고 말입니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 저의 일상과 사람을 보지 않는 것입니다.<br>익숙해짐으로 스쳐 지나갈 소중한 것들이 참 많이 있습니다.<br><br>오늘도 잠이 듭니다.<br>내일은 사람도, 공간도, 그리고 나 자신도 <br>매일 새롭게 느끼며 살아가야겠습니다.",
+            "image": null,
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1357,11 +1393,21 @@ var bookData = {
             "title": "만지작거리고 바스락거린다",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 저는 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br><br>그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>저는 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 제 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,</div></p>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 저는 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.",
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "title": "만지작거리고 바스락거린다",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "type": "poem",
+            "text": "그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>저는 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 제 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,</div></p>",
+            "image": null,
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "title": "만지작거리고 바스락거린다",
@@ -1737,12 +1783,22 @@ var bookData = {
         {
             "type": "image_top",
             "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "type": "image_top",
+            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "text": "저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>\n아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>",
+            "image": null,
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1769,13 +1825,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "title": "우리 이렇게 오늘도",
-            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n저라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n저는 새로운 제가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우리는 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n저라는 개체의 독립성은 저를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 저를 위하는 것이란 것을<br><br>\n저를 통한 저라는 존재는 더욱더 옅어지고<br>\n당신을 통한 저의 존재는 더욱 뚜렷해지기를.<br><br>\n살아간다는 것이 무엇일까요?<br><br>오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br>\n제가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리는 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"저라는 존재의 본질은 저를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 600px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n내게 있어 만남의 의미는<br>\n만남과 만남의 연속에서<br>\n저라는 존재가 만들어져 간다는 것입니다.<br><br>\n그렇게 해서<br>\n저는 새로운 제가 되고 또 당신이 되어져 가는 것이겠지요.<br><br>\n그래서 아마 우리는 서로 비슷해지는가 봅니다.<br>\n이제는 조금 알 것 같습니다.<br><br>\n저라는 개체의 독립성은 저를 위한 것이 아닌 당신을 위한 것이란 것을<br>\n당신을 위한 것이 저를 위하는 것이란 것을<br><br>\n저를 통한 저라는 존재는 더욱더 옅어지고<br>\n당신을 통한 저의 존재는 더욱 뚜렷해지기를.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "title": "우리 이렇게 오늘도",
+            "text": "살아간다는 것이 무엇일까요?<br><br>오늘 하루, 그리고 또 하루 당신을 만나는 만남이 소중한 시간입니다.<br>\n제가 나로서 존재하고<br>\n당신은 당신으로 존재하면서<br>\n존재의 본질은 각자가 아닌 서로에게 있음을 느끼며<br>\n우리는 이렇게 오늘도 살아갑시다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.1em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: center; font-weight: 600; word-break: keep-all;\">\n\"저라는 존재의 본질은 저를 인지하는 당신, 그리고 '우리' 속에 있는 것일지 모릅니다.\"\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": null,
+            "type": "image_top",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1825,12 +1893,22 @@ var bookData = {
         {
             "type": "poem",
             "title": "현장에서 배워야 할 것들",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 제가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 저는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도 제가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아 다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br> 제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?</div></p>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n현장에서 배워야 할 것들은<br>오늘의 제가 배워야 할 것들은<br>기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 저는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "type": "poem",
+            "title": "현장에서 배워야 할 것들",
+            "text": "아직도 제가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아 다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br> 제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?</div></p>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": null,
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -2116,13 +2194,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "귀를 통해 마음으로 들어간 것이",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 40px; display: inline-block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있습니다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 합니다<br><br>\n\n가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 됩니다<br><br>\n\n근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다 보니<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌면 좋을까요?\n</p>\n</div>\n\n<div style=\"margin: 20px auto 40px auto; text-align: center;\">\n <img src=\"static/images/art_wait_sketch. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;\">\n</div>\n\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;\">\n <img src=\"static/images/art_wait_grey. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_glow. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이제 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 40px; display: inline-block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있습니다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 합니다<br><br>\n\n가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 됩니다",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 4] 미완의 일상",
+            "title": "귀를 통해 마음으로 들어간 것이",
+            "text": "근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다 보니<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌면 좋을까요?\n</p>\n</div>\n\n<div style=\"margin: 20px auto 40px auto; text-align: center;\">\n <img src=\"static/images/art_wait_sketch. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 16px;\">\n</div>\n\n<blockquote style=\"margin-top: 40px; padding: 24px; background-color: #f5f5f7; border-radius: 12px; color: #333333; font-size: 15px; line-height: 1.6; border-left: 3px solid #333333;\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: center;\">\n <img src=\"static/images/art_wait_grey. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_1.jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <img src=\"static/images/art_wait_glow. jpg\" style=\"width: 100%; max-width: 500px; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n <span style=\"font-size: 13px; color: #888; display: block; text-align: center; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이제 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "image": null,
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2164,13 +2254,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "고상하다는 것은",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바쁘게 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.<br><br>\n가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 제 눈에 보이는 것, 제가 만나는 사람과 풍경에 감정을 담아야겠습니다. 그러면 될 것 같습니다.\n</blockquote>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block; word-break: keep-all;\">\n고상하다는 것은<br>\n부끄러워할 줄 안다는 것이며,<br><br>\n명예롭다는 것은<br>\n거래할 수 없다는 것이며,<br><br>\n위엄이 있다는 것은<br>\n살기 위한 술수를 부리지 않는다는 것입니다.<br><br>\n마을 버스 정류장에 거울이 달려 있습니다.<br>\n누군가 친절하게 나무 받침을 만들고<br>\n그 위에 반원형 거울을 달아 놓았습니다.<br><br>\n버스에 앉아 창 밖 떡집을 지날 때면<br>\n바쁘게 손을 움직이며, 함께하는 부부의 모습을 가만히 봅니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "고상하다는 것은",
+            "text": "가족과 한동안 떨어져 홀로 있는 아비에게<br>\n전화로 잘못했다 흐느끼는 아들과<br>\n그런 아들을 토닥였다는 아비의 글을 봅니다.<br><br>\n오늘 하루가<br>\n고맙습니다.<br>\n그리고 감사한 일입니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 1.0em; color: #555; line-height: 1.6; border: none; margin-top: 40px; text-align: left; font-weight: 500;\">\n현재를 살아가야겠습니다. 현재 제 눈에 보이는 것, 제가 만나는 사람과 풍경에 감정을 담아야겠습니다. 그러면 될 것 같습니다.\n</blockquote>",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "image": null,
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -2298,13 +2400,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "우리가 이렇게 살아갑니다",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n우리가 이렇게 살아갑니다<br><br>\n우린 이렇게 살아가고 있습니다.<br><br>\n차가운 콘크리트를 사이에 두고<br>\n좌우 아래위로 붙어있는 아파트<br><br>\n최소의 이격거리가 최대의 이격거리가 되어<br>\n서로 따닥따닥 붙어있는 다세대 빌라<br><br>\n우리가 살고 있는 집들은 거의가 공동주택입니다.<br>\n공동주택입니다. 즉 함께하는 주거의 틀은 이미 되어있습니다.<br><br>\n하지만,<br>\n우리는 바라봄을 위한 떨어짐이 없기에<br>\n보여지길 두려워 가리고 또 가립니다.<br><br>\n제 소리 남이 들을까<br>\n남의 소리 차단하고<br><br>\n서로가 없는 듯 있는 듯<br>\n죽은 척 살아가기를 바랍니다.<br><br>\n너무 가까이 살기에<br>\n서로에게 멀어지기 위해<br>\n닫고 닫아<br><br>\n상대와 제가 멀리 떨어진 것처럼<br>\n그렇게 상대와 제가 없는 것처럼<br>\n그렇게 우리는 이렇게 살아가고 있습니다.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n우리가 이렇게 살아갑니다<br><br>\n우린 이렇게 살아가고 있습니다.<br><br>\n차가운 콘크리트를 사이에 두고<br>\n좌우 아래위로 붙어있는 아파트<br><br>\n최소의 이격거리가 최대의 이격거리가 되어<br>\n서로 따닥따닥 붙어있는 다세대 빌라",
             "image": null,
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "우리가 이렇게 살아갑니다",
+            "text": "우리가 살고 있는 집들은 거의가 공동주택입니다.<br>\n공동주택입니다. 즉 함께하는 주거의 틀은 이미 되어있습니다.<br><br>\n하지만,<br>\n우리는 바라봄을 위한 떨어짐이 없기에<br>\n보여지길 두려워 가리고 또 가립니다.<br><br>\n제 소리 남이 들을까<br>\n남의 소리 차단하고<br><br>\n서로가 없는 듯 있는 듯<br>\n죽은 척 살아가기를 바랍니다.<br><br>\n너무 가까이 살기에<br>\n서로에게 멀어지기 위해<br>\n닫고 닫아<br><br>\n상대와 제가 멀리 떨어진 것처럼<br>\n그렇게 상대와 제가 없는 것처럼<br>\n그렇게 우리는 이렇게 살아가고 있습니다.\n</p>\n</div>",
+            "image": null,
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2488,13 +2602,25 @@ var bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "'조은 슈퍼'",
-            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있습니다.<br><br>\n저는 화곡동 언덕에 살고 있습니다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있습니다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있습니다<br>\n그 옆에 의자도 있습니다.<br><br>\n낮과 밤에 잠시 모였다 흩어집니다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있습니다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아갑니다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있습니다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있습니다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어갑니다.\n</p>\n</div>",
+            "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n'조은 슈퍼'<br><br>\n조은 슈퍼란 좋은 가게가 있습니다.<br><br>\n저는 화곡동 언덕에 살고 있습니다.<br>\n힘겹게 올라온 언덕 위에 조은 슈퍼가 있습니다.<br><br>\n그곳에는 누구나 잠시 앉았다<br>\n쉬어갈 수 있는 평상이 놓여 있습니다<br>\n그 옆에 의자도 있습니다.",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": null,
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "'조은 슈퍼'",
+            "text": "낮과 밤에 잠시 모였다 흩어집니다.<br><br>\n낮과 밤에 가파른 언덕 위<br>\n우리 동네에는 공동 택배 보관소가 있습니다.<br><br>\n물건을 찾는 사람도 맡기는 사람도<br>\n부담 없이 이용하는 '조은 슈퍼'<br>\n맡기고 내려가고 올라와 찾아갑니다.<br><br>\n한쪽 구석에 아직 찾아가지 않은<br>\n택배 물건들이 차곡히 쌓여있습니다.<br>\n우리 집 앞에는 '조은 슈퍼'가 있습니다.<br><br>\n조금씩 배려하고 조금씩 내어 놓으면<br>\n그렇게 사람이 모이고<br>\n그렇게 서로 어우러지고<br>\n그렇게 서로 정이 들어갑니다.\n</p>\n</div>",
+            "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
+            "image": null,
+            "type": "poem",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
