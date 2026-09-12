@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242392" />
+    <link rel="stylesheet" href="style.css?v=20242393" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -612,7 +612,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242392"></script>
+    <script src="book_data.js?v=20242393"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -748,8 +748,8 @@ let currentChapter = 0;
           
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242392";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242392";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242393";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242393";
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.75);";
@@ -794,7 +794,7 @@ let currentChapter = 0;
             // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
             contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
           }
-          contentHTML += '<div class="' + (page.type === "cover" ? "cover-text-container" : "") + '" style="' + textContainerStyle + '">';
+          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" || page.type === "author_profile" ? "display: none;" : "") + '">';
 
 
           if (page.title) {
