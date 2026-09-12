@@ -2,7 +2,7 @@ const bookData = {
     "pages": [
         {
             "title": "도면 위의 공유결합",
-            "image": "static/images/gallery_cover.jpg",
+            "image": "static/images/gallery_cover_v2.jpg",
             "text": "<p style=\"text-align:center; font-size:1.1em; color:#333; margin-top:24px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
             "type": "cover"
         },
