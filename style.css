@@ -469,14 +469,8 @@ input[type="file"] {
 }
 
 /* -- Cover Design (Dark Mode) -- */
-.page-content.bg-dark {
-  background-color: var(--surface-tile-1, #272729);
-  color: var(--canvas, #ffffff);
-}
-.page-content.bg-dark h1.book-title,
-.page-content.bg-dark p {
-  color: var(--canvas, #ffffff) !important;
-}
+
+
 
 /* -- Chapter Title Redesign -- */
 h2.chapter-title {
