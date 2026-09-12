@@ -131,7 +131,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "균형"
+            "keywords": "관계"
         },
         {
             "type": "text",
@@ -142,7 +142,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "균형"
+            "keywords": "관계"
         },
         {
             "type": "text",
@@ -152,7 +152,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "균형"
+            "keywords": "관계"
         },
         {
             "type": "text",
@@ -259,7 +259,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "환경"
+            "keywords": "순응"
         },
         {
             "type": "image_top",
@@ -272,7 +272,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "환경"
+            "keywords": "순응"
         },
         {
             "type": "image_top",
@@ -284,7 +284,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "환경"
+            "keywords": "순응"
         },
         {
             "type": "poem",
@@ -385,7 +385,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "긴장"
+            "keywords": "여백"
         },
         {
             "type": "image_top",
@@ -398,7 +398,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "긴장"
+            "keywords": "여백"
         },
         {
             "type": "image_top",
@@ -623,7 +623,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -636,7 +636,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -649,7 +649,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -662,7 +662,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -675,7 +675,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -687,7 +687,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "실현"
+            "keywords": "구상"
         },
         {
             "type": "image_top",
@@ -700,7 +700,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "생성"
+            "keywords": "과정"
         },
         {
             "type": "image_top",
@@ -713,7 +713,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "생성"
+            "keywords": "과정"
         },
         {
             "type": "image_top",
@@ -726,7 +726,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "생성"
+            "keywords": "과정"
         },
         {
             "type": "image_top",
@@ -739,7 +739,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "생성"
+            "keywords": "과정"
         },
         {
             "type": "image_top",
@@ -751,7 +751,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "생성"
+            "keywords": "과정"
         },
         {
             "image": "static/images/act2_white.jpg",
@@ -936,7 +936,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "겸손"
+            "keywords": "가치"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -949,7 +949,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "겸손"
+            "keywords": "가치"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -961,7 +961,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "겸손"
+            "keywords": "가치"
         },
         {
             "title": "양팔에 낀 토시",
@@ -972,7 +972,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "헌신"
+            "keywords": "일상"
         },
         {
             "title": "양팔에 낀 토시",
@@ -983,7 +983,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "헌신"
+            "keywords": "일상"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1554,7 +1554,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "통찰"
+            "keywords": "사유"
         },
         {
             "type": "image_top",
@@ -1567,7 +1567,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "통찰"
+            "keywords": "사유"
         },
         {
             "type": "poem",
@@ -1580,7 +1580,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "방향"
+            "keywords": "궤적"
         },
         {
             "type": "poem",
@@ -1593,7 +1593,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "방향"
+            "keywords": "궤적"
         },
         {
             "type": "image_top",
@@ -1818,7 +1818,7 @@ const bookData = {
             "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "지속"
+            "keywords": "연대"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1831,7 +1831,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "지속"
+            "keywords": "연대"
         },
         {
             "type": "image_top",
@@ -1844,7 +1844,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "축적"
+            "keywords": "시간"
         },
         {
             "type": "image_top",
@@ -1857,7 +1857,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "축적"
+            "keywords": "시간"
         },
         {
             "type": "poem",
@@ -1902,7 +1902,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "삶"
+            "keywords": "밀도"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1915,7 +1915,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "삶"
+            "keywords": "밀도"
         },
         {
             "type": "text",
@@ -1957,7 +1957,7 @@ const bookData = {
             "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "이해"
+            "keywords": "타자"
         },
         {
             "image": null,
@@ -1967,7 +1967,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "이해"
+            "keywords": "타자"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2096,7 +2096,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "관점"
+            "keywords": "공감"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2109,7 +2109,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "관점"
+            "keywords": "공감"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2148,7 +2148,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "스며듦"
+            "keywords": "경청"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2161,7 +2161,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "스며듦"
+            "keywords": "경청"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2174,7 +2174,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "스며듦"
+            "keywords": "경청"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2187,7 +2187,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "스며듦"
+            "keywords": "경청"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2274,7 +2274,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "인연"
+            "keywords": "조화"
         },
         {
             "type": "image_top",
@@ -2287,7 +2287,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "인연"
+            "keywords": "조화"
         },
         {
             "type": "image_top",
@@ -2299,7 +2299,7 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
             "isContinuation": true,
-            "keywords": "인연"
+            "keywords": "조화"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2338,7 +2338,7 @@ const bookData = {
             "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "풍경"
+            "keywords": "실존"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2351,7 +2351,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "풍경"
+            "keywords": "실존"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2363,7 +2363,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "풍경"
+            "keywords": "실존"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2376,7 +2376,7 @@ const bookData = {
             "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "안식"
+            "keywords": "휴식"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2389,7 +2389,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "안식"
+            "keywords": "휴식"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2401,7 +2401,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "안식"
+            "keywords": "휴식"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2413,7 +2413,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "안식"
+            "keywords": "휴식"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2425,7 +2425,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "안식"
+            "keywords": "휴식"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2784,7 +2784,7 @@ const bookData = {
             "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2797,7 +2797,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2809,7 +2809,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2821,7 +2821,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2833,7 +2833,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2845,7 +2845,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "type": "poem",
@@ -2857,7 +2857,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "망각"
+            "keywords": "흔적"
         },
         {
             "part": "제4막: 증언과 성찰",
