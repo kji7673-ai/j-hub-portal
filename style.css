@@ -1151,3 +1151,66 @@ h2.chapter-title {
   color: #1a1a1c !important;
 }
 
+
+/* =========================================
+   V.97 사전 전수 조사에 따른 선제적 보완 패치
+========================================= */
+
+/* 1. 모바일 좌우 여백(Padding) 추가 (텍스트/액자가 화면 끝에 닿는 치명적 어색함 방지) */
+.gallery-content-wrapper {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  padding: 60px 24px 120px 24px !important; /* 좌우 24px 여백 필수 */
+}
+
+@media (min-width: 768px) {
+  .gallery-content-wrapper {
+    padding: 80px 40px 150px 40px !important; /* PC는 더 넓은 여백 */
+  }
+}
+
+/* 2. 액자(조각상) 디테일 상향: 진짜 아크릴 같은 모서리 마감과 그림자 튜닝 */
+.art-frame {
+  max-width: 650px !important;
+  border-radius: 6px !important; /* 완전 직각보다 살짝 둥글게(아크릴 가공 느낌) */
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  /* 모바일에서도 과하지 않은 우아한 다중 그림자 */
+  box-shadow: 
+    0 4px 6px rgba(0,0,0,0.02),
+    0 10px 20px rgba(0,0,0,0.06), 
+    0 25px 45px rgba(0,0,0,0.1) !important;
+  margin-bottom: 60px !important; /* 액자와 하단 텍스트 사이의 숨통 트기 */
+}
+
+/* 3. 시트지 레터링 텍스트 블록 정렬 및 자간 최적화 */
+.vinyl-text {
+  max-width: 600px;
+  margin: 0 auto; /* 액자 아래에서 텍스트 블록 전체를 중앙에 위치 (내부 텍스트는 좌측 정렬 유지) */
+}
+
+.vinyl-text h2.chapter-title {
+  text-align: center !important; /* 작품명(제목)은 액자 중앙에 맞춰 가운데 정렬 */
+  margin-bottom: 40px !important;
+  font-size: 28px !important;
+  letter-spacing: -0.5px !important;
+  font-weight: 700 !important;
+  color: #111 !important;
+}
+
+.vinyl-text p {
+  text-align: left !important; /* 본문은 읽기 편하게 좌측 정렬 */
+  font-size: 16.5px !important;
+  line-height: 1.7 !important; /* 레터링 특성상 약간 더 넉넉한 줄간격이 아름다움 */
+  color: #222 !important;
+  margin-bottom: 28px !important;
+}
+
+/* 4. 시/에세이 하단 주석(blockquote) 갤러리 캡션화 */
+.vinyl-text blockquote.poem-note {
+  margin-top: 60px !important;
+  padding-top: 30px !important;
+  border-top: 1px solid rgba(0,0,0,0.08) !important;
+  font-size: 14px !important;
+  color: #666 !important;
+  line-height: 1.6 !important;
+}
