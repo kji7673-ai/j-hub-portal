@@ -929,3 +929,21 @@ h2.chapter-title {
     font-weight: 600;
     color: #555;
 }
+
+/* 모바일 이미지 터치 스크롤 먹통 방지 (안티 드래그) */
+img {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-touch-callout: none !important;
+  pointer-events: auto; 
+}
+
+/* 스크롤 강제 활성화 보증 */
+.page-content {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-y: contain !important; /* 부모(바디)로 스크롤 전이 차단 */
+}
