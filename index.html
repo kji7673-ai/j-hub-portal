@@ -458,7 +458,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242317"></script>
+    <script src="book_data.js?v=20242318"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -473,6 +473,7 @@
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
           if (page.isContinuation === true) return;
+          if (page.isImageOnly === true) return; // 이미지 전용 페이지는 목차에서 건너뜀 (다음 텍스트 페이지가 목차의 주인이 됨)
           if (
             page.title &&
             page.title.trim() !== "" &&
@@ -611,9 +612,9 @@
           // Inline top image (skip for continuation pages)
           if (page.image && !isCont) {
             contentHTML +=
-              '<div style="margin-bottom: ' + (isImgOnly && !page.title ? '0' : '40px') + '; text-align: center; width: 100%;"><img src="' +
+              '<div style="margin-bottom: ' + (isImgOnly ? '0' : '40px') + '; text-align: center; width: 100%;"><img src="' +
               page.image +
-              '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;">';
+              '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; max-height: 70vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;">';
             if (page.caption) {
               contentHTML +=
                 '<div class="image-caption">' +
@@ -623,11 +624,10 @@
             contentHTML += "</div>";
           }
 
-          if (page.title && !isCont) {
-            const titleAlign = isImgOnly ? 'center' : 'left';
-            const titleMargin = isImgOnly ? '20px' : '40px';
+          // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
+          if (page.title && !isCont && !isImgOnly) {
             contentHTML +=
-              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:' + titleMargin + '; letter-spacing:-0.5px; line-height:1.4; text-align:' + titleAlign + '; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
+              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:40px; letter-spacing:-0.5px; line-height:1.4; text-align:left; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
               page.title +
               "</h1>";
           }

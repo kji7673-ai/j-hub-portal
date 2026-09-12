@@ -34,7 +34,7 @@ var bookData = {
             "partCategory": "",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -73,7 +73,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -96,7 +96,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -159,7 +159,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -205,7 +205,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -228,7 +228,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -280,7 +280,7 @@ var bookData = {
             "text": "다음에 이어질 제가 생각하는 디자인의 개념들을 보면, 얼핏 의아하실 수도 있습니다. '존중, 순응, 귀 기울임' 같은 단어들은 일반적으로 말하는 현란한 디자인 기법처럼 들리지 않기 때문입니다.<br><br>\n맞습니다. 사람과의 부대낌 속에서 이 깨달음을 얻은 것인지, 아니면 수많은 건축 설계를 거치며 자연스레 배운 것인지 저조차도 그 순서를 잘 모르겠습니다. 하지만 분명한 것은, 이 개념들이 사람을 대할 때나 공간을 빚어낼 때 저에게 언제나 동일한 원칙으로 적용된다는 사실입니다.<br><br>\n어쩌면 이것은 비단 건축 설계만이 아니라, 우리가 세상을 살아가며 맺는 모든 '관계'에 똑같이 적용되는 본질일지도 모르겠습니다.<br><br>",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "bridge",
@@ -312,7 +312,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -357,7 +357,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -402,7 +402,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -458,7 +458,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -503,7 +503,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -537,7 +537,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -567,7 +567,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -586,7 +586,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -614,7 +614,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -662,7 +662,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -695,7 +695,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -751,7 +751,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -785,7 +785,7 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -813,7 +813,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -836,7 +836,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -870,7 +870,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -893,7 +893,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -971,7 +971,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1016,7 +1016,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1057,7 +1057,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1080,7 +1080,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1114,7 +1114,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1137,7 +1137,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1171,7 +1171,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1205,7 +1205,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1239,7 +1239,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1284,7 +1284,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1318,7 +1318,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1341,7 +1341,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1386,7 +1386,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1416,7 +1416,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "title": "만지작거리고 바스락거린다",
@@ -1448,7 +1448,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1471,7 +1471,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1494,7 +1494,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1517,7 +1517,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1540,7 +1540,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -1563,7 +1563,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -1597,7 +1597,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1627,7 +1627,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -1650,7 +1650,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -1695,7 +1695,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1718,7 +1718,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1741,7 +1741,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1764,7 +1764,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1783,7 +1783,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1815,7 +1815,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1850,7 +1850,7 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -1880,7 +1880,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -1912,7 +1912,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -1931,7 +1931,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -1975,7 +1975,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1998,7 +1998,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2043,7 +2043,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2077,7 +2077,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2100,7 +2100,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2134,7 +2134,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2157,7 +2157,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2180,7 +2180,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2203,7 +2203,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2226,7 +2226,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -2245,7 +2245,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text",
@@ -2277,7 +2277,7 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -2344,7 +2344,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2378,7 +2378,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2423,7 +2423,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2501,7 +2501,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2584,7 +2584,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2607,7 +2607,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2652,7 +2652,7 @@ var bookData = {
             "type": "image_top",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2741,7 +2741,7 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "image_top",
@@ -2852,7 +2852,7 @@ var bookData = {
             "image": null,
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "text_only",
@@ -2908,7 +2908,7 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "poem",
@@ -2975,7 +2975,7 @@ var bookData = {
             "type": "poem",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -3027,7 +3027,7 @@ var bookData = {
             "partCategory": "",
             "caption": null,
             "isTextAfterImage": true,
-            "isContinuation": true
+            "isContinuation": false
         },
         {
             "type": "epilogue",
