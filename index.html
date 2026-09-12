@@ -458,7 +458,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242306"></script>
+    <script src="book_data.js?v=20242310"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -472,6 +472,7 @@
 
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
+          if (page.isContinuation === true) return;
           if (
             page.title &&
             page.title.trim() !== "" &&
@@ -583,17 +584,19 @@
           contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
+          const isCont = page.isContinuation === true;
+          const topPadding = isCont ? '40px' : '100px';
           bgHTML =
             '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
 
           contentHTML =
             bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 100px 5% 200px 5%; box-sizing: border-box;">';
+            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% 100px 5%; box-sizing: border-box;">';
           contentHTML +=
             '<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start;">';
 
-          // Inline top image
-          if (page.image) {
+          // Inline top image (skip for continuation pages)
+          if (page.image && !isCont) {
             contentHTML +=
               '<div style="margin-bottom: 40px; text-align: center;"><img src="' +
               page.image +
@@ -607,7 +610,7 @@
             contentHTML += "</div>";
           }
 
-          if (page.title) {
+          if (page.title && !isCont) {
             contentHTML +=
               '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:40px; letter-spacing:-0.5px; line-height:1.4; text-align:left; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
               page.title +
@@ -682,7 +685,7 @@
         }
 
         contentHTML +=
-          '</div><div style="height: 150px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
+          '</div><div style="height: 80px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);
 
