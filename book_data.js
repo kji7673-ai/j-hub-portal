@@ -9,17 +9,9 @@ var bookData = {
         {
             "partCategory": "저자 소개",
             "title": "김중일",
-            "text": "",
-            "image": "static/images/gallery_batch10_frame1.jpg",
-            "isImageOnly": true
-        },
-        {
-            "partCategory": "저자 소개",
-            "title": "김중일",
             "text": "서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 치열한 순간들에 대한 감사의 기록입니다.",
-            "image": null,
-            "caption": null,
-            "isTextAfterImage": true
+            "image": "static/images/gallery_batch10_frame1.jpg",
+            "type": "author_profile"
         },
         {
             "type": "image_top",
@@ -41,7 +33,8 @@ var bookData = {
             "part": "제1막: 프롭테크와 정비사업의 미래",
             "partCategory": "",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -79,7 +72,8 @@ var bookData = {
             "text": "공유결합은 원자들이 각자의 전자를 내어놓아 함께 공유하며, 홀로일 때보다 더 안정적인 상태를 이루는 화학적 현상입니다.<br>\n<br>\n저는 이 원리가 건축과 닮았다고 생각했습니다.<br>\n빛과 공간, 형태와 흐름, 그리고 사람의 의도가 서로의 빈자리를 채우며 하나의 건축이 되는 과정.<br>\n그것이 제가 '공유결합'이라는 낯선 화학 용어를 도면 위에 빌려온 이유입니다.<br>\n<br>\n제1막에서는 이 결합의 원리를 건축이라는 언어로 어떻게 풀어냈는지,<br>\n도면과 현장, 공간과 디테일 속에 녹아든 디자인 방법론에 대해 이야기합니다.",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -101,7 +95,8 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -163,7 +158,8 @@ var bookData = {
             "text": "가장 사적인 관계에서 발견한 '공유결합'의 온기는, 이제 저의 작업실을 넘어 도면을 들고 만나는 치열한 현장으로 확장되어야 했습니다.<br><br>\n그렇다면 이제 저의 도면이 닿아야 할 그 '상대'들은 과연 어떤 분들일까요?<br><br>\n여기서 우리가 절대 오해하면 안 되는 것이 있습니다. 설계자가 현장에서 만나는 시공사, 관공서, 조합의 수많은 사람들을 그들이 속한 '이익 집단'이라는 꼬리표 하나로 묶어 쉽게 치부해 버려서는 안 된다는 점입니다.<br><br>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -208,7 +204,8 @@ var bookData = {
             "text": "설계는 단지 도면 위에 선을 그리는 행위가 아닙니다.<br>진짜 설계는 다음의 세 가지 요소에서 출발합니다.<br><br>관계 속에서 흔들리지 않는 <strong>'나만의 기준'</strong>을 세우고 본질의 무게를 다지는 것.<br>때로는 저를 철저히 비워냄으로써, 서로 다른 이들의 투박한 언어조차 둥글게 이해하고 껴안을 수 있는 <strong>'여유'</strong>를 갖는 것.<br>그리고 거대한 욕망이 격돌하는 <strong>'진짜 현장(회의 테이블)의 이면'</strong>을 꿰뚫어 보는 것.<br><br>자신의 기준, 타인을 향한 여유, 현장을 보는 시선.<br>이 세 가지 요소가 하나로 맞물릴 때, 비로소 어떠한 외풍에도 흔들리지 않는 가장 단단한 신뢰, 즉 '공유결합'이 완성됩니다.",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -230,7 +227,8 @@ var bookData = {
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -281,7 +279,8 @@ var bookData = {
             "image": null,
             "text": "다음에 이어질 제가 생각하는 디자인의 개념들을 보면, 얼핏 의아하실 수도 있습니다. '존중, 순응, 귀 기울임' 같은 단어들은 일반적으로 말하는 현란한 디자인 기법처럼 들리지 않기 때문입니다.<br><br>\n맞습니다. 사람과의 부대낌 속에서 이 깨달음을 얻은 것인지, 아니면 수많은 건축 설계를 거치며 자연스레 배운 것인지 저조차도 그 순서를 잘 모르겠습니다. 하지만 분명한 것은, 이 개념들이 사람을 대할 때나 공간을 빚어낼 때 저에게 언제나 동일한 원칙으로 적용된다는 사실입니다.<br><br>\n어쩌면 이것은 비단 건축 설계만이 아니라, 우리가 세상을 살아가며 맺는 모든 '관계'에 똑같이 적용되는 본질일지도 모르겠습니다.<br><br>",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "bridge",
@@ -312,7 +311,8 @@ var bookData = {
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -356,7 +356,8 @@ var bookData = {
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -400,7 +401,8 @@ var bookData = {
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -455,7 +457,8 @@ var bookData = {
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -499,7 +502,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -532,7 +536,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -561,7 +566,8 @@ var bookData = {
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n디자인은 어디서 나오는 것일까요?<br>감각이나 방대한 지식에서 나오는 것일까요?<br><br>제가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다.<br><br>타인에 대한 배려와 관심,<br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다.<br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민,<br>그리고 바람과 조망에 대한 깊은 공감이 있을 때<br>진짜 설계가 나옵니다.<br>거창한 논리보다 먼저 다정한 사람이 되시길 바랍니다.<br><br>다정한 디자인\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. 설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고... 그때 그 말에 참 부끄러웠습니다.\n</blockquote>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -579,7 +585,8 @@ var bookData = {
             "text": "타인을 향한 '다정한 마음'을 품고 나만의 단단한 기준을 세웠다고 해서 모든 설계가 술술 풀릴까요? 결코 그렇지 않습니다. 마음을 다듬은 건축가가 도면을 들고 나서는 곳은, 어쩌면 다정함과는 거리가 먼 치열한 현실이기 때문입니다.<br><br>\n우리가 매일매일 새로운 아침을 맞이하는 이유는, 어쩌면 어제와는 다른 상황 속에서 다시 한번 부딪히고 배워보라는 새로운 기회가 주어지는 것 아닐까요. 실패했다면 과거에 매이지 말고 온전히 '현재'에 집중하라고 말입니다. 삶을 현재로 살지 못하고, 과거의 실패나 과거의 영광된 기억만이 현재를 채우는 순간… 그것이 곧 살아있으나 죽은 상태일지도 모릅니다.<br><br>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -606,7 +613,8 @@ var bookData = {
             "text": "<p style=\"margin-bottom: 24px;\">그 거대한 욕망이 격돌하는 '진짜 현장'이란 과연 어디일까요? 수소와 산소가 만나 폭발적인 결합을 일으키는 궁극적인 무대는, 단순히 눈에 보이는 물리적 대지나 공사판이 아닙니다. 그것은 정치와 정책, 그리고 끝없는 욕망이 뒤엉킨 거대한 '이해관계의 테이블'입니다.</p>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -653,7 +661,8 @@ var bookData = {
             "part": "제1막: 시스템편 (디지털 플랫폼 모델)",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -685,7 +694,8 @@ var bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -740,7 +750,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -773,7 +784,8 @@ var bookData = {
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -800,7 +812,8 @@ var bookData = {
             "text": "건강한 결합의 절대적인 전제 조건이 있습니다.<br>\n결합하는 각 원자가, 먼저 스스로 온전하고 독립적이어야 한다는 것입니다.<br>\n<br>\n불안정한 원자끼리 만나면 결합이 아니라 붕괴가 일어납니다.<br>\n사람도 마찬가지입니다.<br>\n<br>\n타인과 진정한 관계를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단해져야 합니다.<br>\n<br>\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n쪼개지고 부서지면서도 결국 자기 자신의 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.<br><br>1막에서 도면 위의 물리적, 시간적, 인간적, 제도적 결합을 이야기했다면, 2막은 이 거대한 결합을 감당해내기 위해 건축가 개인이 현장과 도시에서 겪어내야 했던 '내면의 생존과 독립'에 대한 뼈아픈 기록입니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -822,7 +835,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -855,7 +869,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -877,7 +892,8 @@ var bookData = {
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -954,7 +970,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -998,7 +1015,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1038,7 +1056,8 @@ var bookData = {
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n지금 사람들은 이해하기 어렵겠지만,<br>연필로 설계할 때면 팔뚝이 흑연으로 인해 새카맣게 되곤 해서<br>양팔에 토시를 낍니다.<br><br>어느 날<br>회사 임원 분 중에 한 분이<br>넌<br>그 토시를 벗지 않는 한<br><br>평생 남들 설계만 해줄 거라며,<br>빨리 그놈의 토시부터 벗어 버리란 이야기를 했었습니다.<br><br>아마도 설계만이 아닌 기획과 영업 능력을 키우란 말이겠지요.<br>근데, 전 아직도 토시를 벗기에는 모르는 게 너무 많습니다.<br>예전 첫 직장에서 화장실 하나로 일주일을 밤새 고민하던 그 시절이 그립습니다.\n</p>\n</div>\n\n<blockquote style=\"background: rgba(0, 0, 0, 0.04); border-radius: 8px; padding: 20px 24px; font-size: 0.9em; color: #555; line-height: 1.6; border: none; margin-top: 40px;\">\n전 아직도 설계를 하고 싶습니다. 회의 테이블 위에서의 차가운 숫자 놀음이 아닌... 흑연이 묻어저는 진짜 설계를 말입니다.\n</blockquote>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1060,7 +1079,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1093,7 +1113,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1115,7 +1136,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1148,7 +1170,8 @@ var bookData = {
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1181,7 +1204,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1214,7 +1238,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1258,7 +1283,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1291,7 +1317,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1313,7 +1340,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1357,7 +1385,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1386,7 +1415,8 @@ var bookData = {
             "text": "<div style=\"text-align: center; max-width: 500px; margin: 0 auto;\">\n<p style=\"text-align: left; line-height: 1.85; font-size: 1.1em; color: #333; margin-top: 40px; margin-bottom: 60px; display: inline-block;\">\n먹고 저는 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br><br>그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br><br>저는 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br><br>이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br><br>텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 제 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br><br>습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br><br>서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,</div></p>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "title": "만지작거리고 바스락거린다 (계속)",
@@ -1417,7 +1447,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1439,7 +1470,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1461,7 +1493,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1483,7 +1516,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1505,7 +1539,8 @@ var bookData = {
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -1527,7 +1562,8 @@ var bookData = {
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -1560,7 +1596,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1589,7 +1626,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -1611,7 +1649,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -1655,7 +1694,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1677,7 +1717,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1699,7 +1740,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1721,7 +1763,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1739,7 +1782,8 @@ var bookData = {
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1770,7 +1814,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1804,7 +1849,8 @@ var bookData = {
             "partTitle": "현장의 기록",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -1833,7 +1879,8 @@ var bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -1864,7 +1911,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -1882,7 +1930,8 @@ var bookData = {
             "text": "<p style=\"margin-bottom: 24px;\">흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 저를 찾는 사색이 아니라, <strong>'저의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -1925,7 +1974,8 @@ var bookData = {
             "text": "홀로 단단해진 원자는, 결국 다른 원자를 만나야만 비로소 '분자'가 됩니다.<br>\n혼자서는 완성될 수 없는 것들이 세상에는 너무나 많기 때문입니다.<br>\n<br>\n독립된 개체가 문을 열고 세상으로 나아가 타인과 부딪히는 순간,<br>\n비로소 결합은 시작됩니다.<br>\n<br>\n서로의 마음을 이해하려다 실패하고, 그래도 다시 다가서며,<br>\n결국 사람과 사람이 서로를 자라게 하는 숲을 이루어가는 과정.<br>\n<br>\n제3막은 도면 위에서, 그리고 도면 밖의 삶에서<br>\n타인들과 치열하게 부딪히고 깨지며 알게 된<br>\n사람에 대한 단편들입니다.<br><br>결국 모든 결합의 완성은 '사회적 실천'으로 이어집니다. 물리적, 제도적 결합을 넘어, 3막은 타인과 부딪히며 다름을 이해하고 마침내 더 큰 사회적 결합(공동체)으로 나아가는 가장 따뜻한 관계의 이야기입니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1947,7 +1997,8 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1991,7 +2042,8 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2024,7 +2076,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2046,7 +2099,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2079,7 +2133,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2101,7 +2156,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2123,7 +2179,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2145,7 +2202,8 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2167,7 +2225,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -2185,7 +2244,8 @@ var bookData = {
             "text": "저를 비우고 나면, 그 빈자리에 누군가를 채울 수 있는 여유가 생깁니다. 이것이 결합의 두 번째 조건, 바로 <strong>\"받아들일 수 있는 여유\"</strong>입니다.<br><br>\n건축은 결국 다른 사람의 삶을 온전히 껴안는 법을 배우는 과정입니다. 제가 그은 선 하나가 누군가에게는 평생의 전 재산이 걸린 집이 되고, 누군가가 매일 아침 눈을 뜨는 방이 되기 때문입니다. 조합원들의 불안한 눈빛, 시공사의 차가운 계산기, 인허가권자의 굳은 표정… 이 모든 '상대'들을 온전히 껴안지 못하면 건축은 탁상공론에 머물고 맙니다.<br><br>",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text",
@@ -2216,7 +2276,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -2282,7 +2343,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2315,7 +2377,8 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2359,7 +2422,8 @@ var bookData = {
             "image": null,
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2436,7 +2500,8 @@ var bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2518,7 +2583,8 @@ var bookData = {
             "text": "도면 위에서 시작된 고민은 '나'라는 개인의 자아를 거쳐, '너'라는 타인과의 관계를 맺는 법으로 확장되었습니다. 그리고 이제 이 책의 마지막 도착지인 '우리'를 향해 나아갑니다.<br><br>건축은 결국 혼자 사는 집을 넘어, 함께 어우러져 살아가는 마을과 공동체를 만드는 일입니다. 나와 너의 1:1 관계(제3막)가 무수히 얽히고설켜 하나의 거대한 사회적 생태계를 이루는 것.<br><br>각기 다른 삶의 방식과 기억을 가진 사람들이 한 공간 안에서 서로의 선을 지키면서도 결핍을 채워주는 '공동체 주택'. 이곳이야말로 제가 그토록 찾고자 했던 궁극적인 '공유결합'의 완성형일지도 모릅니다.<br><br>마지막 제4막에서는 단순한 집을 넘어 '마음'을 지어 올렸던, 땀 나 나고 치열했던 공동체 설계의 현장으로 안내합니다.",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2540,7 +2606,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2584,7 +2651,8 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "type": "image_top",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2672,7 +2740,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "image_top",
@@ -2782,7 +2851,8 @@ var bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": null,
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "text_only",
@@ -2837,7 +2907,8 @@ var bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "poem",
@@ -2903,7 +2974,8 @@ var bookData = {
             "image": null,
             "type": "poem",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2954,7 +3026,8 @@ var bookData = {
             "text": "공유결합.<br>어쩌면 이 단어 하나를 제 삶과 건축에 대입하기 위해 그동안 수많은 도면을 그렸는지도 모르겠습니다.<br><br>\n돌이켜보면 설계란 늘 차가운 선과 기호로 시작하지만, 도면 밖으로 나가는 순간부터는 온전히 '사람의 일'이 되었습니다. 전혀 다른 환경의 건축주, 이익이 얽힌 조합원들, 그리고 제도를 앞세우는 관청까지. 처음에는 그 다름이 저를 가로막는 벽이라고 생각했습니다. 하지만 제 고집을 조금 덜어내고 그들의 이야기에 귀 기울였을 때, 서로 다른 원자들이 각자의 본질을 잃지 않으면서도 단단히 묶이는 '공유결합'을 현장에서 경험했습니다.<br><br>",
             "partCategory": "",
             "caption": null,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isContinuation": true
         },
         {
             "type": "epilogue",
