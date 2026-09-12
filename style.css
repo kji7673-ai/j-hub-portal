@@ -685,11 +685,11 @@ h2.chapter-title {
     padding: 8% 6% 25% 6% !important; /* 상단 여백 크게 축소 */ /* more padding bottom for nav */
   }
   p.body-text {
-    font-size: 16px !important;
+    
     line-height: 1.7 !important;
   }
   .page-content.philosophy-mode p.body-text {
-    font-size: 16px !important;
+    
     line-height: 1.8 !important;
   }
   /* When landscape on mobile */
@@ -1041,7 +1041,7 @@ body, html, .book-container {
 /* 1. 본문 타이포그래피 (한국어 가독성 황금비율 적용) */
 p.body-text,
 .page-content p {
-  font-size: 16px !important;
+  
   line-height: 1.65 !important;
   letter-spacing: -0.3px !important;
   color: #222 !important;
@@ -1189,9 +1189,9 @@ h2.chapter-title {
 }
 
 .vinyl-text h2.chapter-title {
-  text-align: center !important; /* 작품명(제목)은 액자 중앙에 맞춰 가운데 정렬 */
+  
   margin-bottom: 40px !important;
-  font-size: 28px !important;
+  
   letter-spacing: -0.5px !important;
   font-weight: 700 !important;
   color: #111 !important;
@@ -1199,7 +1199,7 @@ h2.chapter-title {
 
 .vinyl-text p {
   text-align: left !important; /* 본문은 읽기 편하게 좌측 정렬 */
-  font-size: 16.5px !important;
+  
   line-height: 1.7 !important; /* 레터링 특성상 약간 더 넉넉한 줄간격이 아름다움 */
   color: #222 !important;
   margin-bottom: 28px !important;
@@ -1213,4 +1213,16 @@ h2.chapter-title {
   font-size: 14px !important;
   color: #666 !important;
   line-height: 1.6 !important;
+}
+
+/* V.98 작가님 지정 기존 타이포그래피 복구 */
+.vinyl-text h2.chapter-title {
+  text-align: left !important;
+  font-size: 34px !important;
+  letter-spacing: -0.374px !important;
+  font-weight: 600 !important;
+}
+
+.vinyl-text p {
+  font-size: 17px !important;
 }
