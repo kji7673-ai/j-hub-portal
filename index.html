@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242395" />
+    <link rel="stylesheet" href="style.css?v=20242396" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -612,7 +612,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242395"></script>
+    <script src="book_data.js?v=20242396"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -745,201 +745,70 @@ let currentChapter = 0;
 
         if (isSpecialPage) {
           // SPECIAL PAGE: Full background image with white overlay
-          
-
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242395";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242395";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242396";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242396";
 
           if (bgImage) {
-            let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
             let bgPosition = "center center";
-
-            if (
-              (page.title && page.title.includes("여는 글: 제")) ||
-              page.title.includes("에필로그")
-            ) {
-              bgPosition = "center top"; // 머리 안 잘리게 상단 고정
-            }
             let extraBgStyle = "";
-            if (page.type === "cover" || page.type === "author_profile") {
-              overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
-              bgPosition = "center center"; // 베이크된 이미지는 중앙 정렬로 자연스럽게 크롭
-            }
             bgHTML =
-              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
-            bgHTML +=
-              "<div style=\"position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: url('" +
+              '<div class="page-image-bg" style="background-image: url(' +
               bgImage +
-              "') " +
-              bgPosition + ' / cover no-repeat;' + (page.type === 'cover' ? ' transform-origin: center center;' : '') + '"></div>';
-            bgHTML +=
-              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -1; ' +
-              overlayCSS +
+              '); background-position: ' +
+              bgPosition +
+              "; " +
+              extraBgStyle +
               '"></div>';
-          } else { bgHTML = ""; }
-
-          contentHTML =
-            bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 15vh 5% 8vh 5%; box-sizing: border-box;">';
-
-          let textContainerStyle =
-            "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
-          if (page.type === "cover") {
-            // 화면 전체를 기준으로 우측 하단 정렬 (최대 가로폭 해제)
-            textContainerStyle = "";
           }
           
-          if (page.type === "cover") {
-            // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
-            contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
+          let textContainerStyle = "";
+          let visuallyHidden = (page.type === "cover" || page.type === "author_profile") ? "display: none;" : "";
+          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + visuallyHidden + '">';
+          
+          if (page.title) {
+            contentHTML += '<h1 class="cover-title">' + page.title + "</h1>";
           }
-          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" || page.type === "author_profile" ? "display: none;" : "") + '">';
+          if (page.type === "author_profile" || page.type === "cover") {
+              contentHTML += `<div class="cover-subtitle">`;
+          }
+          
+          let pText = page.text || "";
+          contentHTML += pText;
+          
+          if (page.type === "author_profile" || page.type === "cover") {
+              contentHTML += `</div>`;
+          }
+          contentHTML += "</div>";
 
+        } else {
+          // ==========================================
+          // STANDARD PAGE: THE GALLERY WALL LAYOUT
+          // ==========================================
+          pageEl.classList.add("gallery-wall"); // Add wall texture
+          
+          contentHTML += '<div class="gallery-content-wrapper">';
+          
+          // 1. Mount the artwork (if exists)
+          if (page.image) {
+            contentHTML += '<img src="' + page.image + '" class="art-frame" alt="Artwork">';
+          }
+
+          // 2. Vinyl text container
+          contentHTML += '<div class="vinyl-text">';
 
           if (page.title) {
-            if (page.type === "author_profile") {
-              // 저자 이름 (실제 갤러리 캡션처럼 작고 정갈하게 비례 맞춤)
-              contentHTML +=
-                '<h1 class="cover-title" style="font-size: 1.5em; margin-bottom: 16px; font-weight: 700;">' +
-                page.title +
-                "</h1>";
-            } else if (page.type === "cover") {
-              let rawTitle = page.title;
-              let kicker = "";
-              let mainTitle = rawTitle;
-
-              if (rawTitle.includes(':')) {
-                const parts = rawTitle.split(':');
-                kicker = parts[0].trim();
-                mainTitle = parts.slice(1).join(':').trim();
-              }
-
-              let titleHTML = '';
-              if (kicker) {
-                titleHTML += '<span class="cover-kicker">' + kicker + '</span>';
-              }
-              titleHTML += mainTitle;
-
-              contentHTML +=
-                '<h1 class="cover-title">' +
-                titleHTML +
-                "</h1>";
-            } else {
-              contentHTML +=
-                '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:50px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 100%; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);">' +
-                page.title +
-                "</h1>";
-            }
+            contentHTML += '<h2 class="chapter-title">' + page.title + "</h2>";
           }
 
-          if (page.type === "author_profile") {
-            contentHTML += `<div class="cover-subtitle" style="font-size: 0.95em; font-weight: 500; color: #222;">`;
-          } else if (page.type === "cover") {
-            contentHTML += `<div class="cover-subtitle">`;
-          } else {
-            contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;">`;
-          }
-        } else {
-          // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
-          const isCont = page.isContinuation === true;
-          const isImgOnly = page.isImageOnly === true;
+          let pText = page.text || "";
           
-          let topPadding = '100px';
-          let bottomPadding = '100px';
-          let justifyContent = 'flex-start';
-          
-          if (isImgOnly) {
-              topPadding = '5vh';
-              bottomPadding = '5vh';
-              justifyContent = 'flex-start';
-          } else if (isCont) {
-              topPadding = '40px';
-          }
-          
-          bgHTML = "";
+          // Fix markdown images (in case there are inline images, though rare)
+          pText = pText.replace(
+            /!\[(.*?)\]\((.*?)\)/g,
+            '<div style="margin: 40px auto; text-align: center;"><img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>'
+          );
 
-          contentHTML =
-            bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + justifyContent + '; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% ' + bottomPadding + ' 5%; box-sizing: border-box;">';
-          contentHTML +=
-            '<div style="margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: ' + (isImgOnly ? 'center' : 'flex-start') + ';">';
-
-          // Inline top image (skip for continuation pages)
-          if (page.image && !isCont) {
-            let imgStyle = 'max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;';
-            if (page.type === "author_profile") {
-                imgStyle = 'width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;';
-            }
-            contentHTML +=
-              '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: center; width: 100%;"><img src="' +
-              page.image +
-              '" alt="Chapter Image" style="' + imgStyle + '">';
-
-            
-            // 갤러리 캡션 스타일: 1개의 유니크 키워드를 아주 넓은 자간으로 렌더링
-            if (page.keywords) {
-              contentHTML += '<div class="curation-caption">' + page.keywords + '</div>';
-            }
-            
-            contentHTML += "</div>";
-          }
-
-          // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
-          if (page.title && !isCont && !isImgOnly) {
-            let rawTitle = page.title.replace(/^여는\s*글\s*:\s*/i, '');
-            let isAuthorProfile = page.type === "author_profile";
-            let kicker = "";
-            let mainTitle = rawTitle;
-
-            // 콜론(:)이 있으면 '막/장 대제목'으로 인식
-            if (!isAuthorProfile && rawTitle.includes(':')) {
-              const parts = rawTitle.split(':');
-              kicker = parts[0].trim();
-              mainTitle = parts.slice(1).join(':').trim();
-            }
-
-            if (isAuthorProfile) {
-              // 저자 소개: 중간 크기, 중앙 정렬, 검은색
-              contentHTML +=
-                '<h1 class="chapter-title-author">' +
-                mainTitle +
-                "</h1>";
-            } else if (kicker) {
-              // 대제목 (막/장): 작가님 요청으로 일반 소제목과 동일하게 1.5em + 시그니처 블루 톤앤매너로 통일
-              let titleHTML = '<span class="chapter-kicker">' + kicker + '</span>' + mainTitle;
-              contentHTML +=
-                '<h1 class="chapter-title-major">' +
-                titleHTML +
-                "</h1>";
-            } else {
-              // 일반 소제목 (예: "작은 부분은 강렬하게"): 작가님 추가 요청 반영
-              // 크기를 본문(1.1em)과 거의 완벽히 동일한 1.15em으로 대폭 줄여서,
-              // '제목'이라기보다는 세련된 '도입 문구(리드문)'처럼 보이게 처리
-              contentHTML +=
-                '<h1 class="chapter-title-minor">' +
-                mainTitle +
-                "</h1>";
-            }
-          }
-
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: ${page.type === 'author_profile' ? 'center' : 'left'}; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
-        }
-
-        let pText = page.text || "";
-        pText = pText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-
-        pText = pText.replace(
-          /<blockquote[^>]*>/gi,
-          "<blockquote style=\"margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: 'SF Pro Text', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);\">",
-        );
-
-        pText = pText.replace(
-          /!\[(.*?)\]\((.*?)\)/g,
-          '<div style="margin: 40px auto; text-align: center;"><img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
-        );
-
-        if (!isSpecialPage) {
           const paragraphs = pText.split("\n\n");
           let processedText = "";
           paragraphs.forEach((p) => {
@@ -949,10 +818,7 @@ let currentChapter = 0;
               trimmed.startsWith("<table") ||
               trimmed.startsWith('<div class="custom-table"')
             ) {
-              processedText +=
-                '<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">' +
-                p +
-                "</div>";
+              processedText += '<div class="table-wrapper" style="width: 100%; overflow-x: auto; padding-bottom: 10px;">' + p + "</div>";
             } else if (
               trimmed.startsWith("<h") ||
               trimmed.startsWith("<ul") ||
@@ -961,37 +827,21 @@ let currentChapter = 0;
               trimmed.startsWith("<blockquote") ||
               trimmed.startsWith("<img")
             ) {
-              processedText += trimmed;
-            } else if (trimmed.startsWith("&gt;") || trimmed.startsWith(">")) {
-              let bqText = trimmed
-                .replace(/^&gt;\s?/gm, "")
-                .replace(/^>\s?/gm, "");
-              bqText = bqText.replace(/\n/g, "<br>");
-              processedText +=
-                "<blockquote style=\"margin-top: 40px; margin-bottom: 24px; padding: 20px 24px; background-color: rgba(245, 245, 247, 0.95); border-radius: 8px; color: #555555; font-size: 14.5px; line-height: 1.6; border-left: 3px solid #999999; font-family: 'SF Pro Text', -apple-system, sans-serif; text-align: left; font-weight: 400; text-shadow: none; box-shadow: 0 2px 10px rgba(0,0,0,0.05);\">" +
-                bqText +
-                "</blockquote>";
-            } else if (
-              trimmed.startsWith("<strong") &&
-              trimmed.endsWith("</strong>") &&
-              trimmed.indexOf("<strong", 1) === -1
-            ) {
-              processedText +=
-                '<p style="margin-bottom: 24px; font-weight: 600; color: #111;">' +
-                trimmed +
-                "</p>";
+              processedText += p + "\n";
             } else {
-              processedText +=
-                '<p style="margin-bottom: 24px;">' + trimmed + "</p>";
+              processedText += '<p style="margin-bottom: 24px;">' + trimmed + "</p>";
             }
           });
+          
           contentHTML += processedText;
-        } else {
-          contentHTML += pText;
+          contentHTML += '</div>'; // End vinyl-text
+          contentHTML += '</div>'; // End gallery-content-wrapper
         }
 
-        contentHTML +=
-          '</div><div style="height: 20vh; width: 100%; flex-shrink: 0; clear: both; pointer-events: none;"></div></div></div>';
+        contentHTML = bgHTML + contentHTML;
+        
+        // Add bottom spacing block
+        contentHTML += '<div style="height: 15vh; width: 100%; flex-shrink: 0; clear: both; pointer-events: none;"></div>';
         
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);

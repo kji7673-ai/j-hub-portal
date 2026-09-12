@@ -1107,3 +1107,47 @@ h2.chapter-title {
 #progress-bar {
   background: rgba(0, 0, 0, 0.6) !important;
 }
+
+/* =========================================
+   V.96 '완벽한 갤러리 벽면' 전수 적용
+========================================= */
+
+/* 전시관 벽면 질감 (조명 + 미세한 페인트 질감) */
+.gallery-wall {
+  background: radial-gradient(circle at 50% 10%, #ffffff 0%, #f6f6f8 60%, #ebebec 100%) !important;
+  /* 모바일 스크롤 완벽 지원 */
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.gallery-content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0 100px 0;
+}
+
+/* 갤러리에 걸린 아크릴/프레임 액자 사진 */
+.art-frame {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12), 0 10px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* 벽면에 찰싹 붙은 시트지 레터링 텍스트 */
+.vinyl-text {
+  mix-blend-mode: multiply;
+  color: #1a1a1c !important;
+  /* 시트지의 미세한 두께감 때문에 발생하는 빛 반사(화이트 섀도우) */
+  text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.9);
+}
+
+.vinyl-text p, .vinyl-text h2 {
+  mix-blend-mode: multiply;
+  color: #1a1a1c !important;
+}
+
