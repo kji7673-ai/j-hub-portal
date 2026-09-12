@@ -9,9 +9,18 @@ var bookData = {
         {
             "partCategory": "저자 소개",
             "title": "김중일",
-            "text": "서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 치열한 순간들에 대한 감사의 기록입니다.",
+            "text": "<div style='height: 10px;'></div>",
             "image": "static/images/gallery_batch10_frame1.jpg",
-            "type": "author_profile"
+            "type": "author_profile",
+            "isImageOnly": false
+        },
+        {
+            "partCategory": "저자 소개",
+            "title": "김중일",
+            "text": "서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 치열한 순간들에 대한 감사의 기록입니다.",
+            "image": null,
+            "type": "author_profile",
+            "isContinuation": true
         },
         {
             "type": "image_top",
