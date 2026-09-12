@@ -62,7 +62,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10% 8%;
+  padding: 10% 8% 25vh 8%;
   display: none;
   opacity: 0;
   pointer-events: none;
