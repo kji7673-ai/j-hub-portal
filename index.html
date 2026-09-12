@@ -471,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242360"></script>
+    <script src="book_data.js?v=20242361"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -806,11 +806,18 @@ let currentChapter = 0;
 
       // 모바일 가장자리 터치(Edge Tap)를 위한 변수
       let touchStartTime = 0;
+      let isSwiping = false;
 
       function checkDirection() {
         let deltaX = touchendX - touchstartX;
         let deltaY = touchendY - touchstartY;
         let touchDuration = Date.now() - touchStartTime;
+
+        // 스와이프(10px 이상 이동)가 발생했다면 클릭 이벤트 무시 플래그 작동
+        if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) {
+          isSwiping = true;
+          setTimeout(() => isSwiping = false, 300); // 0.3초간 클릭 무시
+        }
 
         // [문제 해결 1] 터치(Tap)인지 스와이프(Swipe)인지 구분
         if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10 && touchDuration < 300) {
@@ -1074,13 +1081,21 @@ let currentChapter = 0;
           return;
         }
 
-        // 화면 가장자리(좌우 25%) 터치는 페이지 넘김용이므로 UI 토글을 무시합니다.
+        if (typeof isSwiping !== 'undefined' && isSwiping) return; // 스와이프 중에는 무조건 무시
+
+        // 작가님 요청: '정확히 가운데 영역'으로 타겟을 매우 좁힘
         let screenWidth = window.innerWidth;
-        if (e.clientX < screenWidth * 0.25 || e.clientX > screenWidth * 0.75) {
-          return; 
+        let screenHeight = window.innerHeight;
+        
+        // 가로 30%~70%, 세로 40%~60% (정중앙 근방)
+        let isCenterX = e.clientX > screenWidth * 0.3 && e.clientX < screenWidth * 0.7;
+        let isCenterY = e.clientY > screenHeight * 0.4 && e.clientY < screenHeight * 0.6;
+
+        if (!isCenterX || !isCenterY) {
+          return; // 이 좁은 정중앙을 벗어난 모든 터치는 무시
         }
 
-        // 중앙 50% 영역 터치 시에만 UI 표시/숨김 토글
+        // 중앙 영역 터치 시에만 UI 표시/숨김 토글
         document.body.classList.toggle("ui-active");
       });
 
