@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242383" />
+    <link rel="stylesheet" href="style.css?v=20242384" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -615,7 +615,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242383"></script>
+    <script src="book_data.js?v=20242384"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -761,8 +761,7 @@ let currentChapter = 0;
             let extraBgStyle = "";
             if (page.type === "cover") {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
-              bgPosition = "center top"; 
-              extraBgStyle = "transform: scale(1.2) translateY(5%);"; // 갈색 하단을 숨기기 위해 강제 확대 및 이동
+              bgPosition = "left 80%"; // 왼쪽(단상 위치)과 하단(단상 베이스)을 우선적으로 보여줌
             }
             bgHTML =
               '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
@@ -787,7 +786,13 @@ let currentChapter = 0;
             // 화면 전체를 기준으로 우측 하단 정렬 (최대 가로폭 해제)
             textContainerStyle = "";
           }
+          
+          if (page.type === "cover") {
+            // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
+            contentHTML += '<div class="pedestal-signature" style="position: absolute; bottom: 15%; left: 28%; transform: translateX(-50%); font-size: 0.75rem; font-weight: 500; color: rgba(100, 100, 100, 0.7); letter-spacing: 0.2em; mix-blend-mode: multiply; text-align: center; font-family: -apple-system, sans-serif;">Artist: KIMJOONGIL</div>';
+          }
           contentHTML += '<div class="' + (page.type === "cover" ? "cover-text-container" : "") + '" style="' + textContainerStyle + '">';
+
 
           if (page.title) {
             if (page.type === "cover") {
