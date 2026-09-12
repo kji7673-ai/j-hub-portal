@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242416" />
+    <link rel="stylesheet" href="style.css?v=20242417" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -178,7 +178,20 @@
 
 
 
-  </head>
+  
+    <!-- Google tag (gtag.js) Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // SPA(Single Page Application) 수동 추적을 위해 자동 page_view는 끕니다.
+      gtag('config', 'G-XXXXXXXXXX', {
+        'send_page_view': false
+      });
+    </script>
+</head>
   <body style="overflow-x: hidden;">
     <!-- Progress Bar -->
     <div id="progress-bar-container"><div id="progress-bar"></div></div>
@@ -631,7 +644,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242416"></script>
+    <script src="book_data.js?v=20242417"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -767,8 +780,8 @@ let currentChapter = 0;
           
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242416";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242416";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242417";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242417";
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
@@ -1044,6 +1057,16 @@ let currentChapter = 0;
           history.replaceState(null, null, '#page-' + (currentChapter + 1));
         } else {
           history.replaceState(null, null, window.location.pathname);
+        }
+        
+        // Google Analytics: Track each page turn as a separate page_view
+        if (typeof gtag === 'function' && bookData && bookData.pages[currentChapter]) {
+          const pageTitle = bookData.pages[currentChapter].title || '본문';
+          gtag('event', 'page_view', {
+            page_title: '[' + (currentChapter + 1) + 'p] ' + pageTitle,
+            page_location: window.location.href,
+            page_path: window.location.pathname + '#page-' + (currentChapter + 1)
+          });
         }
         updateBookmarkButton();
         window.scrollTo({ top: 0, behavior: "instant" });
