@@ -458,7 +458,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242318"></script>
+    <script src="book_data.js?v=20242319"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -473,7 +473,15 @@
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
           if (page.isContinuation === true) return;
-          if (page.isImageOnly === true) return; // 이미지 전용 페이지는 목차에서 건너뜀 (다음 텍스트 페이지가 목차의 주인이 됨)
+          
+          // 그림 페이지는 목차에 포함하되, 그림 직후에 나오는 동일 제목의 텍스트 페이지는 목차에서 숨김
+          if (index > 0) {
+            const prev = bookData.pages[index - 1];
+            if (prev.isImageOnly && prev.title === page.title) {
+              return;
+            }
+          }
+
           if (
             page.title &&
             page.title.trim() !== "" &&
@@ -700,7 +708,7 @@
         }
 
         contentHTML +=
-          '</div><div style="height: 30px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
+          '</div><div style="height: 70px; width: 100%; flex-shrink: 0; clear: both;"></div></div></div>';
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);
 
