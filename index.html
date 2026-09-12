@@ -488,7 +488,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242368"></script>
+    <script src="book_data.js?v=20242369"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -765,10 +765,11 @@ let currentChapter = 0;
                 titleHTML +
                 "</h1>";
             } else {
-              // 일반 소제목 (예: "낯선 화학용어를 빌려오다"): 작가님 요청 반영
-              // 크기를 1.5em으로 아담하게 줄이고, 색상을 포인트 컬러(블루)로 칠해 강조
+              // 일반 소제목 (예: "작은 부분은 강렬하게"): 작가님 추가 요청 반영
+              // 크기를 본문(1.1em)과 거의 완벽히 동일한 1.15em으로 대폭 줄여서,
+              // '제목'이라기보다는 세련된 '도입 문구(리드문)'처럼 보이게 처리
               contentHTML +=
-                '<h1 style="font-size:1.5em; font-weight:700; margin-bottom:25px; letter-spacing:-0.4px; line-height:1.4; text-align:left; max-width: 600px; color:#0066cc; width:100%; word-break:keep-all;">' +
+                '<h1 style="font-size:1.15em; font-weight:700; margin-bottom:20px; letter-spacing:-0.3px; line-height:1.4; text-align:left; max-width: 600px; color:#0066cc; width:100%; word-break:keep-all;">' +
                 mainTitle +
                 "</h1>";
             }
