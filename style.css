@@ -142,6 +142,8 @@ p.body-text {
 .page-text-flow {
   display: block;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -417,6 +419,8 @@ input[type="file"] {
   font-family: "SF Pro Text", sans-serif;
   font-size: 14px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   line-height: 1.5;
   color: #1d1d1f;
 }
@@ -448,7 +452,9 @@ input[type="file"] {
 
 /* -- Prevent Vertical Scroll (Strict Pagination) -- */
 .page-content {
-  overflow-y: hidden; /* Disable vertical scroll */
+  overflow-y: auto; /* Enable smart scroll for overflow */
+  -webkit-overflow-scrolling: touch;
+
   overflow-x: hidden;
 }
 
@@ -547,6 +553,8 @@ h2.chapter-title {
 .toc-list {
   padding: 16px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   flex: 1;
 }
 .toc-item {
