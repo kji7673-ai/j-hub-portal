@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242376" />
+    <link rel="stylesheet" href="style.css?v=20242377" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -566,7 +566,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242376"></script>
+    <script src="book_data.js?v=20242377"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -709,9 +709,11 @@ let currentChapter = 0;
             ) {
               bgPosition = "center top"; // 머리 안 잘리게 상단 고정
             }
+            let extraBgStyle = "";
             if (page.type === "cover") {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
-              bgPosition = "center 2%"; // 조각상 머리 상단 고정 (하단 책상 크롭)
+              bgPosition = "center top"; 
+              extraBgStyle = "transform: scale(1.2) translateY(5%);"; // 갈색 하단을 숨기기 위해 강제 확대 및 이동
             }
             bgHTML =
               '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
@@ -735,8 +737,7 @@ let currentChapter = 0;
             "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
           if (page.type === "cover") {
             textContainerStyle =
-              "margin: auto 0 0 0; padding-bottom: 2%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;";
-            ("margin: auto 0 0 0; padding-bottom: 8%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;");
+              "margin: auto 0 0 auto; padding-bottom: 8%; padding-right: 5%; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; text-align: right;";
           }
           contentHTML += '<div style="' + textContainerStyle + '">';
 
@@ -759,7 +760,7 @@ let currentChapter = 0;
               titleHTML += mainTitle;
 
               contentHTML +=
-                '<h1 style="font-size:2.4em; font-weight:800; margin-bottom:10px; letter-spacing:-0.5px; line-height:1.2; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,0.9), 0 0 5px rgba(255,255,255,0.8);">' +
+                '<h1 style="font-size:2.4em; font-weight:800; margin-bottom:10px; letter-spacing:-0.5px; line-height:1.2; text-align:right; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,0.9), 0 0 5px rgba(255,255,255,0.8);">' +
                 titleHTML +
                 "</h1>";
             } else {
@@ -770,7 +771,7 @@ let currentChapter = 0;
             }
           }
 
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.6; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
+          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
