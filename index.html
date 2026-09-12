@@ -49,6 +49,8 @@
     <script src="app.js"></script>
   </head>
   <body>
+    <!-- Progress Bar -->
+    <div id="progress-bar-container"><div id="progress-bar"></div></div>
 
 
     <!-- Bottom Floating Navigation Bar -->
@@ -113,6 +115,7 @@
       }
 </style>
 
+    <div id="toast-notification"></div>
     <div class="bottom-nav">
       <button onclick="toggleBookmark()" id="bookmark-toggle-btn">
         <svg viewBox="0 0 24 24">
@@ -142,6 +145,7 @@
     </div>
 
     <!-- Modals -->
+    <div id="toc-overlay" onclick="closeTOC()"></div>
     <style>
       .floating-btn:hover {
         background: #f0f0f0 !important;
@@ -458,9 +462,26 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242342"></script>
+    <script src="book_data.js?v=20242343"></script>
     <script>
-      let currentChapter = 0;
+      
+      // --- 마스터 개선 로직 주입 ---
+      function updateProgressBar() {
+        const progress = document.getElementById("progress-bar");
+        if (progress && bookData && bookData.pages) {
+          const percent = (currentChapter / (bookData.pages.length - 1)) * 100;
+          progress.style.width = percent + "%";
+        }
+      }
+      function showToast(msg) {
+        let toast = document.getElementById("toast-notification");
+        if (!toast) return;
+        toast.innerText = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2000);
+      }
+      // ----------------------------
+let currentChapter = 0;
       let currentColumn = 0;
       const COLUMN_GAP = 40;
 
@@ -515,6 +536,7 @@
         const navControlsEl = document.querySelector(".controls");
         document.querySelectorAll(".page-content").forEach((p) => p.remove());
 
+        updateProgressBar();
         const page = bookData.pages[currentChapter];
         if (!page) return;
 
@@ -590,7 +612,7 @@
             }
           }
 
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
+          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center; line-height: 1.6; font-size: 1.1em; color: #111; word-break: keep-all; display: flex; flex-direction: column; text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1); font-weight: 500;">`;
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
@@ -640,7 +662,7 @@
               "</h1>";
           }
 
-          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; line-height: 1.8; font-size: 1.1em; color: #2c2c2c; word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
+          contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
         }
 
         let pText = page.text || "";
