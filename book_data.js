@@ -154,7 +154,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "공유결합의 세 가지 원칙",
+            "title": "공유결합의 세 가지 요소",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch10_sculpture1.jpg",
@@ -164,7 +164,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 결합을 위한 세 가지 기둥",
+            "title": "공유결합의 세 가지 요소",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "설계는 단지 도면 위에 선을 그리는 행위가 아닙니다.<br>진짜 설계는 다음의 세 가지 요소에서 출발합니다.<br><br>관계 속에서 흔들리지 않는 <strong>'나만의 기준'</strong>을 세우고 본질의 무게를 다지는 것.<br>때로는 저를 철저히 비워냄으로써, 서로 다른 이들의 투박한 언어조차 둥글게 이해하고 껴안을 수 있는 <strong>'여유'</strong>를 갖는 것.<br>그리고 거대한 욕망이 격돌하는 <strong>'진짜 현장(회의 테이블)의 이면'</strong>을 꿰뚫어 보는 것.<br><br>자신의 기준, 타인을 향한 여유, 현장을 보는 시선.<br>이 세 가지 요소가 하나로 맞물릴 때, 비로소 어떠한 외풍에도 흔들리지 않는 가장 단단한 신뢰, 즉 '공유결합'이 완성됩니다.",
             "image": null,
