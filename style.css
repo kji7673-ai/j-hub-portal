@@ -965,3 +965,8 @@ img {
 .cover-content {
   min-height: 101% !important; /* 내용이 적어도 스크롤바가 활성화되도록 유도하여 버그 방지 */
 }
+
+/* 스크롤 먹통 방지를 위한 최후의 락 해제 */
+body, html, .book-container {
+  touch-action: pan-y pinch-zoom !important; 
+}
