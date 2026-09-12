@@ -462,7 +462,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242351"></script>
+    <script src="book_data.js?v=20242352"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -977,23 +977,28 @@ let currentChapter = 0;
         document.getElementById("feedback-modal").style.display = "none";
       }
     
-      // Keyboard Navigation Support (PC/Mac)
+      
+
+    
+      // Keyboard Navigation Support (Maximum Compatibility Mode)
       document.addEventListener("keydown", function(e) {
-        // 목차(TOC)가 열려있을 때는 키보드 네비게이션 작동 방지
+        // 목차(TOC)가 열려있을 때는 방지
         const tocModal = document.getElementById("toc-modal");
         if (tocModal && tocModal.classList.contains("active")) {
            return;
         }
 
-        if (e.key === "ArrowRight") {
+        const isRight = e.key === "ArrowRight" || e.key === "Right" || e.code === "ArrowRight" || e.keyCode === 39;
+        const isLeft = e.key === "ArrowLeft" || e.key === "Left" || e.code === "ArrowLeft" || e.keyCode === 37;
+        const isSpace = e.key === " " || e.code === "Space" || e.keyCode === 32;
+
+        if (isRight) {
           e.preventDefault();
           nextPage();
-        } else if (e.key === "ArrowLeft") {
+        } else if (isLeft) {
           e.preventDefault();
           prevPage();
-        } else if (e.key === " " || e.code === "Space") {
-          // 스페이스바를 누르면 다음 페이지로 이동
-          // 단, 스크롤이 있는 페이지의 경우 스페이스바의 기본 동작(아래로 스크롤)을 막습니다.
+        } else if (isSpace) {
           e.preventDefault();
           nextPage();
         }
