@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242406" />
+    <link rel="stylesheet" href="style.css?v=20242407" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -89,7 +89,7 @@
       }
       .chapter-img-standard {
         max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; 
-        border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;
+        border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0;
       }
       .curation-caption {
         font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 13px; 
@@ -612,7 +612,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242406"></script>
+    <script src="book_data.js?v=20242407"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -748,8 +748,8 @@ let currentChapter = 0;
           
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242406";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242406";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242407";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242407";
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
@@ -845,7 +845,7 @@ let currentChapter = 0;
           const isCont = page.isContinuation === true;
           const isImgOnly = page.isImageOnly === true;
           
-          let topPadding = '100px';
+          let topPadding = '40px';
           let bottomPadding = '100px';
           let justifyContent = 'flex-start';
           
@@ -861,18 +861,18 @@ let currentChapter = 0;
 
           contentHTML =
             bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + justifyContent + '; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% ' + bottomPadding + ' 5%; box-sizing: border-box;">';
+            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + justifyContent + '; align-items:flex-start; min-height:100%; padding: ' + topPadding + ' 5% ' + bottomPadding + ' 5%; box-sizing: border-box;">';
           contentHTML +=
-            '<div style="margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start;">';
+            '<div style="margin: 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start;">';
 
           // Inline top image (skip for continuation pages)
           if (page.image && !isCont) {
-            let imgStyle = 'max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;';
+            let imgStyle = 'max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0;';
             if (page.type === "author_profile") {
                 imgStyle = 'width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;';
             }
             contentHTML +=
-              '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: center; width: 100%;"><img src="' +
+              '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: left; width: 100%;"><img src="' +
               page.image +
               '" alt="Chapter Image" style="' + imgStyle + '">';
 
