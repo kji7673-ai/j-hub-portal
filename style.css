@@ -213,7 +213,7 @@ p.subheading {
 .page-content.philosophy-mode .chapter-title {
   /* font-family: 'KoPub Batang', 'AppleMyungjo', 'Noto Serif KR', serif !important; */
   font-weight: 600 !important;
-  color: #1d1d1f !important;
+  color: var(--ink) !important;
   letter-spacing: -0.01em !important;
   margin-bottom: 30px !important;
 }
@@ -372,14 +372,14 @@ input[type="file"] {
   font-family: "SF Pro Display", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #1d1d1f;
+  color: var(--ink);
 }
 .close-panel {
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #1d1d1f;
+  color: var(--ink);
 }
 
 .panel-body {
@@ -397,7 +397,7 @@ input[type="file"] {
 .panel-label {
   font-size: 14px;
   font-weight: 600;
-  color: #1d1d1f;
+  color: var(--ink);
   margin-bottom: 5px;
 }
 .panel-textarea {
@@ -423,7 +423,7 @@ input[type="file"] {
   -webkit-overflow-scrolling: touch;
 
   line-height: 1.5;
-  color: #1d1d1f;
+  color: var(--ink);
 }
 .panel-footer {
   margin-top: 20px;
@@ -505,7 +505,7 @@ h2.chapter-title {
 .custom-table th {
   background-color: #ffffff;
   font-weight: 600;
-  color: #333;
+  color: var(--ink);
 }
 .custom-table tr:last-child td {
   border-bottom: none;
@@ -802,7 +802,7 @@ body,
     system-ui,
     -apple-system,
     sans-serif;
-  color: #1d1d1f;
+  color: var(--ink);
   background-color: #f5f5f7;
   letter-spacing: -0.374px;
 }
@@ -812,7 +812,7 @@ p.body-text,
   font-size: 17px !important;
   line-height: 1.47 !important;
   letter-spacing: -0.374px !important;
-  color: #1d1d1f !important;
+  color: var(--ink) !important;
 }
 
 h2.chapter-title {
@@ -858,7 +858,7 @@ h2.chapter-title {
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0px;
-  color: #1d1d1f;
+  color: var(--ink);
   margin-bottom: 60px;
 }
 
@@ -886,7 +886,7 @@ h2.chapter-title {
 /* --- V19 프리미엄 에디팅 CSS 추가 --- */
 .highlight-text {
     font-weight: 700;
-    color: #1d1d1f;
+    color: var(--ink);
     box-shadow: inset 0 -12px 0 rgba(0, 102, 204, 0.15); /* 은은한 애플 스타일 형광펜 */
     padding: 0 2px;
     border-radius: 2px;
@@ -910,7 +910,7 @@ h2.chapter-title {
 /* --- V19 프리미엄 에디팅 CSS 추가 --- */
 .highlight-text {
     font-weight: 700;
-    color: #1d1d1f;
+    color: var(--ink);
     box-shadow: inset 0 -12px 0 rgba(0, 102, 204, 0.15);
     padding: 0 2px;
     border-radius: 2px;
@@ -1038,7 +1038,7 @@ p.body-text,
   font-size: 17px !important;
   line-height: 1.65 !important;
   letter-spacing: -0.3px !important;
-  color: #222 !important;
+  color: var(--ink) !important;
   word-break: keep-all;
 }
 
@@ -1052,7 +1052,7 @@ h2.chapter-title {
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  color: #333 !important;
+  color: var(--ink) !important;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
 }
 
@@ -1060,7 +1060,7 @@ h2.chapter-title {
   background: rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
-  color: #333 !important;
+  color: var(--ink) !important;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -1086,7 +1086,7 @@ h2.chapter-title {
 .toc-title {
   font-size: 15px !important;
   font-weight: 500 !important;
-  color: #333 !important;
+  color: var(--ink) !important;
   letter-spacing: -0.3px !important;
 }
 
