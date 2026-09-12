@@ -462,7 +462,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242344"></script>
+    <script src="book_data.js?v=20242345"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -569,20 +569,20 @@ let currentChapter = 0;
               bgPosition = "center 2%"; // 조각상 머리 상단 고정 (하단 책상 크롭)
             }
             bgHTML =
-              '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -3; background: #fcfbf9;"></div>';
+              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
             bgHTML +=
-              "<div style=\"position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: url('" +
+              "<div style=\"position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: url('" +
               page.image +
               "') " +
               bgPosition +
               ' / cover no-repeat;"></div>';
             bgHTML +=
-              '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; ' +
+              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -1; ' +
               overlayCSS +
               '"></div>';
           } else {
             bgHTML =
-              '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
+              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: #fcfbf9;"></div>';
           }
 
           contentHTML =
@@ -631,7 +631,7 @@ let currentChapter = 0;
           }
           
           bgHTML =
-            '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
+            '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: #fcfbf9;"></div>';
 
           contentHTML =
             bgHTML +

@@ -672,6 +672,7 @@ h2.chapter-title {
 @media (max-width: 768px) {
   .book-container {
     max-width: 100% !important;
+  left: 0 !important;
     aspect-ratio: auto !important;
     height: 100vh !important;
     height: 100dvh !important;
@@ -709,6 +710,7 @@ h2.chapter-title {
 @media (max-height: 500px) and (orientation: landscape) {
   .book-container {
     max-width: 100% !important;
+  left: 0 !important;
     aspect-ratio: auto !important;
     height: 100vh !important;
     height: 100dvh !important;
@@ -956,6 +958,7 @@ img {
   height: 100vh !important;
   height: 100dvh !important;
   width: 100% !important;
+  left: 0 !important;
   overflow-y: scroll !important; /* 모바일 강제 스크롤 */
   -webkit-overflow-scrolling: touch !important;
   box-sizing: border-box !important;
