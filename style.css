@@ -685,11 +685,11 @@ h2.chapter-title {
     padding: 8% 6% 25% 6% !important; /* 상단 여백 크게 축소 */ /* more padding bottom for nav */
   }
   p.body-text {
-    
+    font-size: 17px !important;
     line-height: 1.7 !important;
   }
   .page-content.philosophy-mode p.body-text {
-    
+    font-size: 17px !important;
     line-height: 1.8 !important;
   }
   /* When landscape on mobile */
@@ -1041,7 +1041,7 @@ body, html, .book-container {
 /* 1. 본문 타이포그래피 (한국어 가독성 황금비율 적용) */
 p.body-text,
 .page-content p {
-  
+  font-size: 17px !important;
   line-height: 1.65 !important;
   letter-spacing: -0.3px !important;
   color: #222 !important;
@@ -1106,123 +1106,4 @@ h2.chapter-title {
 /* 프로그레스 바 톤다운 */
 #progress-bar {
   background: rgba(0, 0, 0, 0.6) !important;
-}
-
-/* =========================================
-   V.96 '완벽한 갤러리 벽면' 전수 적용
-========================================= */
-
-/* 전시관 벽면 질감 (조명 + 미세한 페인트 질감) */
-.gallery-wall {
-  background: radial-gradient(circle at 50% 10%, #ffffff 0%, #f6f6f8 60%, #ebebec 100%) !important;
-  /* 모바일 스크롤 완벽 지원 */
-  overflow-y: scroll !important;
-  -webkit-overflow-scrolling: touch !important;
-}
-
-.gallery-content-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px 0 100px 0;
-}
-
-/* 갤러리에 걸린 아크릴/프레임 액자 사진 */
-.art-frame {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 0 auto 50px auto;
-  display: block;
-  border-radius: 4px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12), 0 10px 20px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.03);
-}
-
-/* 벽면에 찰싹 붙은 시트지 레터링 텍스트 */
-.vinyl-text {
-  mix-blend-mode: multiply;
-  color: #1a1a1c !important;
-  /* 시트지의 미세한 두께감 때문에 발생하는 빛 반사(화이트 섀도우) */
-  text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.9);
-}
-
-.vinyl-text p, .vinyl-text h2 {
-  mix-blend-mode: multiply;
-  color: #1a1a1c !important;
-}
-
-
-/* =========================================
-   V.97 사전 전수 조사에 따른 선제적 보완 패치
-========================================= */
-
-/* 1. 모바일 좌우 여백(Padding) 추가 (텍스트/액자가 화면 끝에 닿는 치명적 어색함 방지) */
-.gallery-content-wrapper {
-  max-width: 760px !important;
-  margin: 0 auto !important;
-  padding: 60px 24px 120px 24px !important; /* 좌우 24px 여백 필수 */
-}
-
-@media (min-width: 768px) {
-  .gallery-content-wrapper {
-    padding: 80px 40px 150px 40px !important; /* PC는 더 넓은 여백 */
-  }
-}
-
-/* 2. 액자(조각상) 디테일 상향: 진짜 아크릴 같은 모서리 마감과 그림자 튜닝 */
-.art-frame {
-  max-width: 650px !important;
-  border-radius: 6px !important; /* 완전 직각보다 살짝 둥글게(아크릴 가공 느낌) */
-  border: 1px solid rgba(0,0,0,0.06) !important;
-  /* 모바일에서도 과하지 않은 우아한 다중 그림자 */
-  box-shadow: 
-    0 4px 6px rgba(0,0,0,0.02),
-    0 10px 20px rgba(0,0,0,0.06), 
-    0 25px 45px rgba(0,0,0,0.1) !important;
-  margin-bottom: 60px !important; /* 액자와 하단 텍스트 사이의 숨통 트기 */
-}
-
-/* 3. 시트지 레터링 텍스트 블록 정렬 및 자간 최적화 */
-.vinyl-text {
-  max-width: 600px;
-  margin: 0 auto; /* 액자 아래에서 텍스트 블록 전체를 중앙에 위치 (내부 텍스트는 좌측 정렬 유지) */
-}
-
-.vinyl-text h2.chapter-title {
-  
-  margin-bottom: 40px !important;
-  
-  letter-spacing: -0.5px !important;
-  font-weight: 700 !important;
-  color: #111 !important;
-}
-
-.vinyl-text p {
-  text-align: left !important; /* 본문은 읽기 편하게 좌측 정렬 */
-  
-  line-height: 1.7 !important; /* 레터링 특성상 약간 더 넉넉한 줄간격이 아름다움 */
-  color: #222 !important;
-  margin-bottom: 28px !important;
-}
-
-/* 4. 시/에세이 하단 주석(blockquote) 갤러리 캡션화 */
-.vinyl-text blockquote.poem-note {
-  margin-top: 60px !important;
-  padding-top: 30px !important;
-  border-top: 1px solid rgba(0,0,0,0.08) !important;
-  font-size: 14px !important;
-  color: #666 !important;
-  line-height: 1.6 !important;
-}
-
-/* V.98 작가님 지정 기존 타이포그래피 복구 */
-.vinyl-text h2.chapter-title {
-  text-align: left !important;
-  font-size: 34px !important;
-  letter-spacing: -0.374px !important;
-  font-weight: 600 !important;
-}
-
-.vinyl-text p {
-  font-size: 17px !important;
 }
