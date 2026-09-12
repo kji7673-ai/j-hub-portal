@@ -47,6 +47,26 @@
     />
 
     <script src="app.js"></script>
+  
+    <!-- Page Transition Animations -->
+    <style>
+      @keyframes fadeSlideInRight {
+        from { opacity: 0; transform: translateX(80px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeSlideInLeft {
+        from { opacity: 0; transform: translateX(-80px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeInScale {
+        from { opacity: 0; transform: scale(0.98); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .slide-next { animation: fadeSlideInRight 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+      .slide-prev { animation: fadeSlideInLeft 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+      .fade-in { animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    </style>
+
   </head>
   <body class="ui-active" style="overflow-x: hidden;">
     <!-- Progress Bar -->
@@ -471,7 +491,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242361"></script>
+    <script src="book_data.js?v=20242362"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -572,7 +592,7 @@ let currentChapter = 0;
             li.onclick = () => {
               currentChapter = index;
               currentColumn = 0;
-              renderCurrentChapter();
+              renderCurrentChapter('fade');
               closeTOC();
             };
             currentGroupContent.appendChild(li);
@@ -580,7 +600,7 @@ let currentChapter = 0;
         });
       }
 
-      function renderCurrentChapter() {
+      function renderCurrentChapter(direction = 'fade') {
         const container = document.getElementById("book-container");
         const navControlsEl = document.querySelector(".controls");
         document.querySelectorAll(".page-content").forEach((p) => p.remove());
@@ -591,6 +611,9 @@ let currentChapter = 0;
 
         const pageEl = document.createElement("div");
         pageEl.className = "page-content active";
+        if (direction === 'next') pageEl.classList.add('slide-next');
+        else if (direction === 'prev') pageEl.classList.add('slide-prev');
+        else pageEl.classList.add('fade-in');
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
@@ -879,7 +902,7 @@ let currentChapter = 0;
           }
         }
 
-        renderCurrentChapter();
+        renderCurrentChapter('fade');
         updateBookmarkButton();
       }
 
@@ -904,7 +927,7 @@ let currentChapter = 0;
         if (currentChapter > 0) {
           currentChapter--;
           currentColumn = 0;
-          renderCurrentChapter();
+          renderCurrentChapter('prev');
         }
       }
 
@@ -916,7 +939,7 @@ let currentChapter = 0;
         if (currentChapter < bookData.pages.length - 1) {
           currentChapter++;
           currentColumn = 0;
-          renderCurrentChapter();
+          renderCurrentChapter('next');
         }
       }
 
