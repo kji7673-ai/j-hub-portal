@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242384" />
+    <link rel="stylesheet" href="style.css?v=20242385" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -615,7 +615,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242384"></script>
+    <script src="book_data.js?v=20242385"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -741,14 +741,16 @@ let currentChapter = 0;
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
-        let isSpecialPage = page.type === "cover";
+        let isSpecialPage = page.type === "cover" || page.type === "author_profile";
 
         let bgHTML = "";
         let contentHTML = "";
 
         if (isSpecialPage) {
           // SPECIAL PAGE: Full background image with white overlay
-          if (page.image) {
+          
+          let bgImage = page.type === "author_profile" ? "static/images/gallery_cover_v2.jpg" : page.image;
+          if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.75);";
             let bgPosition = "center center";
 
@@ -759,7 +761,7 @@ let currentChapter = 0;
               bgPosition = "center top"; // 머리 안 잘리게 상단 고정
             }
             let extraBgStyle = "";
-            if (page.type === "cover") {
+            if (page.type === "cover" || page.type === "author_profile") {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
               bgPosition = "left 80%"; // 왼쪽(단상 위치)과 하단(단상 베이스)을 우선적으로 보여줌
             }
@@ -767,7 +769,7 @@ let currentChapter = 0;
               '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
             bgHTML +=
               "<div style=\"position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: url('" +
-              page.image +
+              bgImage +
               "') " +
               bgPosition + ' / cover no-repeat;' + (page.type === 'cover' ? ' transform-origin: center center;' : '') + '"></div>';
             bgHTML +=
@@ -795,7 +797,18 @@ let currentChapter = 0;
 
 
           if (page.title) {
-            if (page.type === "cover") {
+            if (page.type === "author_profile") {
+              // 저자 프로필: 사진을 음각처럼 벽면에 배치
+              contentHTML += '<div style="width: 100%; max-width: 180px; margin: 0 0 24px auto; align-self: flex-end; mix-blend-mode: multiply; opacity: 0.9; filter: grayscale(100%) contrast(1.2) sepia(20%);">';
+              contentHTML += '<img src="' + page.image + '" style="width: 100%; border-radius: 4px; box-shadow: inset 0 0 20px rgba(0,0,0,0.5); object-fit: cover;">';
+              contentHTML += '</div>';
+
+              // 저자 이름 (음각 효과)
+              contentHTML +=
+                '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:12px; letter-spacing:-0.5px; line-height:1.2; text-align:right; max-width: 100%; color:rgba(40, 40, 42, 0.85); width:100%; word-break:keep-all; mix-blend-mode: multiply; text-shadow: 1px 1px 0px rgba(255,255,255,0.7), -1px -1px 2px rgba(0,0,0,0.15);">' +
+                page.title +
+                "</h1>";
+            } else if (page.type === "cover") {
               let rawTitle = page.title;
               let kicker = "";
               let mainTitle = rawTitle;
@@ -824,7 +837,11 @@ let currentChapter = 0;
             }
           }
 
-          contentHTML += `<div class="${page.type === 'cover' ? 'cover-subtitle' : ''}" style="${page.type === 'cover' ? '' : 'max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;'}">`;
+          if (page.type === "author_profile") {
+            contentHTML += `<div style="max-width: 100%; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.7; font-size: 1.05em; color: rgba(50, 50, 50, 0.85); word-break: keep-all; display: flex; flex-direction: column; mix-blend-mode: multiply; text-shadow: 1px 1px 0px rgba(255,255,255,0.6), -1px -1px 1px rgba(0,0,0,0.1); font-weight: 600;">`;
+          } else {
+            contentHTML += `<div class="${page.type === 'cover' ? 'cover-subtitle' : ''}" style="${page.type === 'cover' ? '' : 'max-width: 600px; width: 100%; margin: 0 0 0 auto; text-align: right; line-height: 1.6; font-size: 1.1em; color: #1d1d1f; word-break: keep-all; display: flex; flex-direction: column; text-shadow: none; font-weight: 600;'}">`;
+          }
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
