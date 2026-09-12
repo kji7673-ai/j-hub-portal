@@ -86,8 +86,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 6px;
-        padding: 8px 16px;
+        gap: 0;
+        padding: 10px; border-radius: 50%; width: 44px; height: 44px;
         font-size: 14px;
         font-weight: 500;
         color: #1d1d1f;
@@ -130,7 +130,7 @@
         <svg viewBox="0 0 24 24">
           <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
         </svg>
-        <span>책갈피</span>
+        
       </button>
       <button onclick="openBookmarkList()">
         <svg viewBox="0 0 24 24">
@@ -141,7 +141,7 @@
           <line x1="3" y1="12" x2="3.01" y2="12"></line>
           <line x1="3" y1="18" x2="3.01" y2="18"></line>
         </svg>
-        <span>목록</span>
+        
       </button>
       <button onclick="openFeedbackModal()">
         <svg viewBox="0 0 24 24">
@@ -149,7 +149,7 @@
             d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
           ></path>
         </svg>
-        <span>소감</span>
+        
       </button>
     </div>
 
@@ -227,7 +227,7 @@
               background: rgba(255, 255, 255, 0.9);
               border: 1px solid #e0e0e0;
               border-radius: 20px;
-              padding: 8px 16px;
+              padding: 10px; border-radius: 50%; width: 44px; height: 44px;
               cursor: pointer;
             "
           >
@@ -273,7 +273,7 @@
               background: rgba(255, 255, 255, 0.9);
               border: 1px solid #e0e0e0;
               border-radius: 20px;
-              padding: 8px 16px;
+              padding: 10px; border-radius: 50%; width: 44px; height: 44px;
               cursor: pointer;
             "
           >
@@ -286,7 +286,7 @@
               color: #fff;
               border: none;
               border-radius: 20px;
-              padding: 8px 16px;
+              padding: 10px; border-radius: 50%; width: 44px; height: 44px;
               cursor: pointer;
             "
             onclick="sendFeedbackEmail()"
@@ -471,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242357"></script>
+    <script src="book_data.js?v=20242358"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -888,6 +888,9 @@ let currentChapter = 0;
       }
 
       function prevPage() {
+        if (isPageTurning) return;
+        isPageTurning = true;
+        setTimeout(() => isPageTurning = false, 400); // 0.4초 쿨다운
         if (currentChapter > 0) {
           currentChapter--;
           currentColumn = 0;
@@ -895,7 +898,11 @@ let currentChapter = 0;
         }
       }
 
+      let isPageTurning = false;
       function nextPage() {
+        if (isPageTurning) return;
+        isPageTurning = true;
+        setTimeout(() => isPageTurning = false, 400); // 0.4초 쿨다운
         if (currentChapter < bookData.pages.length - 1) {
           currentChapter++;
           currentColumn = 0;
@@ -946,7 +953,7 @@ let currentChapter = 0;
             btn.style.color = "#1d1d1f";
           } else {
             btn.innerHTML =
-              '<svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path></svg><span>책갈피</span>';
+              '<svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path></svg>';
             btn.style.color = "#1d1d1f";
           }
         }
