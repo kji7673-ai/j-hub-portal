@@ -92,8 +92,9 @@
         border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;
       }
       .curation-caption {
-        font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 11px; 
-        font-weight: 600; letter-spacing: 0.4em; color: #8e8e93; margin-top: 18px; text-transform: uppercase;
+        font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 13px; 
+        font-weight: 500; letter-spacing: 0.05em; color: #7a7a7a; margin-top: 20px; 
+        text-align: center; word-break: keep-all; line-height: 1.5;
       }
     
       /* --- UX & Typography Enhancements --- */
@@ -565,7 +566,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242374"></script>
+    <script src="book_data.js?v=20242375"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -805,12 +806,7 @@ let currentChapter = 0;
               '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: center; width: 100%;"><img src="' +
               page.image +
               '" alt="Chapter Image" style="' + imgStyle + '">';
-            if (page.caption) {
-              contentHTML +=
-                '<div class="image-caption">' +
-                page.caption +
-                "</div>";
-            }
+
             
             // 갤러리 캡션 스타일: 1개의 유니크 키워드를 아주 넓은 자간으로 렌더링
             if (page.keywords) {

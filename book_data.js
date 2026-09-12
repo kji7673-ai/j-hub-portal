@@ -22,10 +22,9 @@ const bookData = {
             "text": "",
             "part": "제1막: 프롭테크와 정비사업의 미래",
             "partCategory": "",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "건축"
+            "keywords": "투박한 선 끝에 맺힌 진심"
         },
         {
             "type": "image_top",
@@ -38,7 +37,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "건축"
+            "keywords": "투박한 선 끝에 맺힌 진심"
         },
         {
             "type": "image_top",
@@ -50,17 +49,16 @@ const bookData = {
             "partCategory": "",
             "caption": null,
             "isContinuation": true,
-            "keywords": "건축"
+            "keywords": "투박한 선 끝에 맺힌 진심"
         },
         {
             "image": "static/images/act1_white.jpg",
             "title": "여는 글: 제1막: 공유결합 디자인 방법론",
             "text": "",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "결합"
+            "keywords": "서로 스며들어 완성되는 공간"
         },
         {
             "image": null,
@@ -70,7 +68,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "결합"
+            "keywords": "서로 스며들어 완성되는 공간"
         },
         {
             "type": "text",
@@ -80,10 +78,9 @@ const bookData = {
             "partTitle": "건축이라는 세계",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch10_frame2.jpg",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "융합"
+            "keywords": "다른 물성들이 만나 그리는 조화"
         },
         {
             "type": "text",
@@ -96,7 +93,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "융합"
+            "keywords": "다른 물성들이 만나 그리는 조화"
         },
         {
             "type": "text",
@@ -108,7 +105,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "융합"
+            "keywords": "다른 물성들이 만나 그리는 조화"
         },
         {
             "type": "text",
@@ -120,7 +117,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "융합"
+            "keywords": "다른 물성들이 만나 그리는 조화"
         },
         {
             "type": "text",
@@ -128,10 +125,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch10_frame3.jpg",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "관계"
+            "keywords": "무너짐 위에 다시 세우는 질서"
         },
         {
             "type": "text",
@@ -142,7 +138,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "관계"
+            "keywords": "무너짐 위에 다시 세우는 질서"
         },
         {
             "type": "text",
@@ -152,7 +148,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "관계"
+            "keywords": "무너짐 위에 다시 세우는 질서"
         },
         {
             "type": "text",
@@ -160,10 +156,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch10_sculpture1.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "구조"
+            "keywords": "시간을 버티어낼 견고한 토대"
         },
         {
             "type": "text",
@@ -174,7 +169,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "구조"
+            "keywords": "시간을 버티어낼 견고한 토대"
         },
         {
             "type": "image_top",
@@ -184,10 +179,9 @@ const bookData = {
             "part": "제2막: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "개성"
+            "keywords": "고유함이 모여 이루는 새로운 풍경"
         },
         {
             "type": "image_top",
@@ -200,7 +194,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "개성"
+            "keywords": "고유함이 모여 이루는 새로운 풍경"
         },
         {
             "type": "image_top",
@@ -212,7 +206,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "개성"
+            "keywords": "고유함이 모여 이루는 새로운 풍경"
         },
         {
             "type": "image_top",
@@ -224,7 +218,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "개성"
+            "keywords": "고유함이 모여 이루는 새로운 풍경"
         },
         {
             "type": "bridge",
@@ -232,10 +226,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch11_relief.jpg",
             "text": "",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "철학"
+            "keywords": "삶의 온기를 담아내는 그릇"
         },
         {
             "type": "bridge",
@@ -246,7 +239,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "철학"
+            "keywords": "삶의 온기를 담아내는 그릇"
         },
         {
             "type": "image_top",
@@ -256,10 +249,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "순응"
+            "keywords": "자연의 맥락에 녹아드는 겸손함"
         },
         {
             "type": "image_top",
@@ -272,7 +264,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "순응"
+            "keywords": "자연의 맥락에 녹아드는 겸손함"
         },
         {
             "type": "image_top",
@@ -284,7 +276,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "순응"
+            "keywords": "자연의 맥락에 녹아드는 겸손함"
         },
         {
             "type": "poem",
@@ -294,10 +286,9 @@ const bookData = {
             "part": "제2막: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "대지"
+            "keywords": "대지의 호흡을 듣는 깊은 침묵"
         },
         {
             "type": "poem",
@@ -310,7 +301,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "대지"
+            "keywords": "대지의 호흡을 듣는 깊은 침묵"
         },
         {
             "type": "poem",
@@ -322,7 +313,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "대지"
+            "keywords": "대지의 호흡을 듣는 깊은 침묵"
         },
         {
             "type": "image_top",
@@ -332,10 +323,9 @@ const bookData = {
             "part": "제2막: 철학편",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "형식"
+            "keywords": "혼돈 속에서 피어나는 정제된 선"
         },
         {
             "type": "image_top",
@@ -348,7 +338,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "형식"
+            "keywords": "혼돈 속에서 피어나는 정제된 선"
         },
         {
             "type": "image_top",
@@ -360,7 +350,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "형식"
+            "keywords": "혼돈 속에서 피어나는 정제된 선"
         },
         {
             "type": "image_top",
@@ -372,7 +362,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "형식"
+            "keywords": "혼돈 속에서 피어나는 정제된 선"
         },
         {
             "type": "image_top",
@@ -382,10 +372,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "여백"
+            "keywords": "비워진 틈새가 품고 있는 무한함"
         },
         {
             "type": "image_top",
@@ -398,7 +387,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "여백"
+            "keywords": "비워진 틈새가 품고 있는 무한함"
         },
         {
             "type": "image_top",
@@ -408,10 +397,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "기운"
+            "keywords": "보이지 않는 힘이 흐르는 길"
         },
         {
             "type": "image_top",
@@ -424,7 +412,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "기운"
+            "keywords": "보이지 않는 힘이 흐르는 길"
         },
         {
             "type": "image_top",
@@ -436,7 +424,7 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "기운"
+            "keywords": "보이지 않는 힘이 흐르는 길"
         },
         {
             "type": "image_top",
@@ -446,10 +434,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "디테일"
+            "keywords": "섬세한 디테일이 건네는 깊은 울림"
         },
         {
             "type": "image_top",
@@ -462,7 +449,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "디테일"
+            "keywords": "섬세한 디테일이 건네는 깊은 울림"
         },
         {
             "title": "다정한 디자인",
@@ -470,10 +457,9 @@ const bookData = {
             "type": "poem",
             "text": "",
             "image": "static/images/gallery_batch12_sculpture4.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "온기"
+            "keywords": "사람을 품어 안는 따뜻한 곡선"
         },
         {
             "title": "다정한 디자인",
@@ -484,7 +470,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "온기"
+            "keywords": "사람을 품어 안는 따뜻한 곡선"
         },
         {
             "type": "text",
@@ -492,10 +478,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch3_face.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "현실"
+            "keywords": "종이를 벗어나 숨 쉬는 생명력"
         },
         {
             "type": "text",
@@ -506,7 +491,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "현실"
+            "keywords": "종이를 벗어나 숨 쉬는 생명력"
         },
         {
             "type": "text",
@@ -516,7 +501,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "현실"
+            "keywords": "종이를 벗어나 숨 쉬는 생명력"
         },
         {
             "type": "text",
@@ -524,10 +509,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch3_reaching.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "행위"
+            "keywords": "땀과 흙이 뒤섞인 치열한 창조"
         },
         {
             "type": "text",
@@ -538,7 +522,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "행위"
+            "keywords": "땀과 흙이 뒤섞인 치열한 창조"
         },
         {
             "type": "text",
@@ -548,7 +532,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "행위"
+            "keywords": "땀과 흙이 뒤섞인 치열한 창조"
         },
         {
             "type": "image_top",
@@ -557,10 +541,9 @@ const bookData = {
             "text": "",
             "part": "제1막: 시스템편 (디지털 플랫폼 모델)",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "약속"
+            "keywords": "믿음으로 쌓아 올린 약속의 도면"
         },
         {
             "type": "image_top",
@@ -572,7 +555,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "약속"
+            "keywords": "믿음으로 쌓아 올린 약속의 도면"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -582,10 +565,9 @@ const bookData = {
             "image": "static/images/gallery_batch4_bighands.jpg",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "존엄"
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -598,7 +580,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "존엄"
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -610,7 +592,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "존엄"
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -620,10 +602,9 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch4_flat.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -636,7 +617,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -649,7 +630,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -662,7 +643,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -675,7 +656,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -687,7 +668,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "구상"
+            "keywords": "빛과 그림자로 짓는 서사"
         },
         {
             "type": "image_top",
@@ -697,10 +678,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "과정"
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "type": "image_top",
@@ -713,7 +693,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "과정"
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "type": "image_top",
@@ -726,7 +706,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "과정"
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "type": "image_top",
@@ -739,7 +719,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "과정"
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "type": "image_top",
@@ -751,17 +731,16 @@ const bookData = {
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isContinuation": true,
-            "keywords": "과정"
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "image": "static/images/act2_white.jpg",
             "title": "여는 글: 제2막: 나라는 개체의 독립과 생존",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "독립"
+            "keywords": "자립하는 영혼의 외로운 기초"
         },
         {
             "image": null,
@@ -771,7 +750,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "독립"
+            "keywords": "자립하는 영혼의 외로운 기초"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -781,10 +760,9 @@ const bookData = {
             "image": "static/images/gallery_batch4_heart.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "발견"
+            "keywords": "세상의 풍경을 바꾸는 조용한 기쁨"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -797,7 +775,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "발견"
+            "keywords": "세상의 풍경을 바꾸는 조용한 기쁨"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -807,10 +785,9 @@ const bookData = {
             "image": "static/images/gallery_batch4_leaning.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "무게"
+            "keywords": "책임의 무게를 견디는 단단한 기둥"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -823,7 +800,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "무게"
+            "keywords": "책임의 무게를 견디는 단단한 기둥"
         },
         {
             "type": "image_top",
@@ -833,10 +810,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "노동"
+            "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
             "type": "image_top",
@@ -849,7 +825,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "노동"
+            "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
             "type": "image_top",
@@ -861,7 +837,7 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isContinuation": true,
-            "keywords": "노동"
+            "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
             "type": "image_top",
@@ -873,7 +849,7 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isContinuation": true,
-            "keywords": "노동"
+            "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
             "type": "image_top",
@@ -885,7 +861,7 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isContinuation": true,
-            "keywords": "노동"
+            "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
             "type": "image_top",
@@ -895,10 +871,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "고독"
+            "keywords": "침묵으로 다져진 마음의 위로"
         },
         {
             "type": "image_top",
@@ -911,7 +886,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "고독"
+            "keywords": "침묵으로 다져진 마음의 위로"
         },
         {
             "type": "image_top",
@@ -923,7 +898,7 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고독"
+            "keywords": "침묵으로 다져진 마음의 위로"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -933,10 +908,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch5_falling1.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "가치"
+            "keywords": "가장 작은 단위에 깃든 가치"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -949,7 +923,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "가치"
+            "keywords": "가장 작은 단위에 깃든 가치"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -961,7 +935,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "가치"
+            "keywords": "가장 작은 단위에 깃든 가치"
         },
         {
             "title": "양팔에 낀 토시",
@@ -969,10 +943,9 @@ const bookData = {
             "type": "poem",
             "text": "",
             "image": "static/images/gallery_batch5_falling2.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "일상"
+            "keywords": "묵묵히 버텨낸 노동의 흔적"
         },
         {
             "title": "양팔에 낀 토시",
@@ -983,7 +956,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "일상"
+            "keywords": "묵묵히 버텨낸 노동의 흔적"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -993,10 +966,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch5_hunched.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "현재"
+            "keywords": "매일매일 벽돌을 쌓는 마음"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1009,7 +981,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "현재"
+            "keywords": "매일매일 벽돌을 쌓는 마음"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1019,10 +991,9 @@ const bookData = {
             "image": "static/images/gallery_batch5_running.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "인정"
+            "keywords": "균열을 인정하며 다시 일어서기"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1035,7 +1006,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "인정"
+            "keywords": "균열을 인정하며 다시 일어서기"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1045,10 +1016,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_brown.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "우직"
+            "keywords": "느릿한 걸음이 만드는 견고함"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1061,7 +1031,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "우직"
+            "keywords": "느릿한 걸음이 만드는 견고함"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1073,7 +1043,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "우직"
+            "keywords": "느릿한 걸음이 만드는 견고함"
         },
         {
             "type": "image_top",
@@ -1083,10 +1053,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "회복"
+            "keywords": "쓰러져도 다시 서는 중력의 법칙"
         },
         {
             "type": "image_top",
@@ -1099,7 +1068,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "회복"
+            "keywords": "쓰러져도 다시 서는 중력의 법칙"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1109,10 +1078,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_white1.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1125,7 +1093,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1137,7 +1105,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1149,7 +1117,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1161,7 +1129,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1173,7 +1141,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고립"
+            "keywords": "홀로 마주하는 심연의 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1183,10 +1151,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch4_flat_1789095642326.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "고뇌"
+            "keywords": "밤의 고요 속에서 깨어난 사유"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1199,7 +1166,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "고뇌"
+            "keywords": "밤의 고요 속에서 깨어난 사유"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1211,7 +1178,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "고뇌"
+            "keywords": "밤의 고요 속에서 깨어난 사유"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1221,10 +1188,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_white2.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "소멸"
+            "keywords": "모든 것을 태워 남긴 텅 빈 여백"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1237,7 +1203,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "소멸"
+            "keywords": "모든 것을 태워 남긴 텅 빈 여백"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1247,10 +1213,9 @@ const bookData = {
             "image": "static/images/gallery_batch14_duo_light_1789124898491.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "편견"
+            "keywords": "새로운 빛으로 비추는 존재의 변화"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1263,7 +1228,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "편견"
+            "keywords": "새로운 빛으로 비추는 존재의 변화"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1273,10 +1238,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_carry_mass2.jpg",
             "type": "image_top",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1289,7 +1253,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1302,7 +1266,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1314,7 +1278,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1326,7 +1290,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1338,7 +1302,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "주체"
+            "keywords": "세상과 맞닿은 하나의 점"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1348,10 +1312,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch4_leaning_1789095654604.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1364,7 +1327,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1377,7 +1340,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1390,7 +1353,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1403,7 +1366,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1415,7 +1378,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "찰나"
+            "keywords": "일상을 벗어나 마주하는 바람"
         },
         {
             "title": "만지작거리고 바스락거린다",
@@ -1423,10 +1386,9 @@ const bookData = {
             "type": "poem",
             "text": "",
             "image": "static/images/gallery_batch13_wire2_1789124561183.jpg",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "촉각"
+            "keywords": "종이 위를 스치는 상상의 촉감"
         },
         {
             "title": "만지작거리고 바스락거린다",
@@ -1437,7 +1399,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "촉각"
+            "keywords": "종이 위를 스치는 상상의 촉감"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1447,10 +1409,9 @@ const bookData = {
             "image": "static/images/gallery_batch7_clay1.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "시행"
+            "keywords": "치열한 고민이 남긴 아름다운 주름"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1463,7 +1424,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "시행"
+            "keywords": "치열한 고민이 남긴 아름다운 주름"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1473,10 +1434,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_clay2.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "해체"
+            "keywords": "복잡함을 덜어낸 명료한 구조"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1489,7 +1449,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "해체"
+            "keywords": "복잡함을 덜어낸 명료한 구조"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1499,10 +1459,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_wire_dance.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "존재"
+            "keywords": "가만히 그 자리를 지키는 영원"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1515,7 +1474,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "존재"
+            "keywords": "가만히 그 자리를 지키는 영원"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1525,10 +1484,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch7_wire_duo.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "세계"
+            "keywords": "서로 다른 시선이 짓는 풍경"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1541,7 +1499,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "세계"
+            "keywords": "서로 다른 시선이 짓는 풍경"
         },
         {
             "type": "image_top",
@@ -1551,10 +1509,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "사유"
+            "keywords": "본질을 꿰뚫는 투명한 통찰"
         },
         {
             "type": "image_top",
@@ -1567,7 +1524,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "사유"
+            "keywords": "본질을 꿰뚫는 투명한 통찰"
         },
         {
             "type": "poem",
@@ -1577,10 +1534,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 4] 미완의 일상",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "궤적"
+            "keywords": "우직하게 뻗어나가는 삶의 궤적"
         },
         {
             "type": "poem",
@@ -1593,7 +1549,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "궤적"
+            "keywords": "우직하게 뻗어나가는 삶의 궤적"
         },
         {
             "type": "image_top",
@@ -1603,10 +1559,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "생존"
+            "keywords": "어둠을 밝히는 한 줄기 빛"
         },
         {
             "type": "image_top",
@@ -1619,7 +1574,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "생존"
+            "keywords": "어둠을 밝히는 한 줄기 빛"
         },
         {
             "type": "text",
@@ -1627,10 +1582,9 @@ const bookData = {
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch8_frame4.jpg",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "회귀"
+            "keywords": "다시 흙을 밟으며 얻는 생동감"
         },
         {
             "type": "text",
@@ -1641,7 +1595,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "회귀"
+            "keywords": "다시 흙을 밟으며 얻는 생동감"
         },
         {
             "type": "poem",
@@ -1651,10 +1605,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "환상"
+            "keywords": "환상 너머에 존재하는 차가운 진실"
         },
         {
             "type": "poem",
@@ -1667,7 +1620,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "환상"
+            "keywords": "환상 너머에 존재하는 차가운 진실"
         },
         {
             "type": "poem",
@@ -1679,7 +1632,7 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isContinuation": true,
-            "keywords": "환상"
+            "keywords": "환상 너머에 존재하는 차가운 진실"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1689,10 +1642,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch2.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "충돌"
+            "keywords": "허상이 무너지고 드러나는 맨얼굴"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1705,7 +1657,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "충돌"
+            "keywords": "허상이 무너지고 드러나는 맨얼굴"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1715,10 +1667,9 @@ const bookData = {
             "image": "static/images/gallery_batch9_arch3.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "탐욕"
+            "keywords": "탐욕이 낳은 그림자의 무게"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1731,7 +1682,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "탐욕"
+            "keywords": "탐욕이 낳은 그림자의 무게"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1741,10 +1692,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch4.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "이상"
+            "keywords": "실현되지 못한 꿈의 허무함"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1757,7 +1707,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "이상"
+            "keywords": "실현되지 못한 꿈의 허무함"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1767,10 +1717,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch9_arch5.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "경계"
+            "keywords": "끝없이 이어지는 공간의 경계"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1783,7 +1732,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "경계"
+            "keywords": "끝없이 이어지는 공간의 경계"
         },
         {
             "type": "image_top",
@@ -1791,10 +1740,9 @@ const bookData = {
             "text": "",
             "image": "static/images/gallery_new_4.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "소명"
+            "keywords": "창조를 향한 식지 않는 갈망"
         },
         {
             "type": "image_top",
@@ -1805,7 +1753,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "소명"
+            "keywords": "창조를 향한 식지 않는 갈망"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1815,10 +1763,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_new_3.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "연대"
+            "keywords": "평범한 하루가 겹겹이 쌓인 역사"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1831,7 +1778,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "연대"
+            "keywords": "평범한 하루가 겹겹이 쌓인 역사"
         },
         {
             "type": "image_top",
@@ -1841,10 +1788,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "현장의 기록",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "시간"
+            "keywords": "시간과 땀방울이 새겨진 지층"
         },
         {
             "type": "image_top",
@@ -1857,7 +1803,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "시간"
+            "keywords": "시간과 땀방울이 새겨진 지층"
         },
         {
             "type": "poem",
@@ -1865,10 +1811,9 @@ const bookData = {
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_new_1.jpg",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "경험"
+            "keywords": "먼지 속에서 캐낸 삶의 지혜"
         },
         {
             "type": "poem",
@@ -1879,7 +1824,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "경험"
+            "keywords": "먼지 속에서 캐낸 삶의 지혜"
         },
         {
             "type": "poem",
@@ -1889,7 +1834,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "경험"
+            "keywords": "먼지 속에서 캐낸 삶의 지혜"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1899,10 +1844,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_frame_5.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "밀도"
+            "keywords": "서로의 온기에 기대어 선 삶들"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1915,7 +1859,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "밀도"
+            "keywords": "서로의 온기에 기대어 선 삶들"
         },
         {
             "type": "text",
@@ -1923,10 +1867,9 @@ const bookData = {
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "text": "",
             "image": "static/images/gallery_frame_4.jpg",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "중심"
+            "keywords": "깊은 땅속에 뿌리내린 심지"
         },
         {
             "type": "text",
@@ -1937,7 +1880,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "중심"
+            "keywords": "깊은 땅속에 뿌리내린 심지"
         },
         {
             "type": "text",
@@ -1947,17 +1890,16 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "중심"
+            "keywords": "깊은 땅속에 뿌리내린 심지"
         },
         {
             "image": "static/images/act3_white.jpg",
             "title": "여는 글: 제3막: 사람을 알아가는 관계성",
             "text": "",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "타자"
+            "keywords": "마음과 마음을 잇는 단단한 가교"
         },
         {
             "image": null,
@@ -1967,7 +1909,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "타자"
+            "keywords": "마음과 마음을 잇는 단단한 가교"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1977,10 +1919,9 @@ const bookData = {
             "image": "static/images/gallery_frame_3.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "군중"
+            "keywords": "함께 모여 이루는 다채로운 숲"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -1993,7 +1934,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "군중"
+            "keywords": "함께 모여 이루는 다채로운 숲"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2003,10 +1944,9 @@ const bookData = {
             "image": "static/images/gallery_frame_1.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "이성"
+            "keywords": "차가운 이성 속 뜨거운 신념"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2019,7 +1959,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "이성"
+            "keywords": "차가운 이성 속 뜨거운 신념"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2031,7 +1971,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "이성"
+            "keywords": "차가운 이성 속 뜨거운 신념"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2041,10 +1981,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
             "type": "image_top",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "정제"
+            "keywords": "불순물을 걸러낸 순수한 결정"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2057,7 +1996,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "정제"
+            "keywords": "불순물을 걸러낸 순수한 결정"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2067,10 +2006,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/user_sculpture_2.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "언어"
+            "keywords": "언어를 넘어선 가장 깊은 소통"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2083,7 +2021,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "언어"
+            "keywords": "언어를 넘어선 가장 깊은 소통"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2093,10 +2031,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch8_frame1_1789097190360.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "공감"
+            "keywords": "창문 너머 같은 풍경을 보는 일"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2109,7 +2046,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "공감"
+            "keywords": "창문 너머 같은 풍경을 보는 일"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2119,10 +2056,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_custom_3.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "관성"
+            "keywords": "시간이 길들인 편안한 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2135,7 +2071,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "관성"
+            "keywords": "시간이 길들인 편안한 공간"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2145,10 +2081,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_custom_2.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "경청"
+            "keywords": "소리가 스며들어 남긴 잔향"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2161,7 +2096,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "경청"
+            "keywords": "소리가 스며들어 남긴 잔향"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2174,7 +2109,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "경청"
+            "keywords": "소리가 스며들어 남긴 잔향"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2187,7 +2122,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": true,
-            "keywords": "경청"
+            "keywords": "소리가 스며들어 남긴 잔향"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2197,10 +2132,9 @@ const bookData = {
             "image": "static/images/gallery_custom_1.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "목적"
+            "keywords": "도구가 되어버린 쓸쓸한 관계"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2213,7 +2147,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "목적"
+            "keywords": "도구가 되어버린 쓸쓸한 관계"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2223,10 +2157,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch9_arch5_1789097544862.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "품격"
+            "keywords": "치장하지 않은 본연의 품격"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2239,7 +2172,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "품격"
+            "keywords": "치장하지 않은 본연의 품격"
         },
         {
             "type": "text",
@@ -2247,10 +2180,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "text": "",
             "image": "static/images/act3_sculpture_2.jpg",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "차이"
+            "keywords": "차이를 품어 안는 넓은 포용력"
         },
         {
             "type": "text",
@@ -2261,7 +2193,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "차이"
+            "keywords": "차이를 품어 안는 넓은 포용력"
         },
         {
             "type": "image_top",
@@ -2271,10 +2203,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제3막: 사람을 알아가는 관계성",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "조화"
+            "keywords": "서로 얽히어 피어나는 조화"
         },
         {
             "type": "image_top",
@@ -2287,7 +2218,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "조화"
+            "keywords": "서로 얽히어 피어나는 조화"
         },
         {
             "type": "image_top",
@@ -2299,7 +2230,7 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "caption": null,
             "isContinuation": true,
-            "keywords": "조화"
+            "keywords": "서로 얽히어 피어나는 조화"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2309,10 +2240,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch9_arch4_1789097533576.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "간극"
+            "keywords": "언어와 진심 사이의 좁은 골목"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2325,7 +2255,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "간극"
+            "keywords": "언어와 진심 사이의 좁은 골목"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2335,10 +2265,9 @@ const bookData = {
             "image": "static/images/gallery_batch9_arch3_1789097518731.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "poem",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "실존"
+            "keywords": "함께 부대끼며 그리는 삶의 무늬"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2351,7 +2280,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "실존"
+            "keywords": "함께 부대끼며 그리는 삶의 무늬"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2363,7 +2292,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "실존"
+            "keywords": "함께 부대끼며 그리는 삶의 무늬"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2373,10 +2302,9 @@ const bookData = {
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch9_arch2_1789097505174.jpg",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "휴식"
+            "keywords": "일상의 쉼표가 되는 아늑한 품"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2389,7 +2317,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "휴식"
+            "keywords": "일상의 쉼표가 되는 아늑한 품"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2401,7 +2329,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "휴식"
+            "keywords": "일상의 쉼표가 되는 아늑한 품"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2413,7 +2341,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "휴식"
+            "keywords": "일상의 쉼표가 되는 아늑한 품"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2425,7 +2353,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "휴식"
+            "keywords": "일상의 쉼표가 되는 아늑한 품"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2435,10 +2363,9 @@ const bookData = {
             "image": "static/images/gallery_batch14_head_frame_1789124876337.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "image_top",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "자연"
+            "keywords": "세월의 풍파를 견딘 생명의 속삭임"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2451,7 +2378,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "자연"
+            "keywords": "세월의 풍파를 견딘 생명의 속삭임"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2463,7 +2390,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "자연"
+            "keywords": "세월의 풍파를 견딘 생명의 속삭임"
         },
         {
             "title": "읽기와 듣기, 그리고 말하기",
@@ -2486,10 +2413,9 @@ const bookData = {
             "title": "여는 글: 제4막: 궁극의 공유결합",
             "text": "",
             "image": "static/images/act4_white.jpg",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "완성"
+            "keywords": "완전한 하나로 거듭나는 절정"
         },
         {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
@@ -2499,7 +2425,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "완성"
+            "keywords": "완전한 하나로 거듭나는 절정"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2509,10 +2435,9 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": "static/images/act4_sculpture_1.jpg",
             "type": "poem",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "기억"
+            "keywords": "골목길을 지키는 소박한 등대"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2525,7 +2450,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "기억"
+            "keywords": "골목길을 지키는 소박한 등대"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2537,7 +2462,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "기억"
+            "keywords": "골목길을 지키는 소박한 등대"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2547,10 +2472,9 @@ const bookData = {
             "image": "static/images/gallery_batch9_arch1_1789097489769.jpg",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "type": "image_top",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "공동체"
+            "keywords": "이웃의 온기를 담아내는 터전"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2563,7 +2487,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "공동체"
+            "keywords": "이웃의 온기를 담아내는 터전"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2575,7 +2499,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "공동체"
+            "keywords": "이웃의 온기를 담아내는 터전"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2587,7 +2511,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "공동체"
+            "keywords": "이웃의 온기를 담아내는 터전"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2599,7 +2523,7 @@ const bookData = {
             "type": "image_top",
             "caption": null,
             "isContinuation": true,
-            "keywords": "공동체"
+            "keywords": "이웃의 온기를 담아내는 터전"
         },
         {
             "type": "image_top",
@@ -2609,10 +2533,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2625,7 +2548,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2637,7 +2560,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2649,7 +2572,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2661,7 +2584,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2673,7 +2596,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2685,7 +2608,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2697,7 +2620,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2709,7 +2632,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2721,7 +2644,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "image_top",
@@ -2733,7 +2656,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "도전"
+            "keywords": "옛길 위에 새로 쓰는 공간의 시"
         },
         {
             "type": "text_only",
@@ -2743,10 +2666,9 @@ const bookData = {
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": "static/images/gallery_batch17_sculpture1_1789125773271.jpg",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "창조"
+            "keywords": "치열한 경쟁 속 피어난 아이디어"
         },
         {
             "type": "text_only",
@@ -2759,7 +2681,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "창조"
+            "keywords": "치열한 경쟁 속 피어난 아이디어"
         },
         {
             "type": "text_only",
@@ -2771,7 +2693,7 @@ const bookData = {
             "image": null,
             "caption": null,
             "isContinuation": true,
-            "keywords": "창조"
+            "keywords": "치열한 경쟁 속 피어난 아이디어"
         },
         {
             "type": "poem",
@@ -2781,10 +2703,9 @@ const bookData = {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
-            "caption": "오리지널 입체 조형물 (Original Sculpture)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2797,7 +2718,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2809,7 +2730,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2821,7 +2742,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2833,7 +2754,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2845,7 +2766,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "type": "poem",
@@ -2857,7 +2778,7 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "caption": null,
             "isContinuation": true,
-            "keywords": "흔적"
+            "keywords": "시간의 지층 위에 새로운 숨결을"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2867,10 +2788,9 @@ const bookData = {
             "partCategory": "제4막: 공동체로의 통합, 마음을 짓는 일",
             "image": "static/images/gallery_batch11_sculpture_1789121872929.jpg",
             "type": "poem",
-            "caption": "오리지널 스케치 도면 (Original Sketch Drawing)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "평가"
+            "keywords": "평가를 넘어선 진정성의 증명"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2883,7 +2803,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "평가"
+            "keywords": "평가를 넘어선 진정성의 증명"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2895,7 +2815,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "평가"
+            "keywords": "평가를 넘어선 진정성의 증명"
         },
         {
             "part": "제4막: 증언과 성찰",
@@ -2907,7 +2827,7 @@ const bookData = {
             "type": "poem",
             "caption": null,
             "isContinuation": true,
-            "keywords": "평가"
+            "keywords": "평가를 넘어선 진정성의 증명"
         },
         {
             "type": "epilogue",
@@ -2915,10 +2835,9 @@ const bookData = {
             "title": "에필로그: 도면 위의 공유결합",
             "text": "",
             "partCategory": "",
-            "caption": "오리지널 스케치 노트 (Original Sketch Note)",
             "isImageOnly": true,
             "isContinuation": false,
-            "keywords": "매듭"
+            "keywords": "선과 선이 만나 완성된 삶의 무대"
         },
         {
             "type": "epilogue",
@@ -2929,7 +2848,7 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "매듭"
+            "keywords": "선과 선이 만나 완성된 삶의 무대"
         },
         {
             "type": "epilogue",
@@ -2939,7 +2858,7 @@ const bookData = {
             "partCategory": "",
             "caption": null,
             "isContinuation": true,
-            "keywords": "매듭"
+            "keywords": "선과 선이 만나 완성된 삶의 무대"
         }
     ]
 };
