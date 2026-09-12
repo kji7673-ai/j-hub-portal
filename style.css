@@ -1101,3 +1101,44 @@ h2.chapter-title {
 #progress-bar {
   background: rgba(0, 0, 0, 0.6) !important;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideNext {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slidePrev {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in { animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.slide-next { animation: slideNext 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.slide-prev { animation: slidePrev 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f5f5f7;
+    --text-muted: #aaaaaa;
+    --quote-bg: rgba(40, 40, 42, 0.95);
+  }
+  body, html, .book-container, .page-content, .toc-modal .modal-content {
+    background-color: #121212 !important;
+    color: #f5f5f7 !important;
+  }
+  .bottom-nav {
+    background: rgba(18, 18, 18, 0.85) !important;
+    border-top: 1px solid #333 !important;
+  }
+  .toc-category {
+    border-bottom: 1px solid #333 !important;
+  }
+  .modal-content-box {
+    background: #1e1e1e !important;
+    color: #f5f5f7 !important;
+  }
+}
