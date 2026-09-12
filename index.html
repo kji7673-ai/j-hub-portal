@@ -471,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242355"></script>
+    <script src="book_data.js?v=20242356"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -499,7 +499,7 @@ let currentChapter = 0;
         if (!tocList) return;
         tocList.innerHTML = "";
         let currentCategory = null;
-        let currentGroupContent = null;
+        let currentGroupContent = null; // 아이템들이 추가될 부모 컨테이너 참조용
 
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
@@ -538,20 +538,24 @@ let currentChapter = 0;
               catHeader.innerHTML = '<span style="font-weight: 700;">' + cat + '</span>' + 
                                     '<span class="accordion-icon" style="font-size: 12px; color: #999;">▼</span>';
               
-              currentGroupContent = document.createElement("div");
-              currentGroupContent.className = "toc-group-content";
-              currentGroupContent.style.display = "none"; // 기본적으로 닫혀있음
-              currentGroupContent.style.paddingTop = "5px";
+              // 여기가 핵심 수정 포인트입니다! (각 그룹마다 독립적인 로컬 변수로 바인딩)
+              const groupContent = document.createElement("div");
+              groupContent.className = "toc-group-content";
+              groupContent.style.display = "none"; 
+              groupContent.style.paddingTop = "5px";
+              
+              // 다음 아이템들이 이 컨테이너에 들어가도록 외부 변수에 갱신
+              currentGroupContent = groupContent; 
 
+              // 독립된 로컬 변수(groupContent)를 바라보도록 클로저 수정
               catHeader.onclick = () => {
-                const isHidden = currentGroupContent.style.display === "none";
-                // 다른 열려있는 그룹을 닫고 싶다면 여기서 처리할 수도 있습니다.
-                currentGroupContent.style.display = isHidden ? "block" : "none";
+                const isHidden = groupContent.style.display === "none";
+                groupContent.style.display = isHidden ? "block" : "none";
                 catHeader.querySelector('.accordion-icon').innerText = isHidden ? "▲" : "▼";
               };
 
               group.appendChild(catHeader);
-              group.appendChild(currentGroupContent);
+              group.appendChild(groupContent);
               tocList.appendChild(group);
             }
 
@@ -564,6 +568,7 @@ let currentChapter = 0;
               renderCurrentChapter();
               closeTOC();
             };
+            // 정상적으로 현재 카테고리의 껍데기 안에 들어갑니다.
             currentGroupContent.appendChild(li);
           }
         });
