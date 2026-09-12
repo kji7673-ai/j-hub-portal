@@ -936,7 +936,7 @@ let currentChapter = 0;
 
         pText = pText.replace(
           /!\[(.*?)\]\((.*?)\)/g,
-          '<div style="margin: 40px auto; text-align: center;"><img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
+          '<div style="margin: 40px 0; text-align: left;"><img src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
         );
 
         if (!isSpecialPage) {
