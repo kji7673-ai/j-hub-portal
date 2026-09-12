@@ -491,7 +491,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242362"></script>
+    <script src="book_data.js?v=20242363"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -667,9 +667,25 @@ let currentChapter = 0;
 
           if (page.title) {
             if (page.type === "cover") {
+              let rawTitle = page.title;
+              let kicker = "";
+              let mainTitle = rawTitle;
+
+              if (rawTitle.includes(':')) {
+                const parts = rawTitle.split(':');
+                kicker = parts[0].trim();
+                mainTitle = parts.slice(1).join(':').trim();
+              }
+
+              let titleHTML = '';
+              if (kicker) {
+                titleHTML += '<span style="display:block; font-size: 18px; font-weight: 700; color: #0066cc; margin-bottom: 12px; letter-spacing: 0.05em; text-shadow: 0 0 10px rgba(255,255,255,1);">' + kicker + '</span>';
+              }
+              titleHTML += mainTitle;
+
               contentHTML +=
                 '<h1 style="font-size:2.4em; font-weight:800; margin-bottom:10px; letter-spacing:-0.5px; line-height:1.2; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all; text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,0.9), 0 0 5px rgba(255,255,255,0.8);">' +
-                page.title +
+                titleHTML +
                 "</h1>";
             } else {
               contentHTML +=
@@ -726,9 +742,27 @@ let currentChapter = 0;
 
           // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
           if (page.title && !isCont && !isImgOnly) {
+            let rawTitle = page.title.replace(/^여는\s*글\s*:\s*/i, ''); // '여는 글:' 자동 삭제
+            let kicker = "";
+            let mainTitle = rawTitle;
+
+            // 저자 소개가 아니고 제목에 콜론(:)이 있다면 분리
+            if (page.type !== "author_profile" && rawTitle.includes(':')) {
+              const parts = rawTitle.split(':');
+              kicker = parts[0].trim();
+              mainTitle = parts.slice(1).join(':').trim(); // 나머지를 메인 제목으로
+            }
+
+            let titleHTML = '';
+            if (kicker) {
+              // Kicker(막, 장) 디자인: 애플 스타일 블루 포인트 컬러, 작고 단단하게
+              titleHTML += '<span style="display:block; font-size: 16px; font-weight: 700; color: #0066cc; margin-bottom: 12px; letter-spacing: 0.05em;">' + kicker + '</span>';
+            }
+            titleHTML += mainTitle;
+
             contentHTML +=
-              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:30px; letter-spacing:-0.5px; line-height:1.4; text-align:' + (page.type === "author_profile" ? 'center' : 'left') + '; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
-              page.title +
+              '<h1 style="font-size:2.4em; font-weight:800; margin-bottom:40px; letter-spacing:-0.6px; line-height:1.3; text-align:' + (page.type === "author_profile" ? 'center' : 'left') + '; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
+              titleHTML +
               "</h1>";
           }
 
