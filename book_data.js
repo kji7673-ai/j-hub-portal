@@ -154,7 +154,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "단단한 결합을 위한 세 가지 기둥",
+            "title": "공유결합의 세 가지 원칙",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch10_sculpture1.jpg",
