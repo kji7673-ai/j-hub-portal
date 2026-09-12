@@ -48,7 +48,7 @@
 
     <script src="app.js"></script>
   </head>
-  <body>
+  <body class="ui-active" style="overflow-x: hidden;">
     <!-- Progress Bar -->
     <div id="progress-bar-container"><div id="progress-bar"></div></div>
 
@@ -59,7 +59,16 @@
         position: fixed;
         bottom: 30px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 1000;
+      }
+      body.ui-active .bottom-nav {
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
         display: flex;
         background: rgba(250, 250, 252, 0.85);
         backdrop-filter: blur(12px);
@@ -462,7 +471,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242354"></script>
+    <script src="book_data.js?v=20242355"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -1027,6 +1036,25 @@ let currentChapter = 0;
           e.preventDefault();
           nextPage();
         }
+      });
+
+    
+      // Reading Mode UI Toggle
+      document.addEventListener("click", function(e) {
+        // 메뉴바, 목차, 모달, 버튼, 링크 등을 클릭했을 때는 토글하지 않음
+        if (
+          e.target.closest('.bottom-nav') || 
+          e.target.closest('.toc-modal') || 
+          e.target.closest('.bookmark-modal') || 
+          e.target.closest('.feedback-modal') || 
+          e.target.closest('button') || 
+          e.target.closest('a')
+        ) {
+          return;
+        }
+
+        // 화면 텍스트나 빈 공간을 터치하면 UI 표시/숨김 토글
+        document.body.classList.toggle("ui-active");
       });
 
     </script>
