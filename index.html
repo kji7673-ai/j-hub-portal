@@ -65,7 +65,38 @@
       .slide-next { animation: fadeSlideInRight 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
       .slide-prev { animation: fadeSlideInLeft 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
       .fade-in { animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    
+      /* --- Cleaned up dynamic CSS classes --- */
+      .chapter-title-author {
+        font-size: 1.8em; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px; 
+        line-height: 1.4; text-align: center; max-width: 600px; color: #1d1d1f; width: 100%; word-break: keep-all;
+      }
+      .chapter-kicker {
+        display: block; font-size: 14px; font-weight: 700; color: #0066cc; opacity: 0.75; 
+        margin-bottom: 6px; letter-spacing: 0.05em;
+      }
+      .chapter-title-major {
+        font-size: 1.5em; font-weight: 700; margin-bottom: 25px; letter-spacing: -0.4px; 
+        line-height: 1.4; text-align: left; max-width: 600px; color: #0066cc; width: 100%; word-break: keep-all;
+      }
+      .chapter-title-minor {
+        font-size: 1.15em; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.3px; 
+        line-height: 1.4; text-align: left; max-width: 600px; color: #0066cc; width: 100%; word-break: keep-all;
+      }
+      .chapter-img-author {
+        width: 140px; height: 140px; border-radius: 50%; object-fit: cover; 
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;
+      }
+      .chapter-img-standard {
+        max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; 
+        border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;
+      }
+      .curation-caption {
+        font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 11px; 
+        font-weight: 600; letter-spacing: 0.4em; color: #8e8e93; margin-top: 18px; text-transform: uppercase;
+      }
     </style>
+
 
   </head>
   <body style="overflow-x: hidden;">
@@ -488,7 +519,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242372"></script>
+    <script src="book_data.js?v=20242373"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -737,7 +768,7 @@ let currentChapter = 0;
             
             // 갤러리 캡션 스타일: 1개의 유니크 키워드를 아주 넓은 자간으로 렌더링
             if (page.keywords) {
-              contentHTML += '<div style="font-family: \'SF Pro Text\', system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.4em; color: #8e8e93; margin-top: 18px; text-transform: uppercase;">' + page.keywords + '</div>';
+              contentHTML += '<div class="curation-caption">' + page.keywords + '</div>';
             }
             
             contentHTML += "</div>";
@@ -760,14 +791,14 @@ let currentChapter = 0;
             if (isAuthorProfile) {
               // 저자 소개: 중간 크기, 중앙 정렬, 검은색
               contentHTML +=
-                '<h1 style="font-size:1.8em; font-weight:800; margin-bottom:30px; letter-spacing:-0.5px; line-height:1.4; text-align:center; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
+                '<h1 class="chapter-title-author">' +
                 mainTitle +
                 "</h1>";
             } else if (kicker) {
               // 대제목 (막/장): 작가님 요청으로 일반 소제목과 동일하게 1.5em + 시그니처 블루 톤앤매너로 통일
-              let titleHTML = '<span style="display:block; font-size: 14px; font-weight: 700; color: #0066cc; opacity: 0.75; margin-bottom: 6px; letter-spacing: 0.05em;">' + kicker + '</span>' + mainTitle;
+              let titleHTML = '<span class="chapter-kicker">' + kicker + '</span>' + mainTitle;
               contentHTML +=
-                '<h1 style="font-size:1.5em; font-weight:700; margin-bottom:25px; letter-spacing:-0.4px; line-height:1.4; text-align:left; max-width: 600px; color:#0066cc; width:100%; word-break:keep-all;">' +
+                '<h1 class="chapter-title-major">' +
                 titleHTML +
                 "</h1>";
             } else {
@@ -775,7 +806,7 @@ let currentChapter = 0;
               // 크기를 본문(1.1em)과 거의 완벽히 동일한 1.15em으로 대폭 줄여서,
               // '제목'이라기보다는 세련된 '도입 문구(리드문)'처럼 보이게 처리
               contentHTML +=
-                '<h1 style="font-size:1.15em; font-weight:700; margin-bottom:20px; letter-spacing:-0.3px; line-height:1.4; text-align:left; max-width: 600px; color:#0066cc; width:100%; word-break:keep-all;">' +
+                '<h1 class="chapter-title-minor">' +
                 mainTitle +
                 "</h1>";
             }
