@@ -462,7 +462,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242353"></script>
+    <script src="book_data.js?v=20242354"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -490,12 +490,12 @@ let currentChapter = 0;
         if (!tocList) return;
         tocList.innerHTML = "";
         let currentCategory = null;
+        let currentGroupContent = null;
 
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
           if (page.isContinuation === true) return;
           
-          // 그림 페이지는 목차에 포함하되, 그림 직후에 나오는 동일 제목의 텍스트 페이지는 목차에서 숨김
           if (index > 0) {
             const prev = bookData.pages[index - 1];
             if (prev.isImageOnly && prev.title === page.title) {
@@ -511,13 +511,42 @@ let currentChapter = 0;
             let cat = page.partCategory || "프롤로그";
             if (cat !== currentCategory) {
               currentCategory = cat;
+              
+              const group = document.createElement("div");
+              group.className = "toc-group";
+              group.style.marginBottom = "10px";
+
               const catHeader = document.createElement("div");
               catHeader.className = "toc-category";
-              catHeader.innerText = cat;
-              tocList.appendChild(catHeader);
+              catHeader.style.cursor = "pointer";
+              catHeader.style.display = "flex";
+              catHeader.style.justifyContent = "space-between";
+              catHeader.style.alignItems = "center";
+              catHeader.style.userSelect = "none";
+              catHeader.style.borderBottom = "1px solid #eee";
+              catHeader.style.paddingBottom = "8px";
+              
+              catHeader.innerHTML = '<span style="font-weight: 700;">' + cat + '</span>' + 
+                                    '<span class="accordion-icon" style="font-size: 12px; color: #999;">▼</span>';
+              
+              currentGroupContent = document.createElement("div");
+              currentGroupContent.className = "toc-group-content";
+              currentGroupContent.style.display = "none"; // 기본적으로 닫혀있음
+              currentGroupContent.style.paddingTop = "5px";
+
+              catHeader.onclick = () => {
+                const isHidden = currentGroupContent.style.display === "none";
+                // 다른 열려있는 그룹을 닫고 싶다면 여기서 처리할 수도 있습니다.
+                currentGroupContent.style.display = isHidden ? "block" : "none";
+                catHeader.querySelector('.accordion-icon').innerText = isHidden ? "▲" : "▼";
+              };
+
+              group.appendChild(catHeader);
+              group.appendChild(currentGroupContent);
+              tocList.appendChild(group);
             }
 
-            const li = document.createElement("li");
+            const li = document.createElement("div");
             li.className = "toc-item";
             li.innerHTML = '<span class="toc-title">' + page.title + "</span>";
             li.onclick = () => {
@@ -526,7 +555,7 @@ let currentChapter = 0;
               renderCurrentChapter();
               closeTOC();
             };
-            tocList.appendChild(li);
+            currentGroupContent.appendChild(li);
           }
         });
       }
