@@ -458,7 +458,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242311"></script>
+    <script src="book_data.js?v=20242312"></script>
     <script>
       let currentChapter = 0;
       let currentColumn = 0;
@@ -585,22 +585,35 @@
         } else {
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
-          const topPadding = isCont ? '40px' : '100px';
+          const isImgOnly = page.isImageOnly === true;
+          
+          let topPadding = '100px';
+          let bottomPadding = '100px';
+          let justifyContent = 'flex-start';
+          
+          if (isImgOnly) {
+              topPadding = '5vh';
+              bottomPadding = '5vh';
+              justifyContent = 'center';
+          } else if (isCont) {
+              topPadding = '40px';
+          }
+          
           bgHTML =
             '<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -2; background: #fcfbf9;"></div>';
 
           contentHTML =
             bgHTML +
-            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% 100px 5%; box-sizing: border-box;">';
+            '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:' + justifyContent + '; align-items:center; min-height:100%; padding: ' + topPadding + ' 5% ' + bottomPadding + ' 5%; box-sizing: border-box;">';
           contentHTML +=
-            '<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start;">';
+            '<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: ' + (isImgOnly ? 'center' : 'flex-start') + ';">';
 
           // Inline top image (skip for continuation pages)
           if (page.image && !isCont) {
             contentHTML +=
-              '<div style="margin-bottom: 40px; text-align: center;"><img src="' +
+              '<div style="margin-bottom: ' + (isImgOnly && !page.title ? '0' : '40px') + '; text-align: center; width: 100%;"><img src="' +
               page.image +
-              '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block;">';
+              '" alt="Chapter Image" style="max-width: 600px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;">';
             if (page.caption) {
               contentHTML +=
                 '<div class="image-caption">' +
@@ -611,8 +624,10 @@
           }
 
           if (page.title && !isCont) {
+            const titleAlign = isImgOnly ? 'center' : 'left';
+            const titleMargin = isImgOnly ? '20px' : '40px';
             contentHTML +=
-              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:40px; letter-spacing:-0.5px; line-height:1.4; text-align:left; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
+              '<h1 style="font-size:2.2em; font-weight:800; margin-bottom:' + titleMargin + '; letter-spacing:-0.5px; line-height:1.4; text-align:' + titleAlign + '; max-width: 600px; color:#1d1d1f; width:100%; word-break:keep-all;">' +
               page.title +
               "</h1>";
           }

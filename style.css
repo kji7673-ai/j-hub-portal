@@ -448,7 +448,7 @@ input[type="file"] {
 
 /* -- Prevent Vertical Scroll (Strict Pagination) -- */
 .page-content {
-  overflow-y: auto; /* Enable vertical scroll */
+  overflow-y: hidden; /* Disable vertical scroll */
   overflow-x: hidden;
 }
 
