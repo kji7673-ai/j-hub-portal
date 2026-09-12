@@ -10,6 +10,8 @@
 
 /* Apple Design System / Enterprise Elegance */
 :root {
+  --page-bg: #fcfbf9;
+  --footnote-bg: #f5f5f7;
   --primary: #1d1d1f;
   --ink: #1d1d1f;
   --canvas: #ffffff;
@@ -57,7 +59,7 @@ body {
 
 /* Pagination Layout */
 .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
   position: absolute;
   top: 0;
   left: 0;
@@ -453,7 +455,7 @@ input[type="file"] {
 
 /* -- Prevent Vertical Scroll (Strict Pagination) -- */
 .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
   overflow-y: auto; /* Enable smart scroll for overflow */
   -webkit-overflow-scrolling: touch;
 
@@ -675,7 +677,7 @@ h2.chapter-title {
     border-radius: 0 !important;
   }
   .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
     padding: 8% 6% 25% 6% !important; /* 상단 여백 크게 축소 */ /* more padding bottom for nav */
   }
   p.body-text {
@@ -693,7 +695,7 @@ h2.chapter-title {
       height: 100% !important;
     }
     .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
       padding: 3% 5% 15% 5% !important;
     }
     .page-text-flow {
@@ -714,7 +716,7 @@ h2.chapter-title {
     height: 100% !important;
   }
   .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
     padding: 5% 8% 15% 8% !important;
   }
 }
@@ -944,7 +946,7 @@ img {
 
 /* 스크롤 강제 활성화 보증 */
 .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch !important;
   overscroll-behavior-y: contain !important; /* 부모(바디)로 스크롤 전이 차단 */
@@ -952,7 +954,7 @@ img {
 
 /* 모바일 브라우저 절대 좌표 스크롤 먹통 버그 완벽 해결 */
 .page-content {
-  background-color: #fcfbf9;
+  background-color: var(--page-bg);
   position: absolute !important;
   top: 0 !important;
   bottom: 0 !important;
@@ -1122,6 +1124,8 @@ h2.chapter-title {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --page-bg: #121212;
+    --footnote-bg: #272729;
     --ink: #f5f5f7;
     --text-muted: #aaaaaa;
     --quote-bg: rgba(40, 40, 42, 0.95);

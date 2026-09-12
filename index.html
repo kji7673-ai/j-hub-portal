@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=20242420" />
+    <link rel="stylesheet" href="style.css?v=20242421" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -644,7 +644,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242420"></script>
+    <script src="book_data.js?v=20242421"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -780,8 +780,8 @@ let currentChapter = 0;
           
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242420";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242420";
+          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242421";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242421";
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
@@ -799,7 +799,7 @@ let currentChapter = 0;
               bgPosition = "center center"; // 베이크된 이미지는 중앙 정렬로 자연스럽게 크롭
             }
             bgHTML =
-              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: #fcfbf9;"></div>';
+              '<div style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -3; background: var(--page-bg);"></div>';
             bgHTML +=
               "<div style=\"position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; z-index: -2; background: url('" +
               bgImage +
