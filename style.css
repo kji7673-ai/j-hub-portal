@@ -1107,3 +1107,45 @@ h2.chapter-title {
 #progress-bar {
   background: rgba(0, 0, 0, 0.6) !important;
 }
+
+/* =========================================
+   V.100 여백 활용 갤러리 디자인 (Floating Canvas)
+========================================= */
+
+/* 바깥쪽 갤러리 여백 (미세한 조명 효과가 있는 벽면) */
+.gallery-margin-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -3;
+  background: radial-gradient(circle at 50% 0%, #eaeaec 0%, #d1d1d6 100%);
+  min-height: 100vh;
+}
+
+/* 안쪽 600px 본문 영역 (완벽히 보호된 흰색 캔버스 틀) */
+.content-canvas {
+  background: #fcfbf9;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.05);
+  margin: auto auto;
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* 모바일 전용 캔버스 여백 축소 */
+@media (max-width: 768px) {
+  .content-canvas {
+    width: 92%;
+    padding: 40px 24px;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+}
+
+/* 투명 처리된 기본 배경 리셋 */
+.page-content.standard-page {
+  background-color: transparent !important;
+}
