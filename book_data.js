@@ -872,7 +872,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "난 약한 사람입니다",
+            "title": "약하다는 것",
             "text": "",
             "image": "static/images/gallery_batch5_running.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
@@ -884,7 +884,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "난 약한 사람입니다",
+            "title": "약하다는 것",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n작은 산들바람에도 온몸을 떨며 휘청이던 시절이 있었습니다.<br><br>덩치 큰 몸이 무색하게, 참으로 마음이 얇고 약한 사람이었지요.<br>그저 시간 따라 이 바람도 지나가길 기대하며 속절없이 휘청거렸습니다.<br><br>하지만 돌이켜보면, 비바람에 맞서 뻣뻣하게 버티다 부러지는 대신, 그렇게라도 유연하게 휘청거리며 견뎌낸 시간들이 있었기에 지금의 제가 있는 것 같습니다.<br><br>건축물을 세울 때 위태로운 지지대 하나에 의지해 비바람을 견뎌내듯, 사람 역시 때로는 나약하게 흔들릴 줄 알아야 결국 온전히 무너지지 않고 버텨낼 수 있음을 이제는 조금 알 것 같습니다.</p></div>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
@@ -897,7 +897,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "난 둔한 사람입니다",
+            "title": "둔하다는 것",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch6_bowl_brown.jpg",
@@ -909,7 +909,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "난 둔한 사람입니다",
+            "title": "둔하다는 것",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n전 둔한 사람입니다.<br>\n어떤 이는<br>\n침착하다고 말하지만,<br><br>\n사실 몸도 마음도 둔하여<br>\n슬픔과 기쁨에 바로 반응하지 못하기 때문입니다.<br><br>\n둔하다는 것은 어떤 순간에는 좋을 때도 있으나,<br><br>\n보통의 경우는<br>\n이상한 인간이 되어, 외톨이처럼 혼자만의 시간에 멍하니 있습니다.<br><br>\n이미 지나간 것들이<br>\n지금 이 시간에 슬픔과 후회로 찾아오기에<br><br>\n다른 이는 현재의 시간인데<br>\n나에게는 한 박자씩 늦는 과거의 시간이 현재인 것입니다.<br><br>\n현재 기쁨의 순간에<br>\n찾아온 과거의 슬픔에<br><br>\n저는 어느 시점에 저의 중심을 둘지 몰라<br><br>\n그냥 멍하니 있습니다.\n</p>\n<br><br><blockquote class=\"custom-quote\">\n<strong>\"제발, 이상한 인간만은 되지 말자.\"</strong></blockquote></div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
@@ -922,7 +922,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "난 둔한 사람입니다",
+            "title": "둔하다는 것",
             "text": "<blockquote class=\"custom-quote\">\n겉으로는 무던한 척하지만, 속으로는 늘 남들보다 한 박자 늦게 도착하는 감정의 시차 때문에 속을 끓입니다. 기뻐야 할 때 온전히 기뻐하지 못하고, 슬퍼야 할 때 울지 못해 뒤늦게 혼자 앓는 나 같은 '감정의 시차 부적응자'들이 세상엔 또 얼마나 많을까요.<br><br>부디 나뿐만 아니라, 이 속도 빠른 세상에서 한 박자 늦게 걷는 모든 이들이 스스로를 너무 '이상한 사람'으로 여기며 자책하지 않았으면 좋겠습니다.\n</blockquote>\n<div style=\"margin-top: 30px; text-align: left;\">\n<h4 style=\"font-size: 16px; font-weight: 600; margin-bottom: 24px; \">[조형물] 한 박자 늦게 걷는 사람</h4>\n<div style=\"display: flex; gap: 10px; justify-content: flex-start;\">\n                <img src=\"static/images/dull_1.jpg\" style=\"flex: 1; width: 48%; max-height: 25vh; object-fit: contain; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n                <img src=\"static/images/dull_2.jpg\" style=\"flex: 1; width: 48%; max-height: 25vh; object-fit: contain; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);\">\n            </div>\n</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
