@@ -1,12 +1,6 @@
 const bookData = {
     "pages": [
         {
-            "title": "도면 위의 공유결합",
-            "image": "static/images/gallery_cover_v2.jpg",
-            "text": "<p style=\"text-align: left; font-size:1.1em;  margin-top:24px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
-            "type": "cover"
-        },
-        {
             "partCategory": "저자 소개",
             "title": "김중일 <span style=\"font-size: 0.6em; font-weight: 500; color: #888; margin-left: 4px;\">건축사</span>",
             "text": "<div style=\"margin-top: 10px;\">서울시 건축심의위원, (주)진양엔지니어링건축사사무소 대표.<br>오랜 시간 공동주택과 정비사업 등 수많은 건축설계 현장을 지켜왔습니다.<br><br>사람 사이의 신뢰를 좇으며, 오늘도 묵묵히 도면을 그리는 평범한 건축사입니다.<br><br>이 책은 도면 위에서 만난 사람들, 그리고 현장의 수많은 땀방울과 소중한 순간들에 대한 감사의 기록입니다.</div>",
@@ -72,6 +66,14 @@ const bookData = {
             "isContinuation": false,
             "keywords": "서로 스며들어 완성되는 공간",
             "type": "text_only",
+            "part": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "title": "도면 위의 공유결합",
+            "image": "static/images/gallery_cover_v2.jpg",
+            "text": "<p style=\"text-align: left; font-size:1.1em;  margin-top:24px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
+            "type": "cover",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
             "part": "제1막: 공유결합 디자인 방법론"
         },
         {
@@ -614,56 +616,6 @@ const bookData = {
             "isContinuation": true,
             "keywords": "땀과 흙이 뒤섞인 치열한 창조",
             "part": "제1막: 공유결합 디자인 방법론"
-        },
-        {
-            "part": "제1막: 공유결합 디자인 방법론",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "용역원실에서 노동 쉼터로",
-            "text": "\"지하 2층에 배치된 '용역원실', 어떤 지자체 인권위원회에서는 이를 '노동 쉼터'로 명칭을 변경할 것을 권고하고 있습니다. <br>단순히 실명을 변경하는 것만으로도 이 공간이 어떠해야 하는지를 말해주기 때문입니다. <br>노동 쉼터가, 지하 2층 주차장 구석에 자연 채광과 환기가 전혀 안 되는 공간에 있어야 합니까?<br>권고드리건대, 1층 공개공지에 면하게 배치를 하여, 이분들이 잠시나마 쉴 수 있는 작은 공간이라도 마련되기를 부탁드립니다.\"<br>용역원실이 아닌 '노동 쉼터'로 실명을 바꾸어 봅시다. <br>건축 안에서 사람을 지우지 않는 것. 그것이 진짜 설계입니다.<br><br><blockquote class=\"custom-quote\">\n건축사는 아무래도 건축 의뢰인의 입장에서 설계를 하다 보니, 건축사로서 응당 해야 할 공적 역할을 다하지 못할 때가 있습니다.<br><br>\n이럴 경우, 심의 위원들이 그 역할을 대신 채워주어야 합니다. 도면이 법적인 기준에 맞는지 점검하는 것을 넘어, 공공의 영역에서 필요한 의견을 내주어야 하는 것이죠.<br><br>\n건축 심의란 결국 이 사회의 다양한 요소들이 어긋나지 않고 서로 맺어지게 돕는, '꼭 필요한 공유결합'을 만들어내는 과정이어야 합니다.\n</blockquote>",
-            "image": null,
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "type": "text_only",
-            "caption": null,
-            "isContinuation": true,
-            "keywords": "고단한 삶을 위로하는 소박한 여백"
-        },
-        {
-            "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_3.jpg\" ></div>",
-            "image": null,
-            "part": "제1막: 공유결합 디자인 방법론",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": true,
-            "keywords": "시간과 공간이 스스로 빚어내는 형상"
-        },
-        {
-            "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_2.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_4.jpg\" ></div>",
-            "image": null,
-            "part": "제1막: 공유결합 디자인 방법론",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": true,
-            "keywords": "시간과 공간이 스스로 빚어내는 형상"
-        },
-        {
-            "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_5.jpg\" ></div>",
-            "image": null,
-            "part": "제1막: 공유결합 디자인 방법론",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제1막: 공유결합 디자인 방법론",
-            "caption": null,
-            "isContinuation": true,
-            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "image": "static/images/act2_white.jpg",
@@ -1731,6 +1683,44 @@ const bookData = {
             "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장"
         },
         {
+            "type": "text_only",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_3.jpg\" ></div>",
+            "image": null,
+            "part": "제3막: 사람을 알아가는 관계성",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true,
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
+        },
+        {
+            "type": "text_only",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_2.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_4.jpg\" ></div>",
+            "image": null,
+            "part": "제3막: 사람을 알아가는 관계성",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true,
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
+        },
+        {
+            "type": "text_only",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_5.jpg\" ></div>",
+            "image": null,
+            "part": "제3막: 사람을 알아가는 관계성",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "caption": null,
+            "isContinuation": true,
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
+        },
+        {
             "type": "image_top",
             "title": "찢어진 운동화",
             "text": "",
@@ -2307,6 +2297,18 @@ const bookData = {
             "part": "제4막: 증언과 성찰"
         },
         {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "용역원실에서 노동 쉼터로",
+            "text": "\"지하 2층에 배치된 '용역원실', 어떤 지자체 인권위원회에서는 이를 '노동 쉼터'로 명칭을 변경할 것을 권고하고 있습니다. <br>단순히 실명을 변경하는 것만으로도 이 공간이 어떠해야 하는지를 말해주기 때문입니다. <br>노동 쉼터가, 지하 2층 주차장 구석에 자연 채광과 환기가 전혀 안 되는 공간에 있어야 합니까?<br>권고드리건대, 1층 공개공지에 면하게 배치를 하여, 이분들이 잠시나마 쉴 수 있는 작은 공간이라도 마련되기를 부탁드립니다.\"<br>용역원실이 아닌 '노동 쉼터'로 실명을 바꾸어 봅시다. <br>건축 안에서 사람을 지우지 않는 것. 그것이 진짜 설계입니다.<br><br><blockquote class=\"custom-quote\">\n건축사는 아무래도 건축 의뢰인의 입장에서 설계를 하다 보니, 건축사로서 응당 해야 할 공적 역할을 다하지 못할 때가 있습니다.<br><br>\n이럴 경우, 심의 위원들이 그 역할을 대신 채워주어야 합니다. 도면이 법적인 기준에 맞는지 점검하는 것을 넘어, 공공의 영역에서 필요한 의견을 내주어야 하는 것이죠.<br><br>\n건축 심의란 결국 이 사회의 다양한 요소들이 어긋나지 않고 서로 맺어지게 돕는, '꼭 필요한 공유결합'을 만들어내는 과정이어야 합니다.\n</blockquote>",
+            "image": null,
+            "partCategory": "제4막: 증언과 성찰",
+            "type": "text_only",
+            "caption": null,
+            "isContinuation": true,
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
+        },
+        {
             "type": "image_top",
             "title": "현장으로의 귀환",
             "text": "",
@@ -2846,34 +2848,34 @@ const bookData = {
             "image": "static/images/epilogue_bg.jpg",
             "title": "에필로그: 도면 위의 공유결합",
             "text": "",
-            "partCategory": "에필로그",
+            "partCategory": "에필로그: 도면 위의 공유결합",
             "isImageOnly": true,
             "isContinuation": false,
             "keywords": "선과 선이 만나 완성된 삶의 무대",
-            "part": "에필로그"
+            "part": "에필로그: 도면 위의 공유결합"
         },
         {
             "type": "epilogue",
             "image": null,
             "title": "에필로그: 도면 위의 공유결합",
             "text": "공유결합.<br>어쩌면 이 단어 하나를 제 삶과 건축에 대입하기 위해 그동안 수많은 도면을 그렸는지도 모르겠습니다.<br><br>\n돌이켜보면 설계란 늘 차가운 선과 기호로 시작하지만, 도면 밖으로 나가는 순간부터는 온전히 '사람의 일'이 되었습니다. 전혀 다른 환경의 건축주, 이익이 얽힌 조합원들, 그리고 제도를 앞세우는 관청까지. 처음에는 그 다름이 저를 가로막는 벽이라고 생각했습니다. 하지만 제 고집을 조금 덜어내고 그들의 이야기에 귀 기울였을 때, 서로 다른 원자들이 각자의 본질을 잃지 않으면서도 단단히 묶이는 '공유결합'을 현장에서 경험했습니다.<br><br>하지만 제가 말씀드리고 싶은 공유결합은, 단순히 원만한 처세술이나 관계의 기술을 뜻하는 흔한 자기계발 이론이 아닙니다.<br><br>\n제가 진정으로 바라는 것은 건축 설계와 제도를 통해 우리 사회의 물리적 환경을 제대로 엮어내는 것입니다. 각각의 건물과 주변 환경, 지역과 지역, 그리고 그 사이를 잇는 가로(거리) 환경이 마치 <strong>'피에트 몬드리안(Piet Mondrian)의 그림 속 검정색 테두리'</strong> 같은 역할을 하기를 원합니다.<br><br>\n몬드리안의 그림에서 굵고 단단한 검은 선들이 프레임이 되어줄 때, 그 안의 빨강, 노랑, 파랑의 색상들이 비로소 각자의 고유한 개성을 완벽하게 뽐낼 수 있듯이 말입니다.",
-            "partCategory": "에필로그",
+            "partCategory": "에필로그: 도면 위의 공유결합",
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
             "keywords": "선과 선이 만나 완성된 삶의 무대",
-            "part": "에필로그"
+            "part": "에필로그: 도면 위의 공유결합"
         },
         {
             "type": "epilogue",
             "image": null,
             "title": "에필로그: 도면 위의 공유결합",
             "text": "건축과 제도가 우리 사회를 지탱하는 튼튼한 테두리가 되어줄 때, 각 요소들은 고유의 개성을 잃지 않고 조화롭게 묶일 수 있습니다. 그리고 그 안정된 틀 속에서 사람들의 관계는 더 깊어지고, 우리는 다 함께 공유되는 행복을 누릴 수 있을 것입니다.<br><br>\n화곡동의 오래된 골목에서, 서계동의 비탈진 언덕에서, 그리고 유성시장의 회의 테이블에서 제가 실천하고자 했던 것도 결국 그것이었습니다.<br><br>\n이제 저는 다시 비어있는 하얀 도면 앞에 섭니다.<br>그리고 여러분께 묻고 싶습니다.<br><br>\n<blockquote class=\"custom-quote\">\n<strong>\"당신이 발 딛고 서 있는 그곳에서, 당신은 오늘 어떤 '선'을 긋고, 어떤 '공유결합'을 만들어가고 계십니까?\"</strong>\n</blockquote>",
-            "partCategory": "에필로그",
+            "partCategory": "에필로그: 도면 위의 공유결합",
             "caption": null,
             "isContinuation": true,
             "keywords": "선과 선이 만나 완성된 삶의 무대",
-            "part": "에필로그"
+            "part": "에필로그: 도면 위의 공유결합"
         }
     ]
 };
