@@ -1540,29 +1540,6 @@ const bookData = {
             "keywords": "끝없이 이어지는 공간의 경계"
         },
         {
-            "type": "image_top",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "",
-            "image": "static/images/gallery_new_4.jpg",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "isImageOnly": true,
-            "isContinuation": false,
-            "keywords": "창조를 향한 식지 않는 갈망",
-            "part": "제2막: 나라는 개체의 독립과 생존"
-        },
-        {
-            "type": "text_only",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
-            "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div><br><br><blockquote class=\"custom-quote\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
-            "image": null,
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": false,
-            "keywords": "창조를 향한 식지 않는 갈망",
-            "part": "제2막: 나라는 개체의 독립과 생존"
-        },
-        {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "다닥다닥 붙은 집들",
@@ -2804,6 +2781,29 @@ const bookData = {
             "caption": null,
             "isContinuation": true,
             "keywords": "평가를 넘어선 진정성의 증명"
+        },
+        {
+            "type": "image_top",
+            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "text": "",
+            "image": "static/images/gallery_new_4.jpg",
+            "partCategory": "제4막: 증언과 성찰",
+            "isImageOnly": true,
+            "isContinuation": false,
+            "keywords": "창조를 향한 식지 않는 갈망",
+            "part": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "type": "text_only",
+            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div><br><br><blockquote class=\"custom-quote\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
+            "image": null,
+            "partCategory": "제4막: 증언과 성찰",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": false,
+            "keywords": "창조를 향한 식지 않는 갈망",
+            "part": "제2막: 나라는 개체의 독립과 생존"
         },
         {
             "type": "epilogue",
