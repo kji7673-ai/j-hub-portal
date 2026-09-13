@@ -1082,6 +1082,18 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 2] 인간관계의 무게",
+            "title": "요즘 잠을 잘 수가 없다",
+            "text": "<blockquote class=\"custom-quote\">\n아직도 전 어떨 땐 너무 둔하고, 또 어떨 땐 너무 예민하게 신경이 곤두서서 저도 모르게 손발이 떨릴 때가 있습니다. 긴장해서 말마저 더듬거릴 때면, 저는 속으로 중얼거립니다.<br><br>\n'그래, 저는 지네맨이었지. 아니면 지구에 불시착한 외계인이거나.'<br><br>\n그렇게 나 스스로를 세뇌하며 버텨냅니다. 참 하루하루가 고단하고 쉽지 않습니다. 어쩌면 나만 이 이상한 능력이 있지는 않을 것 같습니다.<br><br>\n다른 사람들도 겉으로는 무표정해 보이지만, 속으로는 상처받지 않기 위해 온갖 더듬이를 세운 채 하루를 간신히 버텨내는 또 다른 지네맨들이 아닐까 싶습니다.<br><br>\n둔감함이라는 갑옷을 입고 살아가는 세상의 모든 이상 능력 소유자들에게 연대의 위로를 건네봅니다.\n</blockquote>",
+            "partCategory": "제2막: 나라는 개체의 독립과 생존",
+            "image": null,
+            "type": "text_only",
+            "caption": null,
+            "isContinuation": true,
+            "keywords": "밤의 고요 속에서 깨어난 사유"
+        },
+        {
+            "part": "제2막: 나라는 개체의 독립과 생존",
+            "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "잠을 이룰 수 없던 밤",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n한때 뜬눈으로 밤을 지새우며 잠을 이루지 못하던 시절이 있었습니다.<br><br>눈을 감으면 불안감에 모든 감각 기관이 더욱 예민해졌습니다.<br>자면서도 옆에 기어가는 벌레를 인지해 잡을 정도였고, 누군가 말을 걸면 무의식중에 대답을 하기도 했습니다.<br><br>군 시절 선임들은 그런 저를 신기해했지만, 사실 그것은 모든 일거수일투족을 감시하듯 곤두서 있던 제 안의 극심한 스트레스와 긴장감 때문이었습니다.<br><br>완벽해야 한다는 강박, 관계에서 오는 피로감.<br>그 모든 것들을 덜어내는 법을 몰라 제 몸과 마음을 혹사시켰던 그 시절의 얕은잠은, 역설적이게도 훗날 제게 도면과 삶에서 '힘을 빼고 여백을 두는 법'을 가르쳐준 아픈 스승이 되었습니다.</p></div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
@@ -1090,18 +1102,6 @@ const bookData = {
             "caption": null,
             "isTextAfterImage": true,
             "isContinuation": false,
-            "keywords": "밤의 고요 속에서 깨어난 사유"
-        },
-        {
-            "part": "제2막: 나라는 개체의 독립과 생존",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "요즘 잠을 잘 수가 없다",
-            "text": "<blockquote class=\"custom-quote\">\n아직도 전 어떨 땐 너무 둔하고, 또 어떨 땐 너무 예민하게 신경이 곤두서서 저도 모르게 손발이 떨릴 때가 있습니다. 긴장해서 말마저 더듬거릴 때면, 저는 속으로 중얼거립니다.<br><br>\n'그래, 저는 지네맨이었지. 아니면 지구에 불시착한 외계인이거나.'<br><br>\n그렇게 나 스스로를 세뇌하며 버텨냅니다. 참 하루하루가 고단하고 쉽지 않습니다. 어쩌면 나만 이 이상한 능력이 있지는 않을 것 같습니다.<br><br>\n다른 사람들도 겉으로는 무표정해 보이지만, 속으로는 상처받지 않기 위해 온갖 더듬이를 세운 채 하루를 간신히 버텨내는 또 다른 지네맨들이 아닐까 싶습니다.<br><br>\n둔감함이라는 갑옷을 입고 살아가는 세상의 모든 이상 능력 소유자들에게 연대의 위로를 건네봅니다.\n</blockquote>",
-            "partCategory": "제2막: 나라는 개체의 독립과 생존",
-            "image": null,
-            "type": "text_only",
-            "caption": null,
-            "isContinuation": true,
             "keywords": "밤의 고요 속에서 깨어난 사유"
         },
         {
@@ -1722,6 +1722,31 @@ const bookData = {
         },
         {
             "type": "image_top",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "",
+            "image": "static/images/sketches/117.jpg",
+            "part": "제3막: 사람을 알아가는 관계성",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "isImageOnly": true,
+            "isContinuation": false,
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
+        },
+        {
+            "type": "text_only",
+            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "text": "우리는 건축 설계안이나 우리의 삶,<br>\n나아가 인간관계에 이르기까지, 이 모든 것을 주도적으로 '만들고 있는' 것일까요?<br>\n아니면 어떠한 흐름 속에서 '만들어져 가는' 것일까요?<br>\n<br>\n요즘 무언가를 만들며 깨닫는 것이 있습니다.<br>\n분명 처음에는 저만의 확고한 생각과 의도를 가지고 시작하지만,<br>\n결과물에 이르러서는 마치 <strong>'원래 있어야 할 모습'</strong>을 찾아가듯 아주 자연스럽게 만들어져 간다는 것입니다.<br>\n<br>\n우리가 치밀하게 세운 계획도, 인생도,<br>\n처음의 의도와 조금 다르게 흘러간다고 해서 결코 틀린 것이 아닙니다.<br>\n어쩌면 그것은 지금 주어진 상황과 환경에 가장 적합한 모습으로 '만들어져 가는' 과정일지도 모릅니다.<br>\n<br>가장 중요한 것은, 결과가 내 의도와 다르게 변화해 가더라도<br>\n그 안에서 <strong>제 마음의 중심</strong>을 결코 놓지 않는 것입니다.<br>\n<br>\n<blockquote>\n내 생각과 다르게 진행된다고 해서 틀린 것이 아닙니다.<br>\n비록 흔들거리더라도, 다시 방향을 잡고 나아가면 됩니다.<br>\n다 괜찮습니다.\n</blockquote>",
+            "image": null,
+            "part": "제3막: 사람을 알아가는 관계성",
+            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
+            "partCategory": "제3막: 사람을 알아가는 관계성",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": false,
+            "keywords": "시간과 공간이 스스로 빚어내는 형상"
+        },
+        {
+            "type": "image_top",
             "title": "찢어진 운동화",
             "text": "",
             "image": "static/images/gallery_batch4_reachinghigh.jpg",
@@ -1844,31 +1869,6 @@ const bookData = {
             "caption": null,
             "isContinuation": true,
             "keywords": "빛과 그림자로 짓는 서사"
-        },
-        {
-            "type": "image_top",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "",
-            "image": "static/images/sketches/117.jpg",
-            "part": "제3막: 사람을 알아가는 관계성",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제3막: 사람을 알아가는 관계성",
-            "isImageOnly": true,
-            "isContinuation": false,
-            "keywords": "시간과 공간이 스스로 빚어내는 형상"
-        },
-        {
-            "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
-            "text": "우리는 건축 설계안이나 우리의 삶,<br>\n나아가 인간관계에 이르기까지, 이 모든 것을 주도적으로 '만들고 있는' 것일까요?<br>\n아니면 어떠한 흐름 속에서 '만들어져 가는' 것일까요?<br>\n<br>\n요즘 무언가를 만들며 깨닫는 것이 있습니다.<br>\n분명 처음에는 저만의 확고한 생각과 의도를 가지고 시작하지만,<br>\n결과물에 이르러서는 마치 <strong>'원래 있어야 할 모습'</strong>을 찾아가듯 아주 자연스럽게 만들어져 간다는 것입니다.<br>\n<br>\n우리가 치밀하게 세운 계획도, 인생도,<br>\n처음의 의도와 조금 다르게 흘러간다고 해서 결코 틀린 것이 아닙니다.<br>\n어쩌면 그것은 지금 주어진 상황과 환경에 가장 적합한 모습으로 '만들어져 가는' 과정일지도 모릅니다.<br>\n<br>가장 중요한 것은, 결과가 내 의도와 다르게 변화해 가더라도<br>\n그 안에서 <strong>제 마음의 중심</strong>을 결코 놓지 않는 것입니다.<br>\n<br>\n<blockquote>\n내 생각과 다르게 진행된다고 해서 틀린 것이 아닙니다.<br>\n비록 흔들거리더라도, 다시 방향을 잡고 나아가면 됩니다.<br>\n다 괜찮습니다.\n</blockquote>",
-            "image": null,
-            "part": "제3막: 사람을 알아가는 관계성",
-            "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "partCategory": "제3막: 사람을 알아가는 관계성",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": false,
-            "keywords": "시간과 공간이 스스로 빚어내는 형상"
         },
         {
             "part": "제3막: 사람을 알아가는 관계성",
@@ -2309,6 +2309,31 @@ const bookData = {
             "keywords": "고단한 삶을 위로하는 소박한 여백"
         },
         {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "용역원실에서 노동 쉼터로",
+            "text": "",
+            "image": "static/images/gallery_batch4_bighands.jpg",
+            "partCategory": "제4막: 증언과 성찰",
+            "type": "image_top",
+            "isImageOnly": true,
+            "isContinuation": false,
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
+        },
+        {
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "[Theme 1] 현장에서의 갈등",
+            "title": "용역원실에서 노동 쉼터로",
+            "text": "이렇듯 '신뢰의 기록'인 계획안이 현장에서 사람들을 어떻게 설득하고 공유결합을 이뤄내는지, 제가 심의위원으로 참여했던 어느 회의장의 기억을 꺼내보려 합니다.<br><br>지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.<br>어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.<br>'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.<br>올해 제 분야는 '경관'이었습니다. 누군가 지적하겠지... 계속 기다렸습니다. <br>심의가 끝나갑니다. '굳이 말을 해야 할까? 그냥 넘어갈까? 제가 왜 심의위원을 하고 있지...'<br>이런저런 생각을 하다가, 끝내 마이크를 잡았습니다.<br>\"제가 경관 분야이긴 합니다만, 건축 부분에 대해 한 말씀 드리겠습니다.\"",
+            "image": null,
+            "partCategory": "제4막: 증언과 성찰",
+            "type": "text_only",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": false,
+            "keywords": "고단한 삶을 위로하는 소박한 여백"
+        },
+        {
             "type": "image_top",
             "title": "현장으로의 귀환",
             "text": "",
@@ -2390,31 +2415,6 @@ const bookData = {
             "isTextAfterImage": true,
             "isContinuation": false,
             "keywords": "믿음으로 쌓아 올린 약속의 도면"
-        },
-        {
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "용역원실에서 노동 쉼터로",
-            "text": "",
-            "image": "static/images/gallery_batch4_bighands.jpg",
-            "partCategory": "제4막: 증언과 성찰",
-            "type": "image_top",
-            "isImageOnly": true,
-            "isContinuation": false,
-            "keywords": "고단한 삶을 위로하는 소박한 여백"
-        },
-        {
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "용역원실에서 노동 쉼터로",
-            "text": "이렇듯 '신뢰의 기록'인 계획안이 현장에서 사람들을 어떻게 설득하고 공유결합을 이뤄내는지, 제가 심의위원으로 참여했던 어느 회의장의 기억을 꺼내보려 합니다.<br><br>지난 2년간 건축심의위원으로 있다가, 올해는 경관분야 심의위원을 맡게 되었습니다.<br>어느 날, 제 눈앞에 놓인 계획안 하나가 시선을 멈추게 했습니다.<br>'용역원실'이 자연 채광도 환기도 전혀 되지 않는 지하 2층에 덩그러니 배치되어 있었기 때문입니다.<br>올해 제 분야는 '경관'이었습니다. 누군가 지적하겠지... 계속 기다렸습니다. <br>심의가 끝나갑니다. '굳이 말을 해야 할까? 그냥 넘어갈까? 제가 왜 심의위원을 하고 있지...'<br>이런저런 생각을 하다가, 끝내 마이크를 잡았습니다.<br>\"제가 경관 분야이긴 합니다만, 건축 부분에 대해 한 말씀 드리겠습니다.\"",
-            "image": null,
-            "partCategory": "제4막: 증언과 성찰",
-            "type": "text_only",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": false,
-            "keywords": "고단한 삶을 위로하는 소박한 여백"
         },
         {
             "type": "image_top",
