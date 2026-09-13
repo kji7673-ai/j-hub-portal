@@ -2357,31 +2357,6 @@ const bookData = {
             "keywords": "믿음으로 쌓아 올린 약속의 도면"
         },
         {
-            "type": "image_top",
-            "title": "현장의 기록",
-            "image": "static/images/gallery_new_2.jpg",
-            "text": "",
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "현장의 기록",
-            "partCategory": "제4막: 증언과 성찰",
-            "isImageOnly": true,
-            "isContinuation": false,
-            "keywords": "시간과 땀방울이 새겨진 지층"
-        },
-        {
-            "type": "text_only",
-            "title": "현장의 기록",
-            "image": null,
-            "text": "이곳에 담긴 수십 편의 조각들은 제가 치열한 현장을 뒹굴며 끄적여온 날것의 기록입니다.<br><br>\n이 거칠고 솔직한 기록들에는 머릿속 이상과 현실 사이의 모순이 있고, 똑같은 고민이 무의식적으로 반복되는 흔적이 있으며, 때로는 깊은 혼란과 무기력함마저 묻어 있습니다.<br><br>\n앞서 '결합'이라는 거창한 원칙을 이야기했지만, 사실 제 삶이 처음부터 그 원칙대로 완벽하게 맞물려 돌아갔던 것은 아닙니다. 도면 위에서는 완벽한 결합의 기준을 맞추려 그토록 치열하게 애쓰면서도, 현장에서 마주하는 사람들과의 실제 결합은 여전히 제게 풀기 어려운 숙제입니다.<br><br>\n그래서, 저는 여전히 불안하고 여전히 부족한 사람입니다.<br><br>중복과 모순, 황홀함과 분노가 얽혀있는 이 조각들은 지난 오랜 세월 제가 숱하게 넘어지고 버티며 써 내려온 생채기 같은 흔적들입니다. 이 작고 투박한 흔적들이, 각자의 자리에서 고단한 밥벌이를 버텨내고 계신 분들의 마음에도 작은 공명을 일으키기를 바랍니다.",
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "현장의 기록",
-            "partCategory": "제4막: 증언과 성찰",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": false,
-            "keywords": "시간과 땀방울이 새겨진 지층"
-        },
-        {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
             "title": "'조은 슈퍼'",
@@ -2805,6 +2780,31 @@ const bookData = {
             "isContinuation": false,
             "keywords": "창조를 향한 식지 않는 갈망",
             "part": "제2막: 나라는 개체의 독립과 생존"
+        },
+        {
+            "type": "image_top",
+            "title": "현장의 기록",
+            "image": "static/images/gallery_new_2.jpg",
+            "text": "",
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "현장의 기록",
+            "partCategory": "제4막: 증언과 성찰",
+            "isImageOnly": true,
+            "isContinuation": false,
+            "keywords": "시간과 땀방울이 새겨진 지층"
+        },
+        {
+            "type": "text_only",
+            "title": "현장의 기록",
+            "image": null,
+            "text": "이곳에 담긴 수십 편의 조각들은 제가 치열한 현장을 뒹굴며 끄적여온 날것의 기록입니다.<br><br>\n이 거칠고 솔직한 기록들에는 머릿속 이상과 현실 사이의 모순이 있고, 똑같은 고민이 무의식적으로 반복되는 흔적이 있으며, 때로는 깊은 혼란과 무기력함마저 묻어 있습니다.<br><br>\n앞서 '결합'이라는 거창한 원칙을 이야기했지만, 사실 제 삶이 처음부터 그 원칙대로 완벽하게 맞물려 돌아갔던 것은 아닙니다. 도면 위에서는 완벽한 결합의 기준을 맞추려 그토록 치열하게 애쓰면서도, 현장에서 마주하는 사람들과의 실제 결합은 여전히 제게 풀기 어려운 숙제입니다.<br><br>\n그래서, 저는 여전히 불안하고 여전히 부족한 사람입니다.<br><br>중복과 모순, 황홀함과 분노가 얽혀있는 이 조각들은 지난 오랜 세월 제가 숱하게 넘어지고 버티며 써 내려온 생채기 같은 흔적들입니다. 이 작고 투박한 흔적들이, 각자의 자리에서 고단한 밥벌이를 버텨내고 계신 분들의 마음에도 작은 공명을 일으키기를 바랍니다.",
+            "part": "제4막: 증언과 성찰",
+            "partTitle": "현장의 기록",
+            "partCategory": "제4막: 증언과 성찰",
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": false,
+            "keywords": "시간과 땀방울이 새겨진 지층"
         },
         {
             "type": "epilogue",
