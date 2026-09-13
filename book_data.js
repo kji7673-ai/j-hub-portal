@@ -667,7 +667,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "딱 이맘 크기만큼",
+            "title": "딱 니 맘 크기만큼",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_new_1.jpg",
@@ -678,7 +678,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "딱 이맘 크기만큼",
+            "title": "딱 니 맘 크기만큼",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n오늘의 제가 배워야 할 것들은<br>도면 위나 기술적인 것이 아닙니다.<br><br>사람을 통해서 배워가야 합니다.<br><br>아직도 모난 저는<br>돌아가신 어머니의<br>\"니는 아직 생속이다\"<br>그 맴도는 말에 부끄러울 때가 많습니다.<br><br>아직도 제가 한 계획안을 볼 때마다,<br><br>첫 회사 박찬정 소장님의<br>\"설계는 딱 니 맘 크기만큼 나오는 거다\"<br>소리가 들리는 것 같아 다시 계획안을 들여다보게 됩니다.<br><br>저도 이제 한 회사의 대표가 되었고,<br>나이도 50대 중반이지만,<br><br>왜 이리 아직도 벅차고 힘든지 모르겠습니다.<br>왜 이리 아직도 사람 만나는 게 힘든지 모르겠습니다.<br><br>그래도 그나마 다행스러운 것은<br><br>제가 정비사업을 하기에,<br><br>어쩔 수 없이 사람들을 만난다는 것입니다.<br>그중에는 좋은 분들도 참 많습니다.<br><br>그분들한테 많이 배워갑니다.<br>이런 것이 결합이지 않을까요?</p></div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
@@ -690,7 +690,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "딱 이맘 크기만큼",
+            "title": "딱 니 맘 크기만큼",
             "text": "<div style=\"margin-top: 40px; padding: 24px; background-color: var(--footnote-bg); border-radius: 12px;  font-size: 15px; line-height: 1.6; border-left: 3px solid var(--ink, var(--ink, #333)333);\">하지만 타인과 진정한 '결합'을 이루기 위해서는, 먼저 저라는 사람부터 중심이 단단하게 잡힌 '독립된 원자'가 되어야 합니다. 궤도를 지탱하는 튼튼한 중심이 서 있어야 비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다.<br><br>그리고 또 하나 잊지 말아야 할 것이 있습니다. 수많은 사람과 결합하며 살아가더라도, 인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. 스스로 흔들림 없이 홀로 설 수 있는 사람만이 비로소 타인과 굳건하게 결합할 수 있습니다.\n</div>",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": null,
