@@ -1,16 +1,18 @@
 const bookData = {
     "pages": [
         {
-            "partCategory": "저자 소개",
-            "title": "김중일 <span style=\"font-size: 0.6em; font-weight: 500; color: #888; margin-left: 4px;\">건축사</span>",
+            "title": "도면 위의 공유결합: J-Journal",
+            "subtitle": "건축만 할 줄 아는 설계자의 이야기",
+            "image": "static/images/gallery_cover_baked.jpg?v=20242423",
             "text": "",
-            "image": "static/images/gallery_custom_2.jpg",
-            "type": "author_profile",
+            "type": "cover",
             "isImageOnly": true,
-            "part": "제1막: 서론",
+            "part": "프롤로그",
+            "partCategory": "도면 위의 공유결합",
             "caption": null,
             "isContinuation": false,
-            "isTextAfterImage": false
+            "isTextAfterImage": false,
+            "keywords": "도면 위의 공유결합"
         },
         {
             "partCategory": "저자 소개",
