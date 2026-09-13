@@ -92,7 +92,7 @@ const bookData = {
             "title": "도면 위의 공유결합",
             "image": "static/images/gallery_custom_2.jpg",
             "text": "",
-            "type": "cover",
+            "type": "image_top",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "part": "제1막: 공유결합 디자인 방법론",
             "isImageOnly": true,
@@ -104,11 +104,12 @@ const bookData = {
             "title": "도면 위의 공유결합",
             "image": "static/images/gallery_cover_v2.jpg",
             "text": "<p style=\"text-align: left; font-size:1.1em;  margin-top:24px; font-weight:600; text-shadow: 0 0 5px rgba(255,255,255,0.8);\">건축과 사람, 그리고 삶을 잇는 단단한 흔적들</p>",
-            "type": "cover",
+            "type": "text_only",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "part": "제1막: 공유결합 디자인 방법론",
             "isContinuation": true,
-            "isTextAfterImage": true
+            "isTextAfterImage": true,
+            "isImageOnly": false
         },
         {
             "type": "image_top",
