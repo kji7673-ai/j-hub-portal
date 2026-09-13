@@ -699,7 +699,7 @@ let currentChapter = 0;
           if (
             page.title &&
             page.title.trim() !== "" &&
-            !page.title.includes("(계속)")
+            !page.title.includes("(계속)") && page.title !== "목차" && page.partCategory !== "목차"
           ) {
             let cat = page.partCategory || "프롤로그";
             if (cat !== currentCategory) {
