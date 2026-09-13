@@ -140,7 +140,7 @@
         text-align: right;
       }
       .cover-title {
-        font-size: 2.6em;
+        font-size: 2.0em;
         font-weight: 800;
         margin-bottom: 12px;
         letter-spacing: -0.5px;
@@ -151,7 +151,7 @@
       }
       .cover-subtitle {
         line-height: 1.6;
-        font-size: 1.1em;
+        font-size: 0.95em;
         font-weight: 600;
         word-break: keep-all;
         
@@ -170,8 +170,8 @@
         .cover-text-container {
           width: 50%;
         }
-        .cover-title { font-size: 1.6em; }
-        .cover-subtitle { font-size: 0.9em; }
+        .cover-title { font-size: 1.2em; }
+        .cover-subtitle { font-size: 0.8em; }
         .cover-kicker { font-size: 14px; }
       }
 \n    </style>
@@ -644,7 +644,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242485"></script>
+    <script src="book_data.js?v=20242486"></script>
     <script>
       
       // --- 마스터 개선 로직 주입 ---
@@ -833,7 +833,7 @@ let currentChapter = 0;
             if (page.type === "author_profile") {
               // 저자 이름 (실제 갤러리 캡션처럼 작고 정갈하게 비례 맞춤)
               contentHTML +=
-                '<h1 class="cover-title" style="font-size: 1.5em; margin-bottom: 16px; font-weight: 700;">' +
+                '<h1 class="cover-title" style="font-size: 1.2em; margin-bottom: 16px; font-weight: 700;">' +
                 page.title +
                 "</h1>";
             } else if (page.type === "cover") {
@@ -866,7 +866,7 @@ let currentChapter = 0;
           }
 
           if (page.type === "author_profile") {
-            contentHTML += `<div class="cover-subtitle" style="font-size: 0.95em; font-weight: 500; ">`;
+            contentHTML += `<div class="cover-subtitle" style="font-size: 0.85em; font-weight: 500; ">`;
           } else if (page.type === "cover") {
             contentHTML += `<div class="cover-subtitle">`;
           } else {
