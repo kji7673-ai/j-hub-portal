@@ -1032,7 +1032,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "요즘 잠을 잘 수가 없다",
+            "title": "잠을 이룰 수 없던 밤",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "image": "static/images/gallery_batch4_flat_1789095642326.jpg",
