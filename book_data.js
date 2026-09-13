@@ -1,7 +1,7 @@
 const bookData = {
     "pages": [
         {
-            "title": "도면 위의 공유결합: J-Journal",
+            "title": "도면 위의 공유결합",
             "subtitle": "건축만 할 줄 아는 설계자의 이야기",
             "image": "static/images/gallery_cover_baked.jpg?v=20242423",
             "text": "",
