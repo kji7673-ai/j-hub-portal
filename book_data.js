@@ -66,7 +66,7 @@ const bookData = {
         },
         {
             "title": "목차",
-            "text": "<div style=\"font-family: 'SF Pro Display', -apple-system, sans-serif; text-align: left; padding: 20px 0; max-width: 600px; margin: 0 auto; line-height: 1.8;\"><h2 style=\"font-size: 26px; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px; border-bottom: 2px solid #1d1d1f; padding-bottom: 12px;\">【도면 위의 공유결합】 목차</h2><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">시작하며</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 프롤로그: 건축만 할 줄 아는 설계자의 이야기</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제1막: 공유결합 디자인 방법론</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 도면 위의 공유결합</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 세 번의 기억에서 온 개념</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 관계의 재설정</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 공유결합의 세 가지 원칙</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 분자: 원자간의 공유결합</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 단단한 개성들이 묶여 필수 요소가 될 때</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 내가 생각하는 디자인이란?</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 주변에 순응하라</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 땅과 사람이 하는 말에 귀 기울이는 법</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 틀: 무질서를 담는 그릇</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 간격: 그 사이 공간의 힘</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 공간의 에너지</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 작은 부분은 강렬하게</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다정한 디자인</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 관계 속의 아름다움</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 도면 밖의 무대, 현장</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현장이라는 무대</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제2막: 나라는 개체의 독립과 버팀</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 설계하는 일에서 좋은 점은</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 딱 니 맘 크기만큼</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다른 사람의 생각을 볼 수 있는 사람이 있다면</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 혹시 무겁지 않나요?</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 삼켜낸 말과 술 한 잔</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 십원짜리</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 양팔에 낀 토시</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 오늘을 산다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 약하다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 둔하다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 오뚝이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 외로움</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 잠을 이룰 수 없던 밤</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 에너지의 소진으로</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 어제의 눈으로 사람을 보지 않기를</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 나라는 존재</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 가끔</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 만지작거리고 바스락거린다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 구겨진 도면</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 잘게 잘게 나누어 버리기</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 있을 뿐</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 당신의 세상은 어떤가요?</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 선 긋기와 인생: 전체로 볼 때 직선이면 족하다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 가장 작은 생존 신고, \"힘내자\"</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 거짓이 진실을 만났을 때</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 뇌물은 괴물이 되어 돌아온다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 페이퍼 아키텍처의 유혹</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 선을</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다닥다닥 붙은 집들</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 흔들리지 않기 위한 나만의 무게 중심</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제3막: 사람을 알아가는 관계성</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 만들고 있는 것인가, 만들어져 가는 것인가</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 찢어진 운동화</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 건축 설계</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 우리 이렇게 오늘도</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 모두들</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 논리와 감정 사이, 건축가의 '싫어요'</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 거름종이 마법이 있다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 침묵이란</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 타인의 시선을 공유한다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 익숙해진다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 귀를 통해 마음으로 들어간 것이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 고상하다는 것은</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 서로 다름을 이해하는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 말과 마음의 사이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 우리가 이렇게 살아갑니다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 말하는 나무</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 읽기와 듣기, 그리고 말하기</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제4막: 증언과 성찰</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 용역원실에서 노동 쉼터로</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 화려한 조감도 뒤에 가려진 씁쓸한 현실</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 계획안, 신뢰의 기록</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> '조은 슈퍼'</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 마음을 짓는 일: 공동체 주택 설계</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 서계동 현상설계</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현상설계를 진행하며</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 100년의 기억을 덮는다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 어느 심의 날의 기록</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현장의 기록</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">에필로그: 도면 위의 공유결합</h3></div>",
+            "text": "<div style=\"font-family: 'SF Pro Display', -apple-system, sans-serif; text-align: left; padding: 20px 0; max-width: 600px; margin: 0 auto; line-height: 1.8;\"><h2 style=\"font-size: 26px; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px; border-bottom: 2px solid #1d1d1f; padding-bottom: 12px;\">【도면 위의 공유결합】 목차</h2><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">시작하며</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 프롤로그: 건축만 할 줄 아는 설계자의 이야기</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제1막: 공유결합 디자인 방법론</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 도면 위의 공유결합</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 세 번의 기억</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 관계의 재설정</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 공유결합의 세 가지 원칙</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 분자</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 단단한 개성</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 디자인의 본질</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 순응(順應)</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 귀 기울임</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 무질서를 담는 틀</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 간격</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 공간의 에너지</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 작은 부분은 강렬하게</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다정한 디자인</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 생각의 힘</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 관계 속의 아름다움</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 도면 밖의 무대</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현장이라는 무대</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제2막: 나라는 개체의 독립과 버팀</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 설계의 기쁨</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 딱 니 맘 크기만큼</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 타인의 생각</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 무게</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 삼켜낸 말</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 십원짜리</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 양팔에 낀 토시</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 오늘을 산다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 약하다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 둔하다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 오뚝이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 외로움</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 잠을 이룰 수 없던 밤</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 에너지의 소진으로</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 어제의 눈</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 나라는 존재</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 가끔</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 바스락거림</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 구겨진 도면</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 잘게 잘게 나누어 버리기</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 있을 뿐</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 당신의 세상은 어떤가요?</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 직선이면 족하다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 생존 신고</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 거짓과 진실</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 괴물이 된 뇌물</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 종이 위의 유혹</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 선을</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다닥다닥 붙은 집들</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 무게 중심</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제3막: 사람을 알아가는 관계성</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 만들어져 가는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 찢어진 운동화</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 건축 설계</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 우리 이렇게 오늘도</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 모두들</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 논리와 감정 사이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 거름종이 마법</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 침묵이란</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 시선의 공유</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 익숙해진다는 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 마음으로 들어간 것</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 고상하다는 것은</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 다름의 이해</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 말과 마음의 사이</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 우리가 이렇게 살아갑니다</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 말하는 나무</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 읽기와 듣기, 그리고 말하기</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">제4막: 증언과 성찰</h3><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 용역원실에서 노동 쉼터로</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 조감도 이면</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 신뢰의 기록</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> '조은 슈퍼'</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 마음을 짓는 일</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 서계동 현상설계</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현상설계를 진행하며</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 100년의 기억</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 심의 날</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 쟁이의 마음</div><div style=\"font-size: 15px; color: #333; margin-bottom: 8px; font-weight: 500; display: flex; align-items: baseline;\"><span style=\"color: #999; margin-right: 8px; font-size: 12px;\">•</span> 현장의 기록</div><h3 style=\"font-size: 18px; font-weight: 700; color: #0066cc; margin-top: 32px; margin-bottom: 12px; letter-spacing: -0.3px;\">에필로그: 도면 위의 공유결합</h3></div>",
             "image": null,
             "type": "text_only",
             "part": "목차",
@@ -124,7 +124,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "세 번의 기억에서 온 개념",
+            "title": "세 번의 기억",
             "text": "",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "건축이라는 세계",
@@ -137,7 +137,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "세 번의 기억에서 온 개념",
+            "title": "세 번의 기억",
             "text": "제가 왜 '공유결합'이라는 단어를 설계의 중심에 두게 되었는지 고백해야 할 것 같습니다. 이 단어는 전혀 상관없어 보이는 세 번의 기억에서 시작되었습니다.<br><br>첫 번째는 고등학교 1학년 때, 가장 친한 친구 정하진의 집에서였습니다.<br>\n어머니가 \"진아~\" 부르시자, 하진이가 \"네~\" 하고 다정하게 대답했습니다.<br>\n그냥 \"네\" 한마디였습니다.<br>\n그런데 무뚝뚝한 집안에서 자란 저에게 그 짧은 한마디는 큰 충격이었습니다. 단순히 말투가 아니라, 그 \"네~\" 안에 담긴 엄마와 아들 사이의 관계, 그 따뜻한 결합의 모습이 제게는 낯설고도 부러운 것이었습니다.<br>\n웃기지요. 고작 \"네\" 한마디였는데.<br>\n하지만 그 한마디는 제 말투를, 부모님을 대하는 태도를, 사람을 대하는 자세 전반을 바꾸어 놓았습니다. 40년이 지난 지금도 그 \"네~\"라는 울림은 여전히 선명합니다.",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "건축이라는 세계",
@@ -150,7 +150,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "세 번의 기억에서 온 개념",
+            "title": "세 번의 기억",
             "text": "두 번째는 대학원 시절이었습니다.<br>\n혼자 걷다가 문득, '계단'이라는 존재의 의미에 심취해 버렸습니다.<br>\n단절된 층위를 극복하며, 서로 다른 두 공간을 하나로 이어주는 매개체.<br>\n너무 흥분한 나머지 교수님을 찾아가 \"교수님, 계단 정말 대단하지 않습니까!\" 하고 말씀드렸습니다.<br>\n교수님은 저를 낯설게 바라보셨습니다. 대학원까지 다니는 학생이, 건축의 가장 기본 요소인 계단을 뭔가 대단한 것을 발견한 것처럼 흥분하고 있으니 그럴 만도 했습니다.<br><br>마지막 세 번째. 공유결합도 마찬가지였습니다.<br>\n교회 설교 시간에 '공유결합'이라는 단어를 처음 들었습니다.<br>\n원자들이 각자의 전자를 내어놓아 서로 공유하며, 홀로일 때보다 더 안정적인 상태를 이루는 결합.<br>\n그 순간, 과거의 그 다정한 \"네~\"와 \"계단\"의 깨달음이 머릿속에서 하나로 얽혀 폭발했습니다.<br><br>\n'아, 사람과 사람의 관계도, 공간과 공간의 연결도, 결국 공유결합이구나.'<br><br>\n예배가 끝나고 너무 흥분해서 \"정말 귀한 단어를 들었습니다!\" 하고 말씀드렸는데,<br>\n돌아온 반응은 대학원 시절 교수님의 그것과 똑같았습니다.<br><br>\n참 이상하지요?",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "건축이라는 세계",
@@ -163,7 +163,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "세 번의 기억에서 온 개념",
+            "title": "세 번의 기억",
             "text": "저를 관통한 세 가지 깨달음은 모두 너무나 당연하고 사소한 것들이었습니다.<br>\"네\"라는 대답, 계단이라는 구조물, 공유결합이라는 화학 용어.<br><br>이러한 사소한 경험들을 통해, 저는 비로소 건축과 삶을 이해하고 사람과의 관계를 설정할 수 있는 작은 기준 하나를 갖게 되었습니다.<br><br>그렇게 마음속에서 출발한 '공유결합'이라는 메타포는, 이후 제가 설계를 하고 디자인을 하는 데 중요한 기준이 되었습니다.<br>이제부터는 저의 이 주관적인 개념이 실제 건축과 도시 디자인 과정에서 어떻게 구체적인 공간으로 구현되는지, 그 흔적들을 하나씩 설명해 드리려 합니다.\n<div class=\"footnote-box\">\n<strong>* 공유결합 (건축적 의미)</strong>: 원자들이 전자를 공유해 안정화되는 화학 현상. 본문에서는 빛, 공간, 사람 등 이질적인 요소들이 서로의 빈자리를 채우며 튼튼한 건축물이 되는 과정을 뜻합니다.\n</div>",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "건축이라는 세계",
@@ -248,7 +248,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "분자: 원자간의 공유결합",
+            "title": "분자",
             "text": "",
             "image": "static/images/gallery_batch10_sculpture2.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -261,7 +261,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "분자: 원자간의 공유결합",
+            "title": "분자",
             "text": "**공유결합(Covalent Bond): 진정한 융합의 조건**\n물과 기름은 한 그릇에 담아 힘껏 저어도 결국 분리됩니다. 이를 '혼합물(Mixture)'이라 부릅니다. 반면, 산소 원자 하나와 수소 원자 두 개가 만나 서로의 전자를 내어주고 강하게 결합하면, 불을 끄고 생명을 잉태하는 전혀 새로운 물질인 '물(H2O)'이 탄생합니다. 이것이 화학에서 말하는 '공유결합(Covalent Bond)'입니다.\n<div style=\"text-align: left; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.<br><br>w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"var(--ink, #1d1d1f)\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 내어주어 제3의 생명 창조</text> </svg> </p></div>",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -274,7 +274,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "단단한 개성",
             "text": "",
             "image": "static/images/gallery_custom_2.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -288,7 +288,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "단단한 개성",
             "text": "건축 설계도, 그리고 사람과 사람이 맺어가는 관계도 마찬가집니다.<br><br>\n솔직히 고백하자면, 처음부터 저에게 단단한 철학이 있었던 것은 아닙니다. 초년생 시절에는 의뢰인이나 인허가 관청의 요구를 무조건 맞추는 것이 설계의 전부라 여겼고, 연차가 쌓이면서는 반대로 저만의 아집에 빠져 현장과 엇박자를 내기도 했습니다.<br><br>\n하지만 수많은 도면을 엎고 다시 그리며 깨달았습니다. 건축주의 절실한 요구, 대지가 품은 제약, 그리고 관청의 엄격한 기준까지. 결코 타협할 수 없을 것 같던 그 각각의 조건들을 이해하고 하나의 '분자'로 묶어낼 때, 비로소 살아 숨 쉬는 공간이 탄생한다는 것을요.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -301,7 +301,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "단단한 개성",
             "text": "설계자와 의뢰인, 그리고 현장. 이 세 가지 원칙은 결코 어느 하나가 부족하거나 불완전하지 않습니다. 각자는 이미 고유한 힘과 뚜렷한 특성을 가지고 있습니다. 제가 설계를 하며 가지는 가장 큰 욕심은, 이 강한 개성들을 적당히 타협시켜 섞어버리는 것이 아니라, 서로가 서로에게 결코 떼어낼 수 없는 '필수 요소'가 되도록 단단하게 묶어내는 것입니다.<br><br>문득 첫 회사에서 모시던 소장님이 떠오릅니다.<br>그분의 평면은 정말 놀라웠습니다. 어떤 한 요소를 변경하려 하면 다른 것들이 모두 틀어져 버릴 만큼, 각 요소가 치밀하고 긴밀하게 연결되어 있었지요.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -314,7 +314,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "단단한 개성",
             "text": "<blockquote class=\"editorial-quote\">\"평면 계획을 잘한다는 것은 혼자 100점을 맞는 게 아니다. 70~80점 정도를 받더라도 누구나 공감하고 좋아할 만한 계획이 되어야 하며, 누군가 함부로 수정하지 못할 정도로 관계의 긴밀성이 짜여 있어야 한다.\"</blockquote><br>당시 소장님께서 해주셨던 그 뼈 있는 잔소리는, 오늘날 제가 '공유결합'이라는 철학으로 설계를 하고 디자인을 하는 데 가장 든든한 밑거름이 되었습니다.<br><br>각 요소의 본질을 깊이 이해하고, 떼어낼 수 없는 접점을 찾아내 결합시키는 것. 그렇게 탄생한 결과물은 설계자 혼자 뽐내는 100점짜리 작품도, 의뢰인 혼자 만든 건물도 아닌 '완전히 새로운 제3의 공간(물)'이 됩니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -327,7 +327,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "단단한 개성들이 묶여 필수 요소가 될 때",
+            "title": "단단한 개성",
             "text": "사람 간의 공유결합은 각 분야 관계자들의 이해관계를 알아야 하며, 서로 존중하고 함께 결합함으로써 혼자일 때보다 더 나은 결과를 얻을 수 있다는 서로 간의 신뢰가 있어야 합니다.<br>설계자는 이러한 이해관계의 이면을 바라볼 수 있는 능력과 더불어, 상대를 대할 때의 여유, 그리고 본인의 확고한 생각과 계획적 능력이 무엇보다 중요합니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -340,7 +340,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "내가 생각하는 디자인이란?",
+            "title": "디자인의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": "static/images/gallery_batch11_relief.jpg",
             "text": "",
@@ -352,7 +352,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "내가 생각하는 디자인이란?",
+            "title": "디자인의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "image": null,
             "text": "다음에 이어질 제가 생각하는 디자인의 개념들을 보면, 얼핏 의아하실 수도 있습니다. '존중, 순응, 귀 기울임' 같은 단어들은 일반적으로 말하는 현란한 디자인 기법처럼 들리지 않기 때문입니다.<br><br>\n맞습니다. 사람과의 부대낌 속에서 이 깨달음을 얻은 것인지, 아니면 수많은 건축 설계를 거치며 자연스레 배운 것인지 저조차도 그 순서를 잘 모르겠습니다. 하지만 분명한 것은, 이 개념들이 사람을 대할 때나 공간을 빚어낼 때 저에게 언제나 동일한 원칙으로 적용된다는 사실입니다.<br><br>\n어쩌면 이것은 비단 건축 설계만이 아니라, 우리가 세상을 살아가며 맺는 모든 '관계'에 똑같이 적용되는 본질일지도 모르겠습니다.<br><br>오랜 기간 수많은 사람, 그리고 수많은 땅과 공유결합하며 제 안에 남겨진 이 흔적들을 통해, '아, 이 친구는 이런 마음으로 설계하고 살아가는 사람이구나' 하고 조금이나마 끄덕여 주신다면 더 바랄 것이 없겠습니다.\n<div class=\"footnote-box\">\n<strong>* 공유결합 (건축적 의미)</strong>: 원자들이 전자를 공유해 안정화되는 화학 현상. 본문에서는 빛, 공간, 사람 등 이질적인 요소들이 서로의 빈자리를 채우며 튼튼한 건축물이 되는 과정을 뜻합니다.\n</div>",
@@ -364,7 +364,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "주변에 순응하라",
+            "title": "순응(順應)",
             "text": "",
             "image": "static/images/gallery_batch11_sculpture.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -377,7 +377,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "주변에 순응하라",
+            "title": "순응(順應)",
             "text": "제가 도면을 마주할 때 가장 먼저 떠올리는 첫 번째 단어는 바로 <strong>'순응(順應)'</strong>입니다.<br><br>\n무언가와 단단히 공유결합을 이루기 위해서는, 내가 딛고 설 땅의 본래 모습을 존중하는 것이 최우선입니다. 무작정 반듯하고 멋진 선부터 긋는 것이 아니라, 그 땅이 가진 고유한 흐름을 가만히 읽어내는 것에서 진짜 설계가 시작됩니다.<br><br>\n흔히 서양(유럽)의 건축물들을 보면 대체로 강력한 중심축을 둔 기하학적 좌우 대칭을 선호합니다. 하지만 우리나라처럼 산의 능선과 물길이 유기적으로 굽이치는 땅에서, 그러한 강압적인 대칭을 고집하는 것은 자연에 대한 폭력이자 심각한 부조화를 낳습니다.<br><br>\n우리나라의 오래된 산사를 거닐어 보면 이 차이가 명확해집니다. 길에서 볼 때는 바르게 서 있는 듯하다가도, 조금 더 걸어가 뒤돌아보면 지형의 등고선에 맞춰 살짝 틀어져 앉아 있습니다. 이미 정해진 완벽한 형태를 땅에 강요하는 것이 아니라, 주변을 감안하여 '당연히 있어야 할 자리'에 자연스럽게 내려앉는 조화로움.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -390,7 +390,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "주변에 순응하라",
+            "title": "순응(順應)",
             "text": "제 대학원 논문의 주제 역시 '건축에 있어서 정형(正形, 반듯한 형태)의 의미 고찰'이었습니다. 과연 도면 위에서 모양새만 반듯한 사각형인 것이 진짜 정형일까요, 아니면 건물이 앉은 땅의 자연스러운 흐름과 하나가 되는 것이 진짜 정형일까요?",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -403,7 +403,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "주변에 순응하라",
+            "title": "순응(順應)",
             "text": "이 오랜 질문에 대해 저만의 해답을 찾은 뒤로, 저는 후배들과 도면을 펼칠 때면 자주 이렇게 당부하곤 합니다.<br><br>\n<strong>\"고칠 수 있는 것과 고칠 수 없는 것을 먼저 철저히 구분하라. 그리고 고칠 수 없는 거대한 자연의 틀에 온전히 기대어 디자인하라.\"</strong><br><br>\n하늘에서 내려다보는 2차원의 평면 도면 위에서는, 우리 건물의 배치가 다소 삐뚤빼뚤하고 반듯한 사각형(정형)이 아닌 것처럼 보여 불안할 수 있습니다.<br>\n하지만 고칠 수 없는 거대한 틀, 즉 산세와 지형의 흐름에 순응하여 건물을 앉히게 되면, 실제 완공된 후 그 공간을 거니는 사람에게는 그것이 가장 편안하고 완벽한 질서로 다가옵니다. 자연의 호흡을 거스르는 불편함이 없기 때문입니다.<br><br>\n이것이 바로 주변 환경을 훼손하지 않고 자연에 기대어 살았던 우리 전통 건축의 지혜이자, 제 설계가 가장 먼저 맺는 <strong>'땅과의 공유결합'</strong>입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -416,7 +416,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "땅과 사람이 하는 말에 귀 기울이는 법",
+            "title": "귀 기울임",
             "image": "static/images/gallery_batch11_sketch1.jpg",
             "text": "",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -429,7 +429,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "땅과 사람이 하는 말에 귀 기울이는 법",
+            "title": "귀 기울임",
             "image": null,
             "text": "앞서 말씀드린 <strong>'존중'</strong>, 즉 <strong>'귀 기울임'</strong>이라는 태도로 저는 도면 위의 디자인 요소들, 나아가 사람들과의 관계를 시작하려 합니다.<br><br>\n도면 위에서 이러한 존중은 가장 먼저 <strong>'영역성의 확립'</strong>과 <strong>'단순화(Simplification)'</strong>라는 구체적인 작업으로 연결됩니다.<br><br>\n건축물에 아무리 복잡한 창문이나 수많은 요소가 흩어져 있다 하더라도, 그것들을 하나로 온전히 품어낼 수 있는 뚜렷한 '영역'을 설정해 주면 공간은 아름답게 단순화됩니다. 즉, 영역성을 확정한다는 것은 각 요소의 개별성을 다치지 않게 품어내면서도 전체의 질서를 단순하게 잡아주는 배려입니다.",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -442,7 +442,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "땅과 사람이 하는 말에 귀 기울이는 법",
+            "title": "귀 기울임",
             "image": null,
             "text": "반대로 각 개체의 특성을 강렬하게 부각시키거나, 서로 떨어져 있는 것들을 자연스럽게 연결하기 위해서는 무엇이 필요할까요? 바로 요소와 요소 사이를 숨 쉬게 하는 <strong>'여백'</strong>, 즉 <strong>'사이 공간'</strong>입니다.<br>\n아이폰의 은색 테두리가 아름다운 것은 그 바탕을 받쳐주는 여백이 있기 때문이고, 은하수가 빛나는 것은 우주의 어두움이라는 빈 공간이 존재하기 때문입니다.<br><br>\n<div class=\"footnote-box\">\n사람과의 관계도 이와 완벽하게 닮아 있습니다.<br>타인을 온전히 품기 위해서는 내 안에 커다란 영역성(공간)이 필요하고, 역설적이게도 상대를 진심으로 존중하기 위해서는 서로가 숨 쉴 수 있는 '여백(사이 공간)'이 반드시 필요합니다.\n</div>",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -455,7 +455,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "땅과 사람이 하는 말에 귀 기울이는 법",
+            "title": "귀 기울임",
             "image": null,
             "text": "존중, 귀 기울임, 포용, 그리고 거리 두기(여백). 참 말은 쉽지만, 이를 현실의 거대한 도면 위에서 구현하기란 결코 녹록지 않은 과제입니다.<br><br>\n우리의 일상적인 주거 형태인 아파트를 예로 들어보겠습니다. 아파트 단지를 계획할 때, 세대와 세대 간의 프라이버시 보호는 매우 중요합니다. 하지만 동시에 이웃과 자연스럽게 접촉할 수 있는 커뮤니티 시설이나 산책로 역시 그에 못지않게 중요합니다.<br><br>\n보통은 이를 '거주자의 편의성' 측면에서만 바라보지만, 설계자인 제 시선은 조금 다릅니다.<br>\n각 세대는 하나의 독립된 개체로서 완벽한 프라이버시(거리 두기와 여백)를 보장받아야 하며, 커뮤니티 공간은 그 떨어져 있는 개체들을 '우리'라는 하나의 커뮤니티로 단단하게 묶어내는 결합 요소입니다. 즉, 개체들의 거리를 띄워주면서도 함께 엮일 수 있는 접촉점을 무수히 만들어주는 것. 이것이 바로 공간을 '안정화'시키는 과정이며 나아가 '우리 아파트의 가치'를 대변하게 됩니다.",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -468,7 +468,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "땅과 사람이 하는 말에 귀 기울이는 법",
+            "title": "귀 기울임",
             "image": null,
             "text": "단지 내부를 넘어 아파트가 접하는 가로(街路) 경관으로 범위를 넓혀보아도 원리는 같습니다.<br>\n보행로와의 위압적인 단차를 없애고, 단지 내 조경이나 산책로를 이웃과 공유하며, 커뮤니티나 상가를 통해 가로 경관을 풍성하게 만드는 일. 주변과의 조화를 위해 건물의 층수를 세밀하게 조율하고 스카이라인을 빚어내는 일.<br><br>\n결국 개별성을 지키기 위해 적절한 거리를 두고, 통합을 위해 넉넉한 영역을 확보하며, 사람과 도시를 잇는 '공유결합 요소'들을 적재적소에 배치하는 것.<br>그것이 바로 저와 같은 건축 설계자가 도면 위에서 매일같이 묵묵히 수행하는 진짜 일입니다.",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -481,7 +481,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "틀: 무질서를 담는 그릇",
+            "title": "무질서를 담는 틀",
             "text": "",
             "image": "static/images/gallery_batch11_sketch2.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -494,7 +494,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "틀: 무질서를 담는 그릇",
+            "title": "무질서를 담는 틀",
             "text": "그렇다면 앞서 말씀드린 '영역과 여백'의 원리가 실제 설계 과정에서 어떻게 적용되는지 구체적인 사례를 들어보겠습니다.<br><br>\n<strong>바탕의 포용력</strong><br>\n만약 도면 위에서 동등한 요소들을 의도적으로 무질서하게 배치하여 역동적인 변화감을 주고 싶다면, 그 바탕이 무질서를 모두 수용할 수 있을 만큼 단단한 포용력을 가져야 합니다. 바탕을 극도로 단순화하고 색을 차분하게 눌러주어야만 무질서가 비로소 아름다운 리듬이 됩니다.<br><br>\n요즘 길을 걷다 보면 창문의 위치가 수직/수평의 공식을 벗어나 자유롭게 흩어지거나 다양한 모양을 띠는 건축물들을 종종 볼 수 있습니다.<br>\n이러한 자유로운 디자인이 어수선하지 않고 성공하려면, 바탕이 되는 벽면이 일반 벽면보다 훨씬 단순한 단색이어야 하고 면 자체의 성격이 아주 묵직해야 합니다.<br><br>\n즉, 춤추는 창문의 모양을 고민하기 이전에, 그 자유로움을 온전히 품어낼 '바탕(틀)'을 어떻게 비워두고 단단하게 묶어낼지 먼저 고민해야 한다는 뜻입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -507,7 +507,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "틀: 무질서를 담는 그릇",
+            "title": "무질서를 담는 틀",
             "text": "이러한 바탕의 원리는 조직이나 사람의 관계에서도 마찬가지입니다.<br>\n영화 &lt;악마는 프라다를 입는다&gt;에서 보여주는 세련됨의 정점은 묵묵한 평범함이 굳건히 받쳐주고 있기에 가능합니다. 재능 많은 직원들이 능력을 맘껏 발휘하게 하려면, 윗사람은 무색무취의 넓은 바탕이 되어 그들을 포용해야 합니다. 삼국지에서 관우와 장비가 돋보이는 것은 그들을 품어낸 유비의 텅 빈 캔버스가 있었기 때문입니다. 손오공의 재롱도 결국 부처님 손바닥 위라는 거대한 바탕 안에서만 유효한 것입니다.<br><br>\n다시 설계 이야기로 돌아와 보겠습니다. 건축 디자인에서는 이 거대한 바탕(틀)을 만들어 내기 위해 끊임없이 <strong>'단순화'</strong>시키는 작업을 반복합니다.<br><br>\n단순화라는 작업이 어떻게 느껴지실지 모르겠지만, 우리 사람의 눈은 아무리 복잡한 사물을 마주하더라도 무의식적으로 자신이 익히 아는 편안한 형태로 묶어서 보려는 심리적 본능이 있습니다.<br>그래서 건물의 창문 배열과 형태가 아무리 어지럽고 복잡하게 흩어져 있더라도, 그것을 묵묵히 포용해 주는 커다란 '단순화된 틀(바탕)' 안에만 존재한다면 사람들은 그 복잡성마저 아주 편안하게 받아들이게 됩니다. 무질서가 비로소 자유로운 질서로 읽히는 것입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -520,7 +520,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "틀: 무질서를 담는 그릇",
+            "title": "무질서를 담는 틀",
             "text": "<div style=\"margin-top: 40px; padding: 24px; background-color: var(--footnote-bg); border-radius: 12px;  font-size: 15px; line-height: 1.6; border-left: 3px solid var(--ink, var(--ink, #333)333);\">도면 위에서 '포용력 있는 바탕'을 디자인하는 일은 차라리 쉽습니다. 하지만 이를 인간관계와 조직에 적용하기란 참으로 어려운 영역입니다. 나이를 먹고 연륜이 쌓여도, 뒤로 한 걸음 물러나 바탕이 되어주기보다는 여전히 나 자신이 돋보이고 싶은 것이 인간의 솔직한 본성이기 때문입니다.<br><br>그럼에도 직급이 올라가고 나이가 든다는 것은, 후배들에게 '네가 나보다 낫다', '참 잘했다'고 진심으로 박수 쳐 줄 수 있어야 함을 의미합니다. 웬만한 허물은 눈 한 번 꾹 감고 넓은 그릇으로 포용할 줄 알아야 합니다. 하지만 부끄럽게도, 기꺼이 텅 빈 바탕을 내어주는 이 일은 저 역시 아직 한참 부족하며 매일매일 훈련해야 하는 과제입니다.</div>",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -533,7 +533,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "간격: 그 사이 공간의 힘",
+            "title": "간격",
             "text": "",
             "image": "static/images/gallery_batch12_sculpture1.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -546,7 +546,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "간격: 그 사이 공간의 힘",
+            "title": "간격",
             "text": "다시 한번 사이 공간, 여백, 또는 '거리 두기'에 대해서 이야기를 해볼까요?<br><br>\n앞서 말씀드린 것처럼, 인간의 뇌는 파편화된 정보를 통합하려는 습성이 있습니다. 아담과 신의 손끝이 닿을 듯 말 듯 한 미켈란젤로의 '천지창조'처럼, 적절히 떨어져 있는 간격은 강력한 연결의 에너지를 발생시킵니다.<br><br>\n사람과의 관계도 마찬가지입니다. 적절한 거리 두기와 여백은 각자의 개체성을 뚜렷하게 지켜주며, 나와 상대방 모두에게 건강한 에너지를 줍니다. 여기서 분명히 해야 할 것은, 건강한 관계를 맺기 위해서는 반드시 <strong>'침범받지 않는 자기만의 영역(존엄)'</strong>이 전제되어야 한다는 점입니다.<br><br>\n한때 과학자들은 원자가 더 이상 쪼개지지 않는 꽉 찬 알갱이인 줄 알았습니다. 하지만 그 안을 들여다보니 원자의 대부분은 텅 빈 '공간'이었습니다. 중심을 잡고 있는 원자핵과 그 주위를 도는 전자 사이에는 엄청난 거리의 여백이 존재합니다. 그 거대한 여백이 역설적으로 원자라는 단단한 물질을 유지하게 만듭니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -559,7 +559,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "간격: 그 사이 공간의 힘",
+            "title": "간격",
             "text": "우리의 삶도 그렇습니다. 누군가와 결합하기 이전에, 당신은 스스로 충분한 공간(여백)을 가지고 마땅히 존중받아야 하는 존재입니다. 만약 타인으로부터 그 존중을 받기 어렵다면 우리는 끊임없이 거리를 띄워야 합니다. 만약 그 정도의 여백조차 허락하지 않는 억압적인 '틀' 안에 갇혀 있다면, 그 틀을 과감히 벗어나는 것도 훌륭한 방법입니다. 당장 벗어날 수 없다면 본인의 존엄을 지킬 수 있는 또 다른 여백을 필사적으로 찾아내야만 합니다.<br><br>\n크고 작음, 가까이 두기와 멀리 두기. 이 모든 것들이 서로의 존엄을 훼손하지 않는 에너지의 관계망 안에서 조화롭게 머물러야 합니다. 억지로 끼워 맞추는 것이 아니라, 서로를 존중하며 '당연히 있어야 할 곳에 마땅히 있게' 배치하는 것.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -572,7 +572,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "간격: 그 사이 공간의 힘",
+            "title": "간격",
             "text": "참으로 어려운 일입니다. 하지만 이것이 바로 제가 <strong>\"설계는 타고난 감각으로 하는 것이 아니라 성숙함, 즉 사람과 관계를 이해하는 마음의 크기에서 나온다\"</strong>고 단언하는 이유입니다.<br>당신의 존엄을 지키는 단단한 여백 위에서 이루어지는 만남, 그것이 진짜 공유결합입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -687,7 +687,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라",
+            "title": "생각의 힘",
             "text": "",
             "image": "static/images/gallery_batch8_frame1.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -700,7 +700,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "생각의 힘: 고정관념을 벗고 '진짜 사실'인지 확인하라",
+            "title": "생각의 힘",
             "text": "생각은 누구나 합니다. 하지만 이를 잘 해내기 위해서 지켜야 할 원칙이 있습니다. \n첫째, 진짜 사실인지 확인하십시오. 설계를 하다 보면, 제가 설정한 기준이나 아이디어에 대해 끊임없이 의심해 볼 필요가 있습니다.<br><br>제가 만든 디자인이 정말 좋은 것인지, 단순히 제 생각일 뿐인지 스스로에게 물어봐야 합니다.\n\n\"사실\", \"진짜\", \"변하지 않는 것\" 등을 잘 구분해야 합니다. 선배가 말했기 때문에 사실입니다? 이건 아니겠지요. 누가 이야기하더라도 본인 스스로 수긍이 되어야 합니다. 당신이 지금 하고 있는 설계가 진정한 '사실'에 기반하고 있나요? 디자인은 감각이라기보다는 생각의 힘입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -765,7 +765,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "도면 밖의 무대, 현장",
+            "title": "도면 밖의 무대",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "",
             "image": "static/images/gallery_batch3_face.jpg",
@@ -777,7 +777,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "도면 밖의 무대, 현장",
+            "title": "도면 밖의 무대",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "타인을 향한 '다정한 마음'을 품고 나만의 단단한 기준을 세웠다고 해서 모든 설계가 술술 풀릴까요? 결코 그렇지 않습니다. 마음을 다듬은 건축가가 도면을 들고 나서는 곳은, 어쩌면 다정함과는 거리가 먼 묵묵한 현실이기 때문입니다.<br><br>\n우리가 매일매일 새로운 아침을 맞이하는 이유는, 어쩌면 어제와는 다른 상황 속에서 다시 한번 부딪히고 배워보라는 새로운 기회가 주어지는 것 아닐까요. 실패했다면 과거에 매이지 말고 온전히 '현재'에 집중하라고 말입니다. 삶을 현재로 살지 못하고, 과거의 실패나 과거의 영광된 기억만이 현재를 채우는 순간… 그것이 곧 살아있으나 죽은 상태일지도 모릅니다.",
             "image": null,
@@ -789,7 +789,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "도면 밖의 무대, 현장",
+            "title": "도면 밖의 무대",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "text": "제게 '삶의 공유결합'이란, 결국 건축 설계를 하며 매일매일 마주하는 사람들과의 관계에 대한 기록입니다.<br><br>설계라는 것은 결코 건축가 혼자서 하는 작업이 아닙니다. 특히 제가 주로 다루는 정비사업의 경우는 더욱 그렇습니다. 사업을 이끌어가는 조합, 건물을 짓는 시공사, 그리고 기준을 제시하는 인허가권자 모두가 어떤 의미에서는 또 다른 '설계 관여자'들입니다.<br><br>이 다양한 관계 속에서, 어떻게 하면 설계자 본인의 원칙과 관여자들의 이해관계를 잘 결합시킬 수 있는지가 진정한 설계의 본질일지도 모릅니다. 이것이 바로 <strong>'관계 속의 설계'</strong>입니다.<br><br>그렇다면 이 수많은 관계와 결합이 이루어지는 '진짜 현장'은 어디일까요?<br>그곳은 다름 아닌 사람과 사람이 마주 앉는 <strong>'회의 테이블'</strong>입니다.",
             "image": null,
@@ -874,7 +874,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "title": "설계하는 일에서 좋은 점은",
+            "title": "설계의 기쁨",
             "text": "",
             "image": "static/images/gallery_batch4_heart.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -887,7 +887,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
-            "title": "설계하는 일에서 좋은 점은",
+            "title": "설계의 기쁨",
             "text": "나라는 개체의 흔들림 없는 중심은, 역설적이게도 수많은 부딪침과 깨짐을 통해서만 만들어집니다.<br><br>\n설계하는 일에서 좋은 점은 바로 이 '생각의 부딪침'이 많다는 것입니다.<br>\n<span class=\"highlight-text\">부딪침,<br>깨짐,<br>이를 통한 생각의 확장.</span><br><br>\n언제나 조심해야 할 것은<br>\n생각의 부딪침을 자연스럽게 받아들여야 한다는 것입니다.<br>\n어떤 때는 통과되기도, 또는 털어버릴 때도 있겠지만,<br>\n적어도 고정된 생각을 무기로 만들어 이리저리 흔들어대는 행동은 하지 말아야 합니다.<br><br>\n오늘도 부딪침, 깨짐, 그리고 확장과 거리두기를 기대합니다.<br><br>\n설계하는 일의 또 다른 좋은 점은, 이렇듯 생각의 깊이가 '일'이라는 결과물로 고스란히 표현된다는 점입니다. 그것이 참 매력적입니다.<br><br>\n어쩌면 그런 점 때문에 아직까지도 일에 대한 고민을 놓지 못하고, 앞으로 더 나아갈 방향성을 끊임없이 찾게 되는 것 같습니다.<br><br>\n저는 참, 건축이 좋습니다.",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -936,7 +936,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
-            "title": "다른 사람의 생각을 볼 수 있는 사람이 있다면",
+            "title": "타인의 생각",
             "text": "",
             "image": "static/images/gallery_batch9_arch2_1789097505174.jpg",
             "type": "image_top",
@@ -947,7 +947,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
-            "title": "다른 사람의 생각을 볼 수 있는 사람이 있다면",
+            "title": "타인의 생각",
             "text": "만약 다른 사람의 생각을 볼 수 있는 사람이 있다면,<br>그 사람은 다른 사람들과 소통할 수 있을까요?<br>내면의 소리를 듣는 초능력을 가진 사람의 영화도 나오긴 합니다.<br><br>진짜 우리가 상대의 생각을 이미지로 볼 수 있다면,<br>과연 그 사람이 앞으로 할 행동과 일치한다고 볼 수 있을까요?<br>현시점에서 느끼는 감정, 그리고 스쳐 지나가는 것들로 온전히 판단할 수 있을까요?<br><br>생각은 누구나 자유롭게 다 할 수 있지만,<br>그것을 말로 내뱉는 것이냐, 아니면 행동으로 옮기는 것이냐가 중요합니다.<br><br>생각은 내 안에 머물러 있는 것이고,<br>말과 행동과 글은 밖으로 나오는 순간 상대방의 것이 되어 버립니다.<br>한 번 더 생각해 볼 것은 지금의 말이 그 사람의 행동과 일치할까 하는 점입니다.<br><br>실제 우리의 생각은 얼마나 자주 왔다 갔다 하는지 모릅니다.<br>내가 알고 있는 정보의 한계가 있어 잘못 판단할 수도 있고,<br>조건이 변경될 수도 있습니다.",
             "type": "text_only",
             "isContinuation": true,
@@ -956,7 +956,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
-            "title": "다른 사람의 생각을 볼 수 있는 사람이 있다면",
+            "title": "타인의 생각",
             "text": "우리는 사람들과의 관계에 있어서<br>우선 '나의 기준'을 세우는 것이 중요합니다.<br><br>감정에 의존하거나, 현재의 조건에 따라 섣불리 판단해서는 안 됩니다.<br>설계도 이와 같습니다.<br>지금 당장이 아닌 시공된 이후를 생각하며 도면을 그려야 하는 것입니다.<br><br>저와 같이 수많은 조합원과 주민들을 만나는 사람들은<br>매 순간 수많은 '약속'의 말을 해주기를 바라고 또 채근받기도 합니다.<br><br>그럴 때마다 혀끝에서 맴도는 가벼운 말보다,<br>제 생각과 입 밖으로 낸 말, 그리고 앞으로 저의 '행동'이 기어코 일치하기를 간절히 바라며 조심스럽게 말을 합니다.<br><br>이것이 생활화되지 않으면 미래에 문제가 생깁니다.<br>세상은 갈수록 화려하고 현란한 말들로 넘쳐납니다.<br>하지만 결국 닫힌 사람의 마음을 열고 무언가를 굳건히 세우는 것은,<br>투박할지언정 묵묵히 땀 흘려 약속을 증명해 내는 조용한 뒷모습입니다.<br><br>오늘 하루, 우리가 허공에 흩뿌린 말들이<br>부디 땅에 단단히 뿌리내릴 수 있기를 바라봅니다.",
             "type": "text_only",
             "isContinuation": true,
@@ -965,7 +965,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "혹시 무겁지 않나요?",
+            "title": "무게",
             "text": "",
             "image": "static/images/gallery_batch4_leaning.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -978,7 +978,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "혹시 무겁지 않나요?",
+            "title": "무게",
             "text": "서울 올라와<br>지금까지 언덕 위에 집을 얻어 살아왔습니다.<br>언덕 위 집은 꿈에 그리던 그런 집이 아닙니다.<br>집으로 올라가는 길이 가팔라 천천히 걷게 됩니다.<br><br>천천히 걸으며<br>저 밑에서의 먼지를 털어냅니다.<br>그렇게 집으로 갑니다.<br><br>가끔은 언덕길 가로등에<br>길게 늘어진 제 그림자가<br>유난히 무거워 보일 때가 있습니다.<br><br>잠시 쉬어 가라 하는 것도 같습니다.<br>내 그림자가 이토록 무거워질 때,<br>그럴 땐 저는 어떻게 해야 할까요?\n\n<div style=\"margin-top: 40px; padding: 24px; background-color: var(--footnote-bg); border-radius: 12px; font-size: 0.95em; line-height: 1.8; border-left: 4px solid var(--hairline, #d2d2d7);\">저는 언덕 위의 집이라 참 좋았지만, 저희 가족들은 오르내리기를 정말 싫어했습니다. 같은 공간이라도 이토록 관점이 다릅니다.<br><br>혼자만의 관점으로는 결코 세상을 살아갈 수 없습니다. 그래서 '관계성'을 이해한다는 것은 단순히 상대에게 나를 맞추는 것이라기보다는, 관계 속에서 제 자신이 조금 더 다듬어져 가는 과정인 것 같습니다.</div>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -990,7 +990,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "삼켜낸 말과 술 한 잔",
+            "title": "삼켜낸 말",
             "text": "",
             "image": "static/images/gallery_batch5_dancing.jpg",
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1003,7 +1003,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "삼켜낸 말과 술 한 잔",
+            "title": "삼켜낸 말",
             "text": "<strong>침을 꿀꺽 삼킵니다</strong><br>아들에게 말해준 적이 있습니다. 일을 하다 보면 사회적 위계를 무기 삼아 함부로 사람을 대하는 경우를 무수히 겪는다고. 그때마다 목구멍까지 욱하고 올라오는 것들을 억지로 삼켜내야 했던 날들이 참 많았습니다.<br><br>하고 싶은 말도, 마땅히 내뱉어야 할 말조차 꾹꾹 눌러 담았습니다. 속이 까맣게 문드러질 것 같았지만, 결국 그 쓰라린 감정들도 묵묵히 삼키다 보면 언젠가 스스로 소화되어 나간다는 것을 현장의 시간 속에서 배웠습니다.<br><br><strong>술 한 잔</strong><br>세상일 중에 술잔에 털어 넣지 못할 것이 있을까요? 분노와 서운함, 그리고 차마 내뱉지 못하고 삼켜냈던 숱한 말들도 결국 이 씁쓸한 한 잔에 기대어 훌훌 녹여냅니다.",
             "image": null,
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1016,7 +1016,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "삼켜낸 말과 술 한 잔",
+            "title": "삼켜낸 말",
             "text": "<div style=\"margin-top: 40px; padding: 24px; background-color: var(--footnote-bg); border-radius: 12px;  font-size: 15px; line-height: 1.6; border-left: 3px solid var(--ink, var(--ink, #333)333);\">세상 일 중에 이 술잔에 담지 못할 것이 무엇이 있을까. 꾹꾹 눌러 담아 탁 털어 넣어버리곤 하지만, 저는 여전히 이따금씩 술에 취해 정신을 잃고 맙니다.<br><br>나이 쉰이 훌쩍 넘고 그 긴 세월을 겪었으면서도, 저는 아직도 정신을 못 차린 것입니다. 어쩌면 영원히 못 차릴지도 모르겠습니다.<br><br>영원히 철들지 못하고 또다시 사람에 치여 술잔을 기울일지언정, 굳이 핏대를 세우며 이기려 들기보다는 그저 미련한 척 허허 웃으며 무던하게 털어버리는 것이 나을 때가 많습니다. 목구멍까지 차오르는 수많은 억울함도 독한 술과 함께 꿀꺽 삼켜내고 나면, 얽히고설켰던 마음도 어느새 스르르 소화되고 마니까요. 어쩌면 이다지도 미련하게 비워내고 털어내는 '무던한 미련함'이야말로, 복잡한 설계 현장뿐만 아니라 분주한 우리 삶의 매 순간을 둥글게 둥글게 굴러가게 해주는 진짜 지혜일지도 모르겠습니다.</div>",
             "image": null,
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1314,7 +1314,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "어제의 눈으로 사람을 보지 않기를",
+            "title": "어제의 눈",
             "text": "",
             "image": "static/images/gallery_batch14_duo_light_1789124898491.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -1327,7 +1327,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "어제의 눈으로 사람을 보지 않기를",
+            "title": "어제의 눈",
             "text": "이제 잘 시간입니다.<br>저는 누우면 바로 잠이 듭니다.<br><br>깨어있는 이 순간이나<br>내일 아침 깨어날 시간엔,<br>지나온 것들 속에 잊어야 할 것은<br>온전히 잊었으면 좋겠습니다.<br><br>사람을 대할 때 참 무섭고도 힘든 것은,<br>저도 모르게 '과거의 기억'으로 상대를 단정 짓고 본다는 것입니다.<br>어쩌면 당연한 일인지도 모릅니다. <br>하지만 막상 제가 누군가에게 과거의 잣대로만 비춰질 때면<br>\"오늘은 새로우니 다르게 봐주세요\" 하고 억울해하는 것이<br>또 이기적인 사람의 마음인가 봅니다.<br><br>그래서 다짐해 봅니다.<br>사람을 대할 때는 어제의 선입견을 덮어두고,<br>늘 처음 만나는 사람처럼 반가운 마음으로 마주하겠다고 말입니다.<br><br>오늘을 산다는 것은<br>어제의 눈으로 저의 일상과 사람을 보지 않는 것입니다.<br><br>익숙해짐으로 스쳐 지나갈 소중한 것들이 참 많이 있습니다.<br><br>오늘도 잠이 듭니다.<br>내일은 사람도, 공간도, 그리고 나 자신도 <br>매일 새롭게 느끼며 살아가야겠습니다.",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -1416,7 +1416,7 @@ const bookData = {
             "isTextAfterImage": false
         },
         {
-            "title": "만지작거리고 바스락거린다",
+            "title": "바스락거림",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "type": "image_top",
             "text": "",
@@ -1428,7 +1428,7 @@ const bookData = {
             "isTextAfterImage": false
         },
         {
-            "title": "만지작거리고 바스락거린다",
+            "title": "바스락거림",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "type": "text_only",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n먹고 저는 포장지를 만지작거리면 바스락거리고,<br>\n조금씩 만들어진 조각난 면들이 만나,<br>\n날카로운 선들을 새롭게 만들어가고,<br>\n만들어진 선들은 이전 것 위에 겹쳐집니다.<br>그렇게 만들어진 조각난 포장지,<br>\n조각보는 손 안에서 뭉쳐졌다 펼쳐졌다 하며<br>\n더욱더 많은 조각들로 나뉘어지고,<br>저는 더 이상 바스락거리지 않는<br>\n그것, 그것을 아쉬워하며,<br>이제는 손가락 하나하나를 움직여<br>\n흐름을 만들어 보내었다 불렀다 합니다.<br>텅 빈 손안을 채운 것은<br>\n버려진 조각들이 만들어낸 선. 그 선들은<br>\n아직도 제 손에 남아 저를 간지럽히며,<br>\n작은 상처를 만들어갑니다.<br>습관처럼<br>\n엄지와 검지를 서로 비벼봅니다.<br>서로가 서로를 어루만지고, 느끼며 좋아합니다.<br>\n언제나 이렇게 서로의 감촉을 느낀다 생각했는데,<br><br>그렇게 붙어있다 생각한 것은, 그것은 착각이네요.<br>\n엄지와 검지 사이 어느새 그 사이에<br> 제가 버린 것들이 얇고도 투명한 막을 만들어 놓고,<br><br>서로를 부빈다 생각한 것은<br>\n서로가 아닌,<br>\n제가 만들어낸 조각난 저의 조각보.",
@@ -1440,7 +1440,7 @@ const bookData = {
             "part": "제2막: 나라는 개체의 독립과 생존"
         },
         {
-            "title": "만지작거리고 바스락거린다",
+            "title": "바스락거림",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "type": "text_only",
             "text": "현실은 우리를 공기도 물도 통하지 않는<br><br>서로가 다른 공간에 있음을 알리고,<br>\n함께 있다고 생각한 우리의 과거를 깨트립니다.<br><br>언제나 만지작거리면 바스락거리는<br>\n그 소리와 그 감촉은<br><br>그것은 얇고도 투명한<br>\n저의 포장지, 저의 조각보.</p></div>",
@@ -1557,7 +1557,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "선 긋기와 인생: 전체로 볼 때 직선이면 족하다",
+            "title": "직선이면 족하다",
             "text": "",
             "image": "static/images/gallery_batch8_frame2.jpg",
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1570,7 +1570,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "선 긋기와 인생: 전체로 볼 때 직선이면 족하다",
+            "title": "직선이면 족하다",
             "text": "인생의 목표에 너무 정조준하며 일직선으로만 가겠다고 살진 않았으면 좋겠습니다. 약간은 운을 바라며 설렁설렁, 흔들흔들 앞으로만 나아가면 됩니다. <br>일직선이라는 똑바름이 목표가 되다 보면 정말 엉뚱한 방향으로 가기도 합니다.<br><br>\n선 긋기도 가까이서 보면 흔들흔들인데, 전체로 볼 때 직선인 게 좋습니다. 조금은 흔들흔들해도 괜찮습니다. 순간순간 흔들려도 괜찮습니다. 포기만 하지 않는다면, 중심을 잡고 있다면 괜찮습니다.\n<br><br><blockquote>\n무슨 일이든 중간에 포기하지 않고 묵묵히 선을 긋다 보면, 언젠가는 자신만의 경지에 오를 수 있다고 믿습니다.<br>\n<br>\n제가 건축을 참 좋아하는 이유는, 이 일이 <strong>'사람의 깊이'</strong>와 나란히 걸어간다는 점 때문입니다. 건축은 단순히 선을 긋는 기술이 아니라, 사람과 환경, 그리고 그 관계성에 대한 깊은 이해가 있어야만 비로소 가능한 직업이니까요.<br>\n<br>\n타인을 이해하려 애쓰는 만큼 도면의 깊이도 깊어지는 일.<br>\n그래서 저는 건축이 참 좋습니다.\n</blockquote>",
             "image": null,
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1583,7 +1583,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "가장 작은 생존 신고, \"힘내자\"",
+            "title": "생존 신고",
             "text": "",
             "image": "static/images/gallery_batch8_frame3.jpg",
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1596,7 +1596,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "가장 작은 생존 신고, \"힘내자\"",
+            "title": "생존 신고",
             "text": "가끔 힘들 때가 있을 텐데, 제 스스로에게 하는 생존 신고를 하나 알려드릴까 합니다.\n'힘내자'란 말이 처음 사회생활을 할 때는 제게 하는 격려의 말로 시작되었다가, 어느 순간에는 '그래 한번 해보자'라는 응원의 말로, 지금에 와서는 '지금까지 고생했다, 수고했다'는 위로로 스스로에게 들려집니다.\n누구에게 보여줄 것도, 누구에게 들려줄 것도 아닌 나만 아는 <span class=\"highlight-text\">가장 작은 생존 신고</span>.\n힘내자. 그 한 줄로 오늘도 다시 시작합니다. 모두 힘내어요.<br><br>참 이상한 일입니다. 현재의 저는 오히려 예전보다 더 잦은 빈도로 스스로에게 '힘내자'라고 되뇌고 있습니다.<br><br>나이가 들고 경력이 쌓이면 이 자기 암시에서 조금은 자유로워질 줄 알았건만, 도대체 왜 아직도 스스로를 세뇌하듯 '힘내자'는 말을 중얼거리지 않으면 안 되는 걸까. 요즘은 유독 가슴 한구석이 무겁습니다. 그래도 어쩌겠는가. 내일의 낯선 도면을 또 마주하기 위해, 저는 오늘도 억척스럽게 힘을 내어야만 합니다.",
             "image": null,
             "part": "제2막: 나라는 개체의 독립과 생존",
@@ -1610,7 +1610,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "거짓이 진실을 만났을 때",
+            "title": "거짓과 진실",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "image": "static/images/gallery_batch9_arch2.jpg",
@@ -1623,7 +1623,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "거짓이 진실을 만났을 때",
+            "title": "거짓과 진실",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n자신이 거짓인지 모른 상태에서,<br>\n진실을 만남으로 자신의 거짓됨을 알게 된 경우<br><br>\n자신이 거짓인지 알고 있는 상태에서,<br>\n진실을 만남으로 자신의 거짓됨이 알려질 경우<br><br>\n스스로는 알겠지요.<br><br>\n자신이 살아온 삶이 후 한번 불어버리면<br>\n날아갈 만큼 가볍다는 것을\n</p>\n</div>\n\n<blockquote class=\"custom-quote\">\n하루를 조금은 무겁게 살아가야겠습니다.<br>쉽게 날아가버리는 하루의 삶이 되지 않도록.\n</blockquote>",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "image": null,
@@ -1636,7 +1636,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "뇌물은 괴물이 되어 돌아온다",
+            "title": "괴물이 된 뇌물",
             "text": "",
             "image": "static/images/gallery_batch9_arch3.jpg",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -1649,7 +1649,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "뇌물은 괴물이 되어 돌아온다",
+            "title": "괴물이 된 뇌물",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n뇌물<br><br>\n뇌물의 ㄴ을<br>\n시계방향으로 180도 돌리면<br>\n괴물이 됩니다.<br><br>\n일단, 받으면<br>\n시간의 흐름에<br>\n곧 괴물이 되어 돌아옵니다.<br><br>\n괴물이 될 것들을 조심하자\n</p>\n</div>\n\n\n\n<blockquote>LIVE를 잘못 살면 즉, LIVE를 끝에서 다시 배열하면 EVIL이 됩니다.<br>삶을 잘 살아야 하는데... 후회가 많은 삶입니다.<br>그래도, 인생 뭐 있다고 쪼잔하게 받을 바에는 안 받는 게 낫습니다. ㅎㅎ. 농담입니다.</blockquote>",
             "image": null,
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
@@ -1662,7 +1662,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "페이퍼 아키텍처의 유혹",
+            "title": "종이 위의 유혹",
             "text": "",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "image": "static/images/gallery_batch9_arch4.jpg",
@@ -1675,7 +1675,7 @@ const bookData = {
         {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "페이퍼 아키텍처의 유혹",
+            "title": "종이 위의 유혹",
             "text": "설계를 하다 보면 페이퍼 아키텍처(Paper Architecture)라는 것이 있습니다.<br>건축 설계가 시공까지 가지 않은 순수 계획안 상태를 의미하기도 하지만, 보통은 디테일이나 현실감이 턱없이 부족할 때 이 단어를 씁니다.<br><br>삶에서 말과 실체가 일치하지 않을 때, 흔히 '입만 살았다'고 하는 것과 결이 비슷합니다.<br><br>설계나 삶이나 좀 더 깊이 생각하고, 무엇이 진실에 가까운지 늘 저 자신부터 돌아보려 애를 씁니다.<br>제가 옳다고 생각하는 것, 그리고 남들도 그렇게 이해해 주리라 믿어버리는 것은 어쩌면 저만의 소설을 쓰는 것에 불과할지도 모릅니다.<br><br>제 도면이 현실의 비바람을 견뎌낼 수 있는 진짜 건축물인지, 아니면 그저 종이 위에 머무는 헛된 상상인지 끊임없이 스스로에게 묻고 경계하려 합니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "image": null,
@@ -1752,7 +1752,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "흔들리지 않기 위한 나만의 무게 중심",
+            "title": "무게 중심",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "text": "",
             "image": "static/images/gallery_frame_4.jpg",
@@ -1764,7 +1764,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "흔들리지 않기 위한 나만의 무게 중심",
+            "title": "무게 중심",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "text": "<p>흔히들 건축을 하려면 가장 먼저 '나 자신을 알아야 한다'고 말합니다. 하지만 긴 시간 현장에서 구르며 내린 저의 결론은 조금 다릅니다. '나'라는 존재는 평생을 두고 죽을 때까지 알아가야 하는 미지의 영역입니다. 현장에서 당장 건축가에게 필요한 것은 저를 찾는 사색이 아니라, <strong>'저의 역할(Role)'을 명확히 인지하고, 건축사로서 흔들리지 않는 중심을 세우는 일</strong>입니다.</p><br><br><p>우리가 말하는 '결합'의 본질을 상상해 보십시오. 서로 다른 두 물질이 각자의 본질(전자)을 기꺼이 내어주고 결합하여, 이전에 없던 완전히 새로운 가치를 만들어내는 현상입니다. 이 묵묵한 융합 과정에서 서로의 이질적인 뾰족함은 깎여나가고, 세상을 둥글게 이어주는 생명력으로 재탄생합니다.</p>",
             "image": null,
@@ -1776,7 +1776,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "흔들리지 않기 위한 나만의 무게 중심",
+            "title": "무게 중심",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "text": "<p>설계자의 역할은 숱한 갈등 속에서도 스스로의 약함을 인정하고, 그 틈새로 타인을 받아들이는 유연한 '그릇'이 되는 것입니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다.</p><br><br><p>우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원자들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 결합의 첫 번째 조건입니다.</p>",
             "image": null,
@@ -1813,7 +1813,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "title": "만들어져 가는 것",
             "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_3.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_2.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_4.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_5.jpg\" ></div>",
             "image": null,
             "part": "제3막: 사람을 알아가는 관계성",
@@ -1826,7 +1826,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "title": "만들어져 가는 것",
             "text": "",
             "image": "static/images/sketches/117.jpg",
             "part": "제3막: 사람을 알아가는 관계성",
@@ -1839,7 +1839,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "만들고 있는 것인가, 만들어져 가는 것인가",
+            "title": "만들어져 가는 것",
             "text": "우리는 건축 설계안이나 우리의 삶,<br>\n나아가 인간관계에 이르기까지, 이 모든 것을 주도적으로 '만들고 있는' 것일까요?<br>\n아니면 어떠한 흐름 속에서 '만들어져 가는' 것일까요?<br>\n<br>\n요즘 무언가를 만들며 깨닫는 것이 있습니다.<br>\n분명 처음에는 저만의 확고한 생각과 의도를 가지고 시작하지만,<br>\n결과물에 이르러서는 마치 <strong>'원래 있어야 할 모습'</strong>을 찾아가듯 아주 자연스럽게 만들어져 간다는 것입니다.<br>\n<br>\n우리가 치밀하게 세운 계획도, 인생도,<br>\n처음의 의도와 조금 다르게 흘러간다고 해서 결코 틀린 것이 아닙니다.<br>\n어쩌면 그것은 지금 주어진 상황과 환경에 가장 적합한 모습으로 '만들어져 가는' 과정일지도 모릅니다.<br>\n<br>가장 중요한 것은, 결과가 내 의도와 다르게 변화해 가더라도<br>\n그 안에서 <strong>제 마음의 중심</strong>을 결코 놓지 않는 것입니다.<br>\n<br>\n<blockquote>\n내 생각과 다르게 진행된다고 해서 틀린 것이 아닙니다.<br>\n비록 흔들거리더라도, 다시 방향을 잡고 나아가면 됩니다.<br>\n다 괜찮습니다.\n</blockquote>",
             "image": null,
             "part": "제3막: 사람을 알아가는 관계성",
@@ -2009,7 +2009,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "논리와 감정 사이, 건축가의 '싫어요'",
+            "title": "논리와 감정 사이",
             "text": "",
             "image": "static/images/gallery_frame_1.jpg",
             "partCategory": "제3막: 사람을 알아가는 관계성",
@@ -2022,7 +2022,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "논리와 감정 사이, 건축가의 '싫어요'",
+            "title": "논리와 감정 사이",
             "text": "\"이거냐, 저거냐.\"<br>세상은 늘 선택을 요구합니다. 그 질문 앞에서 저는 속으로 \"싫어요\"라고 답하곤 합니다. <br>논리가 필요한 순간에 감정으로 버티고 서는 셈입니다.<br>사업을 하시는 분들에게 건축설계란 논리와 숫자를 다루는 일로 보이겠지요.<br>반면 실제로 그 공간에 머무는 거주자에게 건축설계는 감정과 느낌을 다루는 일로 다가갈 것입니다.<br>설계를 업으로 삼은 이들 중 누군가는 이를 철저히 '직업'으로 대하지만, <br>어떤 이들에게 건축설계는 직업을 넘어 '자기 자신' 그 자체가 되기도 합니다.<br>설계를 자기 자신으로 느끼는 건축가는 스스로의 마음에 들 때까지 펜을 놓지 못합니다.<br>하루 24시간, 온통 그 생각만 하도록 훈련된 사람들입니다.",
             "image": null,
             "partCategory": "제3막: 사람을 알아가는 관계성",
@@ -2035,7 +2035,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "논리와 감정 사이, 건축가의 '싫어요'",
+            "title": "논리와 감정 사이",
             "text": "솔직히 말해, 이런 사람들은 영리하게 먹고살기 참 어렵습니다.<br>저 역시, 차가운 논리가 우선되어야 할 순간에도 감정적인 '싫어요'가 불쑥 튀어나오려 할 때가 많습니다.<br>삶의 많은 부분을 그저 둥글게 넘기며 살아왔지만, <br>설계라는 이 한 부분마저 타협하고 놓아버리면 정말로 밑바닥으로 떨어져 죽을 것만 같은 두려움 때문일지도 모릅니다.<br>그래서 가끔은 억지를 부립니다. <br>아무런 생각이 담기지 않은 텅 빈 도면을 보기가 싫습니다.<br>영혼 없이 오가는 기계적인 말들을 듣기가 싫습니다. <br>조금 미련해 보일지라도, 저는 공간에 사람의 마음과 생각이 담기기를 고집하고 싶습니다.",
             "image": null,
             "partCategory": "제3막: 사람을 알아가는 관계성",
@@ -2048,7 +2048,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "거름종이 마법이 있다",
+            "title": "거름종이 마법",
             "text": "",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
@@ -2061,7 +2061,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "거름종이 마법이 있다",
+            "title": "거름종이 마법",
             "text": "보통의 거름종이는<br>오염된 물을 거르거나,<br>커피를 내릴 때 사용하는데,<br>이 거름종이 마법은 사람에게 적용됩니다.<br><br>이 마법에 걸린 사람은 반복되는 말이나<br>같은 의미를 다르게 말하는 것을 걸러서<br>요약된 말을 합니다.<br><br>근데 <span class=\"highlight-text\">이 마법은 듣는 사람을 위한 마법이 아닌 말하는 사람을 위한 치료 마법이라고 합니다.</span><br><br>자신의 감정과 상태가 몇 마디로 정리되다 보니 좀 더 객관적으로 판단하게 되고<br>사실을 사실로 받아들이게 된다고 합니다.<br><br>말과 침묵.<br>그렇게,<br>이런 마법이 필요할 때가 있습니다.",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
@@ -2074,7 +2074,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "거름종이 마법이 있다",
+            "title": "거름종이 마법",
             "text": "<blockquote class=\"custom-quote\">\n사실 이 '거름종이 마법'은 다름 아닌 '나 자신과의 거리 두기'입니다. 끓어오르는 감정의 찌꺼기들이 걸러지고, 시간적으로도 심리적으로도 차분히 가라앉을 때까지 묵묵히 기다려주는 일입니다.<br><br>\n우리가 그토록 이야기해 온 원자의 구조를 떠올려 봅니다. 타인과 관계를 맺기 위해 외곽의 전자들이 이리저리 부딪히고 궤도를 돌며 결합을 시도하는 동안, 그 중심에 있는 '원자핵'인 당신은 굳건히 무게 중심을 잡고 있어야 합니다.<br><br>\n몰아치는 감정과 관계의 소용돌이에 휩쓸려 중심마저 이리저리 흔들리다 보면, 결합을 이루기는커녕 당신 자신마저 잃어버리기 십상입니다.<br><br>\n거름종이는 바로 그 원자핵이 중심을 잃지 않도록 돕는, 외부가 아닌 온전히 당신 스스로를 지키기 위한 마법입니다.\n</blockquote>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
@@ -2113,7 +2113,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "타인의 시선을 공유한다는 것",
+            "title": "시선의 공유",
             "text": "",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_batch8_frame1_1789097190360.jpg",
@@ -2126,7 +2126,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "타인의 시선을 공유한다는 것",
+            "title": "시선의 공유",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n타인의 기쁨을 함께할 수 있어 좋지만,<br>\n기쁨 만큼이나 아픔도 함께하게 됩니다.<br><br>\n함께한 시간과 함께할 시간 속에<br>\n서로에게 겹쳐지는 부분이 있습니다.<br><br>\n이를 두려워 홀로 있어서는 안 됩니다.<br>\n우린 나눔으로 더 안정화되어야 합니다.<br><br>\n분자의 결합처럼<br>\n그렇게 살아가고 싶습니다.\n</p>\n</div>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
@@ -2165,7 +2165,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "귀를 통해 마음으로 들어간 것이",
+            "title": "마음으로 들어간 것",
             "text": "",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": "static/images/gallery_custom_2.jpg",
@@ -2178,7 +2178,7 @@ const bookData = {
         {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 4] 미완의 일상",
-            "title": "귀를 통해 마음으로 들어간 것이",
+            "title": "마음으로 들어간 것",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<div style=\"text-align: left; line-height: 1.85; font-size: 1.1em;  margin-top: 40px; margin-bottom: 40px; display: block;\">\n가끔은, 가끔은 맘 속에 계속해서<br>\n맴돌이 할 때가 있습니다<br>\n맴돌이 하다 그냥 가슴에 맺혀<br>\n속을 썩게 합니다<br>가끔 어머니께서<br>\n\"니 속은 생속이다\" 하신 말씀이<br>\n넌 니 속 썩기 싫어<br>\n들은 말에 바로바로 반응한다는 뜻이셨구나 하고<br>\n깨닫게 됩니다<br>근데요<br>\n저도 이제는 생속을 유지할 수가 없네요<br>\n이미 들리고 느껴지는 것들이 맴돌이 하다 보니<br>\n저도 어머니 맘처럼 되나 봐요.<br>\n어쩌면 좋을까요?\n</div>\n</div>\n\n\n\n<blockquote class=\"custom-quote\">\n기다리는 시간이 많아졌습니다. 한번 어긋난 것은 천천히 기다려야 될 것 같습니다.<br>\n바로 감정을 드러내기보다는, 조금 더 기다리는 것이 서로 안정화되는 방법일 것 같습니다.\n</blockquote>\n\n<div style=\"margin-top: 48px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start;\">\n \n \n \n <span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-top: 8px; margin-bottom: 24px;\">[속이 썩어가는 고통을 견디고, 무거운 마음을 껴안으며, 이제 따뜻하게 안정화되어 가는 기다림의 시간들]</span>\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/art_wait_sketch.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/art_wait_grey.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/art_wait_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/art_wait_glow.jpg\" ></div>",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "image": null,
@@ -2216,7 +2216,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "서로 다름을 이해하는 것",
+            "title": "다름의 이해",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "text": "",
             "image": "static/images/act3_sculpture_2.jpg",
@@ -2228,7 +2228,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "서로 다름을 이해하는 것",
+            "title": "다름의 이해",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "text": "저를 비우고 나면, 그 빈자리에 누군가를 채울 수 있는 여유가 생깁니다. 이것이 결합의 두 번째 조건, 바로 <strong>\"받아들일 수 있는 여유\"</strong>입니다.<br><br>\n건축은 결국 다른 사람의 삶을 온전히 껴안는 법을 배우는 과정입니다. 제가 그은 선 하나가 누군가에게는 평생의 전 재산이 걸린 집이 되고, 누군가가 매일 아침 눈을 뜨는 방이 되기 때문입니다. 조합원들의 불안한 눈빛, 시공사의 차가운 계산기, 인허가권자의 굳은 표정… 이 모든 '상대'들을 온전히 껴안지 못하면 건축은 탁상공론에 머물고 맙니다.<br><br>상대를 받아들일 수 있는 여유란, 온전히 상대에게만 맞추며 끌려가라는 것이 아닙니다.<br>제가 가진 본질의 무게가 묵직할수록 상대를 끌어당길 수 있으며, 기꺼이 수용하려는 그 여유가 결국 사람들을 제 곁으로 모이게 만듭니다.",
             "image": null,
@@ -2240,7 +2240,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "서로 다름을 이해하는 것",
+            "title": "다름의 이해",
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "text": "건축 디자인이나 우리의 삶이나 참 비슷합니다.<br>다만, 도면 위의 디자인은 몇 번이고 지우개로 지우고 다시 그릴 수 있지만, 삶은 온전히 그 실패의 기록들을 안고 살아가야 한다는 점이 다를 뿐입니다.<br><br>\n결합은 본질적으로 '나 자신'에서부터 시작합니다.<br>스스로 단단한 기준을 세우고, 내면의 무게를 묵직하게 하거나 때로는 텅 비워냄으로써, 상황과 상대방에게 흔들리지 않아야만 비로소 안정적인 결합이 가능해집니다.",
             "image": null,
@@ -2477,7 +2477,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "화려한 조감도 뒤에 가려진 씁쓸한 현실",
+            "title": "조감도 이면",
             "image": "static/images/gallery_batch9_arch1.jpg",
             "text": "",
             "part": "제4막: 증언과 성찰",
@@ -2490,7 +2490,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "화려한 조감도 뒤에 가려진 씁쓸한 현실",
+            "title": "조감도 이면",
             "image": null,
             "text": "**책임지지 않는 도면과 수억 원의 렌더링**<br><br>\n최근 서울의 정비사업에서 설계자를 선정하는 방식을 지켜보고 있으면, 오랜 시간 도면을 그려온 쟁이로서 입맛이 씁쓸해질 때가 많습니다.<br><br>\n통상적으로 설계자 선정은 '적격 심사'와 '설계 공모' 방식으로 나뉩니다. 그런데 요즘 많은 조합들이 적격 심사 방식을 취하면서도 은근슬쩍 '설계 제안서'를 함께 요구하는 기형적인 형태를 띠고 있습니다. 제도상으로는 제안서가 심사 배점에 전혀 영향을 미치지 않는다고 못 박혀 있지만, 막상 총회에 모인 조합원들의 마음을 움직이는 것은 결국 눈앞에 펼쳐진 화려한 제안섭니다. 사람의 인지상정(人之常情)이 그러합니다.<br><br>설계 공모 방식이라면 제출된 도면의 법적 타당성과 작품성을 꼼꼼히 따져보는 전문가의 평가 절차가 수반됩니다. 하지만 적격 심사에 슬쩍 끼워 넣은 제안 방식에는 그 계획안을 검증할 전문가도 없고, 심지어 설계자가 뜬구름 잡는 계획안을 내놓아도 아무런 법적 책임을 지지 않습니다. 그저 수주를 위해 그릴 수 있는 가장 화려하고 비현실적인 그림을 그려낼 뿐입니다.",
             "part": "제4막: 증언과 성찰",
@@ -2503,7 +2503,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "화려한 조감도 뒤에 가려진 씁쓸한 현실",
+            "title": "조감도 이면",
             "image": null,
             "text": "<blockquote class=\"custom-quote\">\n저는 초·중·고교 의무 교육 과정에 단 한 학기라도 '건축' 교과가 포함되었으면 좋겠다는 생각을 하곤 합니다.<br><br>\n도면을 그리고 건물을 짓는 기술적인 교육을 말하는 것이 아닙니다. 우리가 발 딛고 사는 이 도시 공간에 무엇이 필요한지, 최소한의 사회적 공감대를 형성하기 위한 소양 교육입니다.<br><br>\n건축을 단순히 돈벌이나 재산 증식의 수단으로만 바라보는 시선을 거두고, 우리는 후대에게 물려주어야 할 '삶의 환경'이라는 사실을 모두가 인식하게 된다면, 겉만 번지르르한 무책임한 조감도에 현혹되는 일 없이 지금보다 훨씬 더 건강한 도시가 만들어지지 않을까요?\n</blockquote>",
             "part": "제4막: 증언과 성찰",
@@ -2516,7 +2516,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "계획안, 신뢰의 기록",
+            "title": "신뢰의 기록",
             "image": "static/images/gallery_batch3_sphere.jpg",
             "text": "",
             "part": "제4막: 증언과 성찰",
@@ -2528,7 +2528,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "계획안, 신뢰의 기록",
+            "title": "신뢰의 기록",
             "image": null,
             "text": "그 묵묵한 현장이라는 무대 위에서 얽히고설킨 수많은 이들의 요구사항들. 그 복잡한 욕망의 덩어리를 묵묵히 조율하여 마침내 눈에 보이는 하나의 결과물로 묶어내는 행위. 그것이 바로 건축가의 '계획안'입니다.<br><br>\n계획안이란 결코 화려하게 치장된 프레젠테이션이 아닙니다. 각자의 입장에서 바라는 것들을 조율하고 현실 가능성을 더하여 주민들 앞에 내놓는 단단한 신뢰이자, 우리가 함께 도출해 낸 <strong>'최선의 약속'</strong>입니다.<br><br>\n방금 저는 계획안이 서로를 묶는 굳건한 약속이라고 말씀드렸습니다. 하지만 부끄럽게도, 제가 몸담고 있는 정비사업의 현실에서는 이 말이 온전히 지켜지지 않을 때가 너무도 많습니다.<br><br>\n이것은 결코 누군가를 속이려 함이 아닙니다. 정비사업은 조합설립 전, 인허가 단계, 그리고 착공 시점까지 아주 긴 시간을 거칩니다. 그 기나긴 시간의 흐름 속에서 법령이 바뀌고 시장 상황이 요동칩니다. 무엇보다 정비사업의 도면은 조합원 개개인의 '분담금(재산)'과 가장 예민하게 얽혀 있습니다.",
             "part": "제4막: 증언과 성찰",
@@ -2540,7 +2540,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "계획안, 신뢰의 기록",
+            "title": "신뢰의 기록",
             "image": null,
             "text": "그렇기에 사업성을 최대한 끌어올리기 위해, 어제 굳게 맺었던 약속(도면)이라도 오늘 어쩔 수 없이 찢고 다시 그려야만 하는 뼈아픈 변경의 순간들이 필연적으로 발생합니다.<br><br>\n약속이 끊임없이 흔들리고 변하는 이 가혹한 현실 속에서, 그래도 끝까지 서로를 설득하고 도면을 완성해 내어 진짜 '공유결합'에 이르게 하는 것. 어쩌면 그것이 정비사업 설계자가 짊어져야 할 가장 무겁고 고독한 숙제일지도 모르겠습니다.<br>\n<div class=\"footnote-box\">\n<strong>* 공유결합 (건축적 의미)</strong>: 흩어진 욕망과 끊임없이 변하는 현실 속에서도, 서로의 빈자리를 내어주고 채우며 마침내 튼튼한 건축물(합의점)을 만들어내는 과정.\n</div>",
             "part": "제4막: 증언과 성찰",
@@ -2605,7 +2605,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "마음을 짓는 일: 공동체 주택 설계",
+            "title": "마음을 짓는 일",
             "text": "",
             "image": "static/images/gallery_batch9_arch1_1789097489769.jpg",
             "partCategory": "제4막: 증언과 성찰",
@@ -2618,7 +2618,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "마음을 짓는 일: 공동체 주택 설계",
+            "title": "마음을 짓는 일",
             "text": "교회에서 오랜 인연을 맺어온 형, 누나들의 공동체 주택 설계를 기획하고 상상하며 적어 내려갔던 상념입니다.<br><br>\n50대에서 70대에 이르는 분들이 뜻을 모아 한 지붕 아래 집을 짓기로 했습니다. 하지만 서로가 마음속 깊은 이야기를 사전에 충분히 나누지 못하면, 결국 입주 후에 서로 눈치를 보며 \"어? 원래 이거였나?\", \"음... 뭐, 대충 맞추며 살지 뭐\" 하며 타협하게 될까 봐 건축가로서 깊은 고민에 빠졌습니다.<br><br>공동체 주택이란 각자가 품어온 삶의 기대가 모이는 교집합이어야 합니다.<br>\n그 무거운 책임감을 풀기 위해, 저는 그분들의 일상을 하나하나 조용히 상상해 보았습니다.<br>\n음악을 좋아하는 분과는 공간이 품어낼 '소리'에 대해, 미술을 좋아하는 분과는 시선이 머무는 '보여지는 것'에 대해, 책을 좋아하는 분에게는 공간의 '무게감'을, 술 먹고 놀기 좋아하는 분에게는 '재미난 공간'을, 사진을 좋아하는 분에게는 창틀이 만들어내는 '프레임'을, 이야기를 좋아하는 분에게는 오가며 필연적이고도 우연하게 마주칠 수밖에 없는 '만남의 공간'을 찾아드리고 싶었습니다.",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
@@ -2631,7 +2631,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "마음을 짓는 일: 공동체 주택 설계",
+            "title": "마음을 짓는 일",
             "text": "건강을 챙기시는 분을 위해서는 억지로라도 걷게 만드는 동선을, 스트레스가 많은 분에게는 자신만의 '힐링 공간'을, 식물과 동물을 아끼는 분들과는 '배려와 돌봄'에 대해 이야기하면 어떨까요? 그리고 힘들 때면 머리만 쏙 내밀었다가 다시 숨을 수 있는, 각자만의 '작은 동굴'에 대해서도요.<br><br>\n이 모든 상상과 기대가 테이블 위에서 활발하게 오갔으면 좋았겠지만, 현실의 벽 앞에서 결코 쉬운 일은 아니었습니다. 비록 제가 끝까지 이 설계를 담당하지는 못했지만, 그래도 함께 모여 공간을 상상하던 그 논의의 시간들만큼은 참으로 즐거웠습니다.<br><br>상상해 봅니다.<br>\n좁은 진입로를 따라 들어서면 우뚝 솟은 형, 누나들의 집이 보입니다.<br>\n걸음을 옮길 때마다 다른 모습이 펼쳐집니다. 여기서는 이상한 형의 집이, 저기서는 요상한 누나의 집이 튀어나오는 식입니다. 부분부분 포인트를 준 벽의 색상과 다채로운 처마 지붕이 마치 \"우리 8가족이 모여 여기 산다\"고 왁자지껄하게 말해주는 듯합니다.",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
@@ -2644,7 +2644,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "마음을 짓는 일: 공동체 주택 설계",
+            "title": "마음을 짓는 일",
             "text": "밖에서 볼 때는 우뚝 솟아 거대해 보이지만, 막상 안으로 들어서면 숨겨진 아기자기한 공간들과 대비되며 색다른 모습이 나타납니다. 밖은 크고 안은 작은 그 대비가 마치 형들의 일상을 닮은 것 같아 실없는 웃음이 납니다.<br>\n1층 진입부를 향해 계단을 오르면 덩그러니 놓인 작은 건물이 나타납니다. 전면은 투명한 유리지만 출입문 하나만은 묵직하고 온기가 느껴지는 통나무 문입니다. 그 문에는 '사랑방'이라는 푯말, 그 아래엔 \"여성분들은 1층 출입구를 이용해 주세요\"라고 짓궂게 적혀 있습니다. 결국 층을 나누어 그토록 염원하던 '남성 전용 공간'을 기어코 만들어 내셨구나 싶습니다.<br>\n멀리서 보면 독립된 작은 건물처럼 보일 그 사랑방이, 동네 이웃들도 가볍게 들러 이야기를 나눌 수 있는 다정한 만남의 공간이 되기를 바라봅니다.",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
@@ -2657,7 +2657,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "마음을 짓는 일: 공동체 주택 설계",
+            "title": "마음을 짓는 일",
             "text": "<blockquote>\n그런데, 공동체 주택을 설계할 때는 역설적으로 '언젠가 헤어질 때'를 반드시 대비해야 합니다.<br>\n<br>\n초기 구성원들 개인의 뾰족한 취향에만 100% 맞추어진 집이 되면 절대 안 됩니다. 처음 모인 분들은 \"서로 모든 것을 양보하며 함께 살면 마냥 행복할 것\"이라 낭만적으로 생각하지만, 막상 부대끼며 살다 보면 현실에서는 정말 별의별 일들이 다 생기기 때문입니다.<br>\n<br>\n누군가는 떠나고, 새로운 누군가가 그 자리에 들어올 수 있어야 합니다. 그러기 위해서는 공동체 주택이라 할지라도 '개인의 철저한 독립성'이 보장되어야 하며, 주변의 일반 주거와 비교해도 손색없는 '보편적인 주거 품질'을 갖추어야만 합니다. 그래야만 사람이 바뀌어도 공간이 살아남아, 계속해서 새로운 공동체를 품어낼 수 있습니다.\n</blockquote><br><br>전혀 다른 삶의 방식을 가진 가족들이 하나의 지붕 아래 모여 살기 위해서는, 역설적으로 서로의 경계를 명확히 지켜주는 <strong>'단단한 틀(건축적 뼈대)'</strong>이 필수적이었습니다. 각 세대의 고유한 개성(색상)이 충돌하지 않도록 건축가가 몬드리안의 검정 선처럼 안정된 제도의 테두리를 그어주었을 때, 그들은 비로소 진정한 공동체 생활을 이뤄갈 수 있을 것입니다.",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
@@ -2825,7 +2825,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "100년의 기억을 덮는다는 것",
+            "title": "100년의 기억",
             "text": "",
             "image": "static/images/gallery_batch15_arch1_1789125184122.jpg",
             "part": "제4막: 증언과 성찰",
@@ -2838,7 +2838,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "100년의 기억을 덮는다는 것",
+            "title": "100년의 기억",
             "text": "**100년의 삶을 지워버릴 수는 없었다**<br><br>\n어떤 프로젝트는 도면을 그리기 전에 가슴부터 묵직해질 때가 있습니다. 대전의 어느 정비사업장이 그랬습니다.<br><br>\n그 사업지 한가운데에는 100년의 역사를 품은 낡은 시장이 숨 쉬고 있었습니다. 거미줄처럼 얽힌 골목길, 매일 아침 좌판을 까는 상인들의 주름진 손, 그리고 그 시장을 오가며 삶의 희로애락을 나눴을 사람들의 시간들. 단순히 재개발이라는 이름 아래 굴착기으로 밀어버리기엔, 그곳은 누군가의 '삶의 일부분' 그 자체였습니다.<br><br>건축이 공간을 새로 창조하는 일이라지만, 100년의 기억을 아무런 흔적 없이 지워버리는 설계자가 될 수는 없었습니다. 저는 이 시장의 공간과 기억을 현대적인 개발과 공존시킬 방법을 꾸준하게 고민했습니다.<br><br>\n그렇게 탄생한 스케치가 바로 **'상부 덮개 공원과 하부 시장'**의 입체적 결합이었습니다.<br><br>",
             "image": null,
             "part": "제4막: 증언과 성찰",
@@ -2851,7 +2851,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "100년의 기억을 덮는다는 것",
+            "title": "100년의 기억",
             "text": "<br><span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 거대한 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 거대한 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_2.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_section.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_wireframe.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_cg.jpg\" ></div>",
             "image": null,
             "part": "제4막: 증언과 성찰",
@@ -2864,7 +2864,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "100년의 기억을 덮는다는 것",
+            "title": "100년의 기억",
             "text": "<span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\">[하부 시장의 삶을 보존하고 상부를 공원으로 덮어 올린 복합 구조물 최종 렌더링]</span><br><br>\n**스케치 너머에 도사린 무거운 질문들**<br><br>\n하지만 도면에서 펜을 떼는 순간, 진짜 현실의 벽이 숨통을 조여왔습니다.<br><br>\n'상부를 공원으로 덮는 이 막대한 공사비를 조합이 기꺼이 감당할 것인가?'<br>'3년이 넘는 공사 기간 동안, 하루 벌어 하루 먹고사는 상인들은 어디로 가서 버팀해야 하는가?'<br>'현행법상 이 전례 없는 복합 구조물을 지자체가 인허가해 줄 것인가?'<br><br>종이 위에서 100년의 기억을 보존하는 선을 긋는 것은 건축가의 아름다운 낭만이었지만, 그것을 실체로 만들어내기 위해서는 낭만을 넘어선 끝없는 조율이 필요했습니다. 자본의 이윤을 설득하고, 행정의 경직성을 깨뜨리며, 무엇보다 상인들의 3년 치 버팀 대책을 함께 껴안지 않는 한 저의 스케치는 그저 위선적인 그림 쪼가리에 불과했습니다.<br><br>\n건축은 선으로 낭만을 그리는 일이 아닙니다. 100년의 기억을 덮으려면, 그 기억의 무게만큼이나 무거운 현실의 고통을 짊어질 각오가 되어 있어야 합니다. 대전의 그 낡은 시장 골목에서, 저는 도면 위에 그은 선 한 줄이 얼마나 무서운 책임감을 요구하는지 깊이 배웠습니다.",
             "image": null,
             "part": "제4막: 증언과 성찰",
@@ -2877,7 +2877,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "100년의 기억을 덮는다는 것",
+            "title": "100년의 기억",
             "text": "첨예하게 대립하는 상인들의 버팀권과 관청의 행정적 잣대 사이에서, 건축가는 어느 한쪽의 손을 들어주는 대신 모두가 공존할 수 있는 <strong>'제도적 프레임'</strong>을 설계해야 했습니다.<br><br><blockquote class=\"custom-quote\">\n<strong>\"복잡한 욕망들이 어긋나지 않고 하나의 틀 안에서 안착할 때, 도면 밖의 거친 현장에서도 마침내 공유결합은 완성됩니다.\"</strong>\n</blockquote>\n<div class=\"footnote-box\">\n<strong>* 공유결합 (사회적 의미)</strong>: 버팀권, 수익성, 행정 규제 등 서로 얽혀있는 복잡한 이해관계들이 타협점을 찾아 하나의 제도적 프레임 안에서 평화롭게 공존하는 상태를 뜻합니다.\n</div>",
             "image": null,
             "part": "제4막: 증언과 성찰",
@@ -2891,7 +2891,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "어느 심의 날의 기록",
+            "title": "심의 날",
             "text": "",
             "partCategory": "제4막: 증언과 성찰",
             "image": "static/images/gallery_batch11_sculpture_1789121872929.jpg",
@@ -2904,7 +2904,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "어느 심의 날의 기록",
+            "title": "심의 날",
             "text": "요즘 제가 주로 심의하는 것은 모아타운, 즉 소규모주택정비사업 심의를 보고 있고, 예전에는 도시형생활주택 층수 완화 건을 많이 봐왔습니다.<br><br>\n건축법은 정치법이라, 정권마다 그리고 그 시기마다 유행하는 사업 방식이 있습니다. 좀 이상하지요. 유행하는 사업 방식이 있다는 것이요.<br><br>아무튼, 도시형생활주택은 소규모 가구 수 증가 추세에 맞추어 다양한 주택 유형의 보급 및 필요에 대한 충족을 위해 만들어진 공동주택의 한 유형입니다. 도시형생활주택은 원룸형, 다세대형, 연립형 등이 있는데, 현재 그 취지에 맞게 원룸형 주택으로 공급되기보다는 다세대 형태로 주로 공급되어집니다. 즉, 기존 다세대주택 유형에서 도시형생활주택으로 옮겨간 것입니다.\n<div class=\"footnote-box\">\n<strong>* 모아타운 (소규모주택정비사업)</strong>: 대규모 재개발이 어려운 노후 저층 주거지를 블록 단위로 모아, 비교적 작은 규모로 빠르게 정비하여 양질의 주택을 공급하는 사업입니다.\n</div>\n<div class=\"footnote-box\">\n<strong>* 도시형생활주택</strong>: 1~2인 가구의 주거 안정을 위해 도입된 주택 형태로, 일반 아파트보다 건축 규제(주차장 확보, 층수 등)가 완화되어 있어 도심 내에 빠르게 지을 수 있습니다.\n</div>",
             "partCategory": "제4막: 증언과 성찰",
             "image": null,
@@ -2917,7 +2917,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "어느 심의 날의 기록",
+            "title": "심의 날",
             "text": "이러한 정책은 발코니 확장 합법화와 맞물려 확장을 고려한 전용면적이 최소화된 평면이 생산(?)되어집니다. 예전 다세대주택에서는 층수가 4층 이하로 되어있다 보니 전용면적만으로도 기본적인 거실과 방의 역할을 할 수 있었으나, 현재는 발코니 확장 전에는 실의 역할을 하지 못하는 것들이 너무 많습니다.<br><br>\n소규모 가구를 위한 정책이었으나, 다세대 개발업자의 돈벌이 수단이 된 것입니다.<br><br>\n누군가의 돈벌이 수단이 되었다는 것은 굳이 문제를 삼을 일은 아니나, 작은 대지에 더 많은 세대수를 지을 수 있게 했다면 그와 더불어 입주민을 위한 공동시설 또한 의무 설치하게 했다면 얼마나 좋았을까 싶습니다.\n<div class=\"footnote-box\">\n<strong>* 발코니 확장 합법화</strong>: 과거 불법이었던 아파트 발코니(베란다) 확장이 합법화되면서, 건설사들이 처음부터 발코니 확장을 전제로 실내 면적(전용면적)을 설계하게 된 제도를 말합니다.\n</div>",
             "partCategory": "제4막: 증언과 성찰",
             "image": null,
@@ -2930,7 +2930,7 @@ const bookData = {
         {
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 1] 현장에서의 갈등",
-            "title": "어느 심의 날의 기록",
+            "title": "심의 날",
             "text": "서로 간에 교류와 소통이 없는 현 주거 공간에서, 소통과 주민 간의 접촉점이 자연스럽게 많이 일어날 수 있는 주민 공동시설, 사랑방이나 편의 시설이 있었다면 좀 더 좋게 되었을 것 같은데 말입니다.<br><br>\n너무 가까이 있으면 자기만의 공간을 위해 더욱 닫고 사는 게 사람의 본성인데, 조금은 숫자 놀음으로 건축의 정책이 만들어지지 않았으면 좋겠습니다.<br><br>\n<blockquote>좋은 관계를 위해선 그만큼의 여유 공간이 필요합니다. 서로 잘 지낼 수 있고 소통할 수 있는 공간이 생기는 정책이었다면 얼마나 좋았을까? 다세대마다 특색이 있는 사랑방이 있다면 얼마나 좋았을까? 계단의 참이 휴게 테라스가 되면 얼마나 좋았을까? 이런 생각을 해봅니다.</blockquote><br><br><blockquote class=\"custom-quote\">\n<strong>\"우리가 법규와 효율(용적률)만을 따지며 콘크리트 벽을 높이는 동안, 어쩌면 우리 이웃과 마음을 나눌 여유 공간마저 스스로 허물어버린 것은 아닐까요?\"</strong><br><br>차가운 숫자 놀음 너머에, 사람이 숨 쉴 수 있는 따뜻한 틈이 허락되기를 바라봅니다.\n</blockquote>\n<div class=\"footnote-box\">\n<strong>* 용적률</strong>: 대지 면적(땅 크기) 대비 건물의 총넓이 비율. 쉽게 말해 '주어진 땅에 건물을 얼마나 높고 넓게 지어 경제적 이익을 낼 수 있는가'를 결정하는 핵심 척도입니다.\n</div>",
             "partCategory": "제4막: 증언과 성찰",
             "image": null,
@@ -2942,7 +2942,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "title": "쟁이의 마음",
             "text": "",
             "image": "static/images/gallery_new_4.jpg",
             "partCategory": "제4막: 증언과 성찰",
@@ -2954,7 +2954,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "title": "쟁이의 마음",
             "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n그래<br>\n그래도<br>\n저는 붓을 놓을 수가 없습니다.<br><br>\n제 속을<br>\n채운 체액이<br>\n한 방울도 남김없이 다 빠져나가고,<br>\n그곳에 또다시 피 섞인 다른 것으로 저를 채우고 비워내며,<br><br>\n저를 닮은 것을 세상에 다시 한번 내어놓습니다.<br><br>\n곧 발가벗겨진 채 이리저리 돌려보는 그들의 눈초리에<br>\n저는 부끄러워할 것이고,<br><br>\n그 기억에<br>\n밤새 뜬눈으로 지새울 것입니다.<br><br>\n미워도 다시 한번이 아닌<br>\n그래도 다시 한번 힘내어 봅니다.<br><br>\n그래<br>\n그렇지<br>\n저는 쟁이입니다.<br><br>\n이것을 놓는 순간<br>\n다시는 붓을 들 수 없을 것이라는 것을 알기에,<br><br>아련한 추억 속에서<br>\n'제가 그때 그 길을 계속 걸었다면' 하는 후회로 살아가기엔<br><br>\n아직은 이른 것 같습니다.<br><br>\n그래, 또다시 붓을 들어<br>\n저를 다듬어갑니다.\n</p>\n</div>",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
@@ -2966,7 +2966,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "쟁이의 마음: 두려움을 넘어 다시 붓을 드는 이유",
+            "title": "쟁이의 마음",
             "text": "<blockquote class=\"custom-quote\">\n아직까지도 매번 하는 설계가 또 언제나 돌아오는 현상설계(수많은 건축가가 사활을 걸고 디자인 경쟁을 펼쳐 단 하나의 당선작을 뽑는 건축 공모전)를 시작한다는 것에 몹시도 망설여지고 피하고 싶은 마음과, 발가벗겨질 것이라는 두려움이 교차합니다. 어린 후배들은 더 하겠지요. 자신의 실력과 능력이 시험받는 느낌을 받을 것이고, 어딘가로 훌쩍 숨고 싶을 것입니다.<br><br>\n그래도 한참 선배로서 말해주고 싶은 것은, 두려워하지 말라는 것입니다. 포기하지만 않는다면 잘 할 수 있습니다. 그렇게 말해 주고 싶습니다.\n</blockquote>",
             "image": null,
             "partCategory": "제4막: 증언과 성찰",
