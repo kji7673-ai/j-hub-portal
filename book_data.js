@@ -748,7 +748,7 @@ const bookData = {
         {
             "image": null,
             "title": "여는 글: 제2막: 나라는 개체의 독립과 생존",
-            "text": "사실 '나'라는 존재는 세상 모든 일의 이유이자 출발점입니다.<br>\n우리가 그토록 이야기해 온 공유결합 역시 철저한 <strong>'원자의 독립성'</strong>에서 출발합니다.<br><br>\n\n두 원자가 서로의 빈자리를 채우며 튼튼하게 결합하기 위해서는,<br>\n먼저 각 원자 자체가 고유한 물성을 지닌 독립된 개체로서 뚜렷하게 존재해야만 합니다.<br>\n스스로 붕괴하는 불안정한 원자끼리는 결코 건강한 결합을 이룰 수 없습니다.<br><br>\n\n사람도 마찬가지입니다. 타인과 진정한 관계(결합)를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단하게 서 있어야 합니다.<br><br>\n\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n부서지고 흔들리면서도 결국 고유하고 단단한 '원자'로서 자기 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.",
+            "text": "<img style=\"width: 100%; max-width: 600px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);\" src=\"static/images/gallery_custom_1.jpg\" alt=\"Gallery Image\"><br>\n사실 '나'라는 존재는 세상 모든 일의 이유이자 출발점입니다.<br>\n우리가 그토록 이야기해 온 공유결합 역시 철저한 <strong>'원자의 독립성'</strong>에서 출발합니다.<br><br>\n\n두 원자가 서로의 빈자리를 채우며 튼튼하게 결합하기 위해서는,<br>\n먼저 각 원자 자체가 고유한 물성을 지닌 독립된 개체로서 뚜렷하게 존재해야만 합니다.<br>\n스스로 붕괴하는 불안정한 원자끼리는 결코 건강한 결합을 이룰 수 없습니다.<br><br>\n\n사람도 마찬가지입니다. 타인과 진정한 관계(결합)를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단하게 서 있어야 합니다.<br><br>\n\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n부서지고 흔들리면서도 결국 고유하고 단단한 '원자'로서 자기 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
@@ -2129,31 +2129,6 @@ const bookData = {
             "isTextAfterImage": true,
             "isContinuation": true,
             "keywords": "소리가 스며들어 남긴 잔향"
-        },
-        {
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "사람을 이용할 때",
-            "text": "",
-            "image": "static/images/gallery_custom_1.jpg",
-            "partCategory": "제3막: 사람을 알아가는 관계성",
-            "type": "image_top",
-            "isImageOnly": true,
-            "isContinuation": false,
-            "keywords": "도구가 되어버린 쓸쓸한 관계"
-        },
-        {
-            "part": "제4막: 증언과 성찰",
-            "partTitle": "[Theme 2] 인간관계의 무게",
-            "title": "사람을 이용할 때",
-            "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n\"가장 효과적인 방법은<br>\n공포심이야.<br>\n그래서 종교가 지옥을 만들었지~\"<br>\n<span style=\"font-size: 0.9em; color: #777;\">- 영화 '로빈 훗' 대사 중에서</span><br><br>\n별것 없는 땅에 선을 하나 긋습니다.<br>\n처음엔 선은 선일 뿐이었는데,<br>\n그 선이 경계가 되고, 제 영역 남의 영역으로 구분되어<br>\n서로 치고받고 싸웁니다.<br><br>\n제 맘에 생기는 선들도<br>\n매일같이 지우고 지워야 합니다.\n</p>\n</div>\n\n<blockquote class=\"custom-quote\">\n권력을 잡기 위해 전쟁을 일으키고, 심지어 적에게 전쟁 자금을 은밀히 전달합니다. 그 자금 마련을 위해 공포심을 조장하여 시민들을 착취합니다.\n</blockquote>",
-            "image": null,
-            "partCategory": "제3막: 사람을 알아가는 관계성",
-            "type": "text_only",
-            "caption": null,
-            "isTextAfterImage": true,
-            "isContinuation": false,
-            "keywords": "도구가 되어버린 쓸쓸한 관계"
         },
         {
             "part": "제4막: 증언과 성찰",
