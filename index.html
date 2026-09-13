@@ -36,7 +36,7 @@
     />
 
     <script src="app.js"></script>
-  
+
     <!-- Page Transition Animations -->
     <style>
       @keyframes fadeSlideInRight {
@@ -54,48 +54,48 @@
       .slide-next { animation: fadeSlideInRight 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
       .slide-prev { animation: fadeSlideInLeft 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
       .fade-in { animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
-    
+
       /* --- Cleaned up dynamic CSS classes --- */
       .chapter-title-author {
-        font-size: 1.8em; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px; 
+        font-size: 1.8em; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px;
         line-height: 1.4; text-align: center; max-width: 600px;  width: 100%; word-break: keep-all;
       }
       .chapter-kicker {
-        display: block; font-size: 14px; font-weight: 700; color: #0066cc; opacity: 0.75; 
+        display: block; font-size: 14px; font-weight: 700; color: #0066cc; opacity: 0.75;
         margin-bottom: 6px; letter-spacing: 0.05em;
       }
       .chapter-title-major {
-        font-size: 1.5em; font-weight: 700; margin-bottom: 25px; letter-spacing: -0.4px; 
+        font-size: 1.5em; font-weight: 700; margin-bottom: 25px; letter-spacing: -0.4px;
         line-height: 1.4; text-align: left; max-width: 600px; color: #0066cc; width: 100%; word-break: keep-all;
       }
       .chapter-title-minor {
-        font-size: 1.15em; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.3px; 
+        font-size: 1.15em; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.3px;
         line-height: 1.4; text-align: left; max-width: 600px; color: #0066cc; width: 100%; word-break: keep-all;
       }
       .chapter-img-author {
-        width: 140px; height: 140px; border-radius: 50%; object-fit: cover; 
+        width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
         box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;
       }
       .chapter-img-standard {
-        max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; 
+        max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain;
         border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0;
       }
       .curation-caption {
-        font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 13px; 
-        font-weight: 500; letter-spacing: 0.05em; color: #7a7a7a; margin-top: 20px; 
+        font-family: 'SF Pro Text', system-ui, -apple-system, sans-serif; font-size: 13px;
+        font-weight: 500; letter-spacing: 0.05em; color: #7a7a7a; margin-top: 20px;
         text-align: center; word-break: keep-all; line-height: 1.5;
       }
-    
+
       /* --- UX & Typography Enhancements --- */
       .custom-quote {
-        margin-top: 32px; 
-        margin-bottom: 32px; 
-        padding: 24px; 
-        background-color: #f5f5f7; 
-        border-radius: 12px; 
-         
-        font-size: 15px; 
-        line-height: 1.6; 
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding: 24px;
+        background-color: #f5f5f7;
+        border-radius: 12px;
+
+        font-size: 15px;
+        line-height: 1.6;
         border-left: 3px solid #0066cc; /* Apple Blue border instead of dark gray */
       }
       .reading-progress-container {
@@ -124,11 +124,11 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         font-size: 14px;
         font-weight: 500;
-        
+
         padding: 0 16px;
         user-select: none;
       }
-    
+
       .cover-text-container {
         margin: auto 0 auto auto;
         padding-right: 5%;
@@ -146,7 +146,7 @@
         letter-spacing: -0.5px;
         line-height: 1.2;
         word-break: keep-all;
-        
+
         text-shadow: none;
       }
       .cover-subtitle {
@@ -154,7 +154,7 @@
         font-size: 0.95em;
         font-weight: 600;
         word-break: keep-all;
-        
+
         text-shadow: none;
       }
       .cover-kicker {
@@ -178,7 +178,7 @@
 
 
 
-  
+
     <!-- Google tag (gtag.js) Placeholder -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KTFFH04BY"></script>
     <script>
@@ -234,7 +234,7 @@
         padding: 10px; border-radius: 50%; width: 44px; height: 44px;
         font-size: 14px;
         font-weight: 500;
-        
+
         border-radius: 9999px;
         cursor: pointer;
         transition: background 0.2s;
@@ -254,7 +254,7 @@
         stroke-linecap: round;
         stroke-linejoin: round;
       }
-    
+
       .image-caption {
         font-family: "SF Pro Text", system-ui, -apple-system, sans-serif;
         font-size: 14px;
@@ -270,7 +270,7 @@
 
     <div id="toast-notification"></div>
     <div class="bottom-nav">
-      
+
       <button onclick="toggleBookmark()" id="bookmark-toggle-btn">
         <svg viewBox="0 0 24 24">
           <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
@@ -287,9 +287,9 @@
           <line x1="3" y1="12" x2="3.01" y2="12"></line>
           <line x1="3" y1="18" x2="3.01" y2="18"></line>
         </svg>
-        
+
       </button>
-      
+
     </div>
 
     <!-- Modals -->
@@ -326,7 +326,7 @@
       }
       .modal-content-box h3 {
         margin-top: 0;
-        
+
         font-size: 18px;
         margin-bottom: 12px;
       }
@@ -337,7 +337,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
         font-weight: 600;
         font-size: 14px;
       }
@@ -346,7 +346,7 @@
       }
     </style>
 
-    
+
     <!-- Resume Reading Modal -->
     <div
       id="resume-modal"
@@ -374,7 +374,7 @@
         </div>
       </div>
     </div>
-    
+
     <div
       id="bookmark-modal"
       class="bookmark-modal"
@@ -646,7 +646,7 @@
 
     <script src="book_data.js?v=20242494"></script>
     <script>
-      
+
       // --- 마스터 개선 로직 주입 ---
       function updateProgressBar() {
         const progress = document.getElementById("progress-bar");
@@ -688,7 +688,7 @@ let currentChapter = 0;
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
           if (page.isContinuation === true) return;
-          
+
           if (index > 0) {
             const prev = bookData.pages[index - 1];
             if (prev.isImageOnly && prev.title === page.title) {
@@ -706,7 +706,7 @@ let currentChapter = 0;
               currentCategory = cat;
               groupCounter++;
               const groupId = "toc-group-" + groupCounter;
-              
+
               const group = document.createElement("div");
               group.className = "toc-group";
               group.style.marginBottom = "10px";
@@ -720,19 +720,19 @@ let currentChapter = 0;
               catHeader.style.userSelect = "none";
               catHeader.style.borderBottom = "1px solid #eee";
               catHeader.style.paddingBottom = "8px";
-              
-              catHeader.innerHTML = '<span style="font-weight: 700; pointer-events: none;">' + cat + '</span>' + 
+
+              catHeader.innerHTML = '<span style="font-weight: 700; pointer-events: none;">' + cat + '</span>' +
                                     '<span class="accordion-icon" style="font-size: 12px; color: #999; pointer-events: none;">▼</span>';
-              
+
               catHeader.setAttribute("onclick", "toggleAccordion('" + groupId + "', this)");
 
               const groupContent = document.createElement("div");
               groupContent.id = groupId;
               groupContent.className = "toc-group-content";
-              groupContent.style.display = "none"; 
+              groupContent.style.display = "none";
               groupContent.style.paddingTop = "5px";
-              
-              currentGroupContent = groupContent; 
+
+              currentGroupContent = groupContent;
 
               group.appendChild(catHeader);
               group.appendChild(groupContent);
@@ -777,7 +777,7 @@ let currentChapter = 0;
 
         if (isSpecialPage) {
           // SPECIAL PAGE: Full background image with white overlay
-          
+
 
           let bgImage = page.image;
           if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242488";
@@ -821,7 +821,7 @@ let currentChapter = 0;
             // 화면 전체를 기준으로 우측 하단 정렬 (최대 가로폭 해제)
             textContainerStyle = "";
           }
-          
+
           if (page.type === "cover") {
             // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
             contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
@@ -876,11 +876,11 @@ let currentChapter = 0;
           // STANDARD PAGE: Editorial style. Solid background, inline rounded image, left-aligned text, no glow.
           const isCont = page.isContinuation === true;
           const isImgOnly = page.isImageOnly === true;
-          
+
           let topPadding = '40px';
           let bottomPadding = '100px';
           let justifyContent = 'flex-start';
-          
+
           if (isImgOnly) {
               topPadding = '5vh';
               bottomPadding = '5vh';
@@ -888,7 +888,7 @@ let currentChapter = 0;
           } else if (isCont) {
               topPadding = '40px';
           }
-          
+
           bgHTML = "";
 
           contentHTML =
@@ -908,12 +908,12 @@ let currentChapter = 0;
               page.image +
               '" alt="Chapter Image" style="' + imgStyle + '">';
 
-            
+
             // 갤러리 캡션 스타일: 1개의 유니크 키워드를 아주 넓은 자간으로 렌더링
             if (page.keywords) {
               contentHTML += '<div class="curation-caption">' + page.keywords + '</div>';
             }
-            
+
             contentHTML += "</div>";
           }
 
@@ -1020,7 +1020,7 @@ let currentChapter = 0;
 
         contentHTML +=
           '</div><div style="height: 20vh; width: 100%; flex-shrink: 0; clear: both; pointer-events: none;"></div></div></div>';
-        
+
 
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);
@@ -1047,14 +1047,14 @@ let currentChapter = 0;
         }
 
         updateControls();
-        
+
         // Deep Linking: Update URL Hash without jumping (using replaceState to avoid cluttering browser history)
         if (currentChapter > 0) {
           history.replaceState(null, null, '#page-' + (currentChapter + 1));
         } else {
           history.replaceState(null, null, window.location.pathname);
         }
-        
+
         // Google Analytics: Track each page turn as a separate page_view
         if (typeof gtag === 'function' && bookData && bookData.pages[currentChapter]) {
           const pageTitle = bookData.pages[currentChapter].title || '본문';
@@ -1104,7 +1104,7 @@ let currentChapter = 0;
         // [문제 해결 2] 스크롤 오작동 방지
         // 위아래로 40px 이상 움직였거나, 세로 이동량이 가로 이동량의 절반보다 크면 스와이프 무시
         if (Math.abs(deltaY) > 40 || Math.abs(deltaY) > Math.abs(deltaX) * 0.5) {
-          return; 
+          return;
         }
 
         // 의도적인 가로 스와이프 감도 개선 (너무 예민하지 않게 60px 이상 밀었을 때 작동)
@@ -1158,7 +1158,7 @@ let currentChapter = 0;
             const pageTitle = bookData.pages[parsedChap].title || "본문";
             document.getElementById('resume-text').innerHTML = `마지막으로 읽으신 <strong>[${parsedChap + 1}p. ${pageTitle}]</strong>부터<br>이어서 보시겠습니까?`;
             document.getElementById('resume-modal').style.display = 'flex';
-            
+
             // Render page 1 in background just in case
             currentChapter = 0;
             renderCurrentChapter('fade');
@@ -1306,13 +1306,13 @@ let currentChapter = 0;
         document.getElementById("bookmark-modal").style.display = "flex";
       }
 
-      
+
       function startFromBeginning() {
         document.getElementById('resume-modal').style.display = 'none';
         currentChapter = 0;
         renderCurrentChapter('fade');
       }
-      
+
       function resumeReading() {
         document.getElementById('resume-modal').style.display = 'none';
         if (typeof window.pendingResumeChapter !== 'undefined') {
@@ -1341,10 +1341,10 @@ let currentChapter = 0;
         window.location.href = mailtoLink;
         document.getElementById("feedback-modal").style.display = "none";
       }
-    
-      
 
-    
+
+
+
       // Keyboard Navigation Support (Maximum Compatibility Mode)
       document.addEventListener("keydown", function(e) {
         // 목차(TOC)가 열려있을 때는 방지
@@ -1369,16 +1369,16 @@ let currentChapter = 0;
         }
       });
 
-    
+
       // Reading Mode UI Toggle
       document.addEventListener("click", function(e) {
         // 메뉴바, 목차, 모달, 버튼, 링크 등을 클릭했을 때는 토글하지 않음
         if (
-          e.target.closest('.bottom-nav') || 
-          e.target.closest('.toc-modal') || 
-          e.target.closest('.bookmark-modal') || 
-          e.target.closest('.feedback-modal') || 
-          e.target.closest('button') || 
+          e.target.closest('.bottom-nav') ||
+          e.target.closest('.toc-modal') ||
+          e.target.closest('.bookmark-modal') ||
+          e.target.closest('.feedback-modal') ||
+          e.target.closest('button') ||
           e.target.closest('a')
         ) {
           return;
@@ -1389,7 +1389,7 @@ let currentChapter = 0;
         // 작가님 요청: '정확히 가운데 영역'으로 타겟을 매우 좁힘
         let screenWidth = window.innerWidth;
         let screenHeight = window.innerHeight;
-        
+
         // 가로 30%~70%, 세로 40%~60% (정중앙 근방)
         let isCenterX = e.clientX > screenWidth * 0.3 && e.clientX < screenWidth * 0.7;
         let isCenterY = e.clientY > screenHeight * 0.4 && e.clientY < screenHeight * 0.6;
