@@ -918,7 +918,18 @@ let currentChapter = 0;
           }
 
           // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
-          if (page.title && !isCont && !isImgOnly) {
+          let shouldRenderTitle = false;
+          if (page.title && !isImgOnly) {
+            if (!isCont) {
+                shouldRenderTitle = true;
+            } else if (currentChapter > 0) {
+                let prev = bookData.pages[currentChapter - 1];
+                if (prev.title === page.title && prev.isImageOnly && !prev.isContinuation) {
+                    shouldRenderTitle = true;
+                }
+            }
+          }
+          if (shouldRenderTitle) {
             let rawTitle = page.title.replace(/^여는\s*글\s*:\s*/i, '');
             let isAuthorProfile = page.type === "author_profile";
             let kicker = "";
