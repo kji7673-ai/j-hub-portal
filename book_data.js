@@ -631,7 +631,7 @@ const bookData = {
         {
             "image": null,
             "title": "여는 글: 제2막: 나라는 개체의 독립과 생존",
-            "text": "<img style=\"width: 100%; max-width: 600px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);\" src=\"static/images/gallery_custom_1.jpg\" alt=\"Gallery Image\"><br>\n사실 '나'라는 존재는 세상 모든 일의 이유이자 출발점입니다.<br>\n우리가 그토록 이야기해 온 공유결합 역시 철저한 <strong>'원자의 독립성'</strong>에서 출발합니다.<br><br>\n\n두 원자가 서로의 빈자리를 채우며 튼튼하게 결합하기 위해서는,<br>\n먼저 각 원자 자체가 고유한 물성을 지닌 독립된 개체로서 뚜렷하게 존재해야만 합니다.<br>\n스스로 붕괴하는 불안정한 원자끼리는 결코 건강한 결합을 이룰 수 없습니다.<br><br>\n\n사람도 마찬가지입니다. 타인과 진정한 관계(결합)를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단하게 서 있어야 합니다.<br><br>\n\n제2막은 건축가라는 한 개인이 도면 위에서, 그리고 이 팍팍한 도시에서<br>\n부서지고 흔들리면서도 결국 고유하고 단단한 '원자'로서 자기 무게 중심을 다시 세워온<br>\n치열한 생존과 독립의 기록입니다.",
+            "text": "<img style=\"width: 100%; max-width: 600px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);\" src=\"static/images/gallery_custom_1.jpg\" alt=\"Gallery Image\"><br>\n사실 '나'라는 존재는 세상 모든 일의 이유이자 출발점입니다.<br>\n우리가 그토록 이야기해 온 공유결합 역시 철저한 <strong>'원자의 독립성'</strong>에서 출발합니다.<br><br>\n\n두 원자가 서로의 빈자리를 채우며 튼튼하게 결합하기 위해서는,<br>\n먼저 각 원자 자체가 고유한 물성을 지닌 독립된 개체로서 뚜렷하게 존재해야만 합니다.<br>\n스스로 붕괴하는 불안정한 원자끼리는 결코 건강한 결합을 이룰 수 없습니다.<br><br>\n\n사람도 마찬가지입니다. 타인과 진정한 관계(결합)를 맺기 전에,<br>\n먼저 '나'라는 개체가 흔들리지 않을 만큼 단단하게 서 있어야 합니다.<br><br>\n\n제2막은 단단한 원자가 되기 위한 저의 과거의 기록이며,<br>\n그 기록들에 대한 현재의 생각을 담아 보았습니다.",
             "partCategory": "제2막: 나라는 개체의 독립과 생존",
             "caption": null,
             "isTextAfterImage": true,
