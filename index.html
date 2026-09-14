@@ -644,7 +644,7 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=20242518"></script>
+    <script src="book_data.js?v=20242519"></script>
     <script>
 
       // --- 마스터 개선 로직 주입 ---
@@ -920,14 +920,7 @@ let currentChapter = 0;
           // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
           let shouldRenderTitle = false;
           if (page.title && !isImgOnly) {
-            if (!isCont) {
-                shouldRenderTitle = true;
-            } else if (currentChapter > 0) {
-                let prev = bookData.pages[currentChapter - 1];
-                if (prev.title === page.title && prev.isImageOnly && !prev.isContinuation) {
-                    shouldRenderTitle = true;
-                }
-            }
+              shouldRenderTitle = true;
           }
           if (shouldRenderTitle) {
             let rawTitle = page.title.replace(/^여는\s*글\s*:\s*/i, '');
