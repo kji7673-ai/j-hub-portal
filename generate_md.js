@@ -12,7 +12,7 @@ for (let i = 0; i < data.pages.length; i++) {
         md += `## [Page ${i + 1}] ${page.title || '제목 없음'}\n\n`;
     }
     
-    // Output image if exists
+    // Output page.image if exists
     if (page.image && page.image !== "") {
         let absPath = "/Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼/" + page.image;
         md += `![${page.title || '이미지'}](${absPath})\n\n`;
@@ -23,8 +23,23 @@ for (let i = 0; i < data.pages.length; i++) {
         continue;
     }
     
-    // Clean up HTML tags for markdown reading
     let text = page.text || "";
+    
+    // Convert <img ... src="path" ... alt="alt" ... > to markdown ![alt](absolute_path)
+    text = text.replace(/<img[^>]+src="(static\/images\/[^"]+)"[^>]*alt="([^"]*)"[^>]*>/gi, (match, src, alt) => {
+        let absPath = "/Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼/" + src;
+        return `\n![${alt}](${absPath})\n`;
+    });
+    // In case alt is missing or in different order
+    text = text.replace(/<img[^>]+src="(static\/images\/[^"]+)"[^>]*>/gi, (match, src) => {
+        // if we didn't catch it with the alt regex above
+        if (match.includes("![") === false) {
+            let absPath = "/Users/joongilkim/Desktop/03_업무자료/J_Journal_프로젝트/웹_매뉴얼_플랫폼/" + src;
+            return `\n![이미지](${absPath})\n`;
+        }
+        return match;
+    });
+
     
     // Clean SVG and divs
     text = text.replace(/<svg.*?>[\s\S]*?<\/svg>/gi, '');
@@ -54,4 +69,4 @@ for (let i = 0; i < data.pages.length; i++) {
 }
 
 fs.writeFileSync('full_manuscript_latest.md', md);
-console.log("Successfully generated full_manuscript_latest.md with images!");
+console.log("Successfully generated markdown with converted img tags!");
