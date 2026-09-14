@@ -1,4 +1,4 @@
-const bookData = {
+{
     "pages": [
         {
             "title": "도면 위의 공유결합",
@@ -112,7 +112,7 @@ const bookData = {
         {
             "image": null,
             "title": "여는 글: 제1막: 공유결합 디자인 방법론",
-            "text": "공유결합은 원자들이 각자의 전자를 내어놓아 함께 공유하며, 홀로일 때보다 더 안정적인 상태를 이루는 화학적 현상입니다.<br><br>저는 이 원리가 건축과 닮았다고 생각했습니다.<br>빛과 공간, 형태와 흐름, 그리고 사람의 의도가 서로의 빈자리를 채우며 하나의 건축이 되는 과정.<br>그것이 제가 도면 위에 '공유결합'이라는 철학을 새겨 넣은 이유입니다.<br><br>제1막에서는 이 결합의 원리를 도면과 현장, 공간과 디테일 속에 녹아든 디자인 방법론으로 어떻게 풀어냈는지 이야기합니다.<br><br>하지만 그 본격적인 건축 이야기에 앞서, 제가 왜 하필 '공유결합'을 제 설계의 중심 메타포로 삼게 되었는지 그 기원부터 고백해야 할 것 같습니다.<br>저의 디자인 방법론은 대단한 건축 이론서가 아니라, 지극히 사소하고 개인적인 세 번의 기억에서 출발했기 때문입니다.",
+            "text": "공유결합은 원자들이 각자의 전자를 내어놓아 함께 공유하며, 홀로일 때보다 더 안정적인 상태를 이루는 화학적 현상입니다.<br><br>무기물들이 수많은 주고받음을 통해 이토록 단단한 결합을 이루듯, '나'라는 개체 역시 사람과의 수많은 주고받음 속에서 세상과 연결되어 '우리'라는 거대한 관계를 만듭니다. '관계'라는 두 글자 안에는 참 많은 것이 담겨 있습니다. 나라는 존재, 당신이라는 존재, 그리고 당신이 내게 주는 소중함.<br><br>우리 민족은 태어난 이유가 세상을 '널리 이롭게 하기 위함(홍익인간)'이라고 배웠습니다. 어쩌면 우리는 관계 속에서 비로소 나라는 존재를 느끼고, 그 존재가 다시 관계 속에서 우리 모두를 이롭게 한다는 사실이 저는 참 좋습니다.",
             "partCategory": "제1막: 공유결합 디자인 방법론",
             "caption": null,
             "isTextAfterImage": true,
@@ -120,6 +120,19 @@ const bookData = {
             "keywords": "서로 스며들어 완성되는 공간",
             "type": "text_only",
             "part": "제1막: 공유결합 디자인 방법론"
+        },
+        {
+            "type": "text_only",
+            "title": "여는 글: 제1막: 공유결합 디자인 방법론",
+            "text": "저는 이 철학이 제가 주로 설계하는 공동주택, 즉 아파트의 건축과 완벽히 닿아 있다고 생각했습니다. 아파트 단지 안에 내어주는 산책길과 외부 공간은 단순한 빈 땅이 아니라, 이 널리 이롭게 하는 '관계'를 맺게 해주는 따뜻한 무대입니다. 정성껏 빚어낸 이 아름다운 공간 위에서 앞으로 얼마나 많은 사람들의 만남과 접촉, 그리고 결합이 이루어질까요?<br><br>빛과 공간, 형태와 사람의 발걸음이 서로의 빈자리를 채우며 관계를 맺는 과정. 그것이 제가 도면 위에 '공유결합'이라는 철학을 새겨 넣고 묵묵히 선을 긋는 이유입니다.<br><br>제1막에서는 이 결합의 원리를 도면과 현장, 공간과 디테일 속에 녹아든 디자인 방법론으로 어떻게 풀어냈는지 이야기합니다. 하지만 본격적인 건축 이야기에 앞서, 제가 왜 하필 '공유결합'을 제 설계의 중심 메타포로 삼게 되었는지 그 기원부터 고백하려 합니다.<br><br>저의 디자인 방법론은 대단한 건축 이론서가 아니라, 지극히 사소하고 개인적인 '세 번의 기억'에서 출발했기 때문입니다.",
+            "part": "제1막: 공유결합 디자인 방법론",
+            "partTitle": "여는 글: 제1막: 공유결합 디자인 방법론",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "image": null,
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": true,
+            "keywords": "아파트와 산책길의 공유결합"
         },
         {
             "type": "image_top",
@@ -210,6 +223,19 @@ const bookData = {
             "isTextAfterImage": false
         },
         {
+            "type": "text_only",
+            "title": "스스로 빛나는 별",
+            "text": "<div style=\"padding: 40px 20px; text-align: left; line-height: 2.0; font-family: 'SF Pro Text', sans-serif;\">\n    <p style=\"margin-bottom: 24px;\">관계의 중요성은<br>사람과 사람 사이에서도 마찬가지입니다.</p>\n    <p style=\"margin-bottom: 24px;\">먼저, 스스로를 알아가세요.<br>당신이 홀로 빛날 수 있을 때,<br>그 빛을 보고 또 다른 별들이 찾아올 것입니다.</p>\n    <p style=\"margin-bottom: 24px;\">어쩌면 우리의 관계는 밤하늘의 별과 같아서,<br>먼저 홀로 빛날 수 있어야만 합니다.</p>\n    <p style=\"margin-bottom: 24px;\">빛난다는 것을 오해하지 마세요.<br>대단한 무언가가 되라는 것이 아닙니다.<br>당신 스스로가 얼마나 소중한 존재인지 깨닫는 순간,<br>비로소 빛이 나기 시작한답니다.</p>\n    <p style=\"margin-bottom: 24px; font-weight: 600; color: #0066cc;\">참 소중한 사람입니다, 당신은.</p>\n    <p style=\"margin-bottom: 24px;\">혹시 그 소중한 당신을 몰라보고<br>함부로 대하는 만남이 있다면, 그것은 관계가 아닙니다.<br>피하세요.<br>그래야만 합니다.</p>\n    <p style=\"margin-bottom: 24px;\">진정한 관계란, 상대를 더 빛나게 해주는 것입니다.<br>나의 넉넉한 빛으로 상대를 비추어 주는 것입니다.</p>\n    <p>우리의 결합은, 그래야만 합니다.</p>\n</div>",
+            "part": "제1막: 공유결합 디자인 방법론",
+            "partTitle": "스스로 빛나는 별",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "image": null,
+            "caption": null,
+            "isTextAfterImage": true,
+            "isContinuation": false,
+            "keywords": "스스로 빛나는 별"
+        },
+        {
             "type": "image_top",
             "title": "공유결합의 세 가지 원칙",
             "partCategory": "제1막: 공유결합 디자인 방법론",
@@ -261,7 +287,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "분자",
-            "text": "<strong>공유결합(Covalent Bond): 진정한 융합의 조건</strong><br><br>건축을 이야기하다 말고 웬 화학 용어인가 싶으실 겁니다.<br><br>하지만 제가 이 단어에 꽂혔던 이유는 분명합니다. 억지로 한 그릇에 담아도 결국 물과 기름처럼 둥둥 나뉘고 마는 겉핥기식 만남이 아니라, 서로의 것을 기꺼이 내어주고 받으며 가장 '안정화'된 상태에 도달하는 그 과정과 결과에 반했기 때문입니다.<br><br>문득 이런 생각도 듭니다. 인식 체계가 없는 화학의 세계에서는 전자를 주고받는 것만으로 저절로 안정을 찾지만, 복잡한 욕망이 얽힌 인간 세상에서의 '안정화'는 어쩌면 동양의 <strong>'도(道)'</strong>를 닦는 과정과 같지 않을까 하고요.<br><br>공간과 디자인 앞에서는 나를 비워 자연과 사람을 들이는 <strong>비움과 채움</strong>이 되고,<br>복잡한 관계 앞에서는 물처럼 유연하게 스며들면서도 흔들림 없는 중심을 잡는 <strong>상선약수(上善若水)와 중용</strong>이 되며,<br>엉킨 실타래 같은 현장의 시간 앞에서는 억지 부리지 않고 순리대로 풀리길 기다릴 줄 아는 <strong>무위(無爲)</strong>가 되는 것.<br><br>결국 제가 도면 위에서, 그리고 현장에서 그토록 갈증을 느끼며 찾아 헤매던 '단단하고 안정된 관계'란, 끊임없이 내어주고 비워내며 상황에 맞춰 가장 자연스러운 조화를 찾아가는 치열하고도 경이로운 결속이었습니다.\n<div style=\"text-align: left; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"var(--ink, #1d1d1f)\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 나누며 가장 안정화된 상태 도달</text> </svg> </div>",
+            "text": "<strong>공유결합(Covalent Bond): 진정한 융합의 조건</strong><br><br>건축을 이야기하다 말고 웬 화학 용어인가 싶으실 겁니다.<br><br>하지만 제가 이 단어에 꽂혔던 이유는 분명합니다. 억지로 한 그릇에 담아도 결국 물과 기름처럼 둥둥 나뉘고 마는 겉핥기식 만남이 아니라, 서로의 것을 기꺼이 내어주고 받으며 가장 '안정화'된 상태에 도달하는 그 과정과 결과에 반했기 때문입니다.<br><br>문득 이런 생각도 듭니다. 전자를 주고받는 것만으로 안정을 찾는 화학의 세계와 달리, 복잡한 욕망이 얽힌 인간 세상에서의 '안정화'는 어쩌면 끝없이 마음을 다듬어가는 과정과 같지 않을까 하고요.<br><br>공간 앞에서는 내 고집을 비워내어 그 자리에 사람과 자연을 채워 넣고,<br>복잡한 관계 앞에서는 물처럼 부드럽게 스며들면서도 흔들리지 않는 단단한 중심을 붙잡으며,<br>엉킨 실타래 같은 현장의 시간 앞에서는 억지 부리지 않고 순리대로 풀리기를 묵묵히 기다릴 줄 아는 것.<br><br>결국 제가 도면 위에서, 그리고 현장에서 그토록 찾아 헤매던 '단단하고 안정된 관계'란, 끊임없이 나를 비워내고 상황에 맞춰 자연스러운 조화를 찾아가는 치열하고도 경이로운 결속이었습니다.\n<div style=\"text-align: left; margin: 40px 0; padding: 20px; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);\"> <svg width=\"100%\" style=\"max-width: 600px;\" viewBox=\"0 0 600 200\" xmlns=\"http://www.w3.org/2000/svg\"> <!-- Mixture --> <text x=\"150\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"var(--ink, #1d1d1f)\" text-anchor=\"middle\" font-weight=\"600\">단순한 혼합 (Mixture)</text> <circle cx=\"110\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">건축가</text> <circle cx=\"190\" cy=\"100\" r=\"40\" fill=\"#f5f5f7\" stroke=\"#cccccc\" stroke-width=\"2\"/> <text x=\"190\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#7a7a7a\" text-anchor=\"middle\">현장/사람</text> <text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#7a7a7a\" text-anchor=\"middle\">서로 분리되어 평행선을 달림</text> <!-- Divider --> <line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"180\" stroke=\"#e0e0e0\" stroke-width=\"1\" stroke-dasharray=\"4 4\" /> <!-- Covalent Bond --> <text x=\"450\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0066cc\" text-anchor=\"middle\" font-weight=\"600\">공유결합 (Covalent Bond)</text> <circle cx=\"420\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">건축가</text> <circle cx=\"480\" cy=\"100\" r=\"50\" fill=\"rgba(0,102,204,0.05)\" stroke=\"#0066cc\" stroke-width=\"2\"/> <text x=\"510\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0066cc\" text-anchor=\"middle\">현장/사람</text> <!-- Shared Area (Intersection math approx) --> <path d=\"M 450,57 A 50,50 0 0,0 450,143 A 50,50 0 0,0 450,57\" fill=\"#0066cc\" opacity=\"0.8\"/> <text x=\"450\" y=\"104\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#ffffff\" text-anchor=\"middle\" font-weight=\"600\">공유</text> <text x=\"450\" y=\"170\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#0066cc\" text-anchor=\"middle\">본질(전자)을 나누며 가장 안정화된 상태 도달</text> </svg> </div>",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "시스템 너머의 본질",
@@ -314,7 +340,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "단단한 개성",
-            "text": "<blockquote class=\"editorial-quote\">\"평면 계획을 잘한다는 것은 혼자 100점을 맞는 게 아니다. 70~80점 정도를 받더라도 누구나 공감하고 좋아할 만한 계획이 되어야 하며, 누군가 함부로 수정하지 못할 정도로 관계의 긴밀성이 짜여 있어야 한다.\"<br>당시 소장님께서 해주셨던 그 뼈 있는 잔소리는, 오늘날 제가 '공유결합'이라는 철학으로 설계를 하고 디자인을 하는 데 가장 든든한 밑거름이 되었습니다.<br><br>각 요소의 본질을 깊이 이해하고, 떼어낼 수 없는 접점을 찾아내 결합시키는 것. 그렇게 탄생한 결과물은 설계자 혼자 뽐내는 100점짜리 작품도, 의뢰인 혼자 만든 건물도 아닌 '완전히 새로운 제3의 공간(물)'이 됩니다.",
+            "text": "<blockquote class=\"editorial-quote\">\"평면 계획을 잘한다는 것은 혼자 100점을 맞는 게 아니다. 70~80점 정도를 받더라도 누구나 공감하고 좋아할 만한 계획이 되어야 하며, 누군가 함부로 수정하지 못할 정도로 관계의 긴밀성이 짜여 있어야 한다.\"<br>당시 소장님께서 해주셨던 그 진심 어린 조언은, 오늘날 제가 '공유결합'이라는 철학으로 설계를 하고 디자인을 하는 데 가장 든든한 밑거름이 되었습니다.<br><br>각 요소의 본질을 깊이 이해하고, 떼어낼 수 없는 접점을 찾아내 결합시키는 것. 그렇게 탄생한 결과물은 설계자 혼자 뽐내는 100점짜리 작품도, 의뢰인 혼자 만든 건물도 아닌 '완전히 새로운 제3의 공간(물)'이 됩니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "시스템 너머의 본질",
@@ -363,7 +389,7 @@ const bookData = {
         },
         {
             "type": "image_top",
-            "title": "순응(順應)",
+            "title": "자연스러움, 그리고 스며듦",
             "text": "",
             "image": "static/images/gallery_batch11_sculpture.jpg",
             "part": "제1막: 공유결합 디자인 방법론",
@@ -376,7 +402,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "순응(順應)",
+            "title": "자연스러움, 그리고 스며듦",
             "text": "제가 도면을 마주할 때 가장 먼저 떠올리는 첫 번째 단어는 바로 <strong>'순응(順應)'</strong>입니다.<br><br>\n무언가와 단단히 공유결합을 이루기 위해서는, 내가 딛고 설 땅의 본래 모습을 존중하는 것이 최우선입니다. 무작정 반듯하고 멋진 선부터 긋는 것이 아니라, 그 땅이 가진 고유한 흐름을 가만히 읽어내는 것에서 진짜 설계가 시작됩니다.<br><br>\n흔히 서양(유럽)의 건축물들을 보면 대체로 강력한 중심축을 둔 기하학적 좌우 대칭을 선호합니다. 하지만 우리나라처럼 산의 능선과 물길이 유기적으로 굽이치는 땅에서, 그러한 강압적인 대칭을 고집하는 것은 자연에 대한 폭력이자 심각한 부조화를 낳습니다.<br><br>\n우리나라의 오래된 산사를 거닐어 보면 이 차이가 명확해집니다. 길에서 볼 때는 바르게 서 있는 듯하다가도, 조금 더 걸어가 뒤돌아보면 지형의 등고선에 맞춰 살짝 틀어져 앉아 있습니다. 이미 정해진 완벽한 형태를 땅에 강요하는 것이 아니라, 주변을 감안하여 '당연히 있어야 할 자리'에 자연스럽게 내려앉는 조화로움.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -389,7 +415,7 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "순응(順應)",
+            "title": "자연스러움, 그리고 스며듦",
             "text": "제 대학원 논문의 주제 역시 '건축에 있어서 정형(正形, 반듯한 형태)의 의미 고찰'이었습니다. 과연 도면 위에서 모양새만 반듯한 사각형인 것이 진짜 정형일까요, 아니면 건물이 앉은 땅의 자연스러운 흐름과 하나가 되는 것이 진짜 정형일까요?",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
@@ -402,8 +428,8 @@ const bookData = {
         },
         {
             "type": "text_only",
-            "title": "순응(順應)",
-            "text": "이 오랜 질문에 대해 저만의 해답을 찾은 뒤로, 저는 후배들과 도면을 펼칠 때면 자주 이렇게 당부하곤 합니다.<br><br>\n<strong>\"고칠 수 있는 것과 고칠 수 없는 것을 먼저 철저히 구분하라. 그리고 고칠 수 없는 거대한 자연의 틀에 온전히 기대어 디자인하라.\"</strong><br><br>\n하늘에서 내려다보는 2차원의 평면 도면 위에서는, 우리 건물의 배치가 다소 삐뚤빼뚤하고 반듯한 사각형(정형)이 아닌 것처럼 보여 불안할 수 있습니다.<br>\n하지만 고칠 수 없는 거대한 틀, 즉 산세와 지형의 흐름에 순응하여 건물을 앉히게 되면, 실제 완공된 후 그 공간을 거니는 사람에게는 그것이 가장 편안하고 완벽한 질서로 다가옵니다. 자연의 호흡을 거스르는 불편함이 없기 때문입니다.<br><br>\n이것이 바로 주변 환경을 훼손하지 않고 자연에 기대어 살았던 우리 전통 건축의 지혜이자, 제 설계가 가장 먼저 맺는 <strong>'땅과의 공유결합'</strong>입니다.",
+            "title": "자연스러움, 그리고 스며듦",
+            "text": "이 오랜 질문에 대해 저만의 해답을 찾은 뒤로, 저는 후배들과 도면을 펼칠 때면 자주 이렇게 당부하곤 합니다.<br><br>\n<strong>\"고칠 수 있는 것과 고칠 수 없는 것을 먼저 철저히 구분하라. 그리고 기댈 수 있는 것이 무엇인지 파악하여, 디자인하라.\"</strong><br><br>\n하늘에서 내려다보는 2차원의 평면 도면 위에서는, 우리 건물의 배치가 다소 삐뚤빼뚤하고 반듯한 사각형(정형)이 아닌 것처럼 보여 불안할 수 있습니다.<br>\n하지만 바꿀 수 없는 바탕, 즉 산세와 지형의 흐름에 거스르지 않고 자연스럽게 스며들듯 건물을 앉히게 되면, 실제 완공된 후 그 공간을 거니는 사람에게는 그것이 가장 편안하고 완벽한 질서로 다가옵니다. 자연의 호흡을 거스르는 불편함이 없기 때문입니다.<br><br>\n이것이 바로 대지를 억누르지 않고 주변 풍경 속으로 조용히 녹아들었던 우리 전통 건축의 지혜이자, 제 설계가 가장 먼저 맺는 <strong>'땅과의 공유결합'</strong>입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "[Theme 1] 현장에서의 갈등",
@@ -456,7 +482,7 @@ const bookData = {
             "type": "text_only",
             "title": "귀 기울임",
             "image": null,
-            "text": "품어주기와 거리 두기. 참 말은 쉽지만, 이를 거대한 아파트 단지 도면 위에서 실제로 구현해 내는 것은 늘 뼈를 깎는 고민의 연속입니다.<br><br>우리가 매일 사는 아파트를 한번 생각해 볼까요? 세대 간의 프라이버시는 무엇보다 중요합니다. 하지만 너무 닫혀만 있으면 삭막해지니, 이웃과 자연스럽게 눈인사를 나눌 수 있는 산책로나 커뮤니티 공간도 꼭 필요하죠.<br><br>보통은 이를 단순히 '거주자의 편의성'이라고 부르지만, 설계자인 제 시선은 조금 다릅니다.<br>각 세대에는 완벽한 프라이버시(거리 두기)를 보장하면서도, 그 떨어져 있는 개체들을 '우리 단지'라는 하나의 끈으로 다정하게 묶어내는 결합 요소들을 찾아내는 것. 이것이 단지를 안정화시키고 진짜 가치를 만들어내는 과정입니다.",
+            "text": "품어주기와 거리 두기. 참 말은 쉽지만, 이를 거대한 아파트 단지 도면 위에서 실제로 구현해 내는 것은 늘 치열한 고민의 연속입니다.<br><br>우리가 매일 사는 아파트를 한번 생각해 볼까요? 세대 간의 프라이버시는 무엇보다 중요합니다. 하지만 너무 닫혀만 있으면 삭막해지니, 이웃과 자연스럽게 눈인사를 나눌 수 있는 산책로나 커뮤니티 공간도 꼭 필요하죠.<br><br>보통은 이를 단순히 '거주자의 편의성'이라고 부르지만, 설계자인 제 시선은 조금 다릅니다.<br>각 세대에는 완벽한 프라이버시(거리 두기)를 보장하면서도, 그 떨어져 있는 개체들을 '우리 단지'라는 하나의 끈으로 다정하게 묶어내는 결합 요소들을 찾아내는 것. 이것이 단지를 안정화시키고 진짜 가치를 만들어내는 과정입니다.",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "시스템 너머의 본질",
             "partCategory": "제1막: 공유결합 디자인 방법론",
@@ -520,7 +546,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "무질서를 담는 틀",
-            "text": "사실 도면 위에서 '포용력 있는 바탕'을 그리는 일은 차라리 쉽습니다.<br><br>하지만 이를 저의 인간관계나 회사 조직에 적용하는 것은 참으로 뼈아프고 어려운 일입니다. 나이를 먹고 연륜이 쌓여도, 뒤로 한 걸음 물러나 묵묵한 배경이 되어주기보다는 자꾸만 내가 나서서 돋보이고 싶은 것이 사람의 솔직한 본성이니까요.<br><br>그럼에도 불구하고 나이가 든다는 것은, 후배들에게 '네가 나보다 낫다', '참 잘했다'라며 진심으로 박수 쳐 주고, 웬만한 허물은 눈 한 번 꾹 감고 넓은 그릇으로 품어내는 일일 것입니다.<br><br>부끄럽게도 저는 아직 이 부분에서 한참 부족합니다. 기꺼이 텅 빈 바탕을 내어주는 일, 그것은 제가 매일 현장과 사무실에서 부딪히며 가장 치열하게 훈련해야 할 평생의 숙제입니다.",
+            "text": "사실 도면 위에서 '포용력 있는 바탕'을 그리는 일은 차라리 쉽습니다.<br><br>하지만 이를 저의 인간관계나 회사 조직에 적용하는 것은 참으로 고단하고 어려운 일입니다. 나이를 먹고 연륜이 쌓여도, 뒤로 한 걸음 물러나 묵묵한 배경이 되어주기보다는 자꾸만 내가 나서서 돋보이고 싶은 것이 사람의 솔직한 본성이니까요.<br><br>그럼에도 불구하고 나이가 든다는 것은, 후배들에게 '네가 나보다 낫다', '참 잘했다'라며 진심으로 박수 쳐 주고, 웬만한 허물은 눈 한 번 꾹 감고 넓은 그릇으로 품어내는 일일 것입니다.<br><br>부끄럽게도 저는 아직 이 부분에서 한참 부족합니다. 기꺼이 텅 빈 바탕을 내어주는 일, 그것은 제가 매일 현장과 사무실에서 부딪히며 가장 치열하게 훈련해야 할 평생의 숙제입니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "시스템 너머의 본질",
@@ -546,7 +572,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "간격",
-            "text": "다시 한번 사이 공간, 여백, 또는 '거리 두기'에 대해서 이야기를 해볼까요?<br><br>\n앞서 말씀드린 것처럼, 인간의 뇌는 파편화된 정보를 통합하려는 습성이 있습니다. 아담과 신의 손끝이 닿을 듯 말 듯 한 미켈란젤로의 '천지창조'처럼, 적절히 떨어져 있는 간격은 강력한 연결의 에너지를 발생시킵니다.<br><br>\n사람과의 관계도 마찬가지입니다. 적절한 거리 두기와 여백은 각자의 개체성을 뚜렷하게 지켜주며, 나와 상대방 모두에게 건강한 에너지를 줍니다. 여기서 분명히 해야 할 것은, 건강한 관계를 맺기 위해서는 반드시 <strong>'침범받지 않는 자기만의 영역(존엄)'</strong>이 전제되어야 한다는 점입니다.<br><br>\n한때 과학자들은 원자가 더 이상 쪼개지지 않는 꽉 찬 알갱이인 줄 알았습니다. 하지만 그 안을 들여다보니 원자의 대부분은 텅 빈 '공간'이었습니다. 중심을 잡고 있는 원자핵과 그 주위를 도는 전자 사이에는 엄청난 거리의 여백이 존재합니다. 그 거대한 여백이 역설적으로 원자라는 단단한 물질을 유지하게 만듭니다.",
+            "text": "다시 한번 사이 공간, 여백, 또는 '거리 두기'에 대해서 이야기를 해볼까요?<br><br>\n앞서 말씀드린 것처럼, 인간의 뇌는 파편화된 정보를 통합하려는 습성이 있습니다. 아담과 신의 손끝이 닿을 듯 말 듯 한 미켈란젤로의 '천지창조'처럼, 적절히 떨어져 있는 간격은 강력한 연결의 에너지를 발생시킵니다.<br><br>\n사람과의 관계도 마찬가지입니다. 적절한 거리 두기와 여백은 각자의 개체성을 뚜렷하게 지켜주며, 나와 상대방 모두에게 건강한 에너지를 줍니다. 여기서 분명히 해야 할 것은, 건강한 관계를 맺기 위해서는 반드시 <strong>'침범받지 않는 자기만의 영역(존엄)'</strong>이 전제되어야 한다는 점입니다.<br><br>\n한때 과학자들은 원자가 더 이상 쪼개지지 않는 꽉 찬 알갱이인 줄 알았습니다. 하지만 그 안을 들여다보니 원자의 대부분은 텅 빈 '공간'이었습니다. 중심을 잡고 있는 원자핵과 그 주위를 도는 전자 사이에는 넓은 거리의 여백이 존재합니다. 그 넉넉한 여백이 역설적으로 원자라는 단단한 물질을 유지하게 만듭니다.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "[Theme 4] 미완의 일상",
@@ -637,7 +663,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "작은 부분은 강렬하게",
-            "text": "\"흐름을 이끄는 힘은 큼직한 것에 있고, 사람의 마음을 훔치는 힘은 아주 작은 것에 있습니다.\"<br><br>어설픈 중간 크기들은 모아두면 금세 지루해집니다.<br>차라리 큰 것은 과감하게 더 키워서 전체적인 분위기를 듬직하게 이끌게 하고,<br>작은 것은 아주 정교하고 매섭게 다듬어서 시선을 사로잡는 포인트로 삼아야 합니다.<br><br>얼굴 전체 면적에서 아주 작게 차지하는 매력적인 빨간 입술이 그 사람의 전체적인 인상과 분위기를 확 결정짓는 것처럼요.<br><br>거대한 사막 한가운데 놓인 피라미드를 떠올려 보십시오. 텅 빈 사막이라는 거대한 바탕이 피라미드라는 작은 점을 얼마나 돋보이게 하는지 모릅니다.<br><br>재미있는 사실은, 사람들이 공간이나 사물을 이해할 때 그 시선은 언제나 큼직한 바탕보다는 '작은 점' 하나에 먼저 꽂힌다는 것입니다. 사람을 볼 때도 그렇지 않나요? 굳이 감추고 싶어 하는 나의 작은 약점이나 콤플렉스에 사람들의 시선이 더 날카롭게 꽂히기 마련이니까요.",
+            "text": "\"흐름을 이끄는 힘은 큼직한 것에 있고, 사람의 마음을 훔치는 힘은 아주 작은 것에 있습니다.\"<br><br>어설픈 중간 크기들은 모아두면 금세 지루해집니다.<br>차라리 큰 것은 과감하게 더 키워서 전체적인 분위기를 듬직하게 이끌게 하고,<br>작은 것은 아주 정교하고 매섭게 다듬어서 시선을 사로잡는 포인트로 삼아야 합니다.<br><br>얼굴 전체 면적에서 아주 작게 차지하는 매력적인 빨간 입술이 그 사람의 전체적인 인상과 분위기를 확 결정짓는 것처럼요.<br><br>드넓은 사막 한가운데 놓인 피라미드를 떠올려 보십시오. 텅 빈 사막이라는 넓은 바탕이 피라미드라는 작은 점을 얼마나 돋보이게 하는지 모릅니다.<br><br>재미있는 사실은, 사람들이 공간이나 사물을 이해할 때 그 시선은 언제나 큼직한 바탕보다는 '작은 점' 하나에 먼저 꽂힌다는 것입니다. 사람을 볼 때도 그렇지 않나요? 굳이 감추고 싶어 하는 나의 작은 약점이나 콤플렉스에 사람들의 시선이 더 날카롭게 꽂히기 마련이니까요.",
             "image": null,
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "[Theme 2] 인간관계의 무게",
@@ -838,7 +864,7 @@ const bookData = {
             "type": "text_only",
             "title": "현장이라는 무대",
             "partCategory": "제1막: 공유결합 디자인 방법론",
-            "text": "지금까지 제가 말씀드린 것들이 바로 도면과 현장을 대하는 저만의 작은 원칙들입니다.<br><br>거창하게 들렸을지 모르지만, 사실 복잡하고 대단한 설계 이론은 하나도 없습니다. 그저 땅의 흐름에 거스르지 않는 것, 마주 앉은 사람의 이야기에 진심으로 귀 기울이는 것, 튀는 것을 넉넉하게 안아주는 듬직한 틀이 되어주는 것, 서로가 숨 쉴 수 있도록 조금 거리를 띄워주는 여백, 그리고 갈등이 생길 때 확실한 중심을 잡아주는 일들입니다.<br><br>이런 평범한 태도들이 차곡차곡 모여서, 건축과 도시, 그리고 사람과 사람 사이의 관계망을 따뜻하게 다독이고 안정화시켜 가는 과정.<br>그것이 바로 제가 믿는 '공유결합'의 본질이자, 건축사로서 가진 설계 철학의 전부입니다.<br><br>자, 이제 이어질 <strong>제2막</strong>에서는 이 모든 관계 맺기의 가장 첫 단추인 <strong>'나라는 개체를 단단하게 세우는 일'</strong>에 대해 이야기해 보려 합니다. 거대한 도면 이야기는 잠시 접어두고, 제가 현장에서 부딪히며 겪었던 아주 사소하고 인간적인 에피소드들을 통해, 어떻게 제 안의 기준들이 깎이고 다듬어졌는지 편안하게 털어놓겠습니다.",
+            "text": "지금까지 제가 말씀드린 것들이 바로 도면과 현장을 대하는 저만의 작은 원칙들입니다.<br><br>거창하게 들렸을지 모르지만, 사실 복잡하고 대단한 설계 이론은 하나도 없습니다. 그저 땅의 흐름에 거스르지 않는 것, 마주 앉은 사람의 이야기에 진심으로 귀 기울이는 것, 튀는 것을 넉넉하게 안아주는 듬직한 틀이 되어주는 것, 서로가 숨 쉴 수 있도록 조금 거리를 띄워주는 여백, 그리고 갈등이 생길 때 확실한 중심을 잡아주는 일들입니다.<br><br>이런 평범한 태도들이 차곡차곡 모여서, 건축과 도시, 그리고 사람과 사람 사이의 관계망을 따뜻하게 다독이고 안정화시켜 가는 과정.<br>그것이 바로 제가 믿는 '공유결합'의 본질이자, 건축사로서 가진 설계 철학의 전부입니다.<br><br>자, 이제 이어질 <strong>제2막</strong>에서는 이 모든 관계 맺기의 가장 첫 단추인 <strong>'나라는 개체를 단단하게 세우는 일'</strong>에 대해 이야기해 보려 합니다. 무거운 도면 이야기는 잠시 접어두고, 제가 현장에서 부딪히며 겪었던 아주 사소하고 인간적인 에피소드들을 통해, 어떻게 제 안의 기준들이 깎이고 다듬어졌는지 편안하게 털어놓겠습니다.",
             "image": null,
             "caption": null,
             "isContinuation": true,
@@ -1106,7 +1132,7 @@ const bookData = {
             "part": "제2막: 나라는 개체의 독립과 생존",
             "partTitle": "[Theme 4] 미완의 일상",
             "title": "오늘을 산다는 것",
-            "text": "오늘을 산다는 것, 그것은 큰 용기가 필요한 일입니다.<br>\n오늘을 살아낸다는 것은 결국 과거의 결과를 고스란히 맞이한다는 뜻이기 때문입니다.<br>\n<br>\n때로는 언 땅, 언 하늘 아래에서 벗겨진 살갗의 고통을<br>\n그대로 받아내야만 할 때가 있습니다.<br>\n<br>\n그래도 어쩔 수 없습니다.<br>\n오늘을 맞이한다는 것에는 아픈 용기가 필요합니다.<br>\n<br>\n오늘을 산다는 것.<br>\n오늘을 직시한다는 것은 뼈아픈 용기가 필요합니다.<br>\n하지만 바로 그곳에서, 다시 시작해야 할 때가 있습니다.<br><br>\n제게 '오늘을 산다는 것'은 곧 '과거에 제가 했던 디자인(결과물)을 마주하는 것'과 같습니다.<br>\n<br>\n오랜 시간 동안 제게 건축은 낭만이 아니라 '버팀' 그 자체와 얽혀 있었습니다.<br>\n그것은 아마도, 서울에 처음 올라왔을 때 제 삶이 분주한 버팀에 가까웠고, 그 버팀에 유일하게 의미를 부여해 준 것이 바로 '건축'이었기 때문일 겁니다.<br>\n<br>\n아직까지도 \"이건 제가 했다\"라고 자랑스레 내세울 만한 대단한 것은 없지만, 그래도 저는 건축을 하는 사람입니다.<br>\n그래서 아직도 제 결과물이 저를 몹시 아프게 찌르기도 하고, 견디기 버겁기도 합니다.<br>\n<br>\n결과가 부끄러워서 아프고, 그저 힘들어서 힘이 듭니다.\n",
+            "text": "오늘을 산다는 것, 그것은 큰 용기가 필요한 일입니다.<br>\n오늘을 살아낸다는 것은 결국 과거의 결과를 고스란히 맞이한다는 뜻이기 때문입니다.<br>\n<br>\n때로는 언 땅, 언 하늘 아래에서 벗겨진 살갗의 고통을<br>\n그대로 받아내야만 할 때가 있습니다.<br>\n<br>\n그래도 어쩔 수 없습니다.<br>\n오늘을 맞이한다는 것에는 아픈 용기가 필요합니다.<br>\n<br>\n오늘을 산다는 것.<br>\n오늘을 직시한다는 것은 단단한 용기가 필요합니다.<br>\n하지만 바로 그곳에서, 다시 시작해야 할 때가 있습니다.<br><br>\n제게 '오늘을 산다는 것'은 곧 '과거에 제가 했던 디자인(결과물)을 마주하는 것'과 같습니다.<br>\n<br>\n오랜 시간 동안 제게 건축은 낭만이 아니라 '버팀' 그 자체와 얽혀 있었습니다.<br>\n그것은 아마도, 서울에 처음 올라왔을 때 제 삶이 분주한 버팀에 가까웠고, 그 버팀에 유일하게 의미를 부여해 준 것이 바로 '건축'이었기 때문일 겁니다.<br>\n<br>\n아직까지도 \"이건 제가 했다\"라고 자랑스레 내세울 만한 대단한 것은 없지만, 그래도 저는 건축을 하는 사람입니다.<br>\n그래서 아직도 제 결과물이 저를 몹시 아프게 찌르기도 하고, 견디기 버겁기도 합니다.<br>\n<br>\n결과가 부끄러워서 아프고, 그저 힘들어서 힘이 듭니다.\n",
             "partCategory": "제2막: 나라는 개체의 독립과 버팀",
             "image": null,
             "type": "text_only",
@@ -2344,7 +2370,7 @@ const bookData = {
             "part": "제3막: 사람을 알아가는 관계성",
             "partTitle": "[Theme 2] 인간관계의 무게",
             "title": "말하는 나무",
-            "text": "그들의 언어를 이해하기위해선 엄청난 집중력과 인내심이 필요하기에<br>나무의 언어를 듣는 것은 소수의 사람만이 가능하다고 합니다.<br>\n대부분의 사람들이 보기엔 바람결에 나뭇잎이 흔들리는 것처럼 보이지만,<br>사실 나무들의 웃고 떠들며 나누는 대화 때문에 생긴 움직이라는 것을<br>그들은 알고 있다고 하네요.<br>\n그런 움직임이 있는 숲에서 사람들은 그들의 속삭임을 들으며,<br>휴식을 취한다고 합니다.</p></div>",
+            "text": "그들의 언어를 이해하기위해선 깊은 집중력과 인내심이 필요하기에<br>나무의 언어를 듣는 것은 소수의 사람만이 가능하다고 합니다.<br>\n대부분의 사람들이 보기엔 바람결에 나뭇잎이 흔들리는 것처럼 보이지만,<br>사실 나무들의 웃고 떠들며 나누는 대화 때문에 생긴 움직이라는 것을<br>그들은 알고 있다고 하네요.<br>\n그런 움직임이 있는 숲에서 사람들은 그들의 속삭임을 들으며,<br>휴식을 취한다고 합니다.</p></div>",
             "image": null,
             "partCategory": "제3막: 사람을 알아가는 관계성",
             "type": "text_only",
@@ -2541,7 +2567,7 @@ const bookData = {
             "type": "text_only",
             "title": "신뢰의 기록",
             "image": null,
-            "text": "그렇기에 사업성을 최대한 끌어올리기 위해, 어제 굳게 맺었던 약속(도면)이라도 오늘 어쩔 수 없이 찢고 다시 그려야만 하는 뼈아픈 변경의 순간들이 필연적으로 발생합니다.<br><br>\n약속이 끊임없이 흔들리고 변하는 이 가혹한 현실 속에서, 그래도 끝까지 서로를 설득하고 도면을 완성해 내어 진짜 '공유결합'에 이르게 하는 것. 어쩌면 그것이 정비사업 설계자가 짊어져야 할 가장 무겁고 고독한 숙제일지도 모르겠습니다.<br>\n<div class=\"footnote-box\">\n<strong>* 공유결합 (건축적 의미)</strong>: 흩어진 욕망과 끊임없이 변하는 현실 속에서도, 서로의 빈자리를 내어주고 채우며 마침내 튼튼한 건축물(합의점)을 만들어내는 과정.\n</div>",
+            "text": "그렇기에 사업성을 최대한 끌어올리기 위해, 어제 굳게 맺었던 약속(도면)이라도 오늘 어쩔 수 없이 찢고 다시 그려야만 하는 힘겨운 변경의 순간들이 필연적으로 발생합니다.<br><br>\n약속이 끊임없이 흔들리고 변하는 이 가혹한 현실 속에서, 그래도 끝까지 서로를 설득하고 도면을 완성해 내어 진짜 '공유결합'에 이르게 하는 것. 어쩌면 그것이 정비사업 설계자가 짊어져야 할 가장 무겁고 고독한 숙제일지도 모르겠습니다.<br>\n<div class=\"footnote-box\">\n<strong>* 공유결합 (건축적 의미)</strong>: 흩어진 욕망과 끊임없이 변하는 현실 속에서도, 서로의 빈자리를 내어주고 채우며 마침내 튼튼한 건축물(합의점)을 만들어내는 과정.\n</div>",
             "part": "제4막: 증언과 성찰",
             "partCategory": "제4막: 증언과 성찰",
             "caption": null,
@@ -2760,7 +2786,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "서계동 현상설계",
-            "text": "가파른 지형을 밀어버리는 대신 그 굴곡에 순응하는 길을 선택했습니다. \n<strong>\"땅이 가진 본래의 제약과 새롭게 들어설 공간의 요구사항을 하나의 프레임으로 묶어내는 작업.\"</strong><br><br>그것은 땅과 건축, 그리고 사람이 서로의 영역을 존중하며 맺어가는 가장 거대한 형태의 공유결합이었습니다.\n\n<div class=\"footnote-box\">\n<strong>* 공유결합 (사회적 의미)</strong>: 버팀권, 수익성, 행정 규제 등 서로 얽혀있는 복잡한 이해관계들이 타협점을 찾아 하나의 제도적 프레임 안에서 평화롭게 공존하는 상태를 뜻합니다.\n</div>",
+            "text": "가파른 지형을 밀어버리는 대신 그 굴곡에 순응하는 길을 선택했습니다. \n<strong>\"땅이 가진 본래의 제약과 새롭게 들어설 공간의 요구사항을 하나의 프레임으로 묶어내는 작업.\"</strong><br><br>그것은 땅과 건축, 그리고 사람이 서로의 영역을 존중하며 맺어가는 가장 단단하고 의미 있는 형태의 공유결합이었습니다.\n\n<div class=\"footnote-box\">\n<strong>* 공유결합 (사회적 의미)</strong>: 버팀권, 수익성, 행정 규제 등 서로 얽혀있는 복잡한 이해관계들이 타협점을 찾아 하나의 제도적 프레임 안에서 평화롭게 공존하는 상태를 뜻합니다.\n</div>",
             "image": null,
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
@@ -2851,7 +2877,7 @@ const bookData = {
         {
             "type": "text_only",
             "title": "100년의 기억",
-            "text": "<br><span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 거대한 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 거대한 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_2.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_section.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_wireframe.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_cg.jpg\" ></div>",
+            "text": "<br><span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 넓은 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_2.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_section.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_wireframe.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_cg.jpg\" ></div>",
             "image": null,
             "part": "제4막: 증언과 성찰",
             "partTitle": "[Theme 2] 인간관계의 무게",
@@ -3050,4 +3076,4 @@ const bookData = {
             "isTextAfterImage": false
         }
     ]
-};
+}

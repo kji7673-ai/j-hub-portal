@@ -544,7 +544,9 @@
     </div>
     <div class="toc-overlay" onclick="closeTOC()"></div>
 
-    <script src="book_data.js?v=1789376999"></script>
+    <script>
+var bookData = null;
+</script>
     <script>
 
       // --- 마스터 개선 로직 주입 ---
@@ -1168,7 +1170,7 @@ let currentChapter = 0;
         }
       }
 
-      window.onload = renderBook;
+      window.onload = async () => { try { const res = await fetch("book_data.json?v=" + Date.now()); if (!res.ok) throw new Error("HTTP Error " + res.status); window.bookData = await res.json(); renderBook(); } catch (err) { document.body.innerHTML = "<div style=\"padding: 40px; text-align: center; font-family: sans-serif;\"><h2 style=\"color: #ff3b30;\">원고 데이터 오류 (Syntax Error)</h2><p style=\"color: #333; margin-top: 10px;\">" + err.message + "</p><p style=\"color: #888; font-size: 13px; margin-top: 20px;\">원고 파일(book_data.json)의 쉼표나 따옴표 규칙이 어긋났습니다. 수정 후 다시 배포해주세요.</p></div>"; } };
 
       let bookmarks = JSON.parse(
         localStorage.getItem("JJournal_bookmarks_v3") || "[]",
