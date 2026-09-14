@@ -2638,6 +2638,19 @@
       "isTextAfterImage": false
     },
     {
+      "type": "image_top",
+      "title": "조은 슈퍼 - 일상",
+      "text": "",
+      "image": "static/images/user_sketch_5.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 1] 현장에서의 갈등",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "쉼표",
+      "isTextAfterImage": false
+    },
+    {
       "part": "제4막: 증언과 성찰",
       "partTitle": "[Theme 1] 현장에서의 갈등",
       "title": "'조은 슈퍼'",
@@ -2755,6 +2768,19 @@
       "isTextAfterImage": false
     },
     {
+      "type": "image_top",
+      "title": "서계동 - 스케치",
+      "text": "",
+      "image": "static/images/seogye_sketch.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "쉼표",
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "서계동 현상설계",
       "text": "\n<strong>\"지속가능한 건축의 원리는 '공유결합'으로 설명할 수 있습니다.\"</strong><br><br>각자 부족한 것을 내어주고 서로를 단단히 묶어 가장 안정적인 상태를 이루는 과정. 건축설계의 본질, 현장의 난제를 푸는 방법, 그리고 사람을 신뢰하는 방법의 핵심이 바로 이 공유결합에 있다고 저는 믿습니다.\n\n첫째는 건축사로서 흔들리지 않는 중심(기준)을 세우는 것, 둘째는 각기 다른 사람들의 투박한 언어를 둥글게 이해하고 담아내는 것, 그리고 셋째는 눈앞의 대지뿐만 아니라 얽히고설킨 이해관계의 이면(회의 테이블)까지 꿰뚫어 보는 것입니다. 이 세 가지 공유결합의 원칙이 만나 서로의 결핍을 채울 때, 건축은 비로소 단순한 구조물을 넘어 생명력을 얻게 됩니다.",
@@ -2791,6 +2817,19 @@
       "caption": null,
       "isContinuation": true,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "서계동 - 흔적",
+      "text": "",
+      "image": "static/images/gallery_batch15_clay_1789125170026.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "쉼표",
       "isTextAfterImage": false
     },
     {
@@ -2924,6 +2963,19 @@
       "keywords": "시간의 지층 위에 새로운 숨결을"
     },
     {
+      "type": "image_top",
+      "title": "100년의 기억 - 시장 스케치",
+      "text": "",
+      "image": "static/images/sketch_100year_market_1.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "쉼표",
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "100년의 기억",
       "text": "<br><span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\">[100년 역사의 유성 5일장과 유성천의 맥락을 보존하기 위한 단면 고민과 아이디어 스케치]</span> 구조물의 하부에는 시장 상인들의 삶의 터전을 온전히 보존하고, 상부에는 브릿지가 교차하는 넓은 공원을 덮어 올리는 계획. 최소한 그 정도의 공간적 배려는 있어야 시장의 100년 명맥이 이어질 수 있을 것 같았습니다.<br><br>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_sketch_2.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_section.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_wireframe.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/daejeon_cg.jpg\" ></div>",
@@ -2973,6 +3025,19 @@
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "평가를 넘어선 진정성의 증명",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "심의 날 - 쉼표",
+      "text": "",
+      "image": "static/images/gallery_batch16_frame1_1789125419342.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 1] 현장에서의 갈등",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "쉼표",
       "isTextAfterImage": false
     },
     {
