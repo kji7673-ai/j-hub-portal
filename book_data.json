@@ -122,6 +122,18 @@
             "part": "제1막: 공유결합 디자인 방법론"
         },
         {
+            "type": "image_top",
+            "title": "여는 글: 제1막: 공유결합 디자인 방법론",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "text": "",
+            "image": "static/images/gallery_batch7_wire_duo_1789096969490.jpg",
+            "isImageOnly": true,
+            "isContinuation": true,
+            "keywords": "공유결합, 홍익인간",
+            "part": "제1막: 공유결합 디자인 방법론",
+            "isTextAfterImage": false
+        },
+        {
             "type": "text_only",
             "title": "여는 글: 제1막: 공유결합 디자인 방법론",
             "text": "저는 이 철학이 제가 주로 설계하는 공동주택, 즉 아파트의 건축과 완벽히 닿아 있다고 생각했습니다. 아파트 단지 안에 내어주는 산책길과 외부 공간은 단순한 빈 땅이 아니라, 이 널리 이롭게 하는 '관계'를 맺게 해주는 따뜻한 무대입니다. 정성껏 빚어낸 이 아름다운 공간 위에서 앞으로 얼마나 많은 사람들의 만남과 접촉, 그리고 결합이 이루어질까요?<br><br>빛과 공간, 형태와 사람의 발걸음이 서로의 빈자리를 채우며 관계를 맺는 과정. 그것이 제가 도면 위에 '공유결합'이라는 철학을 새겨 넣고 묵묵히 선을 긋는 이유입니다.<br><br>제1막에서는 이 결합의 원리를 도면과 현장, 공간과 디테일 속에 녹아든 디자인 방법론으로 어떻게 풀어냈는지 이야기합니다. 하지만 본격적인 건축 이야기에 앞서, 제가 왜 하필 '공유결합'을 제 설계의 중심 메타포로 삼게 되었는지 그 기원부터 고백하려 합니다.<br><br>저의 디자인 방법론은 대단한 건축 이론서가 아니라, 지극히 사소하고 개인적인 '세 번의 기억'에서 출발했기 때문입니다.",
@@ -223,9 +235,21 @@
             "isTextAfterImage": false
         },
         {
+            "type": "image_top",
+            "title": "스스로 빛나는 별",
+            "partCategory": "제1막: 공유결합 디자인 방법론",
+            "text": "",
+            "image": "static/images/gallery_batch3_sphere_1789095532897.jpg",
+            "isImageOnly": true,
+            "isContinuation": false,
+            "keywords": "스스로 빛나는 별",
+            "part": "제1막: 공유결합 디자인 방법론",
+            "isTextAfterImage": false
+        },
+        {
             "type": "text_only",
             "title": "스스로 빛나는 별",
-            "text": "<div style=\"padding: 40px 20px; text-align: left; line-height: 2.0; font-family: 'SF Pro Text', sans-serif;\">\n<p style=\"margin-bottom: 24px;\">관계의 중요성은<br>사람과 사람 사이에서도 마찬가지입니다.</p>\n<p style=\"margin-bottom: 24px;\">먼저, 스스로를 알아가세요.<br>당신이 홀로 빛날 수 있을 때,<br>그 빛을 보고 또 다른 별들이 찾아올 것입니다.</p>\n<p style=\"margin-bottom: 24px;\">어쩌면 우리의 관계는 밤하늘의 별과 같아서,<br>먼저 홀로 빛날 수 있어야만 합니다.</p>\n<p style=\"margin-bottom: 24px;\">빛난다는 것을 오해하지 마세요.<br>대단한 무언가가 되라는 것이 아닙니다.<br>당신 스스로가 얼마나 소중한 존재인지 깨닫는 순간,<br>비로소 빛이 나기 시작한답니다.</p>\n<p style=\"margin-bottom: 24px; font-weight: 600; color: #0066cc;\">참 소중한 사람입니다, 당신은.</p>\n<p style=\"margin-bottom: 24px;\">혹시 그 소중한 당신을 몰라보고<br>함부로 대하는 만남이 있다면, 그것은 관계가 아닙니다.<br>피하세요.<br>그래야만 합니다.</p>\n<p style=\"margin-bottom: 24px;\">진정한 관계란, 상대를 더 빛나게 해주는 것입니다.<br>나의 넉넉한 빛으로 상대를 비추어 주는 것입니다.</p>\n<p>우리의 결합은, 그래야만 합니다.</p>\n</div>",
+            "text": "<div style=\"padding: 40px 20px; text-align: left; line-height: 2.0; font-family: 'SF Pro Text', sans-serif;\">\n<p style=\"margin-bottom: 24px;\">관계의 중요성은 사람과 사람 사이에서도 마찬가지입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">먼저, 스스로를 알아가세요.<br>당신이 홀로 빛날 수 있을 때,<br>그 빛을 보고 또 다른 별들이 찾아올 것입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">어쩌면 우리의 관계는 밤하늘의 별과 같아서,<br>먼저 홀로 빛날 수 있어야만 합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">빛난다는 것을 빛나야 한다로 오해하지 마세요.<br>이미,<br>당신 스스로가 이미 소중한 존재임을 깨닫는 순간,<br>빛이 나기 시작한답니다.</p>\n\n<p style=\"margin-bottom: 24px; font-weight: 600; color: #0066cc;\">당신은<br>참 소중한 사람입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">혹시 그 소중한 당신을 몰라보고<br>함부로 대하는 만남이 있다면,<br>그것은 관계가 아닙니다.</p>\n\n<p style=\"margin-bottom: 24px;\">피하세요.<br>그래야만 합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">진정한 관계란,<br>상대를 더 빛나게 해주는 것입니다.<br>나의 넉넉한 빛으로 상대를 비추어 주는 것입니다.</p>\n\n<p>우리의 결합은,<br>그래야만 합니다.</p>\n</div>",
             "part": "제1막: 공유결합 디자인 방법론",
             "partTitle": "스스로 빛나는 별",
             "partCategory": "제1막: 공유결합 디자인 방법론",
