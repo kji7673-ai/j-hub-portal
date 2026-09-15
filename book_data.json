@@ -3,7 +3,7 @@
     {
       "title": "도면 위의 공유결합",
       "subtitle": "건축만 할 줄 아는 설계자의 이야기",
-      "image": "static/images/gallery_cover_baked.jpg?v=20242423",
+      "image": "static/images/gallery_cover_baked.jpg?v=1789482866",
       "text": "",
       "type": "cover",
       "isImageOnly": true,
@@ -18,7 +18,7 @@
       "partCategory": "저자 소개",
       "title": "김중일 (건축사)",
       "text": "",
-      "image": "static/images/author_sketch.jpg",
+      "image": "static/images/gallery_author_baked.jpg?v=1789482866",
       "type": "author_profile",
       "isImageOnly": false,
       "part": "제1막: 서론",
