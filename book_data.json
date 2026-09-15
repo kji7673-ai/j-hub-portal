@@ -492,11 +492,11 @@
       "type": "image_top",
       "title": "귀 기울임",
       "image": "static/images/gallery_batch11_sketch1.jpg",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">종이컵, 귤 껍질, 그리고 고구마 꼭다리 그 속에 보여진 너</div>",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isContinuation": false,
       "keywords": "대지의 호흡을 듣는 깊은 침묵",
       "isTextAfterImage": false
