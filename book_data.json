@@ -324,7 +324,7 @@
     {
       "type": "image_top",
       "title": "단단한 개성",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">아~ 신발</div>",
       "image": "static/images/gallery_batch6_carry_mass2_1789096477688.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
@@ -332,7 +332,7 @@
       "caption": null,
       "isContinuation": false,
       "keywords": "고유함이 모여 이루는 새로운 풍경",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isTextAfterImage": false
     },
     {
