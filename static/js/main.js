@@ -121,7 +121,8 @@ let currentChapter = 0;
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
-        let isSpecialPage = page.type === "cover" || page.type === "author_profile";
+        const isBakedPage = page.type === "cover" || page.type === "author_profile";
+        const isSpecialPage = isBakedPage;
 
         let bgHTML = "";
         let contentHTML = "";
@@ -143,8 +144,8 @@ let currentChapter = 0;
             ) {
               bgPosition = "center top"; // 머리 안 잘리게 상단 고정
             }
-            let extraBgStyle = "";
-            if (page.type === "cover" || page.type === "author_profile") {
+            
+            if (isBakedPage) {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
               bgPosition = "center center"; // 베이크된 이미지는 중앙 정렬로 자연스럽게 크롭
             }
@@ -165,18 +166,11 @@ let currentChapter = 0;
             bgHTML +
             '<div class="cover-content" style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; min-height:100%; padding: 15vh 5% 8vh 5%; box-sizing: border-box;">';
 
-          let textContainerStyle =
-            "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
-          if (page.type === "cover") {
-            // 화면 전체를 기준으로 우측 하단 정렬 (최대 가로폭 해제)
-            textContainerStyle = "";
-          }
-
-          if (page.type === "cover") {
-            // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
-            contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
-          }
-          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" || page.type === "author_profile" ? "display: none;" : "") + '">';
+          const textContainerStyle = (page.type === "cover") ? "" : "margin: auto 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center;";
+          
+          const textContainerClass = isBakedPage ? "cover-text-container" : "";
+          const textContainerDisplay = isBakedPage ? "display: none;" : "";
+          contentHTML += `<div class="${textContainerClass}" style="${textContainerStyle}; ${textContainerDisplay}">`;
 
 
           if (page.title) {
