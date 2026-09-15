@@ -146,7 +146,7 @@ let currentChapter = 0;
               bgPosition = "center top"; // 머리 안 잘리게 상단 고정
             }
             let extraBgStyle = "";
-            if (page.type === "cover" ) {
+            if (page.type === "cover" || page.type === "author_profile") {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
               bgPosition = "center center"; // 베이크된 이미지는 중앙 정렬로 자연스럽게 크롭
             }
