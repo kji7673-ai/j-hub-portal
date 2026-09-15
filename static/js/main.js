@@ -131,9 +131,7 @@ let currentChapter = 0;
 
 
           let bgImage = page.image;
-          if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242488";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20260915";
-          
+                              
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
