@@ -699,12 +699,12 @@
     {
       "type": "image_top",
       "title": "작은 부분은 강렬하게",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">키키 크크 하하</div>",
       "image": "static/images/gallery_batch12_sculpture3.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "[Theme 2] 인간관계의 무게",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isContinuation": false,
       "keywords": "섬세한 디테일이 건네는 깊은 울림",
       "isTextAfterImage": false
