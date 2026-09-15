@@ -1889,7 +1889,7 @@
       "type": "image_top",
       "title": "만들어져 가는 것",
       "text": "",
-      "image": "static/images/gallery_kimjoongil_1.jpg",
+      "image": "static/images/gallery_kimjoongil_1.jpg?v=2",
       "part": "제3막: 사람을 알아가는 관계성",
       "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
       "partCategory": "제3막: 사람을 알아가는 관계성",
@@ -2072,7 +2072,7 @@
       "partTitle": "[Theme 2] 인간관계의 무게",
       "title": "논리와 감정 사이",
       "text": "",
-      "image": "static/images/gallery_kimjoongil_2.jpg",
+      "image": "static/images/gallery_kimjoongil_2.jpg?v=2",
       "partCategory": "제3막: 사람을 알아가는 관계성",
       "type": "image_top",
       "isImageOnly": true,
@@ -2280,7 +2280,7 @@
       "title": "다름의 이해",
       "partCategory": "제3막: 사람을 알아가는 관계성",
       "text": "",
-      "image": "static/images/gallery_kimjoongil_3.jpg",
+      "image": "static/images/gallery_kimjoongil_3.jpg?v=2",
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "차이를 품어 안는 넓은 포용력",
@@ -2381,7 +2381,7 @@
       "partTitle": "[Theme 2] 인간관계의 무게",
       "title": "말하는 나무",
       "text": "",
-      "image": "static/images/gallery_kimjoongil_4.jpg",
+      "image": "static/images/gallery_kimjoongil_4.jpg?v=2",
       "partCategory": "제3막: 사람을 알아가는 관계성",
       "type": "image_top",
       "isImageOnly": true,
@@ -2449,7 +2449,7 @@
       "isContinuation": false,
       "part": "제3막: 사람을 알아가는 관계성",
       "isImageOnly": true,
-      "image": "static/images/gallery_kimjoongil_5.jpg",
+      "image": "static/images/gallery_kimjoongil_5.jpg?v=2",
       "caption": null,
       "isTextAfterImage": false
     },
@@ -2849,7 +2849,7 @@
     {
       "type": "text_only",
       "title": "서계동 현상설계",
-      "text": "단차가 지는 구간의 데크를 조금씩 내밀어 사람들이 머물고 쉴 수 있는 계단식 조경 공간을 만들었고, 지형상 지하지만 외부로는 활짝 열려 있는 테라스형 상가와 커뮤니티 시설을 계획했습니다. 동시에 이를 통해 확보된 용적률을 최대치로 끌어올려 조합의 사업성을 견인할 분양 세대를 촘촘하게 구성했습니다.<br><br>\n\n<br>\n\n<br>\n\n<br><span style=\"font-size: 13px; color: #888; display: block; text-align: left; margin-bottom: 24px;\"></span><br><br>오랜 세월 주민들에게 불편함의 상징이었던 가파른 단차를 오히려 이 아파트만의 독보적인 명소로 뒤바꾸는 것. 서울에 사는 누구나 한 번쯤 찾아와 사진을 찍고 싶어 하는 매력적인 장소로 만드는 것. 지형의 약점, 주민의 쉼, 그리고 조합의 수익이라는 서로 다른 가치들을 하나의 공간 구조로 단단하게 묶어내는 이러한 설계 방향이 바로 제가 믿는 '건축의 진짜 역할'입니다.\n비록 수주라는 결과로 이어지진 못했을지라도, 우리는 그 눈 내리는 용산의 언덕에서 건축의 진짜 본질과 단단하게 결합해 있었습니다.\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/seogye_wireframe.png\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/seogye_cg_1.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/seogye_cg_2.jpg\" ></div>",
+      "text": "단차가 지는 구간의 데크를 조금씩 내밀어 사람들이 머물고 쉴 수 있는 계단식 조경 공간을 만들었고, 지형상 지하지만 외부로는 활짝 열려 있는 테라스형 상가와 커뮤니티 시설을 계획했습니다. 동시에 이를 통해 확보된 용적률을 최대치로 끌어올려 조합의 사업성을 견인할 분양 세대를 촘촘하게 구성했습니다.<br><br>오랜 세월 주민들에게 불편함의 상징이었던 가파른 단차를 오히려 이 아파트만의 독보적인 명소로 뒤바꾸는 것. 서울에 사는 누구나 한 번쯤 찾아와 사진을 찍고 싶어 하는 매력적인 장소로 만드는 것. 지형의 약점, 주민의 쉼, 그리고 조합의 수익이라는 서로 다른 가치들을 하나의 공간 구조로 단단하게 묶어내는 이러한 설계 방향이 바로 제가 믿는 '건축의 진짜 역할'입니다.<br><br>비록 수주라는 결과로 이어지진 못했을지라도, 우리는 그 눈 내리는 용산의 언덕에서 건축의 진짜 본질과 단단하게 결합해 있었습니다.",
       "image": null,
       "part": "제4막: 증언과 성찰",
       "partTitle": "[Theme 2] 인간관계의 무게",
@@ -2858,6 +2858,30 @@
       "isContinuation": true,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
       "isTextAfterImage": false
+    },
+    {
+      "title": "서계동 현상설계 - 스케치",
+      "text": "",
+      "image": "static/images/seogye_wireframe.png?v=3",
+      "isImageOnly": true,
+      "keywords": "도면 속 단단한 건축의 본질",
+      "isContinuation": true
+    },
+    {
+      "title": "서계동 현상설계 - 투시도 1",
+      "text": "",
+      "image": "static/images/seogye_cg_1.jpg",
+      "isImageOnly": true,
+      "keywords": "계단식 조경과 테라스의 조화",
+      "isContinuation": true
+    },
+    {
+      "title": "서계동 현상설계 - 투시도 2",
+      "text": "",
+      "image": "static/images/seogye_cg_2.jpg",
+      "isImageOnly": true,
+      "keywords": "눈 내리는 용산 언덕의 풍경",
+      "isContinuation": true
     },
     {
       "type": "text_only",
