@@ -660,12 +660,12 @@
     {
       "type": "image_top",
       "title": "공간의 에너지",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">곡선: 흐름을 만들어 가는 결</div>",
       "image": "static/images/gallery_batch12_sculpture2.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "[Theme 2] 인간관계의 무게",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isContinuation": false,
       "keywords": "보이지 않는 힘이 흐르는 길",
       "isTextAfterImage": false
