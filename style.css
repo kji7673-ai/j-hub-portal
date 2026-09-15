@@ -1271,3 +1271,14 @@ h2.chapter-title {
   overflow-x: auto; 
   padding-bottom: 10px;
 }
+
+/* Custom TOC adjustments for smaller page titles */
+.toc-item {
+  padding: 4px 0 !important;
+  margin-bottom: 2px !important;
+}
+
+.toc-title {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
