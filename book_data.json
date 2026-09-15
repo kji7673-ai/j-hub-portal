@@ -949,11 +949,11 @@
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
       "title": "설계의 기쁨",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">사랑: 세상을 바꾸는 힘</div>",
       "image": "static/images/gallery_batch4_heart.jpg",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isContinuation": false,
       "keywords": "세상의 풍경을 바꾸는 조용한 기쁨",
       "isTextAfterImage": false
