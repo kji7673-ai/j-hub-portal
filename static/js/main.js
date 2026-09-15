@@ -249,7 +249,7 @@ let currentChapter = 0;
             '<div style="margin: 0; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start;">';
 
           // Inline top image (skip for continuation pages)
-          if (page.image && (!isCont || isImgOnly)) {
+          if (page.image && (!isCont || isImgOnly || page.type === "author_profile")) {
             let imgStyle = 'max-width: 600px; width: 100%; height: auto; max-height: 65vh; object-fit: contain; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0;';
             if (page.type === "author_profile") {
                 imgStyle = 'width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: block; margin: 0 auto 30px auto; border: 4px solid #fff;';
@@ -269,7 +269,7 @@ let currentChapter = 0;
           }
 
           // 이미지 전용 페이지(isImgOnly)에서는 제목을 아예 렌더링하지 않음 (다음 텍스트 페이지에서 렌더링)
-          let shouldRenderTitle = false;
+          let shouldRenderTitle = (page.type === "author_profile");
           if (page.title && !isImgOnly) {
             if (!isCont) {
                 shouldRenderTitle = true;
