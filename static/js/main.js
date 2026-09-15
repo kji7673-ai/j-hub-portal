@@ -121,7 +121,7 @@ let currentChapter = 0;
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
-        let isSpecialPage = page.type === "cover" ;
+        let isSpecialPage = page.type === "cover" || page.type === "author_profile";
 
         let bgHTML = "";
         let contentHTML = "";
@@ -177,7 +177,7 @@ let currentChapter = 0;
             // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
             contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
           }
-          contentHTML += '<div class="' + (page.type === "cover"  ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover"  ? "display: none;" : "") + '">';
+          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" ? "display: none;" : "") + '">';
 
 
           if (page.title) {
