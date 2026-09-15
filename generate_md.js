@@ -17,7 +17,12 @@ for (let i = 0; i < data.pages.length; i++) {
     }
 
     if (page.isImageOnly) {
-        md += `*(이미지 단독 페이지)*\n\n---\n\n`;
+        if (page.keywords) {
+            md += `${page.keywords}\n\n`;
+        } else {
+            md += `*(이미지 단독 페이지)*\n\n`;
+        }
+        md += `---\n\n`;
         continue;
     }
     

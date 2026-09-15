@@ -324,15 +324,15 @@
     {
       "type": "image_top",
       "title": "단단한 개성",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">고된 삶을 함께 한 나의 신발</div>",
+      "text": "",
       "image": "static/images/gallery_batch6_carry_mass2_1789096477688.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
       "partCategory": "제1막: 공유결합 디자인 방법론",
       "caption": null,
       "isContinuation": false,
-      "keywords": "고유함이 모여 이루는 새로운 풍경",
-      "isImageOnly": false,
+      "keywords": "고된 삶을 함께 한 나의 신발",
+      "isImageOnly": true,
       "isTextAfterImage": false
     },
     {
@@ -492,13 +492,13 @@
       "type": "image_top",
       "title": "귀 기울임",
       "image": "static/images/gallery_batch11_sketch1.jpg",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">종이컵, 귤 껍질, 그리고 고구마 꼭다리 그 속에 보여진 너</div>",
+      "text": "",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "대지의 호흡을 듣는 깊은 침묵",
+      "keywords": "종이컵, 귤 껍질, 그리고 고구마 꼭다리 그 속에 보여진 너",
       "isTextAfterImage": false
     },
     {
@@ -556,14 +556,14 @@
     {
       "type": "image_top",
       "title": "무질서를 담는 틀",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">원래의 모습을 만들어가는 선</div>",
+      "text": "",
       "image": "static/images/gallery_batch11_sketch2.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "혼돈 속에서 피어나는 정제된 선",
+      "keywords": "원래의 모습을 만들어가는 선",
       "isTextAfterImage": false
     },
     {
@@ -608,14 +608,14 @@
     {
       "type": "image_top",
       "title": "간격",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">침범받지 않을 존엄</div>",
+      "text": "",
       "image": "static/images/gallery_batch12_sculpture1.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "[Theme 4] 미완의 일상",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "비워진 틈새가 품고 있는 무한함",
+      "keywords": "침범받지않을 존엄",
       "isTextAfterImage": false
     },
     {
@@ -660,14 +660,14 @@
     {
       "type": "image_top",
       "title": "공간의 에너지",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">곡선: 흐름을 만들어 가는 결</div>",
+      "text": "",
       "image": "static/images/gallery_batch12_sculpture2.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "[Theme 2] 인간관계의 무게",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "보이지 않는 힘이 흐르는 길",
+      "keywords": "곡선: 흐름을 만들어 가는 결",
       "isTextAfterImage": false
     },
     {
@@ -699,14 +699,14 @@
     {
       "type": "image_top",
       "title": "작은 부분은 강렬하게",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">키키 크크 하하</div>",
+      "text": "",
       "image": "static/images/gallery_batch12_sculpture3.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "[Theme 2] 인간관계의 무게",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "섬세한 디테일이 건네는 깊은 울림",
+      "keywords": "키키 크크 하하",
       "isTextAfterImage": false
     },
     {
@@ -877,11 +877,11 @@
       "type": "image_top",
       "title": "현장이라는 무대",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">휴식</div>",
+      "text": "",
       "image": "static/images/gallery_batch3_reaching.jpg",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "땀과 흙이 뒤섞인 치열한 창조",
+      "keywords": "휴식",
       "part": "제1막: 공유결합 디자인 방법론",
       "isTextAfterImage": false
     },
@@ -949,13 +949,13 @@
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partTitle": "[Theme 3] 설계의 본질에 대한 고민",
       "title": "설계의 기쁨",
-      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">사랑: 세상을 바꾸는 힘</div>",
+      "text": "",
       "image": "static/images/gallery_batch4_heart.jpg",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
-      "isImageOnly": false,
+      "isImageOnly": true,
       "isContinuation": false,
-      "keywords": "세상의 풍경을 바꾸는 조용한 기쁨",
+      "keywords": "사랑: 세상을 바꾸는 힘",
       "isTextAfterImage": false
     },
     {
