@@ -132,6 +132,7 @@ let currentChapter = 0;
 
           let bgImage = page.image;
           if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242488";
+          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20260915";
           
 
           if (bgImage) {
@@ -177,7 +178,7 @@ let currentChapter = 0;
             // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
             contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
           }
-          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" ? "display: none;" : "") + '">';
+          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" || page.type === "author_profile" ? "display: none;" : "") + '">';
 
 
           if (page.title) {
