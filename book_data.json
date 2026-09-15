@@ -556,12 +556,12 @@
     {
       "type": "image_top",
       "title": "무질서를 담는 틀",
-      "text": "",
+      "text": "<div style=\"text-align: center; font-size: 1.1em; color: #1d1d1f; margin-top: 24px;\">원래의 모습을 만들어가는 선</div>",
       "image": "static/images/gallery_batch11_sketch2.jpg",
       "part": "제1막: 공유결합 디자인 방법론",
       "partTitle": "시스템 너머의 본질",
       "partCategory": "제1막: 공유결합 디자인 방법론",
-      "isImageOnly": true,
+      "isImageOnly": false,
       "isContinuation": false,
       "keywords": "혼돈 속에서 피어나는 정제된 선",
       "isTextAfterImage": false
