@@ -329,7 +329,7 @@ let currentChapter = 0;
           '<div style="margin: 40px 0; text-align: left;"><img onerror="this.style.display=\'none\'" src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
         );
 
-        if (!isSpecialPage) {
+        if (!isSpecialPage || page.type === "author_profile") {
           const paragraphs = pText.split("\n\n");
           let processedText = "";
           paragraphs.forEach((p) => {
