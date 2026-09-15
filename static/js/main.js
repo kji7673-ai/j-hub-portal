@@ -121,7 +121,7 @@ let currentChapter = 0;
         pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
-        let isSpecialPage = page.type === "cover" || page.type === "author_profile";
+        let isSpecialPage = page.type === "cover" ;
 
         let bgHTML = "";
         let contentHTML = "";
@@ -132,7 +132,7 @@ let currentChapter = 0;
 
           let bgImage = page.image;
           if (page.type === "cover") bgImage = "static/images/gallery_cover_baked.jpg?v=20242488";
-          if (page.type === "author_profile") bgImage = "static/images/gallery_author_baked.jpg?v=20242488";
+          
 
           if (bgImage) {
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
@@ -145,7 +145,7 @@ let currentChapter = 0;
               bgPosition = "center top"; // 머리 안 잘리게 상단 고정
             }
             let extraBgStyle = "";
-            if (page.type === "cover" || page.type === "author_profile") {
+            if (page.type === "cover" ) {
               overlayCSS = "background: rgba(0,0,0, 0);"; // 흐릿한 마크 제거
               bgPosition = "center center"; // 베이크된 이미지는 중앙 정렬로 자연스럽게 크롭
             }
@@ -177,7 +177,7 @@ let currentChapter = 0;
             // 단상 위에 글씨를 새기는 느낌의 HTML 요소 (모바일/데스크탑 반응형 절대 위치)
             contentHTML += '<div class="pedestal-signature" style="display: none;">ARTIST<br>KIM JOONG IL</div>';
           }
-          contentHTML += '<div class="' + (page.type === "cover" || page.type === "author_profile" ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover" || page.type === "author_profile" ? "display: none;" : "") + '">';
+          contentHTML += '<div class="' + (page.type === "cover"  ? "cover-text-container" : "") + '" style="' + textContainerStyle + ';' + (page.type === "cover"  ? "display: none;" : "") + '">';
 
 
           if (page.title) {
