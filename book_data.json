@@ -18,7 +18,7 @@
       "partCategory": "저자 소개",
       "title": "김중일 (건축사)",
       "text": "",
-      "image": "static/images/gallery_author_baked.jpg?v=1789555234",
+      "image": "static/images/gallery_author_baked.jpg?v=1789557200",
       "type": "author_profile",
       "isImageOnly": false,
       "part": "제1막: 서론",
@@ -1114,6 +1114,45 @@
       "isTextAfterImage": false
     },
     {
+      "type": "image_top",
+      "title": "쉼: 홀로 서 있는 시간",
+      "text": "",
+      "image": "static/images/sculpture_1.jpg",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "caption": "무게를 견디는 단단한 조각상",
+      "keywords": "쉼, 여백, 홀로서기",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "쉼: 단단함을 빚는 시간",
+      "text": "",
+      "image": "static/images/sculpture_2.jpg",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "caption": "",
+      "keywords": "쉼, 여백, 홀로서기",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "쉼: 단단함을 빚는 시간",
+      "text": "",
+      "image": "static/images/sculpture_3.jpg",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "caption": "",
+      "keywords": "쉼, 여백, 홀로서기",
+      "isTextAfterImage": false
+    },
+    {
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partTitle": "[Theme 4] 미완의 일상",
       "title": "십원짜리",
@@ -1939,7 +1978,7 @@
     {
       "type": "text_only",
       "title": "찢어진 운동화",
-      "text": "자신의 아파트를 설계하는 사람에게 대뜸 반말부터 던지는 저 무지함은 대체 뭘까?<br><br>과거의 저는 그런 무례함에 속절없이 휘둘리며 한없이 작아지곤 했습니다. 무너진 마음을 추스를 시간이 필요했기에, 대충 핑계를 대고 서둘러 그 자리를 빠져나온 적도 많았습니다.<br><br>하지만 도면 위에서 요소들이 충돌할 때 '간격'을 벌려야 하듯, 사람 사이에도 감정이 날카롭게 부딪힐 땐 적당한 거리와 여백이 필요하다는 것을 현장에서 배웠습니다.<br><br>그렇게 마음을 식히러 도망치듯 나와 걷던 중, 문득 제 눈에 들어온 낡고 찢어진 운동화 앞코를 보며 수많은 생각이 교차했습니다.",
+      "text": "<div style=\"font-size: 0.85em; color: #777; margin-bottom: 32px; padding-left: 12px; border-left: 2px solid #ccc;\">\n*정비사업: 재개발, 재건축, 모아타운(가로주택정비사업), 도심복합사업 등을 통틀어 일컫는 말\n</div>\n\n<p style=\"margin-bottom: 24px;\">오랜 기간 정비사업 분야에서 일을 해왔습니다.<br>\n예전 일입니다. 제가 설계자로 선택되기 위해, 조합이나 추진위원회를 방문할 때의 이야기입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">지금은 충분히 이해합니다. 그곳에 계신 분들의 연배가 저보다는 한참 위이시니까요.<br>\n그래서 웬만한 상황은 다 괜찮다가도, 한 번씩은 속으로 이런 생각이 울컥 들곤 했습니다.</p>\n\n<p style=\"margin-bottom: 24px;\"><strong>\"자신의 아파트를 설계하는 사람에게 대뜸 반말부터 던지는 저 당당함은 대체 뭘까?\"</strong></p>\n\n<p style=\"margin-bottom: 24px;\">과거의 저는 그런 무례함에 속절없이 휘둘리며 한없이 작아지곤 했습니다. 무너진 마음을 추스를 시간이 필요했기에, 대충 핑계를 대고 서둘러 그 자리를 빠져나온 적도 많았습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">하지만 도면 위에서 요소들이 충돌할 때 '간격'을 벌려야 하듯, 사람 사이에도 감정이 날카롭게 부딪힐 땐 적당한 거리와 여백이 필요하다는 것을 현장에서 배웠습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">그렇게 마음을 식히러 도망치듯 나와 걷던 중, 문득 제 눈에 들어온 낡고 찢어진 운동화 앞코를 보며 수많은 생각이 교차했습니다.</p>",
       "image": null,
       "part": "제3막: 사람을 알아가는 관계성",
       "partTitle": "[Theme 1] 현장에서의 갈등",
