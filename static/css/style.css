@@ -126,3 +126,72 @@
         .cover-kicker { font-size: 14px; }
       }
 \n
+/* --- Dark Mode for TOC Menu Fix --- */
+@media (prefers-color-scheme: dark) {
+  .toc-modal {
+    background-color: #1a1a1c !important;
+    color: #f5f5f7 !important;
+    border-left: 1px solid #333 !important;
+  }
+  .toc-header {
+    background-color: #1a1a1c !important;
+    border-bottom: 1px solid #333 !important;
+  }
+  .toc-header h2 {
+    color: #f5f5f7 !important;
+  }
+  .toc-list {
+    background-color: #1a1a1c !important;
+  }
+  .toc-item {
+    color: #cccccc !important;
+    border-bottom: 1px solid #333 !important;
+  }
+  .toc-item:hover {
+    background-color: #2a2a2c !important;
+    color: #ffffff !important;
+  }
+  .toc-item.active {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+  }
+  .toc-category {
+    color: #f5f5f7 !important;
+    background-color: #1a1a1c !important;
+    border-bottom: 1px solid #333 !important;
+  }
+}
+
+/* Fallback for JS-toggled dark modes */
+[data-theme='dark'] .toc-modal, body.dark-mode .toc-modal, body.dark-theme .toc-modal {
+    background-color: #1a1a1c !important;
+    color: #f5f5f7 !important;
+    border-left: 1px solid #333 !important;
+}
+[data-theme='dark'] .toc-header, body.dark-mode .toc-header, body.dark-theme .toc-header {
+    background-color: #1a1a1c !important;
+    border-bottom: 1px solid #333 !important;
+}
+[data-theme='dark'] .toc-header h2, body.dark-mode .toc-header h2, body.dark-theme .toc-header h2 {
+    color: #f5f5f7 !important;
+}
+[data-theme='dark'] .toc-list, body.dark-mode .toc-list, body.dark-theme .toc-list {
+    background-color: #1a1a1c !important;
+}
+[data-theme='dark'] .toc-item, body.dark-mode .toc-item, body.dark-theme .toc-item {
+    color: #cccccc !important;
+    border-bottom: 1px solid #333 !important;
+}
+[data-theme='dark'] .toc-item:hover, body.dark-mode .toc-item:hover, body.dark-theme .toc-item:hover {
+    background-color: #2a2a2c !important;
+    color: #ffffff !important;
+}
+[data-theme='dark'] .toc-item.active, body.dark-mode .toc-item.active, body.dark-theme .toc-item.active {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+}
+[data-theme='dark'] .toc-category, body.dark-mode .toc-category, body.dark-theme .toc-category {
+    color: #f5f5f7 !important;
+    background-color: #1a1a1c !important;
+    border-bottom: 1px solid #333 !important;
+}
