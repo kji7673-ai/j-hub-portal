@@ -132,9 +132,9 @@ let currentChapter = 0;
 
 
           let bgImage = page.image;
-                              
-
           if (bgImage) {
+            contentHTML += `<link rel="preload" as="image" href="${bgImage}">`;
+
             let overlayCSS = "background: rgba(255,255,255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);";
             let bgPosition = "center center";
 
@@ -380,12 +380,19 @@ let currentChapter = 0;
         pageEl.innerHTML = contentHTML;
         container.insertBefore(pageEl, navControlsEl);
 
-        // [추가 개선 2] 이미지 미리 불러오기 (Preloading)
+        // [추가 개선 2] 양방향 이미지 미리 불러오기 (Preloading)
         if (currentChapter + 1 < bookData.pages.length) {
           let nextPage = bookData.pages[currentChapter + 1];
           if (nextPage && nextPage.image) {
-            let img = new Image();
-            img.src = nextPage.image;
+            let imgNext = new Image();
+            imgNext.src = nextPage.image;
+          }
+        }
+        if (currentChapter - 1 >= 0) {
+          let prevPage = bookData.pages[currentChapter - 1];
+          if (prevPage && prevPage.image) {
+            let imgPrev = new Image();
+            imgPrev.src = prevPage.image;
           }
         }
 
@@ -612,7 +619,39 @@ let currentChapter = 0;
         }
       }
 
-      window.onload = async () => { try { const res = await fetch("book_data.json?v=" + Date.now()); if (!res.ok) throw new Error("HTTP Error " + res.status); window.bookData = await res.json(); renderBook(); } catch (err) { document.body.innerHTML = "<div style=\"padding: 40px; text-align: center; font-family: sans-serif;\"><h2 style=\"color: #ff3b30;\">원고 데이터 오류 (Syntax Error)</h2><p style=\"color: #333; margin-top: 10px;\">" + err.message + "</p><p style=\"color: #888; font-size: 13px; margin-top: 20px;\">원고 파일(book_data.json)의 쉼표나 따옴표 규칙이 어긋났습니다. 수정 후 다시 배포해주세요.</p></div>"; } };
+      window.onload = async () => {
+    try {
+        const cached = localStorage.getItem("JJournal_bookData_cache_v2");
+        if (cached) {
+            window.bookData = JSON.parse(cached);
+            if(window.bookData && window.bookData.pages) {
+                renderBook();
+            }
+        }
+        
+        // Background fetch for the latest data
+        const res = await fetch("book_data.json?v=" + Date.now());
+        if (!res.ok) throw new Error("HTTP Error " + res.status);
+        const freshData = await res.json();
+        
+        // Cache the fresh data
+        localStorage.setItem("JJournal_bookData_cache_v2", JSON.stringify(freshData));
+        
+        // If it was not cached previously, render now
+        if (!cached || !window.bookData || !window.bookData.pages) {
+            window.bookData = freshData;
+            renderBook();
+        }
+    } catch (err) {
+        if (!window.bookData) {
+            document.body.innerHTML = `<div style="padding: 40px; text-align: center; font-family: sans-serif;">
+                <h2 style="color: #ff3b30;">데이터 로딩 오류</h2>
+                <p style="color: #333; margin-top: 10px;">${err.message}</p>
+                <p style="color: #888; font-size: 13px; margin-top: 20px;">원고 파일을 불러올 수 없습니다. 네트워크를 확인해주세요.</p>
+            </div>`;
+        }
+    }
+};
 
       let bookmarks = JSON.parse(
         localStorage.getItem("JJournal_bookmarks_v3") || "[]",
