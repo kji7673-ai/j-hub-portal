@@ -1,0 +1,33 @@
+docs_apple/
+docs_internal/
+*.zip
+book_data_backup_before_split.js
+node_modules/
+scratch/
+# Temporary ignores to help GitHub Desktop
+*.py
+*.pyc
+__pycache__/
+archive_*
+static 2/
+static 3/
+old_scripts/
+scripts/
+data/
+content/
+edu/
+templates/
+docs/
+docs_minimal/
+*.js
+!main.js
+!app.js
+!book_data.json
+*.txt
+*.command
+*.app
+*.pdf
+*.log
+!static/
+!style.css
+!index.html
