@@ -1933,13 +1933,35 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/act3_white.jpg",
+      "image": "static/images/gallery_sculpture_chair.jpg",
       "title": "여는 글: 제3막: 사람을 알아가는 관계성",
       "text": "",
       "partCategory": "제3막: 사람을 알아가는 관계성",
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "마음과 마음을 잇는 단단한 가교",
+      "type": "image_top",
+      "part": "제3막: 사람을 알아가는 관계성",
+      "isTextAfterImage": false
+    },
+    {
+      "image": "static/images/gallery_sculpture_balance.jpg",
+      "title": "여는 글: 제3막: 사람을 알아가는 관계성",
+      "text": "",
+      "partCategory": "제3막: 사람을 알아가는 관계성",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "type": "image_top",
+      "part": "제3막: 사람을 알아가는 관계성",
+      "isTextAfterImage": false
+    },
+    {
+      "image": "static/images/gallery_sculpture_tall.jpg",
+      "title": "여는 글: 제3막: 사람을 알아가는 관계성",
+      "text": "",
+      "partCategory": "제3막: 사람을 알아가는 관계성",
+      "isImageOnly": true,
+      "isContinuation": true,
       "type": "image_top",
       "part": "제3막: 사람을 알아가는 관계성",
       "isTextAfterImage": false
@@ -3045,19 +3067,32 @@
       "caption": null,
       "isContinuation": true,
       "keywords": "치열한 경쟁 속 피어난 아이디어",
-      "isTextAfterImage": false
+      "isTextAfterImage": false,
+      "isImageOnly": true
     },
     {
       "type": "image_top",
       "title": "100년의 기억",
       "text": "",
-      "image": "static/images/gallery_batch15_arch1_1789125184122.jpg",
+      "image": "static/images/gallery_sketch_blue.jpg",
       "part": "제4막: 증언과 성찰",
       "partTitle": "[Theme 2] 인간관계의 무게",
       "partCategory": "제4막: 증언과 성찰",
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "시간의 지층 위에 새로운 숨결을",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "100년의 기억",
+      "text": "",
+      "image": "static/images/gallery_sketch_topdown.jpg",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
