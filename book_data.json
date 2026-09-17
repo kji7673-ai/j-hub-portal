@@ -18,7 +18,7 @@
       "partCategory": "저자 소개",
       "title": "김중일 (건축사)",
       "text": "",
-      "image": "static/images/gallery_author_baked.jpg?v=1789603436",
+      "image": "static/images/gallery_author_baked.jpg?v=1789603476",
       "type": "author_profile",
       "isImageOnly": false,
       "part": "제1막: 서론",
@@ -922,7 +922,7 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/gallery_sculpture_wing.jpg",
+      "image": "static/images/act2_white.jpg",
       "title": "여는 글: 제2막: 홀로 설 수 있는 단단함",
       "text": "",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
