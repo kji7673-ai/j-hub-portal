@@ -18,7 +18,7 @@
       "partCategory": "저자 소개",
       "title": "김중일 (건축사)",
       "text": "",
-      "image": "static/images/gallery_author_baked.jpg?v=1789604745",
+      "image": "static/images/gallery_author_baked.jpg?v=1789605324",
       "type": "author_profile",
       "isImageOnly": false,
       "part": "제1막: 서론",
@@ -3220,7 +3220,7 @@
     },
     {
       "type": "epilogue",
-      "image": "static/images/epilogue_bg.jpg",
+      "image": "static/images/gallery_sculpture_face.jpg",
       "title": "에필로그: 도면 위의 공유결합",
       "text": "",
       "partCategory": "에필로그: 도면 위의 공유결합",
