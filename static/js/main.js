@@ -185,6 +185,14 @@ let currentChapter = 0;
         const isBakedPage = page.type === "cover" || page.type === "author_profile";
         const isSpecialPage = isBakedPage;
 
+        // Update Document Title for SEO and UX
+        if (page.title) {
+            document.title = page.title + " - 도면 위의 공유결합";
+        } else {
+            document.title = "도면 위의 공유결합 - 김중일";
+        }
+
+
         let bgHTML = "";
         let contentHTML = "";
 
@@ -311,7 +319,7 @@ let currentChapter = 0;
             contentHTML +=
               '<div style="margin-bottom: ' + (isImgOnly ? '0' : (page.type === "author_profile" ? '0' : '40px')) + '; text-align: left; width: 100%;"><img onerror="this.style.display=\'none\'" src="' +
               page.image +
-              '" alt="Chapter Image" style="' + imgStyle + '">';
+              '" alt="' + (page.title || '건축 에세이 이미지') + '" style="' + imgStyle + '">';
 
 
             // 갤러리 캡션 스타일: 1개의 유니크 키워드를 아주 넓은 자간으로 렌더링

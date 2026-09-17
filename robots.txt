@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kji7673-ai.github.io/j-hub-portal/sitemap.xml
