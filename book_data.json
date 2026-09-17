@@ -18,7 +18,7 @@
       "partCategory": "저자 소개",
       "title": "김중일 (건축사)",
       "text": "",
-      "image": "static/images/gallery_author_baked.jpg?v=1789602642",
+      "image": "static/images/gallery_author_baked.jpg?v=1789603382",
       "type": "author_profile",
       "isImageOnly": false,
       "part": "제1막: 서론",
@@ -922,7 +922,7 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/act2_white.jpg",
+      "image": "static/images/gallery_sculpture_wing.jpg",
       "title": "여는 글: 제2막: 홀로 설 수 있는 단단함",
       "text": "",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
@@ -934,9 +934,9 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/gallery_sculpture_wing.jpg",
+      "image": null,
       "title": "여는 글: 제2막: 홀로 설 수 있는 단단함",
-      "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 50vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/gallery_sculpture_wing.jpg\" ></div><div style=\"padding: 40px 0; text-align: left; line-height: 2.0; \">\n<p style=\"margin-bottom: 24px;\">디자인에 있어서는 객체와 바탕의 역할이 있습니다. <br>바탕이 되는 벽면의 단순함과 여백은, 아무리 개성 있는 창들이 자유롭게 배치되어도 그 모든 것을 수용할 수 있습니다. <br>충분한 바탕과 여백이 뒷받침될 때, 비로소 각각의 창문들은 크기와 형태에 구애받지 않고 큰 틀 안에서 자신만의 개성을 오롯이 드러냅니다.</p>\n\n<p style=\"margin-bottom: 24px;\">사람 사이의 관계도 이와 비슷합니다.<br>서로에게 충분한 신뢰가 쌓여 넉넉한 '바탕과 여백'이 되어줄 때, 우리는 비로소 상대방의 본모습을 있는 그대로 받아들일 수 있습니다. <br>\"원하시는 것을 생각나는 대로 툭툭 말씀하셔도 됩니다. 제가 다 잘 받아들이겠습니다.\"<br>이런 말을 듣는 사람은 얼마나 큰 안정감과 기쁨을 느낄까요?</p>\n</div>",
+      "text": "<div style=\"padding: 40px 0; text-align: left; line-height: 2.0; \">\n<p style=\"margin-bottom: 24px;\">디자인에 있어서는 객체와 바탕의 역할이 있습니다. <br>바탕이 되는 벽면의 단순함과 여백은, 아무리 개성 있는 창들이 자유롭게 배치되어도 그 모든 것을 수용할 수 있습니다. <br>충분한 바탕과 여백이 뒷받침될 때, 비로소 각각의 창문들은 크기와 형태에 구애받지 않고 큰 틀 안에서 자신만의 개성을 오롯이 드러냅니다.</p>\n\n<p style=\"margin-bottom: 24px;\">사람 사이의 관계도 이와 비슷합니다.<br>서로에게 충분한 신뢰가 쌓여 넉넉한 '바탕과 여백'이 되어줄 때, 우리는 비로소 상대방의 본모습을 있는 그대로 받아들일 수 있습니다. <br>\"원하시는 것을 생각나는 대로 툭툭 말씀하셔도 됩니다. 제가 다 잘 받아들이겠습니다.\"<br>이런 말을 듣는 사람은 얼마나 큰 안정감과 기쁨을 느낄까요?</p>\n</div>",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "caption": null,
       "isTextAfterImage": true,
