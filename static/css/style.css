@@ -1674,8 +1674,18 @@ h2.chapter-title {
       .bookmark-list-item:hover {
         background: #f9f9f9;
       }
-    
-.toc-item.active .toc-title {
 
+.toc-item.active {
+  background-color: #f5f5f7;
+}
+.toc-item.active .toc-title {
+  color: #0066cc !important;
   font-weight: 700 !important;
+}
+
+[data-theme='dark'] .toc-item.active, body.dark-mode .toc-item.active, body.dark-theme .toc-item.active {
+  background-color: #0066cc !important;
+}
+[data-theme='dark'] .toc-item.active .toc-title, body.dark-mode .toc-item.active .toc-title, body.dark-theme .toc-item.active .toc-title {
+  color: #ffffff !important;
 }
