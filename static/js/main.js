@@ -68,7 +68,7 @@ let currentChapter = 0;
 
           if (index > 0) {
             const prev = bookData.pages[index - 1];
-            if (prev.isImageOnly && prev.title === page.title) {
+            if (prev.title === page.title) {
               return;
             }
           }
