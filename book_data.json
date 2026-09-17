@@ -2661,7 +2661,7 @@
     {
       "type": "image_top",
       "title": "조감도 이면",
-      "image": "static/images/sculpture_looking_down.jpg?v=1",
+      "image": "static/images/gallery_sketch_crosssection.jpg",
       "text": "",
       "part": "제4막: 증언과 성찰",
       "partTitle": "[Theme 2] 인간관계의 무게",
@@ -2669,6 +2669,42 @@
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "환상 너머에 존재하는 차가운 진실",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "조감도 이면",
+      "image": "static/images/gallery_sculpture_disassembled.jpg",
+      "text": "",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "조감도 이면",
+      "image": "static/images/gallery_sculpture_kneeling.jpg",
+      "text": "",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "type": "image_top",
+      "title": "조감도 이면",
+      "image": "static/images/gallery_sculpture_dancers.jpg",
+      "text": "",
+      "part": "제4막: 증언과 성찰",
+      "partTitle": "[Theme 2] 인간관계의 무게",
+      "partCategory": "제4막: 증언과 성찰",
+      "isImageOnly": true,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
