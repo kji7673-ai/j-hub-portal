@@ -143,6 +143,14 @@ let currentChapter = 0;
         const page = bookData.pages[currentChapter];
         if (!page) return;
 
+
+        const pageEl = document.createElement("div");
+        pageEl.className = "page-content active";
+        if (direction === 'next') pageEl.classList.add('slide-next');
+        else if (direction === 'prev') pageEl.classList.add('slide-prev');
+        else pageEl.classList.add('fade-in');
+        pageEl.id = "page-" + currentChapter;
+
         if (page.type === 'gallery_index') {
             let galleryHTML = '<div style="padding: 60px 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box; min-height: 100vh; background: var(--page-bg);">';
             galleryHTML += '<h1 style="text-align: center; font-size: 24px; font-weight: 800; margin-bottom: 10px; color: #1d1d1f;">작품 모아보기</h1>';
@@ -157,19 +165,23 @@ let currentChapter = 0;
             });
             galleryHTML += '</div></div>';
             pageEl.innerHTML = galleryHTML;
-            pageEl.appendChild(navControlsEl);
             container.appendChild(pageEl);
+            container.appendChild(navControlsEl);
             updateControls();
             window.scrollTo(0,0);
+            
+            // Preload next page image for performance
+            if (currentChapter + 1 < bookData.pages.length) {
+                const nextImg = bookData.pages[currentChapter + 1].image;
+                if (nextImg) {
+                    const preloader = new Image();
+                    preloader.src = nextImg;
+                }
+            }
+            saveProgress();
             return;
         }
 
-        const pageEl = document.createElement("div");
-        pageEl.className = "page-content active";
-        if (direction === 'next') pageEl.classList.add('slide-next');
-        else if (direction === 'prev') pageEl.classList.add('slide-prev');
-        else pageEl.classList.add('fade-in');
-        pageEl.id = "page-" + currentChapter;
 
         // 'image_top' is standard. 'image_full', 'cover', 'interlude', 'poem', 'author_profile' are special.
         const isBakedPage = page.type === "cover" || page.type === "author_profile";
