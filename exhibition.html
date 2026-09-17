@@ -146,7 +146,12 @@
 </head>
 <body>
 
+        <button id="bgm-btn" class="close-btn" style="right: 120px; background: none; border: none; cursor: pointer; font-family: var(--apple-font);">🎵 음악 켜기</button>
     <a href="index.html" class="close-btn">✕ 닫기</a>
+    
+    <audio id="bgm" loop>
+        <source src="static/audio/bgm.mp3" type="audio/mpeg">
+    </audio>
     
     <div class="progress-bar">
         <div class="progress-fill" id="progress"></div>
@@ -251,6 +256,22 @@
         const progressFill = document.getElementById('progress');
         const DURATION = 9000; // 9 seconds per slide
         let currentIndex = 0;
+
+        // BGM Control
+        const bgmBtn = document.getElementById('bgm-btn');
+        const bgm = document.getElementById('bgm');
+        let isPlaying = false;
+        
+        bgmBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgm.pause();
+                bgmBtn.textContent = '🎵 음악 켜기';
+            } else {
+                bgm.play().catch(e => console.log('Audio play failed: ', e));
+                bgmBtn.textContent = '⏸ 음악 끄기';
+            }
+            isPlaying = !isPlaying;
+        });
         
         function nextSlide() {
             slides[currentIndex].classList.remove('active');
