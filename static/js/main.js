@@ -637,8 +637,8 @@ let currentChapter = 0;
         // Cache the fresh data
         localStorage.setItem("JJournal_bookData_cache_v2", JSON.stringify(freshData));
         
-        // If it was not cached previously, render now
-        if (!cached || !window.bookData || !window.bookData.pages) {
+        // If it was not cached previously, or if the fresh data is different, render now
+        if (!cached || !window.bookData || !window.bookData.pages || JSON.stringify(freshData) !== JSON.stringify(window.bookData)) {
             window.bookData = freshData;
             renderBook();
         }

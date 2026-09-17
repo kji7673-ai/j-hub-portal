@@ -23,14 +23,13 @@
     />
     <meta
       name="twitter:image"
-      content="https://kji7673-ai.github.io/j-hub-portal/static/images/cover_sculpture.jpg"
+      content="https://kji7673-ai.github.io/j-hub-portal/static/images/gallery_cover_baked.jpg"
     />
 
     <link rel="apple-touch-icon" href="static/images/01.jpg" />
     <link rel="icon" type="image/jpeg" href="static/images/01.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=99999" />
-    <link
+        <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -63,75 +62,7 @@
 
 
     <!-- Bottom Floating Navigation Bar -->
-    <style>
-      .bottom-nav {
-        position: fixed;
-        bottom: 30px;
-        left: 50%;
-        transform: translate(-50%, 20px);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        z-index: 1000;
-      }
-      body.ui-active .bottom-nav {
-        transform: translate(-50%, 0);
-        opacity: 1;
-        pointer-events: auto;
-        display: flex;
-        background: rgba(250, 250, 252, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-radius: 9999px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        padding: 6px 8px;
-        gap: 4px;
-        z-index: 1500;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-      }
-      .bottom-nav button {
-        background: transparent;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0;
-        padding: 10px; border-radius: 50%; width: 44px; height: 44px;
-        font-size: 14px;
-        font-weight: 500;
-
-        border-radius: 9999px;
-        cursor: pointer;
-        transition: background 0.2s;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      }
-      .bottom-nav button:hover,
-      .bottom-nav button:active {
-        background: rgba(0, 0, 0, 0.08);
-      }
-      .bottom-nav button svg {
-        width: 18px;
-        height: 18px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .image-caption {
-        font-family: "SF Pro Text", system-ui, -apple-system, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.43;
-        letter-spacing: -0.224px;
-        color: #7a7a7a;
-        text-align: center;
-        margin-top: 12px;
-        margin-bottom: 32px;
-      }
-</style>
+    
 
     <div id="toast-notification"></div>
     <div class="bottom-nav">
@@ -158,57 +89,7 @@
 
     <!-- Modals -->
     <div id="toc-overlay" onclick="closeTOC()"></div>
-    <style>
-      .floating-btn:hover {
-        background: #f0f0f0 !important;
-      }
-      .bookmark-modal,
-      .resume-modal,
-      .feedback-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 2000;
-        justify-content: center;
-        align-items: center;
-        backdrop-filter: blur(2px);
-      }
-      .modal-content-box {
-        background: #fff;
-        width: 400px;
-        max-width: 90%;
-        border-radius: 12px;
-        padding: 24px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-      }
-      .modal-content-box h3 {
-        margin-top: 0;
-
-        font-size: 18px;
-        margin-bottom: 12px;
-      }
-      .bookmark-list-item {
-        padding: 12px 10px;
-        border-bottom: 1px solid #eee;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        font-weight: 600;
-        font-size: 14px;
-      }
-      .bookmark-list-item:hover {
-        background: #f9f9f9;
-      }
-    </style>
+    
 
 
     <!-- Resume Reading Modal -->
