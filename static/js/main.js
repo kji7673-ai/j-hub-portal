@@ -1,4 +1,32 @@
 // --- 마스터 개선 로직 주입 ---
+      
+      function updateTOCHighlight() {
+        const items = Array.from(document.querySelectorAll('.toc-item'));
+        let activeItem = null;
+        items.forEach(item => {
+            item.style.color = '';
+            item.style.fontWeight = '';
+            if (parseInt(item.getAttribute('data-index')) <= currentChapter) {
+                activeItem = item;
+            }
+        });
+        if (activeItem) {
+            activeItem.style.color = '#0066cc';
+            activeItem.style.fontWeight = '700';
+            
+            // Auto scroll TOC to active item if needed
+            const groupContent = activeItem.parentElement;
+            if (groupContent && groupContent.style.display === 'none') {
+                groupContent.style.display = 'block';
+                const headerEl = groupContent.previousElementSibling;
+                if(headerEl) {
+                    const icon = headerEl.querySelector('.accordion-icon');
+                    if (icon) icon.innerText = '▲';
+                }
+            }
+        }
+      }
+
       function updateProgressBar() {
         const progress = document.getElementById("progress-bar");
         if (progress && bookData && bookData.pages) {
@@ -92,6 +120,7 @@ let currentChapter = 0;
 
             const li = document.createElement("div");
             li.className = "toc-item";
+            li.setAttribute("data-index", index);
             li.innerHTML = '<span class="toc-title" style="pointer-events: none;">' + page.title + "</span>";
             li.onclick = () => {
               currentChapter = index;
@@ -110,8 +139,30 @@ let currentChapter = 0;
         document.querySelectorAll(".page-content").forEach((p) => p.remove());
 
         updateProgressBar();
+        updateTOCHighlight();
         const page = bookData.pages[currentChapter];
         if (!page) return;
+
+        if (page.type === 'gallery_index') {
+            let galleryHTML = '<div style="padding: 60px 20px; max-width: 800px; margin: 0 auto; box-sizing: border-box; min-height: 100vh; background: var(--page-bg);">';
+            galleryHTML += '<h1 style="text-align: center; font-size: 24px; font-weight: 800; margin-bottom: 10px; color: #1d1d1f;">작품 모아보기</h1>';
+            galleryHTML += '<p style="text-align: center; font-size: 14px; color: #7a7a7a; margin-bottom: 40px;">책에 수록된 갤러리 작품들을 한눈에 확인하고 이동할 수 있습니다.</p>';
+            galleryHTML += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; padding-bottom: 100px;">';
+            bookData.pages.forEach((p, idx) => {
+                if (p.image && !p.image.includes('white') && !p.image.includes('cover') && p.image !== 'static/images/01.jpg') {
+                    galleryHTML += `<div style="aspect-ratio: 1; overflow: hidden; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: #eee;" onclick="currentChapter=${idx}; renderCurrentChapter('fade'); window.scrollTo(0,0);">`;
+                    galleryHTML += `<img src="${p.image}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">`;
+                    galleryHTML += `</div>`;
+                }
+            });
+            galleryHTML += '</div></div>';
+            pageEl.innerHTML = galleryHTML;
+            pageEl.appendChild(navControlsEl);
+            container.appendChild(pageEl);
+            updateControls();
+            window.scrollTo(0,0);
+            return;
+        }
 
         const pageEl = document.createElement("div");
         pageEl.className = "page-content active";
@@ -497,6 +548,15 @@ let currentChapter = 0;
       );
 
       function renderBook() {
+
+        if (!window.bookData.pages.some(p => p.type === 'gallery_index')) {
+            window.bookData.pages.push({
+                type: 'gallery_index',
+                title: '갤러리 인덱스 (작품 모아보기)',
+                partCategory: '부록'
+            });
+        }
+
         renderTOC();
 
         // URL Deep Linking: Check hash first
@@ -545,6 +605,15 @@ let currentChapter = 0;
           "[" + (currentChapter + 1) + " / " + totalChapters + "]";
 
         if (typeof saveProgress === "function") saveProgress();
+
+        // Preload next page image for performance
+        if (currentChapter + 1 < bookData.pages.length) {
+            const nextImg = bookData.pages[currentChapter + 1].image;
+            if (nextImg) {
+                const preloader = new Image();
+                preloader.src = nextImg;
+            }
+        }
       }
 
       function prevPage() {
