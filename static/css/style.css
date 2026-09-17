@@ -1675,3 +1675,7 @@ h2.chapter-title {
         background: #f9f9f9;
       }
     
+.toc-item.active .toc-title {
+  color: #0066cc !important;
+  font-weight: 700 !important;
+}

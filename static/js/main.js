@@ -4,15 +4,13 @@
         const items = Array.from(document.querySelectorAll('.toc-item'));
         let activeItem = null;
         items.forEach(item => {
-            item.style.color = '';
-            item.style.fontWeight = '';
+            item.classList.remove('active');
             if (parseInt(item.getAttribute('data-index')) <= currentChapter) {
                 activeItem = item;
             }
         });
         if (activeItem) {
-            activeItem.style.color = '#0066cc';
-            activeItem.style.fontWeight = '700';
+            activeItem.classList.add('active');
             
             // Auto scroll TOC to active item if needed
             const groupContent = activeItem.parentElement;
