@@ -59,26 +59,24 @@
             visibility: visible;
         }
 
-        /* 켄 번스 효과 이미지 */
+                /* 켄 번스 효과 이미지 */
         .slide-bg {
             position: absolute;
-            top: -5%; left: -5%;
-            width: 110%; height: 110%;
-            background-size: cover;
-            background-position: center;
-            /* 초기 상태: 확대 안 됨 */
-            transform: scale(1) translate(0, 0);
-            transition: transform 10s ease-out;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center 40%;
+            transform: scale(1);
+            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
-        /* 짝수 번째 슬라이드는 줌인, 홀수 번째는 줌아웃 효과 느낌 부여 */
+        /* 짝수 홀수 방향 전환 유지, 스케일은 부드럽게 */
         .slide:nth-child(odd).active .slide-bg {
-            transform: scale(1.08) translate(-1%, 1%);
-            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: scale(1.04);
         }
         .slide:nth-child(even).active .slide-bg {
-            transform: scale(1.08) translate(1%, -1%);
-            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: scale(1.04);
         }
         
         /* 다크 오버레이 (텍스트 가독성) */
