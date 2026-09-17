@@ -3015,7 +3015,8 @@
       "isImageOnly": true,
       "keywords": "도면 속 단단한 건축의 본질",
       "isContinuation": true,
-      "part": "제4막: 증언과 성찰"
+      "part": "제4막: 증언과 성찰",
+      "partCategory": "제4막: 증언과 성찰"
     },
     {
       "title": "서계동 현상설계 - 투시도 1",
@@ -3024,7 +3025,8 @@
       "isImageOnly": true,
       "keywords": "계단식 조경과 테라스의 조화",
       "isContinuation": true,
-      "part": "제4막: 증언과 성찰"
+      "part": "제4막: 증언과 성찰",
+      "partCategory": "제4막: 증언과 성찰"
     },
     {
       "title": "서계동 현상설계 - 투시도 2",
@@ -3033,7 +3035,8 @@
       "isImageOnly": true,
       "keywords": "눈 내리는 용산 언덕의 풍경",
       "isContinuation": true,
-      "part": "제4막: 증언과 성찰"
+      "part": "제4막: 증언과 성찰",
+      "partCategory": "제4막: 증언과 성찰"
     },
     {
       "type": "text_only",
