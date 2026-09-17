@@ -61,16 +61,13 @@ let currentChapter = 0;
         let currentCategory = null;
         let currentGroupContent = null;
         let groupCounter = 0;
+        let seenTitlesInCategory = new Set();
 
         bookData.pages.forEach((page, index) => {
           if (page.type === "author_profile") return;
           if (page.isContinuation === true) return;
 
           if (index > 0) {
-            const prev = bookData.pages[index - 1];
-            if (prev.title === page.title) {
-              return;
-            }
           }
 
           if (
@@ -80,6 +77,7 @@ let currentChapter = 0;
           ) {
             let cat = page.partCategory || "프롤로그";
             if (cat !== currentCategory) {
+              seenTitlesInCategory.clear();
               currentCategory = cat;
               groupCounter++;
               const groupId = "toc-group-" + groupCounter;
@@ -115,6 +113,9 @@ let currentChapter = 0;
               group.appendChild(groupContent);
               tocList.appendChild(group);
             }
+
+            if (seenTitlesInCategory.has(page.title)) return;
+            seenTitlesInCategory.add(page.title);
 
             const li = document.createElement("div");
             li.className = "toc-item";
