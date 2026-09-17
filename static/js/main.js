@@ -382,7 +382,36 @@ let currentChapter = 0;
           contentHTML += `<div style="max-width: 600px; width: 100%; margin: 0; text-align: left; line-height: 1.6; font-size: 1.1em;  word-break: keep-all; letter-spacing: -0.03em; display: flex; flex-direction: column; font-weight: 400;">`;
         }
 
+        
         let pText = page.text || "";
+
+        // DYNAMIC TOC GENERATION
+        if (page.title === "목차") {
+            let tocStructure = {};
+            bookData.pages.forEach(p => {
+                if (p.type === 'cover' || p.type === 'author_profile' || p.type === 'gallery_index' || p.title === '목차') return;
+                let title = p.title || '';
+                if (!title) return;
+                let part = p.part || '제4막: 증언과 성찰'; // Fallback for safety
+                if (!tocStructure[part]) tocStructure[part] = [];
+                if (!tocStructure[part].includes(title)) tocStructure[part].push(title);
+            });
+            
+            let autoHtml = '<div style=" text-align: left; padding: 40px 0 20px 0; max-width: 600px; margin: 0 auto; line-height: 1.8;">';
+            for (let part in tocStructure) {
+                autoHtml += '<h3 style="font-size: 17px; font-weight: 700; color: #0066cc; margin-top: 24px; margin-bottom: 12px; letter-spacing: -0.3px;">' + part + '</h3>';
+                autoHtml += '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px;">';
+                tocStructure[part].forEach(t => {
+                    let dispTitle = t.replace("여는 글: ", "");
+                    autoHtml += '<div style="font-size: 14px; color: var(--ink); font-weight: 500; display: flex; align-items: baseline;"><span style="color: #999; margin-right: 8px; font-size: 11px;">•</span> ' + dispTitle + '</div>';
+                });
+                autoHtml += '</div>';
+            }
+            autoHtml += '</div>';
+            pText = autoHtml;
+        }
+
+
         pText = pText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
         pText = pText.replace(/<blockquote[^>]*>/gi, '<blockquote class="editorial-quote">');
 
