@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도면 위의 공유결합 - 가상 전시관</title>
+    <style>
+        :root {
+            --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            overflow: hidden;
+            font-family: var(--apple-font);
+            color: #ffffff;
+        }
+
+        /* ✕ 닫기 버튼 */
+        .close-btn {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: none;
+            z-index: 1000;
+            transition: color 0.3s ease;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .close-btn:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        /* 슬라이드 컨테이너 */
+        #gallery {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 2.5s ease-in-out, visibility 2.5s;
+        }
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 켄 번스 효과 이미지 */
+        .slide-bg {
+            position: absolute;
+            top: -5%; left: -5%;
+            width: 110%; height: 110%;
+            background-size: cover;
+            background-position: center;
+            /* 초기 상태: 확대 안 됨 */
+            transform: scale(1) translate(0, 0);
+            transition: transform 10s ease-out;
+        }
+        
+        /* 짝수 번째 슬라이드는 줌인, 홀수 번째는 줌아웃 효과 느낌 부여 */
+        .slide:nth-child(odd).active .slide-bg {
+            transform: scale(1.08) translate(-1%, 1%);
+            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .slide:nth-child(even).active .slide-bg {
+            transform: scale(1.08) translate(1%, -1%);
+            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        /* 다크 오버레이 (텍스트 가독성) */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%);
+            z-index: 10;
+        }
+
+        /* 텍스트 컨테이너 */
+        .text-content {
+            position: absolute;
+            bottom: 12%;
+            left: 10%;
+            max-width: 800px;
+            z-index: 20;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 2s ease-out 1.5s, transform 2s ease-out 1.5s;
+        }
+        .slide.active .text-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0071e3; /* Apple Action Blue */
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .quote {
+            font-size: 32px;
+            font-weight: 200;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+            color: #f5f5f7;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        /* 진행 상태 바 */
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            z-index: 1000;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #0071e3;
+            width: 0%;
+        }
+
+        @media (max-width: 768px) {
+            .quote { font-size: 22px; }
+            .text-content { left: 5%; bottom: 10%; width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="close-btn">✕ 닫기</a>
+    
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <div id="gallery">
+        <!-- 제1관 -->
+        <div class="slide active">
+            <div class="slide-bg" style="background-image: url('static/images/gallery_sculpture_tall.jpg');"></div>
+            <div class="overlay"></div>
+            <div class="text-content">
+                <div class="subtitle">제1관: 자아 (Identity)</div>
+                <div class="quote">"원자핵과 전자처럼, 스스로의 무게감과 정체성을 가질 것."</div>
+            </div>
+        </div>
+
+        <!-- 제2관 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('static/images/gallery_sculpture_balance.jpg');"></div>
+            <div class="overlay"></div>
+            <div class="text-content">
+                <div class="subtitle">제2관: 여백 (Void)</div>
+                <div class="quote">"단순한 거리 두기가 아닌, 상처받지 않을 거리.<br>오롯이 혼자 설 수 있는 독립성."</div>
+            </div>
+        </div>
+
+        <!-- 제3관 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('static/images/gallery_sculpture_dancers.jpg');"></div>
+            <div class="overlay"></div>
+            <div class="text-content">
+                <div class="subtitle">제3관: 결합 (Covalent Bond)</div>
+                <div class="quote">"독립된 원자가 필요를 나누며 결합하듯,<br>관계도 디자인도 그러합니다."</div>
+            </div>
+        </div>
+
+        <!-- 제4관 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('static/images/gallery_batch8_frame1.jpg');"></div>
+            <div class="overlay"></div>
+            <div class="text-content">
+                <div class="subtitle">제4관: 바탕과 요소 (Background & Element)</div>
+                <div class="quote">"바탕은 요소를 품고, 요소는 바탕 안에서 변화를 만듭니다."</div>
+            </div>
+        </div>
+
+        <!-- 제5관 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('static/images/gallery_sculpture_sphere.jpg'); background-position: top center;"></div>
+            <div class="overlay"></div>
+            <div class="text-content">
+                <div class="subtitle">제5관: 성숙 (Maturity)</div>
+                <div class="quote">"아주 간단함 속에 깃든 인간적 성숙함.<br>그것이 모든 디자인의 원리가 됩니다."</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const progressFill = document.getElementById('progress');
+        const DURATION = 9000; // 9 seconds per slide
+        let currentIndex = 0;
+        
+        function nextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+            
+            // Reset progress bar animation
+            progressFill.style.transition = 'none';
+            progressFill.style.width = '0%';
+            
+            // Force reflow
+            void progressFill.offsetWidth;
+            
+            // Start progress bar animation
+            progressFill.style.transition = `width ${DURATION}ms linear`;
+            progressFill.style.width = '100%';
+        }
+        
+        // Initial setup
+        progressFill.style.transition = `width ${DURATION}ms linear`;
+        progressFill.style.width = '100%';
+        
+        setInterval(nextSlide, DURATION);
+    </script>
+</body>
+</html>
