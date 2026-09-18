@@ -1689,3 +1689,43 @@ h2.chapter-title {
 [data-theme='dark'] .toc-item.active .toc-title, body.dark-mode .toc-item.active .toc-title, body.dark-theme .toc-item.active .toc-title {
   color: #ffffff !important;
 }
+
+/* 명문장 하이라이트 (Core Philosophy) */
+.core-philosophy {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #0066cc;
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px 10px;
+    position: relative;
+    word-break: keep-all;
+    letter-spacing: -0.02em;
+}
+.core-philosophy::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0066cc;
+    margin: 0 auto 25px auto;
+    opacity: 0.5;
+}
+.core-philosophy::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0066cc;
+    margin: 25px auto 0 auto;
+    opacity: 0.5;
+}
+[data-theme='dark'] .core-philosophy, body.dark-mode .core-philosophy, body.dark-theme .core-philosophy {
+    color: #2997ff !important;
+}
+[data-theme='dark'] .core-philosophy::before, body.dark-mode .core-philosophy::before,
+[data-theme='dark'] .core-philosophy::after, body.dark-mode .core-philosophy::after {
+    background-color: #2997ff !important;
+}
