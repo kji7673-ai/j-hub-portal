@@ -393,7 +393,7 @@ let currentChapter = 0;
                 if (p.type === 'cover' || p.type === 'author_profile' || p.type === 'gallery_index' || p.title === '목차') return;
                 let title = p.title || '';
                 if (!title) return;
-                let part = p.part || '제4막: 증언과 성찰'; // Fallback for safety
+                let part = p.part || '제4막: 또 다른 하루를 위하여'; // Fallback for safety
                 if (!tocStructure[part]) tocStructure[part] = [];
                 if (!tocStructure[part].includes(title)) tocStructure[part].push(title);
             });
