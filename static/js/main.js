@@ -851,7 +851,7 @@ let currentChapter = 0;
         let submitBtn = null;
         btns.forEach(b => { if(b.getAttribute('onclick') === 'sendFeedbackEmail()') submitBtn = b; });
         
-        const originalText = submitBtn ? submitBtn.innerText : "전송하기";
+        const originalText = submitBtn ? submitBtn.innerText : "전송";
         if (submitBtn) {
             submitBtn.innerText = "전송 중...";
             submitBtn.disabled = true;
