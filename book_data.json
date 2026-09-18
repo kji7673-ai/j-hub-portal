@@ -1768,6 +1768,17 @@
       "isTextAfterImage": true
     },
     {
+      "title": "중심의 무게",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "text_only",
+      "image": null,
+      "isContinuation": false,
+      "isImageOnly": false,
+      "keywords": "관계, 중심, 본질",
+      "text": "사실, 제가 가장 힘들어하는 부분이 바로 이 '관계'에 대한 것입니다. <br><br>\n나만의 단단한 기준을 세우고 여유를 가지면 된다고 늘 생각하지만, 현실은 다릅니다. <br>\n기준을 내세우기는커녕, 여유를 차릴 시간조차 없이 사시나무 떨듯 흔들려 스스로 민망할 때가 많습니다. <br><br>\n차라리 흔들릴 땐 다행입니다. <br>\n정말 부끄러운 순간은, 언젠가 스쳐 지나갈 별것도 아닌 것들을 쥐고서 <br>\n상대방에게 \"이것이 정답이다!\"라며 우쭐댈 때입니다. <br><br>\n내 안에 중심을 두고 간격을 유지한다는 것은 단지 나를 보호한다는 뜻만이 아닙니다. <br>\n외부에 함부로 휩쓸리지 않는, 나만의 묵직한 중심을 가져야 한다는 뜻입니다. <br><br>\n떨리지도, 우쭐해하지도 않을 단단한 본질이 없으니 <br>\n별것도 아닌 외부의 인력에 이리저리 휘둘립니다. <br>\n중심을 잡지 못해 휘청거려 놓고선, 그것이 마치 남 탓인 양 힘들어하는 제 모습이 참 안쓰러울 때가 있습니다. <br><br>\n'사람을 알아간다는 것'은 결국, <br>\n내 중심의 무게를 온전히 가지는 것이고, <br>\n그 묵직한 무게로 굳건하게 관계 맺음을 해나간다는 뜻일 겁니다. <br>\n오늘도 저는 그렇게 스스로 다짐을 합니다."
+    },
+    {
       "type": "image_top",
       "title": "만들어져 간다는 것",
       "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_3.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_2.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_4.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_5.jpg\" ></div>",
