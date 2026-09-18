@@ -837,20 +837,56 @@ let currentChapter = 0;
         document.getElementById("feedback-modal").style.display = "flex";
       }
 
-      function sendFeedbackEmail() {
+            function sendFeedbackEmail() {
         const text = document.getElementById("feedback-text").value;
         if (!text.trim()) {
           alert("내용을 입력해주세요.");
           return;
         }
-        const chapterTitle = bookData.pages[currentChapter]?.title || "";
-        const subject = encodeURIComponent(
-          `[독자 소감] 기획서는 곧 건축가의 얼굴이다 (${chapterTitle} 읽음)`,
-        );
-        const body = encodeURIComponent(text);
-        const mailtoLink = `mailto:kji7673@gmail.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-        document.getElementById("feedback-modal").style.display = "none";
+        
+        const chapterTitle = bookData.pages[currentChapter]?.title || "알 수 없는 페이지";
+        
+        // Find the button and change text
+        const btns = document.querySelectorAll('.floating-btn');
+        let submitBtn = null;
+        btns.forEach(b => { if(b.getAttribute('onclick') === 'sendFeedbackEmail()') submitBtn = b; });
+        
+        const originalText = submitBtn ? submitBtn.innerText : "전송하기";
+        if (submitBtn) {
+            submitBtn.innerText = "전송 중...";
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.7";
+        }
+
+        fetch("https://formsubmit.co/ajax/kji7673@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                "읽고 있던 챕터": chapterTitle,
+                "독자 피드백": text,
+                "_subject": "[도면 위의 공유결합] 새로운 독자 소감이 도착했습니다!"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("성공적으로 전송되었습니다! 작가님께 큰 힘이 됩니다.\n(최초 1회 전송 시, 작가님의 메일로 온 '활성화(Activate)' 버튼을 눌러주셔야 이후부터 메일이 정상 수신됩니다.)");
+            document.getElementById("feedback-text").value = "";
+            document.getElementById("feedback-modal").style.display = "none";
+        })
+        .catch(error => {
+            console.error(error);
+            alert("전송에 실패했습니다. 인터넷 연결을 확인해주세요.");
+        })
+        .finally(() => {
+            if (submitBtn) {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = "1";
+            }
+        });
       }
 
 
