@@ -308,14 +308,39 @@
 
     <script>
         // 3D Parallax Effect
+        let targetX = 0, targetY = 0;
+        let currentX = 0, currentY = 0;
+        let time = 0;
+
         document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
-            const gallery = document.getElementById('gallery');
-            if (gallery) {
-                gallery.style.transform = `perspective(1500px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            targetX = (window.innerWidth / 2 - e.pageX) / 40;
+            targetY = (window.innerHeight / 2 - e.pageY) / 40;
+        });
+
+        // 스마트폰 기울임(Gyroscope) 지원
+        window.addEventListener('deviceorientation', (e) => {
+            if (e.gamma !== null && e.beta !== null) {
+                targetX = e.gamma / 2; // 좌우 기울임
+                targetY = (e.beta - 45) / 2; // 상하 기울임 (45도 기준)
             }
         });
+
+        function animate3D() {
+            time += 0.008;
+            // 마우스나 스마트폰을 안 움직여도 스스로 숨을 쉬듯 아주 천천히 3D로 움직임
+            let autoX = Math.sin(time) * 4;
+            let autoY = Math.cos(time * 0.7) * 4;
+
+            currentX += ((targetX + autoX) - currentX) * 0.05;
+            currentY += ((targetY + autoY) - currentY) * 0.05;
+
+            const gallery = document.getElementById('gallery');
+            if (gallery) {
+                gallery.style.transform = `perspective(1500px) rotateY(${currentX}deg) rotateX(${currentY}deg)`;
+            }
+            requestAnimationFrame(animate3D);
+        }
+        animate3D();
 
         const slides = document.querySelectorAll('.slide');
         const progressFill = document.getElementById('progress');
