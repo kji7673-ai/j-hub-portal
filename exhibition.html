@@ -52,7 +52,7 @@
             height: 100%;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 2.5s ease-in-out, visibility 2.5s;
+            transition: opacity 1.2s ease-in-out, visibility 1.2s;
         }
         .slide.active {
             opacity: 1;
@@ -68,7 +68,7 @@
             background-repeat: no-repeat;
             background-position: center 40%;
             transform: scale(1);
-            transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
         /* 짝수 홀수 방향 전환 유지, 스케일은 부드럽게 */
@@ -96,7 +96,7 @@
             z-index: 20;
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 2s ease-out 1.5s, transform 2s ease-out 1.5s;
+            transition: opacity 1.2s ease-out 0.8s, transform 1.2s ease-out 0.8s;
         }
         .slide.active .text-content {
             opacity: 1;
@@ -278,7 +278,7 @@
     <script>
         const slides = document.querySelectorAll('.slide');
         const progressFill = document.getElementById('progress');
-        const DURATION = 9000; // 9 seconds per slide
+        const DURATION = 6000; // 9 seconds per slide
         let currentIndex = 0;
 
         // BGM Control
