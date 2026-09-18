@@ -106,7 +106,7 @@
       "text": "",
       "image": "static/images/gallery_batch7_wire_duo_1789096969490.jpg",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "공유결합, 홍익인간",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "isTextAfterImage": false
@@ -239,7 +239,7 @@
       "image": null,
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "스스로 빛나는 별"
     },
     {
@@ -383,7 +383,7 @@
       "image": null,
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "함께 좋아한다는 것"
     },
     {
@@ -778,7 +778,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "caption": null,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "서로 얽히어 피어나는 조화",
       "isTextAfterImage": false
     },
@@ -1013,7 +1013,7 @@
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "caption": "",
       "keywords": "쉼, 여백, 홀로서기",
       "isTextAfterImage": false
@@ -1178,7 +1178,7 @@
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": ""
     },
     {
@@ -1238,7 +1238,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "모든 것을 태워 남긴 텅 빈 여백"
     },
     {
@@ -1706,7 +1706,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "책임의 무게를 견디는 단단한 기둥"
     },
     {
@@ -2335,7 +2335,8 @@
       "part": "제3막: 사람을 알아간다는 것",
       "title": "무엇이든 만들어야만 했던 시간",
       "text": "<p style=\"margin-bottom: 24px;\">그렇게 시간이 흘러 책상 위에 만들어진 조형물들이 하나둘 늘어났을 때, 저는 문득 그 사람들을 가만히 마주 보게 세워보았습니다. 텅 빈 가슴을 한 두 조형물이 서로를 섣불리 침범하지도, 억지로 채우려 하지도 않은 채 고요히 마주 보고 서 있었습니다. 그때 뒤늦게 깨달았습니다. 저는 아무 생각 없이 플라스틱 선을 녹이며 마음을 달래고 있었지만, 제 손끝은 이미 일방적으로 무언가를 떠받치던 단계를 지나 서로의 여백을 마주 보는 '공유결합'의 궤적을 빚어내고 있었다는 사실을 말입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">그렇게 빚어낸 수많은 조형물들은 이제 제 곁에 없습니다. 만들다 보니 책상 위가 가득 찰 만큼 무수히 많아져서, 제 인연이 닿는 사람들에게 하나둘 나누어 주었기 때문입니다. 대신 그 조형물들의 사진 한 장씩만을 제게 남겨두었습니다. 제가 나누어준 그 텅 빈 가슴의 조형물들이 지금도 누군가의 공간에 남아있을지, 아니면 버려져 사라졌을지 저는 알지 못합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">다만, 그 고요한 밤 홀로 책상에 앉아 3D 펜을 쥐고 버텨냈던 시간들만이 남아, 저를 무너지지 않게 지탱해 주고 다시금 삶과 사람을 마주 보게 해 준 단단한 '보이드(Void)'가 되었습니다.</p>\n\n<div style=\"display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; justify-content: center; margin-top: 40px; margin-bottom: 20px;\">\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_4.jpg\" >\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_5.jpg\" >\n</div>",
-      "partCategory": "제3막: 사람을 알아간다는 것"
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "isContinuation": true
     },
     {
       "part": "제3막: 사람을 알아간다는 것",
@@ -2548,7 +2549,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "골목길을 지키는 소박한 등대"
     },
     {
@@ -2668,7 +2669,7 @@
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "옛길 위에 새로 쓰는 공간의 시"
     },
     {
@@ -2715,7 +2716,7 @@
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
       "isTextAfterImage": false
     },
@@ -2749,7 +2750,7 @@
       "image": "static/images/seogye_wireframe.png?v=3",
       "isImageOnly": true,
       "keywords": "도면 속 단단한 건축의 본질",
-      "isContinuation": true,
+      "isContinuation": false,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
@@ -2760,7 +2761,7 @@
       "image": "static/images/seogye_cg_1.jpg",
       "isImageOnly": true,
       "keywords": "계단식 조경과 테라스의 조화",
-      "isContinuation": true,
+      "isContinuation": false,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
@@ -2771,7 +2772,7 @@
       "image": "static/images/seogye_cg_2.jpg",
       "isImageOnly": true,
       "keywords": "눈 내리는 용산 언덕의 풍경",
-      "isContinuation": true,
+      "isContinuation": false,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
@@ -2784,7 +2785,7 @@
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
       "isTextAfterImage": false
     },
@@ -2893,7 +2894,7 @@
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
       "isTextAfterImage": false,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "시간의 지층 위에 새로운 숨결을"
     },
     {
@@ -2953,7 +2954,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "평가를 넘어선 진정성의 증명"
     },
     {
