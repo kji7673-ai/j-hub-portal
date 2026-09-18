@@ -929,7 +929,7 @@
     {
       "type": "image_top",
       "title": "딱 니 맘 크기만큼",
-      "text": "",
+      "text": "딱 니 맘 크기만큼 보인다. <br><br>\n휴~ 하고 숨을 내쉬며, 생각을 정리해 봅니다. <br>\n내가 보는 것에 갇혀 생각이 좁아졌을 것이고, <br>\n그 좁아진 생각으로 보니 '꼭 이 길로만 가야 할 것' 같았을 겁니다. <br>\n정말 그럴까요? <br><br>\n그렇지 않습니다. <br>\n사람의 능력 중 하나가 <br>\n과거와 현재와 미래를 오갈 수 있다는 것입니다. <br><br>\n후~ 하고 다시 들이쉬며, <br>\n생각의 범위를 넓히고, 다시 한번 시작해 봅니다. <br><br>\n설계를 하며 깨달은 것 중 하나는 <br>\n<strong>'어떻게든 나온다'</strong>는 것입니다.",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "image": "static/images/gallery_new_1.jpg",
       "isImageOnly": true,
@@ -989,66 +989,6 @@
       "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p style=\"margin-bottom: 24px;\">그럼, 변화되는 상황에서 어떤 기준으로 업무를 진행하고 관계 맺음을 해야 할까요? <br>'방향성'이라고 말씀드려야 될 것 같습니다. <br><strong>흐름의 방향을 알고, 그 속에서 상대의 말과 약속을 파악해야 합니다.</strong> </p>\n\n<p style=\"margin-bottom: 24px;\">감정에 의존하거나, 현재의 말에 따라 섣불리 판단해서는 안 됩니다. <br>설계를 하는 것도 동일합니다. <br>지금의 단편적인 사실을 가지고 설계를 하면 안 됩니다. <br><strong>전체의 계획 개념을 가지고, 설계 진행의 흐름과 방향성을 설계자가 명확히 인지하고 가야 합니다.</strong> </p>\n\n<p style=\"margin-bottom: 24px;\">그래서, 함께하는 사람들이 모두 같은 목표 지점에 도달할 수 있도록 해야 합니다. <br>하지만, 저와 같이 수많은 조합원과 주민들을 만나는 사람들은 <br>매 순간 '약속'의 말을 해주기를 바라고 또 채근받기도 합니다. </p>\n\n<p style=\"margin-bottom: 24px;\">그럴 때마다 혀끝에서 맴도는 가벼운 말보다, <br>사업지의 현황을 명확히 파악하고 전체의 흐름 속에서 목표점을 이야기하는 것으로 조심스럽게 말씀을 드려야 하는 것입니다. </p>\n\n<p style=\"margin-bottom: 24px;\">그래도 결국 닫힌 사람의 마음을 열고 무언가를 굳건히 세우는 것은, <br><strong>투박할지언정 묵묵히 땀 흘려 약속을 증명해 내는 조용한 뒷모습입니다. </strong></p>\n</div>",
       "type": "text_only",
       "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "title": "무게",
-      "text": "",
-      "image": "static/images/gallery_batch4_leaning.jpg",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "책임의 무게를 견디는 단단한 기둥",
-      "isTextAfterImage": false
-    },
-    {
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "title": "언덕 맨 윗집",
-      "text": "서울 올라와 지금까지 언덕 위에 집을 얻어 살아왔습니다. <br><br>\n언덕 위 맨 윗집은 전망이 좋습니다. <br>대신 그 길까지 가는 길에 몇 번을 쉬어야 합니다. <br><br>\n천천히 올라가며, <br>오늘 하루의 일을 털어 버리고 언덕에서 불어 오는 바람에 또 흩어 버립니다. <br><br>\n그래도 가끔은 <strong>언덕길 가로등에</strong> <br><strong>길게 늘어진 제 그림자가 유난히 무거워 보일 때가 있습니다.</strong> <br><br>\n휴~ 하고 쉴 때는 아마 내 그림자가 무겁기 때문입니다.",
-      "image": null,
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "text_only",
-      "caption": null,
-      "isTextAfterImage": true,
-      "isContinuation": true,
-      "keywords": "책임의 무게를 견디는 단단한 기둥"
-    },
-    {
-      "type": "image_top",
-      "title": "삼켜낸 말",
-      "text": "",
-      "image": "static/images/gallery_batch5_dancing.jpg",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "침묵으로 다져진 마음의 위로",
-      "isTextAfterImage": false
-    },
-    {
-      "type": "text_only",
-      "title": "삼켜낸 말",
-      "text": "<strong>침을 꿀꺽 삼킵니다</strong><br>아들에게 말해준 적이 있습니다. 일을 하다 보면 사회적 위계를 무기 삼아 함부로 사람을 대하는 경우를 무수히 겪는다고. 그때마다 목구멍까지 욱하고 올라오는 것들을 억지로 삼켜내야 했던 날들이 참 많았습니다. <br><br>하고 싶은 말도, 마땅히 내뱉어야 할 말조차 꾹꾹 눌러 담았습니다. 속이 까맣게 문드러질 것 같았지만, 결국 그 쓰라린 감정들도 묵묵히 삼키다 보면 언젠가 스스로 소화되어 나간다는 것을 현장의 시간 속에서 배웠습니다. <br><br><strong>술 한 잔</strong><br>세상일 중에 술잔에 털어 넣지 못할 것이 있을까요? 분노와 서운함, 그리고 차마 내뱉지 못하고 삼켜냈던 숱한 말들도 결국 이 씁쓸한 한 잔에 기대어 훌훌 녹여냅니다.",
-      "image": null,
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "caption": null,
-      "isTextAfterImage": true,
-      "isContinuation": true,
-      "keywords": "침묵으로 다져진 마음의 위로"
-    },
-    {
-      "type": "text_only",
-      "title": "삼켜낸 말",
-      "text": "세상일 중에 이 술잔에 담지 못할 것이 무엇이 있을까. <br><strong>\"그래 내 잔에 담길 정도면 40도는 되어야지\"</strong> <br><br>탁 털어넣다, <br>이따금 정신을 잃곤 합니다. <br><br>: 나름 사람들과의 만남에 호기심과 기대를 가지지만, <br>가끔은 답답할 때가 있습니다. <br>이럴 때 시간이 필요합니다. <br>약간의 거리두기 <br>그리고 내 중심 잘 잡기입니다.",
-      "image": null,
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "caption": null,
-      "isContinuation": true,
-      "keywords": "침묵으로 다져진 마음의 위로",
       "isTextAfterImage": false
     },
     {
@@ -1791,6 +1731,66 @@
       "isContinuation": true,
       "keywords": "깊은 땅속에 뿌리내린 심지",
       "part": "제2막: 홀로 설 수 있는 단단함",
+      "isTextAfterImage": false
+    },
+    {
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "title": "무게",
+      "text": "",
+      "image": "static/images/gallery_batch4_leaning.jpg",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "책임의 무게를 견디는 단단한 기둥",
+      "isTextAfterImage": false
+    },
+    {
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "title": "언덕 맨 윗집",
+      "text": "서울 올라와 지금까지 언덕 위에 집을 얻어 살아왔습니다. <br><br>\n언덕 위 맨 윗집은 전망이 좋습니다. <br>대신 그 길까지 가는 길에 몇 번을 쉬어야 합니다. <br><br>\n천천히 올라가며, <br>오늘 하루의 일을 털어 버리고 언덕에서 불어 오는 바람에 또 흩어 버립니다. <br><br>\n그래도 가끔은 <strong>언덕길 가로등에</strong> <br><strong>길게 늘어진 제 그림자가 유난히 무거워 보일 때가 있습니다.</strong> <br><br>\n휴~ 하고 쉴 때는 아마 내 그림자가 무겁기 때문입니다.",
+      "image": null,
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "text_only",
+      "caption": null,
+      "isTextAfterImage": true,
+      "isContinuation": true,
+      "keywords": "책임의 무게를 견디는 단단한 기둥"
+    },
+    {
+      "type": "image_top",
+      "title": "삼켜낸 말",
+      "text": "",
+      "image": "static/images/gallery_batch5_dancing.jpg",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "침묵으로 다져진 마음의 위로",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "text_only",
+      "title": "삼켜낸 말",
+      "text": "<strong>침을 꿀꺽 삼킵니다</strong><br>아들에게 말해준 적이 있습니다. 일을 하다 보면 사회적 위계를 무기 삼아 함부로 사람을 대하는 경우를 무수히 겪는다고. 그때마다 목구멍까지 욱하고 올라오는 것들을 억지로 삼켜내야 했던 날들이 참 많았습니다. <br><br>하고 싶은 말도, 마땅히 내뱉어야 할 말조차 꾹꾹 눌러 담았습니다. 속이 까맣게 문드러질 것 같았지만, 결국 그 쓰라린 감정들도 묵묵히 삼키다 보면 언젠가 스스로 소화되어 나간다는 것을 현장의 시간 속에서 배웠습니다. <br><br><strong>술 한 잔</strong><br>세상일 중에 술잔에 털어 넣지 못할 것이 있을까요? 분노와 서운함, 그리고 차마 내뱉지 못하고 삼켜냈던 숱한 말들도 결국 이 씁쓸한 한 잔에 기대어 훌훌 녹여냅니다.",
+      "image": null,
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "caption": null,
+      "isTextAfterImage": true,
+      "isContinuation": true,
+      "keywords": "침묵으로 다져진 마음의 위로"
+    },
+    {
+      "type": "text_only",
+      "title": "삼켜낸 말",
+      "text": "세상일 중에 이 술잔에 담지 못할 것이 무엇이 있을까. <br><strong>\"그래 내 잔에 담길 정도면 40도는 되어야지\"</strong> <br><br>탁 털어넣다, <br>이따금 정신을 잃곤 합니다. <br><br>: 나름 사람들과의 만남에 호기심과 기대를 가지지만, <br>가끔은 답답할 때가 있습니다. <br>이럴 때 시간이 필요합니다. <br>약간의 거리두기 <br>그리고 내 중심 잘 잡기입니다.",
+      "image": null,
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "caption": null,
+      "isContinuation": true,
+      "keywords": "침묵으로 다져진 마음의 위로",
       "isTextAfterImage": false
     },
     {
