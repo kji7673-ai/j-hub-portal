@@ -872,7 +872,7 @@ let currentChapter = 0;
         })
         .then(response => response.json())
         .then(data => {
-            alert("성공적으로 전송되었습니다! 작가님께 큰 힘이 됩니다.\n(최초 1회 전송 시, 작가님의 메일로 온 '활성화(Activate)' 버튼을 눌러주셔야 이후부터 메일이 정상 수신됩니다.)");
+            alert("소중한 의견이 작가님께 성공적으로 전송되었습니다! 따뜻한 관심에 감사드립니다.");
             document.getElementById("feedback-text").value = "";
             document.getElementById("feedback-modal").style.display = "none";
         })
