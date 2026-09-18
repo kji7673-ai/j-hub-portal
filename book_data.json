@@ -929,7 +929,7 @@
     {
       "type": "image_top",
       "title": "딱 니 맘 크기만큼",
-      "text": "딱 니 맘 크기만큼 보인다. <br>\n휴~ 하고 숨을 내쉬고, 생각을 정리해 봅니다. <br>\n내가 보는것으로 인해 생각이 좁아졌을것이고, <br>\n그 생각으로 보니 이렇게 꼭 가야만 할것 같을 겁니다. <br>\n정말 그럴까요? <br><br>\n그렇지 않습니다. <br>\n사람의 능력중 하나가 <br>\n과거와 현재와 미래를 오갈 수 있다는 것입니다. <br><br>\n후~하고 다시 들이쉬고, <br>\n생각의 범위를 넓히고, 다시 한번 시작해봅니다. <br><br>\n설계를 하면 깨달은 것 중 하나는<br>\n어떻게든 나온다입니다.",
+      "text": "딱 니 맘 크기만큼 보인다. <br>\n휴~ 하고 숨을 내쉬고, 생각을 정리해 봅니다. <br>\n내가 보는 것으로 인해 생각이 좁아졌을 것이고, <br>\n그 생각으로 보니 이렇게 꼭 가야만 할 것 같을 겁니다. <br>\n정말 그럴까요? <br><br>\n그렇지 않습니다. <br>\n사람의 능력 중 하나가 <br>\n과거와 현재와 미래를 오갈 수 있다는 것입니다. <br><br>\n후~ 하고 다시 들이쉬고, <br>\n생각의 범위를 넓히고, <br>\n\"설계는 딱 니 맘 크기만큼 나온다\" 그 잔소리를 다시 생각합니다. <br><br>\n설계를 하면 깨달은 것 중 하나는 <br>\n휴~ 하고 다시 내쉬고 다시 시작합니다. <br><br>\n관계에서도 그렇습니다. 조금만 감정을 묻혀 두려 합니다. <br>\n어머님의 \"니는 아직 생속이다\" 그 맘을 생각합니다. <br><br>\n다시 숨을 쉬었다 내쉽니다. <br>\n시간이 흐르면 됩니다. 꺼낸 말은 주워 담을 수 없습니다. <br><br>\n미소로 사람과의 간격을 다시 가깝게도 멀게도 합니다.",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "image": "static/images/gallery_new_1.jpg",
       "isImageOnly": true,
@@ -937,18 +937,6 @@
       "keywords": "먼지 속에서 캐낸 삶의 지혜",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "isTextAfterImage": false
-    },
-    {
-      "type": "text_only",
-      "title": "딱 니 맘 크기만큼",
-      "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p style=\"margin-bottom: 24px;\">오늘의 내가 <br>배워야 할 것들은 기술적인 것이 아닙니다. </p>\n<p style=\"margin-bottom: 24px;\">사람을 통해서 배워가야 합니다. </p>\n<p style=\"margin-bottom: 24px;\">아직도 모난 나는 <br>돌아가신 어머니의 <strong>'니는 아직 생속이다'</strong> <br>그 맴도는 말에 부끄러울 때가 많습니다. </p>\n<p style=\"margin-bottom: 24px;\">그리고, 나의 첫 회사 박찬정 소장님의<br><strong>'설계는 딱 니 맘 크기만큼 나오는 거다'</strong> 소리가 들리는 것 같아 <br>얼른 다시 계획안을 들여다보게 됩니다. </p>\n<p style=\"margin-bottom: 24px;\">나도 이제 한 회사의 대표가 되었지만, <br>아직도 사람 만나는 것을 뒤로 미루곤 합니다. </p>\n</div>",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "image": null,
-      "caption": null,
-      "isTextAfterImage": true,
-      "isContinuation": true,
-      "keywords": "먼지 속에서 캐낸 삶의 지혜",
-      "part": "제2막: 홀로 설 수 있는 단단함"
     },
     {
       "type": "text_only",
