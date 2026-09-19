@@ -37,19 +37,6 @@
       "text": ""
     },
     {
-      "type": "image_top",
-      "title": "프롤로그: 건축만 할 줄 아는 설계자의 이야기",
-      "subtitle": "",
-      "image": "static/images/prologue_white.jpg",
-      "text": "",
-      "part": "프롤로그",
-      "partCategory": "저자 소개",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "투박한 선 끝에 맺힌 진심",
-      "isTextAfterImage": false
-    },
-    {
       "type": "text_only",
       "title": "프롤로그: 건축만 할 줄 아는 설계자의 이야기",
       "subtitle": "",
@@ -59,7 +46,7 @@
       "partCategory": "저자 소개",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "투박한 선 끝에 맺힌 진심"
     },
     {
@@ -76,40 +63,16 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/gallery_sketch_buildings2.jpg",
-      "title": "여는 글: 제1막: 건축과 사람 그리고 디자인",
-      "text": "",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "서로 스며들어 완성되는 공간",
-      "type": "image_top",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "isTextAfterImage": false
-    },
-    {
       "image": null,
       "title": "여는 글: 제1막: 건축과 사람 그리고 디자인",
       "text": "공유결합은 원자들이 각자의 전자를 내어놓아 함께 공유하며, 홀로일 때보다 더 안정적인 상태를 이루는 화학적 현상입니다. <br><br>무기물들이 수많은 주고받음을 통해 이토록 단단한 결합을 이루듯, '나'라는 개체 역시 사람과의 수많은 주고받음 속에서 세상과 연결되어 '우리'라는 거대한 관계를 만듭니다. '관계'라는 두 글자 안에는 참 많은 것이 담겨 있습니다. 나라는 존재, 당신이라는 존재, 그리고 당신이 내게 주는 소중함. <br><br>우린 이미 '널리 사람을 이롭게 한다'에 대해선 배웠습니다. 어쩌면 <strong>우리는 관계 속에서 비로소 나라는 존재를 느끼고, 그 존재가 다시 관계 속에서 우리 모두를 이롭게 한다는 사실이 저는 참 좋습니다.</strong>",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "서로 스며들어 완성되는 공간",
       "type": "text_only",
       "part": "제1막: 건축과 사람 그리고 디자인"
-    },
-    {
-      "type": "image_top",
-      "title": "여는 글: 제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "text": "",
-      "image": "static/images/gallery_batch7_wire_duo_1789096969490.jpg",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "keywords": "공유결합, 홍익인간",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -200,7 +163,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch3_sphere_1789095532897.jpg",
+      "image": "static/images/prologue_white.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": false,
@@ -211,7 +174,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch8_frame1.jpg",
+      "image": "static/images/gallery_sketch_buildings2.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
@@ -222,7 +185,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch4_leaning_1789095654604.jpg",
+      "image": "static/images/gallery_batch7_wire_duo_1789096969490.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
@@ -233,7 +196,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch11_sketch2.jpg",
+      "image": "static/images/gallery_sketch_buildings1.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
@@ -244,51 +207,7 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_sculpture_facelamp.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_sculpture_face.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch11_relief.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch12_sculpture3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_sculpture_handlamp.jpg",
+      "image": "static/images/gallery_batch10_frame3.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
@@ -367,6 +286,61 @@
       "isTextAfterImage": false
     },
     {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch3_sphere_1789095532897.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_handlamp.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_relief_1789121822071.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_facelamp.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch10_sculpture2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "존재의 조건",
       "text": "<div style=\"padding: 40px 0; text-align: left; line-height: 2.0; \">\n<p style=\"margin-bottom: 24px;\">저는 설계하는 일이 참 좋습니다. <br>왜 좋냐고요? <br>혹시 음악 좋아하시나요? 운동은요? 영화는요?</p>\n\n<p style=\"margin-bottom: 24px;\">그런데, 만약 아무도 없는 세상에 당신만 있다면, <br>음악, 운동, 영화, 건축이 다 무슨 의미가 있을까요?</p>\n\n<p style=\"margin-bottom: 24px;\">'시(詩)'라는 것도 마찬가지입니다. <br>어떤 이는 시대정신이 담기지 않은 시가 무슨 시냐고 꾸짖지만, <br>그저 음악이나 영화처럼 누군가와 깊이 공감할 수 있고, <br>사람과 사람 사이를 건강하게 맺어주는 것이라면 <br>그것 자체로 얼마나 사람을 널리 이롭게 하는 것일까요.</p>\n\n<p style=\"margin-bottom: 24px;\">아마 우리가 매일 땀 흘려 하는 모든 일들은, <br>결국 누군가와 '좋은 관계'를 맺어가기 위한 과정일 것입니다.</p>\n\n<p style=\"margin-bottom: 24px; font-weight: 600; color: #0066cc;\">함께 무언가를 좋아한다는 것. <br>그것이 가장 다정하고 훌륭한 '공유결합' 입니다.</p>\n\n<p style=\"margin-bottom: 24px;\"><strong>존재의 조건은 관계에 있습니다.</strong></p>\n\n<p style=\"margin-bottom: 24px;\">특히, 그래서 건축이 좋습니다.</p>\n</div>",
@@ -389,105 +363,6 @@
       "isContinuation": false,
       "keywords": "삶의 온기를 담아내는 그릇",
       "part": "제1막: 건축과 사람 그리고 디자인"
-    },
-    {
-      "title": "[여백]",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch11_relief_1789121822071.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_frame_3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch10_sculpture2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_new_3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch6_bowl_white2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_wire_dance.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch11_sculpture.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -523,6 +398,61 @@
       "caption": null,
       "isContinuation": true,
       "keywords": "자연의 맥락에 녹아드는 겸손함",
+      "isTextAfterImage": false
+    },
+    {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch6_carry_mass2_1789096477688.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_wire_dance_1789096956496.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_relief.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_sculpture.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_sketch1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -646,6 +576,61 @@
       "keywords": "비워진 틈새가 품고 있는 무한함"
     },
     {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_sketch2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch12_sculpture1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch12_sculpture2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch12_sculpture3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch12_sculpture4.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "part": "제1막: 건축과 사람 그리고 디자인",
       "title": "다닥다닥 붙은 집들",
       "text": "바라 봄이 없는 집에서<br>\n보이는 것마저 두려워 가리고 가린다<br>\n제 소리 남이 들을까 남의 소리 차단하고<br>\n그저 서로가 없는 듯 있는 듯 죽은 척 살아가기를 바란다<br>\n너무 가까이 살기에 서로에게 멀어지기 위해 닫고 닫아<br>\n상대와 제가 멀리 떨어진 것처럼<br>\n그렇게 상대와 제가 없는 것처럼 그렇게<br>\n혹시 옆에 누가 살고 있는지 알고 있나요?<br><br>\n사람과 사람이 건강하게 어울려 살려면 반드시 필요한 조건이 하나 있습니다. 서로의 사생활을 편안하게 지켜줄 수 있는 물리적이고 심리적인 틈, 즉 '적당한 거리 두기'입니다. 하지만 도시에 집을 지어야 하는 냉혹한 경제 논리는 우리를 작은 땅덩어리 위에 다닥다닥 붙어살게끔 내몰았습니다.<br><br>\n이토록 숨 막히는 빽빽함 속에서는 그저 문을 굳게 닫아걸고, 옆집에 누가 사는지조차 모른 채 서로 '없는 사람'처럼 살아가는 것이 오히려 예의가 되어버렸습니다. 골목길에서 이웃을 만나던 정이 사라진 풍경을 볼 때마다, 건축을 업으로 삼는 사람으로서 마음 한구석이 참 먹먹해집니다.<br><br>\n어쩔 수 없는 도시의 현실이라 해도, 그 안에서 아주 작게나마 이웃과 눈인사를 나눌 '여유'를 만들어내는 것이 설계자의 몫이 아닐까요? 저는 다세대주택이라 할지라도, 아파트 단지의 경로당처럼 동네 사람들이 오며 가며 쉴 수 있는 아주 작은 '사랑방' 하나쯤은 품고 있어야 한다고 믿습니다.<br><br>\n지자체에서 용적률이나 층수를 조금 완화해 줄 때, 그 조건으로 동네 어귀에 작은 쉼터나 커뮤니티 공간을 내어주도록 제도가 따뜻하게 품어준다면, 지금 우리의 삭막한 골목 풍경도 조금은 더 다정해지지 않을까요?",
@@ -706,59 +691,14 @@
       "keywords": "섬세한 디테일이 건네는 깊은 울림"
     },
     {
-      "title": "다정한 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "text_only",
-      "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n디자인은 어디서 나오는 것일까요? <br>감각이나 방대한 지식에서 나오는 것일까요? <br><br>제가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다. <br><br>타인에 대한 배려와 관심, <br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다. <br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민, <br>그리고 바람과 조망에 대한 깊은 공감이 있을 때 진짜 설계가 나옵니다. <br>대단한 논리보다 먼저 다정한 사람이 되시길 바랍니다. <br><br>다정한 디자인\n</p>\n</div>\n\n\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. <strong>설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고.</strong> ..... 그때 그 말에 참 부끄러웠습니다.\n",
-      "image": null,
-      "caption": null,
-      "isTextAfterImage": true,
-      "isContinuation": false,
-      "keywords": "사람을 품어 안는 따뜻한 곡선",
-      "part": "제1막: 건축과 사람 그리고 디자인"
-    },
-    {
       "title": "[여백]",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch12_sculpture1.jpg",
+      "image": "static/images/gallery_batch8_frame1.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_wire_duo.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_kimjoongil_2.jpg?v=2",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch5_falling1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -767,6 +707,17 @@
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/act3_sculpture_1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch3_face.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
@@ -788,33 +739,23 @@
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
-      "image": "static/images/gallery_batch9_arch5.jpg",
+      "image": "static/images/act2_white.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": true,
       "isTextAfterImage": false
     },
     {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
+      "title": "다정한 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/act2_sculpture_1.jpg?v=1",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제1막: 건축과 사람 그리고 디자인",
-      "partCategory": "제1막: 건축과 사람 그리고 디자인",
-      "type": "image_top",
-      "image": "static/images/gallery_batch12_sculpture2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
+      "type": "text_only",
+      "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n디자인은 어디서 나오는 것일까요? <br>감각이나 방대한 지식에서 나오는 것일까요? <br><br>제가 생각하는 디자인은 결국 본인의 인격적 성숙에서 나옵니다. <br><br>타인에 대한 배려와 관심, <br>다정함이 있는 사람이라면<br>그것이 자연스레 공간에 묻어납니다. <br><br>건물을 청소하는 분, 택배 기사님, 기존 지역 주민, <br>그리고 바람과 조망에 대한 깊은 공감이 있을 때 진짜 설계가 나옵니다. <br>대단한 논리보다 먼저 다정한 사람이 되시길 바랍니다. <br><br>다정한 디자인\n</p>\n</div>\n\n\n예전 첫 직장에서 소장님께 계획안을 보여 드렸을 때, 들었던 이야기입니다. <strong>설계하는 것을 보면 마음이 보인다고, 마음을 넓히라고.</strong> ..... 그때 그 말에 참 부끄러웠습니다.\n",
+      "image": null,
+      "caption": null,
+      "isTextAfterImage": true,
+      "isContinuation": false,
+      "keywords": "사람을 품어 안는 따뜻한 곡선",
+      "part": "제1막: 건축과 사람 그리고 디자인"
     },
     {
       "type": "text_only",
@@ -851,6 +792,61 @@
       "isTextAfterImage": false,
       "isContinuation": true,
       "keywords": "서로 얽히어 피어나는 조화"
+    },
+    {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_heart.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_new_1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch2_1789097505174.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/sculpture_1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/sculpture_2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -925,25 +921,13 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/act2_white.jpg",
-      "title": "여는 글: 제2막: 홀로 설 수 있는 단단함",
-      "text": "",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "자립하는 영혼의 외로운 기초",
-      "type": "image_top",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "isTextAfterImage": false
-    },
-    {
       "image": null,
       "title": "여는 글: 제2막: 홀로 설 수 있는 단단함",
       "text": "<div style=\"padding: 40px 0; text-align: left; line-height: 2.0; \">\n<p style=\"margin-bottom: 24px;\">디자인에 있어서는 객체와 바탕의 역할이 있습니다. <br>바탕이 되는 벽면의 단순함과 여백은, 아무리 개성 있는 창들이 자유롭게 배치되어도 그 모든 것을 수용할 수 있습니다. <br><strong>충분한 바탕과 여백이 뒷받침될 때, 비로소 각각의 창문들은 크기와 형태에 구애받지 않고 큰 틀 안에서 자신만의 개성을 오롯이 드러냅니다.</strong> </p>\n\n<p style=\"margin-bottom: 24px;\">사람 사이의 관계도 이와 비슷합니다. <br>서로에게 충분한 신뢰가 쌓여 넉넉한 '바탕과 여백'이 되어줄 때, 우리는 비로소 상대방의 본모습을 있는 그대로 받아들일 수 있습니다. <br><strong>\"원하시는 것을 생각나는 대로 툭툭 말씀하셔도 됩니다. 제가 다 잘 받아들이겠습니다.\"</strong><br><strong>이런 말을 듣는 사람은 얼마나 큰 안정감과 기쁨을 느낄까요?</strong> </p>\n</div>",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "자립하는 영혼의 외로운 기초",
       "type": "text_only",
       "part": "제2막: 홀로 설 수 있는 단단함"
@@ -985,94 +969,6 @@
       "isTextAfterImage": true
     },
     {
-      "title": "[여백]",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_new_1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch13_wire2_1789124561183.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_wire_dance_1789096956496.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch4.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch12_sculpture4.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch5_falling2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch5_dancing.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch4_heart.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
       "type": "text_only",
       "title": "",
       "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p style=\"margin-bottom: 24px;\">관계성을 잘 유지하기 위해서는, <br>먼저 나라는 사람부터 중심이 단단하게 잡혀 있어야 합니다. <br>즉, 우리가 논의했던 공유 결합의 1원칙, 홀로 설 수 있는 '독립된 원자'가 되어야 합니다. <br>전자의 궤도를 지탱하는 튼튼한 중심이 서 있어야 <br>비로소 남에게 내어줄 전자도, 남으로부터 받아들일 전자도 생기기 때문입니다. </p>\n\n<p style=\"margin-bottom: 24px;\">그리고 또 하나 잊지 말아야 할 것이 있습니다. <br>수많은 사람과 결합하며 살아가더라도, <br>인간의 본질은 결국 홀로 서서 묵묵히 제 몫을 견뎌내야 하는 '혼자'라는 사실입니다. </p>\n\n<p style=\"margin-bottom: 24px;\"><strong>스스로 흔들림 없이 홀로 설 수 있는 사람만이</strong> <br><strong>비로소 타인과 굳건하게 결합할 수 있습니다.</strong> </p>\n</div>",
@@ -1091,8 +987,7 @@
       "text": "우리가 사회생활을 하면서, 상대가 무슨 생각을 하는지 전혀 몰라 힘들 때가 있습니다. <br>\n그럴 때 제가 생각하는 정답을 하나 말씀드려 볼까요? <br><br>\n<strong>'상대방도 자신의 생각을 잘 모른다'</strong>는 것입니다. <br><br>\n조금 가볍게 말씀드렸지만, 만약 다른 사람의 생각을 볼 수 있는 사람이 있다면, <br>\n그 사람은 다른 사람들과 소통할 수 있을까요? <br>\n내면의 소리를 듣는 초능력을 가진 사람의 영화도 나오긴 합니다. <br><br>\n진짜 우리가 상대의 생각을 이미지로 볼 수 있다면, <br>\n과연 그 사람이 앞으로 할 행동과 일치한다고 볼 수 있을까요? <br>\n<strong>현시점에서 느끼는 감정, 그리고 스쳐 지나가는 것들로 온전히 판단할 수 있을까요?</strong> <br><br>\n생각은 누구나 자유롭게 다 할 수 있지만, <br>\n그것을 말로 내뱉는 것이냐, 아니면 행동으로 옮기는 것이냐가 중요합니다. <br><br>\n생각은 내 안에 머물러 있는 것이고, <br>\n말과 행동과 글은 밖으로 나오는 순간 상대방의 것이 되어 버립니다. <br>\n한 번 더 생각해 볼 것은 지금의 말이 그 사람의 행동과 일치할까 하는 점입니다. <br><br>\n<strong>실제 우리의 생각은 얼마나 자주 왔다 갔다 하는지 모릅니다.</strong> <br>\n<strong>내가 알고 있는 정보의 한계가 있어 잘못 판단할 수도 있고,</strong> <br>\n<strong>조건이 변경될 수도 있습니다.</strong>",
       "type": "text_only",
       "isContinuation": false,
-      "isTextAfterImage": true,
-      "image": null
+      "isTextAfterImage": true
     },
     {
       "part": "제2막: 홀로 설 수 있는 단단함",
@@ -1101,8 +996,7 @@
       "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p style=\"margin-bottom: 24px;\">그럼, 변화되는 상황에서 어떤 기준으로 업무를 진행하고 관계 맺음을 해야 할까요? <br>'방향성'이라고 말씀드려야 될 것 같습니다. <br><strong>흐름의 방향을 알고, 그 속에서 상대의 말과 약속을 파악해야 합니다.</strong> </p>\n\n<p style=\"margin-bottom: 24px;\">감정에 의존하거나, 현재의 말에 따라 섣불리 판단해서는 안 됩니다. <br>설계를 하는 것도 동일합니다. <br>지금의 단편적인 사실을 가지고 설계를 하면 안 됩니다. <br><strong>전체의 계획 개념을 가지고, 설계 진행의 흐름과 방향성을 설계자가 명확히 인지하고 가야 합니다.</strong> </p>\n\n<p style=\"margin-bottom: 24px;\">그래서, 함께하는 사람들이 모두 같은 목표 지점에 도달할 수 있도록 해야 합니다. <br>하지만, 저와 같이 수많은 조합원과 주민들을 만나는 사람들은 <br>매 순간 '약속'의 말을 해주기를 바라고 또 채근받기도 합니다. </p>\n\n<p style=\"margin-bottom: 24px;\">그럴 때마다 혀끝에서 맴도는 가벼운 말보다, <br>사업지의 현황을 명확히 파악하고 전체의 흐름 속에서 목표점을 이야기하는 것으로 조심스럽게 말씀을 드려야 하는 것입니다. </p>\n\n<p style=\"margin-bottom: 24px;\">그래도 결국 닫힌 사람의 마음을 열고 무언가를 굳건히 세우는 것은, <br><strong>투박할지언정 묵묵히 땀 흘려 약속을 증명해 내는 조용한 뒷모습입니다. </strong></p>\n</div>",
       "type": "text_only",
       "isContinuation": true,
-      "isTextAfterImage": false,
-      "image": null
+      "isTextAfterImage": false
     },
     {
       "part": "제2막: 홀로 설 수 있는 단단함",
@@ -1141,6 +1035,61 @@
       "isTextAfterImage": true
     },
     {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/sculpture_3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch5_falling1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch5_falling2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch5_hunched.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch5_running.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "part": "제2막: 홀로 설 수 있는 단단함",
       "title": "오늘을 산다는 것",
       "text": "<strong>오늘을 산다는 것, 그것은 큰 용기가 필요한 일입니다. </strong><br>\n오늘을 살아낸다는 것은 결국 과거의 결과를 고스란히 맞이한다는 뜻이기 때문입니다. <br>\n<br>\n때로는 언 땅, 언 하늘 아래에서 벗겨진 살갗의 고통을<br>\n그대로 받아내야만 할 때가 있습니다. <br>\n<br>\n그래도 어쩔 수 없습니다. <br>\n오늘을 맞이한다는 것에는 아픈 용기가 필요합니다. <br>\n<br>\n오늘을 산다는 것. <br>\n오늘을 직시한다는 것은 단단한 용기가 필요합니다. <br>\n하지만 바로 그곳에서, 다시 시작해야 할 때가 있습니다. <br><br>\n제게 '오늘을 산다는 것'은 곧 '과거에 제가 했던 디자인(결과물)을 마주하는 것'과 같습니다. <br>\n<br>\n오랜 시간 동안 제게 건축은 낭만이 아니라 '생존' 그 자체와 얽혀 있었습니다. <br>\n그것은 아마도, 서울에 처음 올라왔을 때 제 삶은 생존에 가까웠고, 그 생존에 유일하게 의미를 부여해 준 것이 바로 '건축'이었기 때문일 겁니다. <br>\n<br>\n아직까지도 \"이건 제가 했다\"라고 자랑스레 내세울 만한 대단한 것은 없지만, 그래도 저는 건축을 하는 사람입니다. <br>\n그래서 아직도 제 결과물이 저를 몹시 아프게 찌르기도 하고, 견디기 버겁기도 합니다. <br>\n<br>\n<strong>결과가 부끄러워서 아프고, 그저 힘들어서 힘이 듭니다. </strong>\n",
@@ -1157,8 +1106,7 @@
       "text": "어느 날 어린 딸의 손을 잡고 길을 걷고 있었습니다. 딸아이는 제 손을 이리저리 만지며 신기한 듯 살펴보더니 불쑥 이렇게 말했습니다.\n\"아빠 손에 누룽지 있다!\"\n아이의 눈에는 도면을 그리고 현장을 누비며 생긴 제 손의 투박한 굳은살이 바삭한 누룽지처럼 보였나 봅니다. 그 표현이 참 예뻐서 한참을 웃었습니다. 제 손에 박힌 지난 세월이 정말로 누룽지가 되어버린 것 같았습니다.<br><br>지나온 시간은 결코 사라지지 않고, 현재 우리의 모습 어딘가에 이처럼 고스란히 남습니다. 훌쩍 커버린 아이들의 모습 속에서, 어느새 부쩍 늙어버리신 어머니의 굽은 등 속에서 시간의 흐름을 봅니다. 그것은 흐뭇함과 가슴 아린 슬픔을 동시에 안겨줍니다.<br><br>시간은 우리 주변을 변화시키며 그 무게와 흔적을 켜켜이 더해가는데, 이상하게도 오직 제 마음만은 그 흐름을 온전히 담아내지 못한 것 같습니다. 어른이라는 껍데기를 쓰고 있지만, 속은 아직도 어리고 무른 생속 그대로입니다. 제 마음에는 굳은살도, 아이가 말한 누룽지도 생기지 않아 남들이 던지는 무심한 돌멩이에도 여전히 아프고 쉽게 상처를 받습니다.<br><br>지나온 시간이 삶의 테가 되어 예전보다는 조금 더 굵어지고 튼튼해져야 하는데, 저는 아직 나이테조차 맺히지 않은 여린 나뭇가지처럼 세상의 바람에 이리저리 휘청이고 있습니다. 이만큼의 세월이 흘렀다면 이제는 흔들리지 않는 든든한 나무가 되어야 할 텐데 말입니다.<br><br><span class=\"core-philosophy\">거친 현장에서 버텨낸 세월이 고스란히 손에 남아 있듯,<br>이제는 제 여린 마음에도 손에 박힌 누룽지처럼<br>단단한 굳은살이 자리 잡았으면 좋겠습니다.</span> 그렇게 홀로 설 수 있는 단단함이 제 안에도 채워지기를 조용히 바라봅니다.",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "text_only",
-      "image": null
+      "type": "text_only"
     },
     {
       "part": "제2막: 홀로 설 수 있는 단단함",
@@ -1207,6 +1155,61 @@
       "isTextAfterImage": true,
       "isContinuation": false,
       "keywords": ""
+    },
+    {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch6_bowl_brown.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_flat_1789095642326.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch6_bowl_white2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch14_duo_light_1789124898491.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch6_carry_mass2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "part": "제2막: 홀로 설 수 있는 단단함",
@@ -1305,6 +1308,61 @@
       "isTextAfterImage": false
     },
     {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_leaning_1789095654604.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch13_wire2_1789124561183.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_clay1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_clay2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_wire_dance.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "title": "바스락거림",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "text_only",
@@ -1377,6 +1435,61 @@
       "keywords": "서로 다른 시선이 짓는 풍경"
     },
     {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_wire_duo.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch8_frame2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_hands_dark.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "직선이면 족하다",
       "text": "인생의 목표에 너무 정조준하며 일직선으로만 가겠다고 살진 않았으면 좋겠습니다. 약간은 운을 바라며 설렁설렁, 흔들흔들 앞으로만 나아가면 됩니다. <br>일직선이라는 똑바름이 목표가 되다 보면 정말 엉뚱한 방향으로 가기도 합니다. <br><br>\n선 긋기도 가까이서 보면 흔들흔들인데, 전체로 볼 때 직선인 게 좋습니다. 조금은 흔들흔들해도 괜찮습니다. 순간순간 흔들려도 괜찮습니다. 포기만 하지 않는다면, 중심을 잡고 있다면 괜찮습니다.\n<br><br>\n무슨 일이든 중간에 포기하지 않고 묵묵히 선을 긋다 보면, 언젠가는 자신만의 경지에 오를 수 있다고 믿습니다. <br>\n<br>\n제가 건축을 참 좋아하는 이유는, 이 일이 <strong>'사람의 깊이'</strong>와 나란히 걸어간다는 점 때문입니다. 건축은 단순히 선을 긋는 기술이 아니라, 사람과 환경, 그리고 그 관계성에 대한 깊은 이해가 있어야만 비로소 가능한 직업이니까요. <br>\n<br>\n타인을 이해하려 애쓰는 만큼 도면의 깊이도 깊어지는 일. <br>\n그래서 저는 건축이 참 좋습니다.\n",
@@ -1437,6 +1550,61 @@
       "keywords": "실현되지 못한 꿈의 허무함"
     },
     {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch4.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch5.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_frame_4.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_leaning.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch5_dancing.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "part": "제2막: 홀로 설 수 있는 단단함",
       "title": "선을",
       "text": "<div style=\"text-align: left; max-width: 500px; margin: 0;\">\n<p>\n그리며 살아갑니다<br>\n흰 종이 위에<br>\n한 선을 그었습니다. <br><br>\n애초에 긋지 않았다면<br>\n모르겠지만<br>\n이미 종이 위 선은 그려졌고<br><br>\n이제 바라는 것은<br>\n그 선이 서로를 묶는<br>\n울타리가 되거나<br>\n서로의 마음을 엮어내는 선이 되었으면 좋겠습니다. <br><br>\n혹 구분 짓는<br>\n선이 되더라도<br>\n혹 어긋나는<br>\n선이 생기더라도<br><br>\n회피하지 말고<br>\n그 위에 더 여러 번<br>\n또 다른 선을 그려가며<br>\n그렇게 다듬어갔으면 좋겠습니다.\n</p>\n</div>",
@@ -1461,101 +1629,13 @@
       "part": "제2막: 홀로 설 수 있는 단단함"
     },
     {
-      "title": "[여백]",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_clay1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch6_bowl_brown.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/sculpture_3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_clay2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch2_1789097505174.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch11_sketch1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch5_hunched.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_frame_4.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
       "type": "text_only",
       "title": "무게 중심",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "text": "<p>설계자의 역할은 숱한 갈등 속에서도 스스로의 약함을 인정하고, 그 틈새로 타인을 받아들이는 유연한 '그릇'이 되는 것입니다. 현장에는 늘 서로 다른 욕망과 한계들이 충돌합니다. 비용 절감을 최우선으로 삼는 자본의 논리, 행정적 편의를 요구하는 제도의 잣대, 그리고 쾌적한 삶을 열망하는 거주자의 요구까지. 만약 건축가가 어느 한쪽의 이익에만 목적을 둔다면 어떻게 될까요? 자본에 휩쓸리면 천박해지고, 제도에만 맞추면 생명력이 사라지며, 요구에만 끌려다니면 건물은 결코 땅 위에 서지 못할 것입니다. </p><br><br><p>우리는 이 각기 다른 이질적인 욕망들을 마주하고, 서로가 조금씩 자신의 것을 내어주며 안정화되도록 <strong>'결합적 요소'</strong>를 만들어내는 사람입니다. 흔들리지 않는 명확한 설계의 기준을 세워, 이 파편화된 원자들을 건축이라는 단단하고 아름다운 물성으로 빚어내는 것. 그것이 제가 생각하는 결합의 원리 또는 원칙입니다. </p>",
       "image": null,
       "caption": null,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "깊은 땅속에 뿌리내린 심지",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "isTextAfterImage": false
@@ -1597,40 +1677,6 @@
       "isTextAfterImage": false
     },
     {
-      "image": "static/images/gallery_sculpture_chair.jpg",
-      "title": "여는 글: 제3막: 사람을 알아간다는 것",
-      "text": "",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "keywords": "마음과 마음을 잇는 단단한 가교",
-      "type": "image_top",
-      "part": "제3막: 사람을 알아간다는 것",
-      "isTextAfterImage": false
-    },
-    {
-      "image": "static/images/gallery_sculpture_balance.jpg",
-      "title": "여는 글: 제3막: 사람을 알아간다는 것",
-      "text": "",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "type": "image_top",
-      "part": "제3막: 사람을 알아간다는 것",
-      "isTextAfterImage": false
-    },
-    {
-      "image": "static/images/gallery_sculpture_tall.jpg",
-      "title": "여는 글: 제3막: 사람을 알아간다는 것",
-      "text": "",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "type": "image_top",
-      "part": "제3막: 사람을 알아간다는 것",
-      "isTextAfterImage": false
-    },
-    {
       "type": "text_only",
       "title": "여는 글: 제3막: 사람을 알아간다는 것",
       "text": "예전에 어느 교수님으로부터 들은 참 좋은 이야기가 있습니다. 이 세상에 하나밖에 없는 사람의 '얼굴'은 그 자체로 너무나 소중한 존재이지, 결코 남에게 평가받을 대상이 될 수 없다는 가르침이었습니다. <br><br>저는 그래서 현장이나 테이블에서 사람을 만날 때마다, 마치 설레는 '데이트'를 하듯 마음을 다잡습니다. 데이트의 기본은 마주 앉은 사람에 대한 순수한 호기심과 존중 아니겠습니까? 그리고 하나 더, 상대방의 눈에 비칠 '데이트 상대로서의 나'를 단정하게 가다듬는 일도 잊지 않아야 합니다. <br><br>나를 바라보는 당신, 그리고 당신을 바라보는 나. 이 만남 속에서 서로를 존중한다는 것은, 앞서 말한 각자의 '얼굴(개별성)'을 있는 그대로 아껴주는 것에서부터 시작합니다. <br><br>건축 설계도 결국 똑같습니다. 도면 위에서 선을 긋기 전에, 사람과 사람이 만나 데이트하듯 진심으로 대화하고 서로의 마음을 엮어가는 과정. 그 뜨거운 데이트의 결과물로 테이블 위에 조용히 올려놓는 것이 바로 '건축 계획안'이어야 합니다. <br><br>이제 이어지는 <strong>제3막</strong>에서는, 제가 지난 세월 수많은 현장에서 참으로 다양한 사람들과 얼굴을 맞대며 겪었던 좌충우돌 에피소드들, 그리고 그 속에서 깨달은 <strong>'사람을 알아간다는 것'</strong>에 대해 이야기해 보려 합니다.",
@@ -1638,7 +1684,7 @@
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "caption": null,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "먼지 쌓인 현장이 남긴 영광의 훈장",
       "isTextAfterImage": true
     },
@@ -1654,28 +1700,16 @@
       "text": "사실, 제가 가장 힘들어하는 부분이 바로 이 '관계'에 대한 것입니다. <br><br>\n나만의 단단한 기준을 세우고 여유를 가지면 된다고 늘 생각하지만, 현실은 다릅니다. <br>\n기준을 내세우기는커녕, 여유를 차릴 시간조차 없이 사시나무 떨듯 흔들려 스스로 민망할 때가 많습니다. <br><br>\n차라리 흔들릴 땐 다행입니다. <br>\n정말 부끄러운 순간은, 언젠가 스쳐 지나갈 별것도 아닌 것들을 쥐고서 <br>\n상대방에게 \"이것이 정답이다!\"라며 우쭐댈 때입니다. <br><br>\n내 안에 중심을 두고 간격을 유지한다는 것은 단지 나를 보호한다는 뜻만이 아닙니다. <br>\n외부에 함부로 휩쓸리지 않는, 나만의 묵직한 중심을 가져야 한다는 뜻입니다. <br><br>\n떨리지도, 우쭐해하지도 않을 단단한 본질이 없으니 <br>\n별것도 아닌 외부의 인력에 이리저리 휘둘립니다. <br>\n중심을 잡지 못해 휘청거려 놓고선, 그것이 마치 남 탓인 양 힘들어하는 제 모습이 참 안쓰러울 때가 있습니다. <br><br>\n'사람을 알아간다는 것'은 결국, <br>\n내 중심의 무게를 온전히 가지는 것이고, <br>\n그 묵직한 무게로 굳건하게 관계 맺음을 해나간다는 뜻일 겁니다. <br>\n오늘도 저는 그렇게 스스로 다짐을 합니다."
     },
     {
-      "type": "image_top",
+      "type": "text_only",
       "title": "만들어져 간다는 것",
       "text": "<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_1.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_3.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_2.jpg\" ><img style=\"width: 100%; max-width: 500px; max-height: 38vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_4.jpg\" ></div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: flex-start; padding-top: 30px; padding-bottom: 30px;\"><img style=\"width: 100%; max-width: 500px; max-height: 65vh; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sketch_making_5.jpg\" ></div>",
-      "image": "static/images/gallery_batch7_clay2_1789096983323.jpg",
+      "image": null,
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "caption": null,
       "isTextAfterImage": false,
       "isContinuation": false,
       "keywords": "시간과 공간이 스스로 빚어내는 형상"
-    },
-    {
-      "type": "image_top",
-      "title": "만들어져 간다는 것",
-      "text": "",
-      "image": "static/images/gallery_hands_light.jpg",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "keywords": "괜찮다 흔들려도",
-      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -1730,8 +1764,7 @@
       "text": "생존형 버팀으로 하루하루를 견뎌내던 시절, 저는 일하다 억지스러운 발차기를 당해도 그저 고개를 숙인 채 웃어야만 했습니다. 도저히 견딜 수 없어 사직서를 던지고 나왔다가도, 다음 날이면 다시 눈치를 보며 자리에 앉아 \"죄송합니다, 제가 잠깐 생각을 잘못했습니다\"라며 비굴하게 주워 담아야 했던 날들도 있었습니다.<br><br>사는 게 다 그런 것이라며, 내 뜻대로 되는 일이 세상에 어디 있겠냐며 스스로를 달래던 숱한 밤들. <span class=\"core-philosophy\">온갖 모멸감과 서러움을 꾸역꾸역 삼키며 버텨온 시간들은<br>결국 제 얼굴의 주름으로 고스란히 남았습니다.</span><br><br>그렇게 살아남기 위해 표정을 짓다 보니, 이제는 웃고 있어도 우는 얼굴 같고, 울고 있어도 웃는 얼굴이 되어버렸습니다. 어차피 우리는 또 오늘이라는 새로운 하루를 묵묵히 살아가야 하니까요.",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "text_only",
-      "image": null
+      "type": "text_only"
     },
     {
       "part": "제3막: 사람을 알아간다는 것",
@@ -1755,6 +1788,61 @@
       "caption": null,
       "isContinuation": true,
       "keywords": "빛과 그림자로 짓는 서사",
+      "isTextAfterImage": false
+    },
+    {
+      "title": "[여백]",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_chair.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_balance.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_tall.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch7_clay2_1789096983323.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_hands_light.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1830,94 +1918,6 @@
       "keywords": "불순물을 걸러낸 순수한 결정"
     },
     {
-      "title": "[여백]",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch4_reachinghigh_1789095677368.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch6_carry_mass2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch5_1789097544862.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_sketch_buildings1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/sculpture_2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch5_running.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_sculpture_reach.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
       "part": "제3막: 사람을 알아간다는 것",
       "title": "거름종이 마법",
       "text": "\n사실 이 '거름종이 마법'은 다름 아닌 '나 자신과의 거리 두기'입니다. 끓어오르는 감정의 찌꺼기들이 걸러지고, 시간적으로도 심리적으로도 차분히 가라앉을 때까지 묵묵히 기다려주는 일입니다. <br><br>\n우리가 그토록 이야기해 온 원자의 구조를 떠올려 봅니다. 타인과 관계를 맺기 위해 외곽의 전자들이 이리저리 부딪히고 궤도를 돌며 결합을 시도하는 동안, 그 중심에 있는 '원자핵'인 당신은 굳건히 무게 중심을 잡고 있어야 합니다. <br><br>\n몰아치는 감정과 관계의 소용돌이에 휩쓸려 중심마저 이리저리 흔들리다 보면, 결합을 이루기는커녕 당신 자신마저 잃어버리기 십상입니다. <br><br>\n거름종이는 바로 그 원자핵이 중심을 잃지 않도록 돕는, 외부가 아닌 온전히 당신 스스로를 지키기 위한 마법입니다.\n",
@@ -1925,7 +1925,7 @@
       "image": null,
       "type": "text_only",
       "caption": null,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "불순물을 걸러낸 순수한 결정",
       "isTextAfterImage": false
     },
@@ -1940,6 +1940,61 @@
       "isTextAfterImage": true,
       "isContinuation": false,
       "keywords": "언어를 넘어선 가장 깊은 소통"
+    },
+    {
+      "title": "[여백]",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/act2_sculpture_1.jpg?v=1",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_flat.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_new_3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_frame_3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_kimjoongil_2.jpg?v=2",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "part": "제3막: 사람을 알아간다는 것",
@@ -2002,94 +2057,6 @@
       "part": "제3막: 사람을 알아간다는 것"
     },
     {
-      "title": "[여백]",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_kimjoongil_4.jpg?v=2",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_hands_dark.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch8_frame2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch6_carry_mass2_1789096477688.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch4_leaning.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/sculpture_1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch10_frame3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch9_arch4_1789097533576.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
       "type": "text_only",
       "title": "다름의 이해",
       "partCategory": "제3막: 사람을 알아간다는 것",
@@ -2097,9 +2064,64 @@
       "image": null,
       "caption": null,
       "isTextAfterImage": false,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "차이를 품어 안는 넓은 포용력",
       "part": "제3막: 사람을 알아간다는 것"
+    },
+    {
+      "title": "[여백]",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/user_sculpture_2.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch8_frame1_1789097190360.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_custom_3.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_reachinghigh_1789095677368.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "part": "제3막: 사람을 알아간다는 것",
@@ -2187,8 +2209,7 @@
       "part": "제3막: 사람을 알아간다는 것",
       "title": "무엇이든 만들어야만 했던 시간",
       "text": "<div style=\"display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; justify-content: center; margin-bottom: 40px;\">\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_1.jpg\" >\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_2.jpg\" >\n</div>\n\n<p style=\"margin-bottom: 24px;\">무엇이든지 만들어야만 되는 시간이 있었습니다. 삶의 지우기 힘든 지침과 그 묵직한 무게를 도무지 어떻게 이겨내야 할지 막막했던 날들이었습니다. 거창한 예술을 하려던 것은 아닙니다. 그저 퇴근 후 홀로 책상에 앉아, 특별한 재료 없이도 조용히 무언가를 빚어낼 수 있는 3D 펜을 쥐었습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">처음에는 사람이 커다란 바구니 같은 사물을 힘겹게 받치고 있는 형상들을 빚었습니다. 어쩌면 그 무거운 짐을 일방적으로 떠받치고 있는 조형물들이, 삶의 하중을 고스란히 짊어져야만 했던 제 마음의 투영이었을지도 모르겠습니다.</p>\n\n<p style=\"margin-bottom: 24px;\">그렇게 묵묵히 선을 녹이며 놀다 보니, 어느 순간부터 사람의 가슴에 '하트' 모양을 새기고 있는 저를 발견했습니다. 꽉 채워진 단단한 하트가 아니라, 안이 뻥 뚫려 있는 '여백'으로서의 하트였습니다. 그 조형물들은 텅 빈 가슴을 안고 묵묵히 홀로 서서 고독을 견디고 있었습니다.</p>",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "image": null
+      "partCategory": "제3막: 사람을 알아간다는 것"
     },
     {
       "type": "text_only",
@@ -2196,8 +2217,7 @@
       "title": "무엇이든 만들어야만 했던 시간",
       "text": "<p style=\"margin-bottom: 24px;\">그렇게 시간이 흘러 책상 위에 만들어진 조형물들이 하나둘 늘어났을 때, 저는 문득 그 사람들을 가만히 마주 보게 세워보았습니다. 텅 빈 가슴을 한 두 조형물이 서로를 섣불리 침범하지도, 억지로 채우려 하지도 않은 채 고요히 마주 보고 서 있었습니다. 그때 뒤늦게 깨달았습니다. 저는 아무 생각 없이 플라스틱 선을 녹이며 마음을 달래고 있었지만, 제 손끝은 이미 일방적으로 무언가를 떠받치던 단계를 지나 서로의 여백을 마주 보는 '공유결합'의 궤적을 빚어내고 있었다는 사실을 말입니다.</p>\n\n<p style=\"margin-bottom: 24px;\">그렇게 빚어낸 수많은 조형물들은 이제 제 곁에 없습니다. 만들다 보니 책상 위가 가득 찰 만큼 무수히 많아져서, 제 인연이 닿는 사람들에게 하나둘 나누어 주었기 때문입니다. 대신 그 조형물들의 사진 한 장씩만을 제게 남겨두었습니다. 제가 나누어준 그 텅 빈 가슴의 조형물들이 지금도 누군가의 공간에 남아있을지, 아니면 버려져 사라졌을지 저는 알지 못합니다.</p>\n\n<p style=\"margin-bottom: 24px;\">다만, 그 고요한 밤 홀로 책상에 앉아 3D 펜을 쥐고 버텨냈던 시간들만이 남아, 저를 무너지지 않게 지탱해 주고 다시금 삶과 사람을 마주 보게 해 준 단단한 '보이드(Void)'가 되었습니다.</p>\n\n<div style=\"display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start; justify-content: center; margin-top: 40px; margin-bottom: 20px;\">\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_4.jpg\" >\n <img style=\"width: 100%; max-width: 230px; object-fit: contain; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 8px 24px rgba(0,0,0,0.08);\" src=\"static/images/sculpture_5.jpg\" >\n</div>",
       "partCategory": "제3막: 사람을 알아간다는 것",
-      "isContinuation": true,
-      "image": null
+      "isContinuation": true
     },
     {
       "part": "제3막: 사람을 알아간다는 것",
@@ -2212,91 +2232,14 @@
       "isTextAfterImage": false
     },
     {
-      "title": "세 개의 시선",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "text_only",
-      "image": null,
-      "isContinuation": false,
-      "isImageOnly": false,
-      "keywords": "심의위원, 관점, 책임감",
-      "text": "제가 건축심의위원으로 활동한 지도 어느덧 7년 정도가 흐른 것 같습니다. <br>\n지난 시간들을 돌아보면, 제출된 도면들에 조금 더 시간을 투자해 깊이 있는 의견을 드리지 못했던 것이 늘 못내 아쉽고 후회스럽습니다.<br><br>\n도면 뒤에는 분명 설계자 본인이 차마 입 밖으로 내지 못하고 숨겨둔, 하지만 꿋꿋이 지켜내고 싶었던 숨은 그림과 고뇌가 있었을 것입니다. 심의위원으로서 제가 그 행간을 읽어내어 조금이라도 더 보충해 줄 수 있는 무언가가 있었을 텐데 말입니다.<br><br>\n시간이 흘러 연차가 쌓인 지금, 저는 다른 분들이 설계한 도면을 아주 조심스럽고 경건한 마음으로 바라보게 됩니다. 심의위원이라는 자리는 도면을 날카롭게 평가하는 자리이기도 하지만, 동시에 '또 다른 시각'으로 업무를 깊이 바라볼 수 있는 귀한 배움의 자리이기도 했습니다. <br><br>\n의뢰자의 심정으로, <br>\n설계자의 관점에서, <br>\n평가자의 시각으로.<br><br>\n이렇게 서로 다른 내가 되어 하나의 프로젝트를 바라보고 나서야, 이제 조금은 알 것 같습니다. <br><br>\n이제는 심의 테이블에서 제가 내뱉는 말과 생각들이 그들에게 진심 어린 도움이 되기를 바랍니다. 저의 조언이 이 사회의 각자를 담아내는 '여백'과 '틀'이 되고, 나아가 공간 속에 따뜻한 공유결합적 요소를 조금 더 담아낼 수 있는 밑거름이 되었으면 좋겠습니다.<br><br>\n공간은 한 번 만들어지면, 결코 쉽게 고칠 수 없기 때문입니다."
-    },
-    {
       "title": "[여백]",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "type": "image_top",
-      "image": "static/images/gallery_batch8_frame1_1789097190360.jpg",
+      "image": "static/images/gallery_batch9_arch5_1789097544862.jpg",
       "text": "",
       "isImageOnly": true,
       "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch4_flat_1789095642326.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/user_sculpture_2.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_custom_3.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch4_flat.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch3_face.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제3막: 사람을 알아간다는 것",
-      "partCategory": "제3막: 사람을 알아간다는 것",
-      "type": "image_top",
-      "image": "static/images/gallery_batch14_duo_light_1789124898491.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -2309,6 +2252,50 @@
       "isImageOnly": true,
       "isContinuation": true,
       "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch4_1789097533576.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_kimjoongil_4.jpg?v=2",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_reach.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "세 개의 시선",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "text_only",
+      "image": null,
+      "isContinuation": false,
+      "isImageOnly": false,
+      "keywords": "심의위원, 관점, 책임감",
+      "text": "제가 건축심의위원으로 활동한 지도 어느덧 7년 정도가 흐른 것 같습니다. <br>\n지난 시간들을 돌아보면, 제출된 도면들에 조금 더 시간을 투자해 깊이 있는 의견을 드리지 못했던 것이 늘 못내 아쉽고 후회스럽습니다.<br><br>\n도면 뒤에는 분명 설계자 본인이 차마 입 밖으로 내지 못하고 숨겨둔, 하지만 꿋꿋이 지켜내고 싶었던 숨은 그림과 고뇌가 있었을 것입니다. 심의위원으로서 제가 그 행간을 읽어내어 조금이라도 더 보충해 줄 수 있는 무언가가 있었을 텐데 말입니다.<br><br>\n시간이 흘러 연차가 쌓인 지금, 저는 다른 분들이 설계한 도면을 아주 조심스럽고 경건한 마음으로 바라보게 됩니다. 심의위원이라는 자리는 도면을 날카롭게 평가하는 자리이기도 하지만, 동시에 '또 다른 시각'으로 업무를 깊이 바라볼 수 있는 귀한 배움의 자리이기도 했습니다. <br><br>\n의뢰자의 심정으로, <br>\n설계자의 관점에서, <br>\n평가자의 시각으로.<br><br>\n이렇게 서로 다른 내가 되어 하나의 프로젝트를 바라보고 나서야, 이제 조금은 알 것 같습니다. <br><br>\n이제는 심의 테이블에서 제가 내뱉는 말과 생각들이 그들에게 진심 어린 도움이 되기를 바랍니다. 저의 조언이 이 사회의 각자를 담아내는 '여백'과 '틀'이 되고, 나아가 공간 속에 따뜻한 공유결합적 요소를 조금 더 담아낼 수 있는 밑거름이 되었으면 좋겠습니다.<br><br>\n공간은 한 번 만들어지면, 결코 쉽게 고칠 수 없기 때문입니다."
     },
     {
       "partCategory": "제4막: 또 다른 하루를 위하여",
@@ -3095,19 +3082,31 @@
       "keywords": "시간과 땀방울이 새겨진 지층"
     },
     {
-      "type": "text_only",
+      "type": "epilogue",
+      "image": "static/images/gallery_sculpture_face.jpg",
+      "title": "에필로그: 도면 위의 공유결합",
+      "text": "",
+      "partCategory": "에필로그: 도면 위의 공유결합",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "keywords": "선과 선이 만나 완성된 삶의 무대",
+      "part": "에필로그: 도면 위의 공유결합",
+      "isTextAfterImage": false
+    },
+    {
+      "type": "epilogue",
       "image": null,
       "title": "에필로그: 도면 위의 공유결합",
       "text": "<p style=\"margin-bottom: 24px;\">공유결합. 어쩌면 이 단어 하나를 제 삶과 건축에 대입하기 위해 그동안 수많은 도면을 그렸는지도 모르겠습니다. </p>\n\n<p style=\"margin-bottom: 24px;\">설계란 늘 차가운 선과 기호로 시작하지만, 도면 밖으로 나가는 순간부터는 온전히 '사람의 일'이 됩니다. 전혀 다른 환경의 건축주, 각자의 입장이 있는 조합원들, 그리고 법규를 앞세우는 관청까지. 처음에는 그 치열한 다름이 저를 가로막는 단단한 벽이라고 여겼습니다. 하지만 제 고집을 조금 덜어내고 묵묵히 그들의 이야기에 귀 기울였을 때, 비로소 서로의 본질을 잃지 않으면서도 끈끈하게 묶이는 '공유결합'을 현장에서 경험할 수 있었습니다. </p>",
       "partCategory": "에필로그: 도면 위의 공유결합",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "선과 선이 만나 완성된 삶의 무대",
       "part": "에필로그: 도면 위의 공유결합"
     },
     {
-      "type": "text_only",
+      "type": "epilogue",
       "image": null,
       "title": "에필로그: 도면 위의 공유결합",
       "text": "<p style=\"margin-bottom: 24px;\">그러나 제가 궁극적으로 말씀드리고 싶은 공유결합은, 단순히 사람 사이의 원만한 처세술이 아닙니다. 제가 진정으로 바라는 것은, 우리가 짓는 공간과 환경이 우리 사회의 다양한 삶을 품어내는 <strong>'넉넉한 바탕'</strong>이 되는 것입니다. </p>\n\n<p style=\"margin-bottom: 24px;\">춤추듯 자유롭게 흩어진 창문들이 어수선해 보이지 않으려면, 무색무취의 단순하고 묵직한 벽면이 그 무질서를 말없이 꽉 안아주어야 합니다. 마찬가지로 우리의 물리적 환경 역시 그 자체로 화려하게 튀기보다는, 우리 이웃들의 복잡하고 다채로운 일상을 기꺼이 수용하는 든든하고 너른 틀이 되어주기를 원합니다. </p>",
@@ -3119,7 +3118,7 @@
       "part": "에필로그: 도면 위의 공유결합"
     },
     {
-      "type": "text_only",
+      "type": "epilogue",
       "image": null,
       "title": "에필로그: 도면 위의 공유결합",
       "text": "<p style=\"margin-bottom: 24px;\">화곡동의 오래된 골목에서, 서계동의 가파른 비탈길에서, 그리고 100년 된 유성시장의 도면 위에서 제가 실천하고자 했던 것도 결국 사람을 품어내는 '너른 바탕'을 그리는 일이었습니다. </p>\n\n<p style=\"margin-bottom: 24px;\">이제는 제가 생각하는 바를 조금이나마 남기고 싶어 용기를 내어 책을 썼지만, 막상 적어 내려가다 보니 날것 그대로의 저의 모습이 담겨 있어 수없이 망설였습니다. 하지만 이 모든 상처와 고민이 도면 위에 새겨진 '공유결합'의 흔적이라면, 그것을 감추기보다는 있는 그대로 나누는 것이 제가 할 수 있는 가장 정직한 설계일 것이라 생각했습니다. </p>\n\n<p style=\"margin-bottom: 24px;\">이 책을 통해, 치열한 정비사업 현장에서 건축 설계를 하는 사람들이 과연 무엇을 그토록 깊이 고뇌하고 있으며, 궁극적으로 어떤 공간을 만들어가려 하는지 조금이나마 알아주셨으면 하는 작은 바람도 담았습니다. </p>",
@@ -3131,7 +3130,7 @@
       "isTextAfterImage": false
     },
     {
-      "type": "text_only",
+      "type": "epilogue",
       "image": null,
       "title": "에필로그: 도면 위의 공유결합",
       "text": "<p style=\"margin-bottom: 24px;\">재개발, 재건축을 비롯한 수많은 정비사업은 비단 건축가들만의 무대가 아닙니다. 그것은 이미 우리 모두의 삶에 직간접적으로 깊숙이 얽혀 있는 현실입니다. 부족한 저의 글을 통해, 우리가 발 딛고 살아가는 물리적 환경과 그 안에서 살아가는 사람들에 대한 이해의 폭이 조금이라도 넓어질 수 있기를 진심으로 바랍니다. </p>\n\n<p style=\"margin-bottom: 24px;\">과거의 아쉬움에 매이지 않고, 저는 제게 주어진 '오늘 하루'에 온전히 집중하며 살아가려 합니다. <br>\n거창한 건축적 선언보다는, 그저 나와 당신이 각자의 모습 그대로 함께 머물 수 있는 넉넉한 바탕이 되기를 바라며 묵묵히 종이 위에 선을 긋습니다. </p>\n\n<p style=\"margin-bottom: 24px;\"><strong>오늘도, 우리의 수많은 관계 속에서 서로가 서로를 아름답게 빛내주는 참 좋은 만남이 이루어지기를 진심으로 기원합니다. </strong></p>",
