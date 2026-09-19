@@ -196,6 +196,28 @@
       "keywords": "스스로 빛나는 별"
     },
     {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch3_sphere_1789095532897.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_handlamp.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "공유결합의 세 가지 원칙",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
@@ -290,6 +312,28 @@
       "isContinuation": false,
       "keywords": "삶의 온기를 담아내는 그릇",
       "part": "제1막: 건축과 사람 그리고 디자인"
+    },
+    {
+      "title": "[여백]",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_relief_1789121822071.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제1막: 건축과 사람 그리고 디자인",
+      "partCategory": "제1막: 건축과 사람 그리고 디자인",
+      "type": "image_top",
+      "image": "static/images/gallery_batch11_sculpture.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -708,6 +752,28 @@
       "keywords": "먼지 속에서 캐낸 삶의 지혜",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "isTextAfterImage": true
+    },
+    {
+      "title": "[여백]",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_new_1.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제2막: 홀로 설 수 있는 단단함",
+      "partCategory": "제2막: 홀로 설 수 있는 단단함",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_heart.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
     },
     {
       "type": "text_only",
@@ -1132,28 +1198,6 @@
       "isTextAfterImage": false
     },
     {
-      "title": "[여백]",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_batch7_clay1.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": false,
-      "isTextAfterImage": false
-    },
-    {
-      "title": "",
-      "part": "제2막: 홀로 설 수 있는 단단함",
-      "partCategory": "제2막: 홀로 설 수 있는 단단함",
-      "type": "image_top",
-      "image": "static/images/gallery_frame_4.jpg",
-      "text": "",
-      "isImageOnly": true,
-      "isContinuation": true,
-      "isTextAfterImage": false
-    },
-    {
       "part": "제2막: 홀로 설 수 있는 단단함",
       "title": "언덕 맨 윗집",
       "text": "서울 올라와 지금까지 언덕 위에 집을 얻어 살아왔습니다. <br><br>\n언덕 위 맨 윗집은 전망이 좋습니다. <br>대신 그 길까지 가는 길에 몇 번을 쉬어야 합니다. <br><br>\n천천히 올라가며, <br>오늘 하루의 일을 털어 버리고 언덕에서 불어 오는 바람에 또 흩어 버립니다. <br><br>\n그래도 가끔은 <strong>언덕길 가로등에</strong> <br><strong>길게 늘어진 제 그림자가 유난히 무거워 보일 때가 있습니다.</strong> <br><br>\n휴~ 하고 쉴 때는 아마 내 그림자가 무겁기 때문입니다.",
@@ -1423,6 +1467,28 @@
       "keywords": "불순물을 걸러낸 순수한 결정"
     },
     {
+      "title": "[여백]",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch4_reachinghigh_1789095677368.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_sculpture_reach.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "part": "제3막: 사람을 알아간다는 것",
       "title": "거름종이 마법",
       "text": "\n사실 이 '거름종이 마법'은 다름 아닌 '나 자신과의 거리 두기'입니다. 끓어오르는 감정의 찌꺼기들이 걸러지고, 시간적으로도 심리적으로도 차분히 가라앉을 때까지 묵묵히 기다려주는 일입니다. <br><br>\n우리가 그토록 이야기해 온 원자의 구조를 떠올려 봅니다. 타인과 관계를 맺기 위해 외곽의 전자들이 이리저리 부딪히고 궤도를 돌며 결합을 시도하는 동안, 그 중심에 있는 '원자핵'인 당신은 굳건히 무게 중심을 잡고 있어야 합니다. <br><br>\n몰아치는 감정과 관계의 소용돌이에 휩쓸려 중심마저 이리저리 흔들리다 보면, 결합을 이루기는커녕 당신 자신마저 잃어버리기 십상입니다. <br><br>\n거름종이는 바로 그 원자핵이 중심을 잃지 않도록 돕는, 외부가 아닌 온전히 당신 스스로를 지키기 위한 마법입니다.\n",
@@ -1430,7 +1496,7 @@
       "image": null,
       "type": "text_only",
       "caption": null,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "불순물을 걸러낸 순수한 결정",
       "isTextAfterImage": false
     },
@@ -1507,6 +1573,28 @@
       "part": "제3막: 사람을 알아간다는 것"
     },
     {
+      "title": "[여백]",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_kimjoongil_4.jpg?v=2",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": false,
+      "isTextAfterImage": false
+    },
+    {
+      "title": "",
+      "part": "제3막: 사람을 알아간다는 것",
+      "partCategory": "제3막: 사람을 알아간다는 것",
+      "type": "image_top",
+      "image": "static/images/gallery_batch9_arch4_1789097533576.jpg",
+      "text": "",
+      "isImageOnly": true,
+      "isContinuation": true,
+      "isTextAfterImage": false
+    },
+    {
       "type": "text_only",
       "title": "다름의 이해",
       "partCategory": "제3막: 사람을 알아간다는 것",
@@ -1514,7 +1602,7 @@
       "image": null,
       "caption": null,
       "isTextAfterImage": false,
-      "isContinuation": true,
+      "isContinuation": false,
       "keywords": "차이를 품어 안는 넓은 포용력",
       "part": "제3막: 사람을 알아간다는 것"
     },
