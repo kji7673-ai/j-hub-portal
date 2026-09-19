@@ -169,14 +169,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/prologue_white.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -300,14 +300,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/gallery_batch3_sphere_1789095532897.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -420,14 +420,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/gallery_batch6_carry_mass2_1789096477688.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -605,14 +605,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/gallery_batch11_sketch2.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -725,14 +725,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/gallery_batch8_frame1.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -832,14 +832,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제1막: 건축과 사람 그리고 디자인",
       "partCategory": "제1막: 건축과 사람 그리고 디자인",
       "type": "image_top",
       "image": "static/images/gallery_batch4_heart.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1089,14 +1089,14 @@
       "isTextAfterImage": true
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
       "image": "static/images/sculpture_3.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1219,14 +1219,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
       "image": "static/images/gallery_batch6_bowl_brown.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1378,14 +1378,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
       "image": "static/images/gallery_batch4_leaning_1789095654604.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1511,14 +1511,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
       "image": "static/images/gallery_batch7_wire_duo.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1631,14 +1631,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제2막: 홀로 설 수 있는 단단함",
       "partCategory": "제2막: 홀로 설 수 있는 단단함",
       "type": "image_top",
       "image": "static/images/gallery_batch9_arch4.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -1889,14 +1889,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "type": "image_top",
       "image": "static/images/gallery_sculpture_chair.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -2048,14 +2048,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "type": "image_top",
       "image": "static/images/act2_sculpture_1.jpg?v=1",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -2181,14 +2181,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "type": "image_top",
       "image": "static/images/gallery_batch6_bowl_white1_1789096418957.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
@@ -2357,14 +2357,14 @@
       "isImageOnly": false
     },
     {
-      "title": "[여백]",
+      "title": "",
       "part": "제3막: 사람을 알아간다는 것",
       "partCategory": "제3막: 사람을 알아간다는 것",
       "type": "image_top",
       "image": "static/images/gallery_batch9_arch5_1789097544862.jpg",
       "text": "",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "isTextAfterImage": false
     },
     {
