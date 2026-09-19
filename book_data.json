@@ -2491,13 +2491,13 @@
     },
     {
       "type": "image_top",
-      "title": "조은 슈퍼 - 도면",
+      "title": "",
       "text": "",
       "image": "static/images/gallery_batch14_plan_frame_1789124927002.jpg",
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "쉼표",
       "isTextAfterImage": false
     },
@@ -2510,7 +2510,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "골목길을 지키는 소박한 등대"
     },
     {
@@ -2611,13 +2611,13 @@
     },
     {
       "type": "image_top",
-      "title": "서계동 - 스케치",
+      "title": "",
       "text": "",
       "image": "static/images/seogye_sketch.jpg",
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "쉼표",
       "isTextAfterImage": false
     },
@@ -2630,7 +2630,7 @@
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "옛길 위에 새로 쓰는 공간의 시"
     },
     {
@@ -2659,13 +2659,13 @@
     },
     {
       "type": "image_top",
-      "title": "서계동 - 흔적",
+      "title": "",
       "text": "",
       "image": "static/images/gallery_sketch_1.jpg",
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "쉼표",
       "isTextAfterImage": false
     },
@@ -2677,7 +2677,7 @@
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
       "isTextAfterImage": false
     },
@@ -2706,34 +2706,34 @@
       "isTextAfterImage": false
     },
     {
-      "title": "서계동 현상설계 - 스케치",
+      "title": "",
       "text": "",
       "image": "static/images/seogye_wireframe.png?v=3",
       "isImageOnly": true,
       "keywords": "도면 속 단단한 건축의 본질",
-      "isContinuation": false,
+      "isContinuation": true,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
     },
     {
-      "title": "서계동 현상설계 - 투시도 1",
+      "title": "",
       "text": "",
       "image": "static/images/seogye_cg_1.jpg",
       "isImageOnly": true,
       "keywords": "계단식 조경과 테라스의 조화",
-      "isContinuation": false,
+      "isContinuation": true,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
     },
     {
-      "title": "서계동 현상설계 - 투시도 2",
+      "title": "",
       "text": "",
       "image": "static/images/seogye_cg_2.jpg",
       "isImageOnly": true,
       "keywords": "눈 내리는 용산 언덕의 풍경",
-      "isContinuation": false,
+      "isContinuation": true,
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "type": "image_top"
@@ -2746,7 +2746,7 @@
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "옛길 위에 새로 쓰는 공간의 시",
       "isTextAfterImage": false
     },
@@ -2836,13 +2836,13 @@
     },
     {
       "type": "image_top",
-      "title": "100년의 기억 - 시장 스케치",
+      "title": "",
       "text": "",
       "image": "static/images/sketch_100year_market_1.jpg",
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "쉼표",
       "isTextAfterImage": false
     },
@@ -2855,7 +2855,7 @@
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "caption": null,
       "isTextAfterImage": false,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "시간의 지층 위에 새로운 숨결을"
     },
     {
@@ -2896,13 +2896,13 @@
     },
     {
       "type": "image_top",
-      "title": "허락되지 않은 여백 - 쉼표",
+      "title": "",
       "text": "",
       "image": "static/images/gallery_batch16_frame1_1789125419342.jpg",
       "part": "제4막: 또 다른 하루를 위하여",
       "partCategory": "제4막: 또 다른 하루를 위하여",
       "isImageOnly": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "쉼표",
       "isTextAfterImage": false
     },
@@ -2915,7 +2915,7 @@
       "type": "text_only",
       "caption": null,
       "isTextAfterImage": true,
-      "isContinuation": false,
+      "isContinuation": true,
       "keywords": "평가를 넘어선 진정성의 증명"
     },
     {
