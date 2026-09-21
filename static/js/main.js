@@ -418,7 +418,7 @@ let currentChapter = 0;
 
         pText = pText.replace(
           /!\[(.*?)\]\((.*?)\)/g,
-          '<div style="margin: 40px 0; text-align: left;"><img onerror="this.style.display=\'none\'" src="$2" alt="$1" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
+          '<div style="margin: 40px 0; text-align: left;"><img onerror="this.style.display=\'none\'" src="$2" alt="$1" loading="lazy" decoding="async" style="width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"><p style="font-size: 13px; color: #888; margin-top: 12px; letter-spacing: -0.2px;">$1</p></div>',
         );
 
         if (!isSpecialPage || page.type === "author_profile") {
@@ -586,8 +586,8 @@ let currentChapter = 0;
       document.addEventListener(
         "touchend",
         (e) => {
-          // 버튼, 링크, 메뉴바 등 인터랙티브 요소 터치 시에는 중복 넘김을 방지하기 위해 스와이프/가장자리 탭 감지 중단
-          if (e.target.closest("td, th, table, pre, code, button, a, .bottom-nav, .controls, .nav-btn")) return;
+          // 버튼, 모달, 입력창 등 인터랙티브 요소 터치 시에는 넘김 방지 (e.target.closest 안전 체크 포함)
+          if (e.target && e.target.closest && e.target.closest("td, th, table, pre, code, button, a, .bottom-nav, .controls, .nav-btn, .toc-modal, .resume-modal, .bookmark-modal, .feedback-modal, textarea, input, select")) return;
           touchendX = e.changedTouches[0].screenX;
           touchendY = e.changedTouches[0].screenY;
           checkDirection();
@@ -747,17 +747,19 @@ let currentChapter = 0;
         }
         
         // Background fetch for the latest data
-        const res = await fetch("book_data.json?v=" + Date.now());
+        const res = await fetch("book_data.json");
         if (!res.ok) throw new Error("HTTP Error " + res.status);
         const freshData = await res.json();
         
-        // Cache the fresh data
-        localStorage.setItem("JJournal_bookData_cache_v2", JSON.stringify(freshData));
-        
-        // If it was not cached previously, or if the fresh data is different, render now
-        if (!cached || !window.bookData || !window.bookData.pages || JSON.stringify(freshData) !== JSON.stringify(window.bookData)) {
+        if (!cached || !window.bookData || !window.bookData.pages) {
+            // If no cache, render immediately
             window.bookData = freshData;
+            localStorage.setItem("JJournal_bookData_cache_v2", JSON.stringify(freshData));
             renderBook();
+        } else if (JSON.stringify(freshData) !== JSON.stringify(window.bookData)) {
+            // If cached but new data is available, silently update cache without interrupting the user
+            localStorage.setItem("JJournal_bookData_cache_v2", JSON.stringify(freshData));
+            showToast("새로운 내용이 동기화되었습니다. 새로고침 시 적용됩니다.");
         }
     } catch (err) {
         if (!window.bookData) {
