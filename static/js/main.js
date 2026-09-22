@@ -133,6 +133,13 @@ let currentChapter = 0;
       }
 
       function renderCurrentChapter(direction = 'fade') {
+  try {
+    // [메모리 누수 차단] 이전 오디오/비디오 요소들 완벽하게 메모리에서 해제
+    document.querySelectorAll("audio, video").forEach(media => {
+        media.pause();
+        media.removeAttribute('src');
+        media.load();
+    });
         const container = document.getElementById("book-container");
         const navControlsEl = document.querySelector(".controls");
         document.querySelectorAll(".page-content").forEach((p) => p.remove());
@@ -527,7 +534,14 @@ let currentChapter = 0;
         }
         updateBookmarkButton();
         window.scrollTo({ top: 0, behavior: "instant" });
-      }
+  } catch (error) {
+    console.error("Rendering Error:", error);
+    const container = document.getElementById("book-container");
+    if (container) {
+        container.innerHTML = '<div style="padding: 100px 20px; text-align: center;"><h2>페이지 렌더링 중 오류가 발생했습니다.</h2><p>원고 데이터(JSON)에 문제가 있을 수 있습니다. 새로고침을 해주세요.</p></div>';
+    }
+  }
+}
 
       // Mobile Swipe Support
       let touchstartX = 0;
@@ -983,3 +997,12 @@ function installPWA() {
         });
     }
 }
+
+// Resize Debounce for performance
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        // resize logic here if needed, eg updating toc highlight
+    }, 200);
+}, { passive: true });
