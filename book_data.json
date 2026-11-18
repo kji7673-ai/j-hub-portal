@@ -3,7 +3,7 @@
     {
       "title": "조감도 너머의 사람들",
       "subtitle": "재개발·재건축 도면 위에서 찾은 삶과 관계의 공유결합",
-      "image": "static/images/gallery_cover_baked.jpg?v=1789482866",
+      "image": "static/images/gallery_cover_baked.jpg?v=20261118_1",
       "text": "",
       "type": "cover",
       "isImageOnly": true,
@@ -12,7 +12,7 @@
       "caption": null,
       "isContinuation": false,
       "isTextAfterImage": false,
-      "keywords": "도면 위의 공유결합"
+      "keywords": "조감도 너머의 사람들"
     },
     {
       "partCategory": "프롤로그",
@@ -68,7 +68,7 @@
       "partCategory": "제1막: 조감도 너머, 사람이 사는 현장을 짓습니다",
       "title": "여는 글: 제1막: 조감도 너머, 사람이 사는 현장을 짓습니다",
       "text": "",
-      "image": "static/images/act4_white.jpg",
+      "image": "static/images/act1_white.jpg",
       "isImageOnly": true,
       "isContinuation": false,
       "keywords": "완전한 하나로 거듭나는 절정",
@@ -468,7 +468,7 @@
       "text": "",
       "image": "static/images/seogye_cg_2.jpg",
       "isImageOnly": true,
-      "keywords": "눈 내리는 용산 언덕의 풍경",
+      "keywords": "서계동 현상설계 계획안 투시도 (서경연화)",
       "isContinuation": true,
       "part": "제1막: 조감도 너머, 사람이 사는 현장을 짓습니다",
       "partCategory": "제1막: 조감도 너머, 사람이 사는 현장을 짓습니다",
